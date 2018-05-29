@@ -1,0 +1,137 @@
+<?php if ($this->showFooter): ?>
+    <footer class="bg-color-gray-200 small">
+        <div class="container-fluid">
+            <div class="row py-4">
+                <div class="col-12 col-md-9">
+                    <ul class="list-inline font-weight-bold mb-3">
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" href="#">
+                                О сайте
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" href="#">
+                                Служба поддержки
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" href="#">
+                                Пользователи
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" href="#">
+                                Поток
+                            </a>
+                        </li>
+                    </ul>
+
+                    %octo_link% designed and built with love by %gomzyakov_link%. Maintained by the %core_team% with the help of %our contributors%.
+
+                    <div class="color-gray-600 mb-2">
+                        <a class="color-gray-700 no-underline-hover" rel="nofollow" target="_blank" href="%octo_url%">OctoAnswers</a> designed and built with love by <a class="color-gray-700 no-underline-hover" rel="nofollow" target="_blank" href="https://github.com/gomzyakov">@gomzyakov</a>. Maintained by the <a class="color-gray-700 no-underline-hover" rel="nofollow" target="_blank" href="https://github.com/orgs/octoanswers/teams/core-team">core team</a> with the help of <a class="color-gray-700 no-underline-hover" rel="nofollow" target="_blank" href="https://github.com/orgs/octoanswers/people">our contributors</a>.
+                    </div>
+
+                    OctoAnswers придуман и разработан (с любовью, конечно) товарищем <a href="https://github.com/gomzyakov">@gomzyakov</a>. Поддерживается основной командой и добровольцами.
+
+                    <ul class="list-inline mt-3 mb-0">
+                        <li class="list-inline-item">
+                            <a class="color-gray-700 no-underline-hover" rel="nofollow" target="_blank" href="https://icons8.com">
+                                Icon pack by Icons8
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <div class="dropup">
+                        <button class="btn btn-outline-secondary dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  type="button">
+                            Русский                        </button>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" data-lang="en" href="http://octoanswers.com/en">
+                                English                            </a>
+                            <a class="dropdown-item" data-lang="ru" href="http://octoanswers.com/ru">
+                                Русский                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3 footer_item">
+                    <ul class="list-unstyled">
+                        <li class="mb-2 text-uppercase font-weight-bold text-secondary">
+                            <?= $this->l->t('footer', 'sections', 'title') ?>
+                        </li>
+                        <li class="mb-2">
+                            <a href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
+                                <?= $this->l->t('footer', 'sections', 'questions') ?>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
+                                <?= $this->l->t('footer', 'sections', 'topics') ?>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+                                <?= $this->l->t('footer', 'sections', 'experts') ?>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+                                <?= $this->l->t('footer', 'sections', 'flow') ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 footer_item">
+                    <div class="dropup">
+                        <button class="btn btn-outline-secondary dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  type="button">
+                            <?= $this->l->t('lang', $this->lang) ?>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" data-lang="en" href="<?= Page_URL_Helper::getMainURL('en') ?>">
+                                <?= $this->l->t('lang', 'english') ?>
+                            </a>
+                            <a class="dropdown-item" data-lang="ru" href="<?= Page_URL_Helper::getMainURL('ru') ?>">
+                                <?= $this->l->t('lang', 'russian') ?>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="link_icons8" rel="nofollow" href="https://icons8.com">Icon pack by Icons8</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="wrapper_bottom_line">
+            <div class="container">
+                <div class="row">
+                    <div class="block_about col-12 col-lg-9">
+                        <ul>
+                            <li>
+                                2018 &copy; <a href="<?= Page_URL_Helper::getMainURL($this->lang) ?>"><strong><?= $this->l->t('octoanswers') ?></strong></a>
+                            </li>
+                            <li>
+                                <a href="#"><?= $this->l->t('footer', 'about') ?></a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->l->t('footer', 'support_link') ?>" target="_blank" rel="nofollow">
+                                    <?= $this->l->t('footer', 'support') ?>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<?php endif; ?>

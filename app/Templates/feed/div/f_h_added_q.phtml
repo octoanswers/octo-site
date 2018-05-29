@@ -1,0 +1,17 @@
+
+<tr>
+    <td style="width: 5rem !important;">
+    </td>
+    <td class="pb-5">
+        <p class="mb-1">
+            Задан новый вопрос с хештегом <a href="<?= $data['topic']['url'] ?>">#<?= $data['topic']['title'] ?></a>
+        </p>
+        <p class="mb-3">
+            <a class="link-inverted no-underline h5" href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
+        </p>
+        <a href="#" class="btn btn-outline-secondary btn-sm mr-2">Ответить</a>
+        <span class="text-muted">
+            <?= $activity['created_at__humanized'] ?>
+        </span>
+    </td>
+</tr>

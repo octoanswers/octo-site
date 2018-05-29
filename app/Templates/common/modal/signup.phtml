@@ -1,0 +1,43 @@
+
+<!-- modal signup -->
+<div class="modal fade" id="modal_signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <?= $this->l->t('signup__title') ?>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form__signup">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><?= $this->l->t('signup__useremail') ?></label>
+                        <input id="form__signup__username" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><?= $this->l->t('signup__email') ?></label>
+                        <input id="form__signup__email" type="email" class="form-control" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label><?= $this->l->t('signup__password') ?></label>
+                        <input id="form__signup__password" type="password" class="form-control" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <small class="form-text text-muted">
+                            <?= $this->l->t('signup__note') ?>
+                        </small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="form__signup__submit" class="btn btn-primary btn-block">
+                        <?= $this->l->t('signup__signup_btn') ?>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /modal signup -->

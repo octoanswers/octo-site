@@ -1,0 +1,27 @@
+
+<div class="modal fade" id="modal_upload_image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">
+                    <?= $this->l->t('modal_upload_image', 'modal_title') ?>
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="upload_image_form" data-question-id="<?= $this->question->getID() ?>">
+                <div class="modal-body">
+                    <div class="form-group pt-3">
+                        <input type="file" name="upload_image_form__image_file" class="form-control-file w-100">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="upload_image_form__submit_btn" class="btn btn-lg btn-block btn-primary">
+                        <?= $this->l->t('modal_upload_image', 'submit_button') ?>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

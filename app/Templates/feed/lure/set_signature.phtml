@@ -1,0 +1,15 @@
+
+<?php if (strlen($this->authUser->getSignature()) == 0): ?>
+    <div class="activity__lure my-4">
+        <div class="icon">
+            <img src="https://png.icons8.com/wired/64/00897B/signature.png">
+        </div>
+        <div class="info">
+            <p class="title">Придумайте подпись</p>
+            <p class="message">Подпись описывает ваши профессиональные навыки и знания. Она показываться рядом с правками ответов, которые вы делаете.</p>
+            <a href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>" class="btn btn-primary">
+                Задать подпись
+            </a>
+        </div>
+    </div>
+<?php endif; ?>

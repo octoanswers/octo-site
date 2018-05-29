@@ -1,0 +1,18 @@
+
+<?php if ($this->authUser && !$this->question->getImageBaseName()): ?>
+    <div class="block__add_image my-5">
+        <div class="icon">
+            <a rel="nofollow" href="#" data-toggle="modal" data-target="#modal_upload_image">
+                <img src="https://png.icons8.com/windows/48/757575/picture.png">
+            </a>
+        </div>
+        <div class="info">
+            <p class="message">
+                <?= $this->l->t('block', 'add_image', 'message') ?>
+            </p>
+            <a rel="nofollow" class="btn btn-outline-secondary" href="#" data-toggle="modal" data-target="#modal_upload_image">
+                <?= $this->l->t('block', 'add_image', 'button') ?>
+            </a>
+        </div>
+    </div>
+<?php endif; ?>

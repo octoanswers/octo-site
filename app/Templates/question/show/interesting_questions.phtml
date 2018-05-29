@@ -1,0 +1,42 @@
+
+<?php if (isset($this->questions_with_image) && count($this->questions_with_image)): ?>
+    <div class="questions_interesting">
+        <div class="container-fluid">
+            <div class="row my-4">
+                <?php foreach ($this->questions_with_image as $question_with_image): ?>
+                    <div class="col-12 col-md-4">
+                        <div class="card card_question">
+                            <a class="card_img_conteiner" href="<?= Question_URL_Helper::getURL($this->lang, $question_with_image) ?>">
+                                <img class="card-img-top" src="<?= Question_URL_Helper::getImageURLMedium($this->lang, $question_with_image) ?>">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="<?= Question_URL_Helper::getURL($this->lang, $question_with_image) ?>">
+                                        <?= $question_with_image->getTitle(); ?>
+                                    </a>
+                                </h5>
+                                <p class="card-text">
+                                    Ответ обновлен <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+                                </p>
+                            </div>
+                            <!-- <div class="card-footer">
+                                <div class="avatar-group">
+                                    <a href="#" class="avatar-item">
+                                        <img class="avatar" src="img/5_100.jpg">
+                                    </a>
+                                    <a href="#" class="avatar-item">
+                                        <img class="avatar" src="img/6_100.jpg">
+                                    </a>
+                                </div>
+                                <span class="info">
+                                    <a href="">Make this answer better</a>
+                                </span>
+                            </div> -->
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

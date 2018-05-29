@@ -1,0 +1,10 @@
+
+<?php if (isset($data['topics']) && count($data['topics']) > 0): ?>
+
+    <h3 class="mb-4 size_16 gray_54"><?= $this->l->t('Knows about', 'Subtitle on user profile page') ?></h3>
+
+    <?php foreach ($data['topics'] as $topic): ?>
+        <a class="btn btn-outline-primary btn-sm mb-1" href="<?= $topic['url'] ?>"><?= $topic['name'] ?></a>
+    <?php endforeach; ?>
+
+<?php endif; ?>

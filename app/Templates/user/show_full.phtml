@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <?php require TEMPLATE_PATH.'/user/show/header.phtml'; ?>
+    <?php //require TEMPLATE_PATH.'/user/show/share_top.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-auto">
+                <?php require TEMPLATE_PATH.'/user/show/nav.phtml'; ?>
+                <?php require TEMPLATE_PATH.'/user/show/revisions.phtml'; ?>
+            </div>
+        </div>
+    </div>
+
+    <?php if ($this->authUser && ($this->authUser->getID() == $this->user->getID())) { require_once 'block/modal__logout.phtml'; }; ?>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

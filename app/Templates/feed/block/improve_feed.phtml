@@ -1,0 +1,113 @@
+
+<div class="block__check_list my-4">
+    <div class="header">
+        <?= $this->l->t("block", "improve_your_feed", "title") ?>
+    </div>
+    <div class="content">
+        <ul>
+            <li class="completed">
+                <span class="icon">
+                    <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                </span>
+                <span class="message">
+                    <?= $this->l->t("block", "improve_your_feed", "visit_your_feed") ?>
+                </span>
+            </li>
+
+            <?php if ($this->authUser->getUsername() == $this->authUser->getName()): ?>
+                <li>
+                    <a rel="nofollow" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
+                        <?= $this->l->t("block", "improve_your_feed", "set_real_name") ?>
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="completed">
+                    <span class="icon">
+                        <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                    </span>
+                    <span class="message">
+                        <?= $this->l->t("block", "improve_your_feed", "set_real_name") ?>
+                    </span>
+                </li>
+            <?php endif; ?>
+
+            <?php if (strlen($this->authUser->getSignature()) == 0): ?>
+                <li>
+                    <a rel="nofollow" href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>">
+                        <?= $this->l->t("block", "improve_your_feed", "set_signature") ?>
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="completed">
+                    <span class="icon">
+                        <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                    </span>
+                    <span class="message">
+                        <?= $this->l->t("block", "improve_your_feed", "set_signature") ?>
+                    </span>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($this->isShowTopicsFollowLure): ?>
+                <li>
+                    <a rel="nofollow" href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
+                        <?= $this->l->t("block", "improve_your_feed", "follow_3_more_topics") ?>
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="completed">
+                    <span class="icon">
+                        <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                    </span>
+                    <span class="message">
+                        <?= $this->l->t("block", "improve_your_feed", "follow_3_more_topics") ?>
+                    </span>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($this->isShowQuestionsFollowLure): ?>
+                <li>
+                    <a rel="nofollow" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
+                        <?= $this->l->t("block", "improve_your_feed", "follow_your_first_question") ?>
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="completed">
+                    <span class="icon">
+                        <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                    </span>
+                    <span class="message">
+                        <?= $this->l->t("block", "improve_your_feed", "follow_your_first_question") ?>
+                    </span>
+                </li>
+            <?php endif; ?>
+
+            <li class="completed">
+                <span class="icon">
+                    <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                </span>
+                <span class="message">
+                    <?= $this->l->t("block", "improve_your_feed", "find_your_friends") ?>
+                </span>
+            </li>
+
+            <li class="completed">
+                <span class="icon">
+                    <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                </span>
+                <span class="message">
+                    <?= $this->l->t("block", "improve_your_feed", "ask_your_first_question") ?>
+                </span>
+            </li>
+
+            <li class="completed">
+                <span class="icon">
+                    <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                </span>
+                <span class="message">
+                    <?= $this->l->t("block", "improve_your_feed", "answer_a_question") ?>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>

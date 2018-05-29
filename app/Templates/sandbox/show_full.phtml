@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <?php require_once TEMPLATE_PATH.'/sandbox/show/info.phtml' ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-auto">
+
+                <?php require_once TEMPLATE_PATH.'/sandbox/show/nav.phtml' ?>
+
+                <?php if (count($this->questions)): ?>
+                    <?php foreach ($this->questions as $question): ?>
+                        <?php
+                        if (isset($this->redirects[$question->getID()])) {
+                            require TEMPLATE_PATH.'/sandbox/show/redirect.phtml';
+                            continue;
+                        } else {
+                            require TEMPLATE_PATH.'/common/item/question_with_answer.phtml';
+                            continue;
+                        }
+                        ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if (isset($this->nextPageURL)): ?>
+                    <div class="mb-5 mt-5 text-center">
+                        <a class="btn btn-primary w-50" href="<?= $this->nextPageURL ?>"><?= $this->l->t('Еще вопросы') ?></a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

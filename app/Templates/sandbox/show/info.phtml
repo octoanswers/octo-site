@@ -1,0 +1,37 @@
+
+<?php if ($this->page == 1): ?>
+    <div class="bg_color_white octo_border_bottom pt-3 pb-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-10 col-md-8 mx-auto">
+
+                    <!-- Button trigger modal "About Sandbox" -->
+                    <img class="wh_3 mt-minus-half mr-2" src="https://png.icons8.com/windows/24/F44336/sandbox2.png">
+                    <a class="color_red_500" data-toggle="modal" href="#modal-about-sandbox">
+                        Что такое «Песочница»?
+                    </a>
+
+                    <!-- Modal "About Sandbox" -->
+                    <div class="modal fade" id="modal-about-sandbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <p>Песочница &mdash; это место куда попадают новые, ещё не имеющие ответа вопросы.</p>
+                                    <p>Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в <a href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">основной список</a>.</p>
+                                    <?php if (isset($this->humanizedQuestionsCount)): ?>
+                                        <p class="small">Сейчас в песочнице: <?= $this->humanizedQuestionsCount ?></p>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<?php endif; ?>

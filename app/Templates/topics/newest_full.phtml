@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-8 mx-auto">
+
+                <ul class="nav_underlined my-4 mt-md-5">
+                    <li>
+                        <a class="active" href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
+                            <?= $this->l->t('topics__filter__newest') ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <?= $this->l->t('topics__filter__popular') ?>
+                        </a>
+                    </li>
+                </ul>
+
+                <?php if (isset($this->topics)): ?>
+                    <?php foreach ($this->topics as $topic): ?>
+                        <div class="my-4">
+                            <div class="border-bottom pb-4">
+                                <div class="float-right">
+                                    <a class="size-6" href="<?= Topic_URL_Helper::getURL($this->lang, $topic) ?>">
+                                        <img class="size-6 img-cover rounded-circle mt-1" src="http://octoanswers.com/uploads/avatar/0_100.jpg">
+                                    </a>
+                                </div>
+                                <div class="mr-8">
+                                    <div class="pr-3 pr-sm-4">
+                                        <a class="h3 align-middle link_gray_900 no_underline mr-3" href="<?= Topic_URL_Helper::getURL($this->lang, $topic) ?>">
+                                            <?= $topic->getTitle() ?>
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-success align-middle" role="button">
+                                            Подписаться
+                                        </button>
+                                    </div>
+                                    <div class="mt-2 small color-gray-700">
+                                        <?= (int) (1 + strlen($topic->getTitle()) / 2) ?> вопросов
+                                        <span class="mx-1 color-gray-900 font_weight_800">&middot;</span>
+                                        <?= strlen($topic->getTitle()) ?> подписчиков
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if (isset($this->nextPageURL)): ?>
+                    <div class="my-5 text-center">
+                        <a class="btn btn-primary w-50" href="<?= $this->nextPageURL ?>">
+                            Еще темы
+                        </a>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+        </div>
+    </div>
+
+    <?php require_once TEMPLATE_PATH.'/common/footer.phtml'; ?>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

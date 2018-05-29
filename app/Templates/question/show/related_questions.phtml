@@ -1,0 +1,28 @@
+
+<?php if (isset($this->related_questions)): ?>
+    <div class="my-5 ml-sm-2">
+        <div class="title">
+            Похожие вопросы
+        </div>
+
+        <?php foreach ($this->related_questions as $question): ?>
+            <div class="my-4">
+                <a class="h4" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
+                    <?= $question->getTitle() ?>
+                </a>
+                <div class="small color-gray-500 mt-1">
+                    <?php if (strlen($question->getAnswer()->getText())): ?>
+                        <?= $this->minutesToRead_humanizer->humanizeCharactersCount(mb_strlen($question->getAnswer()->getText())) ?>
+                    <?php else: ?>
+                        <a rel="nofollow" href="<?= Answer_URL_Helper::getEditURL($this->lang, $question) ?>">
+                            <?= $this->l->t('related_questions__write_first_answer') ?>
+                        </a>
+                    <?php endif; ?>
+
+                    <span class="mx-2 color-gray-900 font_weight_800">&middot;</span>
+                    <?= $this->l->t('q__last_updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

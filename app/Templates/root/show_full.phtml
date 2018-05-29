@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/root/block/navbar.phtml'; ?>
+
+    <div class="jumbotron mb-0" style="background-color: #FFF;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-10 col-lg-10 ml-auto mr-auto text-center">
+                    <h1 class="display-4">OctoAnswers</h1>
+                    <h2 class="mt-4">Ask a question and get <span class="underline_blue_bold">one</span> complete and competent answer</h1>
+                    <a class="nav-button btn btn-warning btn-lg mt-4 pl-5 pr-5" href="<?= SITE_URL.'/'.$this->lang ?>" role="button">
+                        Switch to language: <?= $this->l->t('lang', $this->lang) ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 col-lg-10 mx-auto">
+                <h3 class="my-5 text-secondary text-center">
+                    OctoAnswers in your language
+                </h3>
+                <div class="block pl-md-4 pr-md-4 pb-4">
+                    <?php require_once TEMPLATE_PATH.'/root/block/langlist.phtml'; ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH.'/root/block/footer.phtml'; ?>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

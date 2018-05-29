@@ -1,0 +1,22 @@
+
+<?php if (strlen($this->answer->getText()) > 512): ?>
+    <div class="octo_border align-middle px-sm-4 py-sm-2 my-5">
+        <div class="d-inline-block my-2 pr-3">
+            <?= $this->l->t('q__did_we_answer_your_question') ?>
+        </div>
+        <div class="d-inline-block my-2">
+            <button type="button" class="btn btn-sm btn-outline-success mr-2" data-toggle="modal" data-target="#modal__feedback_thanks">
+                <img class="btn-icon mr-1" src="https://png.icons8.com/material/20/4caf50/happy.png">
+                <?= $this->l->t('q__did_we_answer_your_question__yes') ?>
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-warning mr-2" data-toggle="modal" data-target="#modal__feedback_thanks">
+                <img class="btn-icon mr-1" src="https://png.icons8.com/material/20/F44336/sad.png">
+                <?= $this->l->t('q__did_we_answer_your_question__no') ?>
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary mr-2" data-toggle="modal" data-target="#modal__feedback_thanks">
+                <?= $this->l->t('q__did_we_answer_your_question__partially') ?>
+            </button>
+        </div>
+    </div>
+    <?php require_once TEMPLATE_PATH.'/question/modal/feedback_thanks.phtml' ?>
+<?php endif; ?>

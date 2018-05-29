@@ -1,0 +1,15 @@
+
+<?php if ($this->authUser->getUsername() == $this->authUser->getName()): ?>
+    <div class="activity__lure my-4">
+        <div class="icon">
+            <img src="https://png.icons8.com/wired/64/3498db/identification-documents.png">
+        </div>
+        <div class="info">
+            <p class="title">Задайте реальное имя</p>
+            <p class="message">Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.</p>
+            <a href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>" class="btn btn-primary">
+                Задать реальное имя
+            </a>
+        </div>
+    </div>
+<?php endif; ?>

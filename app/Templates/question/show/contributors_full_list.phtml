@@ -1,0 +1,38 @@
+
+<?php if (count($this->contributors)): ?>
+    <div class="octo_border pl-sm-4 pr-sm-4 pt-sm-3 my-4" id="contributors_full_list">
+        <div class="title">
+            Вклад пользователей в ответ
+        </div>
+
+        <table class="no-border w-100">
+            <?php foreach ($this->contributors as $contributor): ?>
+                <tr>
+                    <td class="py-3">
+                        <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
+                            <img class="avatar-2 rounded-circle" src="<?= User_URL_Helper::getAvatarMediumURL($contributor) ?>">
+                        </a>
+                    </td>
+                    <td class="py-3 pl-3">
+                        <?php $percentage = $contributor->getContribution() * (100 / $this->maxContribution); ?>
+                        <!-- <div class="progress progress-height-2px">
+                            <div class="progress-bar bg-color-green-200" role="progressbar" style="width: <?= $percentage ?>%" aria-valuenow="<?= $contributor->getContribution() ?>" aria-valuemin="0" aria-valuemax="<?= $this->maxContribution ?>"></div>
+                        </div> -->
+                        <div class="font_weight_700 mt-1">
+                            <a class="link_gray_900 no_underline" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
+                                <?= $contributor->getName() ?>
+                            </a>
+                        </div>
+                        <span class="small color-gray-500">
+                            <?= $contributor->getSignature() ? $contributor->getSignature() : '+'.$contributor->getUsername() ?>
+                        </span>
+                    </td>
+                    <td class="py-2 text-right">
+                        <span class="small color-red-500">+<?= $contributor->getInsertionsCount() ?></span>
+                        <span class="small color-green-500">-<?= $contributor->getDeletionsCount() ?></span>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,14 @@
+
+<?php if (count($this->contributors_tail)): ?>
+    <div class="avatar-group mt-4 mb-2">
+        <?php foreach ($this->contributors_tail as $contributor): ?>
+            <a href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>" class="avatar-item">
+                <img src="<?= User_URL_Helper::getAvatarSmallURL($contributor) ?>">
+            </a>
+        <?php endforeach; ?>
+    </div>
+    <p class="pl-1 small color-gray-500 mb-4">
+        + <a class="link_gray_700 no_underline" href="#"><?= count($this->contributors) ?> авторов</a>
+    </p>
+
+<?php endif; ?>

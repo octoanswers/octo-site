@@ -1,0 +1,29 @@
+
+<div class="my-5">
+    <div class="mb-3">
+        <div class="pt-1 float-left">
+            <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $this->users[$i]) ?>">
+                <img class="avatar-lg rounded-circle" src="<?= User_URL_Helper::getAvatarSmallURL($this->users[$i]) ?>">
+            </a>
+        </div>
+        <div class="ml-8">
+            <div class="">
+                <a class="font_weight_600 small mr-1" href="<?= User_URL_Helper::getURL($this->lang, $this->users[$i]) ?>">
+                    <?= $this->users[$i]->getName() ?>
+                </a>
+            </div>
+            <span class="small color-gray-600">
+                <?= $this->l->t('answer_history__change_id') ?> #<?= $this->revisions[$i]->getID() ?>
+                <span class="color-gray-900 font_weight_800">&middot;</span>
+                <?php if ($this->revisions[$i]->getComment()): ?>
+                    <?= $this->l->t('answer_history__description_of_changes') ?>: <?= $this->revisions[$i]->getComment() ?>
+                <?php else: ?>
+                    <?= $this->l->t('answer_history__no_description_of_changes') ?>
+                <?php endif; ?>
+                <span class="color-gray-900 font_weight_800">&middot;</span>
+                <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->getCreatedAt()) ?>
+            </span>
+        </div>
+    </div>
+    <pre><?= FineDiff::renderDiffToHTMLFromOpcodes($this->revisions[$i]->getBaseText(), $this->revisions[$i]->getOpcodes()) ?></pre>
+</div>

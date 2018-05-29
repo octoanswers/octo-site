@@ -1,0 +1,40 @@
+
+<?php if (count($this->contributors_top) >= 1): ?>
+    <div class="octo_border pl-sm-4 pr-sm-4 pt-sm-3 my-5">
+        <div class="mb-3">
+            <span class="title d-inline-block">
+                <?= $this->l->t('improve_answer', 'last_edit') ?>
+            </span>
+            <span class="mx-2 color-gray-900 font_weight_800">&middot;</span>
+            <span class="small color-gray-500 mt-1">
+                <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->answer->getUpdatedAt()) ?>
+            </span>
+        </div>
+        <div class="pseudo_table mt-3 mb-3">
+            <div class="pseudo_cell pt-2">
+                <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $this->lastEditor) ?>">
+                    <img class="avatar-2 rounded-circle" src="<?= User_URL_Helper::getAvatarSmallURL($this->lastEditor) ?>">
+                </a>
+            </div>
+            <div class="pseudo_cell align-middle pl-3">
+                <div class="font_weight_700">
+                    <a class="link_gray_900 no_underline" href="<?= User_URL_Helper::getURL($this->lang, $this->lastEditor) ?>">
+                        <?= $this->lastEditor->getName() ?>
+                    </a>
+                </div>
+                <span class="small color-gray-600">
+                    <?= $this->lastEditor->getSignature() ? $this->lastEditor->getSignature() : '+'.$this->lastEditor->getUsername() ?>
+                </span>
+                <div class="mt-3">
+                    <a class="small color-gray-400" href="<?= Answer_URL_Helper::getHistoryURL($this->lang, $this->question) ?>">
+                        Полная история изменений
+                    </a>
+                </div>
+            </div>
+            <div class="pseudo_cell pt-1 text-right">
+                <span class="small color-red-500">+<?= $this->lastEditor->getInsertionsCount() ?></span>
+                <span class="small color-green-500">-<?= $this->lastEditor->getDeletionsCount() ?></span>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,18 @@
+
+<ul class="nav_underlined my-4">
+    <li>
+        <a class="<?= ($this->list == 'without-answers') ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
+            <?= $this->l->t('sandbox', 'filter', 'without_answers') ?>
+        </a>
+    </li>
+    <li>
+        <a class="<?= ($this->list == 'without_topics') ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutTopicsURL($this->lang) ?>">
+            <?= $this->l->t('sandbox', 'filter', 'without_topics') ?>
+        </a>
+    </li>
+    <li>
+        <a class="<?= ($this->list == 'newest') ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getAllURL($this->lang) ?>">
+            <?= $this->l->t('sandbox', 'filter', 'all') ?>
+        </a>
+    </li>
+</ul>

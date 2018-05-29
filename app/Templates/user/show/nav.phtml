@@ -1,0 +1,19 @@
+<ul class="nav_underlined my-4">
+    <li>
+        <a class="active" href="#">
+            <?= $this->l->t('u__last_revisions') ?>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <?= $this->l->t('u__followed') ?>
+        </a>
+    </li>
+    <?php if ($this->authUser): ?>
+        <li>
+            <a href="#">
+            <?= $this->l->t('u__followers') ?>
+        </a>
+    </li>
+    <?php endif; ?>
+</ul>

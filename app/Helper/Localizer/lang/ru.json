@@ -1,0 +1,380 @@
+{
+    "octoanswers": "OctoAnswers",
+
+    "answer_edit__subtitle": "Правка ответа на вопрос",
+    "answer_edit__back_to_question": "Вернуться к вопросу",
+    "answer_edit__description_of_changes": "Описание изменений, если необходимо:",
+    "answer_edit__save_changes_btn": "Сохранить правки",
+
+    "answer_history__subtitle": "История изменений ответа",
+    "answer_history__back_to_question": "Вернуться к вопросу",
+    "answer_history__description_of_changes": "Описание изменений",
+    "answer_history__no_description_of_changes": "Нет описания изменений",
+    "answer_history__change_id": "Правка",
+
+    "modal_ask": {
+        "modal_title": "Новый вопрос",
+        "note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
+        "input_placeholder": "Какой у Вас вопрос?",
+        "submit_button": "Задать вопрос"
+    },
+
+    "modal_upload_image": {
+        "modal_title": "Загрузка картинки вопроса",
+        "submit_button": "Загрузить картинку"
+    },
+
+    "answer_history__page_title": "История вопроса: ",
+
+    "btn": {
+        "ask_question": "Задать вопрос",
+        "cancel": "Отмена",
+        "edit_answer": "Править ответ",
+        "close": "Закрыть",
+        "save": "Сохранить",
+        "upload": "Загрузить",
+        "view_history": "История",
+        "follow": "Подписаться",
+        "followed": "Подписан",
+        "unfollow": "Отписаться",
+        "follow_question": "Подписаться на вопрос",
+        "follow_topic": "Подписаться на хештег"
+    },
+
+    "block": {
+        "about_octoanswers": {
+            "title": "О сайте",
+            "message": "OctoAnswers &mdash; это сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы, как статьи в Википедии.",
+            "button": "Регистрация"
+        },
+        "first_answer": {
+            "title": "Будьте первым автором!",
+            "lead": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка.",
+            "answer_btn": "Написать первый ответ"
+        },
+        "add_image": {
+            "message": "Изображение украшает вопрос и помогает понять о чем конкретно идет речь.",
+            "button": "Добавить картинку"
+        },
+        "improve_your_feed": {
+            "title": "Улучшите вашу ленту",
+            "visit_your_feed": "Посетите ленту",
+            "set_real_name": "Введите реальное имя",
+            "set_signature": "Придумайте подпись",
+            "follow_3_more_topics": "Подпишитесь на 3+ хештега",
+            "follow_your_first_question": "Подпишитесь на первый вопрос",
+            "find_your_friends": "Найдите друзей",
+            "ask_your_first_question": "Задайте первый вопрос",
+            "answer_a_question": "Ответьте на вопрос"
+        }
+    },
+
+    "edit__page_title": "Редактирование ответа",
+
+    "error_500__page_title": "Ошибка 500",
+
+    "feed__page_title": "Лента новостей",
+    "feed__title": "Лента новостей",
+
+    "flow__page_title": "Поток вопросов и ответов",
+    "flow__title": "Поток событий",
+
+    "footer": {
+        "account": {
+            "title": "Аккаунт",
+            "login": "Вход",
+            "signup": "Регистрация"
+        },
+        "user": {
+            "feed": "Лента",
+            "profile": "Профиль",
+            "settings": "Настройки"
+        },
+        "sections": {
+            "title": "Разделы",
+            "questions": "Вопросы",
+            "topics": "Темы",
+            "experts": "Эксперты",
+            "flow": "Поток"
+        },
+        "info": {
+            "title": "Информация",
+            "rules": "Правила",
+            "help": "Помощь",
+            "docs": "Соглашения",
+            "adv": "Реклама"
+        },
+        "about": "О сайте",
+        "support": "Служба поддержки",
+        "support_link": "https://vk.com/octoanswers"
+    },
+
+    "topic": {
+        "page_title_prefix": "Вопросы и ответы на тему",
+        "page_description": "Вопросы и ответы на тему &laquo;%topic%&raquo;"
+    },
+
+
+    "topics__page_title": "Новые хештеги",
+    "topics__page_num": "Страница ",
+
+    "lang": {
+        "en": "English",
+        "english": "English",
+        "ru": "Русский",
+        "russian": "Русский"
+    },
+
+    "main_pg__title": "Задай вопрос и получи один компетентный ответ",
+    "main_pg__description": "OctoAnswers - это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+
+    "main": {
+        "h1": "Задайте вопрос и получите",
+        "h2": "Один исчерпывающий ответ",
+        "note": "OctoAnswers &mdash; это как Википедия, только для вопросов и ответов. Вы задаете вопрос и получаете один полный, исчерпывающий и компетентный ответ от сообщества.",
+        "or": "или",
+        "join_us": "присоединяйтесь",
+        "ask_btn": "Задайте свой первый вопрос"
+    },
+
+    "main__lead": "Задайте вопрос на любую тему и наши специалисты ответят на него в течении 14 минут.",
+    "main__input_note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
+    "main__recent_questions": "Последние вопросы",
+    "main__full_answer": "полный ответ",
+    "main__about_octoanswers": "О проекте OctoAnswers",
+    "main__about_octoanswers_text": "OctoAnswers — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+    "main__about_octoanswers_some_questions": "Мы отобрали для вас несколько ответов на вопросы, которые помогут лучше понять, в чем идея сервиса OctoAnswers:",
+    "main_pg__share__intro": "Вы можете помочь проекту OctoAnswers, просто поделившись со своими друзьями ссылкой на него.",
+
+    "menu__other_langs": "На других языках",
+    "menu__other_langs__full_list": "Полный список",
+    "menu__other_langs__more": "Ещё 0",
+
+    "modal__feedback_thanks__text": "Спасибо за отзыв!",
+
+    "navbar": {
+        "feed": "Лента",
+        "questions": "Вопросы",
+        "topics": "Темы вопросов",
+        "sandbox": "Песочница",
+        "login": "Вход",
+        "signup": "Регистрация",
+        "ask": "Задать вопрос"
+    },
+
+    "nav__experts": "Эксперты",
+    "nav__search_placeholder": "Поиск…",
+    "nav__profile": "Профиль",
+    "nav__settings": "Настройки",
+
+    "share__question__btn": "Поделиться",
+    "share__question__vk": "ВКонтакте",
+    "share__question__facebook": "Facebook",
+    "share__question__twitter": "Twitter",
+    "share__question__google_plus": "Google+",
+    "share__question__pinterest": "Pinterest",
+    "share__question__email": "Email",
+
+    "q__action__search_in_ddg": "Поискать в DuckDuckGo",
+    "q__action__copy_short_url": "Короткий URL",
+
+    "q_pg__page_description": "Вики-ответ на вопрос «%question%»",
+    "q_pg__share_description": "Вики-ответы на Ваши вопросы на octoanswers.com",
+
+    "q__first_answer__modal_text": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
+
+    "modal__fake_follow_q__text": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
+    "modal__fake_edit_answer__text": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
+
+    "q__about_question": "О вопросе",
+    "q__action__title": "Действия",
+    "q__action__rename_question": "Переименовать вопрос",
+    "q__short_answer_label": "Короткий ответ",
+    "q__last_updated": "Обновлено",
+    "related_questions__write_first_answer": "Написать первый ответ",
+    "q__answer_contributors_top": "Авторы ответа",
+    "q__answer_contributors": "Остальные авторы",
+
+    "q__did_we_answer_your_question": "Мы ответили на ваш вопрос?",
+    "q__did_we_answer_your_question__yes": "Да",
+    "q__did_we_answer_your_question__no": "Нет",
+    "q__did_we_answer_your_question__partially": "Частично",
+
+    "q__can_you_answer__lead": "Вы можете ответить на этот вопрос?",
+    "q__can_you_answer__btn": "Да, я могу!",
+
+    "improve_answer": {
+        "title": "Можете улучшить этот ответ?",
+        "btn_yes": "Да, я могу!",
+        "last_edit": "Последняя правка",
+        "see_all": "Все авторы"
+    },
+
+    "question": {
+        "title_prefix": "Ответ написан сообществом OctoAnswers",
+        "last_updated": "Ответ обновлен",
+        "actions": {
+            "upload_image": "Загрузить картинку"
+        },
+        "update_image": {
+            "title": "Обновление картинки к вопросу"
+        },
+        "update_topics": {
+            "btn": "Обновить темы"
+        }
+    },
+
+    "question__view_contributions_btn": "Вклад каждого автора",
+
+    "q__short_url__note": "Вопрос также доступен по короткому URL",
+
+    "modal_rename_question": {
+        "modal_title": "Переименование вопроса",
+        "leave_redirect": "Оставить редирект",
+        "submit_button": "Переименовать вопрос"
+    },
+
+    "q__share__have_answer": "Если ответ вам понравился или вы знаете того, кому он может быть интересен, поделитесь ссылкой с друзьями.",
+    "q__share__dont_have_answer": "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь ссылкой.",
+
+    "question_not_found__page_title": "Вопрос не найден:",
+    "question_not_found__title": "Вопрос не найден",
+    "question_not_found__create_a_question": "Создать вопрос",
+
+    "q__signup_lure__text_1": "Смотрите, какие вопросы ваши друзья задают сегодня.",
+    "q__signup_lure__text_2": "Следите за новыми вопросами с интересными для вас хештегами.",
+    "q__signup_lure__text_3": "И делитесь своими знаниями с окружающими.",
+
+    "questions__page_title__with_answers": "Вопросы с ответами",
+    "questions__page_title__without_answers": "Вопросы без ответов",
+    "questions__page_title__all": "Новые вопросы",
+    "questions__page_num": "Страница",
+
+    "questions__title": "Вопросы",
+    "questions__search_placeholder": "Поиск вопроса",
+    "questions__filter__with_answers": "Последние",
+    "questions__filter__popular": "Популярные",
+    "questions__ask": "Задать вопрос",
+
+    "sandbox": {
+        "filter": {
+            "without_answers": "Вопросы без ответа",
+            "without_topics": "Без темы",
+            "all": "Все вопросы"
+        },
+        "write_first_answer": "Написать ответ"
+    },
+
+    "questions": {
+        "title": "Вопросы с ответами",
+        "page_num": "Страница",
+        "filter": {
+            "newest": "Новые вопросы",
+            "recently_updated": "Недавно обновленные",
+            "popular": "Популярные"
+        },
+        "next_btn": "Еще вопросы",
+        "recently_updated": {
+            "title": "Недавно обновленные вопросы"
+        }
+    },
+
+    "users__page_title": "Пользователи сервиса OctoAnswers",
+    "users__title": "Пользователи",
+    "users__lead": "После регистрации вы сможете посписаться на интересующие вас темы, моментально узнавать о новых вопросах и предлагать свои ответы.",
+    "users__search_placeholder": "Поиск пользователей",
+    "users__filter__title": "Пользователи:",
+    "users__filter__newest": "Новые",
+    "users__filter__popular": "Популярные",
+    "users__signup": "Зарегистрироваться",
+
+    "modal_login": {
+        "title": "Вход",
+        "email": "Электронная почта",
+        "password": "Пароль",
+        "submit_btn": "Войти",
+        "signup": "Зарегистрироваться",
+        "forgot_password": "Забыли пароль?"
+    },
+
+    "search__page_title": "Поиск вопроса «%query%»",
+    "search__title": "Результаты поиска: ",
+    "search__filter__title": "Поиск по: ",
+    "search__filter__questions": "Вопросы",
+    "search__filter__topics": "Хештеги",
+    "search__filter__users": "Пользователи",
+
+    "search__alert__questions_not_found__title": "Вопросов не найдено",
+    "search__alert__questions_not_found__text": "По запросу «%query%» не удалось найти ни одного вопроса...",
+    "search__alert__questions_not_found__button": "Задать вопрос",
+
+    "search__alert__topics_not_found__title": "Хештеги не найдены",
+    "search__alert__topics_not_found__text": "По запросу «%query%» не удалось найти ни одной темы...",
+
+    "search__alert__users_not_found__title": "Пользователей не найдено",
+    "search__alert__users_not_found__text": "По запросу «%query%» не удалось найти ни одного пользователя...",
+    "search__alert__users_not_found__button": "Посмотреть список популярных",
+
+    "settings_signature__title": "Подпись",
+    "settings_signature__subtitle": "Введите подпись, описывающую ваши профессиональные навыки и знания:",
+    "settings_signature__note": "Напримере: Профессор психологии, предприниматель, начинающий поэт.",
+    "settings_signature__save_btn": "Сохранить подпись",
+    "settings_signature__ex__note": "Подпись также будет показываться рядом с правками ответов, которые вы сделаете. Так, например, Лев Толстой наверняка сохранил бы такую подпись:",
+    "settings_signature__ex__name": "Лев Толстой",
+    "settings_signature__ex__signature": "Величайший писатель всех времен",
+
+    "settings_site__title": "Персональный сайт",
+    "settings_site__subtitle": "Введите адрес вашего сайта или странички в социальной сети.",
+    "settings_site__note": "Пример: https://www.facebook.com/alexander",
+    "settings_site__save_btn": "Сохранить ссылку",
+
+    "signup__page_title": "Регистрация на сайте вопросов и ответов - OctoAnswers",
+    "signup__head_description": "OctoAnswers позволяет удивительно легко получать компетентные ответы на любые вопросы. Более 100  человек ежедневно задают вопросы и получают ответы помощью OctoAnswers.",
+    "signup__title": "Регистрация",
+    "signup__useremail": "Логин",
+    "signup__email": "Email",
+    "signup__password": "Пароль",
+    "signup__note": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
+    "signup__signup_btn": "Регистрация",
+    "signup__real_name": "Имя и фамилия",
+
+    "alert_subscribe__text": "Укажите адрес электронной почты, чтобы получить уведомление об ответе как только он появится.",
+    "alert_subscribe__btn": "Сообщить об ответе",
+
+    "topics__title": "Хештеги",
+    "topics__lead": "Подписывайтесь на интересующие вас темы, чтобы узнавать о новых вопросах и предлагать свои ответы.",
+    "topics__search_placeholder": "Поиск темы",
+    "topics__filter__title": "Хештеги:",
+    "topics__filter__newest": "Новые темы",
+    "topics__filter__popular": "Популярные",
+
+    "user__page_title_postfix": " - Вики-ответы на OctoAnswers",
+    "user__page_description_postfix": " - вики-ответы на OctoAnswers",
+    "user__logout": "Выйти",
+    "user__change_avatar": "Изменить аватар",
+    "u__last_revisions": "Последние правки",
+    "u__followers": "Подписчики",
+    "u__followed": "Подписки",
+
+    "users__page_title__newest": "Новые пользователи со всего мира",
+    "users__page_num": "Страница",
+
+    "wordform_1_minute_to_read": "минута на чтение",
+    "wordform_2_minutes_to_read": "минуты на чтение",
+    "wordform_5_minutes_to_read": "минут на чтение",
+
+    "wordform_no_topics": "Нет тем",
+    "wordform_1_topic": "тема",
+    "wordform_2_topics": "темы",
+    "wordform_5_topics": "тем",
+
+    "wordform_1_question": "вопрос",
+    "wordform_2_questions": "вопроса",
+    "wordform_5_questions": "вопросов",
+    "no_questions": "Нет вопросов",
+
+    "wordform_no_users": "Нет пользователей",
+    "wordform_1_user": "пользователь",
+    "wordform_2_users": "пользователя",
+    "wordform_5_users": "пользователей"
+}

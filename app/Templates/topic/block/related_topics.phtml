@@ -1,0 +1,26 @@
+
+<?php if (count($this->related_topics)): ?>
+    <div class="my-5">
+
+        <p class="title my-4">
+            Похожие темы
+        </p>
+
+        <?php foreach ($this->related_topics as $topic): ?>
+            <a class="badge badge-dark mr-2 mb-3" href="<?= Topic_URL_Helper::getURL($this->lang, $topic) ?>">
+                <?= $topic->getTitle() ?>
+            </a>
+        <?php endforeach; ?>
+    </div>
+<?php else: ?>
+    <!-- <div class="alert alert-super" role="alert">
+        <img src="/public/img/Ghost-96.png" alt="Нет вопросов в теме «{{ topic.getTitle }}»"/>
+        <p><strong>Вопросов нет</strong></p>
+        <p>Нет ни одного вопроса относящегося к теме «{{ topic.getTitle }}»</p>
+        {% if authUser %}
+            <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal__ask">Задать вопрос</button></p>
+        {% else %}
+            <p><button class="btn btn-primary" data-toggle="modal" data-target="#modal__ask_not_logged">Задать вопрос</button></p>
+        {% endif %}
+    </div> -->
+<?php endif; ?>

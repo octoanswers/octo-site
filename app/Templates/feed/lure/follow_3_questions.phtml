@@ -1,0 +1,15 @@
+
+<?php if ($this->isShowQuestionsFollowLure): ?>
+    <div class="activity__lure my-4">
+        <div class="icon">
+            <img src="https://png.icons8.com/wired/64/F44336/firework.png">
+        </div>
+        <div class="info">
+            <p class="title">Подпишитесь на три вопроса</p>
+            <p class="message">Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три (или 33 :) вопроса.</p>
+            <a href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>" class="btn btn-primary">
+                Посмотреть вопросы
+            </a>
+        </div>
+    </div>
+<?php endif; ?>

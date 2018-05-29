@@ -1,0 +1,40 @@
+
+<?php if (count($this->contributors_top)): ?>
+    <h4 class="mt-5 alert-heading">
+        <?= $this->l->t('q__answer_contributors_top') ?>
+    </h4>
+
+    <?php foreach ($this->contributors_top as $contributor): ?>
+        <div class="my-4">
+            <div class="pt-1 float-left">
+                <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
+                    <img class="avatar-lg rounded-circle" src="<?= User_URL_Helper::getAvatarMediumURL($contributor) ?>">
+                </a>
+            </div>
+            <div class="ml-8">
+                <div class="">
+                    <a class="font_weight_600 small mr-1" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
+                        <?= $contributor->getName() ?>
+                    </a>
+                    <?php if ($contributor->getContribution() == $this->maxContribution): ?>
+                        <img class="mt-minus-quarter" src="https://png.icons8.com/material/20/fbc02d/fairytale.png">
+                    <?php endif; ?>
+                </div>
+                <span class="small color-gray-600">
+                    <?php if ($contributor->getSignature()): ?>
+                        <?= $contributor->getSignature() ?>
+                    <?php else: ?>
+                        @<?= $contributor->getUsername() ?>
+                    <?php endif; ?>
+
+                    <?php if ($contributor->getSite()): ?>
+                        <span class="color-gray-900 font_weight_800">&middot;</span>
+                        <a href="<?= $contributor->getSite() ?>">
+                            <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
+                        </a>
+                    <?php endif; ?>
+                </span>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>

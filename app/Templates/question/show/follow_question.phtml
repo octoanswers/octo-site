@@ -1,0 +1,20 @@
+
+<?php if ($this->authUser && !$this->followed): ?>
+    <div class="block__follow_question mt-5">
+        <div class="icon">
+            <img src="https://png.icons8.com/wired/64/757575/road.png">
+        </div>
+        <div class="info">
+            <p class="message">Если вопрос вам интересен, подпишитесь на него и все связанные с ним правки будут отображаться в вашей ленте новостей.</p>
+            <button
+                class="btn follow_question_button <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
+                data-question-id="<?= $this->question->getID() ?>"
+                data-follow-title="<?= $this->l->t('btn', 'follow_question') ?>"
+                data-followed-title="<?= $this->l->t('btn', 'followed') ?>"
+                data-unfollow-title="<?= $this->l->t('btn', 'unfollow') ?>"
+                type="button">
+                <?= $this->l->t('btn', 'follow_question') ?>
+            </button>
+        </div>
+    </div>
+<?php endif; ?>

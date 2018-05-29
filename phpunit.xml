@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<phpunit bootstrap="tests/bootstrap.php">
+  <testsuites>
+    <testsuite name="OctoAnswers Test Suite">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true" processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">app</directory>
+    </whitelist>
+  </filter>
+</phpunit>

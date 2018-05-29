@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 col-sm-10 col-md-8 mx-auto">
+
+                <ul class="nav_underlined mt-4 mt-md-5">
+                    <li>
+                        <a class="active" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+                            <?= $this->l->t('users__filter__newest') ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <?= $this->l->t('users__filter__popular') ?>
+                        </a>
+                    </li>
+                </ul>
+
+                <?php require_once TEMPLATE_PATH.'/users/block/list.phtml'; ?>
+
+                <?php if (isset($this->nextPageURL)): ?>
+                    <div class="my-5 text-center">
+                        <a class="btn btn-primary w-50" href="<?= $this->nextPageURL ?>">
+                            Еще пользователи
+                        </a>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <!-- <div class="col-12 col-lg-4">
+                <?php require TEMPLATE_PATH.'/users/block/signup_lure.phtml'; ?>
+            </div> -->
+
+        </div>
+    </div>
+
+    <?php require_once TEMPLATE_PATH.'/common/footer.phtml'; ?>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

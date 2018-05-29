@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body class="bg_gray">
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-11 col-md-10 col-lg-7 mx-auto">
+
+                <h1 class="mt-2 mt-md-5">Настройки профиля</h1>
+                <a href="<?= User_URL_Helper::getURL($this->lang, $this->authUser) ?>" class="btn btn-sm btn-outline-secondary">
+                    Вернуться к профилю
+                </a>
+
+                <hr class="my-4 my-md-5">
+                <h2>Загрузка аватарки</h2>
+                <div class="pseudo_table">
+                    <div class="pseudo_cell pr-4 pr-xl-5">
+                        <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data" class="mt-4">
+                            <div class="form-group">
+                                <label for="form__update_name__name">
+                                    Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.
+                                </label>
+                                <input type="file" name="new_avatar_file" class="form-control-file w-100">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="form__upload_avatar__submit_btn" class="btn btn-primary submit_button">Загрузить</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="pseudo_cell">
+                        <img class="avatar avatar-xxl my-4" id="settings_pg__user_avatar" src="<?= User_URL_Helper::getAvatarMediumURL($this->authUser) ?>"/>
+                    </div>
+                </div>
+
+                <hr class="my-4 my-md-5">
+                <h2>Реальное имя</h2>
+                <form id="form__update_name" data-user-id="<?= $this->authUser->getID() ?>">
+                    <div class="form-group">
+                        <label for="form__update_name__name">
+                            Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.
+                        </label>
+                        <input id="form__update_name__name" type="text" class="form-control" value="<?= @$this->authUser->getName() ?>">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="form__update_name__submit" class="btn btn-primary">
+                            Сохранить реальное имя
+                        </button>
+                    </div>
+                </form>
+
+                <hr class="my-4 my-md-5">
+                <h2>Подпись</h2>
+                <form id="form__update_signature" data-user-id="<?= $this->authUser->getID() ?>">
+                    <div class="form-group">
+                        <label for="form__update_signature__signature">
+                            <?= $this->l->t('settings_signature__subtitle') ?>
+                        </label>
+                        <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->getSignature() ?>" placeholder="<?= $this->l->t('settings_signature__note') ?>">
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" id="form__update_signature__submit" class="btn btn-primary">
+                            <?= $this->l->t('settings_signature__save_btn') ?>
+                        </button>
+                    </div>
+                </form>
+
+                <hr class="my-4 my-md-5">
+                <h2>
+                    <?= $this->l->t('settings_site__title') ?>
+                </h2>
+                <form id="frm__update_site" data-user-id="<?= $this->authUser->getID() ?>">
+                    <div class="form-group">
+                        <label for="frm__update_site__site">
+                            <?= $this->l->t('settings_site__subtitle') ?>
+                        </label>
+                        <input id="frm__update_site__site" type="text" class="form-control" value="<?= @$this->authUser->getSite() ?>" placeholder="<?= $this->l->t('settings_site__note') ?>">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="frm__update_site__submit" class="btn btn-primary">
+                            <?= $this->l->t('settings_site__save_btn') ?>
+                        </button>
+                    </div>
+                </form>
+
+                <hr class="my-4 my-md-5">
+
+            </div>
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

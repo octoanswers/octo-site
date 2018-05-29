@@ -1,0 +1,8 @@
+{
+  "require" : {
+    "slim/slim": "^3.8",
+    "erusev/parsedown": "^1.6",
+    "respect/validation": "^1.1",
+    "verot/class.upload.php": "dev-master"
+  }
+}

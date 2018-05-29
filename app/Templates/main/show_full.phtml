@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <div class="jumbotron text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-10 mx-auto">
+                    <h1 class="font-weight-400">
+                        <?= $this->l->t('main', 'h1') ?>
+                    </h1>
+
+                    <h2 class="display-3 text-uppercase color-secondary-dark mt-2">
+                        <?= $this->l->t('main', 'h2') ?>
+                    </h2>
+
+                    <p class="lead mt-4">
+                        <?= $this->l->t('main', 'note') ?>
+                    </p>
+
+                    <div class="font-weight-400 color-gray-700 mt-4">
+                        <!-- Button trigger modal Ask -->
+                        <button type="button" class="btn btn-lg btn-primary mr-2" data-toggle="modal" data-target="#modal_ask">
+                            <?= $this->l->t('main', 'ask_btn') ?>
+                        </button>
+                        <?= $this->l->t('main', 'or') ?>
+                        <a class="link-underlined" href="#" data-toggle="modal" data-target="#modal_signup"><?= $this->l->t('main', 'join_us') ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 col-lg-8 mx-auto">
+
+                <p class="text-uppercase font-weight-bold text-secondary mb-4 mt-5 text-center">
+                    <?= $this->l->t('main__recent_questions') ?>
+                </p>
+
+                <!-- interesting questions -->
+                <?php if (isset($this->recent_questions)): ?>
+                    <?php foreach ($this->recent_questions as $question): ?>
+                        <?php require TEMPLATE_PATH.'/common/item/question_with_answer.phtml'; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <!-- /interesting questions -->
+
+                <?php require_once TEMPLATE_PATH.'/main/block/div__share.phtml' ?>
+
+            </div>
+
+        </div>
+    </div>
+
+    <?php require_once TEMPLATE_PATH.'/common/footer.phtml'; ?>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

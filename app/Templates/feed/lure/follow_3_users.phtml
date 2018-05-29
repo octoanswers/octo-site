@@ -1,0 +1,15 @@
+
+<?php if ($this->isShowUsersFollowLure): ?>
+    <div class="activity__lure my-4">
+        <div class="icon">
+            <img src="https://png.icons8.com/wired/64/4CAF50/meeting.png">
+        </div>
+        <div class="info">
+            <p class="title">Найдите первых друзей</p>
+            <p class="message">Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и прочие активности этих пользователей будут появляться у вас в ленте новостей.</p>
+            <a href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>" class="btn btn-primary">
+                Посмотреть пользователей
+            </a>
+        </div>
+    </div>
+<?php endif; ?>

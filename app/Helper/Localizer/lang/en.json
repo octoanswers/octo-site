@@ -1,0 +1,317 @@
+{
+    "octoanswers": "OctoAnswers",
+
+    "answer_edit__subtitle": "Edit answer to the question",
+    "answer_edit__back_to_question": "Back to question",
+    "answer_edit__description_of_changes": "Description of changes, if necessary:",
+    "answer_edit__save_changes_btn": "Save changes",
+
+    "answer_history__subtitle": "History of answer changes",
+    "answer_history__back_to_question": "Back to question",
+    "answer_history__description_of_changes": "Description of changes",
+    "answer_history__no_description_of_changes": "No description of changes",
+    "answer_history__change_id": "Change",
+
+    "modal_ask": {
+        "modal_title": "New question",
+        "note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
+        "input_placeholder": "Какой у Вас вопрос?",
+        "submit_button": "Ask a question"
+    },
+
+    "answer_history__page_title": "History of question: ",
+
+    "btn": {
+        "ask_question": "Ask Question",
+        "cancel": "Cancel",
+        "edit_answer": "Edit answer",
+        "close": "Close",
+        "save": "Save",
+        "upload": "Upload",
+        "view_history": "View history",
+        "follow": "Follow",
+        "followed": "Followed",
+        "unfollow": "Unfollow",
+        "follow_question": "Follow question",
+        "follow_topic": "Follow topic"
+    },
+
+    "block": {
+        "first_answer": {
+            "title": "Be the first author!",
+            "lead": "Still no one tried to write an answer to this question. Be the first if the topic of the question is close to you.",
+            "answer_btn": "Write first answer"
+        },
+        "add_image": {
+            "message": "The image adorns the question and helps to understand what exactly is in question.",
+            "button": "Add image"
+        },
+        "improve_your_feed": {
+            "title": "Improve Your Feed",
+            "visit_your_feed": "Visit your feed",
+            "set_real_name": "Set real name",
+            "set_signature": "Set signature",
+            "follow_3_more_topics": "Follow 3 more topics",
+            "follow_your_first_question": "Follow your first question",
+            "find_your_friends": "Find your friends",
+            "ask_your_first_question": "Ask your first question",
+            "answer_a_question": "Answer a question"
+        }
+    },
+
+    "edit__page_title": "Edit answer",
+
+    "error_500__page_title": "Error 500",
+
+    "feed__title": "Newsfeed",
+
+    "flow__page_title": "Questions and answers flow",
+
+    "footer": {
+        "account": {
+            "title": "Account",
+            "login": "Login",
+            "signup": "Signup"
+        },
+        "user": {
+            "feed": "Feed",
+            "profile": "Profile",
+            "settings": "Settings"
+        },
+        "sections": {
+            "title": "Sections",
+            "questions": "Questions",
+            "topics": "Topics",
+            "experts": "Experts",
+            "flow": "Flow"
+        },
+        "info": {
+            "title": "Info",
+            "rules": "Rules",
+            "help": "Help",
+            "docs": "Privacy Policies",
+            "adv": "Adv"
+        },
+        "about": "About",
+        "support": "Support",
+        "support_link": "https://www.facebook.com/octoanswers"
+    },
+
+    "topic": {
+        "page_title_prefix": "Questions and answers on the topic",
+        "page_description": "Questions and answers on the topic &laquo;%topic%&raquo;"
+    },
+
+
+
+    "topics__page_title": "New topics",
+    "topics__page_num": "Page ",
+
+    "lang": {
+        "en": "English",
+        "english": "English",
+        "ru": "Русский",
+        "russian": "Русский"
+    },
+
+    "main_pg__title": "Ask a question and get one complete answer",
+    "main_pg__description": "OctoAnswers - это сервис вопросов-и-ответов, где вы можете задать вопрос на любую тему, а сообщество профессионалов всегда поможет получить компетентный ответ.",
+
+    "main": {
+        "h1": "Ask a question and get",
+        "h2": "One complete answer",
+        "note": "OctoAnswers is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.",
+        "or": "or",
+        "join_us": "joun us",
+        "ask_btn": "Ask a question"
+    },
+
+    "main__characters_left": "Characters left:",
+    "main__how_it_works__title": "How it works?",
+    "main__how_it_works__first_title": "First.",
+    "main__how_it_works__first_text": "You ask a question no longer than 140 letters.",
+    "main__how_it_works__second_title": "Second.",
+    "main__how_it_works__second_text": "We find a specialist who can give a competent answer to a question.",
+    "main__how_it_works__third_title": "Third.",
+    "main__how_it_works__third_text": "You receive an answer to the email.",
+    "main__recent_questions": "Recent questions",
+    "main__about_octoanswers": "About OctoAnswers",
+    "main__about_octoanswers_text": "OctoAnswers is a wiki-based site where users can ask questions, respond to them and supplement other people's answers.",
+    "main__about_octoanswers_some_questions": "We selected for you several answers to questions that will help us better understand what the idea of the OctoAnswers service is:",
+    "main__full_answer": "full answer",
+    "main_pg__share__intro": "Вы можете помочь проекту OctoAnswers, просто поделившись со своими друзьями ссылкой на него.",
+
+    "menu__other_langs": "Languages",
+    "menu__other_langs__full_list": "Complete list",
+    "menu__other_langs__more": "Other 0",
+
+    "modal__feedback_thanks__text": "Thanks for the feedback!",
+
+    "navbar": {
+        "feed": "Newsfeed",
+        "questions": "Questions",
+        "topics": "Topics of questions",
+        "sandbox": "Sandbox",
+        "login": "Login",
+        "signup": "Signup"
+    },
+
+    "nav__experts": "Experts",
+    "nav__search_placeholder": "Search…",
+    "nav__profile": "Профиль",
+    "nav__settings": "Настройки",
+
+    "navbar__ask": "Ask a Question",
+
+    "q__action__search_in_ddg": "Search in DuckDuckGo",
+    "q__action__copy_short_url": "Copy short URL",
+
+    "q_pg__page_description": "Wiki-answer on question «%question%»",
+    "q_pg__share_description": "Wiki-answers to your questions on OctoAnswers",
+
+    "related_questions__write_first_answer": "Write first answer",
+    "q__answer_contributors_top": "Answer contributors",
+    "q__answer_contributors": "Other contributors",
+
+    "q__first_answer__modal_text": "Register or log in and you will be the first to write the answer to this question.",
+
+    "modal__fake_follow_q__text": "Register or sign in and you can subscribe to this question.",
+    "modal__fake_edit_answer__text": "Register or log in and you can edit or supplement this question.",
+
+    "q__did_we_answer_your_question": "Did we answer your question?",
+    "q__did_we_answer_your_question__yes": "Yes",
+    "q__did_we_answer_your_question__no": "No",
+    "q__did_we_answer_your_question__partially": "Partially",
+
+    "q__can_you_answer__lead": "Can you answer this question?",
+    "q__can_you_answer__btn": "Yes I can!",
+
+    "improve_answer": {
+        "title": "You can improve this answer?",
+        "btn_yes": "Yes I can!",
+        "last_edit": "Last edit",
+        "see_all": "See All"
+    },
+
+    "question": {
+        "title_prefix": "The answer was written by the OctoAnswers community",
+        "last_updated": "Last updated",
+        "update_topics": {
+            "btn": "Update topics"
+        }
+    },
+
+    "questions": {
+        "title": "Вопросы с ответами",
+        "page_num": "Page",
+        "filter": {
+            "newest": "Newest questions",
+            "recently_updated": "Recently updated",
+            "popular": "Popular"
+        },
+        "next_btn": "More questions",
+        "recently_updated": {
+            "title": "Recently updated questions"
+        }
+    },
+
+    "questions__page_title__with_answers": "Questions with answers",
+    "questions__page_title__without_answers": "Questions without answers",
+    "questions__page_title__all": "Newest questions",
+    "questions__page_num": "Page",
+
+    "questions__title": "Questions",
+    "questions__search_placeholder": "Search questions",
+    "questions__filter__with_answers": "With answers",
+    "questions__filter__popular": "",
+    "questions__ask": "Ask a Question",
+
+
+    "question__view_contributions_btn": "View contributions",
+
+    "modal_rename_question": {
+        "modal_title": "Rename question",
+        "leave_redirect": "Оставить редирект",
+        "submit_button": "Переименовать вопрос"
+    },
+
+    "q__short_url__note": "The question is also available on a short URL",
+
+    "q__share__have_answer": "If you like the answer or you know someone to whom it might be interesting, share a link with your friends.",
+    "q__share__dont_have_answer": "If you have friends who know the answer to this question, share the link.",
+
+    "q__signup_lure__text_1": "See what questions your friends are asking today.",
+    "q__signup_lure__text_2": "Watch for new questions with topics interesting for you.",
+    "q__signup_lure__text_3": "And share your knowledge with others.",
+
+    "question_not_found__page_title": "Question not found:",
+    "question_not_found__title": "Question not found",
+    "question_not_found__create_a_question": "Create a question",
+
+    "sandbox": {
+        "filter": {
+            "without_answers": "Questions without answers",
+            "without_topics": "Without topics",
+            "all": "All"
+        },
+        "write_first_answer": "Write answer"
+    },
+
+    "users_pg__page_title": "Newest users",
+
+    "users__page_title__newest": "New users from around the world",
+    "users__page_num": "Page",
+
+    "user__page_title_postfix": " - Wiki-answers on OctoAnswers",
+    "user__page_description_postfix": " - wiki-answers on OctoAnswers",
+    "user__change_avatar": "Change avatar",
+    "u__last_revisions": "Last revisions",
+    "u__followers": "Followers",
+    "u__followed": "Followed",
+
+    "modal_login": {
+        "title": "Log in",
+        "email": "Email",
+        "password": "Password",
+        "submit_btn": "Log in",
+        "signup": "Signup",
+        "forgot_password": "Forgot password"
+    },
+
+    "search__page_title": "Search question «%query%»",
+    "search__title": "Search results: ",
+
+    "settings_signature__title": "Signature",
+    "settings_signature__subtitle": "Enter your professional signature",
+    "settings_signature__note": "Example: Professor of psychology, entrepreneur, poet",
+    "settings_signature__save_btn": "Save signature",
+    "settings_signature__ex__note": "Signature also appear on answers you write. For example, Leo Tolstoy have signature:",
+    "settings_signature__ex__name": "Leo Tolstoy",
+    "settings_signature__ex__signature": "Greatest authors of all time",
+
+    "settings_site__title": "Personal site",
+    "settings_site__subtitle": "Enter your personal site URL",
+    "settings_site__note": "Example: https://www.facebook.com/alexander",
+    "settings_site__save_btn": "Save personal site",
+
+    "signup__page_title": "Registration on the questions-and-answers service - OctoAnswers",
+    "signup__title": "Signup",
+    "signup__useremail": "Username",
+    "signup__email": "Email address",
+    "signup__password": "Password",
+    "signup__note": "By signing up, you agree to our terms of use, privacy policy, and cookie policy.",
+    "signup__signup_btn": "Signup",
+    "signup__real_name": "Real name",
+
+    "alert_subscribe__text": "Enter your email address to get notified about the answer as soon as it appears.",
+    "alert_subscribe__btn": "Report response",
+
+    "wordform_1_minute_to_read": "minute to read",
+    "wordform_2_minutes_to_read": "minutes to read",
+    "wordform_5_minutes_to_read": "minutes to read",
+
+    "wordform_1_question": "question",
+    "wordform_2_questions": "questions",
+    "wordform_5_questions": "questions",
+    "no_questions": "No questions"
+}

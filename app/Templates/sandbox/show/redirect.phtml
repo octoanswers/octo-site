@@ -1,0 +1,18 @@
+
+<div class="my-5">
+    <a class="h4 link-inverted no-underline" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
+        <?= $question->getTitle() ?>
+    </a>
+    <?php $redirect = $this->redirects[$question->getID()]; ?>
+    <div class="my-1">
+        <span class="badge badge-warning">Redirect</span> →
+        <a href="<?= Redirect_URL_Helper::getURL($this->lang, $redirect) ?>">
+            <?= $redirect->getRedirectTitle() ?>
+        </a>
+    </div>
+    <div class="">
+        <span class="text-muted mr-3">
+            <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+        </span>
+    </div>
+</div>

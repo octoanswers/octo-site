@@ -1,0 +1,62 @@
+
+<div class="mt-2 mt-lg-5">
+    <?php if ($this->authUser): ?>
+        <a href="<?= Answer_URL_Helper::getEditURL($this->lang, $this->question) ?>" role="button" class="btn btn-primary mb-3 mr-2">
+            <?= $this->l->t('btn', 'edit_answer') ?>
+        </a>
+    <?php else: ?>
+        <button type="button" class="btn btn-primary mb-3 mr-2" data-toggle="modal" data-target="#modal_lure__edit_answer">
+            <?= $this->l->t('btn', 'edit_answer') ?>
+        </button>
+        <?php require_once TEMPLATE_PATH.'/question/modal/edit_answer_lure.phtml' ?>
+    <?php endif; ?>
+
+    <?php if ($this->authUser): ?>
+        <button
+            class="btn follow_question_button mb-3 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-secondary'; ?>"
+            data-question-id="<?= $this->question->getID() ?>"
+            data-follow-title="<?= $this->l->t('btn', 'follow') ?>"
+            data-followed-title="<?= $this->l->t('btn', 'followed') ?>"
+            data-unfollow-title="<?= $this->l->t('btn', 'unfollow') ?>"
+            type="button">
+            <span><?= $this->followed ? $this->l->t('btn', 'followed') : $this->l->t('btn', 'follow'); ?></span>
+        </button>
+    <?php else: ?>
+        <button type="button" class="btn btn-outline-secondary mb-3 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
+            <span><?= $this->l->t('btn', 'follow'); ?></span>
+        </button>
+        <?php require_once TEMPLATE_PATH.'/question/modal/follow_question_lure.phtml' ?>
+    <?php endif; ?>
+
+    <?php if (mb_strlen($this->answer->getText()) > 0): ?>
+        <a href="<?= Answer_URL_Helper::getHistoryURL($this->lang, $this->question) ?>" class="btn btn-outline-secondary mb-3 mr-2">
+            <?= $this->l->t('btn', 'view_history') ?>
+        </a>
+    <?php endif; ?>
+
+    <div class="dropdown d-inline-block">
+        <button class="btn btn-outline-secondary dropdown-toggle mb-3 mr-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Ещё
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <?php if ($this->authUser): ?>
+
+                <!-- Show "Upload image" modal -->
+                <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_upload_image">
+                    <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/compact-camera.png">
+                    <?= $this->l->t('question', 'actions', 'upload_image') ?>
+                </a>
+
+                <!-- Button trigger modal "Question rename" -->
+                <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_rename">
+                    <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/rename.png">
+                    <?= $this->l->t('q__action__rename_question') ?>
+                </a>
+            <?php endif; ?>
+            <a class="dropdown-item" rel="nofollow" href="#">
+                <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/box-important.png">
+                Пожаловаться
+            </a>
+        </div>
+    </div>
+</div>

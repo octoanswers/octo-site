@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <?php require_once TEMPLATE_PATH.'/answer/history/jumbotron.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-11 col-md-10 col-lg-9 mx-auto">
+                <?php if (count($this->revisions)): ?>
+                    <?php for ($i=0; $i < count($this->revisions); $i++): ?>
+                        <?php require TEMPLATE_PATH.'/answer/history/revision_item.phtml'; ?>
+                    <?php endfor; ?>
+                <?php else: ?>
+                    <div class="alert alert-info mt-5" role="alert">
+                        В настоящее время ответ не имеет правок.
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

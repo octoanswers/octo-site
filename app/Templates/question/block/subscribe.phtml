@@ -1,0 +1,16 @@
+
+<?php if (!$this->answer->getText() && !$this->authUser): ?>
+    <div id="alert_subscribe" class="alert alert-success mb-5 pb-5 pl-5 pr-5 text-center" role="alert">
+        <div class="mt-3">
+            <img class="img-size-96" alt="<?= $this->l->t('q__first_answer__title') ?>" src="<?= IMAGE_URL.'/icons8/secured-letter-96-color.png' ?>">
+        </div>
+        <p class="lead mt-3 mb-4">Укажите адрес электронной почты, чтобы получить уведомление об ответе как только он появится.</p>
+        <form id="form__question_subscribe">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Ваш email">
+            </div>
+            <input type="hidden" id="question_id" value="<?= $this->question->getID(); ?>">
+            <button type="submit" class="btn btn-success">Сообщить об ответе</button>
+        </form>
+    </div>
+<?php endif; ?>

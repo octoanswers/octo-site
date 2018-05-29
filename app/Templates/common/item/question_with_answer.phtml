@@ -1,0 +1,62 @@
+
+<div class="my-5">
+
+    <div class="mb-3">
+        <a class="h3 link_gray_900 no_underline" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
+            <?= $question->getTitle() ?>
+        </a>
+    </div>
+
+    <?php if ($question->getImageBaseName()): ?>
+        <a class="d-block height-16" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
+            <img class="cover-height-16" src="<?= Question_URL_Helper::getImageURLMedium($this->lang, $question) ?>">
+        </a>
+    <?php endif; ?>
+
+    <div class="color-gray-500 mt-3 mb-2">
+        <?= mb_substr($question->getAnswer()->getText(), 0, mb_strpos($question->getAnswer()->getText(), "\n")); ?>
+    </div>
+
+    <div class="mt-2">
+        <div class="float-left">
+            <a class="size-4 ml-minus-half" href="#">
+                <img class="size-4" src="https://png.icons8.com/small/32/cccccc/bookmark-ribbon.png">
+            </a>
+        </div>
+        <div class="ml-6 min-height-4 pt-1 small color-gray-700">
+            <?php if ((strtotime("now") - strtotime($question->getAnswer()->getUpdatedAt())) < (60*60*24)): ?>
+                <span class="badge badge-sm badge-primary mr-3">Новый</span>
+
+            <?php endif; ?>
+
+            <?php if (count($question->getTopics()) == 0): ?>
+                <a class="badge badge-sm badge-success mr-3" href="<?= Question_URL_Helper::getUpdateTopicsURL($this->lang, $question) ?>" rel="nofollow">
+                    Проставить темы
+                </a>
+            <?php endif; ?>
+
+            <?php if (strlen($question->getAnswer()->getText()) == 0): ?>
+                <a href="<?= Answer_URL_Helper::getEditURL($this->lang, $question) ?>" rel="nofollow">
+                    <?= $this->l->t('sandbox', 'write_first_answer') ?>
+                </a>
+                <span class="mx-2 color-gray-900 font_weight_800">&middot;</span>
+            <?php else: ?>
+                2 автора
+                <span class="mx-2 color-gray-900 font_weight_800">&middot;</span>
+                <img class="clock" src="https://png.icons8.com/material/16/616161/clock.png">
+                <?= $this->minutesToRead_humanizer->humanizeCharactersCount(mb_strlen($question->getAnswer()->getText())) ?>
+                <span class="mx-2 color-gray-900 font_weight_800">&middot;</span>
+            <?php endif; ?>
+
+            <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+        </div>
+    </div>
+</div>
+
+<?php if (isset($this->topics[$question->getID()])): ?>
+    <div class="topics">
+        <?php foreach ($this->topics[$question->getID()] as $topic): ?>
+            <a href="<?= Topic_URL_Helper::getURL($this->lang, $topic) ?>">#<?= $topic->getTitle() ?></a>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

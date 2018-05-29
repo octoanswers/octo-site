@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+
+    <!-- SimpleMDE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-9 mx-auto pb-5">
+
+                <?php require_once TEMPLATE_PATH.'/answer/edit/header.phtml'; ?>
+
+                <form id="form__update_answer" data-answer-id="<?= $this->answer->getID() ?>">
+                    <div class="form-group">
+                        <textarea id="form__update_answer__answer_text" name="answer_text" class="form-control" rows="10"><?= $this->answer->getText() ?></textarea>
+                        <label class="mt-0 small text-muted"><?= $this->l->t('answer_edit__description_of_changes') ?></label>
+                        <input id="form__update_answer__changes_comment" type="text" class="form-control">
+                    </div>
+                    <div class="form-group mt-4">
+                        <button type="submit" id="form__update_answer__submit" class="btn btn-success btn-lg btn-block">
+                            <?= $this->l->t('answer_edit__save_changes_btn') ?>
+                        </button>
+                    </div>
+                </form>
+
+                <?php require_once TEMPLATE_PATH.'/answer/edit/simplemde.phtml'; ?>
+            </div>
+
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

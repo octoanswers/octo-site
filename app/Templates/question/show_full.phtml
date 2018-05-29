@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>" itemscope itemtype="http://schema.org/QAPage">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body itemscope itemtype="http://schema.org/Question">
+
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-8 mx-auto">
+                <?php require_once TEMPLATE_PATH.'/question/show/header_topics.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/header.phtml' ?>
+
+                <?php require_once TEMPLATE_PATH.'/question/show/actions.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/first_paragraph.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/image.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/first_answer.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/answer.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/topics.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/related_questions.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/did_we_answer_your_question.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/block/subscribe.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/contributors_full_list.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/last_contribution.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/question/block/share.phtml' ?>
+
+                <?php require_once TEMPLATE_PATH.'/question/show/contributors_top.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/contributors_tail.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/signup_lure.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/add_image.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/info.phtml' ?>
+            </div>
+        </div>
+    </div>
+
+    <?php require_once TEMPLATE_PATH.'/question/show/interesting_questions.phtml' ?>
+    <?php require TEMPLATE_PATH.'/common/footer.phtml'; ?>
+
+    <!-- Modal components -->
+    <?php if ($this->authUser): ?>
+        <?php require_once TEMPLATE_PATH.'/question/modal/rename.phtml' ?>
+        <?php require_once TEMPLATE_PATH.'/question/modal/upload_image.phtml' ?>
+    <?php else: ?>
+        <!--  -->
+    <?php endif; ?>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

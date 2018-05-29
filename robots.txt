@@ -1,0 +1,12 @@
+User-agent: *
+
+Disallow: /*/answer/*/edit
+Disallow: /*/answer/*/history
+Disallow: /*/question/*/rename
+Disallow: /*/question/*/topics
+Disallow: /*/sandbox/*
+Disallow: /*/settings/*
+Disallow: /*/search?*
+
+Sitemap: http://octoanswers.com/sitemap.xml
+Host: octoanswers.com

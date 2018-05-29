@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-8 mx-auto">
+
+                <div class="mt-4 mt-md-5 mb-3">
+                    <div class="float-right">
+                        <img class="size-12 rounded-circle mt-4" src="http://octoanswers.com/uploads/avatar/0_200.jpg" alt="<?= $this->topic->getTitle() ?>">
+                    </div>
+                    <div class="mr-14">
+                        <p class="mb-0 color-gray-600">
+                            Вопросы на тему
+                        </p>
+                        <h1><?= $this->topic->getTitle() ?></h1>
+
+                        <p class="lead mb-0 color-gray-600">
+                            <strong><?= count($this->topic_questions)+3 ?></strong> вопросов
+                            <span class="mx-2 color-gray-900 font_weight_800">&middot;</span>
+                            <strong><?= count($this->topic_questions) ?></strong> подписчиков
+                        </p>
+
+
+                        <div class="actions mt-4 mt-sm-5">
+
+                            <?php if ($this->authUser): ?>
+                                <button
+                                    class="btn follow_topic_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
+                                    data-topic-id="<?= $this->topic->getID() ?>"
+                                    data-follow-title="<?= $this->l->t('btn', 'follow') ?>"
+                                    data-followed-title="<?= $this->l->t('btn', 'followed') ?>"
+                                    data-unfollow-title="<?= $this->l->t('btn', 'unfollow') ?>"
+                                    type="button">
+                                    <img class="btn-icon" src="https://png.icons8.com/small/20/ffffff/bookmark-ribbon.png">
+                                    <span>
+                                        <?= $this->followed ? $this->l->t('btn', 'followed') : $this->l->t('btn', 'follow'); ?>
+                                    </span>
+                                </button>
+                            <?php endif; ?>
+
+                            <?php if (false): ?>
+                                <!-- fake follow topic button -->
+                                <button type="button" class="btn btn-primary mr-2 mb-3" data-toggle="modal" data-target="#fake-follow-topic-modal">
+                                    <?= $this->l->t('btn', 'follow_topic') ?>
+                                </button>
+                                <!-- fake follow topic modal -->
+                                <div class="modal fade" id="fake-follow-topic-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel"><?= $this->l->t('Want to follow?', 'Modal title @ Topic page') ?></h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <a href="#" data-toggle="modal" data-target="#modal_login">Log in</a> or <a href="#" data-toggle="modal" data-target="#modal_signup">signup</a> to follow this topic and get notifications when new questions will be added!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= $this->l->t('Cancel') ?></button>
+                                                <a href="#" data-toggle="modal" data-target="#modal_signup" type="button" class="btn btn-primary"><?= $this->l->t('Signup') ?></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <a class="btn btn-success mr-2 mb-3" rel="nofollow" href="#">
+                                <img class="btn-icon" src="https://png.icons8.com/small/20/ffffff/help.png">
+                                Задать вопрос на эту тему
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 col-sm-10 col-md-8 mx-auto">
+
+                <?php require_once TEMPLATE_PATH.'/topic/block/nav.phtml' ?>
+
+                <?php if (count($this->topic_questions)): ?>
+                    <?php foreach ($this->topic_questions as $question): ?>
+                        <?php require TEMPLATE_PATH.'/common/item/question_with_answer.phtml'; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+            </div>
+
+            <div class="col-12 col-sm-10 col-md-8 mx-auto">
+                <?php require_once TEMPLATE_PATH.'/topic/block/related_topics.phtml' ?>
+            </div>
+
+        </div>
+    </div>
+
+    <?php require_once TEMPLATE_PATH.'/common/footer.phtml'; ?>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

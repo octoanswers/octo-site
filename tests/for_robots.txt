@@ -1,0 +1,12 @@
+http://octoanswers.com
+http://octoanswers.com/en
+http://octoanswers.com/en/How_to_use_wildcards_in_robots.txt
+http://octoanswers.com/en/search_is_foo
+http://octoanswers.com/en/settings_is_foo
+http://octoanswers.com/user/13
+http://octoanswers.com/user/13/ru
+http://octoanswers.com/en/answer/14800/edit
+http://octoanswers.com/en/question/14800/rename
+http://octoanswers.com/en/answer/14800/history
+http://octoanswers.com/en/search?q=foo
+http://octoanswers.com/en/settings/xxx

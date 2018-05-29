@@ -1,0 +1,11 @@
+
+<?php if (!$this->authUser): ?>
+    <div class="octo-card p-4 mb-5">
+        <a href="#" data-toggle="modal" data-target="#modal_signup" class="btn btn-danger btn-block mb-4">
+            <?= $this->l->t('nav__signup') ?>
+        </a>
+        <p><?= $this->l->t('q__signup_lure__text_1') ?></p>
+        <p><?= $this->l->t('q__signup_lure__text_2') ?></p>
+        <p><?= $this->l->t('q__signup_lure__text_3') ?></p>
+    </div>
+<?php endif; ?>

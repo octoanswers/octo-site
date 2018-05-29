@@ -1,0 +1,13 @@
+RewriteEngine On
+# RewriteBase /
+
+# redirect www to non-www
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$
+# RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Disable server signature
+ServerSignature Off

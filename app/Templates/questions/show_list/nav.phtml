@@ -1,0 +1,18 @@
+
+<ul class="nav_underlined my-4 mt-md-5">
+    <li>
+        <a class="<?= ($this->list == 'with-answers') ? 'active' : '' ?>" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
+            <?= $this->l->t('questions', 'filter', 'newest') ?>
+        </a>
+    </li>
+    <li>
+        <a class="<?= ($this->list == 'recently_updated') ? 'active' : '' ?>" href="<?= Questions_URL_Helper::getRecentlyUpdatedURL($this->lang) ?>">
+            <?= $this->l->t('questions', 'filter', 'recently_updated') ?>
+        </a>
+    </li>
+    <!-- <li>
+        <a class="<?= ($this->list == 'without-answers') ? 'active' : '' ?>" href="#">
+            <?= $this->l->t('questions', 'filter', 'popular') ?>
+        </a>
+    </li> -->
+</ul>

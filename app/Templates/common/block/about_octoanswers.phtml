@@ -1,0 +1,13 @@
+<?php if (!$this->authUser): ?>
+    <div class="my-5">
+        <p class="title">
+            <?= $this->l->t('block', 'about_octoanswers', 'title'); ?>
+        </p>
+        <p class="my-4">
+            <?= $this->l->t('block', 'about_octoanswers', 'message'); ?>
+        </p>
+        <a rel="nofollow" class="btn btn-outline-secondary" href="#">
+            <?= $this->l->t('block', 'about_octoanswers', 'button'); ?>
+        </a>
+    </div>
+<?php endif; ?>

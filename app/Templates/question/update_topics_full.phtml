@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+<head>
+    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+</head>
+<body>
+    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+
+    <div class="container-fluid">
+        <div class="row my-5">
+
+            <div class="col-12 col-md-8 mx-auto">
+
+                <h1 class="mb-4">
+                    Темы вопроса
+                </h1>
+                <p><?= $this->question->getTitle() ?></p>
+
+                <form id="form__update_topics" data-question-id="<?= $this->question->getID() ?>">
+                    <div class="form-group">
+                        <input id="new_topics" type="text" class="form-control mt-3" value="<?= $this->topics_string ?>">
+                    </div>
+                    <div class="form-group mt-5">
+                        <button type="submit" id="form__update_topics__submit" class="btn btn-primary">
+                            Обновить темы
+                        </button>
+                        <a href="<?= Question_URL_Helper::getURL($this->lang, $this->question) ?>" class="btn color-text-normal bg-color-white">
+                            Вернуться к вопросу
+                        </a>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<?php if (count($this->revisions)): ?>
+    <?php for ($i=0; $i < count($this->revisions); $i++): ?>
+        <div class="my-5">
+            <div class="mb-3">
+                <a class="h5 link_gray_900 no_underline" href="<?= Question_URL_Helper::getURL($this->lang, $this->questions[$i]) ?>">
+                    <?= $this->questions[$i]->getTitle() ?>
+                </a>
+                <div class="small color-gray-600 mt-2">
+                    Правка #<?= $this->revisions[$i]->getID() ?>
+                    <span class="mx-1 color-gray-900 font_weight_800">&middot;</span>
+
+                    <?php if ($this->revisions[$i]->getComment()): ?>
+                        <strong><?= $this->revisions[$i]->getComment() ?></strong>
+                    <?php else: ?>
+                        Нет описания изменений
+                    <?php endif; ?>
+
+                    <span class="mx-1 color-gray-900 font_weight_800">&middot;</span>
+                    <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->getCreatedAt()) ?>
+                </div>
+            </div>
+            <pre><?= FineDiff::renderDiffToHTMLFromOpcodes($this->revisions[$i]->getBaseText(), $this->revisions[$i]->getOpcodes()) ?></pre>
+        </div>
+    <?php endfor; ?>
+<?php else: ?>
+    <div class="alert alert-info mb-5" role="alert">
+        В настоящее время пользователь не написал ни одного ответа.
+    </div>
+<?php endif; ?>

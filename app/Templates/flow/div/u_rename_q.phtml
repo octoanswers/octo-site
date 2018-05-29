@@ -1,0 +1,15 @@
+
+<div class="mb-5">
+    <a class="wh-3" href="<?= $data['user']['profile_url'] ?>">
+        <img class="wh-3 rounded-circle" src="<?= $data['user']['avatar_xs_url'] ?>">
+    </a>
+    <p class="mb-1">
+        <a href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a> переименовал вопрос <strong><?= $data['question']['title_old'] ?></strong> на
+        <a href="<?= $data['question']['url'] ?>">
+            <?= $data['question']['title_new'] ?>
+        </a>
+    </p>
+    <span class="text-muted">
+        <?= $activity['created_at__humanized'] ?>
+    </span>
+</div>

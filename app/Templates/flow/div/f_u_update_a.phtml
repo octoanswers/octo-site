@@ -1,0 +1,16 @@
+
+<div class="mb-5">
+    <div class="mb-2">
+        <a class="wh-3 d-inline-block mr-2" href="<?= $data['user']['profile_url'] ?>">
+            <img class="wh-3 rounded-circle" src="<?= $data['user']['avatar_xs_url'] ?>">
+        </a>
+        <a href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a> внес правки в ответ на вопрос <a href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
+    </div>
+    <pre class="mb-1"><?= $data['revision']['diff_text'] ?></pre>
+    <?php if (strlen($data['revision']['comment'])): ?>
+        <p><?= $data['revision']['comment'] ?></p>
+    <?php endif; ?>
+    <span class="text-muted">
+        <?= $activity['created_at__humanized'] ?>
+    </span>
+</div>
