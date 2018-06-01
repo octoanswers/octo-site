@@ -1023,6 +1023,12 @@ img.border-2 {
 .min-height-8 {
   min-height: 4rem; }
 
+.max-width-sm {
+  max-width: 575px; }
+
+.max-width-md {
+  max-width: 767px; }
+
 .max-width-lg {
   max-width: 991px; }
 
@@ -1636,30 +1642,6 @@ ul.nav-sidebar > li > a:hover {
 
 .nav-underline .active {
   border-bottom: 4px solid #2196F3; }
-
-ul.list-steps {
-  display: inline-block;
-  margin: 0;
-  padding: 0; }
-
-ul.list-steps li {
-  cursor: default;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 50%;
-  color: #adacad;
-  border: 2px solid #adacad;
-  font-size: 16px;
-  height: 40px;
-  width: 40px;
-  padding-top: 6px;
-  margin: 0 1rem; }
-
-ul.list-steps li.active {
-  color: #fff;
-  background-color: #F44336;
-  border: 2px solid #F44336; }
 
 .input-bg-icon-magnifier-lg {
   background: url("/assets/img/icons8-search-light-gray-28.png") no-repeat 10px 10px;
