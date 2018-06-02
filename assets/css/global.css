@@ -169,10 +169,9 @@ ul.nav_inline_secondary {
       height: 2rem; }
 
 .badge {
-  font-size: .85rem;
-  font-weight: 500;
-  border-radius: 9999px;
-  border-color: #BBDEFB;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 4px;
   border-width: 1px;
   border-style: solid;
   color: #2196F3;
@@ -180,8 +179,8 @@ ul.nav_inline_secondary {
   white-space: nowrap;
   vertical-align: middle; }
   .badge .badge-icon {
-    width: .875rem;
-    height: .875rem;
+    width: 1rem;
+    height: 1rem;
     margin-top: -3px;
     margin-right: .25rem; }
 
@@ -190,7 +189,7 @@ a.badge:hover {
   text-decoration: none; }
 
 .badge-sm {
-  font-size: .625rem;
+  font-size: .875rem;
   padding: .25rem .5rem; }
   .badge-sm .badge-icon {
     width: .625rem;
@@ -203,12 +202,14 @@ span.badge-primary, span.badge-secondary, span.badge-success, span.badge-warning
   background-color: transparent; }
 
 span.badge-primary {
-  border-color: #BBDEFB;
-  color: #2196F3; }
+  border-color: #e3f2fd;
+  background-color: #e3f2fd;
+  color: #1565c0; }
 
 span.badge-secondary {
-  border-color: #b0bec5;
-  color: #546e7a; }
+  border-color: #eceff1;
+  background-color: #eceff1;
+  color: #37474f; }
 
 span.badge-success {
   border-color: #a5d6a7;
@@ -235,58 +236,79 @@ span.badge-dark {
   color: #424242; }
 
 a.badge-primary, a.badge-secondary, a.badge-success, a.badge-warning, a.badge-danger, a.badge-info, a.badge-light, a.badge-dark {
-  cursor: pointer;
-  background-color: transparent !important; }
-  a.badge-primary:hover, a.badge-secondary:hover, a.badge-success:hover, a.badge-warning:hover, a.badge-danger:hover, a.badge-info:hover, a.badge-light:hover, a.badge-dark:hover {
-    background-color: transparent !important; }
+  cursor: pointer; }
 
 a.badge-primary {
-  border-color: #BBDEFB;
-  color: #2196F3 !important; }
+  border-color: #e3f2fd;
+  background-color: #e3f2fd;
+  color: #1565c0; }
   a.badge-primary:hover {
-    border-color: #2196F3; }
+    border-color: #bbdefb !important;
+    background-color: #bbdefb !important;
+    color: #1565c0 !important; }
 
 a.badge-secondary {
-  border-color: #b0bec5;
-  color: #546e7a !important; }
+  border-color: #eceff1;
+  background-color: #eceff1;
+  color: #37474f; }
   a.badge-secondary:hover {
-    border-color: #546e7a; }
+    border-color: #cfd8dc !important;
+    background-color: #cfd8dc !important;
+    color: #37474f !important; }
 
 a.badge-success {
-  border-color: #a5d6a7;
-  color: #43a047 !important; }
+  border-color: #e8f5e9;
+  background-color: #e8f5e9;
+  color: #388e3c; }
   a.badge-success:hover {
-    border-color: #43a047; }
+    border-color: #c8e6c9 !important;
+    background-color: #c8e6c9 !important;
+    color: #388e3c !important; }
 
 a.badge-warning {
-  border-color: #ffcc80;
-  color: #fb8c00 !important; }
+  border-color: #fff3e0;
+  background-color: #fff3e0;
+  color: #ef6c00; }
   a.badge-warning:hover {
-    border-color: #fb8c00; }
+    border-color: #ffe0b2 !important;
+    background-color: #ffe0b2 !important;
+    color: #ef6c00 !important; }
 
 a.badge-danger {
-  border-color: #ef9a9a;
-  color: #F44336 !important; }
+  border-color: #ffebee;
+  background-color: #ffebee;
+  color: #d32f2f; }
   a.badge-danger:hover {
-    border-color: #F44336; }
+    border-color: #ffcdd2 !important;
+    background-color: #ffcdd2 !important;
+    color: #d32f2f !important; }
 
 a.badge-info {
-  border-color: #b2dfdb;
-  color: #009688 !important; }
+  border-color: #e0f2f1;
+  background-color: #e0f2f1;
+  color: #00897b; }
   a.badge-info:hover {
-    border-color: #009688; }
+    border-color: #b2dfdb !important;
+    background-color: #b2dfdb !important;
+    color: #00897b !important; }
 
 a.badge-light {
-  border-color: #E0E0E0;
-  color: #9E9E9E !important; }
+  border-color: #eceff1;
+  background-color: #eceff1;
+  color: #78909c; }
   a.badge-light:hover {
-    border-color: #9E9E9E; }
+    border-color: #cfd8dc !important;
+    background-color: #cfd8dc !important;
+    color: #78909c !important; }
 
 a.badge-dark {
-  border-color: #BDBDBD;
-  color: #424242 !important; }
+  border-color: #546e7a;
+  background-color: #546e7a;
+  color: #FFFFFF; }
   a.badge-dark:hover {
-    border-color: #424242; }
+    border-color: #78909c !important;
+    background-color: #78909c !important;
+    color: #FFFFFF !important; }
 
 body {
   background-color: #FFFFFF; }

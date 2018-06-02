@@ -1,13 +1,13 @@
 
 <?php if (isset($this->related_questions)): ?>
-    <div class="my-5 ml-sm-2">
+    <div class="my-5">
         <div class="title">
             Похожие вопросы
         </div>
 
         <?php foreach ($this->related_questions as $question): ?>
             <div class="my-4">
-                <a class="h4" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
+                <a class="h2 no-underline-hover" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
                     <?= $question->getTitle() ?>
                 </a>
                 <div class="small color-gray-500 mt-1">
@@ -19,7 +19,7 @@
                         </a>
                     <?php endif; ?>
 
-                    <span class="mx-2 color-gray-900 font_weight_800">&middot;</span>
+                    <span class="mx-1 color-gray-900 font_weight_800">&middot;</span>
                     <?= $this->l->t('q__last_updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
                 </div>
             </div>

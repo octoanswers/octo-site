@@ -1,15 +1,15 @@
 
 <?php if (count($this->question->getTopics())): ?>
-    <div class="mt-4">
+    <div class="mt-5">
         <?php foreach ($this->question->getTopics() as $topic): ?>
-            <a class="badge badge-primary mr-2 mb-3" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
+            <a class="badge badge-secondary mr-2 mb-3" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
                 <?= $topic ?>
             </a>
         <?php endforeach; ?>
 
         <?php if ($this->authUser): ?>
-            <a class="badge badge-light mb-3 mr-2" href="<?= Question_URL_Helper::getUpdateTopicsURL($this->lang, $this->question) ?>">
-                <img class="badge-icon" src="https://png.icons8.com/material/20/9E9E9E/edit.png">
+            <a class="badge badge-primary mb-3 mr-2" href="<?= Question_URL_Helper::getUpdateTopicsURL($this->lang, $this->question) ?>">
+                <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
                 <?= $this->l->t('question', 'update_topics', 'btn') ?>
             </a>
         <?php endif; ?>
@@ -17,8 +17,8 @@
 <?php else: ?>
     <?php if ($this->authUser): ?>
         <div class="mt-4">
-        <a class="badge badge-light mr-2 mb-3" href="<?= Question_URL_Helper::getUpdateTopicsURL($this->lang, $this->question) ?>">
-            <img class="badge-icon" src="https://png.icons8.com/material/20/9E9E9E/edit.png">
+        <a class="badge badge-primary mr-2 mb-3" href="<?= Question_URL_Helper::getUpdateTopicsURL($this->lang, $this->question) ?>">
+            <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
             Задать темы вопроса
         </a>
         </div>
