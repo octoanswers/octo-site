@@ -3,7 +3,7 @@
 
     <?php if (count($this->contributors)): ?>
         <a href="#contributors_full_list" class="color-gray-500 no-underline-hover">
-            <?= count($this->contributors) ?> авторов
+            <?= (new Contributors_Humanizer($this->l))->humanize(count($this->contributors)) ?>
         </a>
     <?php else: ?>
         <a href="<?= Answer_URL_Helper::getEditURL($this->lang, $this->question) ?>" class="color-gray-500 no-underline-hover">

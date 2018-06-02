@@ -290,6 +290,13 @@
     "wordform_2_minutes_to_read": "minutes to read",
     "wordform_5_minutes_to_read": "minutes to read",
 
+    "wordform": {
+        "1_contributor": "contributor",
+        "2_contributors": "contributors",
+        "5_contributors": "contributors",
+        "no_contributors": "No contributors"
+    },
+
     "wordform_1_question": "question",
     "wordform_2_questions": "questions",
     "wordform_5_questions": "questions",
