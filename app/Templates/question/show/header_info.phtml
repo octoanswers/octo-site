@@ -1,0 +1,23 @@
+
+<div class="color-gray-500 small mt-4">
+
+    <?php if (count($this->contributors)): ?>
+        <a href="#contributors_full_list" class="color-gray-500 no-underline-hover">
+            <?= count($this->contributors) ?> авторов
+        </a>
+    <?php else: ?>
+        <a href="<?= Answer_URL_Helper::getEditURL($this->lang, $this->question) ?>" class="color-gray-500 no-underline-hover">
+            <?= $this->l->t('btn', 'edit_answer') ?>
+        </a>
+    <?php endif; ?>
+
+    <?php if ($this->answer->getText()): ?>
+        <span class="color-gray-900 font_weight_800 mx-1">&middot;</span>
+        <?= $this->minutesToRead_humanizer->humanizeCharactersCount(mb_strlen($this->answer->getText())) ?>
+    <?php endif; ?>
+
+    <span class="d-none d-md-inline color-gray-900 font_weight_800 mx-1">&middot;</span>
+    <span class="d-none d-md-inline">
+        <?= $this->l->t('question', 'last_updated').' '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->answer->getUpdatedAt()) ?>
+    </span>
+</div>

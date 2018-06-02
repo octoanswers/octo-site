@@ -1,8 +1,0 @@
-
-<div class="my-5 small color-gray-500">
-    <?php if ($this->answer->getText()): ?>
-        <?= $this->minutesToRead_humanizer->humanizeCharactersCount(mb_strlen($this->answer->getText())) ?>
-        <span class="color-gray-900 mx-2">&middot;</span>
-    <?php endif; ?>
-    <?= $this->l->t('question', 'last_updated').' '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->answer->getUpdatedAt()) ?>
-</div>

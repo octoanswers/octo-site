@@ -1251,7 +1251,10 @@ a.muted {
   color: #9E9E9E; }
 
 small, .small {
-  font-size: .9rem; }
+  font-size: .875rem; }
+
+.small-xs {
+  font-size: .75rem; }
 
 .font_weight_600 {
   font-weight: 600; }
