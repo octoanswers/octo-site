@@ -19,3 +19,6 @@ php-cs-fixer-v2.phar
 
 # Github Atom plugins
 .remote-sync.json
+
+# VS Code Settings
+.vscode/
