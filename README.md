@@ -1,20 +1,19 @@
 # OctoAnswers
 
-
-OctoAnswers is a free and open source wiki-based platform for questions-and-answers (Q&A) sites, running on PHP/MySQL.
+OctoAnswers is a wiki-based questions-and-answers (Q&A) project, running on PHP/MySQL.
 
 Currently, the wiki-based questions-and-answers service OctoAnswers is launched only in [Russian](http://octoanswers.com). If you want that OctoAnswers to work in your own language, please [contact me](https://www.facebook.com/alexandergomzyakov) on Facebook, we can talk about it.
 
 ## Features
 
 + Asking and answering questions (wow!);
-+ Community edited wiki-answers;
-+ :hash: Categorization by topics;
-+ Topic subscriptions;
-+ Anonymous questions with email subscriptions;
++ Community edited wiki-answers (Markdown syntax);
++ Categorization by topics;
++ User, topic and question subscriptions;
++ Anonymous questions;
 + Basic search;
 + SEO friendly;
-+ User avatars;
++ User profile;
 
 Soon:
 
