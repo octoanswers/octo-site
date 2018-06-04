@@ -2,15 +2,15 @@
 <?php if (count($this->contributors_top)): ?>
     <div class="container-fluid max-width-lg mx-auto">
         <div class="row">
-            <div class="col-12 col-sm-8 col-md-4 mx-auto">
-                <span class="title mb-4" id="contributors_full_list">
-                    <?= $this->l->t('q__answer_contributors_top') ?>
+            <div class="col-12 col-sm-10 col-md-4 text-center py-5 mx-auto">
+                <span class="h2" id="contributors_full_list">
+                    <?= $this->l->t('question', 'top_contributors', 'top_title') ?>
                 </span>
             </div>
         </div>
         <div class="row">
             <?php foreach ($this->contributors_top as $contributor): ?>
-                <div class="col-12 col-sm-8 col-md-4 mx-auto">
+                <div class="col-12 col-sm-10 col-md-4 mx-auto">
                     <div class="box pt-3 mb-4">
                         <div class="text-center py-3">
                             <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">

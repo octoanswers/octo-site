@@ -150,8 +150,6 @@
     "q_pg__share_description": "Wiki-answers to your questions on OctoAnswers",
 
     "related_questions__write_first_answer": "Write first answer",
-    "q__answer_contributors_top": "Answer contributors",
-    "q__answer_contributors": "Other contributors",
 
     "q__first_answer__modal_text": "Register or log in and you will be the first to write the answer to this question.",
 
@@ -170,6 +168,10 @@
         "last_updated": "Last updated",
         "update_topics": {
             "btn": "Update topics"
+        },
+        "top_contributors": {
+            "top_title": "Top Contributors",
+            "tail_title": "Other Contributors"
         }
     },
 

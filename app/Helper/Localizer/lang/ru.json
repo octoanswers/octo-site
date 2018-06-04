@@ -172,8 +172,6 @@
     "q__short_answer_label": "Короткий ответ",
     "q__last_updated": "Обновлено",
     "related_questions__write_first_answer": "Написать первый ответ",
-    "q__answer_contributors_top": "Авторы ответа",
-    "q__answer_contributors": "Остальные авторы",
 
     "improve_answer": {
         "title": "Можете улучшить этот ответ?",
@@ -193,6 +191,10 @@
         },
         "update_topics": {
             "btn": "Обновить темы"
+        },
+        "top_contributors": {
+            "top_title": "Топ Авторов",
+            "tail_title": "Остальные Авторы"
         }
     },
 
