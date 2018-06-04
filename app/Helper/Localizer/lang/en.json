@@ -158,14 +158,6 @@
     "modal__fake_follow_q__text": "Register or sign in and you can subscribe to this question.",
     "modal__fake_edit_answer__text": "Register or log in and you can edit or supplement this question.",
 
-    "q__did_we_answer_your_question": "Did we answer your question?",
-    "q__did_we_answer_your_question__yes": "Yes",
-    "q__did_we_answer_your_question__no": "No",
-    "q__did_we_answer_your_question__partially": "Partially",
-
-    "q__can_you_answer__lead": "Can you answer this question?",
-    "q__can_you_answer__btn": "Yes I can!",
-
     "improve_answer": {
         "title": "You can improve this answer?",
         "btn_yes": "Yes I can!",

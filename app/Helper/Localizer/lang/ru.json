@@ -175,14 +175,6 @@
     "q__answer_contributors_top": "Авторы ответа",
     "q__answer_contributors": "Остальные авторы",
 
-    "q__did_we_answer_your_question": "Мы ответили на ваш вопрос?",
-    "q__did_we_answer_your_question__yes": "Да",
-    "q__did_we_answer_your_question__no": "Нет",
-    "q__did_we_answer_your_question__partially": "Частично",
-
-    "q__can_you_answer__lead": "Вы можете ответить на этот вопрос?",
-    "q__can_you_answer__btn": "Да, я могу!",
-
     "improve_answer": {
         "title": "Можете улучшить этот ответ?",
         "btn_yes": "Да, я могу!",
