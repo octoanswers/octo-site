@@ -1,40 +1,59 @@
 
 <?php if (count($this->contributors_top)): ?>
-    <h4 class="mt-5 alert-heading">
-        <?= $this->l->t('q__answer_contributors_top') ?>
-    </h4>
-
-    <?php foreach ($this->contributors_top as $contributor): ?>
-        <div class="my-4">
-            <div class="pt-1 float-left">
-                <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
-                    <img class="avatar-lg rounded-circle" src="<?= User_URL_Helper::getAvatarMediumURL($contributor) ?>">
-                </a>
-            </div>
-            <div class="ml-8">
-                <div class="">
-                    <a class="font_weight_600 small mr-1" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
-                        <?= $contributor->getName() ?>
-                    </a>
-                    <?php if ($contributor->getContribution() == $this->maxContribution): ?>
-                        <img class="mt-minus-quarter" src="https://png.icons8.com/material/20/fbc02d/fairytale.png">
-                    <?php endif; ?>
-                </div>
-                <span class="small color-gray-600">
-                    <?php if ($contributor->getSignature()): ?>
-                        <?= $contributor->getSignature() ?>
-                    <?php else: ?>
-                        @<?= $contributor->getUsername() ?>
-                    <?php endif; ?>
-
-                    <?php if ($contributor->getSite()): ?>
-                        <span class="color-gray-900 font_weight_800">&middot;</span>
-                        <a href="<?= $contributor->getSite() ?>">
-                            <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
-                        </a>
-                    <?php endif; ?>
+    <div class="container-fluid max-width-lg mx-auto">
+        <div class="row">
+            <div class="col-12 col-sm-8 col-md-4 mx-auto">
+                <span class="title mb-4" id="contributors_full_list">
+                    <?= $this->l->t('q__answer_contributors_top') ?>
                 </span>
             </div>
         </div>
-    <?php endforeach; ?>
+        <div class="row">
+            <?php foreach ($this->contributors_top as $contributor): ?>
+                <div class="col-12 col-sm-8 col-md-4 mx-auto">
+                    <div class="box pt-3 mb-4">
+                        <div class="text-center py-3">
+                            <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
+                                <img class="avatar-10 rounded-circle" src="<?= User_URL_Helper::getAvatarMediumURL($contributor) ?>">
+                            </a>
+                        </div>
+                        <div class="text-center py-3 px-3 border-bottom border-double">
+                            <div class="font-size-125 font_weight_600">
+                                <a class="link_gray_900 no_underline" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
+                                    <?= $contributor->getName() ?>
+                                </a>
+                            </div>
+                            <div class="small color-gray-600 mt-2 mb-2">
+                                <?= $contributor->getSignature() ? $contributor->getSignature() : '' ?>
+                                <?php if ($contributor->getSignature() && $contributor->getSite()): ?>
+                                    <span class="color-gray-900 mx-1 font-weight-800">&middot;</span>
+                                <?php endif; ?>
+                                <?php if ($contributor->getSite()): ?>
+                                    <a href="<?= $contributor->getSite() ?>">
+                                        <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <table class="no-border text-center w-100">
+                            <tr>
+                                <td class="p-2">
+                                    <img class="size-18px mt-minus-4px" src="https://png.icons8.com/ios-glyphs/18/3498db/pull-request.png">
+                                    <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
+                                </td>
+                                <td class="p-2 border-x border-double">
+                                    <img class="size-18px mt-minus-4px" src="https://png.icons8.com/windows/18/27ae60/add.png">
+                                    <span class="color-gray-600"><?= Contribution_Humanizer::humanizeCount($contributor->getInsertionsCount()) ?></span>
+                                </td>
+                                <td class="p-2">
+                                    <img class="size-18px mt-minus-4px" src="https://png.icons8.com/windows/18/e74c3c/minus.png">
+                                    <span class="color-gray-600"><?= Contribution_Humanizer::humanizeCount($contributor->getDeletionsCount()) ?></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
 <?php endif; ?>
