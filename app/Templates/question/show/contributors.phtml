@@ -1,10 +1,14 @@
 
-<?php if (count($this->contributors)): ?>
-    <div class="octo_border pl-sm-4 pr-sm-4 pt-sm-3 my-4" id="contributors_full_list">
-        <div class="title">
-            Вклад пользователей в ответ
+<?php if (count($this->contributors_top)): ?>
+    <div class="mt-5">
+        <div class="title mb-4" id="contributors_full_list">
+            Авторы ответа
         </div>
 
+        <?php require_once TEMPLATE_PATH.'/question/show/contributors_top.phtml'; ?>
+        <?php require_once TEMPLATE_PATH.'/question/show/contributors_tail.phtml'; ?>
+
+        XXXX
         <table class="no-border w-100">
             <?php foreach ($this->contributors as $contributor): ?>
                 <tr>
