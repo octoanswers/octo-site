@@ -2,7 +2,7 @@
 <?php if (count($this->question->getTopics())): ?>
     <div class="mt-5">
         <?php foreach ($this->question->getTopics() as $topic): ?>
-            <a class="badge badge-secondary mr-2 mb-3" href="<?= $topic->getURLFromTitle($this->lang) ?>">
+            <a class="badge badge-secondary mr-2 mb-3" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
                 <?= $topic ?>
             </a>
         <?php endforeach; ?>
