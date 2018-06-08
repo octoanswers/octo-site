@@ -16,7 +16,7 @@ class Lang_SitemapXML_PageController__ru__Test extends Abstract_Frontend_TestCas
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('http://octoanswers.com/ru/Птицы_играют_в_игры', $responseBody);
+        $this->assertContains('http://octoanswers.com/ru/16/kak-chasto-pticy-poyut-pesni', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

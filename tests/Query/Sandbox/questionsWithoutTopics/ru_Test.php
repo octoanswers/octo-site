@@ -36,7 +36,7 @@ class Sandbox_Query__questionsWithoutTopics__Test extends Abstract_DB_TestCase
 
         $this->assertEquals(10, count($questions));
 
-        $this->assertEquals(11, $questions[0]->getID());
-        $this->assertEquals(21, $questions[9]->getID());
+        $this->assertEquals(12, $questions[0]->getID());
+        $this->assertEquals(22, $questions[9]->getID());
     }
 }

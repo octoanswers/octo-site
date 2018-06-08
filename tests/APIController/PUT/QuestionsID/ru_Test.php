@@ -17,7 +17,7 @@ class QuestionsID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
         $expectedResponse = [
             'id' => 12,
             'title' => 'Где мой новый ответ?',
-            'url' => 'http://octoanswers.com/ru/Где_мой_новый_ответ',
+            'url' => 'http://octoanswers.com/ru/12/gde-moi-novyi-otvet',
             'is_redirect' => false,
         ];
 

@@ -14,10 +14,10 @@ class ExtendedParsedown__text__ru_Test extends TestCase
         $this->pd = null;
     }
 
-    public function test__InlineTopic()
+    public function test__DontLinkHashtags()
     {
         $stringMD = "text #tag text";
-        $stringHTML = "<p>text <a href=\"http://octoanswers.com/ru/topic/tag\" class=\"topic\">#tag</a> text</p>";
+        $stringHTML = "<p>text #tag text</p>";
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }

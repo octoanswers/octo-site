@@ -8,7 +8,7 @@ class Show_Topic_PageController__en__Test extends Abstract_Frontend_TestCase
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/en/topic/moscow',
+            'REQUEST_URI' => '/en/topic/12/cashmere',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
@@ -16,7 +16,7 @@ class Show_Topic_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('#moscow • OctoAnswers', $responseBody);
+        $this->assertContains('<title>Questions and answers on the topic &laquo;Cashmere&raquo; &mdash; OctoAnswers</title>', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

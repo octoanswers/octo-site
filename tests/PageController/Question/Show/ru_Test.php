@@ -2,27 +2,21 @@
 
 class Show_Question_PageController__ru__Test extends Abstract_Frontend_TestCase
 {
-    //protected $setUpDB = ['ru' => ['questions', 'revisions', 'topics']];
+    protected $setUpDB = ['ru' => ['questions', 'revisions', 'topics']];
 
-    public function test__XXX()
+    public function test__ShowENPage()
     {
-        $this->assertSame(200, 200);
-    }
+        $environment = \Slim\Http\Environment::mock([
+            'REQUEST_METHOD' => 'GET',
+            'REQUEST_URI' => '/ru/10/kak-otrastit-borodu',
+        ]);
+        $request = \Slim\Http\Request::createFromEnvironment($environment);
+        $this->app->getContainer()['request'] = $request;
 
-    // @TODO
-    // public function test__ShowRUPage()
-    // {
-    //     $environment = \Slim\Http\Environment::mock([
-    //         'REQUEST_METHOD' => 'GET',
-    //         'REQUEST_URI' => '/ru/Как_отрастить_бороду',
-    //     ]);
-    //     $request = \Slim\Http\Request::createFromEnvironment($environment);
-    //     $this->app->getContainer()['request'] = $request;
-    //
-    //     $response = $this->app->run(true);
-    //     $responseBody = (string) $response->getBody();
-    //
-    //     $this->assertContains('Как отрастить бороду? - OctoAnswers', $responseBody);
-    //     $this->assertSame(200, $response->getStatusCode());
-    // }
+        $response = $this->app->run(true);
+        $responseBody = (string) $response->getBody();
+
+        $this->assertContains('Как отрастить бороду? - OctoAnswers', $responseBody);
+        $this->assertSame(200, $response->getStatusCode());
+    }
 }

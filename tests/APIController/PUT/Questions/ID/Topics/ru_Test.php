@@ -18,8 +18,11 @@ class Topics_ID_Questions_PUT_APIController__ru__Test extends Abstract_Frontend_
             'lang' => 'ru',
             'user_id' => 3,
             'user_name' => 'Иван Коршунов',
-            'question_id' => 4,
-            'question_title' => 'Чем занимается гинеколог?',
+            'question' => [
+                'id' => 4,
+                'title' => 'Чем занимается гинеколог?',
+                'url' => 'http://octoanswers.com/ru/4/chem-zanimaetsya-ginekolog'
+            ],
             'old_topics' => [
                 'Медицина'
             ],
