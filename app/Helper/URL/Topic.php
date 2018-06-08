@@ -2,11 +2,6 @@
 
 class Topic_URL_Helper extends Abstract_URL_Helper
 {
-    public static function getURL(string $lang, Topic_Model $topic): string
-    {
-        return SITE_URL.'/'.$lang.'/topic/'.$topic->getID().'/'.URISlug_Helper::slug($topic->getTitle());
-    }
-
     public static function getURLFromTitle(string $lang, string $topicTitle): string
     {
         return SITE_URL.'/'.$lang.'/topic/'.self::URIFromTitle($topicTitle);
