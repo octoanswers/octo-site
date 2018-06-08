@@ -7,7 +7,7 @@
         </p>
 
         <?php foreach ($this->related_topics as $topic): ?>
-            <a class="badge badge-dark mr-2 mb-3" href="<?= Topic_URL_Helper::getURL($this->lang, $topic) ?>">
+            <a class="badge badge-dark mr-2 mb-3" href="<?= $topic->getURL($this->lang) ?>">
                 <?= $topic->getTitle() ?>
             </a>
         <?php endforeach; ?>

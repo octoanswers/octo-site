@@ -56,7 +56,7 @@
 <?php if (isset($this->topics[$question->getID()])): ?>
     <div class="topics">
         <?php foreach ($this->topics[$question->getID()] as $topic): ?>
-            <a href="<?= Topic_URL_Helper::getURL($this->lang, $topic) ?>">#<?= $topic->getTitle() ?></a>
+            <a href="<?= $topic->getURL($this->lang) ?>">#<?= $topic->getTitle() ?></a>
         <?php endforeach; ?>
     </div>
 <?php endif; ?>

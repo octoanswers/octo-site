@@ -2,6 +2,8 @@
 
 class Topic_Model
 {
+    use Topic_URL_Trait;
+
     private $id;
     private $title;
     private $words;

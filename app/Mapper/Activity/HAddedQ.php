@@ -22,7 +22,7 @@ class HAddedQ_Activity_Mapper extends Abstract_Mapper
         $data = json_encode([
             'topic' => [
                 'title' => $topic->getTitle(),
-                'url' => Topic_URL_Helper::getURL($this->lang, $topic),
+                'url' => $topic->getURL($this->lang),
             ],
             'question' => [
                 'title' => $question->getTitle(),

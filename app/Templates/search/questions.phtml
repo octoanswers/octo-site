@@ -69,7 +69,7 @@
                     <?php foreach ($this->topics as $topic): ?>
                         <div class="mt-5">
                             <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
-                                <a class="link-inverted no-underline lead" href="<?= Topic_URL_Helper::getURL($this->lang, $topic) ?>"><?= $topic->getTitle() ?></a>
+                                <a class="link-inverted no-underline lead" href="<?= $topic->getURL($this->lang) ?>"><?= $topic->getTitle() ?></a>
                                 <div>
                                     <span class="text-muted">
                                         X вопросов

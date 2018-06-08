@@ -23,7 +23,7 @@ class Show_Topic_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        return $response->withRedirect(Topic_URL_Helper::getURL($this->lang, $this->topic), 301);
+        return $response->withRedirect($this->topic->getURL($this->lang), 301);
     }
 
     public function handle($request, $response, $args)
@@ -120,7 +120,7 @@ class Show_Topic_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => Topic_URL_Helper::getURL($this->lang, $this->topic),
+            'url' => $this->topic->getURL($this->lang),
             'type' => "website",
             'title' => $this->_get_page_title(),
             'description' => $this->_get_page_description(),
