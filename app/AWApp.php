@@ -84,7 +84,6 @@ class AWApp
             $this->get('/topic/{uri}', 'Show_Topic_PageController:handleByURI'); // @TODO Deprecated
             $this->get('/topics/newest', 'Newest_Topics_PageController:handle');
             // @NOTE To realize $this->get('/topics/popular', 'List_Topics_PageController:handle');
-            $this->get('/question/create/{uri}', 'CreateFromLink_Question_PageController:handle');
             $this->get('/question/{id}/topics', 'UpdateTopics_Question_PageController:handle');
             $this->get('/questions/newest', 'Newest_Questions_PageController:handle');
             $this->get('/questions/recently-updated', 'RecentlyUpdated_Questions_PageController:handle');
