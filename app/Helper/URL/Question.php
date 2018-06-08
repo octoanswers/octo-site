@@ -30,9 +30,4 @@ class Question_URL_Helper extends Abstract_URL_Helper
     {
         return SITE_URL.'/'.$lang.'/question/'.$question->getID().'/topics';
     }
-
-    public static function getCreateFromLinkURL(string $lang, string $questionTitle): string
-    {
-        return SITE_URL.'/'.$lang.'/question/create?q='.$questionTitle;
-    }
 }

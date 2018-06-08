@@ -7,15 +7,8 @@
         <div class="col-sm-12 col-md-9 col-lg-7 mt-5 text-center">
             <h1 class="h4 text-muted"><?= $this->l->t('question_not_found__title') ?></h1>
             <hr>
-            <p class="h2 mt-5">
-                <a rel="nofollow" href="<?= Question_URL_Helper::getCreateFromLinkURL($this->lang, $this->questionURI) ?>">
-                    <u>
-                        <?= $this->questionTitle ?>
-                    </u>
-                </a>
-            </p>
             <p class="mt-4 mb-5">
-                <a rel="nofollow" class="btn btn-primary" href="<?= Question_URL_Helper::getCreateFromLinkURL($this->lang, $this->questionURI) ?>" role="button">
+                <a rel="nofollow" class="btn btn-primary" href="#" role="button">
                     <?= $this->l->t('question_not_found__create_a_question') ?>
                 </a>
                 <a class="btn btn-outline-secondary" href="#" role="button" onclick="window.history.go(-1); return false;">Вернуться назад</a>
