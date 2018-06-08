@@ -11,7 +11,7 @@
             <div class="col-12 col-sm-11 col-md-10 col-lg-7 mx-auto">
 
                 <h1 class="mt-2 mt-md-5">Настройки профиля</h1>
-                <a href="<?= User_URL_Helper::getURL($this->lang, $this->authUser) ?>" class="btn btn-sm btn-outline-secondary">
+                <a href="<?= $this->authUser->getURL($this->lang) ?>" class="btn btn-sm btn-outline-secondary">
                     Вернуться к профилю
                 </a>
 
@@ -32,7 +32,7 @@
                         </form>
                     </div>
                     <div class="pseudo_cell">
-                        <img class="avatar avatar-xxl my-4" id="settings_pg__user_avatar" src="<?= User_URL_Helper::getAvatarMediumURL($this->authUser) ?>"/>
+                        <img class="avatar avatar-xxl my-4" id="settings_pg__user_avatar" src="<?= $this->authUser->getAvatarMediumURL() ?>"/>
                     </div>
                 </div>
 

@@ -60,7 +60,7 @@ class Signup_POST_APIController extends Abstract_APIController
                 'password_hash' => $user->getPasswordHash(),
                 'api_key' => $user->getAPIKey(),
                 'created_at' => date('Y-m-d H:i:s'),
-                'url' => User_URL_Helper::getURL($this->lang, $user),
+                'url' => $user->getURL($this->lang),
                 'destination_url' => Page_URL_Helper::getMainURL($this->lang),
             ];
 

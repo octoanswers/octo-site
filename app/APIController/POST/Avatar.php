@@ -40,9 +40,9 @@ class Avatar_POST_APIController extends Abstract_APIController
 
             $output = [
                 'user_id' => true,
-                'avatar_url_medium' => User_URL_Helper::getAvatarLargeURL($user),
-                'avatar_url_small' => User_URL_Helper::getAvatarMediumURL($user),
-                'avatar_url_extra_small' => User_URL_Helper::getAvatarSmallURL($user),
+                'avatar_url_medium' => $user->getAvatarLargeURL(),
+                'avatar_url_small' => $user->getAvatarMediumURL(),
+                'avatar_url_extra_small' => $user->getAvatarSmallURL(),
             ];
         } catch (Throwable $e) {
             $output = [

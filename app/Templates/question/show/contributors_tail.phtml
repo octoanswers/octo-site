@@ -2,8 +2,8 @@
 <?php if (count($this->contributors_tail)): ?>
     <div class="avatar-group mt-4 mb-2">
         <?php foreach ($this->contributors_tail as $contributor): ?>
-            <a href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>" class="avatar-item">
-                <img src="<?= User_URL_Helper::getAvatarSmallURL($contributor) ?>">
+            <a href="<?= $contributor->getURL($this->lang) ?>" class="avatar-item">
+                <img src="<?= $contributor->getAvatarSmallURL() ?>">
             </a>
         <?php endforeach; ?>
     </div>

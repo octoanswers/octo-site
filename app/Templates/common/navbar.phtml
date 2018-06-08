@@ -56,8 +56,8 @@
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
         <?php if ($this->authUser): ?>
             <li class="nav-item mr-2 pt-1">
-                <a class="wh-32" href="<?= User_URL_Helper::getURL($this->lang, $this->authUser) ?>">
-                    <img src="<?= User_URL_Helper::getAvatarSmallURL($this->authUser) ?>" class="wh-32 rounded-circle border-2">
+                <a class="wh-32" href="<?= $this->authUser->getURL($this->lang) ?>">
+                    <img src="<?= $this->authUser->getAvatarSmallURL() ?>" class="wh-32 rounded-circle border-2">
                 </a>
             </li>
         <?php else: ?>
@@ -91,7 +91,7 @@
                     </svg>
                 </a>
             </li>
-            
+
         <?php endif; ?>
 
         <li class="nav-item">

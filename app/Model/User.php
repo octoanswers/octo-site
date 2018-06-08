@@ -2,6 +2,8 @@
 
 class User_Model
 {
+    use User_URL_Trait;
+    
     private $id;
     private $username;
     private $name;

@@ -93,11 +93,11 @@
                     <div class="card-columns">
                     <?php foreach ($this->users as $user): ?>
                         <div class="card">
-                            <a href="<?= User_URL_Helper::getURL($this->lang, $user) ?>">
-                                <img class="card-img-top" src="<?= User_URL_Helper::getAvatarLargeURL($user) ?>" alt="Card image cap">
+                            <a href="<?= $user->getURL($this->lang) ?>">
+                                <img class="card-img-top" src="<?= $user->getAvatarLargeURL() ?>" alt="Card image cap">
                             </a>
                             <div class="card-body">
-                                <a href="<?= User_URL_Helper::getURL($this->lang, $user) ?>" class="link-inverted no-underline">
+                                <a href="<?= $user->getURL($this->lang) ?>" class="link-inverted no-underline">
                                     <h4 class="h5 card-title"><?= $user->getName() ?></h4>
                                 </a>
                                 <h5 class="h6 card-subtitle mb-2 text-muted">

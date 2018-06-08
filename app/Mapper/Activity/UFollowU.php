@@ -23,14 +23,14 @@ class UFollowU_Activity_Mapper extends Abstract_Mapper
             'user' => [
                 'id' => $user->getID(),
                 'name' => $user->getName(),
-                'profile_url' => User_URL_Helper::getURL($this->lang, $user),
-                'avatar_xs_url' => User_URL_Helper::getAvatarSmallURL($user),
+                'profile_url' => $user->getURL($this->lang),
+                'avatar_xs_url' => $user->getAvatarSmallURL(),
             ],
             'followed_user' => [
                 'id' => $followedUser->getID(),
                 'name' => $followedUser->getName(),
-                'profile_url' => User_URL_Helper::getURL($this->lang, $followedUser),
-                'avatar_xs_url' => User_URL_Helper::getAvatarSmallURL($followedUser),
+                'profile_url' => $user->getURL($this->lang),
+                'avatar_xs_url' => $user->getAvatarSmallURL(),
             ]
         ], JSON_UNESCAPED_UNICODE);
 

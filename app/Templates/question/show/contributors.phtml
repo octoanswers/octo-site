@@ -13,8 +13,8 @@
             <?php foreach ($this->contributors as $contributor): ?>
                 <tr>
                     <td class="py-3">
-                        <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
-                            <img class="avatar-2 rounded-circle" src="<?= User_URL_Helper::getAvatarMediumURL($contributor) ?>">
+                        <a class="avatar-lg" href="<?= $contributor->getURL($this->lang) ?>">
+                            <img class="avatar-2 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
                         </a>
                     </td>
                     <td class="py-3 pl-3">
@@ -23,7 +23,7 @@
                             <div class="progress-bar bg-color-green-200" role="progressbar" style="width: <?= $percentage ?>%" aria-valuenow="<?= $contributor->getContribution() ?>" aria-valuemin="0" aria-valuemax="<?= $this->maxContribution ?>"></div>
                         </div> -->
                         <div class="font_weight_700 mt-1">
-                            <a class="link_gray_900 no_underline" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
+                            <a class="link_gray_900 no_underline" href="<?= $contributor->getURL($this->lang) ?>">
                                 <?= $contributor->getName() ?>
                             </a>
                         </div>

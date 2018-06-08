@@ -40,7 +40,7 @@ class Login_POST_APIController extends Abstract_APIController
                 'name' => $user->getName(),
                 'api_key' => $user->getAPIKey(),
                 'created_at' => $user->getCreatedAt(),
-                'url' => User_URL_Helper::getURL($this->lang, $user),
+                'url' => $user->getURL($this->lang),
                 'destination_url' => Page_URL_Helper::getMainURL($this->lang),
             ];
         } catch (Throwable $e) {

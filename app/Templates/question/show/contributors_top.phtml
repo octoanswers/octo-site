@@ -13,13 +13,13 @@
                 <div class="col-12 col-sm-10 col-md-4 mx-auto">
                     <div class="box pt-3 mb-4">
                         <div class="text-center py-3">
-                            <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
-                                <img class="avatar-10 rounded-circle" src="<?= User_URL_Helper::getAvatarMediumURL($contributor) ?>">
+                            <a class="avatar-lg" href="<?= $contributor->getURL($this->lang) ?>">
+                                <img class="avatar-10 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
                             </a>
                         </div>
                         <div class="text-center py-3 px-3 border-bottom border-double">
                             <div class="font-size-125 font_weight_600">
-                                <a class="link_gray_900 no_underline" href="<?= User_URL_Helper::getURL($this->lang, $contributor) ?>">
+                                <a class="link_gray_900 no_underline" href="<?= $contributor->getURL($this->lang) ?>">
                                     <?= $contributor->getName() ?>
                                 </a>
                             </div>

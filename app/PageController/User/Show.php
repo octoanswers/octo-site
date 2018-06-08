@@ -33,7 +33,7 @@ class Show_User_PageController extends Abstract_PageController
         $this->template = 'user/show';
         $this->pageTitle = $this->user->getName().$this->l->t('user__page_title_postfix');
         $this->pageDescription = $this->user->getName().$this->l->t('user__page_description_postfix');
-        $this->canonicalURL = User_URL_Helper::getURL($this->lang, $this->user);
+        $this->canonicalURL = $this->user->getURL($this->lang);
 
         $this->openGraph = $this->_getOpenGraph();
 
@@ -65,7 +65,7 @@ class Show_User_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => User_URL_Helper::getURL($this->lang, $this->user),
+            'url' => $this->user->getURL($this->lang),
             'type' => "website",
             'title' => $this->user->getName(),
             'description' => $this->user->getName().$this->l->t('user__page_description_postfix'),

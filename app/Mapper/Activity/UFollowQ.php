@@ -23,8 +23,8 @@ class UFollowQ_Activity_Mapper extends Abstract_Mapper
             'user' => [
                 'id' => $user->getID(),
                 'name' => $user->getName(),
-                'profile_url' => User_URL_Helper::getURL($this->lang, $user),
-                'avatar_xs_url' => User_URL_Helper::getAvatarSmallURL($user),
+                'profile_url' => $user->getURL($this->lang),
+                'avatar_xs_url' => $user->getAvatarSmallURL(),
             ],
             'question' => [
                 'title' => $question->getTitle(),

@@ -13,13 +13,13 @@
         </div>
         <div class="pseudo_table mt-3 mb-3">
             <div class="pseudo_cell pt-2">
-                <a class="avatar-lg" href="<?= User_URL_Helper::getURL($this->lang, $this->lastEditor) ?>">
-                    <img class="avatar-2 rounded-circle" src="<?= User_URL_Helper::getAvatarSmallURL($this->lastEditor) ?>">
+                <a class="avatar-lg" href="<?= $this->lastEditor->getURL($this->lang) ?>">
+                    <img class="avatar-2 rounded-circle" src="<?= $this->lastEditor->getAvatarSmallURL() ?>">
                 </a>
             </div>
             <div class="pseudo_cell align-middle pl-3">
                 <div class="font_weight_700">
-                    <a class="link_gray_900 no_underline" href="<?= User_URL_Helper::getURL($this->lang, $this->lastEditor) ?>">
+                    <a class="link_gray_900 no_underline" href="<?= $this->lastEditor->getURL($this->lang) ?>">
                         <?= $this->lastEditor->getName() ?>
                     </a>
                 </div>
