@@ -14,7 +14,7 @@
                     <?php if (strlen($question->getAnswer()->getText())): ?>
                         <?= $this->minutesToRead_humanizer->humanizeCharactersCount(mb_strlen($question->getAnswer()->getText())) ?>
                     <?php else: ?>
-                        <a rel="nofollow" href="<?= Answer_URL_Helper::getEditURL($this->lang, $question) ?>">
+                        <a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
                             <?= $this->l->t('related_questions__write_first_answer') ?>
                         </a>
                     <?php endif; ?>

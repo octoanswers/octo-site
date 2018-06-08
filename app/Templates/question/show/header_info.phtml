@@ -6,7 +6,7 @@
             <?= (new Contributors_Humanizer($this->l))->humanize(count($this->contributors)) ?>
         </a>
     <?php else: ?>
-        <a href="<?= Answer_URL_Helper::getEditURL($this->lang, $this->question) ?>" class="color-gray-500 no-underline-hover">
+        <a href="<?= $this->question->getEditURL($this->lang) ?>" class="color-gray-500 no-underline-hover">
             <?= $this->l->t('btn', 'edit_answer') ?>
         </a>
     <?php endif; ?>

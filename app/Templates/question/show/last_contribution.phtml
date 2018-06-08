@@ -27,7 +27,7 @@
                     <?= $this->lastEditor->getSignature() ? $this->lastEditor->getSignature() : '+'.$this->lastEditor->getUsername() ?>
                 </span>
                 <div class="mt-3">
-                    <a class="small color-gray-400" href="<?= Answer_URL_Helper::getHistoryURL($this->lang, $this->question) ?>">
+                    <a class="small color-gray-400" href="<?= $this->question->getHistoryURL($this->lang) ?>">
                         Полная история изменений
                     </a>
                 </div>

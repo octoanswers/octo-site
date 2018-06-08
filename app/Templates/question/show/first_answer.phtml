@@ -8,7 +8,7 @@
             <div class="info">
                 <p class="title"><?= $this->l->t('block', 'first_answer', 'title') ?></p>
                 <p class="message"><?= $this->l->t('block', 'first_answer', 'lead') ?></p>
-                <a class="btn btn-primary" href="<?= Answer_URL_Helper::getEditURL($this->lang, $this->question) ?>">
+                <a class="btn btn-primary" href="<?= $this->question->getEditURL($this->lang) ?>">
                     <?= $this->l->t('block', 'first_answer', 'answer_btn') ?>
                 </a>
             </div>

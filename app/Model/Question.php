@@ -2,6 +2,8 @@
 
 class Question_Model
 {
+    use Question_URL_Trait;
+    
     private $id;
     private $title;
     private $isRedirect;

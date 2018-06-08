@@ -6,7 +6,7 @@
         </div>
         <div class="btn_improve float-lg-right mt-2 mt-lg-0">
             <?php if ($this->authUser): ?>
-                <a class="btn btn-success" href="<?= Answer_URL_Helper::getEditURL($this->lang, $this->question) ?>">
+                <a class="btn btn-success" href="<?= $this->question->getEditURL($this->lang) ?>">
                     <?= $this->l->t('improve_answer', 'btn_yes') ?>
                 </a>
             <?php else: ?>

@@ -1,7 +1,7 @@
 
 <div class="mt-4">
     <?php if ($this->authUser): ?>
-        <a href="<?= Answer_URL_Helper::getEditURL($this->lang, $this->question) ?>" role="button" class="btn btn-primary mb-3 mr-2">
+        <a href="<?= $this->question->getEditURL($this->lang) ?>" role="button" class="btn btn-primary mb-3 mr-2">
             <?= $this->l->t('btn', 'edit_answer') ?>
         </a>
     <?php else: ?>
@@ -29,7 +29,7 @@
     <?php endif; ?>
 
     <?php if (mb_strlen($this->answer->getText()) > 0): ?>
-        <a href="<?= Answer_URL_Helper::getHistoryURL($this->lang, $this->question) ?>" class="btn btn-outline-secondary mb-3 mr-2">
+        <a href="<?= $this->question->getHistoryURL($this->lang) ?>" class="btn btn-outline-secondary mb-3 mr-2">
             <?= $this->l->t('btn', 'view_history') ?>
         </a>
     <?php endif; ?>
