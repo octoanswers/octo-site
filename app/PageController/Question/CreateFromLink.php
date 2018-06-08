@@ -14,7 +14,7 @@ class CreateFromLink_Question_PageController extends Abstract_PageController
             // if question already exists, redirect to question page
             $question = (new Question_Query($this->lang))->questionWithTitle($this->questionTitle);
             if ($question) {
-                return $response->withRedirect(Question_URL_Helper::getURL($this->lang, $question), 301);
+                return $response->withRedirect($question->getURL($this->lang), 301);
             }
         } catch (Throwable $e) {
             $question = Question_Model::initWithTitle($this->questionTitle);

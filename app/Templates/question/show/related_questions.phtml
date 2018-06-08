@@ -7,7 +7,7 @@
 
         <?php foreach ($this->related_questions as $question): ?>
             <div class="my-4">
-                <a class="h2 no-underline-hover" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
+                <a class="h2 no-underline-hover" href="<?= $question->getURL($this->lang) ?>">
                     <?= $question->getTitle() ?>
                 </a>
                 <div class="small color-gray-500 mt-1">

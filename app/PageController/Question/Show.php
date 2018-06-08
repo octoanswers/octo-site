@@ -17,7 +17,7 @@ class Show_Question_PageController extends Abstract_PageController
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        return $response->withRedirect(Question_URL_Helper::getURL($this->lang, $question), 301);
+        return $response->withRedirect($question->getURL($this->lang), 301);
     }
 
     public function handle($request, $response, $args)
@@ -90,7 +90,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->template = 'question/show';
         $this->pageTitle = $this->question->getTitle().' - '.$this->l->t('octoanswers');
         $this->pageDescription = $this->__getPageDescription();
-        $this->canonicalURL = Question_URL_Helper::getURL($this->lang, $this->question);
+        $this->canonicalURL = $this->question->getURL($this->lang);
 
         $this->related_questions = $this->_related_questions();
 
@@ -104,7 +104,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->shareLink['title'] = $this->question->getTitle();
         $this->shareLink['description'] = $this->l->t('q_pg__share_description');
-        $this->shareLink['url'] = Question_URL_Helper::getURL($this->lang, $this->question);
+        $this->shareLink['url'] = $this->question->getURL($this->lang);
         $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
 
         $this->_prepareAdditionalJavascript();
@@ -204,7 +204,7 @@ class Show_Question_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => Question_URL_Helper::getURL($this->lang, $this->question),
+            'url' => $this->question->getURL($this->lang),
             'type' => "website",
             'title' => $this->question->getTitle(),
             'description' => $this->__getPageDescription(),

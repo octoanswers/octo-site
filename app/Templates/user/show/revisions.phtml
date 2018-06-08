@@ -3,7 +3,7 @@
     <?php for ($i=0; $i < count($this->revisions); $i++): ?>
         <div class="my-5">
             <div class="mb-3">
-                <a class="h5 link_gray_900 no_underline" href="<?= Question_URL_Helper::getURL($this->lang, $this->questions[$i]) ?>">
+                <a class="h5 link_gray_900 no_underline" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
                     <?= $this->questions[$i]->getTitle() ?>
                 </a>
                 <div class="small color-gray-600 mt-2">

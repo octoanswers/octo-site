@@ -1,6 +1,6 @@
 
 <div class="my-5">
-    <a class="h4 link-inverted no-underline" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
+    <a class="h4 link-inverted no-underline" href="<?= $question->getURL($this->lang) ?>">
         <?= $question->getTitle() ?>
     </a>
     <?php $redirect = $this->redirects[$question->getID()]; ?>

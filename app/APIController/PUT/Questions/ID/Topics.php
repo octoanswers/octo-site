@@ -90,7 +90,7 @@ class Topics_ID_Questions_PUT_APIController extends Abstract_APIController
                 'question' => [
                     'id' => $question->getID(),
                     'title' => $question->getTitle(),
-                    'url' => Question_URL_Helper::getURL($this->lang, $question),
+                    'url' => $question->getURL($this->lang),
                 ],
                 'user_id' => $user->getID(),
                 'user_name' => $user->getName(),

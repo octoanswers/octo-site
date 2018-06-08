@@ -2,14 +2,14 @@
 <div class="my-5">
 
     <div class="mb-3">
-        <a class="h3 link_gray_900 no_underline" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
+        <a class="h3 link_gray_900 no_underline" href="<?= $question->getURL($this->lang) ?>">
             <?= $question->getTitle() ?>
         </a>
     </div>
 
     <?php if ($question->getImageBaseName()): ?>
-        <a class="d-block height-16" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>">
-            <img class="cover-height-16" src="<?= Question_URL_Helper::getImageURLMedium($this->lang, $question) ?>">
+        <a class="d-block height-16" href="<?= $question->getURL($this->lang) ?>">
+            <img class="cover-height-16" src="<?= $question->getImageURLMedium($this->lang) ?>">
         </a>
     <?php endif; ?>
 
@@ -30,7 +30,7 @@
             <?php endif; ?>
 
             <?php if (count($question->getTopics()) == 0): ?>
-                <a class="badge badge-sm badge-success mr-3" href="<?= Question_URL_Helper::getUpdateTopicsURL($this->lang, $question) ?>" rel="nofollow">
+                <a class="badge badge-sm badge-success mr-3" href="<?= $question->getUpdateTopicsURL($this->lang) ?>" rel="nofollow">
                     Проставить темы
                 </a>
             <?php endif; ?>

@@ -31,7 +31,7 @@ class QUpdateA_Activity_Mapper extends Abstract_Mapper
         $data = json_encode([
             'question' => [
                 'title' => $question->getTitle(),
-                'url' => Question_URL_Helper::getURL($this->lang, $question),
+                'url' => $question->getURL($this->lang),
             ],
             'user' => [
                 'id' => $user->getID(),

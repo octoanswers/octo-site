@@ -42,7 +42,7 @@
                     <?php foreach ($this->questions as $question): ?>
                         <div class="mt-5">
                             <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
-                                <a class="link-inverted no-underline lead" href="<?= Question_URL_Helper::getURL($this->lang, $question) ?>"><?= $question->getTitle() ?></a>
+                                <a class="link-inverted no-underline lead" href="<?= $question->getURL($this->lang) ?>"><?= $question->getTitle() ?></a>
                                 <div>
                                 <?php if ($question->getAnswer()): ?>
                                     <span class="text-muted">

@@ -71,11 +71,11 @@ class ExtendedParsedown extends Parsedown
                 if ($matches[1] == '') {
                     // URL empty => make internal link from body part
                     $question = Question_Model::initWithTitle($element['text']);
-                    $matches[1] = Question_URL_Helper::getURL($this->lang, $question);
+                    $matches[1] = $question->getURL($this->lang);
                 } else {
                     // URL not canonical => internal wiki-link
                     $question = Question_Model::initWithTitle($matches[1]);
-                    $matches[1] = Question_URL_Helper::getURL($this->lang, $question);
+                    $matches[1] = $question->getURL($this->lang);
                 }
             }
 
@@ -89,7 +89,7 @@ class ExtendedParsedown extends Parsedown
         } else {
             // reference part of link not found => local URI
             $question = Question_Model::initWithTitle($element['text']);
-            $linkFromText = Question_URL_Helper::getURL($this->lang, $question);
+            $linkFromText = $question->getURL($this->lang);
 
             $element['attributes']['href'] = $linkFromText;
             $element['attributes']['title'] = null;

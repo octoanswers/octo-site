@@ -34,7 +34,7 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
             $output = [
                 'id' => $question->getID(),
                 'title' => $question->getTitle(),
-                'url' => Question_URL_Helper::getURL($this->lang, $question),
+                'url' => $question->getURL($this->lang),
                 'is_redirect' => $question->isRedirect(),
             ];
         } catch (Throwable $e) {

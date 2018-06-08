@@ -4,11 +4,11 @@
             <div class="col-12 col-md-8 mx-auto">
                 <p class="lead text-muted mb-1"><?= $this->l->t('question', 'update_image', 'title') ?></p>
                 <h1 class="h2 mt-0">
-                    <a href="<?= Question_URL_Helper::getURL($this->lang, $this->question) ?>" class="link-inverted no-underline">
+                    <a href="<?= $this->question->getURL($this->lang) ?>" class="link-inverted no-underline">
                         <?= $this->question->getTitle() ?>
                     </a>
                 </h1>
-                <a class="btn btn-sm btn-outline-secondary mt-2" href="<?= Question_URL_Helper::getURL($this->lang, $this->question) ?>" role="button">
+                <a class="btn btn-sm btn-outline-secondary mt-2" href="<?= $this->question->getURL($this->lang) ?>" role="button">
                     <?= $this->l->t('answer_history__back_to_question') ?>
                 </a>
             </div>

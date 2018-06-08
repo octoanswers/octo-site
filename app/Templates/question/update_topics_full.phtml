@@ -24,7 +24,7 @@
                         <button type="submit" id="form__update_topics__submit" class="btn btn-primary">
                             Обновить темы
                         </button>
-                        <a href="<?= Question_URL_Helper::getURL($this->lang, $this->question) ?>" class="btn color-text-normal bg-color-white">
+                        <a href="<?= $this->question->getURL($this->lang) ?>" class="btn color-text-normal bg-color-white">
                             Вернуться к вопросу
                         </a>
                     </div>

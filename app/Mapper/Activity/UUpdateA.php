@@ -37,7 +37,7 @@ class UUpdateA_Activity_Mapper extends Abstract_Mapper
             ],
             'question' => [
                 'title' => $question->getTitle(),
-                'url' => Question_URL_Helper::getURL($this->lang, $question),
+                'url' => $question->getURL($this->lang),
             ],
             'revision' => [
                 'diff_text' => FineDiff::renderDiffToHTMLFromOpcodes($revision->getBaseText(), $revision->getOpcodes()),

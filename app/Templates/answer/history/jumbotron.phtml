@@ -5,11 +5,11 @@
             <div class="col-12 col-sm-11 col-md-10 col-lg-9 mx-auto">
                 <p class="lead text-muted mb-1"><?= $this->l->t('answer_history__subtitle') ?></p>
                 <h1 class="h2 mt-0">
-                    <a class="link-inverted no-underline" href="<?= Question_URL_Helper::getURL($this->lang, $this->question) ?>">
+                    <a class="link-inverted no-underline" href="<?= $this->question->getURL($this->lang) ?>">
                         <?= $this->question->getTitle() ?>
                     </a>
                 </h1>
-                <a class="btn btn-sm btn-outline-secondary mt-2" role="button" href="<?= Question_URL_Helper::getURL($this->lang, $this->question) ?>">
+                <a class="btn btn-sm btn-outline-secondary mt-2" role="button" href="<?= $this->question->getURL($this->lang) ?>">
                     <?= $this->l->t('answer_history__back_to_question') ?>
                 </a>
             </div>

@@ -65,7 +65,7 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
                     'id' => $question->getID(),
                     'old_title' => $old_title,
                     'new_title' => $question->getTitle(),
-                    'url' => Question_URL_Helper::getURL($this->lang, $question),
+                    'url' => $question->getURL($this->lang),
                 ],
                 'user' => [
                     'id' => $user->getID(),

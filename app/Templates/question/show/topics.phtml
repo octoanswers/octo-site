@@ -8,7 +8,7 @@
         <?php endforeach; ?>
 
         <?php if ($this->authUser): ?>
-            <a class="badge badge-primary mb-3 mr-2" href="<?= Question_URL_Helper::getUpdateTopicsURL($this->lang, $this->question) ?>">
+            <a class="badge badge-primary mb-3 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
                 <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
                 <?= $this->l->t('question', 'update_topics', 'btn') ?>
             </a>
@@ -17,7 +17,7 @@
 <?php else: ?>
     <?php if ($this->authUser): ?>
         <div class="mt-4">
-        <a class="badge badge-primary mr-2 mb-3" href="<?= Question_URL_Helper::getUpdateTopicsURL($this->lang, $this->question) ?>">
+        <a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
             <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
             Задать темы вопроса
         </a>
