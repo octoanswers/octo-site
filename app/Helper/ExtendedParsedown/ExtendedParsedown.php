@@ -12,27 +12,6 @@ class ExtendedParsedown extends Parsedown
             parent::__construct();
         }
         $this->lang = $lang;
-
-        $this->InlineTypes['#'][]= 'TopicMention';
-        $this->inlineMarkerList .= '#';
-    }
-
-    protected function inlineTopicMention($Excerpt)
-    {
-        if (preg_match(self::HASHTAG_PATTERN, $Excerpt['context'], $matches)) {
-            $topic_URL = Topic_URL_Helper::getURLFromTitle($this->lang, mb_strtolower($matches[1]));
-            return [
-                'extent' => strlen($matches[0]),
-                'element' => [
-                    'name' => 'a',
-                    'text' => $matches[0],
-                    'attributes' => [
-                        'href' => $topic_URL,
-                        'class' => 'topic',
-                    ],
-                ],
-            ];
-        }
     }
 
     protected function inlineLink($excerpt)
