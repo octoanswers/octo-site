@@ -17,7 +17,7 @@
                                 <img class="avatar-10 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
                             </a>
                         </div>
-                        <div class="text-center py-3 px-3 border-bottom border-double">
+                        <div class="text-center py-3 px-3 border-bottom">
                             <div class="font-size-125 font_weight_600">
                                 <a class="link_gray_900 no_underline" href="<?= $contributor->getURL($this->lang) ?>">
                                     <?= $contributor->getName() ?>
@@ -41,7 +41,7 @@
                                     <img class="size-18px mt-minus-4px" src="https://png.icons8.com/ios-glyphs/18/3498db/pull-request.png">
                                     <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
                                 </td>
-                                <td class="p-2 border-x border-double">
+                                <td class="p-2 border-x">
                                     <img class="size-18px mt-minus-4px" src="https://png.icons8.com/windows/18/27ae60/add.png">
                                     <span class="color-gray-600"><?= Contribution_Humanizer::humanizeCount($contributor->getInsertionsCount()) ?></span>
                                 </td>

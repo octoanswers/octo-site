@@ -202,29 +202,29 @@ a.badge-dark:hover {
   color: #FFFFFF !important; }
 
 body {
-  background-color: #FAFAFA; }
+  background-color: #F5F5F5; }
 
 .border-top {
-  border-top: 1px solid #EEEEEE !important; }
-
-.border-top-dark {
   border-top: 1px solid #E0E0E0 !important; }
 
-.border-bottom {
-  border-bottom: 1px solid #EEEEEE !important; }
+.border-top-dark {
+  border-top: 1px solid #BDBDBD !important; }
 
-.border-bottom-dark {
+.border-bottom {
   border-bottom: 1px solid #E0E0E0 !important; }
 
+.border-bottom-dark {
+  border-bottom: 1px solid #BDBDBD !important; }
+
 .border-left {
-  border-left: 1px solid #EEEEEE !important; }
+  border-left: 1px solid #E0E0E0 !important; }
 
 .border-right {
-  border-right: 1px solid #EEEEEE !important; }
+  border-right: 1px solid #E0E0E0 !important; }
 
 .border-x {
-  border-left: 1px solid #EEEEEE !important;
-  border-right: 1px solid #EEEEEE !important; }
+  border-left: 1px solid #E0E0E0 !important;
+  border-right: 1px solid #E0E0E0 !important; }
 
 .border-double {
   border-width: 2px !important; }
@@ -389,7 +389,7 @@ body {
 
 .box {
   background-color: #FFFFFF;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #E0E0E0;
   border-radius: 4px; }
 
 .card {
