@@ -29,14 +29,20 @@
                                 </a>
                             </div>
                             <div class="small color-gray-600">
-                                <?= $contributor->getSignature() ? $contributor->getSignature() : '' ?>
-                                <?php if ($contributor->getSignature() && $contributor->getSite()): ?>
-                                    <span class="color-gray-800 mx-1 font-weight-800">&middot;</span>
-                                <?php endif; ?>
+                                <?= $contributor->getSignature() ? $contributor->getSignature() : '+'.$contributor->getUsername() ?>
+
                                 <?php if ($contributor->getSite()): ?>
+                                    <span class="color-gray-800 mx-1 font-weight-800">&middot;</span>
                                     <a href="<?= $contributor->getSite() ?>">
                                         <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
                                     </a>
+                                <?php endif; ?>
+
+                                <?php if ($contributor->getID() == $this->lastContributorID): ?>
+                                    <span class="color-gray-800 mx-1 font-weight-800">&middot;</span>
+                                    <span class="badge badge-success badge-sm">
+                                        Последняя правка
+                                    </span>
                                 <?php endif; ?>
                             </div>
                         </div>

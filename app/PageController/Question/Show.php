@@ -83,7 +83,7 @@ class Show_Question_PageController extends Abstract_PageController
         }
 
         if (count($this->contributors)) {
-            $this->lastEditor = end($this->contributors);
+            $this->lastContributorID = end($this->contributors)->getID();
             $this->maxContribution = $this->contributors[0]->getContribution();
         }
 
