@@ -46,17 +46,15 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="width-8 d-none d-sm-block">
-                            <span class="font-weight-bold color-gray-500">
-                                <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
-                            </span>
+                        <div class="width-11 d-none d-sm-block color-gray-700">
+                            <img class="size-18px mt-minus-4px" src="https://png.icons8.com/ios-glyphs/18/78909C/pull-request.png">
+                            <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
+
+                            <?php $percentage = $contributor->getContribution() * (1 / $this->maxContribution); ?>
+                            <?php $contributionColor = ColorMixer_Helper::colorBetween('1E88E5', '388E3C', $percentage); ?>
+                            <span class="status ml-1" style="background-color: #<?= $contributionColor ?>;"></span>
                         </div>
                     </div>
-
-                    <?php $percentage = $contributor->getContribution() * (100 / $this->maxContribution); ?>
-                    <!-- <div class="progress progress-height-2px">
-                        <div class="progress-bar bg-color-green-200" role="progressbar" style="width: <?= $percentage ?>%" aria-valuenow="<?= $contributor->getContribution() ?>" aria-valuemin="0" aria-valuemax="<?= $this->maxContribution ?>"></div>
-                    </div> -->
 
                 <?php endforeach; ?>
 
