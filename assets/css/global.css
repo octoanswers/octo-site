@@ -711,7 +711,7 @@ label {
   color: #757575; }
 
 h1, .h1 {
-  font-size: 1.75rem; }
+  font-size: 2rem; }
 
 h2, .h2 {
   font-size: 1.5rem; }
@@ -964,6 +964,15 @@ img.border-2 {
 
 .width-8 {
   width: 4rem; }
+
+.width-9 {
+  width: 4.5rem; }
+
+.width-10 {
+  width: 5rem; }
+
+.width-11 {
+  width: 5.5rem; }
 
 .width-12 {
   width: 6rem; }
@@ -1568,7 +1577,11 @@ ul.nav_inline_secondary {
 
 .lead {
   font-size: 1.5rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-weight: 500; }
+
+.lead-thin {
+  font-weight: 300; }
 
 .overflow-y-hidden {
   overflow-y: hidden; }
