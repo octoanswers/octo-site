@@ -1,14 +1,61 @@
 
 <?php if (count($this->contributors_tail)): ?>
-    <div class="avatar-group mt-4 mb-2">
-        <?php foreach ($this->contributors_tail as $contributor): ?>
-            <a href="<?= $contributor->getURL($this->lang) ?>" class="avatar-item">
-                <img src="<?= $contributor->getAvatarSmallURL() ?>">
-            </a>
-        <?php endforeach; ?>
+    <div class="container-fluid max-width-md">
+        <div class="row">
+            <div class="col-12 mt-5 mb-2 text-center mr-auto">
+                <div class="h2 mb-1" id="contributors_full_list">
+                    Авторы ответа <!-- Answer contributor -->
+                </div>
+                <span class="small color-gray-400">
+                    <?= (new Contributors_Humanizer($this->l))->humanize(count($this->contributors)) ?>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mx-auto">
+
+                <?php foreach ($this->contributors_tail as $contributor): ?>
+
+                    <div class="flex-container box p-3 my-3">
+                        <div class="width-6">
+                            <a class="size-6" href="<?= $contributor->getURL($this->lang) ?>">
+                                <img class="size-6 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
+                            </a>
+                        </div>
+                        <div class="flex-grow-4 ml-3">
+                            <div class="font_weight_700">
+                                <a class="link_gray_900 no_underline" href="<?= $contributor->getURL($this->lang) ?>">
+                                    <?= $contributor->getName() ?>
+                                </a>
+                            </div>
+                            <div class="small color-gray-600">
+                                <?= $contributor->getSignature() ? $contributor->getSignature() : '' ?>
+                                <?php if ($contributor->getSignature() && $contributor->getSite()): ?>
+                                    <span class="color-gray-800 mx-1 font-weight-800">&middot;</span>
+                                <?php endif; ?>
+                                <?php if ($contributor->getSite()): ?>
+                                    <a href="<?= $contributor->getSite() ?>">
+                                        <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="width-8 d-none d-sm-block">
+                            <span class="font-weight-bold color-gray-500">
+                                <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
+                            </span>
+                        </div>
+                    </div>
+
+                    <?php $percentage = $contributor->getContribution() * (100 / $this->maxContribution); ?>
+                    <!-- <div class="progress progress-height-2px">
+                        <div class="progress-bar bg-color-green-200" role="progressbar" style="width: <?= $percentage ?>%" aria-valuenow="<?= $contributor->getContribution() ?>" aria-valuemin="0" aria-valuemax="<?= $this->maxContribution ?>"></div>
+                    </div> -->
+
+                <?php endforeach; ?>
+
+            </div>
+        </div>
     </div>
-    <p class="pl-1 small color-gray-500 mb-4">
-        + <a class="link_gray_700 no_underline" href="#"><?= count($this->contributors) ?> авторов</a>
-    </p>
 
 <?php endif; ?>
