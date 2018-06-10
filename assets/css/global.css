@@ -237,6 +237,7 @@ body {
 
 .btn-sm {
   font-size: .75rem;
+  font-weight: 500;
   padding: .125rem .5rem; }
 
 .btn-icon {
@@ -393,7 +394,7 @@ body {
   border-radius: 4px; }
 
 .card {
-  border: 1px solid #EEEEEE;
+  border: 1px solid #E0E0E0;
   border-radius: 4px; }
 
 .color-primary-lightest {
@@ -1258,10 +1259,19 @@ small, .small {
 .small-xs {
   font-size: .75rem; }
 
-.font_weight_600 {
+.font-weight-300 {
+  font-weight: 300; }
+
+.font-weight-400 {
+  font-weight: 400; }
+
+.font-weight-500 {
+  font-weight: 500; }
+
+.font-weight-600 {
   font-weight: 600; }
 
-.font_weight_700 {
+.font-weight-700 {
   font-weight: 700; }
 
 .font-weight-800 {
@@ -1305,6 +1315,9 @@ blockquote p:last-child {
 
 .font-size-16 {
   font-size: 16px; }
+
+.font-size-18px {
+  font-size: 18px; }
 
 .text-secondary {
   color: #757575 !important; }
