@@ -1,20 +1,16 @@
 
-<div class="row">
-    <div class="col-12 mt-5">
+<div class="row mt-4">
+    <div class="col-12 text-center">
         <div class="h2 mb-2">
-            Авторы ответов
+            Новые авторы ответов
         </div>
-        <ul class="nav_underlined">
-            <li>
-                <a class="active" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= $this->l->t('users__filter__newest') ?>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <?= $this->l->t('users__filter__popular') ?>
-                </a>
-            </li>
-        </ul>
+        <nav class="nav justify-content-center">
+            <a class="nav-link active" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+                <?= $this->l->t('users__filter__newest') ?>
+            </a>
+            <a class="nav-link" href="#">
+                <?= $this->l->t('users__filter__popular') ?>
+            </a>
+        </nav>
     </div>
 </div>
