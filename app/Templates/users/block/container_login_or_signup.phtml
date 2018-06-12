@@ -1,0 +1,26 @@
+
+<?php if (!$this->authUser): ?>
+<div class="container-fluid max-width-md">
+    <div class="row">
+        <div class="col-12 my-5">
+            <div class="alert alert-warning">
+                <div class="text-center">
+                    <img class="wh-96 mx-auto mt-4 mb-4" alt="<?= $this->l->t("users", "signup_lure", "img_alt") ?>" src="https://png.icons8.com/office/96/e74c3c/astronaut-helmet.png">
+                </div>
+
+                <p><strong><?= $this->l->t("users", "signup_lure", "title") ?></strong></p>
+                <p><?= $this->l->t("users", "signup_lure", "text") ?></p>
+
+                <div class="mt-4">
+                    <a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#modal_login">
+                        <?= $this->l->t('navbar', 'login') ?>
+                    </a>
+                    <a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#modal_signup">
+                        <?= $this->l->t('navbar', 'signup') ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

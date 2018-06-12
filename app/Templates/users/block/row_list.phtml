@@ -1,0 +1,49 @@
+
+<?php if (count($this->users)): ?>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <?php foreach ($this->users as $user): ?>
+                <div class="flex-container box p-3 my-3">
+                    <div class="width-6">
+                        <a class="size-6" href="<?= $user->getURL($this->lang) ?>">
+                            <img class="size-6 rounded-circle" src="<?= $user->getAvatarSmallURL() ?>">
+                        </a>
+                    </div>
+                    <div class="flex-grow-4 ml-3">
+                        <div class="font-weight-700">
+                            <a class="link_gray_900 no_underline" href="<?= $user->getURL($this->lang) ?>">
+                                <?= $user->getName() ?>
+                            </a>
+                        </div>
+                        <div class="small color-gray-600">
+                            <?php if ($user->getSignature()): ?>
+                                <?= $user->getSignature() ?>
+                            <?php endif; ?>
+
+                            <?php if ($user->getSignature() && $user->getSite()): ?>
+                                <span class="font-weight-800 mx-1 color-gray-800">&middot;</span>
+                            <?php endif; ?>
+
+                            <?php if ($user->getSite()): ?>
+                                <a href="<?= $user->getSite() ?>">
+                                    <?= parse_url($user->getSite(), PHP_URL_HOST) ?>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                        <div class="mt-2 small color-gray-700">
+                            26 ответов
+                            <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
+                            12 подписчиков
+                        </div>
+                    </div>
+                    <div class="width-11 d-none d-sm-block color-gray-700">
+                        <img class="size-18px mt-minus-4px" src="https://png.icons8.com/ios-glyphs/18/78909C/pull-request.png">
+                        +2.0K
+                    </div>
+                </div>
+            <?php endforeach; ?>
+
+        </div>
+    </div>
+
+<?php endif; ?>

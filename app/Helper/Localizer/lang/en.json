@@ -236,6 +236,14 @@
     "users__page_title__newest": "New users from around the world",
     "users__page_num": "Page",
 
+    "users": {
+        "signup_lure": {
+            "img_alt": "Signup on question and answer site OctoAnswers",
+            "title": "Not yet registered?",
+            "text": "Signing up allows you to a earn reputation when you help others with questions, answers and edits."
+        }
+    },
+
     "user__page_title_postfix": " - Wiki-answers on OctoAnswers",
     "user__page_description_postfix": " - wiki-answers on OctoAnswers",
     "user__change_avatar": "Change avatar",
