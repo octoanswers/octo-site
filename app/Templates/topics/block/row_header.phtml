@@ -1,0 +1,16 @@
+
+<div class="row mt-4">
+    <div class="col-12 text-center">
+        <div class="h2 mb-2">
+            Новые темы
+        </div>
+        <nav class="nav justify-content-center">
+            <a class="nav-link active" href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
+                <?= $this->l->t('topics__filter__newest') ?>
+            </a>
+            <a class="nav-link" href="#">
+                <?= $this->l->t('topics__filter__popular') ?>
+            </a>
+        </nav>
+    </div>
+</div>
