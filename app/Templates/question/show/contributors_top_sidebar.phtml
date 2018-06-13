@@ -1,8 +1,6 @@
 
 <?php if (count($this->contributors_top)): ?>
-    <!--noindex-->
-    <!--googleoff: index-->
-    <div class="mt-4 d-block d-md-none">
+    <div class="mt-4 d-none d-md-block">
         <div class="title border-bottom pb-3">
             <?= $this->l->t('question', 'top_contributors', 'top_title') ?>
         </div>
@@ -14,7 +12,7 @@
                         <img class="size-6 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
                     </a>
                 </div>
-                <div class="flex-grow-4 ml-3">
+                <div class="flex-grow-4 ml-lg-3">
                     <div class="font-weight-700">
                         <a class="link_gray_900 no_underline" href="<?= $contributor->getURL($this->lang) ?>">
                             <?= $contributor->getName() ?>
@@ -67,6 +65,4 @@
         <?php endif; ?>
 
     </div>
-    <!--googleon: index -->
-    <!--/noindex-->
 <?php endif; ?>
