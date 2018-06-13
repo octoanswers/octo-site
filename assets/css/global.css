@@ -202,7 +202,7 @@ a.badge-dark:hover {
   color: #FFFFFF !important; }
 
 body {
-  background-color: #F5F5F5; }
+  background-color: #FFFFFF; }
 
 .border-top {
   border-top: 1px solid #E0E0E0 !important; }
@@ -228,6 +228,9 @@ body {
 
 .border-double {
   border-width: 2px !important; }
+
+.border-radius {
+  border-radius: 4px; }
 
 .btn {
   cursor: pointer; }
@@ -705,6 +708,25 @@ body {
   -ms-flex-positive: 5;
   flex-grow: 5; }
 
+.flex-grow-6 {
+  -webkit-box-flex: 6;
+  -ms-flex-positive: 6;
+  flex-grow: 6; }
+
+.flex-grow-7 {
+  -webkit-box-flex: 7;
+  -ms-flex-positive: 7;
+  flex-grow: 7; }
+
+.flex-grow-8 {
+  -webkit-box-flex: 8;
+  -ms-flex-positive: 8;
+  flex-grow: 8; }
+
+.align-self-top {
+  -ms-flex-item-align: start;
+  align-self: flex-start; }
+
 label {
   font-size: .9rem;
   font-weight: 400;
@@ -712,7 +734,8 @@ label {
   color: #757575; }
 
 h1, .h1 {
-  font-size: 2rem; }
+  font-size: 2rem;
+  font-weight: 700; }
 
 h2, .h2 {
   font-size: 1.5rem; }
@@ -1588,13 +1611,23 @@ ul.nav_inline_secondary {
       font-size: .9rem;
       color: #757575; }
 
+.container-fluid {
+  max-width: 1139px; }
+
 .lead {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  font-weight: 500; }
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #424242; }
 
 .lead-thin {
   font-weight: 300; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.overflow-x-hidden {
+  overflow-x: hidden; }
 
 .overflow-y-hidden {
   overflow-y: hidden; }

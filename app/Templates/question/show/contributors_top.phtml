@@ -1,59 +1,54 @@
 
 <?php if (count($this->contributors_top)): ?>
-    <div class="container-fluid max-width-lg mx-auto">
-        <div class="row">
-            <div class="col-12 col-sm-10 col-md-4 text-center py-5 mx-auto">
-                <span class="h2" id="contributors_full_list">
-                    <?= $this->l->t('question', 'top_contributors', 'top_title') ?>
-                </span>
-            </div>
+    <div class="bg-color-gray-100 border-radius p-3 mt-4">
+        <div class="title border-bottom pb-2">
+            <?= $this->l->t('question', 'top_contributors', 'top_title') ?>
         </div>
-        <div class="row">
-            <?php foreach ($this->contributors_top as $contributor): ?>
-                <div class="col-12 col-sm-10 col-md-4 mx-auto">
-                    <div class="box pt-3 mb-4">
-                        <div class="text-center py-3">
-                            <a class="avatar-lg" href="<?= $contributor->getURL($this->lang) ?>">
-                                <img class="avatar-10 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
+
+        <?php foreach ($this->contributors_top as $contributor): ?>
+            <div class="flex-container overflow-x-hidden my-4">
+                <div class="width-6 align-self-top pt-2 d-block d-md-none d-lg-block">
+                    <a class="size-6" href="<?= $contributor->getURL($this->lang) ?>">
+                        <img class="size-6 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
+                    </a>
+                </div>
+                <div class="flex-grow-4 ml-lg-3">
+                    <div class="font-weight-700">
+                        <a class="link_gray_900 no_underline" href="<?= $contributor->getURL($this->lang) ?>">
+                            <?= $contributor->getName() ?>
+                        </a>
+                    </div>
+                    <div class="small color-gray-600">
+                        <?= $contributor->getSignature() ? $contributor->getSignature() : '' ?>
+                        <?php if ($contributor->getSignature() && $contributor->getSite()): ?>
+                            <span class="color-gray-900 mx-1 font-weight-800">&middot;</span>
+                        <?php endif; ?>
+                        <?php if ($contributor->getSite()): ?>
+                            <a href="<?= $contributor->getSite() ?>">
+                                <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
                             </a>
-                        </div>
-                        <div class="text-center py-3 px-3 border-bottom">
-                            <div class="font-size-125 font_weight_600">
-                                <a class="link_gray_900 no_underline" href="<?= $contributor->getURL($this->lang) ?>">
-                                    <?= $contributor->getName() ?>
-                                </a>
-                            </div>
-                            <div class="small color-gray-600 mt-2 mb-2">
-                                <?= $contributor->getSignature() ? $contributor->getSignature() : '' ?>
-                                <?php if ($contributor->getSignature() && $contributor->getSite()): ?>
-                                    <span class="color-gray-900 mx-1 font-weight-800">&middot;</span>
-                                <?php endif; ?>
-                                <?php if ($contributor->getSite()): ?>
-                                    <a href="<?= $contributor->getSite() ?>">
-                                        <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
-                                    </a>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                        <table class="no-border text-center w-100">
-                            <tr>
-                                <td class="p-2 font_weight_600">
-                                    <img class="size-18px mt-minus-4px" src="https://png.icons8.com/ios-glyphs/18/3498db/pull-request.png">
-                                    <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
-                                </td>
-                                <td class="p-2 border-x">
-                                    <img class="size-18px mt-minus-4px" src="https://png.icons8.com/windows/18/27ae60/add.png">
-                                    <span class="color-gray-600"><?= Contribution_Humanizer::humanizeCount($contributor->getInsertionsCount()) ?></span>
-                                </td>
-                                <td class="p-2">
-                                    <img class="size-18px mt-minus-4px" src="https://png.icons8.com/windows/18/e74c3c/minus.png">
-                                    <span class="color-gray-600"><?= Contribution_Humanizer::humanizeCount($contributor->getDeletionsCount()) ?></span>
-                                </td>
-                            </tr>
-                        </table>
+                        <?php endif; ?>
+                    </div>
+                    <div class="color-gray-700 mt-2">
+                        <span class="text-nowrap font-weight-600 mr-1">
+                            <img class="size-18px mt-minus-4px" src="https://png.icons8.com/ios-glyphs/18/3498db/pull-request.png">
+                            <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
+                        </span>
+                        <span class="text-nowrap mr-1">
+                            <img class="size-18px mt-minus-4px"  src="https://png.icons8.com/windows/18/27ae60/add.png">
+                            <span class="color-gray-600">
+                                <?= Contribution_Humanizer::humanizeCount($contributor->getInsertionsCount()) ?>
+                            </span>
+                        </span>
+                        <span class="text-nowrap mr-1">
+                            <img class="size-18px mt-minus-4px"  src="https://png.icons8.com/windows/18/e74c3c/minus.png">
+                            <span class="color-gray-600">
+                                <?= Contribution_Humanizer::humanizeCount($contributor->getDeletionsCount()) ?>
+                            </span>
+                        </span>
                     </div>
                 </div>
-            <?php endforeach; ?>
-        </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 <?php endif; ?>

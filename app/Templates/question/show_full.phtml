@@ -9,17 +9,15 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 max-width-md mx-auto">
+            <div class="col-12 col-md-8 col-xl-8">
                 <?php require_once TEMPLATE_PATH.'/question/show/header_info.phtml' ?>
                 <?php require_once TEMPLATE_PATH.'/question/show/header.phtml' ?>
-
-                <?php require_once TEMPLATE_PATH.'/question/show/actions.phtml' ?>
                 <?php require_once TEMPLATE_PATH.'/question/show/first_paragraph.phtml' ?>
 
-                <!-- image & add-image blocks -->
+                <?php require_once TEMPLATE_PATH.'/question/show/actions.phtml' ?>
+
                 <?php require_once TEMPLATE_PATH.'/question/show/image.phtml' ?>
                 <?php require_once TEMPLATE_PATH.'/question/show/add_image.phtml'; ?>
-                <!-- / image & add-image blocks -->
 
                 <?php require_once TEMPLATE_PATH.'/question/show/first_answer.phtml' ?>
                 <?php require_once TEMPLATE_PATH.'/question/show/answer.phtml' ?>
@@ -29,18 +27,13 @@
 
                 <?php require_once TEMPLATE_PATH.'/question/show/signup_lure.phtml'; ?>
 
-            </div>
-        </div>
-    </div>
+                <?php require_once TEMPLATE_PATH.'/question/show/contributors_tail.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/question/show/related_questions.phtml'; ?>
 
-    <?php require_once TEMPLATE_PATH.'/question/show/contributors_top.phtml'; ?>
-    <?php require_once TEMPLATE_PATH.'/question/show/contributors_tail.phtml'; ?>
-    <?php require_once TEMPLATE_PATH.'/question/show/related_questions.phtml'; ?>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 max-width-md mx-auto">
                 <?php require_once TEMPLATE_PATH.'/question/block/share.phtml' ?>
+            </div>
+            <div class="col-12 col-md-4 col-xl-4">
+                <?php require_once TEMPLATE_PATH.'/question/show/contributors_top.phtml'; ?>
             </div>
         </div>
     </div>

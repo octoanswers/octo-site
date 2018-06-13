@@ -1,39 +1,31 @@
 
 <?php if (isset($this->related_questions)): ?>
-    <div class="container-fluid max-width-md">
-        <div class="row">
-            <div class="col-12 max-width-md mt-5 mb-4 text-center mx-auto">
-                <div class="h2">
-                    Похожие вопросы
+    <div class="my-5">
+        <div class="border-bottom pb-3 mb-4">
+            <span class="title">Похожие вопросы</span>
+        </div>
+
+        <?php foreach ($this->related_questions as $question): ?>
+            <div class="my-4">
+                <a class="font-size-18px color-gray-900 no-underline-hover" href="<?= $question->getURL($this->lang) ?>">
+                    <?= $question->getTitle() ?>
+                </a>
+                <div class="small color-gray-500 mt-1">
+                    <?php if (strlen($question->getAnswer()->getText())): ?>
+                        <?= $this->minutesToRead_humanizer->humanizeCharactersCount(mb_strlen($question->getAnswer()->getText())) ?>
+                        <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
+                    <?php endif; ?>
+
+                    <?= $this->l->t('q__last_updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+
+                    <?php if (strlen($question->getAnswer()->getText()) == 0): ?>
+                        <a class="btn btn-sm btn-outline-primary ml-2" rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
+                            <?= $this->l->t('related_questions__write_first_answer') ?>
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 max-width-md mx-auto">
-                <div class="box pl-3 pr-3 mb-5">
-                    <?php foreach ($this->related_questions as $question): ?>
-                        <div class="my-4">
-                            <a class="font-size-18px font-weight-500 color-gray-800 no-underline-hover" href="<?= $question->getURL($this->lang) ?>">
-                                <?= $question->getTitle() ?>
-                            </a>
-                            <div class="small color-gray-500 mt-1">
-                                <?php if (strlen($question->getAnswer()->getText())): ?>
-                                    <?= $this->minutesToRead_humanizer->humanizeCharactersCount(mb_strlen($question->getAnswer()->getText())) ?>
-                                    <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
-                                <?php endif; ?>
+        <?php endforeach; ?>
 
-                                <?= $this->l->t('q__last_updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
-
-                                <?php if (strlen($question->getAnswer()->getText()) == 0): ?>
-                                    <a class="btn btn-sm btn-outline-primary ml-2" rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
-                                        <?= $this->l->t('related_questions__write_first_answer') ?>
-                                    </a>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
     </div>
 <?php endif; ?>

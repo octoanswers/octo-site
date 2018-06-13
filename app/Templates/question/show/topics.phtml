@@ -1,6 +1,11 @@
 
 <?php if (count($this->question->getTopics())): ?>
     <div class="mt-5">
+
+        <div class="border-bottom pb-3 mb-4">
+            <span class="title">Темы вопроса</span>
+        </div>
+        
         <?php foreach ($this->question->getTopics() as $topic): ?>
             <a class="badge badge-secondary mr-2 mb-3" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
                 <?= $topic ?>
@@ -16,11 +21,11 @@
     </div>
 <?php else: ?>
     <?php if ($this->authUser): ?>
-        <div class="mt-4">
-        <a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-            <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
-            Задать темы вопроса
-        </a>
+        <div class="mt-5">
+            <a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+                <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
+                Задать темы вопроса
+            </a>
         </div>
     <?php endif; ?>
 <?php endif; ?>

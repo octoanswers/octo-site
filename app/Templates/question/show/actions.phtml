@@ -1,7 +1,10 @@
 
-<div class="mt-4">
+<div class="mt-5">
+
+    <!-- edit answer -->
     <?php if ($this->authUser): ?>
         <a href="<?= $this->question->getEditURL($this->lang) ?>" role="button" class="btn btn-primary mb-3 mr-2">
+            <img class="btn-icon" src="https://png.icons8.com/material/20/ffffff/edit.png">
             <?= $this->l->t('btn', 'edit_answer') ?>
         </a>
     <?php else: ?>
@@ -10,6 +13,7 @@
         </button>
         <?php require_once TEMPLATE_PATH.'/question/modal/edit_answer_lure.phtml' ?>
     <?php endif; ?>
+    <!-- / edit answer -->
 
     <?php if ($this->authUser): ?>
         <button
@@ -34,7 +38,7 @@
         </a>
     <?php endif; ?>
 
-    <div class="dropdown d-inline-block">
+    <div class="dropdown d-inline-block float-lg-right">
         <button class="btn btn-outline-secondary dropdown-toggle mb-3 mr-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Ещё
         </button>
