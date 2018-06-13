@@ -1,15 +1,13 @@
 
 <?php if (count($this->contributors_top)): ?>
-    <!--noindex-->
-    <!--googleoff: index-->
-    <div class="mt-4 d-block d-md-none">
+    <div class="mt-4">
         <div class="title border-bottom pb-3">
             <?= $this->l->t('question', 'top_contributors', 'top_title') ?>
         </div>
 
         <?php foreach ($this->contributors_top as $contributor): ?>
             <div class="flex-container overflow-x-hidden my-4">
-                <div class="width-6 align-self-top pt-2 d-block d-md-none d-lg-block">
+                <div class="width-6 align-self-top pt-2">
                     <a class="size-6" href="<?= $contributor->getURL($this->lang) ?>">
                         <img class="size-6 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
                     </a>
@@ -53,20 +51,5 @@
             </div>
         <?php endforeach; ?>
 
-        <?php if (count($this->contributors_tail)): ?>
-            <div class="flex-container">
-                <div class="width-6 mt-3 mb-2 d-none d-lg-block">
-
-                </div>
-                <div class="flex-grow-4 ml-lg-3 d-none d-md-block">
-                    <a class="btn btn-sm btn-outline-secondary" href="#contributors_full_list">
-                        Все авторы ответа
-                    </a>
-                </div>
-            </div>
-        <?php endif; ?>
-
     </div>
-    <!--googleon: index -->
-    <!--/noindex-->
 <?php endif; ?>

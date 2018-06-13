@@ -1,5 +1,7 @@
 
 <?php if (count($this->contributors_top)): ?>
+    <!--noindex-->
+    <!--googleoff: index-->
     <div class="mt-4 d-none d-md-block">
         <div class="title border-bottom pb-3">
             <?= $this->l->t('question', 'top_contributors', 'top_title') ?>
@@ -65,4 +67,6 @@
         <?php endif; ?>
 
     </div>
+    <!--googleon: index -->
+    <!--/noindex-->
 <?php endif; ?>
