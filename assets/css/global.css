@@ -1013,6 +1013,10 @@ img.border-2 {
 .height-16 {
   height: 8rem; }
 
+.size-2 {
+  width: 1rem;
+  height: 1rem; }
+
 .size-4 {
   width: 2rem;
   height: 2rem; }
@@ -1034,6 +1038,12 @@ img.border-2 {
 
 .min-height-8 {
   min-height: 4rem; }
+
+.max-width-20 {
+  max-width: 10rem; }
+
+.max-width-30 {
+  max-width: 15rem; }
 
 .max-width-sm {
   max-width: 575px; }
@@ -1262,7 +1272,7 @@ a.no_underline {
     text-decoration: none; }
 
 a.external-link:after {
-  content: url(http://octoanswers.com/assets/img/icon-external-link-14.png);
+  content: url("https://png.icons8.com/small/14/546e7a/external-link.png");
   margin: 0 0 0 5px; }
 
 a.no-underline-hover:hover {
@@ -1718,7 +1728,7 @@ ul.nav-sidebar > li > a:hover {
   border-bottom: 4px solid #2196F3; }
 
 .input-bg-icon-magnifier-lg {
-  background: url("/assets/img/icons8-search-light-gray-28.png") no-repeat 10px 10px;
+  background: url("https://png.icons8.com/material/28/546e7a/search.png") no-repeat 10px 10px;
   background-color: #fff;
   padding-left: 48px; }
 
