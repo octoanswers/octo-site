@@ -1,0 +1,27 @@
+
+<?php if (isset($this->sandbox_questions) && count($this->sandbox_questions)): ?>
+    <!-- questions from sandbox -->
+    <div class="mt-4 mb-5">
+
+        <div class="title border-bottom pb-3 my-4">
+            Вопросы из песочницы
+        </div>
+
+        <?php foreach ($this->sandbox_questions as $question): ?>
+            <div class="my-4">
+                <a class="color-gray-800 no-underline-hover" href="<?= $question->getURL($this->lang) ?>">
+                    <?= $question->getTitle() ?>
+                </a>
+                <div class="small mt-1">
+                    <?php if ((strtotime("now") - strtotime($question->getAnswer()->getUpdatedAt())) < (60*60*24)): ?>
+                        <span class="badge badge-sm badge-success mr-2">Новый</span>
+                    <?php endif; ?>
+                    <span class="color-gray-500">
+                        <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+                    </span>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <!-- questions from sandbox -->
+<?php endif; ?>
