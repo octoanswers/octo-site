@@ -1,7 +1,8 @@
 
 
 <?php if (isset($this->first_paragraph) && strlen($this->first_paragraph)): ?>
-    <p class="lead my-4">
+    <div class="lead my-4">
         <?= $this->first_paragraph ?>
-    </p>
+        <a href="#full_answer" class="color-secondary-lightest">Полный ответ ниже</a>
+    </div>
 <?php endif; ?>

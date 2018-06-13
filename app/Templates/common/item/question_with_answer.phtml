@@ -7,6 +7,7 @@
     </div>
     <div class="color-gray-700 my-3">
         <?= mb_substr($question->getAnswer()->getText(), 0, mb_strpos($question->getAnswer()->getText(), "\n")); ?>
+        <a href="<?= $question->getURL($this->lang) ?>" class="color-secondary-lightest no-underline-hover font-weight-600">Полный ответ&hellip;</a>
     </div>
 
     <?php if ($question->getImageBaseName()): ?>
