@@ -3,9 +3,13 @@
     <!-- questions from sandbox -->
     <div class="mt-4 mb-5">
 
-        <div class="title border-bottom pb-3 my-4">
-            Вопросы из песочницы
-        </div>
+        <ul class="nav nav-tabs my-4">
+            <li class="nav-item">
+                <a class="nav-link active" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
+                    Вопросы из песочницы
+                </a>
+            </li>
+        </ul>
 
         <?php foreach ($this->sandbox_questions as $question): ?>
             <div class="my-4">
