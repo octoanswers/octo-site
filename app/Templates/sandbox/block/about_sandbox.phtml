@@ -1,0 +1,23 @@
+
+<div class="border p-3 my-4">
+
+    <div class="mt-1 mb-4 pl-3">
+        <img class="size-16" src="https://png.icons8.com/ios/64/546e7a/sandbox2.png">
+    </div>
+
+    <h1 class="h2 mb-4">
+        Что такое «Песочница»?
+    </h1>
+
+    <p class="color-gray-700">
+        Песочница &mdash; это место куда попадают новые, ещё не имеющие ответа вопросы.
+    </p>
+    <p class="color-gray-700">
+        Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в <a href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">основной список</a>.
+    </p>
+
+    <?php if (isset($this->humanizedQuestionsCount)): ?>
+        <p class="small color-gray-500 mt-4 mb-0">Сейчас в песочнице: <?= $this->humanizedQuestionsCount ?></p>
+    <?php endif; ?>
+
+</div>

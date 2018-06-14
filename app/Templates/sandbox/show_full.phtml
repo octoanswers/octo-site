@@ -6,11 +6,9 @@
 <body>
     <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
 
-    <?php require_once TEMPLATE_PATH.'/sandbox/show/info.phtml' ?>
-
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-8 mx-auto">
+            <div class="col-12 col-md-8">
 
                 <?php require_once TEMPLATE_PATH.'/sandbox/show/nav.phtml' ?>
 
@@ -33,6 +31,12 @@
                         <a class="btn btn-primary w-50" href="<?= $this->nextPageURL ?>"><?= $this->l->t('Еще вопросы') ?></a>
                     </div>
                 <?php endif; ?>
+            </div>
+            <div class="col-12 col-md-4">
+                <?php require_once TEMPLATE_PATH.'/sandbox/block/about_sandbox.phtml' ?>
+
+                <?php require_once TEMPLATE_PATH.'/common/sidebar/social_groups.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/common/sidebar/footer.phtml' ?>
             </div>
         </div>
     </div>
