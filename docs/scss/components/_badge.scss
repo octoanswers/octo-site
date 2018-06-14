@@ -4,10 +4,10 @@
 .badge {
     font-size: 1rem;
     font-weight: 400;
-    border-radius: 4px;
+    border-radius: $border-radius-base;
     border-width: 1px;
     border-style: solid;
-    
+
     border-color: $color-blue-50;
     background-color: $color-blue-50;
     color: $color-blue-800;
@@ -44,7 +44,14 @@ a.badge:hover {
 
 // Force cursor style for links
 
-a.badge-primary, a.badge-secondary, a.badge-success, a.badge-warning, a.badge-danger, a.badge-info, a.badge-light, a.badge-dark {
+a.badge-primary,
+a.badge-secondary,
+a.badge-success,
+a.badge-warning,
+a.badge-danger,
+a.badge-info,
+a.badge-light,
+a.badge-dark {
     cursor: pointer;
 }
 

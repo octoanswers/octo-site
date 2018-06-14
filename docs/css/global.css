@@ -90,7 +90,7 @@
 .badge {
   font-size: 1rem;
   font-weight: 400;
-  border-radius: 4px;
+  border-radius: 3px;
   border-width: 1px;
   border-style: solid;
   border-color: #e3f2fd;
@@ -118,7 +118,14 @@ a.badge:hover {
     margin-top: -2px;
     margin-right: .125rem; }
 
-a.badge-primary, a.badge-secondary, a.badge-success, a.badge-warning, a.badge-danger, a.badge-info, a.badge-light, a.badge-dark {
+a.badge-primary,
+a.badge-secondary,
+a.badge-success,
+a.badge-warning,
+a.badge-danger,
+a.badge-info,
+a.badge-light,
+a.badge-dark {
   cursor: pointer; }
 
 span.badge-primary a.badge-primary {
@@ -1637,7 +1644,7 @@ ul.nav_underlined {
   margin-left: -0.25rem !important; }
 
 .border-grey-400 {
-  border: 1px solid #BDBDBD; }
+  border: 21px solid #BDBDBD; }
 
 .border-grey-500 {
   border: 1px solid #9E9E9E; }
@@ -1682,18 +1689,9 @@ ul.nav-main > li > a:hover {
   text-decoration: none; }
 
 /* light blue 700 */
-.nav-underline .nav-link {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 1.5rem; }
-
-.nav-underline .active {
-  border-bottom: 4px solid #2196F3; }
-
 .input-bg-icon-magnifier-lg {
   background: url("https://png.icons8.com/material/28/546e7a/search.png") no-repeat 10px 10px;
-  background-color: #fff;
+  background-color: #ffffff;
   padding-left: 48px; }
 
 .menu-section {
