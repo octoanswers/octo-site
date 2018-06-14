@@ -1,8 +1,8 @@
 
 
-<?php if (isset($this->first_paragraph) && strlen($this->first_paragraph)): ?>
+<?php if ($this->question->getShortAnswer()): ?>
     <div class="lead my-4">
-        <?= $this->first_paragraph ?>
+        <?= $this->question->getShortAnswer() ?>
         <a href="#full_answer" class="color-secondary-lightest">Полный ответ ниже</a>
     </div>
 <?php endif; ?>

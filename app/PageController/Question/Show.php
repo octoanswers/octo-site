@@ -59,8 +59,6 @@ class Show_Question_PageController extends Abstract_PageController
         $this->answer = $this->question->getAnswer();
 
         if (strlen($this->answer->getText())) {
-            $this->first_paragraph = mb_substr($this->answer->getText(), 0, mb_strpos($this->answer->getText(), "\n"));
-
             // trim first paragraph of answer
             $answer_other_text = preg_replace("/^.+\n/iu", "", $this->answer->getText());
             $parsedown = new ExtendedParsedown($this->lang);

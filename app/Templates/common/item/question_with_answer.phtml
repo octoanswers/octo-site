@@ -6,7 +6,7 @@
         </a>
     </div>
     <div class="color-gray-700 my-3">
-        <?= mb_substr($question->getAnswer()->getText(), 0, mb_strpos($question->getAnswer()->getText(), "\n")); ?>
+        <?= $question->getShortAnswer(); ?>
         <a href="<?= $question->getURL($this->lang) ?>" class="color-secondary-lightest">
             Полный ответ&hellip;
         </a>
