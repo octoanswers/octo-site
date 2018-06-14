@@ -1,0 +1,33 @@
+
+<ul class="list-inline small mb-4">
+    <li class="list-inline-item">
+        <a class="color-gray-500" href="#">
+            <?= $this->l->t('footer', 'about') ?>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a class="color-gray-500" rel="nofollow" target="_blank" href="<?= $this->l->t('footer', 'support_link') ?>">
+            <?= $this->l->t('footer', 'support') ?>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a class="color-gray-500" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+            <?= $this->l->t('footer', 'users') ?>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a class="color-gray-500" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+            <?= $this->l->t('footer', 'flow') ?>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a class="color-gray-500" href="#">
+            Правила
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a class="color-gray-500" rel="nofollow" target="_blank" href="https://icons8.com">
+            <?= $this->l->t('footer', 'icon_pack_by_icons8') ?>
+        </a>
+    </li>
+</ul>

@@ -1,13 +1,15 @@
 
-<div class="my-5">
+<div class="my-4 pb-4 border-bottom">
     <div class="mb-3">
-        <a class="h3 link_gray_900 no_underline" href="<?= $question->getURL($this->lang) ?>">
+        <a class="h3 color-gray-900 no-underline" href="<?= $question->getURL($this->lang) ?>">
             <?= $question->getTitle() ?>
         </a>
     </div>
     <div class="color-gray-700 my-3">
         <?= mb_substr($question->getAnswer()->getText(), 0, mb_strpos($question->getAnswer()->getText(), "\n")); ?>
-        <a href="<?= $question->getURL($this->lang) ?>" class="color-secondary-lightest no-underline-hover font-weight-600">Полный ответ&hellip;</a>
+        <a href="<?= $question->getURL($this->lang) ?>" class="color-secondary-lightest">
+            Полный ответ&hellip;
+        </a>
     </div>
 
     <?php if ($question->getImageBaseName()): ?>

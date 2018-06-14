@@ -18,19 +18,19 @@
                 <?php endif; ?>
 
                 <?php if (isset($this->nextPageURL)): ?>
-                    <div class="mb-5 mt-5 text-center">
-                        <a class="btn btn-primary w-50" href="<?= $this->nextPageURL ?>"><?= $this->l->t('questions', 'next_btn') ?></a>
+                    <div class="my-5">
+                        <a class="btn btn-primary btn-block" href="<?= $this->nextPageURL ?>"><?= $this->l->t('questions', 'next_btn') ?></a>
                     </div>
                 <?php endif; ?>
             </div>
             <div class="col-12 col-md-4 col-xl-4">
                 <?php require_once TEMPLATE_PATH.'/questions/show_list/sandbox_questions.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/common/sidebar/social_groups.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/common/sidebar/footer.phtml' ?>
             </div>
 
         </div>
     </div>
-
-    <?php require_once TEMPLATE_PATH.'/common/footer.phtml'; ?>
 
     <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
 </body>

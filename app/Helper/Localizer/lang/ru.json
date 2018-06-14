@@ -85,8 +85,7 @@
         "support_link": "https://vk.com/alexandergomzyakov",
         "users": "Пользователи",
         "flow": "Поток",
-        "with_love": "<a class=\"color-gray-800 no-underline-hover\" rel=\"nofollow\" target=\"_blank\" href=\"%octo_url%\">OctoAnswers</a> придуман и разработан (с любовью, конечно) товарищем <a class=\"color-gray-800 no-underline-hover\" rel=\"nofollow\" target=\"_blank\" href=\"https://github.com/gomzyakov\">@gomzyakov</a>. Поддерживается <a class=\"color-gray-800 no-underline-hover\" rel=\"nofollow\" target=\"_blank\" href=\"https://github.com/orgs/octoanswers/teams/core-team\">основной командой</a> и <a class=\"color-gray-800 no-underline-hover\" rel=\"nofollow\" target=\"_blank\" href=\"https://github.com/orgs/octoanswers/people\">добровольцами</a>.",
-        "icon_pack_by": "Иконки"
+        "icon_pack_by_icons8": "Иконки с Icons8"
     },
 
     "topic": {
