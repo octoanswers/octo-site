@@ -1,0 +1,52 @@
+
+.activity__lure {
+    border: 1px solid $color-gray-300;
+    border-radius: 4px;
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+    background-color: $color-white;
+
+    .icon {
+        display: table-cell;
+        vertical-align: top;
+        width: 4rem;
+
+        img {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    .info {
+        padding-left: 1.75rem;
+        display: table-cell;
+        vertical-align: middle;
+
+        p.title {
+            font-weight: 700;
+            line-height: 1.4;
+            color: $color-gray-900;
+            margin-top: 2px;
+            margin-bottom: 1rem;
+        }
+
+        p.message {
+            line-height: 1.4;
+            color: $color-gray-900;
+            margin-bottom: 1.25rem;
+        }
+
+        a.btn {
+            border: 1px solid $color-gray-200;
+            background-color: $color-gray-200;
+            color: $color-gray-900;
+
+            &:hover {
+                border: 1px solid $color-gray-300;
+                background-color: $color-gray-300;
+            }
+        }
+    }
+}

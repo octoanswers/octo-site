@@ -1,0 +1,62 @@
+
+.title {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-gray-700;
+
+    a {
+        color: $color-gray-700;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-primary;
+        }
+    }
+}
+
+// Block headers
+
+.h-block {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $color-gray-700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.h-block-lg {
+    font-size: 1.2rem;
+}
+.h-block-sm {
+    font-size: .8rem;
+}
+
+// Block headers
+
+.h-section {
+    font-size: $font-size-h3;
+    font-weight: 200;
+    line-height: 1.1;
+    color: $color-gray-600;
+    margin-bottom: 1rem;
+}
+.h-section-xl {
+    font-size: $font-size-h2;
+}
+.h-section-sm {
+    font-size: $font-size-h4;
+}
+
+// Header modificators
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}

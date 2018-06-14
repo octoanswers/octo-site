@@ -1,0 +1,39 @@
+
+.block__add_image {
+    border: 1px dashed $color-gray-400;
+    border-radius: 2px;
+    padding: 1rem 1rem;
+    width: 100%;
+    display: table;
+
+    .icon {
+        display: table-cell;
+        vertical-align: top;
+        width: 3rem;
+
+        a {
+            display: block;
+            width: 3rem;
+            height: 3rem;
+
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+
+    .info {
+        padding-left: 1rem;
+        display: table-cell;
+        vertical-align: middle;
+
+        p.message {
+            line-height: 1.4;
+            color: $color-gray-600;
+            margin-top: 2px;
+            margin-bottom: 1rem;
+        }
+    }
+
+}

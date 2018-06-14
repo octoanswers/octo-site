@@ -1,0 +1,43 @@
+
+// Basic borders
+
+.border-top {
+    border-top: 1px solid $color-gray-300 !important;
+}
+
+.border-top-dark {
+    border-top: 1px solid $color-gray-400 !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $color-gray-300 !important;
+}
+
+.border-bottom-dark {
+    border-bottom: 1px solid $color-gray-400 !important;
+}
+
+.border-left {
+    border-left: 1px solid $color-gray-300 !important;
+}
+
+.border-right {
+    border-right: 1px solid $color-gray-300 !important;
+}
+
+// Symmetric borders
+
+.border-x {
+    border-left: 1px solid $color-gray-300 !important;
+    border-right: 1px solid $color-gray-300 !important;
+}
+
+// Border modifiers
+
+.border-double {
+    border-width: 2px !important;
+}
+
+.border-radius {
+    border-radius: 4px;
+}

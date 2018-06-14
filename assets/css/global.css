@@ -1682,25 +1682,6 @@ ul.nav-main > li > a:hover {
   text-decoration: none; }
 
 /* light blue 700 */
-ul.nav-sidebar {
-  list-style: none;
-  border-left: 1px solid #eee;
-  padding-left: 1.5rem; }
-
-ul.nav-sidebar > li {
-  font-size: .85rem; }
-
-ul.nav-sidebar > li > a {
-  display: block;
-  padding: .2rem 0;
-  color: #9E9E9E; }
-
-/* grey 500 */
-ul.nav-sidebar > li > a:hover {
-  color: #0288D1;
-  text-decoration: none; }
-
-/* light blue 700 */
 .nav-underline .nav-link {
   padding-left: 0;
   padding-right: 0;

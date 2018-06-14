@@ -1,0 +1,192 @@
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-lg {
+    padding: .5rem 1.25rem;
+}
+
+.btn-sm {
+    font-size: .75rem;
+    font-weight: 500;
+    padding: .125rem .5rem;
+}
+
+// Button icon
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: -3px;
+    margin-right: .25rem;
+}
+
+.btn-primary {
+    color: $color_white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+        color: $color_white;
+        background-color: $color_primary_dark;
+        border-color: $color_primary_dark;
+    }
+}
+
+.btn-secondary {
+    color: $color-white;
+    background-color: $color-gray-600;
+    border-color: $color-gray-600;
+}
+.btn-secondary:hover {
+    color: $color-white;
+    background-color: $color-gray-700;
+    border-color: $color-gray-700;
+}
+
+.btn-success {
+    color: $color-white;
+    background-color: $color-success;
+    border-color: $color-success;
+}
+.btn-success:hover { color: #fff; background-color: #388E3C; border-color: #388E3C; }
+
+.btn-warning {
+    color: $color-white;
+    background-color: $color-warning;
+    border-color: $color-warning;
+}
+.btn-warning:hover {
+    color: #333;
+    background-color: #FFC107; border-color: #FFC107; }
+
+// Outline buttons
+
+.btn-outline-primary {
+    color: $color-primary;
+    border-color: $color-primary-lightest;
+    background-color: transparent;
+}
+.btn-outline-primary:hover {
+    color: $color-primary;
+    border-color: $color-primary;
+    background-color: transparent;
+}
+
+.btn-outline-secondary {
+    color: $color-gray-600;
+    border-color: $color-gray-400;
+    background-color: transparent;
+}
+.btn-outline-secondary:hover {
+    color: $color-gray-600;
+    border-color: $color-gray-600;
+    background-color: transparent;
+}
+
+.btn-outline-success {
+    color: $color-success;
+    border-color: $color-success-lightest;
+}
+.btn-outline-success:hover {
+    color: $color-success;
+    border-color: $color-success;
+    background-color: transparent;
+}
+
+.btn-outline-warning {
+    color: $color-warning;
+    border-color: $color-warning-lightest;
+}
+.btn-outline-warning:hover {
+    color: $color-warning;
+    border-color: $color-warning;
+    background-color: transparent;
+}
+
+// Share buttons
+
+.btn_share {
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    padding: .5rem .75rem;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-top: -3px;
+    }
+    span.title {
+        margin-left: .25rem;
+    }
+}
+
+.btn_facebook {
+    color: $color-white;
+    background-color: #3b5999;
+    border-color: #3b5999;
+}
+
+.btn_twitter {
+    color: $color-white;
+    background-color: #55acee;
+    border-color: #55acee;
+
+    &:hover {
+        color: $color-white;
+        background-color: #2594e8;
+        border-color: #2594e8;
+    }
+}
+
+.btn_vk {
+    color: $color-white;
+    background-color: #4c75a3;
+    border-color: #4c75a3;
+
+    &:hover {
+        color: $color-white;
+        background-color: #2594e8;
+        border-color: #2594e8;
+    }
+}
+
+.btn_telegram {
+    color: $color-white;
+    background-color: #00AFF0; // Skype color
+    border-color: #00AFF0;
+
+    &:hover {
+        color: $color-white;
+        background-color: #2594e8;
+        border-color: #2594e8;
+    }
+}
+
+
+.btn-extra-pink {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    background-color: $pink_400;
+    margin-top: 2rem;
+    font-weight: 600;
+    letter-spacing: .25px;
+    border: 1px solid $pink_400;
+    box-shadow: none !important;
+
+    &:hover {
+        background-color: $pink_500;
+        border: 1px solid $pink_500;
+    }
+}

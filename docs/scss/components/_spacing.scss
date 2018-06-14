@@ -1,0 +1,65 @@
+
+// Non Bootstrap spacings.
+// Ex: "mb-6" is a 6 * 8px = 48px = 3rem
+
+.mb-6, .my-6 {
+    margin-bottom: 3rem!important;
+}
+.mt-6, .my-6 {
+    margin-top: 3rem!important;
+}
+
+.mb-7, .my-7 {
+    margin-bottom: 3.5rem!important;
+}
+.mt-7, .my-7 {
+    margin-top: 3.5rem!important;
+}
+
+.mb-8, .my-8 {
+    margin-bottom: 4rem!important;
+}
+.mt-8, .my-8 {
+    margin-top: 4rem!important;
+}
+
+// Negative margins
+
+.mt-minus-2px {
+    margin-top: -2px;
+}
+
+.mt-minus-4px {
+    margin-top: -4px;
+}
+
+.mt-minus-quarter {
+    margin-top: -.25rem;
+}
+
+.mt-minus-half {
+    margin-top: -.5rem;
+}
+
+.ml-minus-half {
+    margin-left: -.25rem;
+}
+
+.ml-8 {
+    margin-left: 4rem;
+}
+
+.ml-5 {
+    margin-left: 2.5rem;
+}
+.ml-6 {
+    margin-left: 3rem;
+}
+
+.mr-8 {
+    margin-right: 4rem;
+}
+
+.mr-14 {
+    margin-right: 7rem;
+}

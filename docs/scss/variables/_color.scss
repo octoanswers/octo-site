@@ -1,0 +1,356 @@
+
+//
+// Primary & secondary colors
+//
+
+$color-primary-lightest: #BBDEFB; // blue 100
+$color-primary-light: #64B5F6; // blue 300
+$color-primary: #2196F3; // blue 500
+$color_primary_dark: #1976D2; // blue 700
+$color_primary_darkest: #0D47A1; // blue 900
+
+$color_secondary_lightest: #b0bec5; // blue gray 200
+$color_secondary_light: #78909c; // blue gray 400
+$color_secondary: #546e7a; // blue gray 600
+$color_secondary_dark: #37474f; // blue gray 800
+$color_secondary_darkest: #263238; // blue gray 900
+
+$color-success-lightest: #C8E6C9; // Green 100
+$color-success-light: #81C784; // Green 300
+$color-success: #43A047; // Green 600
+$color-success-dark: #388E3C; // Green 700
+$color-success-darkest: #1B5E20; // Green 900
+
+$color-warning-lightest: #FFCDD2; // Red 100
+$color-warning-light: #E57373; // Red 300
+$color-warning: #F44336; // Red 500
+$color-warning-dark: #D32F2F; // Red 700
+$color-warning-darkest: #B71C1C; // Red 100
+
+
+$pink_300: #F06292;
+$pink_400: #EC407A;
+$pink_500: #E91E63;
+
+//
+// Material Design Colors
+//
+
+$color_white: #FFFFFF;
+$color_black: #000000;
+
+
+$color_red_50: #ffebee;
+$color_red_100: #ffcdd2;
+$color_red_200: #ef9a9a;
+$color_red_300: #e57373;
+$color_red_400: #ef5350;
+$color_red_500: #F44336; $color_red: #F44336;
+$color_red_600: #e53935;
+$color_red_700: #d32f2f;
+$color_red_800: #c62828;
+$color_red_900: #b71c1c;
+$color_red_a100: #ff8a80;
+$color_red_a200: #ff5252;
+$color_red_a400: #ff1744;
+$color_red_a700: #d50000;
+
+
+//   'pink': (
+//     '50': #fce4ec,
+//     '100': #f8bbd0,
+//     '200': #f48fb1,
+//     '300': #f06292,
+//     '400': #ec407a,
+//     '500': #e91e63,
+//     '600': #d81b60,
+$color-pink: #D81B60; // 600
+$color-pink-light: #F8BBD0; // 100
+
+//     '700': #c2185b,
+//     '800': #ad1457,
+//     '900': #880e4f,
+//     'a100': #ff80ab,
+//     'a200': #ff4081,
+//     'a400': #f50057,
+//     'a700': #c51162
+//   ),
+//
+//   'purple': (
+$color_purple_50: #f3e5f5;
+$color_purple_100: #e1bee7;
+//     '200': #ce93d8,
+//     '300': #ba68c8,
+//     '400': #ab47bc,
+//     '500': #9c27b0,
+$color_purple_500: #9C27B0; $color_purple: #9C27B0;
+
+//     '600': #8e24aa,
+//     '700': #7b1fa2,
+//     '800': #6a1b9a,
+//     '900': #4a148c,
+//     'a100': #ea80fc,
+//     'a200': #e040fb,
+//     'a400': #d500f9,
+//     'a700': #aa00ff
+//   ),
+//
+//   'deep-purple': (
+//     '50': #ede7f6,
+//     '100': #d1c4e9,
+//     '200': #b39ddb,
+//     '300': #9575cd,
+//     '400': #7e57c2,
+$color_deep_purple_500: #673AB7; $color_deep_purple: #673AB7;
+
+//     '600': #5e35b1,
+//     '700': #512da8,
+//     '800': #4527a0,
+//     '900': #311b92,
+//     'a100': #b388ff,
+//     'a200': #7c4dff,
+//     'a400': #651fff,
+//     'a700': #6200ea
+//   ),
+//
+//   'indigo': (
+//     '50': #e8eaf6,
+//     '100': #c5cae9,
+//     '200': #9fa8da,
+//     '300': #7986cb,
+//     '400': #5c6bc0,
+//     '500': #3f51b5,
+$color-indigo: #3F51B5;
+
+//     '600': #3949ab,
+//     '700': #303f9f,
+//     '800': #283593,
+//     '900': #1a237e,
+//     'a100': #8c9eff,
+//     'a200': #536dfe,
+//     'a400': #3d5afe,
+//     'a700': #304ffe
+//   ),
+
+
+$color-blue-50: #e3f2fd;
+$color-blue-100: #bbdefb;
+$color-blue-200: #90caf9;
+$color-blue-300: #64b5f6;
+$color-blue-400: #42a5f5;
+$color-blue-500: #2196f3;
+$color-blue: #2196F3;
+$color-blue-600: #1e88e5;
+$color-blue-700: #1976d2;
+$color-blue-800: #1565c0;
+$color-blue-900: #0d47a1;
+$color-blue-a100: #82b1ff;
+$color-blue-a200: #448aff;
+$color-blue-a400: #2979ff;
+$color-blue-a700: #2962ff;
+
+
+//   'light-blue': (
+//     '50': #e1f5fe,
+//     '100': #b3e5fc,
+//     '200': #81d4fa,
+//     '300': #4fc3f7,
+//     '400': #29b6f6,
+//     '500': #03a9f4,
+//     '600': #039be5,
+//     '700': #0288d1,
+//     '800': #0277bd,
+//     '900': #01579b,
+//     'a100': #80d8ff,
+//     'a200': #40c4ff,
+//     'a400': #00b0ff,
+//     'a700': #0091ea
+//   ),
+//
+//   'cyan': (
+//     '50': #e0f7fa,
+//     '100': #b2ebf2,
+//     '200': #80deea,
+//     '300': #4dd0e1,
+//     '400': #26c6da,
+//     '500': #00bcd4,
+//     '600': #00acc1,
+//     '700': #0097a7,
+//     '800': #00838f,
+//     '900': #006064,
+//     'a100': #84ffff,
+//     'a200': #18ffff,
+//     'a400': #00e5ff,
+//     'a700': #00b8d4
+
+
+$color_teal_50: #e0f2f1;
+$color_teal_100: #b2dfdb;
+$color_teal_200: #80cbc4;
+$color_teal_300: #4db6ac;
+$color_teal_400: #26a69a;
+$color_teal_500: #009688;
+$color_teal_600: #00897b; $color_teal: #00897B;
+$color_teal_700: #00796b;
+$color_teal_800: #00695c;
+$color_teal_900: #004d40;
+$color_teal_a100: #a7ffeb;
+$color_teal_a200: #64ffda;
+$color_teal_a400: #1de9b6;
+$color_teal_a700: #00bfa5;
+
+$color_green_50: #e8f5e9;
+$color_green_100: #c8e6c9;
+$color_green_200: #a5d6a7;
+$color_green_300: #81c784;
+$color_green_400: #66bb6a;
+$color_green_500: #4caf50; $color_green: #4caf50;
+$color_green_600: #43a047;
+$color_green_700: #388e3c;
+$color_green_800: #2e7d32;
+$color_green_900: #1b5e20;
+$color_green_a100: #b9f6ca;
+$color_green_a200: #69f0ae;
+$color_green_a400: #00e676;
+$color_green_a700: #00c853;
+
+
+//   'light-green': (
+//     '50': #f1f8e9,
+//     '100': #dcedc8,
+//     '200': #c5e1a5,
+//     '300': #aed581,
+//     '400': #9ccc65,
+//     '500': #8bc34a,
+//     '600': #7cb342,
+//     '700': #689f38,
+//     '800': #558b2f,
+//     '900': #33691e,
+//     'a100': #ccff90,
+//     'a200': #b2ff59,
+//     'a400': #76ff03,
+//     'a700': #64dd17
+//   ),
+//
+//   'lime': (
+//     '50': #f9fbe7,
+//     '100': #f0f4c3,
+//     '200': #e6ee9c,
+//     '300': #dce775,
+//     '400': #d4e157,
+//     '500': #cddc39,
+$color-lime: #CDDC39;
+
+//     '600': #c0ca33,
+//     '700': #afb42b,
+//     '800': #9e9d24,
+//     '900': #827717,
+//     'a100': #f4ff81,
+//     'a200': #eeff41,
+//     'a400': #c6ff00,
+//     'a700': #aeea00
+//   ),
+//
+//   'yellow': (
+//     '50': #fffde7,
+//     '100': #fff9c4,
+//     '200': #fff59d,
+//     '300': #fff176,
+//     '400': #ffee58,
+$color_yellow_500: #ffeb3b; $color_yellow: #ffeb3b;
+//     '600': #fdd835,
+//     '700': #fbc02d,
+//     '800': #f9a825,
+//     '900': #f57f17,
+//     'a100': #ffff8d,
+//     'a200': #ffff00,
+//     'a400': #ffea00,
+//     'a700': #ffd600
+
+$color_amber_50: #fff8e1;
+$color_amber_100: #ffecb3;
+$color_amber_200: #ffe082;
+$color_amber_300: #ffd54f;
+$color_amber_400: #ffca28;
+$color_amber_500: #ffc107; $color_amber: #ffc107;
+$color_amber_600: #ffb300;
+$color_amber_700: #ffa000;
+$color_amber_800: #ff8f00;
+$color_amber_900: #ff6f00;
+$color_amber_a100: #ffe57f;
+$color_amber_a200: #ffd740;
+$color_amber_a400: #ffc400;
+$color_amber_a700: #ffab00;
+
+
+$color_orange_50: #fff3e0;
+$color_orange_100: #ffe0b2;
+$color_orange_200: #ffcc80;
+$color_orange_300: #ffb74d;
+$color_orange_400: #ffa726;
+$color_orange_500: #ff9800; $color_orange: #ff9800;
+$color_orange_600: #fb8c00;
+$color_orange_700: #f57c00;
+$color_orange_800: #ef6c00;
+$color_orange_900: #e65100;
+$color_orange_a100: #ffd180;
+$color_orange_a200: #ffab40;
+$color_orange_a400: #ff9100;
+$color_orange_a700: #ff6d00;
+
+//   'deep-orange': (
+//     '50': #fbe9e7,
+//     '100': #ffccbc,
+//     '200': #ffab91,
+//     '300': #ff8a65,
+//     '400': #ff7043,
+//     '500': #ff5722,
+//     '600': #f4511e,
+//     '700': #e64a19,
+//     '800': #d84315,
+//     '900': #bf360c,
+//     'a100': #ff9e80,
+//     'a200': #ff6e40,
+//     'a400': #ff3d00,
+//     'a700': #dd2c00
+//   ),
+
+$color-brown-50: #efebe9;
+//     '100': #d7ccc8,
+//     '200': #bcaaa4,
+//     '300': #a1887f,
+//     '400': #8d6e63,
+//     '500': #795548,
+//     '600': #6d4c41,
+//     '700': #5d4037,
+//     '800': #4e342e,
+//     '900': #3e2723
+//   ),
+
+$color-gray-50: #FAFAFA;
+$color-gray-100: #F5F5F5;
+$color-gray-200: #EEEEEE;
+$color-gray-300: #E0E0E0;
+$color-gray-400: #BDBDBD;
+$color-gray-500: #9E9E9E;
+$color-gray-600: #757575;
+$color-gray-700: #616161;
+$color-gray-800: #424242;
+$color-gray-900: #212121;
+
+$color-blue-grey-50: #eceff1;
+$color-blue-grey-100: #cfd8dc;
+$color-blue-grey-200: #b0bec5;
+$color-blue-grey-300: #90a4ae;
+$color-blue-grey-400: #78909c;
+$color-blue-grey-500: #607d8b;
+$color-blue-grey-600: #546e7a;
+$color-blue-grey-700: #455a64;
+$color-blue-grey-800: #37474f;
+$color-blue-grey-900: #263238;
+$color-blue-grey-1000: #11171a;
+
+// Social networks color
+
+$facebook: #4267b2;
+$twitter: #1da1f2;

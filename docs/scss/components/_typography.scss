@@ -1,0 +1,137 @@
+
+.font-size-125 {
+    font-size: 1.25rem !important;
+}
+
+p {
+    line-height: 1.75;
+}
+
+del, ins { padding-left: .25rem; padding-right: .25rem; }
+del { background-color: #ffdce0; text-decoration: none; }
+ins { background-color: #cdffd8; text-decoration: none; }
+
+ul { padding-left: 1.25rem; margin-bottom: 1.5rem; }
+
+a {
+    color: $color-primary; 
+
+    &:hover { 
+        color: $color_primary_dark; 
+    }
+}
+
+/* hover color light blue 700 */
+a.link-inverted {
+    color: #333;
+
+    &:hover {
+        color: #0288D1;
+    }
+}
+
+a.link_gray_900 {
+    color: $color-gray-900;
+
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+a.link-underlined {
+    text-decoration: underline!important;
+}
+
+a.no-underline, a.no_underline {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a.external-link:after {
+    content: url("https://png.icons8.com/small/14/546e7a/external-link.png"); 
+    margin: 0 0 0 5px; 
+}
+
+a.no-underline-hover:hover { 
+    text-decoration: none; 
+}
+
+a.muted {
+    color: $color-gray-500;
+}
+
+small, .small {
+    font-size: .875rem;
+}
+
+.small-xs {
+    font-size: .75rem;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.font-weight-800 {
+    font-weight: 800;
+}
+
+pre {
+    padding: 1rem;
+    background-color: rgba(0,0,0,.05);
+    border-radius: 2px;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+blockquote {
+    padding: 0 1.25rem; background-color: #F5F5F5;
+    white-space: pre-wrap; word-wrap: break-word;
+
+}
+
+blockquote p { margin-bottom: 0; }
+blockquote p:last-child { margin-bottom: 0; }
+
+.font-weight-normal {
+    font-weight: 400;
+}
+.font-weight-thin {
+    font-weight: 300;
+}
+.font-weight-thiner {
+    font-weight: 200;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+.font-size-18px {
+    font-size: 18px;
+}
+
+.text-secondary {
+    color: $color-gray-600!important;
+}
