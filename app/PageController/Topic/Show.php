@@ -174,8 +174,11 @@ class Show_Topic_PageController extends Abstract_PageController
 
         foreach ($questions as $question) {
             $topics_titles = $question->getTopics();
-            foreach ($topics_titles as $title) {
-                $related_titles[] = $title;
+            if (count($topics_titles)) {
+                foreach ($topics_titles as $title) {
+                    //@TODO need a query
+                    $related_titles[] = $title;
+                }
             }
         }
 

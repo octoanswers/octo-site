@@ -1,13 +1,13 @@
 
 <?php if (count($this->related_topics)): ?>
-    <div class="my-5">
+    <div class="border pl-3 pr-3 pt-3 pb-1 my-4">
 
-        <p class="title my-4">
+        <p class="mb-4">
             Похожие темы
         </p>
 
         <?php foreach ($this->related_topics as $topic): ?>
-            <a class="badge badge-dark mr-2 mb-3" href="<?= $topic->getURL($this->lang) ?>">
+            <a class="badge badge-secondary mr-2 mb-3" href="<?= $topic->getURL($this->lang) ?>">
                 <?= $topic->getTitle() ?>
             </a>
         <?php endforeach; ?>
