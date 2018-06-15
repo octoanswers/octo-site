@@ -408,7 +408,16 @@ body {
 
 .box {
   border: 1px solid #E0E0E0;
-  border-radius: 3px; }
+  border-radius: 3px;
+  background-color: #FFFFFF; }
+  .box .box-body {
+    padding: 1rem;
+    border-bottom: 1px solid #E0E0E0; }
+  .box .box-footer {
+    padding: 1rem;
+    margin-top: -1px;
+    border-top: 1px solid #E0E0E0;
+    background-color: #F5F5F5; }
 
 .card {
   border: 1px solid #E0E0E0;
@@ -853,7 +862,8 @@ img.border-2 {
     border-top-color: #E0E0E0;
     border-right-color: #E0E0E0;
     border-bottom-color: #FFFFFF;
-    border-left-color: #E0E0E0; }
+    border-left-color: #E0E0E0;
+    font-weight: 600; }
 
 .bd-navbar {
   min-height: 4rem;

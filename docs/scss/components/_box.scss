@@ -2,4 +2,17 @@
 .box {
     border: 1px solid $color-gray-300;
     border-radius: $border-radius-base;
+    background-color: $color-white;
+
+    .box-body {
+        padding: 1rem;
+        border-bottom: 1px solid $color-gray-300;
+    }
+
+    .box-footer {
+        padding: 1rem;
+        margin-top: -1px;
+        border-top: 1px solid $color-gray-300;
+        background-color: $color-gray-100
+    }
 }
