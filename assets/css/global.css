@@ -1263,9 +1263,9 @@ a.link-inverted {
   a.link-inverted:hover {
     color: #0288D1; }
 
-a.link_gray_900 {
+a.color-gray-900 {
   color: #212121; }
-  a.link_gray_900:hover {
+  a.color-gray-900:hover {
     color: #2196F3; }
 
 a.link-underlined {

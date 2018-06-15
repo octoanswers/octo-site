@@ -14,27 +14,10 @@ ins { background-color: #cdffd8; text-decoration: none; }
 ul { padding-left: 1.25rem; margin-bottom: 1.5rem; }
 
 a {
-    color: $color-primary; 
-
-    &:hover { 
-        color: $color_primary_dark; 
-    }
-}
-
-/* hover color light blue 700 */
-a.link-inverted {
-    color: #333;
+    color: $color-blue-600;
 
     &:hover {
-        color: #0288D1;
-    }
-}
-
-a.link_gray_900 {
-    color: $color-gray-900;
-
-    &:hover {
-        color: $color_primary;
+        color: $color-blue-700;
     }
 }
 
@@ -51,12 +34,12 @@ a.no-underline, a.no_underline {
 }
 
 a.external-link:after {
-    content: url("https://png.icons8.com/small/14/546e7a/external-link.png"); 
-    margin: 0 0 0 5px; 
+    content: url("https://png.icons8.com/small/14/546e7a/external-link.png");
+    margin: 0 0 0 5px;
 }
 
-a.no-underline-hover:hover { 
-    text-decoration: none; 
+a.no-underline-hover:hover {
+    text-decoration: none;
 }
 
 a.muted {
@@ -97,8 +80,8 @@ small, .small {
 
 pre {
     padding: 1rem;
-    background-color: rgba(0,0,0,.05);
-    border-radius: 2px;
+    background-color: $color-gray-200;
+    border-radius: $border-radius-base;
     white-space: pre-wrap;       /* Since CSS 2.1 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */

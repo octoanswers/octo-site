@@ -1,6 +1,13 @@
 
 .btn {
     cursor: pointer;
+
+    .btn-icon {
+        width: 20px;
+        height: 20px;
+        margin-top: -3px;
+        margin-right: .25rem;
+    }
 }
 
 .btn-lg {
@@ -11,16 +18,18 @@
     font-size: .75rem;
     font-weight: 500;
     padding: .125rem .5rem;
+
+    .btn-icon {
+        width: 16px;
+        height: 16px;
+        margin-top: -2px;
+        margin-right: .125rem;
+    }
 }
 
 // Button icon
 
-.btn-icon {
-    width: 20px;
-    height: 20px;
-    margin-top: -3px;
-    margin-right: .25rem;
-}
+
 
 .btn-primary {
     color: $color_white;
