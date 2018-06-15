@@ -399,9 +399,8 @@ body {
     border: 1px solid #E91E63; }
 
 .box {
-  background-color: #FFFFFF;
   border: 1px solid #E0E0E0;
-  border-radius: 4px; }
+  border-radius: 3px; }
 
 .card {
   border: 1px solid #E0E0E0;
@@ -1607,7 +1606,7 @@ ul.nav_underlined {
       color: #757575; }
 
 .container-fluid {
-  max-width: 1139px; }
+  max-width: 991px; }
 
 .lead {
   font-size: 1.6rem;

@@ -35,7 +35,7 @@
 @import "components/block/info";
 
 .container-fluid {
-    max-width: 1139px;
+    max-width: $breakpoint-lg - 1px;
 }
 
 .lead {

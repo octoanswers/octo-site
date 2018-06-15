@@ -1,4 +1,5 @@
 
+<!-- question item -->
 <div class="my-4 pb-4 border-bottom">
     <div class="mb-3">
         <a class="h3 color-gray-900 no-underline" href="<?= $question->getURL($this->lang) ?>">
@@ -15,8 +16,8 @@
     </div>
 
     <?php if ($question->getImageBaseName()): ?>
-        <a class="d-block max-width-30" href="<?= $question->getURL($this->lang) ?>">
-            <img class="max-width-30" src="<?= $question->getImageURLMedium($this->lang) ?>">
+        <a class="d-block height-16" href="<?= $question->getURL($this->lang) ?>">
+            <img class="cover-height-16" src="<?= $question->getImageURLMedium($this->lang) ?>">
         </a>
     <?php endif; ?>
 
@@ -48,3 +49,4 @@
         <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
     </div>
 </div>
+<!-- / question item -->
