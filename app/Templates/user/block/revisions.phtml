@@ -8,15 +8,13 @@
                 </a>
                 <div class="small color-gray-600 mt-2">
                     Правка #<?= $this->revisions[$i]->getID() ?>
-                    <span class="mx-1 color-gray-900 font_weight_800">&middot;</span>
-
+                    <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
                     <?php if ($this->revisions[$i]->getComment()): ?>
                         <strong><?= $this->revisions[$i]->getComment() ?></strong>
                     <?php else: ?>
                         Нет описания изменений
                     <?php endif; ?>
-
-                    <span class="mx-1 color-gray-900 font_weight_800">&middot;</span>
+                    <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
                     <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->getCreatedAt()) ?>
                 </div>
             </div>

@@ -1,0 +1,11 @@
+
+.nav-tabs {
+    border-bottom: 1px solid $color-gray-300;
+
+    .nav-link.active {
+        border-top-color: $color-gray-300;
+        border-right-color: $color-gray-300;
+        border-bottom-color: $color-white;
+        border-left-color: $color-gray-300;
+    }
+}

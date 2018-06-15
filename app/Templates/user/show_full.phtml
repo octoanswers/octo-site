@@ -6,15 +6,16 @@
 <body>
     <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
 
-    <?php require TEMPLATE_PATH.'/user/show/header.phtml'; ?>
-    <?php //require TEMPLATE_PATH.'/user/show/share_top.phtml'; ?>
-
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-8 mx-auto">
-                <?php require TEMPLATE_PATH.'/user/show/nav.phtml'; ?>
-                <?php require TEMPLATE_PATH.'/user/show/revisions.phtml'; ?>
+            <div class="col-12 col-md-3">
+                <?php require TEMPLATE_PATH.'/user/block/header.phtml'; ?>
             </div>
+            <div class="col-12 col-md-9">
+                <?php require TEMPLATE_PATH.'/user/block/nav.phtml'; ?>
+                <?php require TEMPLATE_PATH.'/user/block/revisions.phtml'; ?>
+            </div>
+
         </div>
     </div>
 

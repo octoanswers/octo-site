@@ -1,0 +1,59 @@
+
+<!-- header -->
+<div class="row mt-4">
+    <div class="col-auto col-md-12">
+        <img class="size-8 width-md-100 rounded-large mb-4" src="<?= $this->user->getAvatarMediumURL() ?>" alt="<?= $this->user->getName() ?>">
+    </div>
+    <div class="col-auto col-md-12">
+        <h1 class="h2 mb-1"><?= $this->user->getName() ?></h1>
+        <div class="mb-3 color-gray-500 small">
+            +<?= $this->user->getUsername() ?>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <?php if ($this->user->getSignature()): ?>
+            <div class="color-gray-700">
+                <?= $this->user->getSignature() ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($this->user->getSite()): ?>
+            <div class="mt-2">
+                <img class="size-20px mr-1" src="https://png.icons8.com/small/20/757575/geography.png">
+                <a href="<?= $this->user->getSite() ?>">
+                    <?= parse_url($this->user->getSite(), PHP_URL_HOST) ?>
+                </a>
+            </div>
+        <?php endif; ?>
+
+        <!-- actions -->
+        <div class="mt-4">
+            <?php if ($this->authUser && $this->authUser->getID() != $this->user->getID()): ?>
+                <button
+                    class="btn btn-block follow_user_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
+                    data-user-id="<?= $this->user->getID() ?>"
+                    data-follow-title="<?= $this->l->t('btn', 'follow') ?>"
+                    data-followed-title="<?= $this->l->t('btn', 'followed') ?>"
+                    data-unfollow-title="<?= $this->l->t('btn', 'unfollow') ?>" type="button">
+                    <img class="btn-icon" src="https://png.icons8.com/material/20/ffffff/bookmark-ribbon.png">
+                    <span><?= $this->followed ? $this->l->t('btn', 'followed') : $this->l->t('btn', 'follow'); ?></span>
+                </button>
+            <?php endif; ?>
+            <?php if ($this->authUser && ($this->authUser->getID() == $this->user->getID())): ?>
+                <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::getSettingsURL($this->lang) ?>">
+                    <img class="btn-icon" src="https://png.icons8.com/material/20/616161/settings.png">
+                    <?= $this->l->t('nav__settings') ?>
+                </a>
+                <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="#" data-toggle="modal" data-target="#modal__logout">
+                    <img class="btn-icon" src="https://png.icons8.com/material/20/616161/shutdown.png">
+                    <?= $this->l->t('user__logout') ?>
+                </a>
+            <?php endif; ?>
+        </div>
+        <!-- / actions -->
+
+    </div>
+</div>
+<!-- / header -->

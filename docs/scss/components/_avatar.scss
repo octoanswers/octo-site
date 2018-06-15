@@ -44,17 +44,10 @@
 
 // ***
 
-.avatar-sm-6 {
+.size-sm-8 {
     @media (min-width: $breakpoint_sm) {
-        width: 6rem!important;
-        height: 6rem!important;
-    }
-}
-
-.avatar-sm-10 {
-    @media (min-width: $breakpoint_sm) {
-        width: 10rem!important;
-        height: 10rem!important;
+        width: 4rem !important;
+        height: 4rem !important;
     }
 }
 
