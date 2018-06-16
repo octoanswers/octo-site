@@ -16,6 +16,10 @@
             padding-left: 15px;
         }
 
+        .nav-link {
+            color: $color-gray-500;
+        }
+
         $user-avatar-size: 38px;
 
         a.user-avatar {

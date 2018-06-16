@@ -420,7 +420,7 @@ body {
   color: #64B5F6; }
 
 .color-primary {
-  color: #1e88e5; }
+  color: #1e88e5 !important; }
 
 .color-primary-dark {
   color: #1976D2; }
@@ -868,6 +868,8 @@ img.border-2 {
       .navbar .container-fluid {
         padding-right: 15px;
         padding-left: 15px; } }
+    .navbar .container-fluid .nav-link {
+      color: #9E9E9E; }
     .navbar .container-fluid a.user-avatar {
       display: inline-block;
       width: 38px;
@@ -1269,7 +1271,7 @@ a {
   a:hover {
     color: #1976d2; }
 
-a.link-underlined {
+.text-decoration-underline, a.link-underlined {
   text-decoration: underline !important; }
 
 a.no-underline, a.no_underline {

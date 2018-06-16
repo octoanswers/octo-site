@@ -15,7 +15,7 @@
 
 .color-primary-lightest { color: $color-primary-lightest; }
 .color-primary-light { color: $color-primary-light; }
-.color-primary { color: $color-primary; }
+.color-primary { color: $color-primary !important; }
 .color-primary-dark { color: $color_primary_dark; }
 .color-primary-darkest { color: $color_primary_darkest; }
 
