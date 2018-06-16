@@ -833,8 +833,20 @@ img.cover-height-16 {
   -o-object-fit: cover;
   object-fit: cover; }
 
+img.opacity-80 {
+  opacity: .80; }
+
+img.opacity-85 {
+  opacity: .85; }
+
+img.opacity-90 {
+  opacity: .90; }
+
 img.hover-opacity-85:hover {
   opacity: .85; }
+
+img.hover-opacity-100:hover {
+  opacity: 1; }
 
 img.hover-opacity-9:hover {
   opacity: .9; }

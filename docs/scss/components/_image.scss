@@ -50,9 +50,31 @@ img.cover-height-16 {
     object-fit: cover;
 }
 
+// Opacity
+
+img.opacity-80 {
+    opacity: .80;
+}
+
+img.opacity-85 {
+    opacity: .85;
+}
+
+img.opacity-90 {
+    opacity: .90;
+}
+
+// Hoveropacity
+
 img.hover-opacity-85 {
     &:hover {
         opacity: .85;
+    }
+}
+
+img.hover-opacity-100 {
+    &:hover {
+        opacity: 1;
     }
 }
 
