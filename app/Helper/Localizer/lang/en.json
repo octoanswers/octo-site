@@ -129,7 +129,7 @@
     "navbar": {
         "feed": "Newsfeed",
         "questions": "Questions",
-        "topics": "Topics of questions",
+        "topics": "Topics",
         "sandbox": "Sandbox",
         "login": "Login",
         "signup": "Signup"
