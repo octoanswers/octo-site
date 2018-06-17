@@ -32,8 +32,8 @@
                             </a>
                             <div class="small color-gray-600 mt-1">
                                 <?= $contributor->getSignature() ? $contributor->getSignature() : $contributor->getUsername() ?>
-                                <span class="font-weight-800 mx-1 color-gray-800">&middot;</span>
                                 <?php if ($contributor->getSite()): ?>
+                                    <span class="font-weight-800 mx-1 color-gray-800">&middot;</span>
                                     <a href="<?= $contributor->getSite() ?>">
                                         <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
                                     </a>
