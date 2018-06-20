@@ -61,7 +61,7 @@ class Newest_Questions_PageController extends Abstract_PageController
     public function _getNewestSandboxQuestions(): array
     {
         try {
-            $sandbox_questions = (new Sandbox_Query($this->lang))->findNewestWithoutAnswer();
+            $sandbox_questions = (new Sandbox_Query($this->lang))->findNewestWithoutAnswer(1, 5);
         } catch (\Exception $e) {
             return [];
         }

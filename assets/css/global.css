@@ -400,8 +400,12 @@ body {
   border: 1px solid #E0E0E0;
   border-radius: 3px;
   background-color: #FFFFFF; }
+  .box .box-header {
+    padding: .75rem 1rem;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #F5F5F5; }
   .box .box-body {
-    padding: 1rem;
+    padding: .75rem 1rem;
     border-bottom: 1px solid #E0E0E0; }
   .box .box-footer {
     padding: 1rem;

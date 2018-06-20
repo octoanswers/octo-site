@@ -8,35 +8,17 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel='stylesheet' href='../css/global.css'/>
+    <link rel='stylesheet' href='../../css/global.css'/>
 
 </head>
 <body>
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-md-8 col-xl-8">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- @import "../_common/navbar_unlogged.html" -->
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-8 col-xl-8">
 
-                <ul class="nav nav-tabs mt-4">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Новые вопросы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Недавно обновленные</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Популярные</a>
-                    </li>
-                </ul>
+                <!-- @import "block/nav.html" -->
 
                 <div class="my-4 pb-4 border-bottom">
                     <div class="mb-3">
@@ -185,112 +167,9 @@
             </div>
 
             <div class="col-12 col-md-4 col-xl-4">
-
-                <!-- questions from sandbox -->
-                <div class="mt-4 mb-5">
-
-                    <ul class="nav nav-tabs my-4">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                Вопросы из песочницы
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="my-4">
-                        <a class="color-gray-800 no-underline-hover" href="#">
-                            Loving While Living With Mental Illness?
-                        </a>
-                        <div class="small mt-1">
-                            <span class="badge badge-sm badge-success mr-2">Новый</span>
-                            <span class="color-gray-500">5 часов назад</span>
-                        </div>
-                    </div>
-                    <div class="my-4">
-                        <a class="color-gray-800 no-underline-hover" href="#">
-                            Кто знает, когда образовалась группа Кровосток?
-                        </a>
-                        <div class="small mt-1">
-                            <span class="color-gray-500">Jul 23, 2016</span>
-                        </div>
-                    </div>
-                    <div class="my-4">
-                        <a class="color-gray-800 no-underline-hover" href="#">
-                            Nikon versus Canon: A Story Of Technology Change Steven Sinofsky in Learning By Shipping?
-                        </a>
-                        <div class="small mt-1">
-                            <span class="color-gray-500">Jul 23, 2016</span>
-                        </div>
-                    </div>
-                    <div class="my-4">
-                        <a class="color-gray-800 no-underline-hover" href="#">
-                            Как заменить подвеску лады?
-                        </a>
-                        <div class="small mt-1">
-                            <span class="color-gray-500">5 апреля 2016</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- / questions from sandbox -->
-
-                <!-- social groups -->
-                <div class="my-5">
-                    <div class="small color-gray-600">
-                        ОктоАнсверс в соцсетях
-                    </div>
-                    <ul class="list-inline small mt-2">
-                        <li class="list-inline-item">
-                            <a class="size-4" href="#">
-                                <img class="size-4" src="https://png.icons8.com/ios/32/4c75a3/vkontakte.png" alt="ВКонтакте">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="size-4 mr-1" href="#">
-                                <img class="size-4" src="https://png.icons8.com/ios/32/4267b2/facebook.png" alt="Facebook">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="size-4" href="#">
-                                <img class="size-4" src="https://png.icons8.com/ios/32/1da1f2/twitter.png" alt="Twitter">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- / social groups -->
-
-                <ul class="list-inline small mb-4">
-                    <li class="list-inline-item">
-                        <a class="color-gray-500" href="#">
-                            О сайте
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="color-gray-500" href="#">
-                            Служба поддержки
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="color-gray-500" href="#">
-                            Пользователи
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="color-gray-500" href="#">
-                            Поток
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="color-gray-500" href="#">
-                            Правила
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="color-gray-500" rel="nofollow" target="_blank" href="https://icons8.com">
-                            Иконки с Icons8
-                        </a>
-                    </li>
-                </ul>
-
+                <!-- @import "block/sandbox_questions.html" -->
+                <!-- @import "../_common/octo_in_social_networks.html" -->
+                <!-- @import "../_common/sidebar_footer.html" -->
             </div>
 
         </div>
