@@ -1,0 +1,49 @@
+
+<?php if (count($this->topics)): ?>
+    <!-- topics_table -->
+    <table class="table table-box">
+        <thead>
+            <tr>
+                <th class="width-6" scope="col"></th>
+                <th scope="col">Тема</th>
+                <th scope="col">
+                    <img class="size-20px" src="https://png.icons8.com/small/20/e51e24/questions.png">
+                </th>
+                <th scope="col">
+                    <img class="size-20px" src="https://png.icons8.com/small/20/333333/group-foreground-selected.png">
+                </th>
+                <th class="d-none d-sm-table-cell" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($this->topics as $topic): ?>
+                <tr>
+                    <td class="width-4">
+                        <a class="size-4" href="<?= $topic->getURL($this->lang) ?>">
+                            <img class="size-4 rounded" src="http://octoanswers.com/uploads/avatar/0_100.jpg">
+                        </a>
+                    </td>
+                    <td>
+                        <div class="font-weight-700">
+                            <a class="color-gray-900 no_underline" href="<?= $topic->getURL($this->lang) ?>">
+                                <?= $topic->getTitle() ?>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <?= (int) (1 + strlen($topic->getTitle()) / 2) ?>
+                    </td>
+                    <td>
+                        <?= strlen($topic->getTitle()) ?>
+                    </td>
+                    <td class="d-none d-sm-table-cell">
+                        <button class="btn btn-sm btn-outline-success" role="button">
+                            Подписаться
+                        </button>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <!-- / topics_table -->
+<?php endif; ?>

@@ -6,13 +6,18 @@
 <body>
     <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
 
-    <div class="container-fluid max-width-md">
-        <?php require_once TEMPLATE_PATH.'/topics/block/row_header.phtml'; ?>
-        <?php require_once TEMPLATE_PATH.'/topics/block/row_list.phtml'; ?>
-        <?php require_once TEMPLATE_PATH.'/topics/block/row_more_topics.phtml'; ?>
-    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 mx-auto">
 
-    <?php require_once TEMPLATE_PATH.'/common/footer.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/topics/block/header.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/topics/block/nav.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/topics/block/topics_table.phtml'; ?>
+                <?php require_once TEMPLATE_PATH.'/topics/block/more_topics.phtml'; ?>
+
+            </div>
+        </div>
+    </div>
 
     <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
 </body>

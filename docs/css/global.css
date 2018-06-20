@@ -1228,6 +1228,8 @@ table.table_topics {
     .table-box thead tr th {
       border-bottom: none;
       color: #424242; }
+  .table-box tbody tr td {
+    vertical-align: middle; }
 
 .title {
   display: block;

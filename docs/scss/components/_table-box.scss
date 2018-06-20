@@ -10,9 +10,20 @@
         border-bottom: 1px solid $color-gray-300;
         background-color: $color-gray-100;
 
-        tr th {
-            border-bottom: none;
-            color: $color-gray-800;
+        tr {
+
+            th {
+                border-bottom: none;
+                color: $color-gray-800;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+            }
         }
     }
 }
