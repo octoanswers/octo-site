@@ -1217,6 +1217,18 @@ table.table_topics {
 .table-no-paddings td {
   padding: 0; }
 
+.table-box {
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  background-color: #FFFFFF; }
+  .table-box thead {
+    padding: .75rem 1rem;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #F5F5F5; }
+    .table-box thead tr th {
+      border-bottom: none;
+      color: #424242; }
+
 .title {
   display: block;
   padding: 0;

@@ -1,0 +1,18 @@
+
+.table-box {
+    border: 1px solid $color-gray-300;
+    border-radius: $border-radius-base;
+    background-color: $color-white;
+
+    thead {
+        padding: .75rem 1rem;
+        //margin-top: -1px;
+        border-bottom: 1px solid $color-gray-300;
+        background-color: $color-gray-100;
+
+        tr th {
+            border-bottom: none;
+            color: $color-gray-800;
+        }
+    }
+}
