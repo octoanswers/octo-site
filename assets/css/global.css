@@ -1078,6 +1078,10 @@ img.border-2 {
 .max-width-30 {
   max-width: 15rem; }
 
+.size-rectangle-30x15 {
+  width: 15rem;
+  height: 15rem / 2; }
+
 .max-width-sm {
   max-width: 575px; }
 
