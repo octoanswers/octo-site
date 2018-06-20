@@ -9,8 +9,9 @@
     <div class="color-gray-700 my-3">
         <?= $question->getShortAnswer(); ?>
         <?php if ($question->getShortAnswer()): ?>
-            <a href="<?= $question->getURL($this->lang) ?>" class="color-secondary-lightest">
-                Полный ответ&hellip;
+            <a href="<?= $question->getURL($this->lang) ?>">
+                <!-- <img class="size-21px" src="https://png.icons8.com/material/21/9E9E9E/circled-right-2.png"> -->
+                <img class="size-21px"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGmSURBVDhPxVTLTsJQFOzCB+rOj1B3Jj4Sgqh/4E+Y+Btd4pZlKX2KMe0C+AMXAitX7PwJV8JSnamDtFBKSHxMMmnPnDnn9j56jX+B53kl8AAs61lSanU4jnMJdsGx67ofKY6oN5vNC1mXIwzDHRTdT5rgfYinheetnownA7SiKNpSaT4sy9qGcaCCJ/BIqQyoo3lPvgHrlJoHjA8yuqZprklOYNv2LvKHCg3m6QM4m1ByFlwjGXqzDRlDfwZffd8/lsyZrdOvuqrkKSB2mQRzp4z8NfgOZhrDf6qmHUlf4DGBOAaHknKBfG5j1qHxqF6vb0oyjCAI9jRagzGW4grvNwv4KO93Y7w3qLEP4wQQKhTBmmLuPONCotmLNqwmrZI0JH7lS39iTcG3zJoSEDscLW1OA/nC3QfbkqaAeM4kino8f5ITLDqncRxvQOuzDrM9k5wFki0awKV/FAemD6DfkzyP9L/PL160FNjIE+bl6xf++wRvHZjvWKCi5JYCeWxmb6lgpfsVxVUUtcFRqgnJmPr0TK4KHhNMdx9fVOY55OYo9ZcwjE/Z/fs2Fpd2EgAAAABJRU5ErkJggg==">
             </a>
         <?php endif; ?>
     </div>
