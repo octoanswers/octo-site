@@ -1,23 +1,23 @@
 
-<div class="border p-3 my-4">
 
-    <div class="mt-1 mb-4 pl-3">
-        <img class="size-16" src="https://png.icons8.com/ios/64/546e7a/sandbox2.png">
+<!-- about_sandbox -->
+<div class="box mt-4 d-none d-md-block">
+    <div class="box-header">
+        <a class="font-weight-600 color-gray-800" href="#">
+            Что такое «Песочница»?
+        </a>
     </div>
+    <div class="box-body small">
+        <p class="color-gray-700">
+            Песочница &mdash; это место куда попадают новые, ещё не имеющие ответа вопросы.
+        </p>
+        <p class="color-gray-700">
+            Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в <a href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">основной список</a>.
+        </p>
 
-    <h1 class="h2 mb-4">
-        Что такое «Песочница»?
-    </h1>
-
-    <p class="color-gray-700">
-        Песочница &mdash; это место куда попадают новые, ещё не имеющие ответа вопросы.
-    </p>
-    <p class="color-gray-700">
-        Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в <a href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">основной список</a>.
-    </p>
-
-    <?php if (isset($this->humanizedQuestionsCount)): ?>
-        <p class="small color-gray-500 mt-4 mb-0">Сейчас в песочнице: <?= $this->humanizedQuestionsCount ?></p>
-    <?php endif; ?>
-
+        <?php if (isset($this->humanizedQuestionsCount)): ?>
+            <p class="color-gray-500 mb-2">Сейчас в песочнице: <?= $this->humanizedQuestionsCount ?></p>
+        <?php endif; ?>
+    </div>
 </div>
+<!-- / about_sandbox -->
