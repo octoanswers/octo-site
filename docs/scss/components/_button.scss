@@ -1,6 +1,7 @@
 
 .btn {
     cursor: pointer;
+    border-radius: $border-radius-base;
 
     .btn-icon {
         width: 20px;
@@ -11,9 +12,11 @@
 }
 
 .btn-lg {
+    border-radius: $border-radius-large;
 }
 
 .btn-sm {
+    border-radius: $border-radius-small;
 
     .btn-icon {
         width: 16px;
@@ -22,7 +25,6 @@
         margin-right: .125rem;
     }
 }
-
 
 .btn-primary {
     color: $color_white;
