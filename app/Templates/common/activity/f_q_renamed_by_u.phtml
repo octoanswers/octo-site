@@ -1,5 +1,5 @@
 
-<!-- activity f_h_added_q -->
+<!-- activity f_q_renamed_by_u -->
 <div class="d-flex border-bottom py-3">
     <div class="mr-3 d-none d-sm-block">
         <a class="d-block size-4 mt-1" href="#">
@@ -8,16 +8,18 @@
     </div>
     <div class="width-full">
         <div class="color-gray-700">
-            Задан новый вопрос на тему <a class="color-gray-900 font-weight-600" href="<?= $data['topic']['url'] ?>"><?= $data['topic']['title'] ?></a>
+            Переименован вопрос <span class="color-gray-900 font-weight-600"><?= $data['question']['title_old'] ?></span>
         </div>
         <div class="my-1">
             <a class="h3 color-gray-900 no-underline" href="<?= $data['question']['url'] ?>">
-                <?= $data['question']['title'] ?>
+                <?= $data['question']['title_new'] ?>
             </a>
         </div>
         <div class="small color-gray-500">
+            <a class="color-gray-700" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
+            <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
             <?= $activity['created_at__humanized'] ?>
         </div>
     </div>
 </div>
-<!-- / activity f_h_added_q -->
+<!-- / activity f_q_renamed_by_u -->

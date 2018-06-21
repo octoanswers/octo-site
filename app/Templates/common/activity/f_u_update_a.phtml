@@ -1,20 +1,24 @@
 
-<tr>
-    <td style="width: 5rem !important;">
-        <a class="wh-3" href="<?= $data['user']['profile_url'] ?>">
-            <img class="wh-3 rounded-circle" src="<?= $data['user']['avatar_xs_url'] ?>">
+<!-- activity f_u_update_a -->
+<div class="d-flex border-bottom py-3">
+    <div class="mr-3 d-none d-sm-block">
+        <a class="d-block size-4 mt-1" href="<?= $data['user']['profile_url'] ?>">
+            <img class="size-4 rounded" src="<?= $data['user']['avatar_xs_url'] ?>">
         </a>
-    </td>
-    <td class="pb-5">
-        <p class="mb-1">
-            <a href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a> внес правки в ответ на вопрос <a href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
-        </p>
-        <pre class="mb-1"><?= $data['revision']['diff_text'] ?></pre>
-        <?php if (strlen($data['revision']['comment'])): ?>
-            <p><?= $data['revision']['comment'] ?></p>
-        <?php endif; ?>
-        <span class="text-muted">
+    </div>
+    <div class="width-full">
+        <div class="color-gray-700 mb-3">
+            <a class="color-gray-900 font-weight-600" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
+            внес правки в ответ на вопрос <a class="color-gray-900 font-weight-600" href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
+        </div>
+        <pre><?= $data['revision']['diff_text'] ?></pre>
+        <div class="small color-gray-500">
+            <?php if (strlen($data['revision']['comment'])): ?>
+                <?= $data['revision']['comment'] ?>
+                <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+            <?php endif; ?>
             <?= $activity['created_at__humanized'] ?>
-        </span>
-    </td>
-</tr>
+        </div>
+    </div>
+</div>
+<!-- / activity f_u_update_a -->

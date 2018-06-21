@@ -1,5 +1,5 @@
 
-<!-- activity f_u_follow_h -->
+<!-- activity f_u_rename_q -->
 <div class="d-flex border-bottom py-3">
     <div class="mr-3 d-none d-sm-block">
         <a class="d-block size-4 mt-1" href="<?= $data['user']['profile_url'] ?>">
@@ -9,12 +9,16 @@
     <div class="width-full">
         <div class="color-gray-700">
             <a class="color-gray-900 font-weight-600" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
-            подписался на тему
-            <a class="color-gray-900 font-weight-600" href="<?= $data['topic']['url'] ?>">#<?= $data['topic']['title'] ?></a>
+            переименовал вопрос <span class="color-gray-900 font-weight-600"><?= $data['question']['title_old'] ?></span>
         </div>
-        <span class="small color-gray-500">
+        <div class="my-1">
+            <a class="h3 color-gray-900 no-underline" href="<?= $data['question']['url'] ?>">
+                <?= $data['question']['title_new'] ?>
+            </a>
+        </div>
+        <div class="small color-gray-500">
             <?= $activity['created_at__humanized'] ?>
-        </span>
+        </div>
     </div>
 </div>
-<!-- / activity f_u_follow_h -->
+<!-- / activity f_u_rename_q -->
