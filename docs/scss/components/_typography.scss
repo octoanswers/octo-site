@@ -88,14 +88,6 @@ pre {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
-blockquote {
-    padding: 0 1.25rem; background-color: #F5F5F5;
-    white-space: pre-wrap; word-wrap: break-word;
-
-}
-
-blockquote p { margin-bottom: 0; }
-blockquote p:last-child { margin-bottom: 0; }
 
 .font-weight-normal {
     font-weight: 400;

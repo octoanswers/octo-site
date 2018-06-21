@@ -1390,18 +1390,6 @@ pre {
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */ }
 
-blockquote {
-  padding: 0 1.25rem;
-  background-color: #F5F5F5;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-blockquote p {
-  margin-bottom: 0; }
-
-blockquote p:last-child {
-  margin-bottom: 0; }
-
 .font-weight-normal {
   font-weight: 400; }
 
@@ -1419,6 +1407,20 @@ blockquote p:last-child {
 
 .text-secondary {
   color: #757575 !important; }
+
+blockquote {
+  background-color: #F5F5F5;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+  blockquote p:last-child {
+    margin-bottom: 0; }
+
+.blockquote {
+  background-color: #FFFFFF;
+  border-left: 4px solid #BDBDBD;
+  padding-left: 1rem;
+  color: #616161;
+  margin-bottom: 0 !important; }
 
 .activity__lure {
   border: 1px solid #E0E0E0;
