@@ -26,7 +26,7 @@
 
 <!-- stylesheet -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-<link rel="stylesheet" href="https://octoanswers.com/assets/css/global.css?v=4">
+<link rel="stylesheet" href="https://octoanswers.com/assets/css/global.css?v=5">
 
 <!-- Open Graph tags -->
 <?php if (isset($this->openGraph['url'])): ?>
@@ -46,11 +46,4 @@
 <?php endif; ?>
 <?php if (isset($this->openGraph['locale'])): ?>
     <meta property="og:locale" content="<?= $this->openGraph['locale'] ?>" />
-<?php endif; ?>
-
-<?php if (isset($this->alternateURLPrefix)): ?>
-    <!-- alternate URL`s -->
-    <link rel="alternate" hreflang="x-default" href="<?= $this->canonicalURL ?>" />
-    <link rel="alternate" hreflang="ru" href="<?= $this->alternateURLPrefix ?>l=ru" />
-    <link rel="alternate" hreflang="en" href="<?= $this->alternateURLPrefix ?>l=en" />
 <?php endif; ?>

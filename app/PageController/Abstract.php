@@ -11,7 +11,6 @@ abstract class Abstract_PageController
     protected $pageTitle;
     protected $pageDescription;
     protected $canonicalURL;
-    protected $alternateURLPrefix;
 
     protected $v = [];
     protected $authUser = null;

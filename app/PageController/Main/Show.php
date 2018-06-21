@@ -43,7 +43,6 @@ class Show_Main_PageController extends Abstract_PageController
         $this->pageTitle = $this->l->t('octoanswers').' - '.$this->l->t('main_pg__title');
         $this->pageDescription = $this->l->t('main_pg__description');
         $this->canonicalURL = Page_URL_Helper::getMainURL($this->lang);
-        $this->alternateURLPrefix = SITE_URL.'?';
 
         $this->openGraph = $this->_getOpenGraph();
 

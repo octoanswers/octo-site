@@ -3,6 +3,14 @@
 <html lang="<?= $this->lang ?>">
 <head>
     <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+
+    <?php if (isset($this->alternateURLPrefix)): ?>
+        <!-- alternate URL`s -->
+        <link rel="alternate" hreflang="x-default" href="<?= $this->canonicalURL ?>" />
+        <link rel="alternate" hreflang="ru" href="<?= $this->alternateURLPrefix ?>l=ru" />
+        <link rel="alternate" hreflang="en" href="<?= $this->alternateURLPrefix ?>l=en" />
+    <?php endif; ?>
+    
 </head>
 <body>
     <?php require TEMPLATE_PATH.'/root/block/navbar.phtml'; ?>
