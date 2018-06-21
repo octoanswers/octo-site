@@ -1486,40 +1486,6 @@ blockquote {
       margin-top: 2px;
       margin-bottom: 1rem; }
 
-.block__check_list {
-  border: 1px solid #E0E0E0;
-  border-radius: 2px;
-  width: 100%;
-  display: table; }
-  .block__check_list .header {
-    padding: .75rem 1rem;
-    border-bottom: 1px solid #E0E0E0;
-    border-radius: 0;
-    font-weight: 500; }
-  .block__check_list .content {
-    padding: .5rem 1rem; }
-    .block__check_list .content ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: table; }
-      .block__check_list .content ul li {
-        padding-left: 30px;
-        margin: .75rem 0; }
-      .block__check_list .content ul li.completed {
-        padding-left: 0;
-        color: #9E9E9E;
-        text-decoration: line-through; }
-        .block__check_list .content ul li.completed .icon {
-          display: table-cell;
-          width: 18px; }
-          .block__check_list .content ul li.completed .icon img {
-            width: 18px;
-            height: 18px; }
-        .block__check_list .content ul li.completed .message {
-          display: table-cell;
-          padding-left: 12px; }
-
 .block__first_answer {
   border: 1px solid #E3F2FD;
   background-color: #E3F2FD;

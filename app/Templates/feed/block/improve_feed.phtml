@@ -1,113 +1,113 @@
 
-<div class="block__check_list my-4">
-    <div class="header">
+<!-- improve_feed -->
+<div class="box my-4 d-none d-md-block">
+    <div class="box-header font-weight-600 color-gray-800">
         <?= $this->l->t("block", "improve_your_feed", "title") ?>
     </div>
-    <div class="content">
-        <ul>
-            <li class="completed">
-                <span class="icon">
-                    <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
-                </span>
-                <span class="message">
+    <div class="box-body pt-0 pb-0 small">
+
+        <div class="my-3">
+            <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+            <span class="color-gray-600">
+                <s>
                     <?= $this->l->t("block", "improve_your_feed", "visit_your_feed") ?>
-                </span>
-            </li>
+                </s>
+            </span>
+        </div>
 
+        <div class="my-3">
             <?php if ($this->authUser->getUsername() == $this->authUser->getName()): ?>
-                <li>
-                    <a rel="nofollow" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
-                        <?= $this->l->t("block", "improve_your_feed", "set_real_name") ?>
-                    </a>
-                </li>
+                <a class="color-gray-800 no-underline-hover" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
+                    <?= $this->l->t("block", "improve_your_feed", "set_real_name") ?>
+                </a>
             <?php else: ?>
-                <li class="completed">
-                    <span class="icon">
-                        <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
-                    </span>
-                    <span class="message">
+                <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                <span class="color-gray-600">
+                    <s>
                         <?= $this->l->t("block", "improve_your_feed", "set_real_name") ?>
-                    </span>
-                </li>
+                    </s>
+                </span>
             <?php endif; ?>
+        </div>
 
+        <div class="my-3">
             <?php if (strlen($this->authUser->getSignature()) == 0): ?>
-                <li>
-                    <a rel="nofollow" href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>">
-                        <?= $this->l->t("block", "improve_your_feed", "set_signature") ?>
-                    </a>
-                </li>
+                <a class="color-gray-800 no-underline-hover" href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>">
+                    <?= $this->l->t("block", "improve_your_feed", "set_signature") ?>
+                </a>
             <?php else: ?>
-                <li class="completed">
-                    <span class="icon">
-                        <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
-                    </span>
-                    <span class="message">
+                <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                <span class="color-gray-600">
+                    <s>
                         <?= $this->l->t("block", "improve_your_feed", "set_signature") ?>
-                    </span>
-                </li>
+                    </s>
+                </span>
             <?php endif; ?>
+        </div>
 
+        <div class="my-3">
             <?php if ($this->isShowTopicsFollowLure): ?>
-                <li>
-                    <a rel="nofollow" href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
-                        <?= $this->l->t("block", "improve_your_feed", "follow_3_more_topics") ?>
-                    </a>
-                </li>
+                <a class="color-gray-800 no-underline-hover" href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
+                    <?= $this->l->t("block", "improve_your_feed", "follow_3_more_topics") ?>
+                </a>
             <?php else: ?>
-                <li class="completed">
-                    <span class="icon">
-                        <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
-                    </span>
-                    <span class="message">
+                <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                <span class="color-gray-600">
+                    <s>
                         <?= $this->l->t("block", "improve_your_feed", "follow_3_more_topics") ?>
-                    </span>
-                </li>
+                    </s>
+                </span>
             <?php endif; ?>
+        </div>
 
+        <div class="my-3">
             <?php if ($this->isShowQuestionsFollowLure): ?>
-                <li>
-                    <a rel="nofollow" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
-                        <?= $this->l->t("block", "improve_your_feed", "follow_your_first_question") ?>
-                    </a>
-                </li>
+                <a class="color-gray-800 no-underline-hover" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
+                    <?= $this->l->t("block", "improve_your_feed", "follow_your_first_question") ?>
+                </a>
             <?php else: ?>
-                <li class="completed">
-                    <span class="icon">
-                        <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
-                    </span>
-                    <span class="message">
+                <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                <span class="color-gray-600">
+                    <s>
                         <?= $this->l->t("block", "improve_your_feed", "follow_your_first_question") ?>
-                    </span>
-                </li>
+                    </s>
+                </span>
             <?php endif; ?>
+        </div>
 
-            <li class="completed">
-                <span class="icon">
-                    <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
-                </span>
-                <span class="message">
+        <div class="my-3">
+            <?php if ($this->isShowUsersFollowLure): ?>
+                <a class="color-gray-800 no-underline-hover" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
                     <?= $this->l->t("block", "improve_your_feed", "find_your_friends") ?>
+                </a>
+            <?php else: ?>
+                <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+                <span class="color-gray-600">
+                    <s>
+                        <?= $this->l->t("block", "improve_your_feed", "find_your_friends") ?>
+                    </s>
                 </span>
-            </li>
+            <?php endif; ?>
+        </div>
 
-            <li class="completed">
-                <span class="icon">
-                    <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
-                </span>
-                <span class="message">
+        <div class="my-3">
+            <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+            <span class="color-gray-600">
+                <s>
                     <?= $this->l->t("block", "improve_your_feed", "ask_your_first_question") ?>
-                </span>
-            </li>
+                </s>
+            </span>
+        </div>
 
-            <li class="completed">
-                <span class="icon">
-                    <img src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
-                </span>
-                <span class="message">
+        <div class="my-3">
+            <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
+            <span class="color-gray-600">
+                <s>
                     <?= $this->l->t("block", "improve_your_feed", "answer_a_question") ?>
-                </span>
-            </li>
-        </ul>
+                </s>
+            </span>
+        </div>
+
     </div>
 </div>
+<!-- / improve_feed -->
