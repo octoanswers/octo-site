@@ -1,6 +1,6 @@
 # Что за папка /docs?
 
-В этой папке хрянятся тестовые дизайн-макеты [Octoanswers](http://octoanswers.com/ru)
+В этой папке хрянятся тестовые дизайн-макеты [Octoanswers](https://octoanswers.com/ru)
 
 Посмотреть их можно можно на GH-page [octoanswers.github.io/octo-site](https://octoanswers.github.io/octo-site/)
 

@@ -31,8 +31,8 @@ class Mailer
 
         $subject = 'Вас добавили в друзья на OctoAnswers';
 
-        $message = '<p>Пользователь <a href="http://octoanswers.com/'.$this->followerUsername.'">'.$this->followerRealName.'</a> добавил вас в друзья.</p>';
-        $message .= '<p>Социальная сеть вопросов и ответов, <a href="http://octoanswers.com">OctoAnswers</a>:</p>';
+        $message = '<p>Пользователь <a href="https://octoanswers.com/'.$this->followerUsername.'">'.$this->followerRealName.'</a> добавил вас в друзья.</p>';
+        $message .= '<p>Социальная сеть вопросов и ответов, <a href="https://octoanswers.com">OctoAnswers</a>:</p>';
 
         $this->sendEmail($subject, $message);
     }
@@ -45,10 +45,10 @@ class Mailer
 
         $subject = 'Вы получили новый ответ на OctoAnswers';
 
-        $message = '<p>Пользователь <a href="http://octoanswers.com/'.$this->answerOwnerUsername.'">'.$this->answerOwnerRealName.'</a> ответил на ваш вопрос: <a href="http://octoanswers.com/ru/'.$this->questionId.'">'.$this->questionTitle.'</a></p>';
+        $message = '<p>Пользователь <a href="https://octoanswers.com/'.$this->answerOwnerUsername.'">'.$this->answerOwnerRealName.'</a> ответил на ваш вопрос: <a href="https://octoanswers.com/ru/'.$this->questionId.'">'.$this->questionTitle.'</a></p>';
         $message .= '<p><em>Ответ:</em></p>';
         $message .= $this->answerFormattedText;
-        $message .= '<p>Социальная сеть вопросов и ответов, <a href="http://octoanswers.com">OctoAnswers</a>:</p>';
+        $message .= '<p>Социальная сеть вопросов и ответов, <a href="https://octoanswers.com">OctoAnswers</a>:</p>';
 
         $this->sendEmail($subject, $message);
     }
@@ -61,10 +61,10 @@ class Mailer
 
         $subject = 'Вам задали новый вопрос на OctoAnswers';
 
-        $message = '<p>Пользователь <a href="http://octoanswers.com/'.$this->questionOwnerUsername.'">'.$this->questionOwnerRealName.'</a> задал вам вопрос:</p>';
-        $message .= '<p><a href="http://octoanswers.com/ru/'.$this->questionId.'">'.$this->questionTitle.'</a></p>';
+        $message = '<p>Пользователь <a href="https://octoanswers.com/'.$this->questionOwnerUsername.'">'.$this->questionOwnerRealName.'</a> задал вам вопрос:</p>';
+        $message .= '<p><a href="https://octoanswers.com/ru/'.$this->questionId.'">'.$this->questionTitle.'</a></p>';
         $message .= $this->questionFormattedDescription;
-        $message .= '<p>Социальная сеть вопросов и ответов, <a href="http://octoanswers.com">OctoAnswers</a>:</p>';
+        $message .= '<p>Социальная сеть вопросов и ответов, <a href="https://octoanswers.com">OctoAnswers</a>:</p>';
 
         $this->sendEmail($subject, $message);
     }

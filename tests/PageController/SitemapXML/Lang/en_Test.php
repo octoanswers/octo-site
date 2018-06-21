@@ -16,7 +16,7 @@ class Lang_SitemapXML_PageController__en__Test extends Abstract_Frontend_TestCas
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('http://octoanswers.com/en/25/what-s-iphone-6-price', $responseBody);
+        $this->assertContains('https://octoanswers.com/en/25/what-s-iphone-6-price', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

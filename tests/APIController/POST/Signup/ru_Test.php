@@ -17,8 +17,8 @@ class Signup_POST_APIController__ru__Test extends Abstract_Frontend_TestCase
             'id' => 16,
             'username' => 'jasonborn',
             'email' => 'new@octoanswers.com',
-            'url' => 'http://octoanswers.com/ru/+jasonborn',
-            'destination_url' => 'http://octoanswers.com/ru'
+            'url' => 'https://octoanswers.com/ru/+jasonborn',
+            'destination_url' => 'https://octoanswers.com/ru'
         ];
 
         $responseArray = json_decode($responseBody, true);

@@ -20,7 +20,7 @@ class Logout_POST_APIController__BaseTest extends Abstract_Frontend_TestCase
 
         $expectedResponse = [
             'message' => 'User unlogged',
-            'destination_url' => 'http://octoanswers.com/ru'
+            'destination_url' => 'https://octoanswers.com/ru'
         ];
 
         $this->assertSame(200, $response->getStatusCode());

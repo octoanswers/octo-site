@@ -21,7 +21,7 @@ class Topics_ID_Questions_PUT_APIController__ru__Test extends Abstract_Frontend_
             'question' => [
                 'id' => 4,
                 'title' => 'Чем занимается гинеколог?',
-                'url' => 'http://octoanswers.com/ru/4/chem-zanimaetsya-ginekolog'
+                'url' => 'https://octoanswers.com/ru/4/chem-zanimaetsya-ginekolog'
             ],
             'old_topics' => [
                 'Медицина'

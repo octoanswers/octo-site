@@ -8,5 +8,5 @@ Disallow: /*/sandbox/*
 Disallow: /*/settings/*
 Disallow: /*/search?*
 
-Sitemap: http://octoanswers.com/sitemap.xml
+Sitemap: https://octoanswers.com/sitemap.xml
 Host: octoanswers.com

@@ -17,7 +17,7 @@ class AnswersID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
         $expectedResponse = [
             'question_id' => 15,
             'question_title' => 'Где я родился?',
-            'question_url' => 'http://octoanswers.com/ru/15/gde-ya-rodilsya',
+            'question_url' => 'https://octoanswers.com/ru/15/gde-ya-rodilsya',
             'answer_text' => 'В Екатеринбурге.',
             'revision_id' => 8,
             'revision_opcodes' => 'd6i30:В Екатеринбурге.',
@@ -46,7 +46,7 @@ class AnswersID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
         $expectedResponse = [
             'question_id' => 21,
             'question_title' => 'Как птицы делают видеоигры?',
-            'question_url' => 'http://octoanswers.com/ru/21/kak-pticy-delayut-videoigry',
+            'question_url' => 'https://octoanswers.com/ru/21/kak-pticy-delayut-videoigry',
             'answer_text' => 'Нет, птицы не делают игры.',
             'revision_id' => 8,
             'revision_opcodes' => 'd34i8:Нет, c11i5:не c22',
@@ -75,7 +75,7 @@ class AnswersID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
         $expectedResponse = [
             'question_id' => 15,
             'question_title' => 'Где я родился?',
-            'question_url' => 'http://octoanswers.com/ru/15/gde-ya-rodilsya',
+            'question_url' => 'https://octoanswers.com/ru/15/gde-ya-rodilsya',
             'answer_text' => 'В Краснодаре.',
             'revision_id' => 8,
             'revision_opcodes' => 'd6i24:В Краснодаре.',

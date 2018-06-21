@@ -25,7 +25,7 @@ class UsersIDSite_PATCH_APIController__site__Test extends Abstract_Frontend_Test
 
     public function test_SiteNotSet()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e'.'&'.'foo_site='.urlencode('http://octoanswers.com');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e'.'&'.'foo_site='.urlencode('https://octoanswers.com');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/site.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

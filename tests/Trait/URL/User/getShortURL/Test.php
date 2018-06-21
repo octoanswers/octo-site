@@ -7,7 +7,7 @@ class User_URL_Trait__getShortURL__Test extends PHPUnit\Framework\TestCase
         $user = new User_Model();
         $user->setID(135);
 
-        $this->assertEquals('http://octoanswers.com/en/user/135', $user->getShortURL('en'));
+        $this->assertEquals('https://octoanswers.com/en/user/135', $user->getShortURL('en'));
     }
 
     public function test__ru()
@@ -15,6 +15,6 @@ class User_URL_Trait__getShortURL__Test extends PHPUnit\Framework\TestCase
         $user = new User_Model();
         $user->setID(13);
 
-        $this->assertEquals('http://octoanswers.com/ru/user/13', $user->getShortURL('ru'));
+        $this->assertEquals('https://octoanswers.com/ru/user/13', $user->getShortURL('ru'));
     }
 }

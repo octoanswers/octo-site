@@ -25,8 +25,8 @@ class Login_POST_APIController__BaseTest extends Abstract_Frontend_TestCase
             'name' => 'Иван Коршунов',
             'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
             'created_at' => '2016-03-19 06:47:41',
-            'url' => 'http://octoanswers.com/ru/+ivan',
-            'destination_url' => 'http://octoanswers.com/ru'
+            'url' => 'https://octoanswers.com/ru/+ivan',
+            'destination_url' => 'https://octoanswers.com/ru'
         ];
 
         $this->assertSame(200, $response->getStatusCode());

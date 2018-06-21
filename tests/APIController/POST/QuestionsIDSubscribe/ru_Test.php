@@ -18,7 +18,7 @@ class QuestionsIDSubscribe_POST_APIController__Test extends Abstract_Frontend_Te
             'lang' => 'ru',
             'question_id' => 17,
             'question_title' => 'Кто владеет компаний Apple после смерти Стива Джобса?',
-            'question_url' => 'http://octoanswers.com/ru/17/kto-vladeet-kompanii-apple-posle-smerti-stiva-dzhobsa',
+            'question_url' => 'https://octoanswers.com/ru/17/kto-vladeet-kompanii-apple-posle-smerti-stiva-dzhobsa',
             'subscription_id' => 5,
             'subscription_email' => 'data@test.ru',
         ];

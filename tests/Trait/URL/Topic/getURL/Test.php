@@ -8,7 +8,7 @@ class Topic_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
         $topic->setTitle('foo');
         $topic->setID(12);
 
-        $this->assertEquals('http://octoanswers.com/en/topic/12/foo', $topic->getURL('en'));
+        $this->assertEquals('https://octoanswers.com/en/topic/12/foo', $topic->getURL('en'));
     }
 
     public function test_ru()
@@ -17,7 +17,7 @@ class Topic_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
         $topic->setTitle('дождь');
         $topic->setID(34);
 
-        $this->assertEquals('http://octoanswers.com/ru/topic/34/dozhd', $topic->getURL('ru'));
+        $this->assertEquals('https://octoanswers.com/ru/topic/34/dozhd', $topic->getURL('ru'));
     }
 
     public function test_ru_WithUnderline()
@@ -26,6 +26,6 @@ class Topic_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
         $topic->setTitle('проливной_дождь');
         $topic->setID(56);
 
-        $this->assertEquals('http://octoanswers.com/ru/topic/56/prolivnoi-dozhd', $topic->getURL('ru'));
+        $this->assertEquals('https://octoanswers.com/ru/topic/56/prolivnoi-dozhd', $topic->getURL('ru'));
     }
 }

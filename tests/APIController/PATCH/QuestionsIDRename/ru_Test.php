@@ -19,7 +19,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
                 'id' => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
                 'new_title' => 'Как ты, мистер Гек?',
-                'url' => 'http://octoanswers.com/ru/12/kak-ty-mister-gek',
+                'url' => 'https://octoanswers.com/ru/12/kak-ty-mister-gek',
             ],
             'user' => [
                 'id' => 3,
@@ -60,7 +60,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
                 'id' => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
                 'new_title' => 'Как ты, мистер Гек?',
-                'url' => 'http://octoanswers.com/ru/12/kak-ty-mister-gek',
+                'url' => 'https://octoanswers.com/ru/12/kak-ty-mister-gek',
             ],
             'user' => [
                 'id' => 3,
@@ -97,7 +97,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
                 'id' => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
                 'new_title' => 'Огонь уничтожает КРОВЬ?',
-                'url' => 'http://octoanswers.com/ru/12/ogon-unichtozhaet-krov',
+                'url' => 'https://octoanswers.com/ru/12/ogon-unichtozhaet-krov',
             ],
             'user' => [
                 'id' => 3,
@@ -134,7 +134,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
                 'id' => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
                 'new_title' => 'Огонь уничтожает КРОВЬ?',
-                'url' => 'http://octoanswers.com/ru/12/ogon-unichtozhaet-krov',
+                'url' => 'https://octoanswers.com/ru/12/ogon-unichtozhaet-krov',
             ],
             'user' => [
                 'id' => 3,

@@ -2,7 +2,7 @@
 
 OctoAnswers is a wiki-based questions-and-answers (Q&A) project, running on PHP/MySQL.
 
-Currently, the wiki-based questions-and-answers service OctoAnswers is launched only in [Russian](http://octoanswers.com). If you want that OctoAnswers to work in your own language, please [contact me](https://www.facebook.com/alexandergomzyakov) on Facebook, we can talk about it.
+Currently, the wiki-based questions-and-answers service OctoAnswers is launched only in [Russian](https://octoanswers.com). If you want that OctoAnswers to work in your own language, please [contact me](https://www.facebook.com/alexandergomzyakov) on Facebook, we can talk about it.
 
 ## Features
 

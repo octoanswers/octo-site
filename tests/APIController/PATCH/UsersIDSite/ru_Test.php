@@ -6,7 +6,7 @@ class UsersIDSite_PATCH_APIController__ru__Test extends Abstract_Frontend_TestCa
 
     public function test_RenameWithSaveRedirect_Ok()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site='.urlencode('http://octoanswers.com');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site='.urlencode('https://octoanswers.com');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/site.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -19,7 +19,7 @@ class UsersIDSite_PATCH_APIController__ru__Test extends Abstract_Frontend_TestCa
                 'id' => 3,
                 'name' => 'Иван Коршунов',
                 'site_old' => null,
-                'site_new' => 'http://octoanswers.com',
+                'site_new' => 'https://octoanswers.com',
             ],
             'message' => 'User site saved!',
         ];

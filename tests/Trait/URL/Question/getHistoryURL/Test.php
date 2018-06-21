@@ -7,7 +7,7 @@ class Question_URL_Trait__getHistoryURL__Test extends PHPUnit\Framework\TestCase
         $question = new Question_Model();
         $question->setID(12);
 
-        $this->assertEquals('http://octoanswers.com/en/answer/12/history', $question->getHistoryURL('en'));
+        $this->assertEquals('https://octoanswers.com/en/answer/12/history', $question->getHistoryURL('en'));
     }
 
     public function test_ru()
@@ -15,6 +15,6 @@ class Question_URL_Trait__getHistoryURL__Test extends PHPUnit\Framework\TestCase
         $question = new Question_Model();
         $question->setID(7);
 
-        $this->assertEquals('http://octoanswers.com/ru/answer/7/history', $question->getHistoryURL('ru'));
+        $this->assertEquals('https://octoanswers.com/ru/answer/7/history', $question->getHistoryURL('ru'));
     }
 }
