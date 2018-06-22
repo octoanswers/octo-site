@@ -5,22 +5,20 @@
 
     <!-- top contributors @ sidebar -->
     <div class="box mt-4 d-none d-md-block">
+        <div class="box-header">
+            <a class="float-right color-gray-600 no-underline-hover" href="#contributors_full_list">
+                <?= count($this->contributors) ?>
+                <img class="size-16px mt-minus-4px" src="https://png.icons8.com/material/16/616161/user-group-man-man.png">
+            </a>
+            <a class="color-gray-800 font-weight-600 no-underline-hover" href="#">
+                <?= $this->l->t('question', 'top_contributors', 'top_title') ?>
+            </a>
+        </div>
         <div class="box-body color-gray-800">
-
-            <div class="mb-2">
-                <a class="float-right color-gray-600 no-underline-hover" href="#contributors_full_list">
-                    <?= count($this->contributors) ?>
-                    <img class="size-16px mt-minus-4px" src="https://png.icons8.com/material/16/616161/user-group-man-man.png">
-                </a>
-                <a class="color-gray-800" href="#">
-                    <?= $this->l->t('question', 'top_contributors', 'top_title') ?>
-                </a>
-            </div>
-
             <div class="d-flex flex-wrap">
 
                 <?php foreach ($this->contributors_top as $contributor): ?>
-                    <div class="border-top pt-3 mt-2 mb-1">
+                    <div class="border-bottom pb-3 mt-2 mb-1">
                         <span class="float-left">
                             <a href="<?= $contributor->getURL($this->lang) ?>">
                                 <img class="size-5 rounded mt-1" src="<?= $contributor->getAvatarMediumURL() ?>" alt="<?= $contributor->getName() ?>">
@@ -60,17 +58,17 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
+
+                <?php if (count($this->contributors_tail)): ?>
+                    <div class="w-100 ml-6 mt-2">
+                        <a class="color-gray-700 small" href="#contributors_full_list">
+                            Все авторы ответа
+                        </a>
+                    </div>
+                <?php endif; ?>
+
             </div>
         </div>
-
-        <?php if (count($this->contributors_tail)): ?>
-            <div class="box-footer">
-                <a class="btn btn-sm btn-outline-secondary" href="#contributors_full_list">
-                    Все авторы ответа
-                </a>
-            </div>
-        <?php endif; ?>
-
     </div>
     <!-- / top contributors @ sidebar -->
 
