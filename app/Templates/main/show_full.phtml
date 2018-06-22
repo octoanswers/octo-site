@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="<?= $this->lang ?>">
 <head>
-    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/head.phtml'; ?>
 </head>
 <body>
-    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/navbar.phtml'; ?>
 
     <div class="jumbotron text-center">
         <div class="container-fluid">
@@ -47,7 +47,7 @@
                 <!-- interesting questions -->
                 <?php if (isset($this->recent_questions)): ?>
                     <?php foreach ($this->recent_questions as $question): ?>
-                        <?php require TEMPLATE_PATH.'/common/item/question_with_answer.phtml'; ?>
+                        <?php require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml'; ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
                 <!-- /interesting questions -->
@@ -59,8 +59,8 @@
         </div>
     </div>
 
-    <?php require_once TEMPLATE_PATH.'/common/footer.phtml'; ?>
+    <?php require_once TEMPLATE_PATH.'/_common/footer.phtml'; ?>
 
-    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/js_bottom.phtml'; ?>
 </body>
 </html>

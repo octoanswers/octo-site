@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="<?= $this->lang ?>">
 <head>
-    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/head.phtml'; ?>
 </head>
 <body>
-    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/navbar.phtml'; ?>
 
     <div class="container-fluid">
         <div class="row">
@@ -26,22 +26,22 @@
                             // @TODO Bad
                             case 'Q_RENAMED_BY_U':
                                 $data = $activity['data'];
-                                require TEMPLATE_PATH.'/common/activity/f_q_renamed_by_u.phtml';
+                                require TEMPLATE_PATH.'/_common/activity/f_q_renamed_by_u.phtml';
                                 break;
                             // @TODO Bad
                             case 'U_RENAME_Q':
                                 $data = $activity['data'];
-                                require TEMPLATE_PATH.'/common/activity/f_u_rename_q.phtml';
+                                require TEMPLATE_PATH.'/_common/activity/f_u_rename_q.phtml';
                                 break;
                             // @TODO Bad
                             case 'F_U_FOLLOW_H':
                                 $data = $activity['data'];
-                                require TEMPLATE_PATH.'/common/activity/f_u_follow_t.phtml';
+                                require TEMPLATE_PATH.'/_common/activity/f_u_follow_t.phtml';
                                 break;
                             // @TODO Bad
                             case 'F_H_ADDED_Q':
                                 $data = $activity['data'];
-                                require TEMPLATE_PATH.'/common/activity/f_t_added_q.phtml';
+                                require TEMPLATE_PATH.'/_common/activity/f_t_added_q.phtml';
                                 break;
                             case 'F_U_UPDATE_A':
                             case 'F_U_FOLLOW_Q':
@@ -68,12 +68,12 @@
             </div>
             <div class="col-12 col-md-4">
                 <?php include_once TEMPLATE_PATH.'/feed/block/improve_feed.phtml'; ?>
-                <?php require_once TEMPLATE_PATH.'/common/sidebar/footer.phtml' ?>
+                <?php require_once TEMPLATE_PATH.'/_common/sidebar/footer.phtml' ?>
             </div>
 
         </div>
     </div>
 
-    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/js_bottom.phtml'; ?>
 </body>
 </html>

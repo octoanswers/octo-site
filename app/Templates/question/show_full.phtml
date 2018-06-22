@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="<?= $this->lang ?>" itemscope itemtype="http://schema.org/QAPage">
 <head>
-    <?php require TEMPLATE_PATH.'/common/head.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/head.phtml'; ?>
 </head>
 <body itemscope itemtype="http://schema.org/Question">
 
-    <?php require TEMPLATE_PATH.'/common/navbar.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/navbar.phtml'; ?>
 
     <div class="container-fluid">
         <div class="row">
@@ -41,7 +41,7 @@
     </div>
 
     <?php require_once TEMPLATE_PATH.'/question/show/interesting_questions.phtml' ?>
-    <?php require TEMPLATE_PATH.'/common/footer.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/footer.phtml'; ?>
 
     <!-- Modal components -->
     <?php if ($this->authUser): ?>
@@ -51,6 +51,6 @@
         <!--  -->
     <?php endif; ?>
 
-    <?php require TEMPLATE_PATH.'/common/js_bottom.phtml'; ?>
+    <?php require TEMPLATE_PATH.'/_common/js_bottom.phtml'; ?>
 </body>
 </html>
