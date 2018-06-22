@@ -6,9 +6,16 @@
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-
 <!-- JS Helpers -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.0/smooth-scroll.min.js" integrity="sha256-/k5n1rmutzb2PSqvtV77T+xHa9plhfEjb/mpn1RpMzA=" crossorigin="anonymous"></script>
+
+<!-- init smooth-scroll -->
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 
 <?php if (count($this->additionalJavascript)): ?>
     <!-- @DEPR additional Javascript -->
