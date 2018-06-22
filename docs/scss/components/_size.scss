@@ -1,4 +1,6 @@
 
+@import "_size/_min-height";
+
 // Small size in pixels
 
 .size-14px {
@@ -170,16 +172,6 @@
         width: 6rem!important;
         height: 6rem!important;
     }
-}
-
-//
-
-.min-height-4 {
-    min-height: 2rem;
-}
-
-.min-height-8 {
-    min-height: 4rem;
 }
 
 // min-width

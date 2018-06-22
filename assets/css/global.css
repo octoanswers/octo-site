@@ -940,6 +940,12 @@ img.border-2 {
     width: 10rem;
     max-width: 10rem; }
 
+.min-height-4 {
+  min-height: 2rem; }
+
+.min-height-8 {
+  min-height: 4rem; }
+
 .size-14px {
   width: 14px;
   height: 14px; }
@@ -1085,12 +1091,6 @@ img.border-2 {
     width: 6rem !important;
     height: 6rem !important; } }
 
-.min-height-4 {
-  min-height: 2rem; }
-
-.min-height-8 {
-  min-height: 4rem; }
-
 .min-width-12-steps {
   min-width: 6rem; }
 
@@ -1159,17 +1159,14 @@ img.border-2 {
 .ml-minus-half {
   margin-left: -.25rem; }
 
-.ml-8 {
-  margin-left: 4rem; }
-
-.ml-5 {
-  margin-left: 2.5rem; }
-
 .ml-6 {
   margin-left: 3rem; }
 
 .ml-7 {
   margin-left: 3.5rem; }
+
+.ml-8 {
+  margin-left: 4rem; }
 
 .mr-8 {
   margin-right: 4rem; }
@@ -1306,6 +1303,20 @@ table.table_topics {
 .font-weight-300 {
   font-weight: 300; }
 
+blockquote {
+  background-color: #F5F5F5;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+  blockquote p:last-child {
+    margin-bottom: 0; }
+
+.blockquote {
+  background-color: #FFFFFF;
+  border-left: 4px solid #BDBDBD;
+  padding-left: 1rem;
+  color: #616161;
+  margin-bottom: 0 !important; }
+
 .font-size-125 {
   font-size: 1.25rem !important; }
 
@@ -1408,20 +1419,6 @@ pre {
 .text-secondary {
   color: #757575 !important; }
 
-blockquote {
-  background-color: #F5F5F5;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-  blockquote p:last-child {
-    margin-bottom: 0; }
-
-.blockquote {
-  background-color: #FFFFFF;
-  border-left: 4px solid #BDBDBD;
-  padding-left: 1rem;
-  color: #616161;
-  margin-bottom: 0 !important; }
-
 .activity__lure {
   border: 1px solid #E0E0E0;
   border-radius: 4px;
@@ -1485,40 +1482,6 @@ blockquote {
       color: #757575;
       margin-top: 2px;
       margin-bottom: 1rem; }
-
-.block__check_list {
-  border: 1px solid #E0E0E0;
-  border-radius: 2px;
-  width: 100%;
-  display: table; }
-  .block__check_list .header {
-    padding: .75rem 1rem;
-    border-bottom: 1px solid #E0E0E0;
-    border-radius: 0;
-    font-weight: 500; }
-  .block__check_list .content {
-    padding: .5rem 1rem; }
-    .block__check_list .content ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: table; }
-      .block__check_list .content ul li {
-        padding-left: 30px;
-        margin: .75rem 0; }
-      .block__check_list .content ul li.completed {
-        padding-left: 0;
-        color: #9E9E9E;
-        text-decoration: line-through; }
-        .block__check_list .content ul li.completed .icon {
-          display: table-cell;
-          width: 18px; }
-          .block__check_list .content ul li.completed .icon img {
-            width: 18px;
-            height: 18px; }
-        .block__check_list .content ul li.completed .message {
-          display: table-cell;
-          padding-left: 12px; }
 
 .block__first_answer {
   border: 1px solid #E3F2FD;
