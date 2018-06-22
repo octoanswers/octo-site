@@ -1,9 +1,10 @@
 
+
 <!-- navbar -->
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img class="rounded d-inline-block align-top opacity-80 hover-opacity-100" src="../../../assets/img/octo-logo-30x30.svg" width="30" height="30" alt="Octoanswers">
+            <img class="rounded d-inline-block align-top" src="../../../assets/img/octo-logo-30x30.svg" width="30" height="30" alt="Octoanswers">
             <span class="ml-2 d-inline d-sm-none">Octoanswers<span>
         </a>
 
@@ -13,10 +14,8 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item d-sm-none d-md-inline-block">
-                    <a class="nav-link color-primary font-weight-600" href="#">
-                        О сайте
-                    </a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Лента</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Песочница</a>
@@ -44,9 +43,9 @@
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button class="btn btn-outline-secondary my-2 my-sm-0" role="button">
-                        Войти
-                    </button>
+                    <a class="user-avatar my-2 my-sm-0" href="#">
+                        <img src="../../img/5_100.jpg" alt="User">
+                    </a>
                 </li>
             </ul>
         </div>
@@ -54,35 +53,4 @@
 </nav>
 <!-- / navbar -->
 
-
-<!-- modal_ask -->
-<div class="modal fade" id="modal_ask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                    Новый вопрос
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="form__question_create">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label>
-                            Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.
-                        </label>
-                        <textarea class="form-control" id="question_title" rows="6" placeholder="Какой у вас вопрос?"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" id="form__question_create__submit" class="btn btn-block btn-primary">
-                        Задать вопрос
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- / modal_ask -->
+<!-- @import "modal/ask.html" -->
