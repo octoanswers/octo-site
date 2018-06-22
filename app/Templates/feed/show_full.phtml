@@ -13,12 +13,12 @@
 
                 <?php include_once TEMPLATE_PATH.'/feed/block/ask_question.phtml'; ?>
 
-                <?php include_once TEMPLATE_PATH.'/feed/lure/set_real_name.phtml'; ?>
-                <?php include_once TEMPLATE_PATH.'/feed/lure/set_signature.phtml'; ?>
-                <?php include_once TEMPLATE_PATH.'/feed/lure/follow_3_topics.phtml'; ?>
-                <?php include_once TEMPLATE_PATH.'/feed/lure/write_answer.phtml'; ?>
-                <?php include_once TEMPLATE_PATH.'/feed/lure/follow_3_users.phtml'; ?>
-                <?php include_once TEMPLATE_PATH.'/feed/lure/follow_3_questions.phtml'; ?>
+                <?php include_once TEMPLATE_PATH.'/feed/block/lure/set_real_name.phtml'; ?>
+                <?php include_once TEMPLATE_PATH.'/feed/block/lure/set_signature.phtml'; ?>
+                <?php include_once TEMPLATE_PATH.'/feed/block/lure/follow_3_topics.phtml'; ?>
+                <?php include_once TEMPLATE_PATH.'/feed/block/lure/follow_3_questions.phtml'; ?>
+                <?php include_once TEMPLATE_PATH.'/feed/block/lure/follow_3_users.phtml'; ?>
+                <?php // include_once TEMPLATE_PATH.'/feed/block/lure/write_answer.phtml'; ?>
 
                 <?php if (isset($this->activities)): ?>
                     <?php foreach ($this->activities as $activity):

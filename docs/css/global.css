@@ -265,8 +265,8 @@ body {
 
 .btn-primary {
   color: #FFFFFF;
-  background-color: #1e88e5;
-  border-color: #1e88e5; }
+  background-color: #3498db;
+  border-color: #3498db; }
   .btn-primary:hover {
     color: #FFFFFF;
     background-color: #1976D2;
@@ -302,13 +302,13 @@ body {
   border-color: #FFC107; }
 
 .btn-outline-primary {
-  color: #1e88e5;
+  color: #3498db;
   border-color: #BBDEFB;
   background-color: transparent; }
 
 .btn-outline-primary:hover {
-  color: #1e88e5;
-  border-color: #1e88e5;
+  color: #3498db;
+  border-color: #3498db;
   background-color: transparent; }
 
 .btn-outline-secondary {
@@ -430,7 +430,7 @@ body {
   color: #64B5F6; }
 
 .color-primary {
-  color: #1e88e5 !important; }
+  color: #3498db !important; }
 
 .color-primary-dark {
   color: #1976D2; }
@@ -445,7 +445,7 @@ body {
   background-color: #64B5F6; }
 
 .bg-color-primary {
-  background-color: #1e88e5; }
+  background-color: #3498db; }
 
 .bg-color-primary-dark {
   background-color: #1976D2; }
@@ -1190,7 +1190,7 @@ img.border-2 {
   height: 1rem; }
 
 .status-primary {
-  background-color: #1e88e5; }
+  background-color: #3498db; }
 
 .status-positive {
   background-color: #4caf50; }
@@ -1268,7 +1268,7 @@ table.table_topics {
     color: #616161; }
     .title a:hover {
       text-decoration: none;
-      color: #1e88e5; }
+      color: #3498db; }
 
 .h-block {
   font-size: 1rem;
@@ -1365,6 +1365,12 @@ a.muted {
 small, .small {
   font-size: .875rem; }
 
+.font-size-sm {
+  font-size: .875rem; }
+
+.font-size-xs {
+  font-size: .75rem; }
+
 .small-xs {
   font-size: .75rem; }
 
@@ -1418,43 +1424,6 @@ pre {
 
 .text-secondary {
   color: #757575 !important; }
-
-.activity__lure {
-  border: 1px solid #E0E0E0;
-  border-radius: 4px;
-  padding: 1.5rem;
-  width: 100%;
-  display: table;
-  background-color: #FFFFFF; }
-  .activity__lure .icon {
-    display: table-cell;
-    vertical-align: top;
-    width: 4rem; }
-    .activity__lure .icon img {
-      display: block;
-      width: 4rem;
-      height: 4rem; }
-  .activity__lure .info {
-    padding-left: 1.75rem;
-    display: table-cell;
-    vertical-align: middle; }
-    .activity__lure .info p.title {
-      font-weight: 700;
-      line-height: 1.4;
-      color: #212121;
-      margin-top: 2px;
-      margin-bottom: 1rem; }
-    .activity__lure .info p.message {
-      line-height: 1.4;
-      color: #212121;
-      margin-bottom: 1.25rem; }
-    .activity__lure .info a.btn {
-      border: 1px solid #EEEEEE;
-      background-color: #EEEEEE;
-      color: #212121; }
-      .activity__lure .info a.btn:hover {
-        border: 1px solid #E0E0E0;
-        background-color: #E0E0E0; }
 
 .block__add_image {
   border: 1px dashed #BDBDBD;

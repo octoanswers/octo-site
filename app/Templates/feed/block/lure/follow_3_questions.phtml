@@ -1,0 +1,21 @@
+
+<?php if ($this->isShowQuestionsFollowLure): ?>
+    <!-- lure follow_3_questions -->
+    <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
+        <div class="mr-3 d-none d-sm-block">
+            <img class="size-4 rounded mt-1" src="https://png.icons8.com/small/32/3498db/questions.png">
+        </div>
+        <div class="width-full">
+            <div class="color-gray-900 font-weight-600 mb-2">
+                Подпишитесь на несколько вопросов
+            </div>
+            <div class="font-size-sm color-gray-700 mb-3">
+                Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три или более вопроса.
+            </div>
+            <a  class="btn btn-sm btn-outline-primary" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
+                Посмотреть вопросы
+            </a>
+        </div>
+    </div>
+    <!-- / lure follow_3_questions -->
+<?php endif; ?>
