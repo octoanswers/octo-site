@@ -1,5 +1,6 @@
 
 @import "typography/_blockquote";
+@import "typography/_small";
 
 .font-size-125 {
     font-size: 1.25rem !important;
@@ -48,21 +49,7 @@ a.muted {
     color: $color-gray-500;
 }
 
-small, .small {
-    font-size: .875rem;
-}
-
-.font-size-sm {
-    font-size: .875rem; // 14px
-}
-
-.font-size-xs {
-    font-size: .75rem; // 12px
-}
-
-.small-xs {
-    font-size: .75rem;
-}
+//
 
 .font-weight-300 {
     font-weight: 300;

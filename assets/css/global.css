@@ -1317,6 +1317,12 @@ blockquote {
   color: #616161;
   margin-bottom: 0 !important; }
 
+small, .small {
+  font-size: .875rem; }
+
+.small-xs {
+  font-size: .75rem; }
+
 .font-size-125 {
   font-size: 1.25rem !important; }
 
@@ -1340,7 +1346,7 @@ ul {
   margin-bottom: 1.5rem; }
 
 a {
-  color: #1e88e5; }
+  color: #3498db; }
   a:hover {
     color: #1976d2; }
 
@@ -1361,18 +1367,6 @@ a.no-underline-hover:hover {
 
 a.muted {
   color: #9E9E9E; }
-
-small, .small {
-  font-size: .875rem; }
-
-.font-size-sm {
-  font-size: .875rem; }
-
-.font-size-xs {
-  font-size: .75rem; }
-
-.small-xs {
-  font-size: .75rem; }
 
 .font-weight-300 {
   font-weight: 300; }
