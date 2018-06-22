@@ -23,13 +23,31 @@
                 <?php if (isset($this->activities)): ?>
                     <?php foreach ($this->activities as $activity):
                         switch ($activity['activity_type']) {
+                            // @TODO Bad
+                            case 'Q_RENAMED_BY_U':
+                                $data = $activity['data'];
+                                require TEMPLATE_PATH.'/common/activity/f_q_renamed_by_u.phtml';
+                                break;
+                            // @TODO Bad
+                            case 'U_RENAME_Q':
+                                $data = $activity['data'];
+                                require TEMPLATE_PATH.'/common/activity/f_u_rename_q.phtml';
+                                break;
+                            // @TODO Bad
+                            case 'F_U_FOLLOW_H':
+                                $data = $activity['data'];
+                                require TEMPLATE_PATH.'/common/activity/f_u_follow_t.phtml';
+                                break;
+                            // @TODO Bad
+                            case 'F_H_ADDED_Q':
+                                $data = $activity['data'];
+                                require TEMPLATE_PATH.'/common/activity/f_t_added_q.phtml';
+                                break;
                             case 'F_U_UPDATE_A':
                             case 'F_U_FOLLOW_Q':
-                            case 'F_U_FOLLOW_H':
                             case 'F_U_FOLLOW_U':
                             case 'U_RENAME_Q':
                             case 'U_UPDATE_SIGNATURE':
-                            case 'F_H_ADDED_Q':
                             case 'followed_U_asked_Q':
                             case 'followed_U_repost_Q':
                             case 'followed_H_got_achievement':
