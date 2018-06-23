@@ -10,4 +10,15 @@ trait Question_Trait
 
         return null;
     }
+
+    public function getFirstTwoTopics()
+    {
+        if (count($this->topics) >= 2) {
+            $topics_slice = array_slice($this->topics, 0, 2);
+        } else {
+            $topics_slice = $this->topics;
+        }
+
+        return $topics_slice;
+    }
 }
