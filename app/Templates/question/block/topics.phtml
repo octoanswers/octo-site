@@ -1,11 +1,11 @@
 
 <?php if (count($this->question->getTopics())): ?>
-    <div class="mt-5">
+    <div class="mt-5" id="question_topics_list">
 
         <div class="border-bottom pb-3 mb-4">
             <span class="title">Темы вопроса</span>
         </div>
-        
+
         <?php foreach ($this->question->getTopics() as $topic): ?>
             <a class="badge badge-secondary mr-2 mb-3" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
                 <?= $topic ?>

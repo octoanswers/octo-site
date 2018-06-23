@@ -4,7 +4,7 @@
 .badge {
     font-size: 1rem;
     font-weight: 400;
-    border-radius: $border-radius-base;
+    border-radius: $border-radius;
     border-width: 1px;
     border-style: solid;
 
@@ -34,8 +34,8 @@ a.badge:hover {
     padding: .25rem .5rem;
 
     .badge-icon {
-        width: .625rem;
-        height: .625rem;
+        width: .75rem;
+        height: .75rem;
         margin-left: 0;
         margin-top: -2px;
         margin-right: .125rem;
@@ -60,7 +60,7 @@ a.badge-dark {
 span.badge-primary a.badge-primary {
     border-color: $color-blue-50;
     background-color: $color-blue-50;
-    color: $color-blue-800;
+    color: $color-primary;
 }
 
 a.badge-primary:hover {
@@ -72,15 +72,15 @@ a.badge-primary:hover {
 // Secondary badge
 
 span.badge-secondary, a.badge-secondary {
-    border-color: $color-blue-grey-50;
-    background-color: $color-blue-grey-50;
-    color: $color-blue-grey-800;
+    border-color: $color-gray-200;
+    background-color: $color-gray-200;
+    color: $color-gray-800;
 }
 
 a.badge-secondary:hover {
-    border-color: $color-blue-grey-100 !important;
-    background-color: $color-blue-grey-100 !important;
-    color: $color-blue-grey-800 !important;
+    border-color: $color-gray-300 !important;
+    background-color: $color-gray-300 !important;
+    color: $color-gray-800 !important;
 }
 
 // Success badge

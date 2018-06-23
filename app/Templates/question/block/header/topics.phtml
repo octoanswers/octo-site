@@ -1,0 +1,40 @@
+
+<!-- header_topics -->
+<?php if (count($this->question->getTopics())): ?>
+
+    <?php foreach ($this->question->getTopics() as $topic): ?>
+        <a class="badge badge-sm badge-secondary mb-2 mr-2" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
+            <?= $topic ?>
+        </a>
+    <?php endforeach; ?>
+
+    <a class="badge badge-sm badge-secondary mb-2 mr-2" data-scroll href="#question_topics_list">
+        +1
+    </a>
+
+    <?php if ($this->authUser): ?>
+        <a class="badge badge-sm badge-primary mb-2 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+            <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
+            <?= $this->l->t('question', 'update_topics', 'btn') ?>
+        </a>
+    <?php endif; ?>
+
+<?php else: ?>
+
+    <?php if ($this->authUser): ?>
+        <!-- / header_topics -->
+        <a class="badge badge-sm badge-primary mb-2 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+            <img class="badge-icon" src="https://png.icons8.com/small/14/3498db/settings.png">
+            Задать тематику вопроса
+        </a>
+        <!-- / header_topics -->
+    <?php else: ?>
+        <!-- / fake header_topics -->
+        <a class="badge badge-sm badge-primary mb-2 mr-2" href="#">
+            <img class="badge-icon" src="https://png.icons8.com/small/14/3498db/settings.png">
+            Задать тематику вопроса
+        </a>
+        <!-- / fake header_topics -->
+    <?php endif; ?>
+
+<?php endif; ?>
