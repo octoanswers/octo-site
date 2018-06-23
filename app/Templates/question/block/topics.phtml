@@ -1,25 +1,44 @@
 
 <?php if (count($this->question->getTopics())): ?>
-    <div class="mt-5" id="question_topics_list">
 
-        <div class="border-bottom pb-3 mb-4">
-            <span class="title">Темы вопроса</span>
+    <!-- topics -->
+    <div class="box mt-4" id="question_topics_list">
+        <div class="box-header">
+
+            <?php if ($this->authUser): ?>
+                <div class="float-right">
+                    <a class="small" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>"><img class="size-16px mt-minus-2px" src="https://png.icons8.com/material/16/3498db/edit.png"></a>
+                    <a class="small" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+                        Изменить
+                    </a>
+                </div>
+            <?php endif; ?>
+
+            <span class="color-gray-800 font-weight-600">
+                Темы вопроса
+            </span>
+        </div>
+        <div class="box-body pt-4 pb-1">
+
+            <?php foreach ($this->question->getTopics() as $topic): ?>
+                <a class="badge badge-secondary mb-3 mr-2" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
+                    <?= $topic ?>
+                </a>
+            <?php endforeach; ?>
+
+            <?php if ($this->authUser): ?>
+                <a class="badge badge-primary mb-3 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+                    <img class="size-16px" src="https://png.icons8.com/small/16/1565c0/plus-math.png">
+                </a>
+            <?php endif; ?>
+
         </div>
 
-        <?php foreach ($this->question->getTopics() as $topic): ?>
-            <a class="badge badge-secondary mr-2 mb-3" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
-                <?= $topic ?>
-            </a>
-        <?php endforeach; ?>
-
-        <?php if ($this->authUser): ?>
-            <a class="badge badge-primary mb-3 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-                <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
-                <?= $this->l->t('question', 'update_topics', 'btn') ?>
-            </a>
-        <?php endif; ?>
     </div>
+    <!-- / topics -->
+
 <?php else: ?>
+
     <?php if ($this->authUser): ?>
         <div class="mt-5">
             <a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
@@ -28,4 +47,5 @@
             </a>
         </div>
     <?php endif; ?>
+
 <?php endif; ?>
