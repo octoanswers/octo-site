@@ -1419,33 +1419,6 @@ pre {
 .text-secondary {
   color: #757575 !important; }
 
-.block__add_image {
-  border: 1px dashed #BDBDBD;
-  border-radius: 2px;
-  padding: 1rem 1rem;
-  width: 100%;
-  display: table; }
-  .block__add_image .icon {
-    display: table-cell;
-    vertical-align: top;
-    width: 3rem; }
-    .block__add_image .icon a {
-      display: block;
-      width: 3rem;
-      height: 3rem; }
-      .block__add_image .icon a img {
-        width: 3rem;
-        height: 3rem; }
-  .block__add_image .info {
-    padding-left: 1rem;
-    display: table-cell;
-    vertical-align: middle; }
-    .block__add_image .info p.message {
-      line-height: 1.4;
-      color: #757575;
-      margin-top: 2px;
-      margin-bottom: 1rem; }
-
 .block__first_answer {
   border: 1px solid #E3F2FD;
   background-color: #E3F2FD;
