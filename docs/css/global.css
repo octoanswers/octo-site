@@ -156,41 +156,41 @@ a.badge-success:hover {
 span.badge-warning, a.badge-warning {
   border-color: #dbc234;
   background-color: #dbc234;
-  color: #424242; }
+  color: #000000; }
 
 a.badge-warning:hover {
   border-color: #dbc234 !important;
   background-color: #dbc234 !important;
-  color: #424242 !important; }
+  color: #000000 !important; }
 
 span.badge-danger, a.badge-danger {
-  border-color: #ffebee;
-  background-color: #ffebee;
-  color: #d32f2f; }
+  border-color: #db4534;
+  background-color: #db4534;
+  color: #FFFFFF; }
 
 a.badge-danger:hover {
-  border-color: #ffcdd2 !important;
-  background-color: #ffcdd2 !important;
-  color: #d32f2f !important; }
+  border-color: #db4534 !important;
+  background-color: #db4534 !important;
+  color: #FFFFFF !important; }
 
 span.badge-light, a.badge-light {
-  border-color: #eceff1;
-  background-color: #eceff1;
-  color: #78909c; }
+  border-color: #FAFAFA;
+  background-color: #FAFAFA;
+  color: #BDBDBD; }
 
 a.badge-light:hover {
-  border-color: #cfd8dc !important;
-  background-color: #cfd8dc !important;
-  color: #78909c !important; }
+  border-color: #F5F5F5 !important;
+  background-color: #F5F5F5 !important;
+  color: #BDBDBD !important; }
 
 span.badge-dark, a.badge-dark {
-  border-color: #546e7a;
-  background-color: #546e7a;
+  border-color: #757575;
+  background-color: #757575;
   color: #FFFFFF; }
 
 a.badge-dark:hover {
-  border-color: #78909c !important;
-  background-color: #78909c !important;
+  border-color: #BDBDBD !important;
+  background-color: #BDBDBD !important;
   color: #FFFFFF !important; }
 
 body {
@@ -533,27 +533,6 @@ body {
 .bg-color-gray-300 {
   background-color: #E0E0E0; }
 
-.color_red_300 {
-  color: #e57373; }
-
-.color_red_400 {
-  color: #ef5350; }
-
-.color-red-500 {
-  color: #F44336; }
-
-.color_red_600 {
-  color: #e53935; }
-
-.color_red_700 {
-  color: #d32f2f; }
-
-.color_red_800 {
-  color: #c62828; }
-
-.color_red_900 {
-  color: #b71c1c; }
-
 .color-green-500 {
   color: #4caf50; }
 
@@ -643,9 +622,6 @@ body {
 
 .bg-color-blue {
   background-color: #2196F3; }
-
-.bg-color-indigo {
-  background-color: #3F51B5; }
 
 .dropdown_item_icon {
   width: 20px;
@@ -1156,7 +1132,7 @@ img.border-2 {
   background-color: #dbc234; }
 
 .status-negative {
-  background-color: #F44336; }
+  background-color: #db4534; }
 
 table {
   margin-bottom: 1rem; }

@@ -27,12 +27,12 @@
 }
 
 .btn-primary {
-    color: $color_white;
+    color: $color-white;
     background-color: $color-primary;
     border-color: $color-primary;
 
     &:hover {
-        color: $color_white;
+        color: $color-white;
         background-color: $color_primary_dark;
         border-color: $color_primary_dark;
     }

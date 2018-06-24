@@ -70,45 +70,8 @@ $pink_500: #E91E63;
 // Material Design Colors
 //
 
-$color_white: #FFFFFF;
-$color_black: #000000;
 
 
-$color_red_50: #ffebee;
-$color_red_100: #ffcdd2;
-$color_red_200: #ef9a9a;
-$color_red_300: #e57373;
-$color_red_400: #ef5350;
-$color_red_500: #F44336; $color_red: #F44336;
-$color_red_600: #e53935;
-$color_red_700: #d32f2f;
-$color_red_800: #c62828;
-$color_red_900: #b71c1c;
-$color_red_a100: #ff8a80;
-$color_red_a200: #ff5252;
-$color_red_a400: #ff1744;
-$color_red_a700: #d50000;
-
-
-//
-//   'indigo': (
-//     '50': #e8eaf6,
-//     '100': #c5cae9,
-//     '200': #9fa8da,
-//     '300': #7986cb,
-//     '400': #5c6bc0,
-//     '500': #3f51b5,
-$color-indigo: #3F51B5;
-
-//     '600': #3949ab,
-//     '700': #303f9f,
-//     '800': #283593,
-//     '900': #1a237e,
-//     'a100': #8c9eff,
-//     'a200': #536dfe,
-//     'a400': #3d5afe,
-//     'a700': #304ffe
-//   ),
 
 
 $color-blue-50: #e3f2fd;
@@ -146,8 +109,9 @@ $color_green_a200: #69f0ae;
 $color_green_a400: #00e676;
 $color_green_a700: #00c853;
 
+// White-black gradiend for text & borders
 
-
+$color-white: #FFFFFF;
 $color-gray-50: #FAFAFA;
 $color-gray-100: #F5F5F5;
 $color-gray-200: #EEEEEE;
@@ -158,15 +122,4 @@ $color-gray-600: #757575;
 $color-gray-700: #616161;
 $color-gray-800: #424242;
 $color-gray-900: #212121;
-
-$color-blue-grey-50: #eceff1;
-$color-blue-grey-100: #cfd8dc;
-$color-blue-grey-200: #b0bec5;
-$color-blue-grey-300: #90a4ae;
-$color-blue-grey-400: #78909c;
-$color-blue-grey-500: #607d8b;
-$color-blue-grey-600: #546e7a;
-$color-blue-grey-700: #455a64;
-$color-blue-grey-800: #37474f;
-$color-blue-grey-900: #263238;
-$color-blue-grey-1000: #11171a;
+$color-black: #000000;

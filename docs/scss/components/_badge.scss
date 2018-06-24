@@ -102,27 +102,27 @@ a.badge-success:hover {
 span.badge-warning, a.badge-warning {
     border-color: $color-triadic-yellow;
     background-color: $color-triadic-yellow;
-    color: $color-gray-800;
+    color: $color-black;
 }
 
 a.badge-warning:hover {
     border-color: $color-triadic-yellow !important;
     background-color: $color-triadic-yellow !important;
-    color: $color-gray-800 !important;
+    color: $color-black !important;
 }
 
 // Danger badge
 
 span.badge-danger, a.badge-danger {
-    border-color: $color-red-50;
-    background-color: $color-red-50;
-    color: $color-red-700;
+    border-color: $color-split-red;
+    background-color: $color-split-red;
+    color: $color-white;
 }
 
 a.badge-danger:hover {
-    border-color: $color-red-100 !important;
-    background-color: $color-red-100 !important;
-    color: $color-red-700 !important;
+    border-color: $color-split-red !important;
+    background-color: $color-split-red !important;
+    color: $color-white !important;
 }
 
 // Info badge
@@ -142,27 +142,27 @@ a.badge-info:hover {
 // Light badge
 
 span.badge-light, a.badge-light {
-    border-color: $color-blue-grey-50;
-    background-color: $color-blue-grey-50;
-    color: $color-blue-grey-400;
+    border-color: $color-gray-50;
+    background-color: $color-gray-50;
+    color: $color-gray-400;
 }
 
 a.badge-light:hover {
-    border-color: $color-blue-grey-100 !important;
-    background-color: $color-blue-grey-100 !important;
-    color: $color-blue-grey-400 !important;
+    border-color: $color-gray-100 !important;
+    background-color: $color-gray-100 !important;
+    color: $color-gray-400 !important;
 }
 
 // Dark badge
 
 span.badge-dark, a.badge-dark {
-    border-color: $color-blue-grey-600;
-    background-color: $color-blue-grey-600;
+    border-color: $color-gray-600;
+    background-color: $color-gray-600;
     color: $color-white;
 }
 
 a.badge-dark:hover {
-    border-color: $color-blue-grey-400 !important;
-    background-color: $color-blue-grey-400 !important;
+    border-color: $color-gray-400 !important;
+    background-color: $color-gray-400 !important;
     color: $color-white !important;
 }
