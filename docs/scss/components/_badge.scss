@@ -100,15 +100,15 @@ a.badge-success:hover {
 // Warning badge
 
 span.badge-warning, a.badge-warning {
-    border-color: $color-orange-50;
-    background-color: $color-orange-50;
-    color: $color-orange-800;
+    border-color: $color-triadic-yellow;
+    background-color: $color-triadic-yellow;
+    color: $color-gray-800;
 }
 
 a.badge-warning:hover {
-    border-color: $color-orange-100 !important;
-    background-color: $color-orange-100 !important;
-    color: $color-orange-800 !important;
+    border-color: $color-triadic-yellow !important;
+    background-color: $color-triadic-yellow !important;
+    color: $color-gray-800 !important;
 }
 
 // Danger badge
