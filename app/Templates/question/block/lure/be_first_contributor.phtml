@@ -1,18 +1,26 @@
 
 <?php if (!$this->answer->getText()): ?>
     <?php if ($this->authUser): ?>
-        <div class="block__first_answer my-5">
-            <div class="icon">
-                <img src="https://png.icons8.com/wired/64/1976D2/trophy.png" alt="<?= $this->l->t('block', 'first_answer', 'title') ?>">
+
+        <!-- lure be_first_contributor -->
+        <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-4">
+            <div class="mr-3 d-none d-sm-block">
+                <img class="size-4 rounded mt-1" src="https://png.icons8.com/small/32/e51e24/trophy.png" alt="<?= $this->l->t('block', 'first_answer', 'title') ?>">
             </div>
-            <div class="info">
-                <p class="title"><?= $this->l->t('block', 'first_answer', 'title') ?></p>
-                <p class="message"><?= $this->l->t('block', 'first_answer', 'lead') ?></p>
-                <a class="btn btn-primary" href="<?= $this->question->getEditURL($this->lang) ?>">
+            <div class="width-full">
+                <div class="color-gray-900 font-weight-600 mb-2">
+                    <?= $this->l->t('block', 'first_answer', 'title') ?>
+                </div>
+                <div class="small color-gray-700 mb-3">
+                    <?= $this->l->t('block', 'first_answer', 'lead') ?>
+                </div>
+                <a  class="btn btn-sm btn-outline-primary" href="<?= $this->question->getEditURL($this->lang) ?>">
                     <?= $this->l->t('block', 'first_answer', 'answer_btn') ?>
                 </a>
             </div>
         </div>
+        <!-- / lure be_first_contributor -->
+
     <?php else: ?>
         <div class="alert alert-secondary pb-4 pl-5 pr-5 mb-5 text-center">
             <div class="mt-3">

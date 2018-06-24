@@ -1419,36 +1419,6 @@ pre {
 .text-secondary {
   color: #757575 !important; }
 
-.block__first_answer {
-  border: 1px solid #E3F2FD;
-  background-color: #E3F2FD;
-  border-radius: 4px;
-  padding: 1.5rem 1.5rem 1.75rem 1.5rem;
-  width: 100%;
-  display: table; }
-  .block__first_answer .icon {
-    display: table-cell;
-    vertical-align: top;
-    width: 4rem; }
-    .block__first_answer .icon img {
-      display: block;
-      width: 4rem;
-      height: 4rem; }
-  .block__first_answer .info {
-    padding-left: 1.75rem;
-    display: table-cell;
-    vertical-align: middle; }
-    .block__first_answer .info p.title {
-      font-weight: 700;
-      line-height: 1.4;
-      color: #212121;
-      margin-top: 2px;
-      margin-bottom: 1rem; }
-    .block__first_answer .info p.message {
-      line-height: 1.4;
-      color: #212121;
-      margin-bottom: 1.25rem; }
-
 .block__follow_question {
   border: 1px solid #E0E0E0;
   border-radius: 4px;
