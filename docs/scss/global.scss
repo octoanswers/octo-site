@@ -26,9 +26,6 @@
 @import "components/_title";
 @import "components/_typography";
 
-@import "components/block/follow_question";
-@import "components/block/improve_answer";
-@import "components/block/info";
 
 .container-fluid {
     max-width: $breakpoint-lg - 1px;
