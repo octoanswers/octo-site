@@ -1,0 +1,48 @@
+
+.btn-primary {
+    color: $color-primary-700;
+    background-color: $color-primary-50;
+    border-color: $color-primary-200;
+
+    &:hover {
+        color: $color-primary-700;
+        background-color: $color-primary-100;
+        border-color: $color-primary-200;
+    }
+}
+
+.btn-secondary {
+    color: $color-gray-800;
+    background-color: $color-gray-100;
+    border-color: $color-gray-400;
+
+    &:hover {
+        color: $color-gray-800;
+        background-color: $color-gray-300;
+        border-color: $color-gray-400;
+    }
+}
+
+.btn-success {
+    color: $color-success-800;
+    background-color: $color-success-100;
+    border-color: $color-success-300;
+
+    &:hover {
+        color: $color-success-800;
+        background-color: $color-success-200;
+        border-color: $color-success-300;
+    }
+}
+
+.btn-warning {
+    color: $color-secondary-700;
+    background-color: $color-secondary-100;
+    border-color: $color-secondary-300;
+
+    &:hover {
+        color: $color-secondary-700;
+        background-color: $color-secondary-200;
+        border-color: $color-secondary-300;
+    }
+}
