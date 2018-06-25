@@ -8,9 +8,9 @@
     border-width: 1px;
     border-style: solid;
 
-    border-color: $color-blue-50;
-    background-color: $color-blue-50;
-    color: $color-blue-800;
+    border-color: $color-primary-100;
+    background-color: $color-primary-100;
+    color: $color-primary-800;
     padding: .5em .75em;
     white-space: nowrap;
     vertical-align: middle;
@@ -58,15 +58,15 @@ a.badge-dark {
 // Primary badge
 
 span.badge-primary a.badge-primary {
-    border-color: $color-blue-50;
-    background-color: $color-blue-50;
-    color: $color-primary;
+    border-color: $color-primary-100;
+    background-color: $color-primary-100;
+    color: $color-primary-800;
 }
 
 a.badge-primary:hover {
-    border-color: $color-blue-100 !important;
-    background-color: $color-blue-100 !important;
-    color: $color-blue-800 !important;
+    border-color: $color-primary-100 !important;
+    background-color: $color-primary-100 !important;
+    color: $color-primary-800 !important;
 }
 
 // Secondary badge
@@ -86,43 +86,43 @@ a.badge-secondary:hover {
 // Success badge
 
 span.badge-success, a.badge-success {
-    border-color: $color-analogous-green;
-    background-color: $color-analogous-green;
-    color: $color-white;
+    border-color: $color-success-100;
+    background-color: $color-success-100;
+    color: $color-success-800;
 }
 
 a.badge-success:hover {
-    border-color: $color-analogous-green !important;
-    background-color: $color-analogous-green !important;
-    color: $color-white !important;
+    border-color: $color-success-200 !important;
+    background-color: $color-success-200 !important;
+    color: $color-success-800 !important;
 }
 
 // Warning badge
 
 span.badge-warning, a.badge-warning {
-    border-color: $color-triadic-yellow;
-    background-color: $color-triadic-yellow;
-    color: $color-black;
+    border-color: $color-secondary-100;
+    background-color: $color-secondary-100;
+    color: $color-secondary-800;
 }
 
 a.badge-warning:hover {
-    border-color: $color-triadic-yellow !important;
-    background-color: $color-triadic-yellow !important;
-    color: $color-black !important;
+    border-color: $color-secondary-100 !important;
+    background-color: $color-secondary-100 !important;
+    color: $color-secondary-800 !important;
 }
 
 // Danger badge
 
 span.badge-danger, a.badge-danger {
-    border-color: $color-split-red;
-    background-color: $color-split-red;
-    color: $color-white;
+    border-color: $color-danger-100;
+    background-color: $color-danger-100;
+    color: $color-danger-800;
 }
 
 a.badge-danger:hover {
-    border-color: $color-split-red !important;
-    background-color: $color-split-red !important;
-    color: $color-white !important;
+    border-color: $color-danger-100 !important;
+    background-color: $color-danger-100 !important;
+    color: $color-danger-800 !important;
 }
 
 // Info badge

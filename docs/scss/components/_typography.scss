@@ -17,10 +17,10 @@ ins { background-color: #cdffd8; text-decoration: none; }
 ul { padding-left: 1.25rem; margin-bottom: 1.5rem; }
 
 a {
-    color: $color-primary;
+    color: $color-primary-500;
 
     &:hover {
-        color: $color-blue-700;
+        color: $color-primary-600;
     }
 }
 

@@ -28,13 +28,13 @@
 
 .btn-primary {
     color: $color-white;
-    background-color: $color-primary;
-    border-color: $color-primary;
+    background-color: $color-primary-500;
+    border-color: $color-primary-500;
 
     &:hover {
         color: $color-white;
-        background-color: $color_primary_dark;
-        border-color: $color_primary_dark;
+        background-color: $color-primary-700;
+        border-color: $color-primary-700;
     }
 }
 
@@ -51,31 +51,39 @@
 }
 
 .btn-success {
-    color: $color-white;
-    background-color: $color-success;
-    border-color: $color-success;
+    color: $color-success-800;
+    background-color: $color-success-100;
+    border-color: $color-success-300;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-success-800;
+        border-color: $color-success-800;
+    }
 }
-.btn-success:hover { color: #fff; background-color: #388E3C; border-color: #388E3C; }
 
 .btn-warning {
     color: $color-white;
-    background-color: $color-warning;
-    border-color: $color-warning;
+    background-color: $color-secondary-600;
+    border-color: $color-secondary-600;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-secondary-700;
+        border-color: $color-secondary-700;
+    }
 }
-.btn-warning:hover {
-    color: #333;
-    background-color: #FFC107; border-color: #FFC107; }
 
 // Outline buttons
 
 .btn-outline-primary {
-    color: $color-primary;
-    border-color: $color-primary-lightest;
+    color: $color-primary-500;
+    border-color: $color-primary-100;
     background-color: transparent;
 }
 .btn-outline-primary:hover {
-    color: $color-primary;
-    border-color: $color-primary;
+    color: $color-primary-500;
+    border-color: $color-primary-500;
     background-color: transparent;
 }
 
@@ -92,22 +100,22 @@
 }
 
 .btn-outline-success {
-    color: $color-success;
-    border-color: $color-success-lightest;
+    color: $color-success-500;
+    border-color: $color-success-100;
 }
 .btn-outline-success:hover {
-    color: $color-success;
-    border-color: $color-success;
+    color: $color-success-500;
+    border-color: $color-success-100;
     background-color: transparent;
 }
 
 .btn-outline-warning {
-    color: $color-warning;
-    border-color: $color-warning-lightest;
+    color: $color-secondary-500;
+    border-color: $color-secondary-100;
 }
 .btn-outline-warning:hover {
-    color: $color-warning;
-    border-color: $color-warning;
+    color: $color-secondary-500;
+    border-color: $color-secondary-500;
     background-color: transparent;
 }
 
@@ -175,24 +183,5 @@
         color: $color-white;
         background-color: #2594e8;
         border-color: #2594e8;
-    }
-}
-
-
-.btn-extra-pink {
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 1rem 3rem;
-    border-radius: 4px;
-    background-color: $pink_400;
-    margin-top: 2rem;
-    font-weight: 600;
-    letter-spacing: .25px;
-    border: 1px solid $pink_400;
-    box-shadow: none !important;
-
-    &:hover {
-        background-color: $pink_500;
-        border: 1px solid $pink_500;
     }
 }

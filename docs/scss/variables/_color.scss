@@ -1,98 +1,99 @@
 
 //
-// Main colors
+// Main color
 //
 
-$color-primary: #3498db; // (blue)
+$color-primary-100: #C7E2F5;
+$color-primary-200: #A2D0EE;
+$color-primary-300: #7DBDE8;
+$color-primary-400: #58AAE1;
+$color-primary-500: #3498db; // main color (blue)
+$color-primary-600: #2B7DB4;
+$color-primary-700: #22618C;
+$color-primary-800: #184664;
+$color-primary-900: #0F2A3C;
 
 //
-// Complementary colors
+// Secondary & tertiary Complementary colors
 //
-
 // Colors calculated with https://www.sessions.edu/color-calculator/
-
-// Triadic
-
-$color-triadic-pink: #db3466;
-$color-triadic-yellow: #dbc234;
-
-// Split complementary
-
-$color-split-red: #db4534; // For "warning" highligts
-$color-split-yellow: #db9834;
-
-// Analogous
-
-$color-analogous-green: #34db77; // For "success" highligts
-$color-analogous-purple: #5634db;
-
+//
 // Full coolors Palette
 // https://coolors.co/3498db-db3466-dbc234-34db77-db4534
-
-
-
-
-
-//
-// Primary & secondary colors
 //
 
-$color-primary-lightest: #BBDEFB; // blue 100
-$color-primary-light: #64B5F6; // blue 300
+// Secondary & tertiary colors - it's a triadic complementary
 
-$color_primary_dark: #1976D2; // blue 700
-$color_primary_darkest: #0D47A1; // blue 900
+$color-secondary-100: #F5EEC7;
+$color-secondary-200: #EEE3A2;
+$color-secondary-300: #E8D87D;
+$color-secondary-400: #E1CD58;
+$color-secondary-500: #dbc234; // main color (yellow)
+$color-secondary-600: #B49F2B;
+$color-secondary-700: #8C7C22;
+$color-secondary-800: #645918;
+$color-secondary-900: #3C350F;
 
-$color_secondary_lightest: #b0bec5; // blue gray 200
-$color_secondary_light: #78909c; // blue gray 400
-$color_secondary: #546e7a; // blue gray 600
-$color_secondary_dark: #37474f; // blue gray 800
-$color_secondary_darkest: #263238; // blue gray 900
-
-$color-success-lightest: #C8E6C9; // Green 100
-$color-success-light: #81C784; // Green 300
-$color-success: #43A047; // Green 600
-$color-success-dark: #388E3C; // Green 700
-$color-success-darkest: #1B5E20; // Green 900
-
-$color-warning-lightest: #FFCDD2; // Red 100
-$color-warning-light: #E57373; // Red 300
-$color-warning: #F44336; // Red 500
-$color-warning-dark: #D32F2F; // Red 700
-$color-warning-darkest: #B71C1C; // Red 100
-
-
-$pink_300: #F06292;
-$pink_400: #EC407A;
-$pink_500: #E91E63;
+$color-tertiary-100: #F5C7D5;
+$color-tertiary-200: #EEA2B9;
+$color-tertiary-300: #E87D9D;
+$color-tertiary-400: #E15881;
+$color-tertiary-500: #db3466; // main color (pink)
+$color-tertiary-600: #B42B54;
+$color-tertiary-700: #8C2241;
+$color-tertiary-800: #64182F;
+$color-tertiary-900: #3C0F1C;
 
 //
-// Material Design Colors
+// Success, warning and etc. colors
 //
 
+// Success color
+// Analogous complementary green for primary color
 
+$color-success-100: #C7F5D9;
+$color-success-200: #A2EEC1;
+$color-success-300: #7DE8A8;
+$color-success-400: #58E18F;
+$color-success-500: #34db77; // main color (green)
+$color-success-600: #2BB462;
+$color-success-700: #228C4C;
+$color-success-800: #186437;
+$color-success-900: #0F3C21;
 
+// Warning color
+// Analogous complementary yellow for primary color
+// @ used secondary yellow
 
+// Danger color
+// Split complementary red for primary color
 
-$color-blue-50: #e3f2fd;
-$color-blue-100: #bbdefb;
-$color-blue-200: #90caf9;
-$color-blue-300: #64b5f6;
-$color-blue-400: #42a5f5;
-$color-blue-500: #2196f3;
-$color-blue: #2196F3;
-$color-blue-600: #1e88e5;
-$color-blue-700: #1976d2;
-$color-blue-800: #1565c0;
-$color-blue-900: #0d47a1;
-$color-blue-a100: #82b1ff;
-$color-blue-a200: #448aff;
-$color-blue-a400: #2979ff;
-$color-blue-a700: #2962ff;
+$color-danger-100: #F5CCC7;
+$color-danger-200: #EEAAA2;
+$color-danger-300: #E8887D;
+$color-danger-400: #E16658;
+$color-danger-500: #db4534; // main color (red)
+$color-danger-600: #B4392B;
+$color-danger-700: #8C2C22;
+$color-danger-800: #642018;
+$color-danger-900: #3C130F;
 
+// Info color
+// Analogous complementary purple for primary color
 
+$color-info-100: #D0C7F5;
+$color-info-200: #B2A2EE;
+$color-info-300: #937DE8;
+$color-info-400: #7458E1;
+$color-info-500: #5634db; // main color (purple)
+$color-info-600: #472BB4;
+$color-info-700: #37228C;
+$color-info-800: #281864;
+$color-info-900: #180F3C;
 
+//
 // White-black gradiend for text & borders
+//
 
 $color-white: #FFFFFF;
 $color-gray-50: #FAFAFA;

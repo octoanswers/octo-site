@@ -21,14 +21,14 @@
 // Status colors
 
 .status-primary {
-    background-color: $color-primary;
+    background-color: $color-primary-500;
 }
 .status-positive {
-    background-color: $color-analogous-green;
+    background-color: $color-success-500;
 }
 .status-intermediate {
-    background-color: $color-triadic-yellow;
+    background-color: $color-secondary-500;
 }
 .status-negative {
-    background-color: $color-split-red;
+    background-color: $color-danger-500;
 }
