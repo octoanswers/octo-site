@@ -28,44 +28,6 @@
   background-color: #DCEDC8;
   border-color: #DCEDC8; }
 
-.avatar {
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem; }
-
-.avatar-2, .avatar-xs {
-  width: 1rem;
-  height: 1rem; }
-
-.avatar-3, .avatar-sm {
-  width: 1.5rem;
-  height: 1.5rem; }
-
-.avatar-4 {
-  width: 2rem;
-  height: 2rem; }
-
-.avatar-6, .avatar-lg {
-  width: 48px;
-  height: 48px; }
-
-.avatar-8, .avatar-xl {
-  width: 64px;
-  height: 64px; }
-
-.avatar-10 {
-  width: 5rem;
-  height: 5rem; }
-
-.avatar-12, .avatar-xxl {
-  width: 6rem;
-  height: 6rem; }
-
-@media (min-width: 576px) {
-  .size-sm-8 {
-    width: 4rem !important;
-    height: 4rem !important; } }
-
 .avatar-group {
   display: inline-block;
   margin-left: 0.25rem; }
@@ -273,7 +235,7 @@ body {
 
 .btn-success {
   color: #228C4C;
-  background-color: #DAF8E6;
+  background-color: #ECFBF2;
   border-color: #2BB462; }
   .btn-success:hover {
     color: #228C4C;
@@ -778,6 +740,11 @@ img.border-2 {
 .size-22px {
   width: 22px;
   height: 22px; }
+
+@media (min-width: 576px) {
+  .size-sm-8 {
+    width: 4rem !important;
+    height: 4rem !important; } }
 
 .wh-32 {
   width: 32px;

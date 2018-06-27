@@ -28,6 +28,14 @@
     height: 22px;
 }
 
+// ***
+
+.size-sm-8 {
+    @media (min-width: $breakpoint_sm) {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+}
 
 .wh-32 { width: 32px; height: 32px; }
 .wh-48 { width: 48px; height: 48px; }
