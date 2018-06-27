@@ -24,14 +24,14 @@
 }
 
 .btn-success {
-    color: $color-success-800;
-    background-color: $color-success-100;
-    border-color: $color-success-300;
+    color: $color-success-700;
+    background-color: $color-success-25;
+    border-color: $color-success-600;
 
     &:hover {
-        color: $color-success-800;
-        background-color: $color-success-200;
-        border-color: $color-success-300;
+        color: $color-success-700;
+        background-color: $color-success-100;
+        border-color: $color-success-600;
     }
 }
 

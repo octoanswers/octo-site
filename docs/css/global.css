@@ -272,13 +272,13 @@ body {
     border-color: #BDBDBD; }
 
 .btn-success {
-  color: #186437;
-  background-color: #C7F5D9;
-  border-color: #7DE8A8; }
+  color: #228C4C;
+  background-color: #DAF8E6;
+  border-color: #2BB462; }
   .btn-success:hover {
-    color: #186437;
-    background-color: #A2EEC1;
-    border-color: #7DE8A8; }
+    color: #228C4C;
+    background-color: #C7F5D9;
+    border-color: #2BB462; }
 
 .btn-warning {
   color: #8C7C22;
@@ -307,13 +307,12 @@ body {
     background-color: transparent; }
 
 .btn-outline-success {
-  color: #34db77;
-  border-color: #C7F5D9; }
-
-.btn-outline-success:hover {
-  color: #34db77;
-  border-color: #C7F5D9;
-  background-color: transparent; }
+  color: #228C4C;
+  border-color: #2BB462; }
+  .btn-outline-success:hover {
+    color: #228C4C;
+    border-color: #2BB462;
+    background-color: #C7F5D9; }
 
 .btn-outline-warning {
   color: #dbc234;

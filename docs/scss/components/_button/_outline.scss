@@ -24,13 +24,14 @@
 }
 
 .btn-outline-success {
-    color: $color-success-500;
-    border-color: $color-success-100;
-}
-.btn-outline-success:hover {
-    color: $color-success-500;
-    border-color: $color-success-100;
-    background-color: transparent;
+    color: $color-success-700;
+    border-color: $color-success-600;
+
+    &:hover {
+        color: $color-success-700;
+        border-color: $color-success-600;
+        background-color: $color-success-100;
+    }
 }
 
 .btn-outline-warning {
