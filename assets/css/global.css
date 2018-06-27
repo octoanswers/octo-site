@@ -665,6 +665,15 @@ img.border-2 {
 .list-group .list-group-item.disabled {
   color: #BDBDBD; }
 
+.modal-content {
+  border-radius: 4px; }
+  .modal-content .modal-header {
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #F5F5F5; }
+  .modal-content .modal-footer {
+    border-top: 1px solid #E0E0E0;
+    background-color: #F5F5F5; }
+
 .nav-tabs {
   border-bottom: 1px solid #E0E0E0; }
   .nav-tabs .nav-link.active {
@@ -1208,12 +1217,6 @@ pre {
 
 .border-grey-500 {
   border: 1px solid #9E9E9E; }
-
-.border-top-grey-300 {
-  border-top: 1px solid #E0E0E0; }
-
-.border-bottom-grey-300 {
-  border-bottom: 1px solid #E0E0E0; }
 
 .text-warning {
   color: #FFA000 !important; }

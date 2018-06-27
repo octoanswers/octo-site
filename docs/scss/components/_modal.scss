@@ -1,0 +1,15 @@
+
+
+.modal-content {
+    border-radius: $border-radius-lg;
+
+    .modal-header {
+        border-bottom: 1px solid $color-gray-300;
+        background-color: $color-gray-100
+    }
+
+    .modal-footer {
+        border-top: 1px solid $color-gray-300;
+        background-color: $color-gray-100
+    }
+}
