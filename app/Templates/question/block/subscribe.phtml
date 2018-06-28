@@ -1,16 +1,31 @@
 
 <?php if (!$this->answer->getText() && !$this->authUser): ?>
-    <div id="alert_subscribe" class="alert alert-success mb-5 pb-5 pl-5 pr-5 text-center" role="alert">
-        <div class="mt-3">
-            <img class="img-size-96" alt="<?= $this->l->t('q__first_answer__title') ?>" src="https://png.icons8.com/ios/96/546e7a/secured-letter.png">
+
+    <!-- lure subscribe -->
+    <div class="d-flex box px-2 bg-color-gray-50 px-sm-3 py-2 py-sm-3 my-4">
+        <div class="mr-3 d-none d-sm-block">
+            <img class="size-4 rounded mt-1" src="https://png.icons8.com/small/32/2BB462/email.png">
         </div>
-        <p class="lead mt-3 mb-4">Укажите адрес электронной почты, чтобы получить уведомление об ответе как только он появится.</p>
-        <form id="form__question_subscribe">
-            <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Ваш email">
+        <div class="width-full">
+            <div class="color-gray-900 font-weight-600 mb-2">
+                Ответ на email
             </div>
-            <input type="hidden" id="question_id" value="<?= $this->question->getID(); ?>">
-            <button type="submit" class="btn btn-success">Сообщить об ответе</button>
-        </form>
+            <div class="small color-gray-700 mb-3">
+                Укажите адрес электронной почты и мы сообщим об ответе, как только он появится.
+            </div>
+
+            <form id="form__question_subscribe">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="hidden" id="question_id" value="<?= $this->question->getID(); ?>">
+                    <input type="email" id="email" class="form-control" placeholder="Ваш email">
+                </div>
+            </form>
+
+        </div>
     </div>
+    <!-- / lure subscribe -->
+
 <?php endif; ?>
