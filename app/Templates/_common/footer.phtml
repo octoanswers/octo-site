@@ -1,7 +1,45 @@
 <?php if ($this->showFooter): ?>
-    <footer class="bg-color-gray-200 small">
+
+    <!-- footer -->
+    <footer class="bg-color-gray-100 border-top small">
         <div class="container-fluid">
             <div class="row pt-4 pb-2">
+                <div class="col-12 col-md-9">
+                    <ul class="list-inline font-weight-bold mb-3">
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" href="#">
+                                <?= $this->l->t('footer', 'about') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" rel="nofollow" target="_blank" href="<?= $this->l->t('footer', 'support_link') ?>">
+                                <?= $this->l->t('footer', 'support') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+                                <?= $this->l->t('footer', 'users') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+                                <?= $this->l->t('footer', 'flow') ?>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="color-gray-600 mb-1">
+                        <?= $this->l->t('footer', 'with_love') ?>
+                    </div>
+
+                    <ul class="list-inline color-gray-600 mt-1 mb-3">
+                        <li class="list-inline-item">
+                            <a class="color-gray-800 no-underline-hover" rel="nofollow" target="_blank" href="https://icons8.com">
+                                <?= $this->l->t('footer', 'icon_pack_by_icons8') ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="col-12 col-md-3">
                     <div class="dropup">
@@ -23,4 +61,6 @@
 
         </div>
     </footer>
+    <!-- / footer -->
+
 <?php endif; ?>
