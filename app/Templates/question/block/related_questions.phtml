@@ -11,7 +11,7 @@
         <div class="box-body pt-0 pb-1">
 
             <?php foreach ($this->related_questions as $question): ?>
-                <div class="my-3">
+                <div class="my-4">
                     <a class="font-size-18px color-gray-900 no-underline-hover" href="<?= $question->getURL($this->lang) ?>">
                         <?= $question->getTitle() ?>
                     </a>
@@ -25,7 +25,7 @@
 
                         <?php if (strlen($question->getAnswer()->getText()) == 0): ?>
                             <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
-                            <a class="font-weight-600" rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
+                            <a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
                                 <?= $this->l->t('related_questions__write_first_answer') ?>
                             </a>
                         <?php endif; ?>

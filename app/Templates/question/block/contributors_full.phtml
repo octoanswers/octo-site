@@ -1,5 +1,5 @@
 
-<?php if (count($this->contributors_tail)): ?>
+<?php if (count($this->contributors)): ?>
     <div class="my-5">
         <div class="border-bottom pb-3" id="contributors_full_list">
             <span class="color-gray-400 float-right">
@@ -8,7 +8,7 @@
             <span class="title">Авторы ответа</span> <!-- Answer contributor -->
         </div>
 
-        <?php foreach ($this->contributors_tail as $contributor): ?>
+        <?php foreach ($this->contributors as $contributor): ?>
             <div class="flex-container my-4">
                 <div class="width-6">
                     <a class="size-6" href="<?= $contributor->getURL($this->lang) ?>">
@@ -43,6 +43,10 @@
                     <img class="size-18px mt-minus-4px" src="https://png.icons8.com/ios-glyphs/18/78909C/pull-request.png">
                     <span class="color-gray-700">
                         <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
+                        <!--
+                        <?= Contribution_Humanizer::humanizeCount($contributor->getInsertionsCount()) ?>
+                        <?= Contribution_Humanizer::humanizeCount($contributor->getDeletionsCount()) ?>
+                        -->
                     </span>
                 </div>
                 <div class="width-2 d-none d-sm-block">
