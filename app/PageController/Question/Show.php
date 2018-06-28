@@ -74,10 +74,8 @@ class Show_Question_PageController extends Abstract_PageController
 
         if (count($this->contributors) > 3) {
             $this->contributors_top = array_slice($this->contributors, 0, 3);
-            $this->contributors_tail = array_slice($this->contributors, 3, (count($this->contributors) - 3));
         } else {
             $this->contributors_top = $this->contributors;
-            $this->contributors_tail = null;
         }
 
         if (count($this->contributors)) {

@@ -50,7 +50,7 @@
                     </span>
                 </div>
                 <div class="width-2 d-none d-sm-block">
-                    <?php $tail_max_contribution = $this->contributors_tail[0]->getContribution(); ?>
+                    <?php $tail_max_contribution = $this->contributors[0]->getContribution(); ?>
                     <?php $percentage = $contributor->getContribution() * (1 / $tail_max_contribution); ?>
                     <?php $contribution_color = ColorMixer_Helper::colorBetween('1E88E5', '8BC34A', $percentage); ?>
                     <span class="status ml-1" style="background-color: #<?= $contribution_color ?>;"></span>

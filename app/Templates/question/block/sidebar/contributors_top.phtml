@@ -59,7 +59,7 @@
                     </div>
                 <?php endforeach; ?>
 
-                <?php if (count($this->contributors_tail)): ?>
+                <?php if (count($this->contributors) > count($this->contributors_top)): ?>
                     <div class="w-100 ml-6 mt-2">
                         <a class="color-gray-600 small" data-scroll href="#contributors_full_list">
                             Все авторы ответа
