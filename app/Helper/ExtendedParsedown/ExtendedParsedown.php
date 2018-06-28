@@ -12,72 +12,38 @@ class ExtendedParsedown extends Parsedown
         $this->lang = $lang;
     }
 
-    protected function inlineLink($excerpt)
+    // Redefine Parsedown method
+    protected function element(array $Element)
     {
-        $element = [
-            'name' => 'a',
-            'handler' => 'line',
-            'text' => null,
-            'attributes' => [
-                'href' => null,
-                'title' => null,
-            ],
-        ];
+        $Element = $this->additionalProcessElement($Element);
+        $Element = parent::element($Element);
 
-        $offset = 0;
-        $remainder = $excerpt['text'];
+        return $Element;
+    }
 
-        // search body part of link [BODY](ref)
-        if (preg_match('/\[((?:[^][]++|(?R))*+)\]/', $remainder, $matches)) {
-            $element['text'] = $matches[1];
-            $offset += strlen($matches[0]);
-            $remainder = substr($remainder, $offset);
-        } else {
-            return;
+    /**
+     * @param array $Element
+     * https://stackoverflow.com/questions/47145213/add-target-blank-to-external-link-parsedown-php
+     * @return array
+     */
+    protected function additionalProcessElement($Element)
+    {
+        if ($Element['name'] == 'a' && $this->isExternalUrl($Element['attributes']['href'])) {
+            $Element['attributes']['class'] = 'external-link';
+            $Element['attributes']['target'] = '_blank';
+            $Element['attributes']['rel'] = 'nofollow';
         }
 
-        // search reference part of link [body](REF)
-        if (preg_match('/\((.*?)\)/', $remainder, $matches)) {
-            if (filter_var($matches[1], FILTER_VALIDATE_URL)) {
-                // if URL is canonical => external URL
-                // attach some attributes to external link
-                $element['attributes']['class'] = 'external-link';
-                $element['attributes']['target'] = '_blank';
-                $element['attributes']['rel'] = 'nofollow';
-            } else {
-                if ($matches[1] == '') {
-                    // URL empty => make internal link from body part
-                    $question = Question_Model::initWithTitle($element['text']);
-                    $matches[1] = $question->getURL($this->lang);
-                } else {
-                    // URL not canonical => internal wiki-link
-                    $question = Question_Model::initWithTitle($matches[1]);
-                    $matches[1] = $question->getURL($this->lang);
-                }
-            }
+        return $Element;
+    }
 
-            $element['attributes']['href'] = $matches[1];
-
-            if (isset($matches[2])) {
-                $element['attributes']['title'] = substr($matches[2], 1, -1);
-            }
-
-            $offset += strlen($matches[0]);
-        } else {
-            // reference part of link not found => local URI
-            $question = Question_Model::initWithTitle($element['text']);
-            $linkFromText = $question->getURL($this->lang);
-
-            $element['attributes']['href'] = $linkFromText;
-            $element['attributes']['title'] = null;
-        }
-
-        $element['attributes']['href'] = str_replace(array('&', '<'), array('&amp;', '&lt;'), $element['attributes']['href']);
-
-        return array(
-            'extent' => $offset,
-            'element' => $element,
-        );
+    /**
+     * Modification of the funciton from answer to the question "How To Check Whether A URL Is External URL or Internal URL With PHP?"
+     * @param string $url
+     * @return bool
+     */
+    protected function isExternalUrl($url) {
+        return !preg_match('/^https:\/\/octoanswers\.com/', $url);
     }
 
     /**
