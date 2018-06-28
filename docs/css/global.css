@@ -50,9 +50,9 @@
   border-radius: 3px;
   border-width: 1px;
   border-style: solid;
-  border-color: #C7E2F5;
-  background-color: #C7E2F5;
-  color: #184664;
+  border-color: #DAECF8;
+  background-color: #DAECF8;
+  color: #22618C;
   padding: .5em .75em;
   white-space: nowrap;
   vertical-align: middle; }
@@ -86,9 +86,9 @@ a.badge-dark {
   cursor: pointer; }
 
 span.badge-primary a.badge-primary {
-  border-color: #C7E2F5;
-  background-color: #C7E2F5;
-  color: #184664; }
+  border-color: #DAECF8;
+  background-color: #DAECF8;
+  color: #22618C; }
 
 a.badge-primary:hover {
   border-color: #C7E2F5 !important;
