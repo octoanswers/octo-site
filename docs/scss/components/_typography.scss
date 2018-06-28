@@ -17,10 +17,10 @@ ins { background-color: #cdffd8; text-decoration: none; }
 ul { padding-left: 1.25rem; margin-bottom: 1.5rem; }
 
 a {
-    color: $color-primary-500;
+    color: $color-primary-600;
 
     &:hover {
-        color: $color-primary-600;
+        color: $color-primary-700;
     }
 }
 
@@ -37,7 +37,7 @@ a.no-underline, a.no_underline {
 }
 
 a.external-link:after {
-    content: url("https://png.icons8.com/small/14/546e7a/external-link.png");
+    content: url("https://png.icons8.com/small/16/2B7DB4/external-link.png");
     margin: 0 0 0 5px;
 }
 

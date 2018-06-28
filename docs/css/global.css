@@ -1103,9 +1103,9 @@ ul {
   margin-bottom: 1.5rem; }
 
 a {
-  color: #3498db; }
+  color: #2B7DB4; }
   a:hover {
-    color: #2B7DB4; }
+    color: #22618C; }
 
 .text-decoration-underline, a.link-underlined {
   text-decoration: underline !important; }
@@ -1116,7 +1116,7 @@ a.no-underline, a.no_underline {
     text-decoration: none; }
 
 a.external-link:after {
-  content: url("https://png.icons8.com/small/14/546e7a/external-link.png");
+  content: url("https://png.icons8.com/small/16/2B7DB4/external-link.png");
   margin: 0 0 0 5px; }
 
 a.no-underline-hover:hover {
