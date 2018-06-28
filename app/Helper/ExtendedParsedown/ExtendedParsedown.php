@@ -2,8 +2,6 @@
 
 class ExtendedParsedown extends Parsedown
 {
-    const HASHTAG_PATTERN = '/#([^\s\W]+)/u';
-
     protected $lang;
 
     public function __construct(string $lang)
@@ -87,11 +85,6 @@ class ExtendedParsedown extends Parsedown
      */
     protected function blockHeader($Line)
     {
-        // maybe #topic, not header?
-        if (preg_match(self::HASHTAG_PATTERN, $Line['text'], $matches)) {
-            return;
-        }
-
         if (isset($Line['text'][1])) {
             $level = 1;
 
