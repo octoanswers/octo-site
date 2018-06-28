@@ -1080,6 +1080,27 @@ small, .small {
 .small-xs {
   font-size: .75rem; }
 
+.font-weight-200 {
+  font-weight: 200; }
+
+.font-weight-300 {
+  font-weight: 300; }
+
+.font-weight-400 {
+  font-weight: 400; }
+
+.font-weight-500 {
+  font-weight: 500; }
+
+.font-weight-600 {
+  font-weight: 600; }
+
+.font-weight-700 {
+  font-weight: 700; }
+
+.font-weight-800 {
+  font-weight: 800; }
+
 .font-size-125 {
   font-size: 1.25rem !important; }
 
@@ -1103,9 +1124,9 @@ ul {
   margin-bottom: 1.5rem; }
 
 a {
-  color: #2B7DB4; }
+  color: #3498db; }
   a:hover {
-    color: #22618C; }
+    color: #2B7DB4; }
 
 .text-decoration-underline, a.link-underlined {
   text-decoration: underline !important; }
@@ -1116,7 +1137,7 @@ a.no-underline, a.no_underline {
     text-decoration: none; }
 
 a.external-link:after {
-  content: url("https://png.icons8.com/small/16/2B7DB4/external-link.png");
+  content: url("https://png.icons8.com/small/16/3498db/external-link.png");
   margin: 0 0 0 5px; }
 
 a.no-underline-hover:hover {
@@ -1124,24 +1145,6 @@ a.no-underline-hover:hover {
 
 a.muted {
   color: #9E9E9E; }
-
-.font-weight-300 {
-  font-weight: 300; }
-
-.font-weight-400 {
-  font-weight: 400; }
-
-.font-weight-500 {
-  font-weight: 500; }
-
-.font-weight-600 {
-  font-weight: 600; }
-
-.font-weight-700 {
-  font-weight: 700; }
-
-.font-weight-800 {
-  font-weight: 800; }
 
 pre {
   padding: 1rem;
@@ -1157,15 +1160,6 @@ pre {
   /* Opera 7 */
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */ }
-
-.font-weight-normal {
-  font-weight: 400; }
-
-.font-weight-thin {
-  font-weight: 300; }
-
-.font-weight-thiner {
-  font-weight: 200; }
 
 .font-size-16 {
   font-size: 16px; }

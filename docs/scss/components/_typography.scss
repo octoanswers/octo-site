@@ -1,6 +1,7 @@
 
 @import "typography/_blockquote";
 @import "typography/_small";
+@import "typography/_font-weight";
 
 .font-size-125 {
     font-size: 1.25rem !important;
@@ -17,10 +18,10 @@ ins { background-color: #cdffd8; text-decoration: none; }
 ul { padding-left: 1.25rem; margin-bottom: 1.5rem; }
 
 a {
-    color: $color-primary-600;
+    color: $color-primary-500;
 
     &:hover {
-        color: $color-primary-700;
+        color: $color-primary-600;
     }
 }
 
@@ -37,7 +38,7 @@ a.no-underline, a.no_underline {
 }
 
 a.external-link:after {
-    content: url("https://png.icons8.com/small/16/2B7DB4/external-link.png");
+    content: url("https://png.icons8.com/small/16/3498db/external-link.png");
     margin: 0 0 0 5px;
 }
 
@@ -49,31 +50,6 @@ a.muted {
     color: $color-gray-500;
 }
 
-//
-
-.font-weight-300 {
-    font-weight: 300;
-}
-
-.font-weight-400 {
-    font-weight: 400;
-}
-
-.font-weight-500 {
-    font-weight: 500;
-}
-
-.font-weight-600 {
-    font-weight: 600;
-}
-
-.font-weight-700 {
-    font-weight: 700;
-}
-
-.font-weight-800 {
-    font-weight: 800;
-}
 
 pre {
     padding: 1rem;
@@ -84,16 +60,6 @@ pre {
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
-
-.font-weight-normal {
-    font-weight: 400;
-}
-.font-weight-thin {
-    font-weight: 300;
-}
-.font-weight-thiner {
-    font-weight: 200;
 }
 
 .font-size-16 {
