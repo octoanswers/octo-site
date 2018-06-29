@@ -35,23 +35,30 @@ class Gettext_Middleware
         }
 
         // Set locale
-        $results = setlocale(LC_ALL, $locale);
-        if (!$results) {
-            exit ('setlocale failed: locale function is not available on this platform, or the given local does not exist in this environment');
+        if (!setlocale(LC_ALL, $locale.'.utf8')) {
+            if (!setlocale(LC_ALL, $locale.'.UTF-8')) {
+                if (!setlocale(LC_ALL, $locale)) {
+                    exit ('setlocale failed: locale function is not available on this platform, or the given local does not exist in this environment');
+                }
+            }
         }
 
-        // Specify location of translation tables
-        $full_domain_path = bindtextdomain($domain, ROOT_PATH.'/app/Lang');
-        if (!$results) {
-            exit ('new text domain is set: ' . $full_domain_path);
-        }
+        if (function_exists('bindtextdomain') && function_exists('bind_textdomain_codeset') && function_exists('textdomain')) {
+            // Specify location of translation tables
+            $full_domain_path = bindtextdomain($domain, ROOT_PATH.'/app/Lang');
+            if (!$full_domain_path) {
+                exit ('new text domain is set: ' . $full_domain_path);
+            }
 
-        bind_textdomain_codeset($domain, 'UTF-8');
+            bind_textdomain_codeset($domain, 'UTF-8');
 
-        // Choose domain
-        $results = textdomain($domain);
-        if (!$results) {
-            exit ('textdomain failed: domain is set to: '. $domain);
+            // Choose domain
+            $results = textdomain($domain);
+            if (!$results) {
+                exit ('textdomain failed: domain is set to: '. $domain);
+            }
+        } else {
+            // Run locally on OS X
         }
 
         $response = $next($request, $response);
@@ -62,7 +69,7 @@ class Gettext_Middleware
     /**
      * Get locale for language
      *
-     * Example: en => en_US.utf8, ru => ru_RU.utf8
+     * Example: en => en_US, ru => ru_RU
      *
      * @param string $lang
      * @return return string
@@ -70,9 +77,9 @@ class Gettext_Middleware
     public static function getLocaleForLanguage(string $lang): string
     {
         if ($lang == 'ru') {
-            return 'ru_RU.utf8';
+            return 'ru_RU';
         }
 
-        return 'en_US.utf8';
+        return 'en_US';
     }
 }

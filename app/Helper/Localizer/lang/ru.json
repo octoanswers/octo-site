@@ -29,7 +29,6 @@
     "btn": {
         "ask_question": "Задать вопрос",
         "cancel": "Отмена",
-        "edit_answer": "Править ответ",
         "close": "Закрыть",
         "save": "Сохранить",
         "upload": "Загрузить",
@@ -181,8 +180,6 @@
     },
 
     "question": {
-        "title_prefix": "Ответ написан сообществом OctoAnswers",
-        "last_updated": "Ответ обновлен",
         "actions": {
             "upload_image": "Загрузить картинку"
         },

@@ -1,5 +1,12 @@
 <?php
 
+if (!function_exists('_')) {
+    function _($value)
+    {
+        return $value;
+    }
+}
+
 /**
  * @return bool
  */

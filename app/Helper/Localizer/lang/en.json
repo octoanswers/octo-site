@@ -24,7 +24,6 @@
     "btn": {
         "ask_question": "Ask Question",
         "cancel": "Cancel",
-        "edit_answer": "Edit answer",
         "close": "Close",
         "save": "Save",
         "upload": "Upload",
@@ -164,13 +163,11 @@
     },
 
     "question": {
-        "title_prefix": "The answer was written by the OctoAnswers community",
-        "last_updated": "Last updated",
         "update_topics": {
             "btn": "Update topics"
         },
         "top_contributors": {
-            "top_title": "Top Answer Contributors",
+            "top_title": "Top answer contributors",
             "tail_title": "Other Contributors"
         }
     },

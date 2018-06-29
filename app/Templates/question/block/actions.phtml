@@ -34,7 +34,7 @@
 
     <?php if (mb_strlen($this->answer->getText()) > 0): ?>
         <a href="<?= $this->question->getHistoryURL($this->lang) ?>" class="btn btn-outline-secondary mb-3 mr-2">
-            <?= $this->l->t('btn', 'view_history') ?>
+            <?= _('History') ?>
         </a>
     <?php endif; ?>
 

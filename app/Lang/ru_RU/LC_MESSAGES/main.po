@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-06-29 10:24+0500\n"
-"PO-Revision-Date: 2018-06-29 10:25+0500\n"
+"POT-Creation-Date: 2018-06-29 18:08+0500\n"
+"PO-Revision-Date: 2018-06-29 18:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -15,11 +15,24 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: Templates/question/block/actions.phtml:37
+msgid "History"
+msgstr "История"
+
+#: Templates/question/block/header/info.phtml:16
+msgid "Edit answer"
+msgstr "Изменить ответ"
+
+#: Templates/question/block/header/info.phtml:23
+msgid "Answer updated"
+msgstr "Ответ обновлен"
+
 #: Templates/question/block/header/topics.phtml:20
 msgid "Update topics"
 msgstr "Изменить темы"
 
 #: Templates/question/block/header/topics.phtml:30
+#: Templates/question/block/header/topics.phtml:37
 msgid "Set question topics"
 msgstr "Задать темы вопроса"
 

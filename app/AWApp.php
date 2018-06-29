@@ -30,7 +30,9 @@ class AWApp
 
         # Set supported array on languages
 
-        define('URL_PART_LANG', '/{lang:[en|ru]+}');
+        if (!defined('URL_PART_LANG')) {
+            define('URL_PART_LANG', '/{lang:[en|ru]+}');
+        }
 
         # API v1
 
