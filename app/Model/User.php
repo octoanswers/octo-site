@@ -3,7 +3,7 @@
 class User_Model
 {
     use User_URL_Trait;
-    
+
     private $id;
     private $username;
     private $name;
@@ -23,7 +23,7 @@ class User_Model
         $user = new self();
 
         $user->id = (int) $state['u_id'];
-        $user->username = $state['u_username'];
+        $user->username = isset($state['u_username']) ? $state['u_username'] : null;
         $user->name = $state['u_name'];
         $user->email = $state['u_email'];
         $user->signature = isset($state['u_signature']) ? $state['u_signature'] : null;

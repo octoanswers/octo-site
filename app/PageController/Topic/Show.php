@@ -2,6 +2,8 @@
 
 class Show_Topic_PageController extends Abstract_PageController
 {
+    protected $topic_questions;
+    
     // @TODO Deprecated
     public function handleByURI($request, $response, $args)
     {

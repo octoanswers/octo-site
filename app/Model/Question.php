@@ -32,8 +32,10 @@ class Question_Model
         $question->id = (int) $state['q_id'];
         $question->setTitle($state['q_title']);
         $question->setRedirect((bool) $state['q_is_redirect']);
-        $question->setImageBaseName($state['q_image_base_name']);
-        $question->setTopicsJSON($state['a_topics']);
+        $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
+        if (isset($state['a_topics'])) {
+            $question->setTopicsJSON($state['a_topics']);
+        }
 
         $answer = Answer_Model::initWithDBState($state);
         $question->setAnswer($answer);

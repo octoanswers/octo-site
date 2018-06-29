@@ -34,6 +34,7 @@ class Model_User_initWithDBState_Test extends PHPUnit\Framework\TestCase
             'u_username' => 'steve',
             'u_name' => 'Steve Bo',
             'u_email' => 'steve@aw.org',
+            'u_created_at' => '2016-03-19 06:47:41',
         ]);
 
         $this->assertEquals(13, $user->getID());

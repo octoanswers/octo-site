@@ -8,6 +8,9 @@ class Questions_Search_PageController extends Abstract_PageController
 
     const QUESTIONS_PER_PAGE = 10;
 
+    protected $list;
+    protected $questions;
+
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];

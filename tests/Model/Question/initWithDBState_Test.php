@@ -11,6 +11,8 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
             'a_text' => 'Yes, it is!',
             'a_topics' => '["ICQ","Web"]',
             'a_len' => 11,
+            'q_image_base_name' => 'foo-2015',
+
             'a_updated_at' => '2015-11-29 09:28:34'
         ]);
 
