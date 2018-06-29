@@ -29,7 +29,7 @@
 
         <?php if (strlen($question->getAnswer()->getText()) == 0): ?>
             <a class="badge badge-sm badge-primary mr-3" href="<?= $question->getEditURL($this->lang) ?>" rel="nofollow">
-                <?= $this->l->t('sandbox', 'write_first_answer') ?>
+                <?= _('Write first answer') ?>
             </a>
         <?php endif; ?>
 

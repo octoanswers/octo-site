@@ -77,13 +77,10 @@
     },
 
     "topic": {
-        "page_title_prefix": "Questions and answers on the topic",
         "page_description": "Questions and answers on the topic &laquo;%topic%&raquo;"
     },
 
 
-
-    "topics__page_title": "New topics",
     "topics__page_num": "Page ",
 
     "lang": {
@@ -208,8 +205,7 @@
 
     "q__short_url__note": "The question is also available on a short URL",
 
-    "q__share__have_answer": "If you like the answer or you know someone to whom it might be interesting, share a link with your friends.",
-    "q__share__dont_have_answer": "If you have friends who know the answer to this question, share the link.",
+
 
     "q__signup_lure__text_1": "See what questions your friends are asking today.",
     "q__signup_lure__text_2": "Watch for new questions with topics interesting for you.",
@@ -219,14 +215,6 @@
     "question_not_found__title": "Question not found",
     "question_not_found__create_a_question": "Create a question",
 
-    "sandbox": {
-        "filter": {
-            "without_answers": "Questions without answers",
-            "without_topics": "Without topics",
-            "all": "All"
-        },
-        "write_first_answer": "Write answer"
-    },
 
     "users_pg__page_title": "Newest users",
 

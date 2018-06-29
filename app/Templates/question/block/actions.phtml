@@ -9,7 +9,7 @@
         </a>
     <?php else: ?>
         <button type="button" class="btn btn-primary mb-3 mr-2" data-toggle="modal" data-target="#modal_lure__edit_answer">
-            <?= $this->l->t('btn', 'edit_answer') ?>
+            <?= _('Edit answer') ?>
         </button>
         <?php require_once TEMPLATE_PATH.'/question/modal/edit_answer_lure.phtml' ?>
     <?php endif; ?>
@@ -19,15 +19,15 @@
         <button
             class="btn follow_question_button mb-3 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-secondary'; ?>"
             data-question-id="<?= $this->question->getID() ?>"
-            data-follow-title="<?= $this->l->t('btn', 'follow') ?>"
-            data-followed-title="<?= $this->l->t('btn', 'followed') ?>"
-            data-unfollow-title="<?= $this->l->t('btn', 'unfollow') ?>"
+            data-follow-title="<?= _('Follow') ?>"
+            data-followed-title="<?= _('Followed') ?>"
+            data-unfollow-title="<?= _('Unfollow') ?>"
             type="button">
-            <span><?= $this->followed ? $this->l->t('btn', 'followed') : $this->l->t('btn', 'follow'); ?></span>
+            <span><?= $this->followed ? _('Followed') : _('Follow'); ?></span>
         </button>
     <?php else: ?>
         <button type="button" class="btn btn-outline-secondary mb-3 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
-            <span><?= $this->l->t('btn', 'follow'); ?></span>
+            <span><?= _('Follow'); ?></span>
         </button>
         <?php require_once TEMPLATE_PATH.'/question/modal/follow_question_lure.phtml' ?>
     <?php endif; ?>
@@ -40,7 +40,7 @@
 
     <div class="dropdown d-inline-block float-lg-right">
         <button class="btn btn-outline-secondary dropdown-toggle mb-3 mr-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Ещё
+            <?= _('More') ?>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <?php if ($this->authUser): ?>

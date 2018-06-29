@@ -2,17 +2,17 @@
 <ul class="nav nav-tabs my-4">
     <li class="nav-item">
         <a class="nav-link <?= ($this->list == 'without-answers') ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-            <?= $this->l->t('sandbox', 'filter', 'without_answers') ?>
+            <?= _('Questions without answer') ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link <?= ($this->list == 'without_topics') ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutTopicsURL($this->lang) ?>">
-            <?= $this->l->t('sandbox', 'filter', 'without_topics') ?>
+            <?= _('Without topics') ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link <?= ($this->list == 'newest') ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getAllURL($this->lang) ?>">
-            <?= $this->l->t('sandbox', 'filter', 'all') ?>
+            <?= _('All') ?>
         </a>
     </li>
 </ul>

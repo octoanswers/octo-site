@@ -3,7 +3,7 @@
 class Show_Topic_PageController extends Abstract_PageController
 {
     protected $topic_questions;
-    
+
     // @TODO Deprecated
     public function handleByURI($request, $response, $args)
     {
@@ -103,7 +103,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
     protected function _get_page_title()
     {
-        return $this->l->t('topic', 'page_title_prefix').' &laquo;'.$this->topic->getTitle().'&raquo; &mdash; '.$this->l->t('octoanswers');
+        return _('Questions and answers on the topic').' &laquo;'.$this->topic->getTitle().'&raquo; &mdash; '.$this->l->t('octoanswers');
     }
 
     protected function _prepareFollowButton()

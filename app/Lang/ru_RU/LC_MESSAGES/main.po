@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-06-29 18:08+0500\n"
-"PO-Revision-Date: 2018-06-29 18:08+0500\n"
+"POT-Creation-Date: 2018-06-30 03:19+0500\n"
+"PO-Revision-Date: 2018-06-30 03:20+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -15,13 +15,66 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: PageController/Topic/Show.php:106
+msgid "Questions and answers on the topic"
+msgstr "Вопросы и ответы на тему"
+
+#: PageController/Topics/Newest.php:40
+msgid "New topics"
+msgstr "Новые темы"
+
+#: PageController/Topics/Newest.php:40
+msgid "Page"
+msgstr "Страница"
+
+#: Templates/_common/item/question_with_answer.phtml:32
+#: Templates/question/block/related_questions.phtml:29
+msgid "Write first answer"
+msgstr "Написать первый ответ"
+
+#: Templates/_common/modal/login.phtml:8
+msgid "Login"
+msgstr "Вход"
+
+#: Templates/_common/modal/login.phtml:17
+msgid "Email"
+msgstr "Email"
+
+#: Templates/_common/modal/login.phtml:21
+msgid "Password"
+msgstr "Пароль"
+
+#: Templates/_common/modal/login.phtml:27
+msgid "Log in"
+msgstr "Войти"
+
+#: Templates/question/block/actions.phtml:12
+#: Templates/question/block/header/info.phtml:16
+msgid "Edit answer"
+msgstr "Изменить ответ"
+
+#: Templates/question/block/actions.phtml:22
+#: Templates/question/block/actions.phtml:26
+#: Templates/question/block/actions.phtml:30
+msgid "Follow"
+msgstr "Подписаться"
+
+#: Templates/question/block/actions.phtml:23
+#: Templates/question/block/actions.phtml:26
+msgid "Followed"
+msgstr "Подписан"
+
+#: Templates/question/block/actions.phtml:24
+msgid "Unfollow"
+msgstr "Отписаться"
+
 #: Templates/question/block/actions.phtml:37
 msgid "History"
 msgstr "История"
 
-#: Templates/question/block/header/info.phtml:16
-msgid "Edit answer"
-msgstr "Изменить ответ"
+#: Templates/question/block/actions.phtml:43
+msgid "More"
+msgstr "Ещё"
 
 #: Templates/question/block/header/info.phtml:23
 msgid "Answer updated"
@@ -35,6 +88,33 @@ msgstr "Изменить темы"
 #: Templates/question/block/header/topics.phtml:37
 msgid "Set question topics"
 msgstr "Задать темы вопроса"
+
+#: Templates/question/block/share.phtml:5
+msgid ""
+"If you like the answer or you know someone to whom it might be interesting, "
+"share a link with your friends."
+msgstr ""
+"Если ответ вам понравился или вы знаете того, кому он может быть интересен, "
+"поделитесь ссылкой с друзьями."
+
+#: Templates/question/block/share.phtml:9
+msgid ""
+"If you have friends who know the answer to this question, share the link."
+msgstr ""
+"Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь "
+"ссылкой."
+
+#: Templates/sandbox/show/nav.phtml:5
+msgid "Questions without answer"
+msgstr "Вопросы без ответа"
+
+#: Templates/sandbox/show/nav.phtml:10
+msgid "Without topics"
+msgstr "Без тем"
+
+#: Templates/sandbox/show/nav.phtml:15
+msgid "All"
+msgstr "Все"
 
 #~ msgid "Have a nice day"
 #~ msgstr "Хорошего дня!!!"

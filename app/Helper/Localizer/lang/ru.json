@@ -31,13 +31,7 @@
         "cancel": "Отмена",
         "close": "Закрыть",
         "save": "Сохранить",
-        "upload": "Загрузить",
-        "view_history": "История",
-        "follow": "Подписаться",
-        "followed": "Подписан",
-        "unfollow": "Отписаться",
-        "follow_question": "Подписаться на вопрос",
-        "follow_topic": "Подписаться на хештег"
+        "upload": "Загрузить"
     },
 
     "block": {
@@ -89,13 +83,8 @@
     },
 
     "topic": {
-        "page_title_prefix": "Вопросы и ответы на тему",
         "page_description": "Вопросы и ответы на тему &laquo;%topic%&raquo;"
     },
-
-
-    "topics__page_title": "Новые хештеги",
-    "topics__page_num": "Страница ",
 
     "lang": {
         "en": "English",
@@ -170,7 +159,6 @@
     "q__action__rename_question": "Переименовать вопрос",
     "q__short_answer_label": "Короткий ответ",
     "q__last_updated": "Обновлено",
-    "related_questions__write_first_answer": "Написать первый ответ",
 
     "improve_answer": {
         "title": "Можете улучшить этот ответ?",
@@ -205,9 +193,6 @@
         "submit_button": "Переименовать вопрос"
     },
 
-    "q__share__have_answer": "Если ответ вам понравился или вы знаете того, кому он может быть интересен, поделитесь ссылкой с друзьями.",
-    "q__share__dont_have_answer": "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь ссылкой.",
-
     "question_not_found__page_title": "Вопрос не найден:",
     "question_not_found__title": "Вопрос не найден",
     "question_not_found__create_a_question": "Создать вопрос",
@@ -226,15 +211,6 @@
     "questions__filter__with_answers": "Последние",
     "questions__filter__popular": "Популярные",
     "questions__ask": "Задать вопрос",
-
-    "sandbox": {
-        "filter": {
-            "without_answers": "Вопросы без ответа",
-            "without_topics": "Без темы",
-            "all": "Все вопросы"
-        },
-        "write_first_answer": "Написать ответ"
-    },
 
     "questions": {
         "title": "Вопросы с ответами",
@@ -259,22 +235,7 @@
     "users__filter__popular": "Популярные",
     "users__signup": "Зарегистрироваться",
 
-    "users": {
-        "signup_lure": {
-            "img_alt": "Регистрация на сайте вопросов-и-ответов OctoAnswers",
-            "title": "Ещё не зарегистрированы?",
-            "text": "Регистрация позволит вам зарабатывать очки репутации, помогая другист пользователям, отвечая на вопросы и дополняя уже существующие ответы."
-        }
-    },
 
-    "modal_login": {
-        "title": "Вход",
-        "email": "Электронная почта",
-        "password": "Пароль",
-        "submit_btn": "Войти",
-        "signup": "Зарегистрироваться",
-        "forgot_password": "Забыли пароль?"
-    },
 
     "search__page_title": "Поиск вопроса «%query%»",
     "search__title": "Результаты поиска: ",

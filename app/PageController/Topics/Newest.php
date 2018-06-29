@@ -37,6 +37,6 @@ class Newest_Topics_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->l->t('topics__page_title').' - '.$this->l->t('topics__page_num').$this->page.' - '.$this->l->t('octoanswers');
+        return _('New topics').' - '._('Page').' '.$this->page.' - '.$this->l->t('octoanswers');
     }
 }
