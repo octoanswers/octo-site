@@ -98,7 +98,7 @@ class AWApp
             $this->get('/+{username}', 'Show_User_PageController:handle');
             $this->get('/{id:[0-9]+}[/{uri_slug}]', 'Show_Question_PageController:handle');
             $this->get('/{question_uri}', 'Show_Question_PageController:handleByURI'); // @TODO Deprecated
-        });
+        })->add(new Gettext_Middleware());
 
         # Language-agnostic URLs
 
