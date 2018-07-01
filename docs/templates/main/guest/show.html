@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="https://octoanswers.com/assets/img/favicon/favicon-16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://octoanswers.com/assets/img/favicon/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://octoanswers.com/assets/img/favicon/favicon-96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://octoanswers.com/assets/img/favicon/favicon-160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="https://octoanswers.com/assets/img/favicon/favicon-196.png" sizes="196x196">
+<link rel="apple-touch-icon" href="https://octoanswers.com/assets/img/favicon/apple-touch-icon-120.png">
+<link rel="apple-touch-icon" href="https://octoanswers.com/assets/img/favicon/apple-touch-icon-152.png" sizes="152x152">
+<link rel="apple-touch-icon" href="https://octoanswers.com/assets/img/favicon/apple-touch-icon-180.png" sizes="180x180">
+<link rel="mask-icon" href="https://octoanswers.com/assets/img/favicon/mask-icon.svg" color="#0288D1">
+<meta name="msapplication-TileColor" content="#0288D1">
+<meta name="msapplication-TileImage" content="https://octoanswers.com/assets/img/favicon/msapplication-144x144.png">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel='stylesheet' href='../../../css/global.css'/>
+    <title>Main @ OctoAnswers</title>
+</head>
+<body>
+    
+<!-- navbar -->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../../../index.html">
+            <img class="rounded d-inline-block align-top opacity-80 hover-opacity-100" src="../../../../assets/img/octo-logo-30x30.svg" width="30" height="30" alt="Octoanswers">
+            <span class="ml-2 d-inline d-sm-none">Octoanswers<span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-sm-none d-md-inline-block">
+                    <a class="nav-link color-primary font-weight-600" href="#">
+                        О сайте
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Песочница</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Вопросы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Темы</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item d-sm-none d-md-inline-block">
+                    <a class="nav-link pb-0 mb-0 my-2 my-sm-0" href="#" style="padding-top:6px;">
+                        <!-- https://png.icons8.com/material/24/9E9E9E/search.png -->
+                        <img class="mr-1 mr-sm-2"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVEhL7ZRbSgNBFETnX/xT16PuIOJShOCHGJNVDMwDZgM+sg2NrkRNyHf01FADYmi6Z/ABYkHRTfWtut03TLK/ibIs9+GsqqoF61r0fpbn+Z7LhoGQU8JW8C3AV3ji8n5QONwoiPW6ruvDpml2RO2l+WwDR7algZADzN3NzyxvgbOxmyx7jQuDZi7jjaUgqLnzRa4sxUHxk0wahaUgiqI48mUeLcWBoR2P5m0pCBrsqlYeS3EMacAL1pbi0HNl0vMtBdGNCC4sxUHx1LdK/pFZJ5bioFhf79I3G1veAmfnDn+Wx3IaMIxg+6HBW41C8/bMj+HcZ2pwYVs/uMlLF/SZOlP4B+3S1nToC8U4JeiBdcWqP7x7hbG2Y3H48CYx0Gjy3yQZP95Ee8tfCwV/W/gvIcveAZCgcJfq8V46AAAAAElFTkSuQmCC">
+                        <span class="d-inline-block d-sm-none">
+                            Поиск
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-3" role="button" data-toggle="modal" data-target="#modal_ask">
+                        Задать вопрос
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-secondary my-2 my-sm-0" role="button">
+                        Войти
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- / navbar -->
+
+
+<!-- modal_ask -->
+<div class="modal fade" id="modal_ask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    Новый вопрос
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form__question_create">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>
+                            Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.
+                        </label>
+                        <textarea class="form-control form-control-lg" id="question_title" rows="6" placeholder="Какой у вас вопрос?"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="form__question_create__submit" class="btn btn-block btn-primary">
+                        Задать вопрос
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- / modal_ask -->
+
+    
+<!-- jumbotron -->
+<div class="jumbotron bg-color-gray-200 border-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-10 mx-auto">
+                <h1 class="font-weight-400">
+                    Задайте вопрос и получаете <strong>один</strong> полный, исчерпывающий и компетентный ответ от авторов.
+                </h1>
+
+                <p class="color-gray-600 mt-3">
+                    OctoAnswers &mdash; это как Википедия, только для вопросов и ответов.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-10 mx-auto">
+                <form id="form__question_create">
+                    <div class="form-group">
+                        <textarea class="form-control form-control-lg" id="question_title" rows="6" placeholder="Какой у вас вопрос?"></textarea>
+                    </div>
+                    <button type="submit" id="form__question_create__submit" class="btn btn-lg btn-block btn-primary">
+                        Задать свой первый вопрос
+                    </button>
+                    <!-- <div class="font-weight-400 color-gray-700 mt-4">
+                        или
+                        <a class="link-underlined" href="https://octoanswers.com/ru/signup">присоединяйтесь</a>
+                    </div> -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / jumbotron -->
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 col-md-8 col-xl-8">
+                
+<!-- nav -->
+<ul class="nav nav-tabs mt-4">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Последние вопросы</a>
+    </li>
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Недавно обновленные</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">Популярные</a>
+    </li> -->
+</ul>
+<!-- / nav -->
+                
+<div class="my-4 pb-4 border-bottom">
+    <div class="mb-3">
+        <a class="h3 color-gray-900 no-underline" href="#">
+            Какова фильмография Марвина Вудворда?
+        </a>
+    </div>
+    <div class="color-gray-700 my-3">
+        Марвин Вудворд является знаменитым художником-мулитипликатором, работавшим в период с 1931 по 2001 год и приложивший свою руку к более чем пятидесяти произведениям.
+        <a href="#">
+            <!-- <img class="size-21px" src="https://png.icons8.com/material/21/9E9E9E/circled-right-2.png"> -->
+            <img class="size-21px"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGmSURBVDhPxVTLTsJQFOzCB+rOj1B3Jj4Sgqh/4E+Y+Btd4pZlKX2KMe0C+AMXAitX7PwJV8JSnamDtFBKSHxMMmnPnDnn9j56jX+B53kl8AAs61lSanU4jnMJdsGx67ofKY6oN5vNC1mXIwzDHRTdT5rgfYinheetnownA7SiKNpSaT4sy9qGcaCCJ/BIqQyoo3lPvgHrlJoHjA8yuqZprklOYNv2LvKHCg3m6QM4m1ByFlwjGXqzDRlDfwZffd8/lsyZrdOvuqrkKSB2mQRzp4z8NfgOZhrDf6qmHUlf4DGBOAaHknKBfG5j1qHxqF6vb0oyjCAI9jRagzGW4grvNwv4KO93Y7w3qLEP4wQQKhTBmmLuPONCotmLNqwmrZI0JH7lS39iTcG3zJoSEDscLW1OA/nC3QfbkqaAeM4kino8f5ITLDqncRxvQOuzDrM9k5wFki0awKV/FAemD6DfkzyP9L/PL160FNjIE+bl6xf++wRvHZjvWKCi5JYCeWxmb6lgpfsVxVUUtcFRqgnJmPr0TK4KHhNMdx9fVOY55OYo9ZcwjE/Z/fs2Fpd2EgAAAABJRU5ErkJggg==">
+        </a>
+    </div>
+    <a class="d-block size-rectangle-30x15" href="#">
+        <img class="size-rectangle-30x15" src="https://octoanswers.com/uploads/img/ru/15873/16_20180523_440_md.jpg" alt="XXX">
+    </a>
+    <div class="mt-3 small color-gray-500">
+        2 автора
+        <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+        <img class="size-20px" src="https://png.icons8.com/small/20/9E9E9E/clock.png">
+        5 минут на чтение
+        <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+        23 май в 6:18
+    </div>
+</div>
+
+<div class="my-4 pb-4 border-bottom">
+    <div class="mb-3">
+        <a class="h3 color-gray-900 no-underline" href="https://octoanswers.com/ru/15873/kakova-filmografiya-marvina-vudvorda">
+            Что, если картинка будет отсутствовать, a заголовок вопроса будет достаточно длинным?
+        </a>
+    </div>
+    <div class="color-gray-700 my-3">
+        В этом нет ничего страшного - как заголовок вопроса, так и первый параграф автоматически подстроятся под длинну столбца.
+        <a href="#">
+            <img class="size-21px" src="https://png.icons8.com/material/21/9E9E9E/circled-right-2.png">
+        </a>
+    </div>
+    <div class="mt-3 small color-gray-500">
+        2 автора
+        <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+        <img class="size-20px" src="https://png.icons8.com/small/20/9E9E9E/clock.png">
+        4 минуты на чтение
+        <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+        три часа назад
+    </div>
+</div>
+
+<div class="my-4 pb-4 border-bottom">
+    <div class="mb-3">
+        <a class="h3 color-gray-900 no-underline" href="#">
+            А если короткий заголовок?
+        </a>
+    </div>
+    <div class="color-gray-700 my-3">
+        В этом нет ничего страшного - как заголовок вопроса, так и первый параграф автоматически подстроятся под длинну столбца.
+        <a href="#">
+            <img class="size-21px" src="https://png.icons8.com/material/21/9E9E9E/circled-right-2.png">
+        </a>
+    </div>
+    <div class="mt-3 small color-gray-500">
+        2 автора
+        <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+        <img class="size-20px" src="https://png.icons8.com/small/20/9E9E9E/clock.png">
+        5 минут на чтение
+        <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+        23 май в 6:18
+    </div>
+</div>
+
+<div class="my-4 pb-4 border-bottom">
+    <div class="mb-3">
+        <a class="h3 color-gray-900 no-underline" href="#">
+            Как возникло и развивалось?
+        </a>
+    </div>
+    <div class="color-gray-700 my-3">
+        Первые экспериментальные каркасно-панельные дома были сооружены в 1948 году в Москве на Соколиной горе и Хорошëвском шоссе по проектам, разработанным, соответственно Госстройпроектом и Мосгорпроектом.
+        <a href="#">
+            <img class="size-21px" src="https://png.icons8.com/material/21/9E9E9E/circled-right-2.png">
+        </a>
+    </div>
+    <a class="d-block size-rectangle-30x15" href="#">
+        <img class="size-rectangle-30x15" src="../../../img/10_20180329_262_md.jpg">
+    </a>
+    <div class="mt-3 small color-gray-500">
+        2 автора
+        <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+        <img class="size-20px" src="https://png.icons8.com/small/20/9E9E9E/clock.png">
+        5 минут на чтение
+        <span class="mx-1 color-gray-700 font-weight-800">&middot;</span>
+        23 май в 6:18
+    </div>
+</div>
+            </div>
+            <div class="col-12 col-md-4 col-xl-4">
+                
+<!-- sidebar about_octo -->
+<div class="box mt-4 d-none d-md-block">
+    <div class="box-header">
+        <a class="color-gray-800 font-weight-600 no-underline-hover" data-scroll href="#contributors_full_list">
+            Что это за сайт?
+        </a>
+    </div>
+    <div class="box-body color-gray-800 small">
+        <p>OctoAnswers — это как Википедия, только для вопросов и ответов. Вы задаете вопрос и получаете один полный, исчерпывающий и компетентный ответ от сообщества.</p>
+
+        <hr>
+
+        <ul class="list-unstyled color-gray-700">
+            <li class="mb-2">Смотрите, какие вопросы задают ваши друзья.</li>
+            <li class="mb-2">Следите за новыми вопросами на интересующие вас темы.</li>
+            <li class="mb-2">И, конечно, делитесь своими знаниями.</li>
+        </ul>
+
+        <button role="button" data-toggle="modal" data-target="#modal_signup" class="btn btn-danger btn-block mb-2">
+            Стать автором
+        </button>
+    </div>
+</div>
+<!-- / sidebar about_octo -->
+            </div>
+        </div>
+    </div>
+
+    
+<!-- / footer -->
+<footer class="bg-color-gray-100 border-top small">
+    <div class="container-fluid">
+        <div class="row pt-4 pb-2">
+            <div class="col-12 col-md-9">
+                <ul class="list-inline font-weight-bold mb-3">
+                    <li class="list-inline-item">
+                        <a class="color-gray-800 no-underline-hover" href="#">
+                            О сайте
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color-gray-800 no-underline-hover" href="#">
+                            Служба поддержки
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color-gray-800 no-underline-hover" href="#">
+                            Пользователи
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color-gray-800 no-underline-hover" href="#">
+                            Поток
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="color-gray-600 mb-1">
+                    <a class="color-gray-800 no-underline-hover" rel="nofollow" target="_blank" href="%octo_url%">OctoAnswers</a> придуман и разработан (с любовью, конечно) товарищем <a class="color-gray-800 no-underline-hover" rel="nofollow" target="_blank" href="#">@gomzyakov</a>. Поддерживается <a class="color-gray-800 no-underline-hover" rel="nofollow" target="_blank" href="#">основной командой</a> и <a class="color-gray-800 no-underline-hover" rel="nofollow" target="_blank" href="#">добровольцами</a>.
+                </div>
+
+                <ul class="list-inline color-gray-600 mt-1 mb-3">
+                    <li class="list-inline-item">
+                        Icon pack by <a class="color-gray-800 no-underline-hover" rel="nofollow" target="_blank" href="https://icons8.com">Icons8</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-3">
+                <div class="dropup">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle mb-3" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  type="button">
+                        Русский                        </button>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" data-lang="en" href="https://octoanswers.com/en">
+                            English                            </a>
+                        <a class="dropdown-item" data-lang="ru" href="https://octoanswers.com/ru">
+                            Русский                            </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+<!-- / footer -->
+
+    
+<!-- modal signup -->
+<div class="modal fade" id="modal_signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    Регистрация
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form__signup">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Логин</label>
+                        <input id="form__signup__username" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input id="form__signup__email" type="email" class="form-control" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>Пароль</label>
+                        <input id="form__signup__password" type="password" class="form-control" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <small class="form-text text-muted">
+                            Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.
+                        </small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="form__signup__submit" class="btn btn-primary btn-block">
+                        Регистрация
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /modal signup -->
+
+    
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<!-- JS Helpers -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.0/smooth-scroll.min.js" integrity="sha256-/k5n1rmutzb2PSqvtV77T+xHa9plhfEjb/mpn1RpMzA=" crossorigin="anonymous"></script>
+
+<!-- init smooth-scroll -->
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+
+</body>
+</html>
