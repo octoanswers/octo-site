@@ -23,13 +23,25 @@ class ExtendedParsedown extends Parsedown
 
     /**
      * @param array $Element
-     * https://stackoverflow.com/questions/47145213/add-target-blank-to-external-link-parsedown-php
      * @return array
      */
     protected function additionalProcessElement($Element)
     {
-        if ($Element['name'] == 'a' && $this->isExternalUrl($Element['attributes']['href'])) {
-            $Element['attributes']['class'] = 'external-link';
+        if ($Element['name'] != 'a') {
+            return $Element;
+        }
+
+        if ($this->isOctoanswersURL($Element['attributes']['href'])) {
+            return $Element;
+        }
+
+        if ($this->isExternalUrl($Element['attributes']['href'])) {
+            $Element['attributes']['class'] = 'link-external';
+            $Element['attributes']['target'] = '_blank';
+            $Element['attributes']['rel'] = 'nofollow';
+        } else {
+            // Broken URL by default
+            $Element['attributes']['class'] = 'link-broken';
             $Element['attributes']['target'] = '_blank';
             $Element['attributes']['rel'] = 'nofollow';
         }
@@ -37,13 +49,12 @@ class ExtendedParsedown extends Parsedown
         return $Element;
     }
 
-    /**
-     * Modification of the funciton from answer to the question "How To Check Whether A URL Is External URL or Internal URL With PHP?"
-     * @param string $url
-     * @return bool
-     */
+    protected function isOctoanswersURL($url) {
+        return preg_match('/^https:\/\/octoanswers\.com/', $url);
+    }
+
     protected function isExternalUrl($url) {
-        return !preg_match('/^https:\/\/octoanswers\.com/', $url);
+        return preg_match('/^(http|https):\/\//', $url);
     }
 
     /**

@@ -1074,12 +1074,6 @@ blockquote {
   color: #616161;
   margin-bottom: 0 !important; }
 
-small, .small {
-  font-size: .875rem; }
-
-.small-xs {
-  font-size: .75rem; }
-
 .font-weight-200 {
   font-weight: 200; }
 
@@ -1100,6 +1094,40 @@ small, .small {
 
 .font-weight-800 {
   font-weight: 800; }
+
+a {
+  color: #3498db; }
+  a:hover {
+    color: #2B7DB4; }
+
+.text-decoration-underline, a.link-underlined {
+  text-decoration: underline !important; }
+
+a.no-underline, a.no_underline {
+  text-decoration: none; }
+  a.no-underline:hover, a.no_underline:hover {
+    text-decoration: none; }
+
+a.link-broken {
+  color: #db3466; }
+  a.link-broken:after {
+    content: url("https://png.icons8.com/small/16/db3466/unavailable-cloud.png");
+    margin: 0 0 0 5px;
+    vertical-align: middle; }
+
+a.link-external:after {
+  content: url("https://png.icons8.com/small/16/3498db/external-link.png");
+  margin: 0 0 0 5px;
+  vertical-align: middle; }
+
+a.no-underline-hover:hover {
+  text-decoration: none; }
+
+small, .small {
+  font-size: .875rem; }
+
+.small-xs {
+  font-size: .75rem; }
 
 .font-size-125 {
   font-size: 1.25rem !important; }
@@ -1122,29 +1150,6 @@ ins {
 ul {
   padding-left: 1.25rem;
   margin-bottom: 1.5rem; }
-
-a {
-  color: #3498db; }
-  a:hover {
-    color: #2B7DB4; }
-
-.text-decoration-underline, a.link-underlined {
-  text-decoration: underline !important; }
-
-a.no-underline, a.no_underline {
-  text-decoration: none; }
-  a.no-underline:hover, a.no_underline:hover {
-    text-decoration: none; }
-
-a.external-link:after {
-  content: url("https://png.icons8.com/small/16/3498db/external-link.png");
-  margin: 0 0 0 5px; }
-
-a.no-underline-hover:hover {
-  text-decoration: none; }
-
-a.muted {
-  color: #9E9E9E; }
 
 pre {
   padding: 1rem;

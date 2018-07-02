@@ -1,7 +1,8 @@
 
 @import "typography/_blockquote";
-@import "typography/_small";
 @import "typography/_font-weight";
+@import "typography/_links";
+@import "typography/_small";
 
 .font-size-125 {
     font-size: 1.25rem !important;
@@ -16,40 +17,6 @@ del { background-color: #ffdce0; text-decoration: none; }
 ins { background-color: #cdffd8; text-decoration: none; }
 
 ul { padding-left: 1.25rem; margin-bottom: 1.5rem; }
-
-a {
-    color: $color-primary-500;
-
-    &:hover {
-        color: $color-primary-600;
-    }
-}
-
-.text-decoration-underline, a.link-underlined {
-    text-decoration: underline!important;
-}
-
-a.no-underline, a.no_underline {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-a.external-link:after {
-    content: url("https://png.icons8.com/small/16/3498db/external-link.png");
-    margin: 0 0 0 5px;
-}
-
-a.no-underline-hover:hover {
-    text-decoration: none;
-}
-
-a.muted {
-    color: $color-gray-500;
-}
-
 
 pre {
     padding: 1rem;
