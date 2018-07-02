@@ -724,6 +724,33 @@ img.border-2 {
     width: 10rem;
     max-width: 10rem; }
 
+.CodeMirror .CodeMirror-code .cm-header-1 {
+  font-size: 1.5rem !important;
+  line-height: 1.2 !important; }
+
+.CodeMirror .CodeMirror-code .cm-header-2 {
+  font-size: 1.4rem !important;
+  line-height: 1.2 !important; }
+
+.CodeMirror .CodeMirror-code .cm-header-3 {
+  font-size: 1.3rem !important;
+  line-height: 1.2 !important; }
+
+.CodeMirror .CodeMirror-code .cm-header-4 {
+  font-size: 1.2rem !important;
+  line-height: 1.2 !important; }
+
+.CodeMirror .CodeMirror-code .cm-header-5 {
+  font-size: 1.1rem !important;
+  line-height: 1.2 !important; }
+
+.CodeMirror .CodeMirror-code .cm-header-6 {
+  font-size: 1.1rem !important;
+  line-height: 1.2 !important; }
+
+.cm-header, .cm-strong {
+  font-weight: 500 !important; }
+
 .min-height-4 {
   min-height: 2rem; }
 

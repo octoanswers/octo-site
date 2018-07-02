@@ -724,6 +724,13 @@ img.border-2 {
     width: 10rem;
     max-width: 10rem; }
 
+.CodeMirror .CodeMirror-code .cm-header-1 {
+  font-size: 1.5rem !important;
+  line-height: 200%; }
+
+.cm-header, .cm-strong {
+  font-weight: 700; }
+
 .min-height-4 {
   min-height: 2rem; }
 
