@@ -40,23 +40,6 @@
         "russian": "Русский"
     },
 
-    "modal__feedback_thanks__text": "Спасибо за отзыв!",
-
-    "navbar": {
-        "feed": "Лента",
-        "questions": "Вопросы",
-        "topics": "Темы ",
-        "sandbox": "Песочница",
-        "login": "Войти",
-        "signup": "Регистрация",
-        "ask": "Задать вопрос"
-    },
-
-    "nav__experts": "Эксперты",
-    "nav__search_placeholder": "Поиск…",
-    "nav__profile": "Профиль",
-    "nav__settings": "Настройки",
-
     "share__question__btn": "Поделиться",
     "share__question__vk": "ВКонтакте",
     "share__question__facebook": "Facebook",

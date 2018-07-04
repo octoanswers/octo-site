@@ -47,24 +47,6 @@
         "russian": "Русский"
     },
 
-    "modal__feedback_thanks__text": "Thanks for the feedback!",
-
-    "navbar": {
-        "feed": "Newsfeed",
-        "questions": "Questions",
-        "topics": "Topics",
-        "sandbox": "Sandbox",
-        "login": "Login",
-        "signup": "Signup"
-    },
-
-    "nav__experts": "Experts",
-    "nav__search_placeholder": "Search…",
-    "nav__profile": "Профиль",
-    "nav__settings": "Настройки",
-
-    "navbar__ask": "Ask a Question",
-
     "q_pg__page_description": "Wiki-answer on question «%question%»",
     "q_pg__share_description": "Wiki-answers to your questions on OctoAnswers",
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 18:11+0500\n"
-"PO-Revision-Date: 2018-07-04 18:11+0500\n"
+"POT-Creation-Date: 2018-07-04 19:45+0500\n"
+"PO-Revision-Date: 2018-07-04 19:47+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -22,6 +22,7 @@ msgstr "Лента новостей"
 #: PageController/Feed/Show.php:45 PageController/Main/Show.php:40
 #: PageController/Main/Show.php:46 PageController/Main/Show.php:65
 #: PageController/Topic/Show.php:103 PageController/Users/Newest.php:47
+#: Templates/_common/navbar.phtml:8
 msgid "OctoAnswers"
 msgstr "OctoAnswers"
 
@@ -177,6 +178,44 @@ msgstr "Пароль"
 msgid "Log in"
 msgstr "Войти"
 
+#: Templates/_common/navbar.phtml:21
+msgid "Navbar - About site"
+msgstr ""
+
+#: Templates/_common/navbar.phtml:29
+msgid "Navbar - Feed"
+msgstr "Лента"
+
+#: Templates/_common/navbar.phtml:36
+msgid "Navbar - Sandbox"
+msgstr "Песочница"
+
+#: Templates/_common/navbar.phtml:41
+msgid "Navbar - Questions"
+msgstr "Вопросы"
+
+#: Templates/_common/navbar.phtml:46
+msgid "Navbar - Topics"
+msgstr "Темы"
+
+#: Templates/_common/navbar.phtml:58
+msgid "Navbar - Search"
+msgstr "Поиск"
+
+#: Templates/_common/navbar.phtml:65
+msgid "Navbar - Ask"
+msgstr "Задать вопрос"
+
+#: Templates/_common/navbar.phtml:72
+#: Templates/users/block/container_login_or_signup.phtml:16
+msgid "Navbar - Login"
+msgstr "Вход"
+
+#: Templates/_common/navbar.phtml:77
+#: Templates/users/block/container_login_or_signup.phtml:19
+msgid "Navbar - Signup"
+msgstr "Регистрация"
+
 #: Templates/answer/history/jumbotron.phtml:6
 msgid "Answer history page - Subtitle"
 msgstr "История изменений ответа"
@@ -241,6 +280,30 @@ msgstr "Ответьте на вопрос"
 #: Templates/flow/block/header.phtml:4
 msgid "Flow - Title"
 msgstr "Поток событий"
+
+#: Templates/main/_block/how_it_works.phtml:7
+#, fuzzy
+#| msgid "Main - Jumbotron - Title"
+msgid "Main - How it works - Title"
+msgstr "Задайте вопрос и получите один исчерпывающий ответ"
+
+#: Templates/main/_block/how_it_works.phtml:13
+#, fuzzy
+#| msgid "Main - Jumbotron - Subtitle"
+msgid "Main - How it works - First title"
+msgstr "Что значит исчерпывающий"
+
+#: Templates/main/_block/how_it_works.phtml:18
+#, fuzzy
+#| msgid "Main - Jumbotron - Subtitle"
+msgid "Main - How it works - Second title"
+msgstr "Что значит исчерпывающий"
+
+#: Templates/main/_block/how_it_works.phtml:23
+#, fuzzy
+#| msgid "Main - Jumbotron - Title"
+msgid "Main - How it works - Third title"
+msgstr "Задайте вопрос и получите один исчерпывающий ответ"
 
 #: Templates/main/_block/jumbotron.phtml:8
 msgid "Main - Jumbotron - Title"
@@ -348,6 +411,14 @@ msgstr "Топ авторов ответа"
 #: Templates/question/block/sidebar/contributors_top.phtml:65
 msgid "Question - Top contributors - All answer contributors"
 msgstr "Все авторы ответа"
+
+#: Templates/question/modal/feedback_thanks.phtml:9
+msgid "Feedback modal - Thanks"
+msgstr "Спасибо за отзыв"
+
+#: Templates/question/modal/feedback_thanks.phtml:13
+msgid "Button - Close"
+msgstr "Закрыть"
 
 #: Templates/question/modal/upload_image.phtml:7
 msgid "Modal - Upload image - Title"

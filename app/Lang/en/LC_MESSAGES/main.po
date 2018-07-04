@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 19:18+0500\n"
-"PO-Revision-Date: 2018-07-04 19:19+0500\n"
+"POT-Creation-Date: 2018-07-04 19:43+0500\n"
+"PO-Revision-Date: 2018-07-04 19:45+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -21,6 +21,7 @@ msgstr "Feed"
 #: PageController/Feed/Show.php:45 PageController/Main/Show.php:40
 #: PageController/Main/Show.php:46 PageController/Main/Show.php:65
 #: PageController/Topic/Show.php:103 PageController/Users/Newest.php:47
+#: Templates/_common/navbar.phtml:8
 msgid "OctoAnswers"
 msgstr "OctoAnswers"
 
@@ -174,6 +175,44 @@ msgstr ""
 #: Templates/_common/modal/login.phtml:27
 msgid "Log in"
 msgstr ""
+
+#: Templates/_common/navbar.phtml:21
+msgid "Navbar - About site"
+msgstr "About site"
+
+#: Templates/_common/navbar.phtml:29
+msgid "Navbar - Feed"
+msgstr "Newsfeed"
+
+#: Templates/_common/navbar.phtml:36
+msgid "Navbar - Sandbox"
+msgstr "Sandbox"
+
+#: Templates/_common/navbar.phtml:41
+msgid "Navbar - Questions"
+msgstr "Questions"
+
+#: Templates/_common/navbar.phtml:46
+msgid "Navbar - Topics"
+msgstr "Topics"
+
+#: Templates/_common/navbar.phtml:58
+msgid "Navbar - Search"
+msgstr "Search"
+
+#: Templates/_common/navbar.phtml:65
+msgid "Navbar - Ask"
+msgstr "Ask"
+
+#: Templates/_common/navbar.phtml:72
+#: Templates/users/block/container_login_or_signup.phtml:16
+msgid "Navbar - Login"
+msgstr "Login"
+
+#: Templates/_common/navbar.phtml:77
+#: Templates/users/block/container_login_or_signup.phtml:19
+msgid "Navbar - Signup"
+msgstr "Signup"
 
 #: Templates/answer/history/jumbotron.phtml:6
 msgid "Answer history page - Subtitle"
@@ -360,6 +399,14 @@ msgstr "Top answer contributors"
 #: Templates/question/block/sidebar/contributors_top.phtml:65
 msgid "Question - Top contributors - All answer contributors"
 msgstr "All answer contributors"
+
+#: Templates/question/modal/feedback_thanks.phtml:9
+msgid "Feedback modal - Thanks"
+msgstr "Thanks for the feedback"
+
+#: Templates/question/modal/feedback_thanks.phtml:13
+msgid "Button - Close"
+msgstr "Close"
 
 #: Templates/question/modal/upload_image.phtml:7
 msgid "Modal - Upload image - Title"
