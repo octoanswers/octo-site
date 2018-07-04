@@ -6,8 +6,6 @@
     "answer_edit__description_of_changes": "Description of changes, if necessary:",
     "answer_edit__save_changes_btn": "Save changes",
 
-
-
     "answer_history__page_title": "History of question: ",
 
     "btn": {
@@ -120,18 +118,6 @@
         "signup": "Signup",
         "forgot_password": "Forgot password"
     },
-
-    "search__page_title": "Search question «%query%»",
-    "search__title": "Search results: ",
-
-    "signup__page_title": "Registration on the questions-and-answers service - OctoAnswers",
-    "signup__title": "Signup",
-    "signup__useremail": "Username",
-    "signup__email": "Email address",
-    "signup__password": "Password",
-    "signup__note": "By signing up, you agree to our terms of use, privacy policy, and cookie policy.",
-    "signup__signup_btn": "Signup",
-    "signup__real_name": "Real name",
 
     "alert_subscribe__text": "Enter your email address to get notified about the answer as soon as it appears.",
     "alert_subscribe__btn": "Report response"

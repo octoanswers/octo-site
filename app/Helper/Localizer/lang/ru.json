@@ -107,15 +107,6 @@
     "users__filter__popular": "Популярные",
     "users__signup": "Зарегистрироваться",
 
-
-
-    "search__page_title": "Поиск вопроса «%query%»",
-    "search__title": "Результаты поиска: ",
-    "search__filter__title": "Поиск по: ",
-    "search__filter__questions": "Вопросы",
-    "search__filter__topics": "Хештеги",
-    "search__filter__users": "Пользователи",
-
     "search__alert__questions_not_found__title": "Вопросов не найдено",
     "search__alert__questions_not_found__text": "По запросу «%query%» не удалось найти ни одного вопроса...",
     "search__alert__questions_not_found__button": "Задать вопрос",
@@ -126,16 +117,6 @@
     "search__alert__users_not_found__title": "Пользователей не найдено",
     "search__alert__users_not_found__text": "По запросу «%query%» не удалось найти ни одного пользователя...",
     "search__alert__users_not_found__button": "Посмотреть список популярных",
-
-    "signup__page_title": "Регистрация на сайте вопросов и ответов - OctoAnswers",
-    "signup__head_description": "OctoAnswers позволяет удивительно легко получать компетентные ответы на любые вопросы. Более 100  человек ежедневно задают вопросы и получают ответы помощью OctoAnswers.",
-    "signup__title": "Регистрация",
-    "signup__useremail": "Логин",
-    "signup__email": "Email",
-    "signup__password": "Пароль",
-    "signup__note": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
-    "signup__signup_btn": "Регистрация",
-    "signup__real_name": "Имя и фамилия",
 
     "alert_subscribe__text": "Укажите адрес электронной почты, чтобы получить уведомление об ответе как только он появится.",
     "alert_subscribe__btn": "Сообщить об ответе",

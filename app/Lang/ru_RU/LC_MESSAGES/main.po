@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 20:06+0500\n"
-"PO-Revision-Date: 2018-07-04 20:10+0500\n"
+"POT-Creation-Date: 2018-07-04 20:31+0500\n"
+"PO-Revision-Date: 2018-07-04 20:31+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -177,6 +177,31 @@ msgstr "Пароль"
 #: Templates/_common/modal/login.phtml:27
 msgid "Log in"
 msgstr "Войти"
+
+#: Templates/_common/modal/signup.phtml:8
+msgid "Signup modal - Title"
+msgstr "Регистрация"
+
+#: Templates/_common/modal/signup.phtml:17
+msgid "Signup modal - Username"
+msgstr "Имя"
+
+#: Templates/_common/modal/signup.phtml:21
+msgid "Signup modal - Email"
+msgstr "Email"
+
+#: Templates/_common/modal/signup.phtml:25
+msgid "Signup modal - Password"
+msgstr "Пароль"
+
+#: Templates/_common/modal/signup.phtml:30
+msgid "Signup modal - Note"
+msgstr ""
+"Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами"
+
+#: Templates/_common/modal/signup.phtml:36
+msgid "Signup modal - Signup button"
+msgstr "Регистрация"
 
 #: Templates/_common/navbar.phtml:21
 msgid "Navbar - About site"
@@ -498,15 +523,14 @@ msgstr "Персональный сайт"
 msgid "Settings - Site - Text"
 msgstr "Введите адрес вашего сайта или странички в социальной сети"
 
-#: Templates/settings/show_full.phtml:84
-#, fuzzy
-#| msgid "Main - Jumbotron - Input placeholder"
-msgid "Settings - Site - Input placeholder"
-msgstr "Какой у вас вопрос"
-
 #: Templates/settings/show_full.phtml:88
 msgid "Settings - Site - Save button"
 msgstr "Сохранить сайт"
+
+#, fuzzy
+#~| msgid "Main - Jumbotron - Input placeholder"
+#~ msgid "Settings - Site - Input placeholder"
+#~ msgstr "Какой у вас вопрос"
 
 #~ msgid "Questions and answers on the topic"
 #~ msgstr "Вопросы и ответы на тему"

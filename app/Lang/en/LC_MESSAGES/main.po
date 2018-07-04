@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 19:43+0500\n"
-"PO-Revision-Date: 2018-07-04 19:45+0500\n"
+"POT-Creation-Date: 2018-07-04 20:31+0500\n"
+"PO-Revision-Date: 2018-07-04 20:31+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -175,6 +175,32 @@ msgstr ""
 #: Templates/_common/modal/login.phtml:27
 msgid "Log in"
 msgstr ""
+
+#: Templates/_common/modal/signup.phtml:8
+msgid "Signup modal - Title"
+msgstr "Signup"
+
+#: Templates/_common/modal/signup.phtml:17
+msgid "Signup modal - Username"
+msgstr "Username"
+
+#: Templates/_common/modal/signup.phtml:21
+msgid "Signup modal - Email"
+msgstr "Email"
+
+#: Templates/_common/modal/signup.phtml:25
+msgid "Signup modal - Password"
+msgstr "Password"
+
+#: Templates/_common/modal/signup.phtml:30
+msgid "Signup modal - Note"
+msgstr ""
+"By signing up, you agree to our terms of use, privacy policy, and cookie "
+"policy"
+
+#: Templates/_common/modal/signup.phtml:36
+msgid "Signup modal - Signup button"
+msgstr "Signup"
 
 #: Templates/_common/navbar.phtml:21
 msgid "Navbar - About site"
@@ -426,6 +452,66 @@ msgstr ""
 
 #: Templates/sandbox/show/nav.phtml:15
 msgid "All"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:14
+msgid "Settings - Title"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:17
+msgid "Settings - Back to profile"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:21
+msgid "Settings - Upload avatar - Title"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:27
+msgid "Settings - Upload avatar - Text"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:33
+msgid "Settings - Upload avatar - Upload"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:44
+msgid "Settings - Real name - Title"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:48
+msgid "Settings - Real name - Text"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:54
+msgid "Settings - Real name - Save button"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:60
+msgid "Settings - Signature - Title"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:64
+msgid "Settings - Signature - Text"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:66
+msgid "Settings - Signature - Input placeholder"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:70
+msgid "Settings - Signature - Save button"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:77
+msgid "Settings - Site - Title"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:82
+msgid "Settings - Site - Text"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:88
+msgid "Settings - Site - Save button"
 msgstr ""
 
 #~ msgid "question.share.text"
