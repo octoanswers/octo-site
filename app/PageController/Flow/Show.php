@@ -30,8 +30,8 @@ class Show_Flow_PageController extends Abstract_PageController
         };
 
         $this->template = 'flow/show';
-        $this->pageTitle = $this->l->t('flow__page_title').' — '.$this->l->t('octoanswers');
-        $this->pageDescription = $this->l->t('main_pg__description');
+        $this->pageTitle = _('Flow - Page title').' — '.$this->l->t('octoanswers');
+        $this->pageDescription = _('Flow - Page description');
         $this->canonicalURL = Page_URL_Helper::getFlowURL($this->lang);
 
         $output = $this->renderPage();
@@ -45,8 +45,8 @@ class Show_Flow_PageController extends Abstract_PageController
         $og = [
             'url' => SITE_URL,
             'type' => "website",
-            'title' => $this->l->t('flow__page_title').' - '.$this->l->t('octoanswers'),
-            'description' => $this->l->t('main_pg__description'),
+            'title' => _('Flow - Page title').' - '.$this->l->t('octoanswers'),
+            'description' => _('Flow - Page description'),
             'locale' => $this->lang,
             'image' => IMAGE_URL.'/og-image.png'
         ];
