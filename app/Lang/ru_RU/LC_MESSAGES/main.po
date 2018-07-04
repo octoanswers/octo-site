@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 19:45+0500\n"
-"PO-Revision-Date: 2018-07-04 19:47+0500\n"
+"POT-Creation-Date: 2018-07-04 20:06+0500\n"
+"PO-Revision-Date: 2018-07-04 20:10+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -439,6 +439,74 @@ msgstr "Без тем"
 #: Templates/sandbox/show/nav.phtml:15
 msgid "All"
 msgstr "Все"
+
+#: Templates/settings/show_full.phtml:14
+msgid "Settings - Title"
+msgstr "Настройки профиля"
+
+#: Templates/settings/show_full.phtml:17
+msgid "Settings - Back to profile"
+msgstr "Вернуться к профилю"
+
+#: Templates/settings/show_full.phtml:21
+msgid "Settings - Upload avatar - Title"
+msgstr "Загрузка аватарки"
+
+#: Templates/settings/show_full.phtml:27
+msgid "Settings - Upload avatar - Text"
+msgstr ""
+
+#: Templates/settings/show_full.phtml:33
+msgid "Settings - Upload avatar - Upload"
+msgstr "Загрузить"
+
+#: Templates/settings/show_full.phtml:44
+msgid "Settings - Real name - Title"
+msgstr "Реальное имя"
+
+#: Templates/settings/show_full.phtml:48
+msgid "Settings - Real name - Text"
+msgstr ""
+"Реальное имя вызывает больше доверия, чем @username. Оно будет показываться "
+"рядом с вашими правками и в ТОПе авторов"
+
+#: Templates/settings/show_full.phtml:54
+msgid "Settings - Real name - Save button"
+msgstr "Сохранить реальное имя"
+
+#: Templates/settings/show_full.phtml:60
+msgid "Settings - Signature - Title"
+msgstr "Подпись"
+
+#: Templates/settings/show_full.phtml:64
+msgid "Settings - Signature - Text"
+msgstr "Введите подпись, описывающую ваши профессиональные навыки и знания"
+
+#: Templates/settings/show_full.phtml:66
+msgid "Settings - Signature - Input placeholder"
+msgstr "Напримере: Профессор психологии, предприниматель, начинающий поэт"
+
+#: Templates/settings/show_full.phtml:70
+msgid "Settings - Signature - Save button"
+msgstr "Сохранить подпись"
+
+#: Templates/settings/show_full.phtml:77
+msgid "Settings - Site - Title"
+msgstr "Персональный сайт"
+
+#: Templates/settings/show_full.phtml:82
+msgid "Settings - Site - Text"
+msgstr "Введите адрес вашего сайта или странички в социальной сети"
+
+#: Templates/settings/show_full.phtml:84
+#, fuzzy
+#| msgid "Main - Jumbotron - Input placeholder"
+msgid "Settings - Site - Input placeholder"
+msgstr "Какой у вас вопрос"
+
+#: Templates/settings/show_full.phtml:88
+msgid "Settings - Site - Save button"
+msgstr "Сохранить сайт"
 
 #~ msgid "Questions and answers on the topic"
 #~ msgstr "Вопросы и ответы на тему"

@@ -124,19 +124,6 @@
     "search__page_title": "Search question «%query%»",
     "search__title": "Search results: ",
 
-    "settings_signature__title": "Signature",
-    "settings_signature__subtitle": "Enter your professional signature",
-    "settings_signature__note": "Example: Professor of psychology, entrepreneur, poet",
-    "settings_signature__save_btn": "Save signature",
-    "settings_signature__ex__note": "Signature also appear on answers you write. For example, Leo Tolstoy have signature:",
-    "settings_signature__ex__name": "Leo Tolstoy",
-    "settings_signature__ex__signature": "Greatest authors of all time",
-
-    "settings_site__title": "Personal site",
-    "settings_site__subtitle": "Enter your personal site URL",
-    "settings_site__note": "Example: https://www.facebook.com/alexander",
-    "settings_site__save_btn": "Save personal site",
-
     "signup__page_title": "Registration on the questions-and-answers service - OctoAnswers",
     "signup__title": "Signup",
     "signup__useremail": "Username",

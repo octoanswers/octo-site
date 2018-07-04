@@ -127,19 +127,6 @@
     "search__alert__users_not_found__text": "По запросу «%query%» не удалось найти ни одного пользователя...",
     "search__alert__users_not_found__button": "Посмотреть список популярных",
 
-    "settings_signature__title": "Подпись",
-    "settings_signature__subtitle": "Введите подпись, описывающую ваши профессиональные навыки и знания:",
-    "settings_signature__note": "Напримере: Профессор психологии, предприниматель, начинающий поэт.",
-    "settings_signature__save_btn": "Сохранить подпись",
-    "settings_signature__ex__note": "Подпись также будет показываться рядом с правками ответов, которые вы сделаете. Так, например, Лев Толстой наверняка сохранил бы такую подпись:",
-    "settings_signature__ex__name": "Лев Толстой",
-    "settings_signature__ex__signature": "Величайший писатель всех времен",
-
-    "settings_site__title": "Персональный сайт",
-    "settings_site__subtitle": "Введите адрес вашего сайта или странички в социальной сети.",
-    "settings_site__note": "Пример: https://www.facebook.com/alexander",
-    "settings_site__save_btn": "Сохранить ссылку",
-
     "signup__page_title": "Регистрация на сайте вопросов и ответов - OctoAnswers",
     "signup__head_description": "OctoAnswers позволяет удивительно легко получать компетентные ответы на любые вопросы. Более 100  человек ежедневно задают вопросы и получают ответы помощью OctoAnswers.",
     "signup__title": "Регистрация",
