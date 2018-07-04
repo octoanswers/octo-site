@@ -24,12 +24,6 @@
     "modal__fake_follow_q__text": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
     "modal__fake_edit_answer__text": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
 
-    "modal_rename_question": {
-        "modal_title": "Переименование вопроса",
-        "leave_redirect": "Оставить редирект",
-        "submit_button": "Переименовать вопрос"
-    },
-
     "question_not_found__page_title": "Вопрос не найден:",
     "question_not_found__title": "Вопрос не найден",
     "question_not_found__create_a_question": "Создать вопрос",
@@ -37,31 +31,6 @@
     "q__signup_lure__text_1": "Смотрите, какие вопросы ваши друзья задают сегодня.",
     "q__signup_lure__text_2": "Следите за новыми вопросами с интересными для вас хештегами.",
     "q__signup_lure__text_3": "И делитесь своими знаниями с окружающими.",
-
-    "questions__page_title__with_answers": "Вопросы с ответами",
-    "questions__page_title__without_answers": "Вопросы без ответов",
-    "questions__page_title__all": "Новые вопросы",
-    "questions__page_num": "Страница",
-
-    "questions__title": "Вопросы",
-    "questions__search_placeholder": "Поиск вопроса",
-    "questions__filter__with_answers": "Последние",
-    "questions__filter__popular": "Популярные",
-    "questions__ask": "Задать вопрос",
-
-    "questions": {
-        "title": "Вопросы с ответами",
-        "page_num": "Страница",
-        "filter": {
-            "newest": "Новые вопросы",
-            "recently_updated": "Недавно обновленные",
-            "popular": "Популярные"
-        },
-        "next_btn": "Еще вопросы",
-        "recently_updated": {
-            "title": "Недавно обновленные вопросы"
-        }
-    },
 
     "users__page_title": "Пользователи сервиса OctoAnswers",
     "users__title": "Пользователи",

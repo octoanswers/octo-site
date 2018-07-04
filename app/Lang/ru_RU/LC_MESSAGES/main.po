@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 21:12+0500\n"
-"PO-Revision-Date: 2018-07-04 21:13+0500\n"
+"POT-Creation-Date: 2018-07-04 21:52+0500\n"
+"PO-Revision-Date: 2018-07-04 21:54+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -68,6 +68,21 @@ msgstr ""
 "OctoAnswers - это как Википедия, только для вопросов и ответов. Пользователи "
 "могут задавать вопросы, отвечать на них и дополнять чужие ответы"
 
+#: PageController/Questions/Newest.php:48
+msgid "Questions - Newest - Page title"
+msgstr "Новые вопросы"
+
+#: PageController/Questions/Newest.php:48 PageController/Sandbox/All.php:50
+#: PageController/Sandbox/WithoutAnswers.php:59
+#: PageController/Sandbox/WithoutTopics.php:59
+#: PageController/Topics/Newest.php:39 PageController/Users/Newest.php:47
+msgid "Common - Page"
+msgstr "Страница"
+
+#: PageController/Questions/RecentlyUpdated.php:44
+msgid "Questions - Recently updated - Title"
+msgstr "Недавно обновленные вопросы"
+
 #: PageController/Sandbox/WithoutAnswers.php:19
 #: PageController/Sandbox/WithoutTopics.php:19
 msgid "Question"
@@ -75,6 +90,18 @@ msgid_plural "Questions"
 msgstr[0] "Вопрос"
 msgstr[1] "Вопроса"
 msgstr[2] "Вопросов"
+
+#: PageController/Sandbox/WithoutAnswers.php:59
+msgid "Questions - Without answers - Page title"
+msgstr "Вопросы без ответов"
+
+#: PageController/Sandbox/WithoutTopics.php:39
+msgid "Questions - Filter - Without answers"
+msgstr "Без ответа"
+
+#: PageController/Search/Questions.php:53
+msgid "Questions - Search input placeholder"
+msgstr "Поиск вопроса"
 
 #: PageController/Topic/Show.php:103
 msgid "Topic - Page title"
@@ -88,10 +115,6 @@ msgstr "Вопросы и ответы на тему %topic"
 msgid "New topics"
 msgstr "Новые темы"
 
-#: PageController/Topics/Newest.php:39
-msgid "Page"
-msgstr "Страница"
-
 #: PageController/Users/Newest.php:40
 msgid "Users - Filter - Newest"
 msgstr "Новые"
@@ -99,10 +122,6 @@ msgstr "Новые"
 #: PageController/Users/Newest.php:47
 msgid "Users - Page title"
 msgstr "Новые пользователи со всего мира"
-
-#: PageController/Users/Newest.php:47
-msgid "Common - Page"
-msgstr ""
 
 #: Trait/Question.php:30
 msgid "Minute to read"
@@ -490,6 +509,24 @@ msgstr "Закрыть"
 msgid "Feedback modal - Thanks"
 msgstr "Спасибо за отзыв"
 
+#: Templates/question/modal/rename.phtml:8
+msgid "Rename question modal - Title"
+msgstr "Переименовать вопрос"
+
+#: Templates/question/modal/rename.phtml:18
+msgid "Rename question modal - Note"
+msgstr ""
+"Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с "
+"основными правилами переименования"
+
+#: Templates/question/modal/rename.phtml:24
+msgid "Rename question modal - Leave redirect"
+msgstr "Оставить редирект"
+
+#: Templates/question/modal/rename.phtml:30
+msgid "Rename question modal - Rename button"
+msgstr "Переименовать вопрос"
+
 #: Templates/question/modal/upload_image.phtml:7
 msgid "Modal - Upload image - Title"
 msgstr "Загрузка картинки вопроса"
@@ -497,6 +534,22 @@ msgstr "Загрузка картинки вопроса"
 #: Templates/question/modal/upload_image.phtml:21
 msgid "Modal - Upload image - Submit button"
 msgstr "Загрузить картинку"
+
+#: Templates/questions/show_list/nav.phtml:5
+msgid "Questions - Filter - Newest"
+msgstr "Новые вопросы"
+
+#: Templates/questions/show_list/nav.phtml:10
+msgid "Questions - Filter - Recently updated"
+msgstr "Недавно обновленные"
+
+#: Templates/questions/show_list/nav.phtml:15
+msgid "Questions - Filter - Popular"
+msgstr "Популярные"
+
+#: Templates/questions/show_list_full.phtml:22
+msgid "Questions - Next button"
+msgstr "Еще вопросы"
 
 #: Templates/sandbox/show/nav.phtml:5
 msgid "Questions without answer"
@@ -589,10 +642,8 @@ msgstr "Подписан"
 msgid "Button - Unfollow"
 msgstr "Отписаться"
 
-#, fuzzy
-#~| msgid "Main - Jumbotron - Input placeholder"
-#~ msgid "Settings - Site - Input placeholder"
-#~ msgstr "Какой у вас вопрос"
+#~ msgid "Page"
+#~ msgstr "Страница"
 
 #~ msgid "Questions and answers on the topic"
 #~ msgstr "Вопросы и ответы на тему"

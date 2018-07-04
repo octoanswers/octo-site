@@ -26,38 +26,6 @@
     "modal__fake_follow_q__text": "Register or sign in and you can subscribe to this question.",
     "modal__fake_edit_answer__text": "Register or log in and you can edit or supplement this question.",
 
-    "questions": {
-        "title": "Вопросы с ответами",
-        "page_num": "Page",
-        "filter": {
-            "newest": "Newest questions",
-            "recently_updated": "Recently updated",
-            "popular": "Popular"
-        },
-        "next_btn": "More questions",
-        "recently_updated": {
-            "title": "Recently updated questions"
-        }
-    },
-
-    "questions__page_title__with_answers": "Questions with answers",
-    "questions__page_title__without_answers": "Questions without answers",
-    "questions__page_title__all": "Newest questions",
-    "questions__page_num": "Page",
-
-    "questions__title": "Questions",
-    "questions__search_placeholder": "Search questions",
-    "questions__filter__with_answers": "With answers",
-    "questions__filter__popular": "",
-    "questions__ask": "Ask a Question",
-
-
-    "modal_rename_question": {
-        "modal_title": "Rename question",
-        "leave_redirect": "Оставить редирект",
-        "submit_button": "Переименовать вопрос"
-    },
-
     "q__signup_lure__text_1": "See what questions your friends are asking today.",
     "q__signup_lure__text_2": "Watch for new questions with topics interesting for you.",
     "q__signup_lure__text_3": "And share your knowledge with others.",

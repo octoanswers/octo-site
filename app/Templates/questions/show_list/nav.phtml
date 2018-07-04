@@ -2,17 +2,17 @@
 <ul class="nav nav-tabs mt-4">
     <li class="nav-item">
         <a class="nav-link <?= ($this->list == 'with-answers') ? 'active' : '' ?>" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
-            <?= $this->l->t('questions', 'filter', 'newest') ?>
+            <?= _('Questions - Filter - Newest') ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link <?= ($this->list == 'recently_updated') ? 'active' : '' ?>" href="<?= Questions_URL_Helper::getRecentlyUpdatedURL($this->lang) ?>">
-            <?= $this->l->t('questions', 'filter', 'recently_updated') ?>
+            <?= _('Questions - Filter - Recently updated') ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled <?= ($this->list == 'without-answers') ? 'active' : '' ?>" href="#">
-            <?= $this->l->t('questions', 'filter', 'popular') ?>
+            <?= _('Questions - Filter - Popular') ?>
         </a>
     </li>
 </ul>

@@ -50,7 +50,7 @@ class Questions_Search_PageController extends Abstract_PageController
     {
         switch ($list) {
             case self::LIST_QUESTIONS:
-                $placeholder = $this->l->t('questions__search_placeholder');
+                $placeholder = _('Questions - Search input placeholder');
                 break;
             case self::LIST_TOPICS:
                 $placeholder = $this->l->t('topics__search_placeholder');

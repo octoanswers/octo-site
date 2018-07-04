@@ -5,7 +5,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= $this->l->t('modal_rename_question', 'modal_title') ?>
+                    <?= _('Rename question modal - Title') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -14,19 +14,20 @@
             <form id="form__rename_question" data-question-id="<?= $this->question->getID() ?>">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными <a href="#" target="_blank">правилами переименования</a>.</label>
+                        <label>
+                            <?= _('Rename question modal - Note') ?></label>
                         <textarea class="form-control" id="new_title" rows="6"><?= $this->question->getTitle() ?></textarea>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label mt-1">
                             <input id="save_redirect" type="checkbox" class="form-check-input" checked>
-                            <?= $this->l->t('modal_rename_question', 'leave_redirect') ?>
+                            <?= _('Rename question modal - Leave redirect') ?>
                         </label>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="form__rename_question__submit" class="btn btn-primary">
-                        <?= $this->l->t('modal_rename_question', 'submit_button') ?>
+                        <?= _('Rename question modal - Rename button') ?>
                     </button>
                 </div>
             </form>

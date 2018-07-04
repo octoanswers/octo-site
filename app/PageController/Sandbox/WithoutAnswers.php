@@ -36,7 +36,7 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
         $this->template = 'sandbox/show';
         $this->pageTitle = $this->_getPageTitle();
         $this->pageDescription = $this->_getPageDescription();
-        $this->activeFilter = $this->l->t('questions__filter__without_answers');
+        $this->activeFilter = $this->l->t('Questions - Filter - Without_answers');
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
             $this->nextPageURL = Sandbox_URL_Helper::getWithoutAnswersURL($this->lang, ($this->page + 1));
@@ -56,7 +56,7 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->l->t('questions__page_title__without_answers').' - '.$this->l->t('questions__page_num').' '.$this->page.' - '._('OctoAnswers');
+        return _('Questions - Without answers - Page title').' - '._('Common - Page').' '.$this->page.' - '._('OctoAnswers');
     }
 
     public function _getPageDescription(): string
