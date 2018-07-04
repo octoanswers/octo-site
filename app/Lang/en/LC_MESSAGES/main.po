@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 21:51+0500\n"
-"PO-Revision-Date: 2018-07-04 21:52+0500\n"
+"POT-Creation-Date: 2018-07-04 22:07+0500\n"
+"PO-Revision-Date: 2018-07-04 22:07+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -68,6 +68,14 @@ msgstr ""
 "question and get one complete, comprehensive and competent answer from the "
 "community"
 
+#: PageController/Question/Show.php:99
+msgid "Question - Share description"
+msgstr "Wiki-answers to your questions on OctoAnswers"
+
+#: PageController/Question/Show.php:192
+msgid "Question - Page description"
+msgstr "Wiki-answer on question %question"
+
 #: PageController/Questions/Newest.php:48
 msgid "Questions - Newest - Page title"
 msgstr "Newest questions"
@@ -100,7 +108,19 @@ msgstr "Without answers"
 
 #: PageController/Search/Questions.php:53
 msgid "Questions - Search input placeholder"
-msgstr ""
+msgstr "Search questions"
+
+#: PageController/Search/Questions.php:56
+#, fuzzy
+#| msgid "Questions - Search input placeholder"
+msgid "Topics - Search input placeholder"
+msgstr "Search questions"
+
+#: PageController/Search/Questions.php:59
+#, fuzzy
+#| msgid "Questions - Search input placeholder"
+msgid "Users - Search input placeholder"
+msgstr "Search questions"
 
 #: PageController/Topic/Show.php:103
 msgid "Topic - Page title"
@@ -498,6 +518,12 @@ msgstr "Close"
 msgid "Feedback modal - Thanks"
 msgstr "Thanks for the feedback"
 
+#: Templates/question/modal/first_answer__signup.phtml:9
+msgid "Question - First answer - Text"
+msgstr ""
+"Register or log in and you will be the first to write the answer to this "
+"question"
+
 #: Templates/question/modal/rename.phtml:8
 msgid "Rename question modal - Title"
 msgstr "Rename question"
@@ -548,6 +574,14 @@ msgstr ""
 
 #: Templates/sandbox/show/nav.phtml:15
 msgid "All"
+msgstr ""
+
+#: Templates/search/block/div__no_users.phtml:7
+msgid "Search alert - Users_not_found__text"
+msgstr ""
+
+#: Templates/search/block/div__no_users.phtml:10
+msgid "Search alert  - Users_not_found__button"
 msgstr ""
 
 #: Templates/settings/show_full.phtml:14

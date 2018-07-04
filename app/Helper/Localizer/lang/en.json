@@ -16,12 +16,7 @@
 
     "error_500__page_title": "Error 500",
 
-    "q_pg__page_description": "Wiki-answer on question «%question%»",
-    "q_pg__share_description": "Wiki-answers to your questions on OctoAnswers",
-
     "related_questions__write_first_answer": "Write first answer",
-
-    "q__first_answer__modal_text": "Register or log in and you will be the first to write the answer to this question.",
 
     "modal__fake_follow_q__text": "Register or sign in and you can subscribe to this question.",
     "modal__fake_edit_answer__text": "Register or log in and you can edit or supplement this question.",
@@ -48,15 +43,6 @@
     "u__last_revisions": "Last revisions",
     "u__followers": "Followers",
     "u__followed": "Followed",
-
-    "modal_login": {
-        "title": "Log in",
-        "email": "Email",
-        "password": "Password",
-        "submit_btn": "Log in",
-        "signup": "Signup",
-        "forgot_password": "Forgot password"
-    },
 
     "alert_subscribe__text": "Enter your email address to get notified about the answer as soon as it appears.",
     "alert_subscribe__btn": "Report response"

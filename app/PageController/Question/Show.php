@@ -96,7 +96,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->openGraph = $this->_getOpenGraph();
 
         $this->shareLink['title'] = $this->question->getTitle();
-        $this->shareLink['description'] = $this->l->t('q_pg__share_description');
+        $this->shareLink['description'] = _('Question - Share description');
         $this->shareLink['url'] = $this->question->getURL($this->lang);
         $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
 
@@ -189,7 +189,7 @@ class Show_Question_PageController extends Abstract_PageController
 
     protected function __getPageDescription()
     {
-        $pageDescription = str_replace('%question%', $this->question->getTitle(), $this->l->t('q_pg__page_description'));
+        $pageDescription = str_replace('%question', $this->question->getTitle(), _('Question - Page description'));
 
         return $pageDescription;
     }

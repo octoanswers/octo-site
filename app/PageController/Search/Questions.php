@@ -53,10 +53,10 @@ class Questions_Search_PageController extends Abstract_PageController
                 $placeholder = _('Questions - Search input placeholder');
                 break;
             case self::LIST_TOPICS:
-                $placeholder = $this->l->t('topics__search_placeholder');
+                $placeholder = _('Topics - Search input placeholder');
                 break;
             case self::LIST_USERS:
-                $placeholder = $this->l->t('users__search_placeholder');
+                $placeholder = _('Users - Search input placeholder');
                 break;
             default:
                 throw new Exception("Incorrect list param", 0);

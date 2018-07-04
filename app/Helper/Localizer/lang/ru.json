@@ -16,11 +16,6 @@
 
     "error_500__page_title": "Ошибка 500",
 
-    "q_pg__page_description": "Вики-ответ на вопрос «%question%»",
-    "q_pg__share_description": "Вики-ответы на Ваши вопросы на octoanswers.com",
-
-    "q__first_answer__modal_text": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
-
     "modal__fake_follow_q__text": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
     "modal__fake_edit_answer__text": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
 
@@ -32,15 +27,6 @@
     "q__signup_lure__text_2": "Следите за новыми вопросами с интересными для вас хештегами.",
     "q__signup_lure__text_3": "И делитесь своими знаниями с окружающими.",
 
-    "users__page_title": "Пользователи сервиса OctoAnswers",
-    "users__title": "Пользователи",
-    "users__lead": "После регистрации вы сможете посписаться на интересующие вас темы, моментально узнавать о новых вопросах и предлагать свои ответы.",
-    "users__search_placeholder": "Поиск пользователей",
-    "users__filter__title": "Пользователи:",
-    "users__filter__newest": "Новые",
-    "users__filter__popular": "Популярные",
-    "users__signup": "Зарегистрироваться",
-
     "search__alert__questions_not_found__title": "Вопросов не найдено",
     "search__alert__questions_not_found__text": "По запросу «%query%» не удалось найти ни одного вопроса...",
     "search__alert__questions_not_found__button": "Задать вопрос",
@@ -48,13 +34,8 @@
     "search__alert__topics_not_found__title": "Хештеги не найдены",
     "search__alert__topics_not_found__text": "По запросу «%query%» не удалось найти ни одной темы...",
 
-    "search__alert__users_not_found__title": "Пользователей не найдено",
-    "search__alert__users_not_found__text": "По запросу «%query%» не удалось найти ни одного пользователя...",
-    "search__alert__users_not_found__button": "Посмотреть список популярных",
-
     "alert_subscribe__text": "Укажите адрес электронной почты, чтобы получить уведомление об ответе как только он появится.",
     "alert_subscribe__btn": "Сообщить об ответе",
-
 
     "user__page_title_postfix": " - Вики-ответы на OctoAnswers",
     "user__page_description_postfix": " - вики-ответы на OctoAnswers",
@@ -62,15 +43,5 @@
     "user__change_avatar": "Изменить аватар",
     "u__last_revisions": "Последние правки",
     "u__followers": "Подписчики",
-    "u__followed": "Подписки",
-
-    "wordform_no_topics": "Нет тем",
-    "wordform_1_topic": "тема",
-    "wordform_2_topics": "темы",
-    "wordform_5_topics": "тем",
-
-    "wordform_no_users": "Нет пользователей",
-    "wordform_1_user": "пользователь",
-    "wordform_2_users": "пользователя",
-    "wordform_5_users": "пользователей"
+    "u__followed": "Подписки"
 }
