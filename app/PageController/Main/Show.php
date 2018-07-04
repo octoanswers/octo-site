@@ -35,7 +35,6 @@ class Show_Main_PageController extends Abstract_PageController
         }
 
         $this->parsedown = new ExtendedParsedown($this->lang);
-        $this->questions_humanizer = new Questions_Humanizer($this->l);
 
         $this->template = 'main/show';
         $this->pageTitle = $this->l->t('octoanswers').' - '.$this->l->t('main_pg__title');

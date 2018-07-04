@@ -65,8 +65,6 @@ class Show_Question_PageController extends Abstract_PageController
             $this->formattedAnswerText = trim($parsedown->text($answer_other_text));
         }
 
-        $this->questions_humanizer = new Questions_Humanizer($this->l);
-
         $this->_prepareFollowButton();
 
         $this->contributors = (new Contributors_Query($this->lang))->findAnswerContributors($this->question->getID());

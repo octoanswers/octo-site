@@ -12,7 +12,6 @@ class Newest_Questions_PageController extends Abstract_PageController
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $questionsCount = (new QuestionsCount_Query($this->lang))->questionsLastID();
-        $this->questions_humanizer = new Questions_Humanizer($this->l);
 
         $this->questions = (new Questions_Query($this->lang))->findNewestWithAnswer($this->page);
 

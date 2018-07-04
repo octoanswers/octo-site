@@ -248,10 +248,6 @@
     "signup__real_name": "Real name",
 
     "alert_subscribe__text": "Enter your email address to get notified about the answer as soon as it appears.",
-    "alert_subscribe__btn": "Report response",
+    "alert_subscribe__btn": "Report response"
 
-    "wordform_1_question": "question",
-    "wordform_2_questions": "questions",
-    "wordform_5_questions": "questions",
-    "no_questions": "No questions"
 }

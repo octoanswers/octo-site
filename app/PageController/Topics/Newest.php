@@ -12,7 +12,6 @@ class Newest_Topics_PageController extends Abstract_PageController
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $topicsCount = (new Topics_Query($this->lang))->topicsLastID();
-        $this->questions_humanizer = new Questions_Humanizer($this->l);
 
         $this->topics = (new Topics_Query($this->lang))->findNewest($this->page);
 

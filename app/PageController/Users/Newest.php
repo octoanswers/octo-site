@@ -16,7 +16,6 @@ class Newest_Users_PageController extends Abstract_PageController
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 0;
 
         $usersCount = (new Users_Query())->usersLastID();
-        $this->questions_humanizer = new Questions_Humanizer($this->l);
 
         $this->users = (new Users_Query())->usersNewest();
 

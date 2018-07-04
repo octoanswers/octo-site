@@ -44,7 +44,6 @@ class Show_Topic_PageController extends Abstract_PageController
         }
 
         $this->parsedown = new ExtendedParsedown($this->lang);
-        $this->questions_humanizer = new Questions_Humanizer($this->l);
 
         $humanDateTimezone = new DateTimeZone('UTC');
         $dateHumanizer = new HumanDate($humanDateTimezone, $this->lang);

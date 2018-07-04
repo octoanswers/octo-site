@@ -16,8 +16,7 @@ class WithoutTopics_Sandbox_PageController extends Abstract_PageController
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $questionsCount = (new QuestionsCount_Query($this->lang))->countQuestionsWithoutAnswers();
-        $this->questions_humanizer = new Questions_Humanizer($this->l);
-        $this->humanizedQuestionsCount = (new Questions_Humanizer($this->l))->humanize($questionsCount);
+        $this->humanizedQuestionsCount = $questionsCount.' '.mb_strtolower(ngettext("Question", "Questions", $questionsCount));
 
         try {
             $this->questions = (new Sandbox_Query($this->lang))->questionsWithoutTopics($this->page);

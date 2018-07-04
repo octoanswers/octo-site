@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 13:49+0500\n"
-"PO-Revision-Date: 2018-07-04 13:49+0500\n"
+"POT-Creation-Date: 2018-07-04 13:53+0500\n"
+"PO-Revision-Date: 2018-07-04 13:53+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -21,6 +21,13 @@ msgstr "Questions and answers flow"
 #: PageController/Flow/Show.php:34 PageController/Flow/Show.php:49
 msgid "Flow - Page description"
 msgstr "Questions and answers flow on OctoAnswers"
+
+#: PageController/Sandbox/WithoutAnswers.php:20
+#: PageController/Sandbox/WithoutTopics.php:20
+msgid "Question"
+msgid_plural "Questions"
+msgstr[0] "Question"
+msgstr[1] "Questions"
 
 #: PageController/Topic/Show.php:104
 msgid "Questions and answers on the topic"

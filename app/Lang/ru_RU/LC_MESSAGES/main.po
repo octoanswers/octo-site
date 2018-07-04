@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 13:47+0500\n"
-"PO-Revision-Date: 2018-07-04 13:48+0500\n"
+"POT-Creation-Date: 2018-07-04 13:53+0500\n"
+"PO-Revision-Date: 2018-07-04 13:54+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -22,6 +22,14 @@ msgstr "Поток вопросов и ответов"
 #: PageController/Flow/Show.php:34 PageController/Flow/Show.php:49
 msgid "Flow - Page description"
 msgstr "Поток вопросов и ответов на ОктоАнсверс"
+
+#: PageController/Sandbox/WithoutAnswers.php:20
+#: PageController/Sandbox/WithoutTopics.php:20
+msgid "Question"
+msgid_plural "Questions"
+msgstr[0] "Вопрос"
+msgstr[1] "Вопроса"
+msgstr[2] "Вопросов"
 
 #: PageController/Topic/Show.php:104
 msgid "Questions and answers on the topic"
@@ -170,6 +178,7 @@ msgid "More"
 msgstr "Ещё"
 
 #: Templates/question/block/contributors_full.phtml:6
+#: Templates/question/block/header/info.phtml:12
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Автор"
