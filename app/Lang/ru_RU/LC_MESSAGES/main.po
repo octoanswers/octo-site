@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 12:02+0500\n"
-"PO-Revision-Date: 2018-07-04 12:03+0500\n"
+"POT-Creation-Date: 2018-07-04 12:21+0500\n"
+"PO-Revision-Date: 2018-07-04 12:22+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -34,6 +34,38 @@ msgstr "Новые темы"
 #: PageController/Topics/Newest.php:40
 msgid "Page"
 msgstr "Страница"
+
+#: Templates/_common/footer.phtml:11
+msgid "Footer - About"
+msgstr "О сайте"
+
+#: Templates/_common/footer.phtml:16
+msgid "Footer - Support"
+msgstr "Менеджер поддержки"
+
+#: Templates/_common/footer.phtml:21
+msgid "Footer - Users"
+msgstr "Пользователи"
+
+#: Templates/_common/footer.phtml:26
+msgid "Footer - Flow"
+msgstr "Поток"
+
+#: Templates/_common/footer.phtml:34
+msgid "Footer - Icon pack by icons8"
+msgstr "Иконки с Icons8"
+
+#: Templates/_common/footer.phtml:43
+msgid "Lang - Change language"
+msgstr "Изменить язык"
+
+#: Templates/_common/footer.phtml:47
+msgid "Lang - English"
+msgstr "Английский"
+
+#: Templates/_common/footer.phtml:50
+msgid "Lang - Russian"
+msgstr "Русский"
 
 #: Templates/_common/item/question_with_answer.phtml:32
 #: Templates/question/block/related_questions.phtml:29

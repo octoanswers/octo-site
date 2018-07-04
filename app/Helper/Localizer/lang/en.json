@@ -53,16 +53,6 @@
 
     "feed__title": "Newsfeed",
 
-    "footer": {
-        "about": "About",
-        "support": "Support",
-        "support_link": "https://www.facebook.com/alexandergomzyakov",
-        "users": "Users",
-        "flow": "Flow",
-        "with_love": "<a class=\"color-gray-800 no-underline-hover\" rel=\"nofollow\" target=\"_blank\" href=\"%octo_url%\">OctoAnswers</a> designed and built with love by <a class=\"color-gray-800 no-underline-hover\" rel=\"nofollow\" target=\"_blank\" href=\"https://github.com/gomzyakov\">@gomzyakov</a>. Maintained by the <a class=\"color-gray-800 no-underline-hover\" rel=\"nofollow\" target=\"_blank\" href=\"https://github.com/orgs/octoanswers/teams/core-team\">core team</a> with the help of <a class=\"color-gray-800 no-underline-hover\" rel=\"nofollow\" target=\"_blank\" href=\"https://github.com/orgs/octoanswers/people\">our contributors</a>.",
-        "icon_pack_by_icons8": "Icon pack by Icons8"
-    },
-
     "topic": {
         "page_description": "Questions and answers on the topic &laquo;%topic%&raquo;"
     },
