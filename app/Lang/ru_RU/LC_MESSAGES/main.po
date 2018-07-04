@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 21:01+0500\n"
-"PO-Revision-Date: 2018-07-04 21:02+0500\n"
+"POT-Creation-Date: 2018-07-04 21:09+0500\n"
+"PO-Revision-Date: 2018-07-04 21:09+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -39,6 +39,10 @@ msgstr ""
 #: PageController/Users/Newest.php:47 Templates/_common/navbar.phtml:8
 msgid "OctoAnswers"
 msgstr "OctoAnswers"
+
+#: PageController/Answer/History.php:33
+msgid "Answer history - Page title"
+msgstr "История вопроса"
 
 #: PageController/Feed/Show.php:45
 msgid "Feed - Page title"
@@ -262,6 +266,14 @@ msgstr "Регистрация"
 #: Templates/answer/edit/header.phtml:3
 msgid "Edit answer - Subtitle"
 msgstr "Правка ответа на вопрос"
+
+#: Templates/answer/edit/header.phtml:11
+msgid "Edit answer - Back to question"
+msgstr "Вернуться к вопросу"
+
+#: Templates/answer/edit/header.phtml:14
+msgid "Edit answer - Search in DDG"
+msgstr "Поискать в DuckDuckGo"
 
 #: Templates/answer/edit_full.phtml:21
 msgid "Edit answer - Description of changes"

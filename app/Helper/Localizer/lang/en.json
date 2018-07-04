@@ -1,7 +1,5 @@
 {
 
-    "answer_history__page_title": "History of question: ",
-
     "block": {
         "first_answer": {
             "title": "Be the first author!",
@@ -17,13 +15,6 @@
     "edit__page_title": "Edit answer",
 
     "error_500__page_title": "Error 500",
-
-    "lang": {
-        "en": "English",
-        "english": "English",
-        "ru": "Русский",
-        "russian": "Русский"
-    },
 
     "q_pg__page_description": "Wiki-answer on question «%question%»",
     "q_pg__share_description": "Wiki-answers to your questions on OctoAnswers",

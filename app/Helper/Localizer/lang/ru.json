@@ -1,7 +1,5 @@
 {
 
-    "answer_history__page_title": "История вопроса: ",
-
     "block": {
         "first_answer": {
             "title": "Будьте первым автором!",
@@ -17,17 +15,6 @@
     "edit__page_title": "Редактирование ответа",
 
     "error_500__page_title": "Ошибка 500",
-
-    "lang": {
-        "en": "English",
-        "english": "English",
-        "ru": "Русский",
-        "russian": "Русский"
-    },
-
-
-    "q__action__search_in_ddg": "Поискать в DuckDuckGo",
-    "q__action__copy_short_url": "Короткий URL",
 
     "q_pg__page_description": "Вики-ответ на вопрос «%question%»",
     "q_pg__share_description": "Вики-ответы на Ваши вопросы на octoanswers.com",
