@@ -76,8 +76,6 @@ class Show_Topic_PageController extends Abstract_PageController
             ];
         }
 
-        $this->minutesToRead_humanizer = new MinutesToRead_Humanizer($this->l);
-
         //$data['alternate_url_prefix'] = $topic['url'].'?';
 
         //$data['most_viewed_writers'] = $this->__get_most_viewed_writers();

@@ -18,7 +18,6 @@ class WithoutTopics_Sandbox_PageController extends Abstract_PageController
         $questionsCount = (new QuestionsCount_Query($this->lang))->countQuestionsWithoutAnswers();
         $this->questions_humanizer = new Questions_Humanizer($this->l);
         $this->humanizedQuestionsCount = (new Questions_Humanizer($this->l))->humanize($questionsCount);
-        $this->minutesToRead_humanizer = new MinutesToRead_Humanizer($this->l);
 
         try {
             $this->questions = (new Sandbox_Query($this->lang))->questionsWithoutTopics($this->page);

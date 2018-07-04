@@ -12,7 +12,6 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $this->questions_humanizer = new Questions_Humanizer($this->l);
-        $this->minutesToRead_humanizer = new MinutesToRead_Humanizer($this->l);
 
         $this->questions = (new Questions_Query($this->lang))->findRecentlyUpdated($this->page - 1);
 

@@ -66,7 +66,6 @@ class Show_Question_PageController extends Abstract_PageController
         }
 
         $this->questions_humanizer = new Questions_Humanizer($this->l);
-        $this->minutesToRead_humanizer = new MinutesToRead_Humanizer($this->l);
 
         $this->_prepareFollowButton();
 

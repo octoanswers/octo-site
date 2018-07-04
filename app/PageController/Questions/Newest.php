@@ -13,7 +13,6 @@ class Newest_Questions_PageController extends Abstract_PageController
 
         $questionsCount = (new QuestionsCount_Query($this->lang))->questionsLastID();
         $this->questions_humanizer = new Questions_Humanizer($this->l);
-        $this->minutesToRead_humanizer = new MinutesToRead_Humanizer($this->l);
 
         $this->questions = (new Questions_Query($this->lang))->findNewestWithAnswer($this->page);
 

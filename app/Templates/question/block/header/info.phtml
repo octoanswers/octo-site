@@ -3,7 +3,7 @@
 <div class="color-gray-500 small mt-4">
 
     <?php if ($this->answer->getText()): ?>
-        <?= $this->minutesToRead_humanizer->humanizeCharactersCount(mb_strlen($this->answer->getText())) ?>
+        <?= $this->question->getHumanizedMinutesToRead() ?>
         <span class="color-gray-900 font-weight-800 mx-1">&middot;</span>
     <?php endif; ?>
 

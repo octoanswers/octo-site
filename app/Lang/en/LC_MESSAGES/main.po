@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 12:20+0500\n"
-"PO-Revision-Date: 2018-07-04 12:21+0500\n"
+"POT-Creation-Date: 2018-07-04 12:31+0500\n"
+"PO-Revision-Date: 2018-07-04 12:32+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -13,6 +13,12 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: Humanizer/MinutesToRead.php:28
+msgid "Minute"
+msgid_plural "Minutes"
+msgstr[0] "Minute"
+msgstr[1] "Minutes"
 
 #: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
 msgid "Flow - Page title"
@@ -58,11 +64,11 @@ msgstr "Icon pack by Icons8"
 msgid "Lang - Change language"
 msgstr "Change language"
 
-#: Templates/_common/footer.phtml:47
+#: Templates/_common/footer.phtml:47 Templates/_common/navbar.phtml:102
 msgid "Lang - English"
 msgstr "English"
 
-#: Templates/_common/footer.phtml:50
+#: Templates/_common/footer.phtml:50 Templates/_common/navbar.phtml:105
 msgid "Lang - Russian"
 msgstr "Russian"
 

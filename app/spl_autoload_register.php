@@ -7,6 +7,13 @@ if (!function_exists('_')) {
     }
 }
 
+if (!function_exists('ngettext')) {
+    function ngettext($value_one, $value_many, $num)
+    {
+        return $num.' '.$value_many;
+    }
+}
+
 /**
  * @return bool
  */

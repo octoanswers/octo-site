@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 12:21+0500\n"
-"PO-Revision-Date: 2018-07-04 12:22+0500\n"
+"POT-Creation-Date: 2018-07-04 12:44+0500\n"
+"PO-Revision-Date: 2018-07-04 12:45+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -59,11 +59,11 @@ msgstr "Иконки с Icons8"
 msgid "Lang - Change language"
 msgstr "Изменить язык"
 
-#: Templates/_common/footer.phtml:47
+#: Templates/_common/footer.phtml:47 Templates/_common/navbar.phtml:102
 msgid "Lang - English"
 msgstr "Английский"
 
-#: Templates/_common/footer.phtml:50
+#: Templates/_common/footer.phtml:50 Templates/_common/navbar.phtml:105
 msgid "Lang - Russian"
 msgstr "Русский"
 
@@ -71,6 +71,13 @@ msgstr "Русский"
 #: Templates/question/block/related_questions.phtml:29
 msgid "Write first answer"
 msgstr "Написать первый ответ"
+
+#: Templates/_common/item/question_with_answer.phtml:47
+msgid "Minute to read"
+msgid_plural "Minutes to read"
+msgstr[0] "Минута на чтение"
+msgstr[1] "Минуты на чтение"
+msgstr[2] "Мминут на чтение"
 
 #: Templates/_common/modal/ask.phtml:8
 msgid "Ask modal - Title"

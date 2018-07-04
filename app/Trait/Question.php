@@ -21,4 +21,16 @@ trait Question_Trait
 
         return $topics_slice;
     }
+
+    function getHumanizedMinutesToRead()
+    {
+        $answer_len = mb_strlen($this->getAnswer()->getText());
+        if ($answer_len) {
+            $minites_to_read = ceil($answer_len/1000);
+            $humanized_minutes_to_read = $minites_to_read.' '.mb_strtolower(ngettext("Minute to read", "Minutes to read", $minites_to_read));
+            return $humanized_minutes_to_read;
+        }
+
+        return _('Empty answer');
+    }
 }

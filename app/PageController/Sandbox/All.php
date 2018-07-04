@@ -18,8 +18,7 @@ class All_Sandbox_PageController extends Abstract_PageController
 
         $questionsCount = (new QuestionsCount_Query($this->lang))->questionsLastID();
         $this->questions_humanizer = new Questions_Humanizer($this->l);
-        $this->minutesToRead_humanizer = new MinutesToRead_Humanizer($this->l);
-
+        
         $this->questions = (new Questions_Query($this->lang))->findNewest($this->page);
 
         foreach ($this->questions as $question) {
