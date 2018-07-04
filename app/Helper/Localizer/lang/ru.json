@@ -1,8 +1,4 @@
 {
-    "answer_edit__subtitle": "Правка ответа на вопрос",
-    "answer_edit__back_to_question": "Вернуться к вопросу",
-    "answer_edit__description_of_changes": "Описание изменений, если необходимо:",
-    "answer_edit__save_changes_btn": "Сохранить правки",
 
     "answer_history__page_title": "История вопроса: ",
 
@@ -29,13 +25,6 @@
         "russian": "Русский"
     },
 
-    "share__question__btn": "Поделиться",
-    "share__question__vk": "ВКонтакте",
-    "share__question__facebook": "Facebook",
-    "share__question__twitter": "Twitter",
-    "share__question__google_plus": "Google+",
-    "share__question__pinterest": "Pinterest",
-    "share__question__email": "Email",
 
     "q__action__search_in_ddg": "Поискать в DuckDuckGo",
     "q__action__copy_short_url": "Короткий URL",

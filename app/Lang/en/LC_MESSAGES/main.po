@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 20:31+0500\n"
-"PO-Revision-Date: 2018-07-04 20:31+0500\n"
+"POT-Creation-Date: 2018-07-04 21:02+0500\n"
+"PO-Revision-Date: 2018-07-04 21:03+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -14,16 +14,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: PageController/Answer/Edit.php:36 PageController/Answer/History.php:33
+#: PageController/Error/InternalServerError.php:14
+#: PageController/Error/PageNotFound.php:16
+#: PageController/Error/QuestionNotFound.php:22 PageController/Feed/Show.php:45
+#: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
+#: PageController/Main/Show.php:40 PageController/Main/Show.php:46
+#: PageController/Main/Show.php:65 PageController/Question/Show.php:51
+#: PageController/Question/Show.php:84
+#: PageController/Question/UpdateTopics.php:38
+#: PageController/Questions/Newest.php:48
+#: PageController/Questions/Newest.php:53
+#: PageController/Questions/RecentlyUpdated.php:44
+#: PageController/Questions/RecentlyUpdated.php:49
+#: PageController/Root/Show.php:27 PageController/Sandbox/All.php:50
+#: PageController/Sandbox/All.php:55
+#: PageController/Sandbox/WithoutAnswers.php:59
+#: PageController/Sandbox/WithoutAnswers.php:64
+#: PageController/Sandbox/WithoutTopics.php:59
+#: PageController/Sandbox/WithoutTopics.php:64
+#: PageController/Search/Questions.php:30 PageController/Settings/Show.php:19
+#: PageController/Topic/Show.php:103 PageController/Topics/Newest.php:39
+#: PageController/Users/Newest.php:47 Templates/_common/navbar.phtml:8
+msgid "OctoAnswers"
+msgstr "OctoAnswers"
+
 #: PageController/Feed/Show.php:45
 msgid "Feed - Page title"
 msgstr "Feed"
-
-#: PageController/Feed/Show.php:45 PageController/Main/Show.php:40
-#: PageController/Main/Show.php:46 PageController/Main/Show.php:65
-#: PageController/Topic/Show.php:103 PageController/Users/Newest.php:47
-#: Templates/_common/navbar.phtml:8
-msgid "OctoAnswers"
-msgstr "OctoAnswers"
 
 #: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
 msgid "Flow - Page title"
@@ -240,6 +258,18 @@ msgstr "Login"
 msgid "Navbar - Signup"
 msgstr "Signup"
 
+#: Templates/answer/edit/header.phtml:3
+msgid "Edit answer - Subtitle"
+msgstr "Edit answer to the question"
+
+#: Templates/answer/edit_full.phtml:21
+msgid "Edit answer - Description of changes"
+msgstr "Description of changes, if necessary"
+
+#: Templates/answer/edit_full.phtml:26
+msgid "Edit answer - Save button"
+msgstr "Save changes"
+
 #: Templates/answer/history/jumbotron.phtml:6
 msgid "Answer history page - Subtitle"
 msgstr "History of answer changes"
@@ -426,13 +456,16 @@ msgstr "Top answer contributors"
 msgid "Question - Top contributors - All answer contributors"
 msgstr "All answer contributors"
 
+#: Templates/question/modal/edit_answer_lure.phtml:16
+#: Templates/question/modal/feedback_thanks.phtml:13
+#: Templates/question/modal/first_answer__signup.phtml:16
+#: Templates/question/modal/follow_question_lure.phtml:16
+msgid "Button - Close"
+msgstr "Close"
+
 #: Templates/question/modal/feedback_thanks.phtml:9
 msgid "Feedback modal - Thanks"
 msgstr "Thanks for the feedback"
-
-#: Templates/question/modal/feedback_thanks.phtml:13
-msgid "Button - Close"
-msgstr "Close"
 
 #: Templates/question/modal/upload_image.phtml:7
 msgid "Modal - Upload image - Title"
@@ -513,6 +546,23 @@ msgstr ""
 #: Templates/settings/show_full.phtml:88
 msgid "Settings - Site - Save button"
 msgstr ""
+
+#: Templates/topic/block/actions.phtml:14
+#: Templates/topic/block/actions.phtml:20
+#: Templates/topic/block/actions.phtml:28 Templates/user/block/header.phtml:37
+#: Templates/user/block/header.phtml:41
+msgid "Button - Follow"
+msgstr "Follow"
+
+#: Templates/topic/block/actions.phtml:15
+#: Templates/topic/block/actions.phtml:20 Templates/user/block/header.phtml:38
+#: Templates/user/block/header.phtml:41
+msgid "Button - Followed"
+msgstr "Followed"
+
+#: Templates/topic/block/actions.phtml:16 Templates/user/block/header.phtml:39
+msgid "Button - Unfollow"
+msgstr "Unfollow"
 
 #~ msgid "question.share.text"
 #~ msgstr ""
