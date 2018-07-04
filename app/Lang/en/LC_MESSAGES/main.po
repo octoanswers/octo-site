@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 21:09+0500\n"
-"PO-Revision-Date: 2018-07-04 21:10+0500\n"
+"POT-Creation-Date: 2018-07-04 21:11+0500\n"
+"PO-Revision-Date: 2018-07-04 21:12+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -267,10 +267,8 @@ msgid "Edit answer - Subtitle"
 msgstr "Edit answer to the question"
 
 #: Templates/answer/edit/header.phtml:11
-#, fuzzy
-#| msgid "Edit answer - Save button"
 msgid "Edit answer - Back to question"
-msgstr "Save changes"
+msgstr "Back to question"
 
 #: Templates/answer/edit/header.phtml:14
 #, fuzzy
@@ -287,23 +285,23 @@ msgid "Edit answer - Save button"
 msgstr "Save changes"
 
 #: Templates/answer/history/jumbotron.phtml:6
-msgid "Answer history page - Subtitle"
+msgid "Answer history - Subtitle"
 msgstr "History of answer changes"
 
 #: Templates/answer/history/jumbotron.phtml:13
-msgid "Answer history page - Back to question"
+msgid "Answer history - Back to question"
 msgstr "Back to question"
 
 #: Templates/answer/history/revision_item.phtml:16
-msgid "Answer history page - Change ID"
+msgid "Answer history - Change ID"
 msgstr "Change"
 
 #: Templates/answer/history/revision_item.phtml:19
-msgid "Answer history page - Description of changes"
+msgid "Answer history - Description of changes"
 msgstr "Description of changes"
 
 #: Templates/answer/history/revision_item.phtml:21
-msgid "Answer history page - No description of changes"
+msgid "Answer history - No description of changes"
 msgstr "No description of changes"
 
 #: Templates/feed/block/improve_feed.phtml:5

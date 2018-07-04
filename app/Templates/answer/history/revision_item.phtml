@@ -13,12 +13,12 @@
                 </a>
             </div>
             <span class="small color-gray-600">
-                <?= _('Answer history page - Change ID') ?> #<?= $this->revisions[$i]->getID() ?>
+                <?= _('Answer history - Change ID') ?> #<?= $this->revisions[$i]->getID() ?>
                 <span class="color-gray-900 font_weight_800">&middot;</span>
                 <?php if ($this->revisions[$i]->getComment()): ?>
-                    <?= _('Answer history page - Description of changes') ?>: <?= $this->revisions[$i]->getComment() ?>
+                    <?= _('Answer history - Description of changes') ?>: <?= $this->revisions[$i]->getComment() ?>
                 <?php else: ?>
-                    <?= _('Answer history page - No description of changes') ?>
+                    <?= _('Answer history - No description of changes') ?>
                 <?php endif; ?>
                 <span class="color-gray-900 font_weight_800">&middot;</span>
                 <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->getCreatedAt()) ?>
