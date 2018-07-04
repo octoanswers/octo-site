@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 17:36+0500\n"
-"PO-Revision-Date: 2018-07-04 17:39+0500\n"
+"POT-Creation-Date: 2018-07-04 19:18+0500\n"
+"PO-Revision-Date: 2018-07-04 19:19+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -20,7 +20,7 @@ msgstr "Feed"
 
 #: PageController/Feed/Show.php:45 PageController/Main/Show.php:40
 #: PageController/Main/Show.php:46 PageController/Main/Show.php:65
-#: PageController/Users/Newest.php:47
+#: PageController/Topic/Show.php:103 PageController/Users/Newest.php:47
 msgid "OctoAnswers"
 msgstr "OctoAnswers"
 
@@ -53,8 +53,8 @@ msgstr[0] "Question"
 msgstr[1] "Questions"
 
 #: PageController/Topic/Show.php:103
-msgid "Questions and answers on the topic"
-msgstr ""
+msgid "Topic - Page title"
+msgstr "Questions and answers on the topic %s"
 
 #: PageController/Topic/Show.php:133
 msgid "Topic - Page description"
@@ -239,6 +239,22 @@ msgstr "Answer a question"
 #: Templates/flow/block/header.phtml:4
 msgid "Flow - Title"
 msgstr "Last activity"
+
+#: Templates/main/_block/how_it_works.phtml:7
+msgid "Main - How it works - Title"
+msgstr "How it works"
+
+#: Templates/main/_block/how_it_works.phtml:13
+msgid "Main - How it works - First title"
+msgstr "You ask a question no longer than 140 letters"
+
+#: Templates/main/_block/how_it_works.phtml:18
+msgid "Main - How it works - Second title"
+msgstr "We find a specialist who can give a competent answer to a question"
+
+#: Templates/main/_block/how_it_works.phtml:23
+msgid "Main - How it works - Third title"
+msgstr "You receive an answer to the email"
 
 #: Templates/main/_block/jumbotron.phtml:8
 msgid "Main - Jumbotron - Title"

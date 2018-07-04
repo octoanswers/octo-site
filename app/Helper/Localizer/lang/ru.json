@@ -33,20 +33,12 @@
 
     "error_500__page_title": "Ошибка 500",
 
-    "feed__page_title": "Лента новостей",
-    "feed__title": "Лента новостей",
-
     "lang": {
         "en": "English",
         "english": "English",
         "ru": "Русский",
         "russian": "Русский"
     },
-
-
-    "menu__other_langs": "На других языках",
-    "menu__other_langs__full_list": "Полный список",
-    "menu__other_langs__more": "Ещё 0",
 
     "modal__feedback_thanks__text": "Спасибо за отзыв!",
 
@@ -178,12 +170,6 @@
     "alert_subscribe__text": "Укажите адрес электронной почты, чтобы получить уведомление об ответе как только он появится.",
     "alert_subscribe__btn": "Сообщить об ответе",
 
-    "topics__title": "Хештеги",
-    "topics__lead": "Подписывайтесь на интересующие вас темы, чтобы узнавать о новых вопросах и предлагать свои ответы.",
-    "topics__search_placeholder": "Поиск темы",
-    "topics__filter__title": "Хештеги:",
-    "topics__filter__newest": "Новые темы",
-    "topics__filter__popular": "Популярные",
 
     "user__page_title_postfix": " - Вики-ответы на OctoAnswers",
     "user__page_description_postfix": " - вики-ответы на OctoAnswers",

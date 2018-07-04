@@ -40,29 +40,12 @@
 
     "error_500__page_title": "Error 500",
 
-    "feed__title": "Newsfeed",
-
-    "topics__page_num": "Page ",
-
     "lang": {
         "en": "English",
         "english": "English",
         "ru": "Русский",
         "russian": "Русский"
     },
-
-    "main__characters_left": "Characters left:",
-    "main__how_it_works__title": "How it works?",
-    "main__how_it_works__first_title": "First.",
-    "main__how_it_works__first_text": "You ask a question no longer than 140 letters.",
-    "main__how_it_works__second_title": "Second.",
-    "main__how_it_works__second_text": "We find a specialist who can give a competent answer to a question.",
-    "main__how_it_works__third_title": "Third.",
-    "main__how_it_works__third_text": "You receive an answer to the email.",
-
-    "menu__other_langs": "Languages",
-    "menu__other_langs__full_list": "Complete list",
-    "menu__other_langs__more": "Other 0",
 
     "modal__feedback_thanks__text": "Thanks for the feedback!",
 
