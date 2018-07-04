@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 17:21+0500\n"
-"PO-Revision-Date: 2018-07-04 17:21+0500\n"
+"POT-Creation-Date: 2018-07-04 17:36+0500\n"
+"PO-Revision-Date: 2018-07-04 17:39+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -22,7 +22,7 @@ msgstr "Feed"
 #: PageController/Main/Show.php:46 PageController/Main/Show.php:65
 #: PageController/Users/Newest.php:47
 msgid "OctoAnswers"
-msgstr ""
+msgstr "OctoAnswers"
 
 #: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
 msgid "Flow - Page title"
@@ -55,6 +55,10 @@ msgstr[1] "Questions"
 #: PageController/Topic/Show.php:103
 msgid "Questions and answers on the topic"
 msgstr ""
+
+#: PageController/Topic/Show.php:133
+msgid "Topic - Page description"
+msgstr "Questions and answers on the topic %s"
 
 #: PageController/Topics/Newest.php:39
 msgid "New topics"
@@ -253,10 +257,8 @@ msgid "Main - Jumbotron - Ask button"
 msgstr "Ask a question"
 
 #: Templates/main/_block/share.phtml:3
-#, fuzzy
-#| msgid "Main - Page title"
 msgid "Main - Share title"
-msgstr "Ask a question and get one complete answer"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:8
 #: Templates/question/block/actions.phtml:12

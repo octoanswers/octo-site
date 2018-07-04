@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 17:21+0500\n"
-"PO-Revision-Date: 2018-07-04 17:21+0500\n"
+"POT-Creation-Date: 2018-07-04 18:11+0500\n"
+"PO-Revision-Date: 2018-07-04 18:11+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -21,9 +21,9 @@ msgstr "Лента новостей"
 
 #: PageController/Feed/Show.php:45 PageController/Main/Show.php:40
 #: PageController/Main/Show.php:46 PageController/Main/Show.php:65
-#: PageController/Users/Newest.php:47
+#: PageController/Topic/Show.php:103 PageController/Users/Newest.php:47
 msgid "OctoAnswers"
-msgstr ""
+msgstr "OctoAnswers"
 
 #: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
 msgid "Flow - Page title"
@@ -54,8 +54,12 @@ msgstr[1] "Вопроса"
 msgstr[2] "Вопросов"
 
 #: PageController/Topic/Show.php:103
-msgid "Questions and answers on the topic"
-msgstr "Вопросы и ответы на тему"
+msgid "Topic - Page title"
+msgstr "Вопросы и ответы на тему %topic"
+
+#: PageController/Topic/Show.php:133
+msgid "Topic - Page description"
+msgstr "Вопросы и ответы на тему %topic"
 
 #: PageController/Topics/Newest.php:39
 msgid "New topics"
@@ -364,6 +368,9 @@ msgstr "Без тем"
 #: Templates/sandbox/show/nav.phtml:15
 msgid "All"
 msgstr "Все"
+
+#~ msgid "Questions and answers on the topic"
+#~ msgstr "Вопросы и ответы на тему"
 
 #~ msgid "Edit answer"
 #~ msgstr "Изменить ответ"

@@ -36,10 +36,6 @@
     "feed__page_title": "Лента новостей",
     "feed__title": "Лента новостей",
 
-    "topic": {
-        "page_description": "Вопросы и ответы на тему &laquo;%topic%&raquo;"
-    },
-
     "lang": {
         "en": "English",
         "english": "English",

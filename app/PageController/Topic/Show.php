@@ -100,7 +100,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
     protected function _get_page_title()
     {
-        return _('Questions and answers on the topic').' &laquo;'.$this->topic->getTitle().'&raquo; &mdash; '.$this->l->t('octoanswers');
+        return str_replace('%topic', $this->topic->getTitle(), _('Topic - Page title')).' &mdash; '._('OctoAnswers');
     }
 
     protected function _prepareFollowButton()
@@ -130,7 +130,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
     protected function _get_page_description()
     {
-        return str_replace('%topic%', $this->topic->getTitle(), $this->l->t('topic', 'page_description'));
+        return str_replace('%topic', $this->topic->getTitle(), _('Topic - Page description'));
     }
 
     /**

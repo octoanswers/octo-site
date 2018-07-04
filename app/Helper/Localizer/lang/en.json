@@ -42,11 +42,6 @@
 
     "feed__title": "Newsfeed",
 
-    "topic": {
-        "page_description": "Questions and answers on the topic &laquo;%topic%&raquo;"
-    },
-
-
     "topics__page_num": "Page ",
 
     "lang": {
