@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 11:44+0500\n"
-"PO-Revision-Date: 2018-07-04 11:45+0500\n"
+"POT-Creation-Date: 2018-07-04 11:48+0500\n"
+"PO-Revision-Date: 2018-07-04 11:49+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -137,6 +137,14 @@ msgstr ""
 msgid "Question page - Share block - Text empty"
 msgstr ""
 "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь ссылкой"
+
+#: Templates/question/modal/upload_image.phtml:7
+msgid "Modal - Upload image - Title"
+msgstr "Загрузка картинки вопроса"
+
+#: Templates/question/modal/upload_image.phtml:21
+msgid "Modal - Upload image - Submit button"
+msgstr "Загрузить картинку"
 
 #: Templates/sandbox/show/nav.phtml:5
 msgid "Questions without answer"

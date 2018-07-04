@@ -6,11 +6,6 @@
     "answer_edit__description_of_changes": "Описание изменений, если необходимо:",
     "answer_edit__save_changes_btn": "Сохранить правки",
 
-    "modal_upload_image": {
-        "modal_title": "Загрузка картинки вопроса",
-        "submit_button": "Загрузить картинку"
-    },
-
     "answer_history__page_title": "История вопроса: ",
 
     "btn": {
