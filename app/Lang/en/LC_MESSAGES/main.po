@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 22:07+0500\n"
-"PO-Revision-Date: 2018-07-04 22:07+0500\n"
+"POT-Creation-Date: 2018-07-04 22:36+0500\n"
+"PO-Revision-Date: 2018-07-04 22:36+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -13,6 +13,10 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: PageController/Answer/Edit.php:36
+msgid "Answer edit - Page title"
+msgstr "Edit answer"
 
 #: PageController/Answer/Edit.php:36 PageController/Answer/History.php:33
 #: PageController/Error/InternalServerError.php:14
@@ -42,6 +46,20 @@ msgstr "OctoAnswers"
 #: PageController/Answer/History.php:33
 msgid "Answer history - Page title"
 msgstr "History of question"
+
+#: PageController/Error/InternalServerError.php:14
+msgid "Error 500 - Page title"
+msgstr "Error 500"
+
+#: PageController/Error/QuestionNotFound.php:22
+msgid "Question not found - Page title"
+msgstr "Question not found"
+
+#: PageController/Error/QuestionNotFound.php:23
+#, fuzzy
+#| msgid "Question - Page description"
+msgid "Question not found - Page description"
+msgstr "Wiki-answer on question %question"
 
 #: PageController/Feed/Show.php:45
 msgid "Feed - Page title"
@@ -341,6 +359,18 @@ msgstr "Description of changes"
 msgid "Answer history - No description of changes"
 msgstr "No description of changes"
 
+#: Templates/error/question_not_found.phtml:8
+msgid "Question not found - Title"
+msgstr "Question not found"
+
+#: Templates/error/question_not_found.phtml:12
+msgid "Question not found - Create a question"
+msgstr "Create a question"
+
+#: Templates/error/question_not_found.phtml:15
+msgid "Question not found - Go back"
+msgstr "Go back"
+
 #: Templates/feed/block/improve_feed.phtml:5
 msgid "Feed - Improve your feed - Title"
 msgstr "Improve Your Feed"
@@ -507,6 +537,10 @@ msgstr "Top answer contributors"
 msgid "Question - Top contributors - All answer contributors"
 msgstr "All answer contributors"
 
+#: Templates/question/modal/edit_answer_lure.phtml:9
+msgid "Question - Fake edit modal - Text"
+msgstr "Register or log in and you can edit or supplement this question"
+
 #: Templates/question/modal/edit_answer_lure.phtml:16
 #: Templates/question/modal/feedback_thanks.phtml:13
 #: Templates/question/modal/first_answer__signup.phtml:16
@@ -523,6 +557,10 @@ msgid "Question - First answer - Text"
 msgstr ""
 "Register or log in and you will be the first to write the answer to this "
 "question"
+
+#: Templates/question/modal/follow_question_lure.phtml:9
+msgid "Fake follow question modal - Text"
+msgstr "Register or sign in and you can subscribe to this question"
 
 #: Templates/question/modal/rename.phtml:8
 msgid "Rename question modal - Title"
@@ -547,6 +585,18 @@ msgstr "Question image"
 #: Templates/question/modal/upload_image.phtml:21
 msgid "Modal - Upload image - Submit button"
 msgstr "Upload image"
+
+#: Templates/question/show/signup_lure.phtml:7
+msgid "Question - Signup lure - Text 1"
+msgstr "See what questions your friends are asking today"
+
+#: Templates/question/show/signup_lure.phtml:8
+msgid "Question - Signup lure - Text 2"
+msgstr "Watch for new questions with topics interesting for you"
+
+#: Templates/question/show/signup_lure.phtml:9
+msgid "Question - Signup lure - Text 3"
+msgstr "And share your knowledge with others"
 
 #: Templates/questions/show_list/nav.phtml:5
 msgid "Questions - Filter - Newest"
@@ -574,6 +624,20 @@ msgstr ""
 
 #: Templates/sandbox/show/nav.phtml:15
 msgid "All"
+msgstr ""
+
+#: Templates/search/block/div__no_questions.phtml:5
+#, fuzzy
+#| msgid "Rename question modal - Title"
+msgid "Search - Alert - Questions not found - Title"
+msgstr "Rename question"
+
+#: Templates/search/block/div__no_questions.phtml:7
+msgid "Search - Alert - Questions not found - Text"
+msgstr ""
+
+#: Templates/search/block/div__no_questions.phtml:10
+msgid "Search - Alert - Questions not found - Button"
 msgstr ""
 
 #: Templates/search/block/div__no_users.phtml:7

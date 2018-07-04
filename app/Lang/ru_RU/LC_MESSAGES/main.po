@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 22:07+0500\n"
-"PO-Revision-Date: 2018-07-04 22:08+0500\n"
+"POT-Creation-Date: 2018-07-04 22:39+0500\n"
+"PO-Revision-Date: 2018-07-04 22:40+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -14,6 +14,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: PageController/Answer/Edit.php:36
+msgid "Answer edit - Page title"
+msgstr "Редактирование ответа"
 
 #: PageController/Answer/Edit.php:36 PageController/Answer/History.php:33
 #: PageController/Error/InternalServerError.php:14
@@ -43,6 +47,20 @@ msgstr "OctoAnswers"
 #: PageController/Answer/History.php:33
 msgid "Answer history - Page title"
 msgstr "История вопроса"
+
+#: PageController/Error/InternalServerError.php:14
+msgid "Error 500 - Page title"
+msgstr "Ошибка 500"
+
+#: PageController/Error/QuestionNotFound.php:22
+msgid "Question not found - Page title"
+msgstr "Вопрос не найден"
+
+#: PageController/Error/QuestionNotFound.php:23
+#, fuzzy
+#| msgid "Question - Page description"
+msgid "Question not found - Page description"
+msgstr "Вики-ответ на вопрос: %question"
 
 #: PageController/Feed/Show.php:45
 msgid "Feed - Page title"
@@ -342,6 +360,18 @@ msgstr "Описание изменений"
 msgid "Answer history - No description of changes"
 msgstr "Нет описания изменений"
 
+#: Templates/error/question_not_found.phtml:8
+msgid "Question not found - Title"
+msgstr "Вопрос не найден"
+
+#: Templates/error/question_not_found.phtml:12
+msgid "Question not found - Create a question"
+msgstr "Создать вопрос"
+
+#: Templates/error/question_not_found.phtml:15
+msgid "Question not found - Go back"
+msgstr "Вернуться назад"
+
 #: Templates/feed/block/improve_feed.phtml:5
 msgid "Feed - Improve your feed - Title"
 msgstr "Улучшите вашу ленту"
@@ -518,6 +548,12 @@ msgstr "Топ авторов ответа"
 msgid "Question - Top contributors - All answer contributors"
 msgstr "Все авторы ответа"
 
+#: Templates/question/modal/edit_answer_lure.phtml:9
+msgid "Question - Fake edit modal - Text"
+msgstr ""
+"Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить "
+"этот вопрос"
+
 #: Templates/question/modal/edit_answer_lure.phtml:16
 #: Templates/question/modal/feedback_thanks.phtml:13
 #: Templates/question/modal/first_answer__signup.phtml:16
@@ -534,6 +570,10 @@ msgid "Question - First answer - Text"
 msgstr ""
 "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
 "вопрос"
+
+#: Templates/question/modal/follow_question_lure.phtml:9
+msgid "Fake follow question modal - Text"
+msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос"
 
 #: Templates/question/modal/rename.phtml:8
 msgid "Rename question modal - Title"
@@ -560,6 +600,18 @@ msgstr "Загрузка картинки вопроса"
 #: Templates/question/modal/upload_image.phtml:21
 msgid "Modal - Upload image - Submit button"
 msgstr "Загрузить картинку"
+
+#: Templates/question/show/signup_lure.phtml:7
+msgid "Question - Signup lure - Text 1"
+msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
+
+#: Templates/question/show/signup_lure.phtml:8
+msgid "Question - Signup lure - Text 2"
+msgstr "Следите за новыми вопросами с интересными для вас хештегами"
+
+#: Templates/question/show/signup_lure.phtml:9
+msgid "Question - Signup lure - Text 3"
+msgstr "И делитесь своими знаниями с окружающими"
 
 #: Templates/questions/show_list/nav.phtml:5
 msgid "Questions - Filter - Newest"
@@ -588,6 +640,32 @@ msgstr "Без тем"
 #: Templates/sandbox/show/nav.phtml:15
 msgid "All"
 msgstr "Все"
+
+#: Templates/search/block/div__no_questions.phtml:5
+msgid "Search - Alert - Questions not found - Title"
+msgstr "Вопросов не найдено"
+
+#: Templates/search/block/div__no_questions.phtml:7
+msgid "Search - Alert - Questions not found - Text"
+msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
+
+#: Templates/search/block/div__no_questions.phtml:10
+msgid "Search - Alert - Questions not found - Button"
+msgstr "Задать вопрос"
+
+#: Templates/search/block/div__no_topics.phtml:5
+msgid "Search - Topics not found - Title"
+msgstr "Темы не найды"
+
+#: Templates/search/block/div__no_topics.phtml:7
+msgid "Search - Topics not found - Text"
+msgstr "По запросу «%query%» не удалось найти ни одной темы"
+
+#: Templates/search/block/div__no_topics.phtml:10
+#, fuzzy
+#| msgid "Search - Alert - Questions not found - Button"
+msgid "Search - Topics not found - Button"
+msgstr "Задать вопрос"
 
 #: Templates/search/block/div__no_users.phtml:7
 msgid "Search alert - Users_not_found__text"

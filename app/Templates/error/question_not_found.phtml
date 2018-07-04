@@ -5,13 +5,15 @@
         </div>
 
         <div class="col-sm-12 col-md-9 col-lg-7 mt-5 text-center">
-            <h1 class="h4 text-muted"><?= $this->l->t('question_not_found__title') ?></h1>
+            <h1 class="h4 text-muted"><?= _('Question not found - Title') ?></h1>
             <hr>
             <p class="mt-4 mb-5">
                 <a rel="nofollow" class="btn btn-primary" href="#" role="button">
-                    <?= $this->l->t('question_not_found__create_a_question') ?>
+                    <?= _('Question not found - Create a question') ?>
                 </a>
-                <a class="btn btn-outline-secondary" href="#" role="button" onclick="window.history.go(-1); return false;">Вернуться назад</a>
+                <a class="btn btn-outline-secondary" href="#" role="button" onclick="window.history.go(-1); return false;">
+                    <?= _('Question not found - Go back') ?>
+                </a>
             </p>
         </div>
     </div>

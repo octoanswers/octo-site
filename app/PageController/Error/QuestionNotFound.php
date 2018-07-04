@@ -19,8 +19,8 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
 
         $this->template = 'error/question_not_found';
         $this->showFooter = false;
-        $this->pageTitle = $this->l->t('question_not_found__page_title').' '.$this->questionTitle.' - '._('OctoAnswers');
-        $this->pageDescription = $this->l->t('Вопрос не найден на OctoAnswers.org');
+        $this->pageTitle = _('Question not found - Page title').' '.$this->questionTitle.' - '._('OctoAnswers');
+        $this->pageDescription = _('Question not found - Page description');
 
         $this->questionURI = $questionURI;
         $this->additionalJavascript[] = 'goal/question_not_found';

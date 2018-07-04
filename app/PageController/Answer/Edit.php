@@ -33,7 +33,7 @@ class Edit_Answer_PageController extends Abstract_PageController
 
         $this->template = 'answer/edit';
         $this->showFooter = false;
-        $this->pageTitle = $this->question->getTitle().' &middot; '.$this->l->t('edit__page_title').' &middot; '._('OctoAnswers');
+        $this->pageTitle = $this->question->getTitle().' &middot; '._('Answer edit - Page title').' &middot; '._('OctoAnswers');
         $this->pageDescription = $this->l->t('page_description');
         $this->includeJS[] = 'answer/update.js?v=1';
 

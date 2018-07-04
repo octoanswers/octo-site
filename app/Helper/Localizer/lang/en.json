@@ -12,23 +12,6 @@
         }
     },
 
-    "edit__page_title": "Edit answer",
-
-    "error_500__page_title": "Error 500",
-
-    "related_questions__write_first_answer": "Write first answer",
-
-    "modal__fake_follow_q__text": "Register or sign in and you can subscribe to this question.",
-    "modal__fake_edit_answer__text": "Register or log in and you can edit or supplement this question.",
-
-    "q__signup_lure__text_1": "See what questions your friends are asking today.",
-    "q__signup_lure__text_2": "Watch for new questions with topics interesting for you.",
-    "q__signup_lure__text_3": "And share your knowledge with others.",
-
-    "question_not_found__page_title": "Question not found:",
-    "question_not_found__title": "Question not found",
-    "question_not_found__create_a_question": "Create a question",
-
     "users": {
         "signup_lure": {
             "img_alt": "Signup on question and answer site OctoAnswers",

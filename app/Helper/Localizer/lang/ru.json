@@ -12,28 +12,6 @@
         }
     },
 
-    "edit__page_title": "Редактирование ответа",
-
-    "error_500__page_title": "Ошибка 500",
-
-    "modal__fake_follow_q__text": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
-    "modal__fake_edit_answer__text": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
-
-    "question_not_found__page_title": "Вопрос не найден:",
-    "question_not_found__title": "Вопрос не найден",
-    "question_not_found__create_a_question": "Создать вопрос",
-
-    "q__signup_lure__text_1": "Смотрите, какие вопросы ваши друзья задают сегодня.",
-    "q__signup_lure__text_2": "Следите за новыми вопросами с интересными для вас хештегами.",
-    "q__signup_lure__text_3": "И делитесь своими знаниями с окружающими.",
-
-    "search__alert__questions_not_found__title": "Вопросов не найдено",
-    "search__alert__questions_not_found__text": "По запросу «%query%» не удалось найти ни одного вопроса...",
-    "search__alert__questions_not_found__button": "Задать вопрос",
-
-    "search__alert__topics_not_found__title": "Хештеги не найдены",
-    "search__alert__topics_not_found__text": "По запросу «%query%» не удалось найти ни одной темы...",
-
     "alert_subscribe__text": "Укажите адрес электронной почты, чтобы получить уведомление об ответе как только он появится.",
     "alert_subscribe__btn": "Сообщить об ответе",
 
