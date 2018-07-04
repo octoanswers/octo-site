@@ -42,8 +42,7 @@ class Show_Feed_PageController extends Abstract_PageController
 
         $this->template = 'feed/show';
         $this->showFooter = false;
-        $this->pageTitle = $this->l->t('feed__page_title').' - '.$this->l->t('octoanswers');
-        $this->pageDescription = $this->l->t('main_pg__description');
+        $this->pageTitle = _('Feed - Page title').' - '._('OctoAnswers');
         $this->canonicalURL = SITE_URL;
 
         $output = $this->renderPage();

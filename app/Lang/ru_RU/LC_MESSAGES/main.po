@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 14:41+0500\n"
-"PO-Revision-Date: 2018-07-04 14:43+0500\n"
+"POT-Creation-Date: 2018-07-04 17:21+0500\n"
+"PO-Revision-Date: 2018-07-04 17:21+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -15,6 +15,16 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: PageController/Feed/Show.php:45
+msgid "Feed - Page title"
+msgstr "Лента новостей"
+
+#: PageController/Feed/Show.php:45 PageController/Main/Show.php:40
+#: PageController/Main/Show.php:46 PageController/Main/Show.php:65
+#: PageController/Users/Newest.php:47
+msgid "OctoAnswers"
+msgstr ""
+
 #: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
 msgid "Flow - Page title"
 msgstr "Поток вопросов и ответов"
@@ -22,6 +32,18 @@ msgstr "Поток вопросов и ответов"
 #: PageController/Flow/Show.php:34 PageController/Flow/Show.php:49
 msgid "Flow - Page description"
 msgstr "Поток вопросов и ответов на ОктоАнсверс"
+
+#: PageController/Main/Show.php:40 PageController/Main/Show.php:46
+#: PageController/Main/Show.php:65
+msgid "Main - Page title"
+msgstr "Задайте вопрос и получите ответ"
+
+#: PageController/Main/Show.php:41 PageController/Main/Show.php:47
+#: PageController/Main/Show.php:66
+msgid "Main - Page description"
+msgstr ""
+"OctoAnswers - это как Википедия, только для вопросов и ответов. Пользователи "
+"могут задавать вопросы, отвечать на них и дополнять чужие ответы"
 
 #: PageController/Sandbox/WithoutAnswers.php:19
 #: PageController/Sandbox/WithoutTopics.php:19
@@ -53,10 +75,6 @@ msgstr "Новые пользователи со всего мира"
 
 #: PageController/Users/Newest.php:47
 msgid "Common - Page"
-msgstr ""
-
-#: PageController/Users/Newest.php:47
-msgid "OctoAnswers"
 msgstr ""
 
 #: Trait/Question.php:30
@@ -220,6 +238,28 @@ msgstr "Ответьте на вопрос"
 msgid "Flow - Title"
 msgstr "Поток событий"
 
+#: Templates/main/_block/jumbotron.phtml:8
+msgid "Main - Jumbotron - Title"
+msgstr "Задайте вопрос и получите один исчерпывающий ответ"
+
+#: Templates/main/_block/jumbotron.phtml:12
+msgid "Main - Jumbotron - Subtitle"
+msgstr "Что значит исчерпывающий"
+
+#: Templates/main/_block/jumbotron.phtml:20
+msgid "Main - Jumbotron - Input placeholder"
+msgstr "Какой у вас вопрос"
+
+#: Templates/main/_block/jumbotron.phtml:23
+msgid "Main - Jumbotron - Ask button"
+msgstr "Задать свой первый вопрос"
+
+#: Templates/main/_block/share.phtml:3
+msgid "Main - Share title"
+msgstr ""
+"Вы можете помочь проекту OctoAnswers, просто поделившись со своими друзьями "
+"ссылкой на него"
+
 #: Templates/question/block/actions.phtml:8
 #: Templates/question/block/actions.phtml:12
 #: Templates/question/block/header/info.phtml:16
@@ -283,10 +323,8 @@ msgid "Set question topics"
 msgstr "Задать темы вопроса"
 
 #: Templates/question/block/related_questions.phtml:24
-#, fuzzy
-#| msgid "Question - Actions - Upload image"
 msgid "Question - Last updated"
-msgstr "Загрузить картинку"
+msgstr "Ответ обновлен"
 
 #: Templates/question/block/share.phtml:5
 msgid "Question page - Share block - Text"

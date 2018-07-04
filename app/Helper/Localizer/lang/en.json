@@ -56,18 +56,6 @@
         "russian": "Русский"
     },
 
-    "main_pg__title": "Ask a question and get one complete answer",
-    "main_pg__description": "OctoAnswers - это сервис вопросов-и-ответов, где вы можете задать вопрос на любую тему, а сообщество профессионалов всегда поможет получить компетентный ответ.",
-
-    "main": {
-        "h1": "Ask a question and get",
-        "h2": "One complete answer",
-        "note": "OctoAnswers is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.",
-        "or": "or",
-        "join_us": "joun us",
-        "ask_btn": "Ask a question"
-    },
-
     "main__characters_left": "Characters left:",
     "main__how_it_works__title": "How it works?",
     "main__how_it_works__first_title": "First.",
@@ -76,9 +64,6 @@
     "main__how_it_works__second_text": "We find a specialist who can give a competent answer to a question.",
     "main__how_it_works__third_title": "Third.",
     "main__how_it_works__third_text": "You receive an answer to the email.",
-    "main__recent_questions": "Recent questions",
-    "main__full_answer": "full answer",
-    "main_pg__share__intro": "Вы можете помочь проекту OctoAnswers, просто поделившись со своими друзьями ссылкой на него.",
 
     "menu__other_langs": "Languages",
     "menu__other_langs__full_list": "Complete list",

@@ -37,14 +37,14 @@ class Show_Main_PageController extends Abstract_PageController
         $this->parsedown = new ExtendedParsedown($this->lang);
 
         $this->template = 'main/show';
-        $this->pageTitle = $this->l->t('octoanswers').' - '.$this->l->t('main_pg__title');
-        $this->pageDescription = $this->l->t('main_pg__description');
+        $this->pageTitle = _('OctoAnswers').' - '. _('Main - Page title');
+        $this->pageDescription = _('Main - Page description');
         $this->canonicalURL = Page_URL_Helper::getMainURL($this->lang);
 
         $this->openGraph = $this->_getOpenGraph();
 
-        $this->shareLink['title'] = $this->l->t('main_pg__title').' - '.$this->l->t('octoanswers');
-        $this->shareLink['description'] = $this->l->t('main_pg__description');
+        $this->shareLink['title'] = _('Main - Page title').' - '._('OctoAnswers');
+        $this->shareLink['description'] = _('Main - Page description');
         $this->shareLink['url'] = SITE_URL;
         $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
 
@@ -62,8 +62,8 @@ class Show_Main_PageController extends Abstract_PageController
         $og = [
             'url' => SITE_URL,
             'type' => "website",
-            'title' => $this->l->t('octoanswers').' - '.$this->l->t('main_pg__title'),
-            'description' => $this->l->t('main_pg__description'),
+            'title' => _('OctoAnswers').' - '._('Main - Page title'),
+            'description' => _('Main - Page description'),
             'locale' => $this->lang,
             'image' => IMAGE_URL.'/og-image.png'
         ];
