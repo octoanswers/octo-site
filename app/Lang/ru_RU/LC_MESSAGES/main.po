@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 13:53+0500\n"
-"PO-Revision-Date: 2018-07-04 13:54+0500\n"
+"POT-Creation-Date: 2018-07-04 14:27+0500\n"
+"PO-Revision-Date: 2018-07-04 14:28+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -23,25 +23,41 @@ msgstr "Поток вопросов и ответов"
 msgid "Flow - Page description"
 msgstr "Поток вопросов и ответов на ОктоАнсверс"
 
-#: PageController/Sandbox/WithoutAnswers.php:20
-#: PageController/Sandbox/WithoutTopics.php:20
+#: PageController/Sandbox/WithoutAnswers.php:19
+#: PageController/Sandbox/WithoutTopics.php:19
 msgid "Question"
 msgid_plural "Questions"
 msgstr[0] "Вопрос"
 msgstr[1] "Вопроса"
 msgstr[2] "Вопросов"
 
-#: PageController/Topic/Show.php:104
+#: PageController/Topic/Show.php:103
 msgid "Questions and answers on the topic"
 msgstr "Вопросы и ответы на тему"
 
-#: PageController/Topics/Newest.php:40
+#: PageController/Topics/Newest.php:39
 msgid "New topics"
 msgstr "Новые темы"
 
-#: PageController/Topics/Newest.php:40
+#: PageController/Topics/Newest.php:39
 msgid "Page"
 msgstr "Страница"
+
+#: PageController/Users/Newest.php:40
+msgid "Users - Filter - Newest"
+msgstr "Новые"
+
+#: PageController/Users/Newest.php:47
+msgid "Users - Page title"
+msgstr "Новые пользователи со всего мира"
+
+#: PageController/Users/Newest.php:47
+msgid "Common - Page"
+msgstr ""
+
+#: PageController/Users/Newest.php:47
+msgid "OctoAnswers"
+msgstr ""
 
 #: Trait/Question.php:30
 msgid "Minute to read"
@@ -53,6 +69,20 @@ msgstr[2] "Мминут на чтение"
 #: Trait/Question.php:34
 msgid "Empty answer"
 msgstr "Пустой ответ"
+
+#: Templates/_common/block/about_octoanswers.phtml:4
+msgid "Block - About OctoAnswers - Title"
+msgstr "О проекте OctoAnswers"
+
+#: Templates/_common/block/about_octoanswers.phtml:7
+msgid "Block - About OctoAnswers - Message"
+msgstr ""
+"OctoAnswers — это основанный на вики-принципах сайт, где пользователи могут "
+"задавать вопросы, отвечать на них и дополнять чужие ответы"
+
+#: Templates/_common/block/about_octoanswers.phtml:10
+msgid "Block - About OctoAnswers - Signup button"
+msgstr "Зарегистрироваться"
 
 #: Templates/_common/footer.phtml:11
 msgid "Footer - About"
@@ -149,33 +179,46 @@ msgstr "Нет описания изменений"
 msgid "Flow - Title"
 msgstr "Поток событий"
 
+#: Templates/question/block/actions.phtml:8
 #: Templates/question/block/actions.phtml:12
 #: Templates/question/block/header/info.phtml:16
-msgid "Edit answer"
-msgstr "Изменить ответ"
+msgid "Common - Button - Edit answer"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:22
 #: Templates/question/block/actions.phtml:26
 #: Templates/question/block/actions.phtml:30
-msgid "Follow"
-msgstr "Подписаться"
+msgid "Common - Button - Follow"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:23
 #: Templates/question/block/actions.phtml:26
-msgid "Followed"
-msgstr "Подписан"
+msgid "Common - Button - Followed"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:24
-msgid "Unfollow"
-msgstr "Отписаться"
+msgid "Common - Button - Unfollow"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:37
-msgid "History"
+msgid "Question - Actions - History"
 msgstr "История"
 
 #: Templates/question/block/actions.phtml:43
 msgid "More"
 msgstr "Ещё"
+
+#: Templates/question/block/actions.phtml:51
+msgid "Question - Actions - Upload image"
+msgstr "Загрузить картинку"
+
+#: Templates/question/block/actions.phtml:57
+msgid "Question - Actions - Rename question"
+msgstr "Переименовать вопрос"
+
+#: Templates/question/block/actions.phtml:62
+msgid "Question - Actions - Report"
+msgstr "Пожаловаться"
 
 #: Templates/question/block/contributors_full.phtml:6
 #: Templates/question/block/header/info.phtml:12
@@ -198,6 +241,12 @@ msgstr "Изменить темы"
 msgid "Set question topics"
 msgstr "Задать темы вопроса"
 
+#: Templates/question/block/related_questions.phtml:24
+#, fuzzy
+#| msgid "Question - Actions - Upload image"
+msgid "Question - Last updated"
+msgstr "Загрузить картинку"
+
 #: Templates/question/block/share.phtml:5
 msgid "Question page - Share block - Text"
 msgstr ""
@@ -208,6 +257,14 @@ msgstr ""
 msgid "Question page - Share block - Text empty"
 msgstr ""
 "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь ссылкой"
+
+#: Templates/question/block/sidebar/contributors_top.phtml:14
+msgid "Question - Top contributors - Title"
+msgstr "Топ авторов ответа"
+
+#: Templates/question/block/sidebar/contributors_top.phtml:65
+msgid "Question - Top contributors - All answer contributors"
+msgstr "Все авторы ответа"
 
 #: Templates/question/modal/upload_image.phtml:7
 msgid "Modal - Upload image - Title"
@@ -228,6 +285,21 @@ msgstr "Без тем"
 #: Templates/sandbox/show/nav.phtml:15
 msgid "All"
 msgstr "Все"
+
+#~ msgid "Edit answer"
+#~ msgstr "Изменить ответ"
+
+#~ msgid "Follow"
+#~ msgstr "Подписаться"
+
+#~ msgid "Followed"
+#~ msgstr "Подписан"
+
+#~ msgid "Unfollow"
+#~ msgstr "Отписаться"
+
+#~ msgid "History"
+#~ msgstr "История"
 
 #~ msgid "question.share.text"
 #~ msgstr ""

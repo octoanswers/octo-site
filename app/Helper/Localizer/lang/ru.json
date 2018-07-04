@@ -17,11 +17,7 @@
     },
 
     "block": {
-        "about_octoanswers": {
-            "title": "О сайте",
-            "message": "OctoAnswers &mdash; это сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы, как статьи в Википедии.",
-            "button": "Регистрация"
-        },
+        
         "first_answer": {
             "title": "Будьте первым автором!",
             "lead": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка.",
@@ -78,9 +74,7 @@
     "main__input_note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
     "main__recent_questions": "Последние вопросы",
     "main__full_answer": "полный ответ",
-    "main__about_octoanswers": "О проекте OctoAnswers",
-    "main__about_octoanswers_text": "OctoAnswers — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
-    "main__about_octoanswers_some_questions": "Мы отобрали для вас несколько ответов на вопросы, которые помогут лучше понять, в чем идея сервиса OctoAnswers:",
+
     "main_pg__share__intro": "Вы можете помочь проекту OctoAnswers, просто поделившись со своими друзьями ссылкой на него.",
 
     "menu__other_langs": "На других языках",
@@ -122,39 +116,6 @@
 
     "modal__fake_follow_q__text": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
     "modal__fake_edit_answer__text": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
-
-    "q__about_question": "О вопросе",
-    "q__action__title": "Действия",
-    "q__action__rename_question": "Переименовать вопрос",
-    "q__short_answer_label": "Короткий ответ",
-    "q__last_updated": "Обновлено",
-
-    "improve_answer": {
-        "title": "Можете улучшить этот ответ?",
-        "btn_yes": "Да, я могу!",
-        "last_edit": "Последняя правка",
-        "see_all": "Все авторы"
-    },
-
-    "question": {
-        "actions": {
-            "upload_image": "Загрузить картинку"
-        },
-        "update_image": {
-            "title": "Обновление картинки к вопросу"
-        },
-        "update_topics": {
-            "btn": "Обновить темы"
-        },
-        "top_contributors": {
-            "top_title": "Топ авторов ответа",
-            "tail_title": "Остальные Авторы"
-        }
-    },
-
-    "question__view_contributions_btn": "Вклад каждого автора",
-
-    "q__short_url__note": "Вопрос также доступен по короткому URL",
 
     "modal_rename_question": {
         "modal_title": "Переименование вопроса",
@@ -264,9 +225,6 @@
     "u__last_revisions": "Последние правки",
     "u__followers": "Подписчики",
     "u__followed": "Подписки",
-
-    "users__page_title__newest": "Новые пользователи со всего мира",
-    "users__page_num": "Страница",
 
     "wordform_no_topics": "Нет тем",
     "wordform_1_topic": "тема",

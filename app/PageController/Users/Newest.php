@@ -37,14 +37,14 @@ class Newest_Users_PageController extends Abstract_PageController
 
     public function __getActiveFilterName(): string
     {
-        $filterName = $this->l->t('users__filter__newest');
+        $filterName = _('Users - Filter - Newest');
 
         return $filterName;
     }
 
     public function _getPageTitle()
     {
-        return $this->l->t('users__page_title__newest').' - '.$this->l->t('users__page_num').' '.$this->page.' - '.$this->l->t('octoanswers');
+        return _('Users - Page title').' - '._('Common - Page').' '.$this->page.' - '._('OctoAnswers');
     }
 
     public function __nextPageURL()

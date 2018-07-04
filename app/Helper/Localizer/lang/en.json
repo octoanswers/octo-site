@@ -88,9 +88,6 @@
     "main__how_it_works__third_title": "Third.",
     "main__how_it_works__third_text": "You receive an answer to the email.",
     "main__recent_questions": "Recent questions",
-    "main__about_octoanswers": "About OctoAnswers",
-    "main__about_octoanswers_text": "OctoAnswers is a wiki-based site where users can ask questions, respond to them and supplement other people's answers.",
-    "main__about_octoanswers_some_questions": "We selected for you several answers to questions that will help us better understand what the idea of the OctoAnswers service is:",
     "main__full_answer": "full answer",
     "main_pg__share__intro": "Вы можете помочь проекту OctoAnswers, просто поделившись со своими друзьями ссылкой на него.",
 
@@ -116,9 +113,6 @@
 
     "navbar__ask": "Ask a Question",
 
-    "q__action__search_in_ddg": "Search in DuckDuckGo",
-    "q__action__copy_short_url": "Copy short URL",
-
     "q_pg__page_description": "Wiki-answer on question «%question%»",
     "q_pg__share_description": "Wiki-answers to your questions on OctoAnswers",
 
@@ -128,23 +122,6 @@
 
     "modal__fake_follow_q__text": "Register or sign in and you can subscribe to this question.",
     "modal__fake_edit_answer__text": "Register or log in and you can edit or supplement this question.",
-
-    "improve_answer": {
-        "title": "You can improve this answer?",
-        "btn_yes": "Yes I can!",
-        "last_edit": "Last edit",
-        "see_all": "See All"
-    },
-
-    "question": {
-        "update_topics": {
-            "btn": "Update topics"
-        },
-        "top_contributors": {
-            "top_title": "Top answer contributors",
-            "tail_title": "Other Contributors"
-        }
-    },
 
     "questions": {
         "title": "Вопросы с ответами",
@@ -172,17 +149,11 @@
     "questions__ask": "Ask a Question",
 
 
-    "question__view_contributions_btn": "View contributions",
-
     "modal_rename_question": {
         "modal_title": "Rename question",
         "leave_redirect": "Оставить редирект",
         "submit_button": "Переименовать вопрос"
     },
-
-    "q__short_url__note": "The question is also available on a short URL",
-
-
 
     "q__signup_lure__text_1": "See what questions your friends are asking today.",
     "q__signup_lure__text_2": "Watch for new questions with topics interesting for you.",
@@ -191,12 +162,6 @@
     "question_not_found__page_title": "Question not found:",
     "question_not_found__title": "Question not found",
     "question_not_found__create_a_question": "Create a question",
-
-
-    "users_pg__page_title": "Newest users",
-
-    "users__page_title__newest": "New users from around the world",
-    "users__page_num": "Page",
 
     "users": {
         "signup_lure": {

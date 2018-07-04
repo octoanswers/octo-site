@@ -21,7 +21,7 @@
                             <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
                         <?php endif; ?>
 
-                        <?= $this->l->t('q__last_updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+                        <?= _('Question - Last updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
 
                         <?php if (strlen($question->getAnswer()->getText()) == 0): ?>
                             <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 13:53+0500\n"
-"PO-Revision-Date: 2018-07-04 13:53+0500\n"
+"POT-Creation-Date: 2018-07-04 14:24+0500\n"
+"PO-Revision-Date: 2018-07-04 14:27+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -22,23 +22,39 @@ msgstr "Questions and answers flow"
 msgid "Flow - Page description"
 msgstr "Questions and answers flow on OctoAnswers"
 
-#: PageController/Sandbox/WithoutAnswers.php:20
-#: PageController/Sandbox/WithoutTopics.php:20
+#: PageController/Sandbox/WithoutAnswers.php:19
+#: PageController/Sandbox/WithoutTopics.php:19
 msgid "Question"
 msgid_plural "Questions"
 msgstr[0] "Question"
 msgstr[1] "Questions"
 
-#: PageController/Topic/Show.php:104
+#: PageController/Topic/Show.php:103
 msgid "Questions and answers on the topic"
 msgstr ""
 
-#: PageController/Topics/Newest.php:40
+#: PageController/Topics/Newest.php:39
 msgid "New topics"
 msgstr ""
 
-#: PageController/Topics/Newest.php:40
+#: PageController/Topics/Newest.php:39
 msgid "Page"
+msgstr "Page"
+
+#: PageController/Users/Newest.php:40
+msgid "Users - Filter - Newest"
+msgstr "Newest"
+
+#: PageController/Users/Newest.php:47
+msgid "Users - Page title"
+msgstr "New users from around the world"
+
+#: PageController/Users/Newest.php:47
+msgid "Common - Page"
+msgstr "Page"
+
+#: PageController/Users/Newest.php:47
+msgid "OctoAnswers"
 msgstr ""
 
 #: Trait/Question.php:30
@@ -50,6 +66,20 @@ msgstr[1] "Minutes to read"
 #: Trait/Question.php:34
 msgid "Empty answer"
 msgstr "Empty answer"
+
+#: Templates/_common/block/about_octoanswers.phtml:4
+msgid "Block - About OctoAnswers - Title"
+msgstr "About OctoAnswers"
+
+#: Templates/_common/block/about_octoanswers.phtml:7
+msgid "Block - About OctoAnswers - Message"
+msgstr ""
+"OctoAnswers is a wiki-based site where users can ask questions, respond to "
+"them and supplement other people’s answers"
+
+#: Templates/_common/block/about_octoanswers.phtml:10
+msgid "Block - About OctoAnswers - Signup button"
+msgstr "Signup"
 
 #: Templates/_common/footer.phtml:11
 msgid "Footer - About"
@@ -146,33 +176,46 @@ msgstr "No description of changes"
 msgid "Flow - Title"
 msgstr "Last activity"
 
+#: Templates/question/block/actions.phtml:8
 #: Templates/question/block/actions.phtml:12
 #: Templates/question/block/header/info.phtml:16
-msgid "Edit answer"
-msgstr ""
+msgid "Common - Button - Edit answer"
+msgstr "Edit answer"
 
 #: Templates/question/block/actions.phtml:22
 #: Templates/question/block/actions.phtml:26
 #: Templates/question/block/actions.phtml:30
-msgid "Follow"
-msgstr ""
+msgid "Common - Button - Follow"
+msgstr "Follow"
 
 #: Templates/question/block/actions.phtml:23
 #: Templates/question/block/actions.phtml:26
-msgid "Followed"
-msgstr ""
+msgid "Common - Button - Followed"
+msgstr "Followed"
 
 #: Templates/question/block/actions.phtml:24
-msgid "Unfollow"
-msgstr ""
+msgid "Common - Button - Unfollow"
+msgstr "Unfollow"
 
 #: Templates/question/block/actions.phtml:37
-msgid "History"
-msgstr ""
+msgid "Question - Actions - History"
+msgstr "History"
 
 #: Templates/question/block/actions.phtml:43
 msgid "More"
 msgstr ""
+
+#: Templates/question/block/actions.phtml:51
+msgid "Question - Actions - Upload image"
+msgstr "Upload image"
+
+#: Templates/question/block/actions.phtml:57
+msgid "Question - Actions - Rename question"
+msgstr "Rename question"
+
+#: Templates/question/block/actions.phtml:62
+msgid "Question - Actions - Report"
+msgstr "Report"
 
 #: Templates/question/block/contributors_full.phtml:6
 #: Templates/question/block/header/info.phtml:12
@@ -194,6 +237,12 @@ msgstr ""
 msgid "Set question topics"
 msgstr ""
 
+#: Templates/question/block/related_questions.phtml:24
+#, fuzzy
+#| msgid "Question - Actions - Upload image"
+msgid "Question - Last updated"
+msgstr "Upload image"
+
 #: Templates/question/block/share.phtml:5
 msgid "Question page - Share block - Text"
 msgstr ""
@@ -205,6 +254,14 @@ msgid "Question page - Share block - Text empty"
 msgstr ""
 "If you like the answer or you know someone to whom it might be interesting, "
 "share a link with your friends"
+
+#: Templates/question/block/sidebar/contributors_top.phtml:14
+msgid "Question - Top contributors - Title"
+msgstr "Top answer contributors"
+
+#: Templates/question/block/sidebar/contributors_top.phtml:65
+msgid "Question - Top contributors - All answer contributors"
+msgstr "All answer contributors"
 
 #: Templates/question/modal/upload_image.phtml:7
 msgid "Modal - Upload image - Title"
