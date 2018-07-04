@@ -5,155 +5,143 @@ msgstr ""
 "PO-Revision-Date: 2018-07-04 11:36+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
-"Language: ru_RU\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.8\n"
 "X-Poedit-Basepath: ../../..\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: PageController/Topic/Show.php:106
 msgid "Questions and answers on the topic"
-msgstr "Вопросы и ответы на тему"
+msgstr ""
 
 #: PageController/Topics/Newest.php:40
 msgid "New topics"
-msgstr "Новые темы"
+msgstr ""
 
 #: PageController/Topics/Newest.php:40
 msgid "Page"
-msgstr "Страница"
+msgstr ""
 
 #: Templates/_common/item/question_with_answer.phtml:32
 #: Templates/question/block/related_questions.phtml:29
 msgid "Write first answer"
-msgstr "Написать первый ответ"
+msgstr ""
 
 #: Templates/_common/modal/login.phtml:8
 msgid "Login"
-msgstr "Вход"
+msgstr ""
 
 #: Templates/_common/modal/login.phtml:17
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: Templates/_common/modal/login.phtml:21
 msgid "Password"
-msgstr "Пароль"
+msgstr ""
 
 #: Templates/_common/modal/login.phtml:27
 msgid "Log in"
-msgstr "Войти"
+msgstr ""
 
 #: Templates/answer/history/jumbotron.phtml:6
 msgid "Answer history page - Subtitle"
-msgstr "История изменений ответа"
+msgstr "History of answer changes"
 
 #: Templates/answer/history/jumbotron.phtml:13
 msgid "Answer history page - Back to question"
-msgstr "Вернуться к вопросу"
+msgstr "Back to question"
 
 #: Templates/answer/history/revision_item.phtml:16
 msgid "Answer history page - Change ID"
-msgstr "Правка"
+msgstr "Change"
 
 #: Templates/answer/history/revision_item.phtml:19
 msgid "Answer history page - Description of changes"
-msgstr "Описание изменений"
+msgstr "Description of changes"
 
 #: Templates/answer/history/revision_item.phtml:21
 msgid "Answer history page - No description of changes"
-msgstr "Нет описания изменений"
+msgstr "No description of changes"
 
 #: Templates/question/block/actions.phtml:12
 #: Templates/question/block/header/info.phtml:16
 msgid "Edit answer"
-msgstr "Изменить ответ"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:22
 #: Templates/question/block/actions.phtml:26
 #: Templates/question/block/actions.phtml:30
 msgid "Follow"
-msgstr "Подписаться"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:23
 #: Templates/question/block/actions.phtml:26
 msgid "Followed"
-msgstr "Подписан"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:24
 msgid "Unfollow"
-msgstr "Отписаться"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:37
 msgid "History"
-msgstr "История"
+msgstr ""
 
 #: Templates/question/block/actions.phtml:43
 msgid "More"
-msgstr "Ещё"
+msgstr ""
 
 #: Templates/question/block/header/info.phtml:23
 msgid "Answer updated"
-msgstr "Ответ обновлен"
+msgstr ""
 
 #: Templates/question/block/header/topics.phtml:20
 msgid "Update topics"
-msgstr "Изменить темы"
+msgstr ""
 
 #: Templates/question/block/header/topics.phtml:30
 #: Templates/question/block/header/topics.phtml:37
 msgid "Set question topics"
-msgstr "Задать темы вопроса"
+msgstr ""
 
 #: Templates/question/block/share.phtml:5
 msgid "Question page - Share block - Text"
 msgstr ""
-"Если ответ вам понравился или вы знаете того, кому он может быть интересен, "
-"поделитесь ссылкой с друзьями"
+"If you like the answer or you know someone to whom it might be interesting, "
+"share a link with your friends"
 
 #: Templates/question/block/share.phtml:9
 msgid "Question page - Share block - Text empty"
 msgstr ""
-"Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь ссылкой"
+"If you like the answer or you know someone to whom it might be interesting, "
+"share a link with your friends"
 
 #: Templates/sandbox/show/nav.phtml:5
 msgid "Questions without answer"
-msgstr "Вопросы без ответа"
+msgstr ""
 
 #: Templates/sandbox/show/nav.phtml:10
 msgid "Without topics"
-msgstr "Без тем"
+msgstr ""
 
 #: Templates/sandbox/show/nav.phtml:15
 msgid "All"
-msgstr "Все"
+msgstr ""
 
 #~ msgid "question.share.text"
 #~ msgstr ""
-#~ "Если ответ вам понравился или вы знаете того, кому он может быть "
-#~ "интересен, поделитесь ссылкой с друзьям"
+#~ "If you like the answer or you know someone to whom it might be "
+#~ "interesting, share a link with your friends."
 
 #~ msgid "question.share.text_empty"
 #~ msgstr ""
-#~ "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь "
-#~ "ссылкой."
+#~ "If you have friends who know the answer to this question, share the link."
 
 #~ msgid ""
 #~ "If you have friends who know the answer to this question, share the link."
 #~ msgstr ""
-#~ "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь "
-#~ "ссылкой."
-
-#~ msgid ""
-#~ "If you like the answer or you know someone to whom it might be "
-#~ "interesting, share a link with your friends."
-#~ msgstr ""
-#~ "Если ответ вам понравился или вы знаете того, кому он может быть "
-#~ "интересен, поделитесь ссылкой с друзьями."
-
-#~ msgid "Have a nice day"
-#~ msgstr "Хорошего дня!!!"
+#~ "If you have friends who know the answer to this question, share the link."

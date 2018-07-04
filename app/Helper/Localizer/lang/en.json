@@ -6,11 +6,6 @@
     "answer_edit__description_of_changes": "Description of changes, if necessary:",
     "answer_edit__save_changes_btn": "Save changes",
 
-    "answer_history__subtitle": "History of answer changes",
-    "answer_history__back_to_question": "Back to question",
-    "answer_history__description_of_changes": "Description of changes",
-    "answer_history__no_description_of_changes": "No description of changes",
-    "answer_history__change_id": "Change",
 
     "modal_ask": {
         "modal_title": "New question",

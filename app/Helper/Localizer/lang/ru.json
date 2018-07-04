@@ -6,11 +6,6 @@
     "answer_edit__description_of_changes": "Описание изменений, если необходимо:",
     "answer_edit__save_changes_btn": "Сохранить правки",
 
-    "answer_history__subtitle": "История изменений ответа",
-    "answer_history__back_to_question": "Вернуться к вопросу",
-    "answer_history__description_of_changes": "Описание изменений",
-    "answer_history__no_description_of_changes": "Нет описания изменений",
-    "answer_history__change_id": "Правка",
 
     "modal_ask": {
         "modal_title": "Новый вопрос",
