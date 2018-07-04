@@ -5,7 +5,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= $this->l->t('modal_ask', 'modal_title') ?>
+                    <?= _('Ask modal - Title') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -15,14 +15,14 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>
-                            <?= $this->l->t('modal_ask', 'note') ?>
+                            <?= _('Ask modal - Note') ?>.
                         </label>
-                        <textarea class="form-control" id="question_title" rows="6" placeholder="<?= $this->l->t('modal_ask', 'input_placeholder') ?>"></textarea>
+                        <textarea class="form-control" id="question_title" rows="6" placeholder="<?= _('Ask modal - Input placeholder') ?>?"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="form__question_create__submit" class="btn btn-block btn-primary">
-                        <?= $this->l->t('modal_ask', 'submit_button') ?>
+                        <?= _('Ask modal - Submit button') ?>
                     </button>
                 </div>
             </form>

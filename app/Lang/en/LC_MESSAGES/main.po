@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 11:36+0500\n"
-"PO-Revision-Date: 2018-07-04 11:36+0500\n"
+"POT-Creation-Date: 2018-07-04 11:42+0500\n"
+"PO-Revision-Date: 2018-07-04 11:44+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -30,6 +30,24 @@ msgstr ""
 #: Templates/question/block/related_questions.phtml:29
 msgid "Write first answer"
 msgstr ""
+
+#: Templates/_common/modal/ask.phtml:8
+msgid "Ask modal - Title"
+msgstr "New question"
+
+#: Templates/_common/modal/ask.phtml:18
+msgid "Ask modal - Note"
+msgstr ""
+"Ask questions in a form understandable to real people - they will answer, "
+"not search robots"
+
+#: Templates/_common/modal/ask.phtml:20
+msgid "Ask modal - Input placeholder"
+msgstr "What is your question"
+
+#: Templates/_common/modal/ask.phtml:25
+msgid "Ask modal - Submit button"
+msgstr "Ask a question"
 
 #: Templates/_common/modal/login.phtml:8
 msgid "Login"

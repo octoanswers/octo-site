@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 11:36+0500\n"
-"PO-Revision-Date: 2018-07-04 11:36+0500\n"
+"POT-Creation-Date: 2018-07-04 11:44+0500\n"
+"PO-Revision-Date: 2018-07-04 11:45+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -31,6 +31,24 @@ msgstr "Страница"
 #: Templates/question/block/related_questions.phtml:29
 msgid "Write first answer"
 msgstr "Написать первый ответ"
+
+#: Templates/_common/modal/ask.phtml:8
+msgid "Ask modal - Title"
+msgstr "Новый вопрос"
+
+#: Templates/_common/modal/ask.phtml:18
+msgid "Ask modal - Note"
+msgstr ""
+"Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не "
+"поисковые роботы"
+
+#: Templates/_common/modal/ask.phtml:20
+msgid "Ask modal - Input placeholder"
+msgstr "Какой у вас вопрос"
+
+#: Templates/_common/modal/ask.phtml:25
+msgid "Ask modal - Submit button"
+msgstr "Задать вопрос"
 
 #: Templates/_common/modal/login.phtml:8
 msgid "Login"

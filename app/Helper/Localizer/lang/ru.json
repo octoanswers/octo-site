@@ -6,14 +6,6 @@
     "answer_edit__description_of_changes": "Описание изменений, если необходимо:",
     "answer_edit__save_changes_btn": "Сохранить правки",
 
-
-    "modal_ask": {
-        "modal_title": "Новый вопрос",
-        "note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
-        "input_placeholder": "Какой у Вас вопрос?",
-        "submit_button": "Задать вопрос"
-    },
-
     "modal_upload_image": {
         "modal_title": "Загрузка картинки вопроса",
         "submit_button": "Загрузить картинку"
