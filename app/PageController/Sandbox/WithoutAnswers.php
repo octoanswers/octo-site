@@ -56,12 +56,12 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->l->t('questions__page_title__without_answers').' - '.$this->l->t('questions__page_num').' '.$this->page.' - '.$this->l->t('octoanswers');
+        return $this->l->t('questions__page_title__without_answers').' - '.$this->l->t('questions__page_num').' '.$this->page.' - '._('OctoAnswers');
     }
 
     public function _getPageDescription(): string
     {
-        $postfix = ' (страница '.$this->page.') на сайте '.$this->l->t('octoanswers');
+        $postfix = ' (страница '.$this->page.') на сайте '._('OctoAnswers');
         $description = 'Список вопросов без ответов'.$postfix;
 
         return $description;

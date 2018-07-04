@@ -17,7 +17,7 @@ class All_Sandbox_PageController extends Abstract_PageController
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $questionsCount = (new QuestionsCount_Query($this->lang))->questionsLastID();
-        
+
         $this->questions = (new Questions_Query($this->lang))->findNewest($this->page);
 
         foreach ($this->questions as $question) {
@@ -47,12 +47,12 @@ class All_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->l->t('questions__page_title__all').' - '.$this->l->t('questions__page_num').' '.$this->page.' - '.$this->l->t('octoanswers');
+        return $this->l->t('questions__page_title__all').' - '.$this->l->t('questions__page_num').' '.$this->page.' - '._('OctoAnswers');
     }
 
     public function _getPageDescription(): string
     {
-        $postfix = ' (страница '.$this->page.') на сайте '.$this->l->t('octoanswers');
+        $postfix = ' (страница '.$this->page.') на сайте '._('OctoAnswers');
         $description = 'Список вопросы и ответы'.$postfix;
 
         return $description;

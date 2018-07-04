@@ -11,7 +11,7 @@ class InternalServerError_Error_PageController extends Abstract_PageController
         $this->l = Localizer::getInstance($this->lang);
 
         $this->template = 'error/500';
-        $this->pageTitle = $this->l->t('error_500__page_title').' - '.$this->l->t('octoanswers');
+        $this->pageTitle = $this->l->t('error_500__page_title').' - '._('OctoAnswers');
         $this->pageDescription = $this->l->t('Error on octoanswers.com: ');
 
         $this->errorTitle = $this->l->t('error_pg__title_500');

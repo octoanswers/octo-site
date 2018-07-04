@@ -1,6 +1,4 @@
 {
-    "octoanswers": "OctoAnswers",
-
     "answer_edit__subtitle": "Правка ответа на вопрос",
     "answer_edit__back_to_question": "Вернуться к вопросу",
     "answer_edit__description_of_changes": "Описание изменений, если необходимо:",
@@ -8,16 +6,7 @@
 
     "answer_history__page_title": "История вопроса: ",
 
-    "btn": {
-        "ask_question": "Задать вопрос",
-        "cancel": "Отмена",
-        "close": "Закрыть",
-        "save": "Сохранить",
-        "upload": "Загрузить"
-    },
-
     "block": {
-
         "first_answer": {
             "title": "Будьте первым автором!",
             "lead": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка.",

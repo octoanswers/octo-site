@@ -19,7 +19,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
 
         $this->template = 'error/question_not_found';
         $this->showFooter = false;
-        $this->pageTitle = $this->l->t('question_not_found__page_title').' '.$this->questionTitle.' - '.$this->l->t('octoanswers');
+        $this->pageTitle = $this->l->t('question_not_found__page_title').' '.$this->questionTitle.' - '._('OctoAnswers');
         $this->pageDescription = $this->l->t('Вопрос не найден на OctoAnswers.org');
 
         $this->questionURI = $questionURI;

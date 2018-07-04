@@ -11,13 +11,13 @@
         <button
             class="btn follow_topic_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
             data-topic-id="<?= $this->topic->getID() ?>"
-            data-follow-title="<?= $this->l->t('btn', 'follow') ?>"
-            data-followed-title="<?= $this->l->t('btn', 'followed') ?>"
-            data-unfollow-title="<?= $this->l->t('btn', 'unfollow') ?>"
+            data-follow-title="<?= _('Button - Follow') ?>"
+            data-followed-title="<?= _('Button - Followed') ?>"
+            data-unfollow-title="<?= _('Button - Unfollow') ?>"
             type="button">
             <img class="btn-icon" src="https://png.icons8.com/small/20/ffffff/bookmark-ribbon.png">
             <span>
-                <?= $this->followed ? $this->l->t('btn', 'followed') : $this->l->t('btn', 'follow'); ?>
+                <?= $this->followed ? _('Button - Followed') : _('Button - Follow'); ?>
             </span>
         </button>
     <?php endif; ?>
@@ -25,7 +25,7 @@
     <?php if (false): ?>
         <!-- fake follow topic button -->
         <button type="button" class="btn btn-primary mr-2 mb-3" data-toggle="modal" data-target="#fake-follow-topic-modal">
-            <?= $this->l->t('btn', 'follow_topic') ?>
+            <?= _('Button - Follow') ?>
         </button>
         <!-- fake follow topic modal -->
         <div class="modal fade" id="fake-follow-topic-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -48,6 +48,6 @@
             </div>
         </div>
     <?php endif; ?>
-    
+
 </div>
 <!-- / actions -->

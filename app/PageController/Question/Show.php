@@ -48,7 +48,7 @@ class Show_Question_PageController extends Abstract_PageController
             }
 
             $this->template = 'question/redirect';
-            $this->pageTitle = 'Redirect page: '.$this->question->getTitle().' - '.$this->l->t('octoanswers');
+            $this->pageTitle = 'Redirect page: '.$this->question->getTitle().' - '._('OctoAnswers');
 
             $output = $this->renderPage();
             $response->getBody()->write($output);
@@ -81,7 +81,7 @@ class Show_Question_PageController extends Abstract_PageController
         }
 
         $this->template = 'question/show';
-        $this->pageTitle = $this->question->getTitle().' - '.$this->l->t('octoanswers');
+        $this->pageTitle = $this->question->getTitle().' - '._('OctoAnswers');
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->getURL($this->lang);
 

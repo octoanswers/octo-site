@@ -35,6 +35,6 @@ class UpdateTopics_Question_PageController extends Abstract_PageController
 
     private function _getPageTitle()
     {
-        return $this->l->t('XXXquestion_rename__page_title').': '.$this->question->getTitle().' - '.$this->l->t('octoanswers');
+        return $this->l->t('XXXquestion_rename__page_title').': '.$this->question->getTitle().' - '._('OctoAnswers');
     }
 }

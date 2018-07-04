@@ -1,26 +1,10 @@
 {
-    "octoanswers": "OctoAnswers",
-
     "answer_edit__subtitle": "Edit answer to the question",
     "answer_edit__back_to_question": "Back to question",
     "answer_edit__description_of_changes": "Description of changes, if necessary:",
     "answer_edit__save_changes_btn": "Save changes",
 
     "answer_history__page_title": "History of question: ",
-
-    "btn": {
-        "ask_question": "Ask Question",
-        "cancel": "Cancel",
-        "close": "Close",
-        "save": "Save",
-        "upload": "Upload",
-        "view_history": "View history",
-        "follow": "Follow",
-        "followed": "Followed",
-        "unfollow": "Unfollow",
-        "follow_question": "Follow question",
-        "follow_topic": "Follow topic"
-    },
 
     "block": {
         "first_answer": {

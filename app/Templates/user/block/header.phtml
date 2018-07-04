@@ -34,11 +34,11 @@
                 <button
                     class="btn btn-block follow_user_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
                     data-user-id="<?= $this->user->getID() ?>"
-                    data-follow-title="<?= $this->l->t('btn', 'follow') ?>"
-                    data-followed-title="<?= $this->l->t('btn', 'followed') ?>"
-                    data-unfollow-title="<?= $this->l->t('btn', 'unfollow') ?>" type="button">
+                    data-follow-title="<?= _('Button - Follow') ?>"
+                    data-followed-title="<?= _('Button - Followed') ?>"
+                    data-unfollow-title="<?= _('Button - Unfollow') ?>" type="button">
                     <img class="btn-icon" src="https://png.icons8.com/material/20/ffffff/bookmark-ribbon.png">
-                    <span><?= $this->followed ? $this->l->t('btn', 'followed') : $this->l->t('btn', 'follow'); ?></span>
+                    <span><?= $this->followed ? _('Button - Followed') : _('Button - Follow'); ?></span>
                 </button>
             <?php endif; ?>
             <?php if ($this->authUser && ($this->authUser->getID() == $this->user->getID())): ?>

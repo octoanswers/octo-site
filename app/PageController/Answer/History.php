@@ -30,7 +30,7 @@ class History_Answer_PageController extends Abstract_PageController
         }
 
         $this->template = 'answer/history';
-        $this->pageTitle = $this->l->t('answer_history__page_title').$this->question->getTitle().' - '.$this->l->t('octoanswers');
+        $this->pageTitle = $this->l->t('answer_history__page_title').$this->question->getTitle().' - '._('OctoAnswers');
         $this->pageDescription = $this->l->t('page_description');
 
         $output = $this->renderPage();

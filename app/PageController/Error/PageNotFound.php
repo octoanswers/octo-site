@@ -13,7 +13,7 @@ class PageNotFound_Error_PageController extends Abstract_PageController
         $this->l = Localizer::getInstance($this->lang);
 
         $this->template = 'error/404';
-        $this->pageTitle = $this->l->t('Страница не найдена').' — '.$this->l->t('octoanswers');
+        $this->pageTitle = $this->l->t('Страница не найдена').' — '._('OctoAnswers');
         $this->pageDescription = $this->l->t('Страница не найден на OctoAnswers.org');
         $this->additionalJavascript[] = 'goal/page_not_found';
 

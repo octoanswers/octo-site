@@ -85,7 +85,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
         $this->template = 'topic/show';
         $this->pageTitle = $this->_get_page_title();
-         //str_replace('%topic%', , $this->l->t('topic__title')).' • '.$this->l->t('octoanswers');
+         //str_replace('%topic%', , $this->l->t('topic__title')).' • '._('OctoAnswers');
         $this->pageDescription = $this->_get_page_description();
         $this->nextPageURL = null;
 

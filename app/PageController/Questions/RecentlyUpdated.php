@@ -41,12 +41,12 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->l->t('questions', 'recently_updated', 'title').' &middot; '.$this->l->t('questions', 'page_num').' '.$this->page.' &middot; '.$this->l->t('octoanswers');
+        return $this->l->t('questions', 'recently_updated', 'title').' &middot; '.$this->l->t('questions', 'page_num').' '.$this->page.' &middot; '._('OctoAnswers');
     }
 
     public function _getPageDescription(): string
     {
-        $postfix = ' (страница '.$this->page.') на сайте '.$this->l->t('octoanswers');
+        $postfix = ' (страница '.$this->page.') на сайте '._('OctoAnswers');
         $description = 'Список вопросы и ответы'.$postfix;
 
         return $description;
