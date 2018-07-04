@@ -250,13 +250,6 @@
     "alert_subscribe__text": "Enter your email address to get notified about the answer as soon as it appears.",
     "alert_subscribe__btn": "Report response",
 
-    "wordform": {
-        "1_contributor": "contributor",
-        "2_contributors": "contributors",
-        "5_contributors": "contributors",
-        "no_contributors": "No contributors"
-    },
-
     "wordform_1_question": "question",
     "wordform_2_questions": "questions",
     "wordform_5_questions": "questions",

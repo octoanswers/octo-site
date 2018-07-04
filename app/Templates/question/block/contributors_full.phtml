@@ -3,7 +3,7 @@
     <div class="my-5">
         <div class="border-bottom pb-3" id="contributors_full_list">
             <span class="color-gray-400 float-right">
-                <?= (new Contributors_Humanizer($this->l))->humanize(count($this->contributors)) ?>
+                <?= count($this->contributors).' '.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
             </span>
             <span class="title">Авторы ответа</span> <!-- Answer contributor -->
         </div>

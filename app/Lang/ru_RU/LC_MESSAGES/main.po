@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 12:44+0500\n"
-"PO-Revision-Date: 2018-07-04 12:45+0500\n"
+"POT-Creation-Date: 2018-07-04 13:47+0500\n"
+"PO-Revision-Date: 2018-07-04 13:48+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -23,7 +23,7 @@ msgstr "Поток вопросов и ответов"
 msgid "Flow - Page description"
 msgstr "Поток вопросов и ответов на ОктоАнсверс"
 
-#: PageController/Topic/Show.php:106
+#: PageController/Topic/Show.php:104
 msgid "Questions and answers on the topic"
 msgstr "Вопросы и ответы на тему"
 
@@ -34,6 +34,17 @@ msgstr "Новые темы"
 #: PageController/Topics/Newest.php:40
 msgid "Page"
 msgstr "Страница"
+
+#: Trait/Question.php:30
+msgid "Minute to read"
+msgid_plural "Minutes to read"
+msgstr[0] "Минута на чтение"
+msgstr[1] "Минуты на чтение"
+msgstr[2] "Мминут на чтение"
+
+#: Trait/Question.php:34
+msgid "Empty answer"
+msgstr "Пустой ответ"
 
 #: Templates/_common/footer.phtml:11
 msgid "Footer - About"
@@ -71,13 +82,6 @@ msgstr "Русский"
 #: Templates/question/block/related_questions.phtml:29
 msgid "Write first answer"
 msgstr "Написать первый ответ"
-
-#: Templates/_common/item/question_with_answer.phtml:47
-msgid "Minute to read"
-msgid_plural "Minutes to read"
-msgstr[0] "Минута на чтение"
-msgstr[1] "Минуты на чтение"
-msgstr[2] "Мминут на чтение"
 
 #: Templates/_common/modal/ask.phtml:8
 msgid "Ask modal - Title"
@@ -164,6 +168,13 @@ msgstr "История"
 #: Templates/question/block/actions.phtml:43
 msgid "More"
 msgstr "Ещё"
+
+#: Templates/question/block/contributors_full.phtml:6
+msgid "Contributor"
+msgid_plural "Contributors"
+msgstr[0] "Автор"
+msgstr[1] "Автора"
+msgstr[2] "Авторов"
 
 #: Templates/question/block/header/info.phtml:23
 msgid "Answer updated"

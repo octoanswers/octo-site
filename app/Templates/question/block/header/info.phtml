@@ -9,7 +9,7 @@
 
     <?php if (count($this->contributors)): ?>
         <a href="#contributors_full_list" class="color-gray-500 no-underline-hover">
-            <?= (new Contributors_Humanizer($this->l))->humanize(count($this->contributors)) ?>
+            <?= count($this->contributors).' '.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
         </a>
     <?php else: ?>
         <a href="<?= $this->question->getEditURL($this->lang) ?>" class="color-gray-500 no-underline-hover">

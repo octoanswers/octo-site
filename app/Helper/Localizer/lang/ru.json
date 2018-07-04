@@ -273,13 +273,6 @@
     "wordform_2_topics": "темы",
     "wordform_5_topics": "тем",
 
-    "wordform": {
-        "1_contributor": "автор",
-        "2_contributors": "автора",
-        "5_contributors": "авторов",
-        "no_contributors": "Нет авторов"
-    },
-
     "wordform_1_question": "вопрос",
     "wordform_2_questions": "вопроса",
     "wordform_5_questions": "вопросов",

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 12:31+0500\n"
-"PO-Revision-Date: 2018-07-04 12:32+0500\n"
+"POT-Creation-Date: 2018-07-04 13:49+0500\n"
+"PO-Revision-Date: 2018-07-04 13:49+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -14,12 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: Humanizer/MinutesToRead.php:28
-msgid "Minute"
-msgid_plural "Minutes"
-msgstr[0] "Minute"
-msgstr[1] "Minutes"
-
 #: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
 msgid "Flow - Page title"
 msgstr "Questions and answers flow"
@@ -28,7 +22,7 @@ msgstr "Questions and answers flow"
 msgid "Flow - Page description"
 msgstr "Questions and answers flow on OctoAnswers"
 
-#: PageController/Topic/Show.php:106
+#: PageController/Topic/Show.php:104
 msgid "Questions and answers on the topic"
 msgstr ""
 
@@ -39,6 +33,16 @@ msgstr ""
 #: PageController/Topics/Newest.php:40
 msgid "Page"
 msgstr ""
+
+#: Trait/Question.php:30
+msgid "Minute to read"
+msgid_plural "Minutes to read"
+msgstr[0] "Minute to read"
+msgstr[1] "Minutes to read"
+
+#: Trait/Question.php:34
+msgid "Empty answer"
+msgstr "Empty answer"
 
 #: Templates/_common/footer.phtml:11
 msgid "Footer - About"
@@ -162,6 +166,13 @@ msgstr ""
 #: Templates/question/block/actions.phtml:43
 msgid "More"
 msgstr ""
+
+#: Templates/question/block/contributors_full.phtml:6
+#: Templates/question/block/header/info.phtml:12
+msgid "Contributor"
+msgid_plural "Contributors"
+msgstr[0] "Contributor"
+msgstr[1] "Contributors"
 
 #: Templates/question/block/header/info.phtml:23
 msgid "Answer updated"
