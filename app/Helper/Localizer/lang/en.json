@@ -33,17 +33,6 @@
         "add_image": {
             "message": "The image adorns the question and helps to understand what exactly is in question.",
             "button": "Add image"
-        },
-        "improve_your_feed": {
-            "title": "Improve Your Feed",
-            "visit_your_feed": "Visit your feed",
-            "set_real_name": "Set real name",
-            "set_signature": "Set signature",
-            "follow_3_more_topics": "Follow three more topics",
-            "follow_your_first_question": "Follow your first question",
-            "find_your_friends": "Find your friends",
-            "ask_your_first_question": "Ask your first question",
-            "answer_a_question": "Answer a question"
         }
     },
 

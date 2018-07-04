@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 14:27+0500\n"
-"PO-Revision-Date: 2018-07-04 14:28+0500\n"
+"POT-Creation-Date: 2018-07-04 14:41+0500\n"
+"PO-Revision-Date: 2018-07-04 14:43+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -174,6 +174,47 @@ msgstr "Описание изменений"
 #: Templates/answer/history/revision_item.phtml:21
 msgid "Answer history page - No description of changes"
 msgstr "Нет описания изменений"
+
+#: Templates/feed/block/improve_feed.phtml:5
+msgid "Feed - Improve your feed - Title"
+msgstr "Улучшите вашу ленту"
+
+#: Templates/feed/block/improve_feed.phtml:13
+msgid "Feed - Improve your feed - Visit your feed"
+msgstr "Посетите ленту"
+
+#: Templates/feed/block/improve_feed.phtml:21
+#: Templates/feed/block/improve_feed.phtml:27
+msgid "Feed - Improve your feed - Set real name"
+msgstr "Введите реальное имя"
+
+#: Templates/feed/block/improve_feed.phtml:36
+#: Templates/feed/block/improve_feed.phtml:42
+msgid "Feed - Improve your feed - Set signature"
+msgstr "Придумайте подпись"
+
+#: Templates/feed/block/improve_feed.phtml:51
+#: Templates/feed/block/improve_feed.phtml:57
+msgid "Feed - Improve your feed - Follow 3 more topics"
+msgstr "Подпишитесь на три темы"
+
+#: Templates/feed/block/improve_feed.phtml:66
+#: Templates/feed/block/improve_feed.phtml:72
+msgid "Feed - Improve your feed - Follow your first question"
+msgstr "Подпишитесь на первый вопрос"
+
+#: Templates/feed/block/improve_feed.phtml:81
+#: Templates/feed/block/improve_feed.phtml:87
+msgid "Feed - Improve your feed - Find your friends"
+msgstr "Найдите друзей"
+
+#: Templates/feed/block/improve_feed.phtml:97
+msgid "Feed - Improve your feed - Ask your first question"
+msgstr "Задайте первый вопрос"
+
+#: Templates/feed/block/improve_feed.phtml:106
+msgid "Feed - Improve your feed - Answer a question"
+msgstr "Ответьте на вопрос"
 
 #: Templates/flow/block/header.phtml:4
 msgid "Flow - Title"
