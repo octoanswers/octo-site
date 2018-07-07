@@ -1,33 +1,4 @@
 {
 
-    "block": {
-        "first_answer": {
-            "title": "Be the first author!",
-            "lead": "Still no one tried to write an answer to this question. Be the first if the topic of the question is close to you.",
-            "answer_btn": "Write first answer"
-        },
-        "add_image": {
-            "message": "The image adorns the question and helps to understand what exactly is in question.",
-            "button": "Add image"
-        }
-    },
-
-    "users": {
-        "signup_lure": {
-            "img_alt": "Signup on question and answer site OctoAnswers",
-            "title": "Not yet registered?",
-            "text": "Signing up allows you to a earn reputation when you help others with questions, answers and edits."
-        }
-    },
-
-    "user__page_title_postfix": " - Wiki-answers on OctoAnswers",
-    "user__page_description_postfix": " - wiki-answers on OctoAnswers",
-    "user__change_avatar": "Change avatar",
-    "u__last_revisions": "Last revisions",
-    "u__followers": "Followers",
-    "u__followed": "Followed",
-
-    "alert_subscribe__text": "Enter your email address to get notified about the answer as soon as it appears.",
-    "alert_subscribe__btn": "Report response"
 
 }

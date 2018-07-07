@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-04 22:39+0500\n"
-"PO-Revision-Date: 2018-07-04 22:40+0500\n"
+"POT-Creation-Date: 2018-07-07 10:06+0500\n"
+"PO-Revision-Date: 2018-07-07 10:07+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -152,6 +152,14 @@ msgstr "Вопросы и ответы на тему %topic"
 #: PageController/Topics/Newest.php:39
 msgid "New topics"
 msgstr "Новые темы"
+
+#: PageController/User/Show.php:34
+msgid "User - Page title (postfix)"
+msgstr "Вики-ответы на OctoAnswers"
+
+#: PageController/User/Show.php:35 PageController/User/Show.php:71
+msgid "User - Page description"
+msgstr "Вики-ответы на OctoAnswers"
 
 #: PageController/Users/Newest.php:40
 msgid "Users - Filter - Newest"
@@ -525,6 +533,25 @@ msgstr "Изменить темы"
 msgid "Set question topics"
 msgstr "Задать темы вопроса"
 
+#: Templates/question/block/lure/be_first_contributor.phtml:8
+#: Templates/question/block/lure/be_first_contributor.phtml:12
+#: Templates/question/block/lure/be_first_contributor.phtml:29
+#: Templates/question/block/lure/be_first_contributor.phtml:33
+msgid "Question - First answer - Title"
+msgstr "Будьте первым автором"
+
+#: Templates/question/block/lure/be_first_contributor.phtml:15
+#: Templates/question/block/lure/be_first_contributor.phtml:36
+msgid "Question - First answer - Lead"
+msgstr ""
+"Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
+"тема вопроса вам близка"
+
+#: Templates/question/block/lure/be_first_contributor.phtml:18
+#: Templates/question/block/lure/be_first_contributor.phtml:39
+msgid "Question - First answer - Answer button"
+msgstr "Написать первый ответ"
+
 #: Templates/question/block/related_questions.phtml:24
 msgid "Question - Last updated"
 msgstr "Ответ обновлен"
@@ -548,6 +575,20 @@ msgstr "Топ авторов ответа"
 msgid "Question - Top contributors - All answer contributors"
 msgstr "Все авторы ответа"
 
+#: Templates/question/block/subscribe.phtml:11
+msgid "Question - Subscribe alert - Title"
+msgstr "Ответ на email"
+
+#: Templates/question/block/subscribe.phtml:14
+msgid "Question - Subscribe alert - Text"
+msgstr ""
+"Укажите адрес электронной почты и мы сообщим об ответе, как только он "
+"появится"
+
+#: Templates/question/block/subscribe.phtml:23
+msgid "Question - Subscribe alert - Input placeholder"
+msgstr "Ваш email"
+
 #: Templates/question/modal/edit_answer_lure.phtml:9
 msgid "Question - Fake edit modal - Text"
 msgstr ""
@@ -566,7 +607,7 @@ msgid "Feedback modal - Thanks"
 msgstr "Спасибо за отзыв"
 
 #: Templates/question/modal/first_answer__signup.phtml:9
-msgid "Question - First answer - Text"
+msgid "Question - First answer modal - Text"
 msgstr ""
 "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
 "вопрос"
@@ -753,6 +794,10 @@ msgstr "Подписан"
 #: Templates/topic/block/actions.phtml:16 Templates/user/block/header.phtml:39
 msgid "Button - Unfollow"
 msgstr "Отписаться"
+
+#: Templates/user/block/header.phtml:51
+msgid "Button - Logout"
+msgstr "Выйти"
 
 #~ msgid "Page"
 #~ msgstr "Страница"
