@@ -9,11 +9,18 @@ class Questions_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            
+
             $title = htmlspecialchars((string) $request->getParam('title'));
 
             $question = Question_Model::initWithTitle($title);
-            $question = (new Question_Mapper($this->lang))->create($question);
+
+            try {
+                $question = (new Question_Mapper($this->lang))->create($question);
+            } catch (\Exception $e) {
+                if ($e->getCode() == 23000) {
+                    $question = (new Question_Query($this->lang))->questionWithTitle($title);
+                }
+            }
 
             # save activity if user want that
 
