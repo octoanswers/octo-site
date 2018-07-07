@@ -12,8 +12,6 @@ class UsersIDFollow_DELETE_APIController extends Abstract_APIController
             $followedUserID = (int) $args['id'];
             $api_key = (string) $request->getParam('api_key');
 
-            $this->l = Localizer::getInstance($this->lang);
-
             #
             # Validate params
             #

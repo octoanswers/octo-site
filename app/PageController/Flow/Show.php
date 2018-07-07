@@ -13,8 +13,7 @@ class Show_Flow_PageController extends Abstract_PageController
     public function handle(Request $request, Response $response, $args): Response
     {
         $this->lang = $args['lang'];
-        $this->l = Localizer::getInstance($this->lang);
-
+        
         $this->activities = (new Flow_Query($this->lang))->findFlow();
 
         $human_date_timezone = new DateTimeZone('UTC');

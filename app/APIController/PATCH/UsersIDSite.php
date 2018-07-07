@@ -9,8 +9,7 @@ class UsersIDSite_PATCH_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $user_ID = (int) $args['id'];
             $api_key = (string) $request->getParam('api_key');
             $new_site = $request->getParam('site');

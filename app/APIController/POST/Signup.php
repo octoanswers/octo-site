@@ -9,8 +9,7 @@ class Signup_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $username = $request->getParam('username');
             $userEmail = $request->getParam('email');
             $userPassword = $request->getParam('password');

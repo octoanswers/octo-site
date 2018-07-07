@@ -9,8 +9,7 @@ class AnswersID_PUT_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $answer_id = (int) $args['id'];
             $new_answer_text = (string) $request->getParam('answer_text');
 

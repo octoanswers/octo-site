@@ -10,8 +10,6 @@ class UpdateTopics_Question_PageController extends Abstract_PageController
     public function handle(Request $request, Response $response, $args): Response
     {
         $this->lang = $args['lang'];
-        $this->l = Localizer::getInstance($this->lang);
-
         $questionID = $args['id'];
 
         try {

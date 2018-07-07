@@ -9,8 +9,7 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $question_id = (int) $args['id'];
             $email = (string) $request->getParam('email');
             $is_send_email = $request->getParam('no_email') ? false : true;

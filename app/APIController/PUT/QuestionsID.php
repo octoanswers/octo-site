@@ -12,8 +12,6 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
             $questionID = (int) $args['id'];
             $questionTitle = (string) $request->getParam('question_title');
 
-            $this->l = Localizer::getInstance($this->lang);
-
             Question_Validator::validateID($questionID);
 
             // check API-key

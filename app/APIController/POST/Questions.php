@@ -9,8 +9,7 @@ class Questions_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $title = htmlspecialchars((string) $request->getParam('title'));
 
             $question = Question_Model::initWithTitle($title);

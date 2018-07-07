@@ -13,8 +13,7 @@ class Show_Settings_PageController extends Abstract_PageController
         }
 
         $this->lang = $args['lang'];
-        $this->l = Localizer::getInstance($this->lang);
-
+        
         $this->template = 'settings/show';
         $this->pageTitle = 'Настройки'.' - '._('OctoAnswers');
 

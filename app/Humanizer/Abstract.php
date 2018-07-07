@@ -8,14 +8,13 @@ class Abstract_Humanizer
     # Init methods
     #
 
-    public function __construct(Localizer $loc)
+    public function __construct()
     {
-        $this->loc = $loc;
+
     }
 
     public function __destruct()
     {
-        $this->loc = null;
     }
 
     /**

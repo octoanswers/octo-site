@@ -10,8 +10,6 @@ class Show_Topic_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         $topic_uri = $args['uri'];
 
-        $this->l = Localizer::getInstance($this->lang);
-
         try {
             $topic_title = Topic_URL_Helper::titleFromURI($topic_uri);
             // var_dump($topic_title);
@@ -33,8 +31,6 @@ class Show_Topic_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         $topic_id = $args['id'];
         $topic_uri_slug = $args['uri_slug'];
-
-        $this->l = Localizer::getInstance($this->lang);
 
         try {
             $this->topic = (new Topic_Query($this->lang))->topicWithID($topic_id);

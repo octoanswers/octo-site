@@ -9,8 +9,7 @@ class TopicsIDFollow_DELETE_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $api_key = (string) $request->getParam('api_key');
             $topicID = (int) $args['id'];
 

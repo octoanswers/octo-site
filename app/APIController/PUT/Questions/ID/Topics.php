@@ -9,8 +9,7 @@ class Topics_ID_Questions_PUT_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $api_key = (string) $request->getParam('api_key');
             $question_id = (int) $args['id'];
 

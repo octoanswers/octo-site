@@ -12,8 +12,6 @@ class Show_Root_PageController extends Abstract_PageController
 
         $this->lang = $default_language;
 
-        $this->l = Localizer::getInstance($this->lang);
-
         if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
             $this->lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 

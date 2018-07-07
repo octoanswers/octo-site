@@ -17,7 +17,6 @@ class Questions_Search_PageController extends Abstract_PageController
         $this->query = $request->getParam('q');
 
         $this->list = self::LIST_QUESTIONS;
-        $this->l = Localizer::getInstance($this->lang);
 
         // @TODO check query
 
@@ -29,7 +28,7 @@ class Questions_Search_PageController extends Abstract_PageController
         $this->jumbortonBgStyle = 'red';
         $this->pageTitle = str_replace('%query%', $this->query, _('Search - Page title')).' - '._('OctoAnswers');
 
-        $this->searchPlaceholder = $this->__getSearchPlaceholder($this->l, $this->list);
+        $this->searchPlaceholder = $this->__getSearchPlaceholder($this->list);
 
         $searchLinkPostfix = $this->query ? '&q='.$this->query : '';
         $this->searchQuestionsLink = SITE_URL.'/search?list=questions'.$searchLinkPostfix;
@@ -46,7 +45,7 @@ class Questions_Search_PageController extends Abstract_PageController
     # Helper methods
     #
 
-    public function __getSearchPlaceholder(Localizer $l, string $list): string
+    public function __getSearchPlaceholder(string $list): string
     {
         switch ($list) {
             case self::LIST_QUESTIONS:

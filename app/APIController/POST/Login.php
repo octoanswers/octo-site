@@ -9,8 +9,7 @@ class Login_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $userEmail = (string) $request->getParam('email');
             $userPassword = (string) $request->getParam('password');
 

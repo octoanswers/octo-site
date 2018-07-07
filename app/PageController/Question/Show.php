@@ -8,8 +8,6 @@ class Show_Question_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         $questionURI = $args['question_uri'];
 
-        $this->l = Localizer::getInstance($this->lang);
-
         try {
             $questionTitle = Question_URL_Helper::titleFromURI($questionURI);
             $question = (new Question_Query($this->lang))->questionWithTitle($questionTitle);
@@ -25,8 +23,6 @@ class Show_Question_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         $question_id = $args['id'];
         $question_uri_slug = $args['uri_slug'];
-
-        $this->l = Localizer::getInstance($this->lang);
 
         try {
             $this->question = (new Question_Query($this->lang))->questionWithID($question_id);

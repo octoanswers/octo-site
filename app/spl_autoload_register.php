@@ -27,7 +27,6 @@ spl_autoload_register(function ($class_name) {
         'FineDiff' => 'app/Helper/FineDiff/FineDiff.php',
         'PassHash' => 'app/Helper/PassHash.php',
         'Lang' => 'app/Helper/Lang.php',
-        'Localizer' => 'app/Helper/Localizer/Localizer.php',
         'PDOFactory' => 'app/Helper/PDOFactory.php',
         'CookieStorage' => 'app/Helper/CookieStorage.php',
         'ExtendedParsedown' => 'app/Helper/ExtendedParsedown/ExtendedParsedown.php',

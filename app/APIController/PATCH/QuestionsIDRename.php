@@ -13,8 +13,6 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
             $api_key = (string) $request->getParam('api_key');
             $questionNewTitle = (string) $request->getParam('new_title');
 
-            $this->l = Localizer::getInstance($this->lang);
-
             # Validate params
 
             $user = (new User_Query())->userWithAPIKey($api_key);

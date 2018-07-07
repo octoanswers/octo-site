@@ -12,8 +12,6 @@ class TopicsIDFollow_POST_APIController extends Abstract_APIController
             $topicID = (int) $args['id'];
             $api_key = (string) $request->getParam('api_key');
 
-            $this->l = Localizer::getInstance($this->lang);
-
             #
             # Validate params
             #

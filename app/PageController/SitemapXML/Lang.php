@@ -8,8 +8,7 @@ class Lang_SitemapXML_PageController extends Abstract_PageController
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $this->l = Localizer::getInstance($this->lang);
-
+        
         $questions = (new Questions_Query($this->lang))->findNewest(self::PAGE, self::QUESTIONS_PER_PAGE);
 
         $output = '';

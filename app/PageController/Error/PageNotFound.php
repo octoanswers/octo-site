@@ -10,8 +10,6 @@ class PageNotFound_Error_PageController extends Abstract_PageController
         $this->lang = $lang;
         //$this->lang = $args['lang'] ? $args['lang'] : 'en';
 
-        $this->l = Localizer::getInstance($this->lang);
-
         $this->template = 'error/404';
         $this->pageTitle = _('Error 404 - Page title').' — '._('OctoAnswers');
         $this->pageDescription = _('Error 404 - Page description');

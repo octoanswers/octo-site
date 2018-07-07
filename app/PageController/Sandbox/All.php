@@ -11,8 +11,7 @@ class All_Sandbox_PageController extends Abstract_PageController
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $this->l = Localizer::getInstance($this->lang);
-
+        
         $this->list = 'newest';
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 

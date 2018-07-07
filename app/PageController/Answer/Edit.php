@@ -13,8 +13,6 @@ class Edit_Answer_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         $answerID = $args['id'];
 
-        $this->l = Localizer::getInstance($this->lang);
-
         try {
             $this->question = (new Question_Query($this->lang))->questionWithID($answerID);
         } catch (Throwable $e) {

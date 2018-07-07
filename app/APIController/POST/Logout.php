@@ -9,8 +9,7 @@ class Logout_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $apiKey = (string) $request->getParam('api_key');
 
             User_Validator::validateAPIKey($apiKey);

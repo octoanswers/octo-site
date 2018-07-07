@@ -9,8 +9,7 @@ class UsersIDFollow_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $this->l = Localizer::getInstance($this->lang);
-
+            
             $api_key = (string) $request->getParam('api_key');
             $followedUserID = (int) $args['id'];
 

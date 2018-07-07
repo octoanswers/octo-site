@@ -8,8 +8,7 @@ class InternalServerError_Error_PageController extends Abstract_PageController
     public function handle(string $lang, Request $request, Response $response, $args): Response
     {
         $this->lang = $lang;
-        $this->l = Localizer::getInstance($this->lang);
-
+        
         $this->template = 'error/500';
         $this->pageTitle = _('Error 500 - Page title').' - '._('OctoAnswers');
         $this->pageDescription = _('Error 500 - Page description');

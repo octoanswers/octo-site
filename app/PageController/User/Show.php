@@ -13,9 +13,6 @@ class Show_User_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         $this->username = $args['username'];
 
-        $this->l = Localizer::getInstance($this->lang);
-
-
         $this->user = (new User_Query())->userWithUsername($this->username);
         if (!$this->user) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);

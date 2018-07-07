@@ -7,8 +7,6 @@ class Newest_Questions_PageController extends Abstract_PageController
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $this->l = Localizer::getInstance($this->lang);
-
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $questionsCount = (new QuestionsCount_Query($this->lang))->questionsLastID();
