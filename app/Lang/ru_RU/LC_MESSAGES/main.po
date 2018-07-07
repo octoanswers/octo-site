@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2018-07-07 10:52+0500\n"
-"PO-Revision-Date: 2018-07-07 11:01+0500\n"
+"PO-Revision-Date: 2018-07-07 15:17+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -504,28 +504,20 @@ msgid "Flow - Title"
 msgstr "Поток событий"
 
 #: Templates/main/_block/how_it_works.phtml:7
-#, fuzzy
-#| msgid "Main - Jumbotron - Title"
 msgid "Main - How it works - Title"
-msgstr "Задайте вопрос и получите один исчерпывающий ответ"
+msgstr "Как это работает"
 
 #: Templates/main/_block/how_it_works.phtml:13
-#, fuzzy
-#| msgid "Main - Jumbotron - Subtitle"
 msgid "Main - How it works - First title"
-msgstr "Что значит исчерпывающий"
+msgstr "Вы задаете вопрос на любую интересующую вас тему"
 
 #: Templates/main/_block/how_it_works.phtml:18
-#, fuzzy
-#| msgid "Main - Jumbotron - Subtitle"
 msgid "Main - How it works - Second title"
-msgstr "Что значит исчерпывающий"
+msgstr "Мы находим специалистов, которые могут дать компетентный ответ"
 
 #: Templates/main/_block/how_it_works.phtml:23
-#, fuzzy
-#| msgid "Main - Jumbotron - Title"
 msgid "Main - How it works - Third title"
-msgstr "Задайте вопрос и получите один исчерпывающий ответ"
+msgstr "Вы получаете исчерпывающий ответ на email"
 
 #: Templates/main/_block/jumbotron.phtml:8
 msgid "Main - Jumbotron - Title"

@@ -551,7 +551,7 @@ h6, .h6 {
   font-size: 1.1rem; }
 
 .display-1, .display-2, .display-3, .display-4 {
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2; }
 
 .display-1 {
@@ -561,7 +561,13 @@ h6, .h6 {
   font-size: 3rem; }
 
 .display-3 {
-  font-size: 2.5rem; }
+  font-size: 1.5rem; }
+  @media (min-width: 576px) {
+    .display-3 {
+      font-size: 2rem; } }
+  @media (min-width: 768px) {
+    .display-3 {
+      font-size: 2.5rem; } }
 
 .display-4 {
   font-size: 2rem; }
@@ -642,6 +648,10 @@ img.box_2 {
 
 img.border-2 {
   border: 2px solid #E0E0E0; }
+
+.jumbotron {
+  padding-left: 0;
+  padding-right: 0; }
 
 .list-group .list-group-item {
   padding: .75rem 1rem;

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2018-07-07 10:54+0500\n"
-"PO-Revision-Date: 2018-07-07 10:55+0500\n"
+"PO-Revision-Date: 2018-07-07 15:09+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -518,11 +518,11 @@ msgstr "How it works"
 
 #: Templates/main/_block/how_it_works.phtml:13
 msgid "Main - How it works - First title"
-msgstr "You ask a question no longer than 140 letters"
+msgstr "You ask a question about any topic of interest to you"
 
 #: Templates/main/_block/how_it_works.phtml:18
 msgid "Main - How it works - Second title"
-msgstr "We find a specialist who can give a competent answer to a question"
+msgstr "We find a specialist who can give a competent answer"
 
 #: Templates/main/_block/how_it_works.phtml:23
 msgid "Main - How it works - Third title"
