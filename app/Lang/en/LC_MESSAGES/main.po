@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-07 10:06+0500\n"
-"PO-Revision-Date: 2018-07-07 10:06+0500\n"
+"POT-Creation-Date: 2018-07-07 10:54+0500\n"
+"PO-Revision-Date: 2018-07-07 10:55+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -43,13 +43,50 @@ msgstr "Edit answer"
 msgid "OctoAnswers"
 msgstr "OctoAnswers"
 
+#: PageController/Answer/Edit.php:37
+#, fuzzy
+#| msgid "User - Page description"
+msgid "Answer edit - Page description"
+msgstr "Wiki-answers on OctoAnswers"
+
 #: PageController/Answer/History.php:33
 msgid "Answer history - Page title"
 msgstr "History of question"
 
+#: PageController/Answer/History.php:34
+#, fuzzy
+#| msgid "Answer history - Page title"
+msgid "Answer history - Page description"
+msgstr "History of question"
+
 #: PageController/Error/InternalServerError.php:14
+#: PageController/Error/InternalServerError.php:17
 msgid "Error 500 - Page title"
 msgstr "Error 500"
+
+#: PageController/Error/InternalServerError.php:15
+#, fuzzy
+#| msgid "Flow - Page description"
+msgid "Error 500 - Page description"
+msgstr "Questions and answers flow on OctoAnswers"
+
+#: PageController/Error/InternalServerError.php:18
+#, fuzzy
+#| msgid "Flow - Page description"
+msgid "Error 500 - Error description"
+msgstr "Questions and answers flow on OctoAnswers"
+
+#: PageController/Error/PageNotFound.php:16
+#, fuzzy
+#| msgid "Error 500 - Page title"
+msgid "Error 404 - Page title"
+msgstr "Error 500"
+
+#: PageController/Error/PageNotFound.php:17
+#, fuzzy
+#| msgid "Flow - Page description"
+msgid "Error 404 - Page description"
+msgstr "Questions and answers flow on OctoAnswers"
 
 #: PageController/Error/QuestionNotFound.php:22
 msgid "Question not found - Page title"
@@ -94,11 +131,25 @@ msgstr "Wiki-answers to your questions on OctoAnswers"
 msgid "Question - Page description"
 msgstr "Wiki-answer on question %question"
 
+#: PageController/Question/UpdateTopics.php:27
+#, fuzzy
+#| msgid "Topic - Page description"
+msgid "Update topics - Page description"
+msgstr "Questions and answers on the topic %s"
+
+#: PageController/Question/UpdateTopics.php:38
+#, fuzzy
+#| msgid "Topic - Page title"
+msgid "Update topics - Page title"
+msgstr "Questions and answers on the topic %s"
+
 #: PageController/Questions/Newest.php:48
 msgid "Questions - Newest - Page title"
 msgstr "Newest questions"
 
-#: PageController/Questions/Newest.php:48 PageController/Sandbox/All.php:50
+#: PageController/Questions/Newest.php:48
+#: PageController/Questions/RecentlyUpdated.php:44
+#: PageController/Sandbox/All.php:50
 #: PageController/Sandbox/WithoutAnswers.php:59
 #: PageController/Sandbox/WithoutTopics.php:59
 #: PageController/Topics/Newest.php:39 PageController/Users/Newest.php:47
@@ -109,6 +160,18 @@ msgstr "Page"
 msgid "Questions - Recently updated - Title"
 msgstr "Recently updated questions"
 
+#: PageController/Root/Show.php:28
+#, fuzzy
+#| msgid "Flow - Page description"
+msgid "Root - Page description"
+msgstr "Questions and answers flow on OctoAnswers"
+
+#: PageController/Sandbox/All.php:50
+#, fuzzy
+#| msgid "Main - Page title"
+msgid "Sandbox - Page title"
+msgstr "Ask a question and get one complete answer"
+
 #: PageController/Sandbox/WithoutAnswers.php:19
 #: PageController/Sandbox/WithoutTopics.php:19
 msgid "Question"
@@ -116,13 +179,26 @@ msgid_plural "Questions"
 msgstr[0] "Question"
 msgstr[1] "Questions"
 
+#: PageController/Sandbox/WithoutAnswers.php:39
+#: PageController/Sandbox/WithoutTopics.php:39
+msgid "Questions - Filter - Without answers"
+msgstr "Without answers"
+
 #: PageController/Sandbox/WithoutAnswers.php:59
 msgid "Questions - Without answers - Page title"
 msgstr "Questions without answers"
 
-#: PageController/Sandbox/WithoutTopics.php:39
-msgid "Questions - Filter - Without answers"
-msgstr "Without answers"
+#: PageController/Sandbox/WithoutTopics.php:59
+#, fuzzy
+#| msgid "Questions - Without answers - Page title"
+msgid "Questions - Without topics - Page title"
+msgstr "Questions without answers"
+
+#: PageController/Search/Questions.php:30
+#, fuzzy
+#| msgid "Users - Page title"
+msgid "Search - Page title"
+msgstr "New users from around the world"
 
 #: PageController/Search/Questions.php:53
 msgid "Questions - Search input placeholder"
@@ -139,6 +215,12 @@ msgstr "Search questions"
 #| msgid "Questions - Search input placeholder"
 msgid "Users - Search input placeholder"
 msgstr "Search questions"
+
+#: PageController/Topic/Show.php:73
+#, fuzzy
+#| msgid "Topic - Page title"
+msgid "Topic - Next page button"
+msgstr "Questions and answers on the topic %s"
 
 #: PageController/Topic/Show.php:103
 msgid "Topic - Page title"
@@ -160,7 +242,7 @@ msgstr "Wiki-answers on OctoAnswers"
 msgid "User - Page description"
 msgstr "Wiki-answers on OctoAnswers"
 
-#: PageController/Users/Newest.php:40
+#: PageController/Users/Newest.php:40 Templates/users/block/nav.phtml:6
 msgid "Users - Filter - Newest"
 msgstr "Newest"
 
@@ -192,23 +274,23 @@ msgstr ""
 msgid "Block - About OctoAnswers - Signup button"
 msgstr "Signup"
 
-#: Templates/_common/footer.phtml:11
+#: Templates/_common/footer.phtml:11 Templates/_common/sidebar/footer.phtml:5
 msgid "Footer - About"
 msgstr "About"
 
-#: Templates/_common/footer.phtml:16
+#: Templates/_common/footer.phtml:16 Templates/_common/sidebar/footer.phtml:10
 msgid "Footer - Support"
 msgstr "Support"
 
-#: Templates/_common/footer.phtml:21
+#: Templates/_common/footer.phtml:21 Templates/_common/sidebar/footer.phtml:15
 msgid "Footer - Users"
 msgstr "Users"
 
-#: Templates/_common/footer.phtml:26
+#: Templates/_common/footer.phtml:26 Templates/_common/sidebar/footer.phtml:20
 msgid "Footer - Flow"
 msgstr "Flow"
 
-#: Templates/_common/footer.phtml:34
+#: Templates/_common/footer.phtml:34 Templates/_common/sidebar/footer.phtml:30
 msgid "Footer - Icon pack by icons8"
 msgstr "Icon pack by Icons8"
 
@@ -326,6 +408,12 @@ msgstr "Login"
 #: Templates/users/block/container_login_or_signup.phtml:19
 msgid "Navbar - Signup"
 msgstr "Signup"
+
+#: Templates/_common/sidebar/footer.phtml:25
+#, fuzzy
+#| msgid "Footer - Users"
+msgid "Footer - Rules"
+msgstr "Users"
 
 #: Templates/answer/edit/header.phtml:3
 msgid "Edit answer - Subtitle"
@@ -582,6 +670,14 @@ msgstr "Your email"
 msgid "Question - Fake edit modal - Text"
 msgstr "Register or log in and you can edit or supplement this question"
 
+#: Templates/question/modal/edit_answer_lure.phtml:13
+#: Templates/question/modal/first_answer__signup.phtml:13
+#: Templates/question/modal/follow_question_lure.phtml:13
+#, fuzzy
+#| msgid "Button - Logout"
+msgid "Button - Signup"
+msgstr "Logout"
+
 #: Templates/question/modal/edit_answer_lure.phtml:16
 #: Templates/question/modal/feedback_thanks.phtml:13
 #: Templates/question/modal/first_answer__signup.phtml:16
@@ -626,6 +722,12 @@ msgstr "Question image"
 #: Templates/question/modal/upload_image.phtml:21
 msgid "Modal - Upload image - Submit button"
 msgstr "Upload image"
+
+#: Templates/question/show/signup_lure.phtml:5
+#, fuzzy
+#| msgid "Question - Signup lure - Text 1"
+msgid "Question - Signup lure - Title"
+msgstr "See what questions your friends are asking today"
 
 #: Templates/question/show/signup_lure.phtml:7
 msgid "Question - Signup lure - Text 1"
@@ -699,13 +801,47 @@ msgstr "Rename question"
 msgid "Search - Topics not found - Button"
 msgstr "Rename question"
 
+#: Templates/search/block/div__no_users.phtml:5
+#, fuzzy
+#| msgid "Rename question modal - Title"
+msgid "Search - Users not found alert - Title"
+msgstr "Rename question"
+
 #: Templates/search/block/div__no_users.phtml:7
-msgid "Search alert - Users_not_found__text"
-msgstr ""
+#, fuzzy
+#| msgid "Rename question modal - Title"
+msgid "Search - Users not found alert - Text"
+msgstr "Rename question"
 
 #: Templates/search/block/div__no_users.phtml:10
-msgid "Search alert  - Users_not_found__button"
-msgstr ""
+#, fuzzy
+#| msgid "Rename question modal - Title"
+msgid "Search - Users not found alert - Button"
+msgstr "Rename question"
+
+#: Templates/search/questions.phtml:8
+#, fuzzy
+#| msgid "Users - Page title"
+msgid "Search - Filter title"
+msgstr "New users from around the world"
+
+#: Templates/search/questions.phtml:11
+#, fuzzy
+#| msgid "Users - Filter - Newest"
+msgid "Search - Filter - Questions"
+msgstr "Newest"
+
+#: Templates/search/questions.phtml:14
+#, fuzzy
+#| msgid "Users - Filter - Newest"
+msgid "Search - Filter - Topics"
+msgstr "Newest"
+
+#: Templates/search/questions.phtml:17
+#, fuzzy
+#| msgid "Users - Filter - Newest"
+msgid "Search - Filter - Users"
+msgstr "Newest"
 
 #: Templates/settings/show_full.phtml:14
 msgid "Settings - Title"
@@ -784,9 +920,67 @@ msgstr "Followed"
 msgid "Button - Unfollow"
 msgstr "Unfollow"
 
+#: Templates/topic/block/actions.phtml:35
+msgid "Topic - Fake follow modal - Title"
+msgstr "Want to follow"
+
+#: Templates/topics/block/nav.phtml:6
+#, fuzzy
+#| msgid "Users - Filter - Newest"
+msgid "Topics - Filter - Newest"
+msgstr "Newest"
+
+#: Templates/topics/block/nav.phtml:11
+#, fuzzy
+#| msgid "Questions - Filter - Popular"
+msgid "Topics - Filter - Popular"
+msgstr "Popular"
+
+#: Templates/user/block/div__no_answers.phtml:4
+msgid "User - No answers alert - Title"
+msgstr "No answers"
+
+#: Templates/user/block/div__no_answers.phtml:5
+msgid "User - No answers alert - Text"
+msgstr "The user still has not answered for any question"
+
+#: Templates/user/block/header.phtml:47
+#, fuzzy
+#| msgid "Button - Close"
+msgid "Button - Settings"
+msgstr "Close"
+
 #: Templates/user/block/header.phtml:51
 msgid "Button - Logout"
 msgstr "Logout"
+
+#: Templates/user/block/knows_about.phtml:4
+msgid "User - Knows about - Subtitle on user profile page"
+msgstr ""
+
+#: Templates/users/block/container_login_or_signup.phtml:8
+#, fuzzy
+#| msgid "Question - Signup lure - Text 1"
+msgid "Users - Signup lure - Image alt"
+msgstr "See what questions your friends are asking today"
+
+#: Templates/users/block/container_login_or_signup.phtml:11
+#, fuzzy
+#| msgid "Question - Signup lure - Text 1"
+msgid "Users - Signup lure - Title"
+msgstr "See what questions your friends are asking today"
+
+#: Templates/users/block/container_login_or_signup.phtml:12
+#, fuzzy
+#| msgid "Question - Signup lure - Text 1"
+msgid "Users - Signup lure - Text"
+msgstr "See what questions your friends are asking today"
+
+#: Templates/users/block/nav.phtml:11
+#, fuzzy
+#| msgid "Questions - Filter - Popular"
+msgid "Users - Filter - Popular"
+msgstr "Popular"
 
 #~ msgid "Page"
 #~ msgstr "Page"

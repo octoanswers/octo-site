@@ -44,7 +44,7 @@
             <?php if ($this->authUser && ($this->authUser->getID() == $this->user->getID())): ?>
                 <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::getSettingsURL($this->lang) ?>">
                     <img class="btn-icon" src="https://png.icons8.com/material/20/616161/settings.png">
-                    <?= $this->l->t('nav__settings') ?>
+                    <?= _('Button - Settings') ?>
                 </a>
                 <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="#" data-toggle="modal" data-target="#modal__logout">
                     <img class="btn-icon" src="https://png.icons8.com/material/20/616161/shutdown.png">

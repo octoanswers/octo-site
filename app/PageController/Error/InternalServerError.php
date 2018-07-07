@@ -12,10 +12,10 @@ class InternalServerError_Error_PageController extends Abstract_PageController
 
         $this->template = 'error/500';
         $this->pageTitle = _('Error 500 - Page title').' - '._('OctoAnswers');
-        $this->pageDescription = $this->l->t('Error on octoanswers.com: ');
+        $this->pageDescription = _('Error 500 - Page description');
 
-        $this->errorTitle = $this->l->t('error_pg__title_500');
-        $this->errorDescription = $this->l->t('This page has been moved or deleted.', 'Error description', 'Errors');
+        $this->errorTitle = _('Error 500 - Page title');
+        $this->errorDescription = _('Error 500 - Error description');
         $this->additionalJavascript[] = 'goal/error_404';
 
         $output = $this->renderPage();

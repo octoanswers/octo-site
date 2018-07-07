@@ -5,16 +5,16 @@
             <div class="col-sm-12 col-md-8 col-lg-8 ml-auto mr-auto">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <span class="nav-link text-light pl-0"><?= $this->l->t('search__filter__title'); ?></span>
+                        <span class="nav-link text-light pl-0"><?= _('Search - Filter title'); ?></span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= $this->list == 'questions' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchQuestionsLink ?>"><?= $this->l->t('search__filter__questions'); ?></a>
+                        <a class="nav-link <?= $this->list == 'questions' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchQuestionsLink ?>"><?= _('Search - Filter - Questions'); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= $this->list == 'topics' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchTopicsLink ?>"><?= $this->l->t('search__filter__topics'); ?></a>
+                        <a class="nav-link <?= $this->list == 'topics' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchTopicsLink ?>"><?= _('Search - Filter - Topics'); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= $this->list == 'users' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchUsersLink ?>"><?= $this->l->t('search__filter__users'); ?></a>
+                        <a class="nav-link <?= $this->list == 'users' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchUsersLink ?>"><?= _('Search - Filter - Users'); ?></a>
                     </li>
                 </ul>
             </div>

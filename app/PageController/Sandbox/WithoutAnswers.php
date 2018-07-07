@@ -36,7 +36,7 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
         $this->template = 'sandbox/show';
         $this->pageTitle = $this->_getPageTitle();
         $this->pageDescription = $this->_getPageDescription();
-        $this->activeFilter = $this->l->t('Questions - Filter - Without_answers');
+        $this->activeFilter = _('Questions - Filter - Without answers');
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
             $this->nextPageURL = Sandbox_URL_Helper::getWithoutAnswersURL($this->lang, ($this->page + 1));

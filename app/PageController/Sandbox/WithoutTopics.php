@@ -56,7 +56,7 @@ class WithoutTopics_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->l->t('Questions - Without topics - Page title').' - '._('Common - Page').' '.$this->page.' - '._('OctoAnswers');
+        return _('Questions - Without topics - Page title').' - '._('Common - Page').' '.$this->page.' - '._('OctoAnswers');
     }
 
     public function _getPageDescription(): string

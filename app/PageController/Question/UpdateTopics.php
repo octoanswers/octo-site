@@ -24,7 +24,7 @@ class UpdateTopics_Question_PageController extends Abstract_PageController
 
         $this->template = 'question/update_topics';
         $this->pageTitle = $this->_getPageTitle();
-        $this->pageDescription = $this->l->t('XXpage_description');
+        $this->pageDescription = _('Update topics - Page description');
         $this->additionalJavascript[] = 'question/update_topics';
 
         $output = $this->renderPage();
@@ -35,6 +35,6 @@ class UpdateTopics_Question_PageController extends Abstract_PageController
 
     private function _getPageTitle()
     {
-        return $this->l->t('XXXquestion_rename__page_title').': '.$this->question->getTitle().' - '._('OctoAnswers');
+        return _('Update topics - Page title').': '.$this->question->getTitle().' - '._('OctoAnswers');
     }
 }

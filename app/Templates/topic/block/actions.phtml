@@ -32,7 +32,9 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"><?= $this->l->t('Want to follow?', 'Modal title @ Topic page') ?></h5>
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            <?= _('Topic - Fake follow modal - Title') ?>?
+                        </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -41,8 +43,8 @@
                         <a href="#" data-toggle="modal" data-target="#modal_login">Log in</a> or <a href="#" data-toggle="modal" data-target="#modal_signup">signup</a> to follow this topic and get notifications when new questions will be added!
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= $this->l->t('Cancel') ?></button>
-                        <a href="#" data-toggle="modal" data-target="#modal_signup" type="button" class="btn btn-primary"><?= $this->l->t('Signup') ?></a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= _('Button - Cancel') ?></button>
+                        <a href="#" data-toggle="modal" data-target="#modal_signup" type="button" class="btn btn-primary"><?= _('Button - Signup') ?></a>
                     </div>
                 </div>
             </div>

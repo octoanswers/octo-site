@@ -41,7 +41,7 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Questions - Recently updated - Title').' &middot; '.$this->l->t('questions', 'page_num').' '.$this->page.' &middot; '._('OctoAnswers');
+        return _('Questions - Recently updated - Title').' &middot; '._('Common - Page').' '.$this->page.' &middot; '._('OctoAnswers');
     }
 
     public function _getPageDescription(): string

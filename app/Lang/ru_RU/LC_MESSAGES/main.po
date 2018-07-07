@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-07 10:06+0500\n"
-"PO-Revision-Date: 2018-07-07 10:07+0500\n"
+"POT-Creation-Date: 2018-07-07 10:52+0500\n"
+"PO-Revision-Date: 2018-07-07 11:01+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -44,13 +44,42 @@ msgstr "Редактирование ответа"
 msgid "OctoAnswers"
 msgstr "OctoAnswers"
 
+#: PageController/Answer/Edit.php:37
+#, fuzzy
+#| msgid "User - Page description"
+msgid "Answer edit - Page description"
+msgstr "Вики-ответы на OctoAnswers"
+
 #: PageController/Answer/History.php:33
 msgid "Answer history - Page title"
 msgstr "История вопроса"
 
+#: PageController/Answer/History.php:34
+#, fuzzy
+#| msgid "Answer history - Page title"
+msgid "Answer history - Page description"
+msgstr "История вопроса"
+
 #: PageController/Error/InternalServerError.php:14
+#: PageController/Error/InternalServerError.php:17
 msgid "Error 500 - Page title"
 msgstr "Ошибка 500"
+
+#: PageController/Error/InternalServerError.php:15
+#, fuzzy
+#| msgid "Flow - Page description"
+msgid "Error 500 - Page description"
+msgstr "Поток вопросов и ответов на ОктоАнсверс"
+
+#: PageController/Error/InternalServerError.php:18
+#, fuzzy
+#| msgid "Flow - Page description"
+msgid "Error 500 - Error description"
+msgstr "Поток вопросов и ответов на ОктоАнсверс"
+
+#: PageController/Error/PageNotFound.php:16
+msgid "Error 404 - Page title"
+msgstr "Страница не найдена"
 
 #: PageController/Error/QuestionNotFound.php:22
 msgid "Question not found - Page title"
@@ -94,11 +123,25 @@ msgstr "Вики-ответы на Ваши вопросы на octoanswers.com"
 msgid "Question - Page description"
 msgstr "Вики-ответ на вопрос: %question"
 
+#: PageController/Question/UpdateTopics.php:27
+#, fuzzy
+#| msgid "Topic - Page description"
+msgid "Update topics - Page description"
+msgstr "Вопросы и ответы на тему %topic"
+
+#: PageController/Question/UpdateTopics.php:38
+#, fuzzy
+#| msgid "Topic - Page title"
+msgid "Update topics - Page title"
+msgstr "Вопросы и ответы на тему %topic"
+
 #: PageController/Questions/Newest.php:48
 msgid "Questions - Newest - Page title"
 msgstr "Новые вопросы"
 
-#: PageController/Questions/Newest.php:48 PageController/Sandbox/All.php:50
+#: PageController/Questions/Newest.php:48
+#: PageController/Questions/RecentlyUpdated.php:44
+#: PageController/Sandbox/All.php:50
 #: PageController/Sandbox/WithoutAnswers.php:59
 #: PageController/Sandbox/WithoutTopics.php:59
 #: PageController/Topics/Newest.php:39 PageController/Users/Newest.php:47
@@ -109,6 +152,18 @@ msgstr "Страница"
 msgid "Questions - Recently updated - Title"
 msgstr "Недавно обновленные вопросы"
 
+#: PageController/Root/Show.php:28
+#, fuzzy
+#| msgid "Flow - Page description"
+msgid "Root - Page description"
+msgstr "Поток вопросов и ответов на ОктоАнсверс"
+
+#: PageController/Sandbox/All.php:50
+#, fuzzy
+#| msgid "Main - Page title"
+msgid "Sandbox - Page title"
+msgstr "Задайте вопрос и получите ответ"
+
 #: PageController/Sandbox/WithoutAnswers.php:19
 #: PageController/Sandbox/WithoutTopics.php:19
 msgid "Question"
@@ -117,13 +172,26 @@ msgstr[0] "Вопрос"
 msgstr[1] "Вопроса"
 msgstr[2] "Вопросов"
 
+#: PageController/Sandbox/WithoutAnswers.php:39
+#: PageController/Sandbox/WithoutTopics.php:39
+msgid "Questions - Filter - Without answers"
+msgstr "Без ответа"
+
 #: PageController/Sandbox/WithoutAnswers.php:59
 msgid "Questions - Without answers - Page title"
 msgstr "Вопросы без ответов"
 
-#: PageController/Sandbox/WithoutTopics.php:39
-msgid "Questions - Filter - Without answers"
-msgstr "Без ответа"
+#: PageController/Sandbox/WithoutTopics.php:59
+#, fuzzy
+#| msgid "Questions - Without answers - Page title"
+msgid "Questions - Without topics - Page title"
+msgstr "Вопросы без ответов"
+
+#: PageController/Search/Questions.php:30
+#, fuzzy
+#| msgid "Users - Page title"
+msgid "Search - Page title"
+msgstr "Новые пользователи со всего мира"
 
 #: PageController/Search/Questions.php:53
 msgid "Questions - Search input placeholder"
@@ -140,6 +208,12 @@ msgstr "Поиск вопроса"
 #| msgid "Questions - Search input placeholder"
 msgid "Users - Search input placeholder"
 msgstr "Поиск вопроса"
+
+#: PageController/Topic/Show.php:73
+#, fuzzy
+#| msgid "Topic - Page title"
+msgid "Topic - Next page button"
+msgstr "Вопросы и ответы на тему %topic"
 
 #: PageController/Topic/Show.php:103
 msgid "Topic - Page title"
@@ -161,7 +235,7 @@ msgstr "Вики-ответы на OctoAnswers"
 msgid "User - Page description"
 msgstr "Вики-ответы на OctoAnswers"
 
-#: PageController/Users/Newest.php:40
+#: PageController/Users/Newest.php:40 Templates/users/block/nav.phtml:6
 msgid "Users - Filter - Newest"
 msgstr "Новые"
 
@@ -194,23 +268,23 @@ msgstr ""
 msgid "Block - About OctoAnswers - Signup button"
 msgstr "Зарегистрироваться"
 
-#: Templates/_common/footer.phtml:11
+#: Templates/_common/footer.phtml:11 Templates/_common/sidebar/footer.phtml:5
 msgid "Footer - About"
 msgstr "О сайте"
 
-#: Templates/_common/footer.phtml:16
+#: Templates/_common/footer.phtml:16 Templates/_common/sidebar/footer.phtml:10
 msgid "Footer - Support"
-msgstr "Менеджер поддержки"
+msgstr "Поддержка"
 
-#: Templates/_common/footer.phtml:21
+#: Templates/_common/footer.phtml:21 Templates/_common/sidebar/footer.phtml:15
 msgid "Footer - Users"
 msgstr "Пользователи"
 
-#: Templates/_common/footer.phtml:26
+#: Templates/_common/footer.phtml:26 Templates/_common/sidebar/footer.phtml:20
 msgid "Footer - Flow"
 msgstr "Поток"
 
-#: Templates/_common/footer.phtml:34
+#: Templates/_common/footer.phtml:34 Templates/_common/sidebar/footer.phtml:30
 msgid "Footer - Icon pack by icons8"
 msgstr "Иконки с Icons8"
 
@@ -327,6 +401,10 @@ msgstr "Вход"
 #: Templates/users/block/container_login_or_signup.phtml:19
 msgid "Navbar - Signup"
 msgstr "Регистрация"
+
+#: Templates/_common/sidebar/footer.phtml:25
+msgid "Footer - Rules"
+msgstr "Правила"
 
 #: Templates/answer/edit/header.phtml:3
 msgid "Edit answer - Subtitle"
@@ -475,22 +553,22 @@ msgstr ""
 #: Templates/question/block/actions.phtml:12
 #: Templates/question/block/header/info.phtml:16
 msgid "Common - Button - Edit answer"
-msgstr ""
+msgstr "Править ответ"
 
 #: Templates/question/block/actions.phtml:22
 #: Templates/question/block/actions.phtml:26
 #: Templates/question/block/actions.phtml:30
 msgid "Common - Button - Follow"
-msgstr ""
+msgstr "Подписаться"
 
 #: Templates/question/block/actions.phtml:23
 #: Templates/question/block/actions.phtml:26
 msgid "Common - Button - Followed"
-msgstr ""
+msgstr "Подписан"
 
 #: Templates/question/block/actions.phtml:24
 msgid "Common - Button - Unfollow"
-msgstr ""
+msgstr "Отписаться"
 
 #: Templates/question/block/actions.phtml:37
 msgid "Question - Actions - History"
@@ -595,6 +673,12 @@ msgstr ""
 "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить "
 "этот вопрос"
 
+#: Templates/question/modal/edit_answer_lure.phtml:13
+#: Templates/question/modal/first_answer__signup.phtml:13
+#: Templates/question/modal/follow_question_lure.phtml:13
+msgid "Button - Signup"
+msgstr "Регистрация"
+
 #: Templates/question/modal/edit_answer_lure.phtml:16
 #: Templates/question/modal/feedback_thanks.phtml:13
 #: Templates/question/modal/first_answer__signup.phtml:16
@@ -641,6 +725,12 @@ msgstr "Загрузка картинки вопроса"
 #: Templates/question/modal/upload_image.phtml:21
 msgid "Modal - Upload image - Submit button"
 msgstr "Загрузить картинку"
+
+#: Templates/question/show/signup_lure.phtml:5
+#, fuzzy
+#| msgid "Question - Signup lure - Text 1"
+msgid "Question - Signup lure - Title"
+msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
 
 #: Templates/question/show/signup_lure.phtml:7
 msgid "Question - Signup lure - Text 1"
@@ -708,13 +798,47 @@ msgstr "По запросу «%query%» не удалось найти ни од
 msgid "Search - Topics not found - Button"
 msgstr "Задать вопрос"
 
+#: Templates/search/block/div__no_users.phtml:5
+#, fuzzy
+#| msgid "Search - Topics not found - Title"
+msgid "Search - Users not found alert - Title"
+msgstr "Темы не найды"
+
 #: Templates/search/block/div__no_users.phtml:7
-msgid "Search alert - Users_not_found__text"
-msgstr ""
+#, fuzzy
+#| msgid "Search - Topics not found - Text"
+msgid "Search - Users not found alert - Text"
+msgstr "По запросу «%query%» не удалось найти ни одной темы"
 
 #: Templates/search/block/div__no_users.phtml:10
-msgid "Search alert  - Users_not_found__button"
-msgstr ""
+#, fuzzy
+#| msgid "Search - Alert - Questions not found - Button"
+msgid "Search - Users not found alert - Button"
+msgstr "Задать вопрос"
+
+#: Templates/search/questions.phtml:8
+#, fuzzy
+#| msgid "Users - Page title"
+msgid "Search - Filter title"
+msgstr "Новые пользователи со всего мира"
+
+#: Templates/search/questions.phtml:11
+#, fuzzy
+#| msgid "Search - Alert - Questions not found - Text"
+msgid "Search - Filter - Questions"
+msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
+
+#: Templates/search/questions.phtml:14
+#, fuzzy
+#| msgid "Users - Filter - Newest"
+msgid "Search - Filter - Topics"
+msgstr "Новые"
+
+#: Templates/search/questions.phtml:17
+#, fuzzy
+#| msgid "Users - Filter - Newest"
+msgid "Search - Filter - Users"
+msgstr "Новые"
 
 #: Templates/settings/show_full.phtml:14
 msgid "Settings - Title"
@@ -795,9 +919,63 @@ msgstr "Подписан"
 msgid "Button - Unfollow"
 msgstr "Отписаться"
 
+#: Templates/topics/block/nav.phtml:6
+msgid "Topics - Filter - Newest"
+msgstr "Новые"
+
+#: Templates/topics/block/nav.phtml:11
+msgid "Topics - Filter - Popular"
+msgstr "Популярные"
+
+#: Templates/user/block/div__no_answers.phtml:4
+#, fuzzy
+#| msgid "Question - Subscribe alert - Title"
+msgid "User - No answers alert - Title"
+msgstr "Ответ на email"
+
+#: Templates/user/block/div__no_answers.phtml:5
+#, fuzzy
+#| msgid "Question - First answer modal - Text"
+msgid "User - No answers alert - Text"
+msgstr ""
+"Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
+"вопрос"
+
+#: Templates/user/block/header.phtml:47
+msgid "Button - Settings"
+msgstr "Настройки"
+
 #: Templates/user/block/header.phtml:51
 msgid "Button - Logout"
 msgstr "Выйти"
+
+#: Templates/user/block/knows_about.phtml:4
+msgid "User - Knows about - Subtitle on user profile page"
+msgstr ""
+
+#: Templates/users/block/container_login_or_signup.phtml:8
+#, fuzzy
+#| msgid "Question - Signup lure - Text 1"
+msgid "Users - Signup lure - Image alt"
+msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
+
+#: Templates/users/block/container_login_or_signup.phtml:11
+#, fuzzy
+#| msgid "Question - Signup lure - Text 1"
+msgid "Users - Signup lure - Title"
+msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
+
+#: Templates/users/block/container_login_or_signup.phtml:12
+#, fuzzy
+#| msgid "Question - Signup lure - Text 1"
+msgid "Users - Signup lure - Text"
+msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
+
+#: Templates/users/block/nav.phtml:11
+#, fuzzy
+#| msgid "Topics - Filter - Popular"
+msgid "Users - Filter - Popular"
+msgstr "Популярные"
 
 #~ msgid "Page"
 #~ msgstr "Страница"
