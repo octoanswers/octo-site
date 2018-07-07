@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-07 10:54+0500\n"
-"PO-Revision-Date: 2018-07-07 15:09+0500\n"
+"POT-Creation-Date: 2018-07-07 16:26+0500\n"
+"PO-Revision-Date: 2018-07-07 16:26+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -14,239 +14,229 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: PageController/Answer/Edit.php:36
+#: PageController/Answer/Edit.php:34
 msgid "Answer edit - Page title"
 msgstr "Edit answer"
 
-#: PageController/Answer/Edit.php:36 PageController/Answer/History.php:33
-#: PageController/Error/InternalServerError.php:14
-#: PageController/Error/PageNotFound.php:16
-#: PageController/Error/QuestionNotFound.php:22 PageController/Feed/Show.php:45
-#: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
-#: PageController/Main/Show.php:40 PageController/Main/Show.php:46
-#: PageController/Main/Show.php:65 PageController/Question/Show.php:51
-#: PageController/Question/Show.php:84
-#: PageController/Question/UpdateTopics.php:38
-#: PageController/Questions/Newest.php:48
-#: PageController/Questions/Newest.php:53
-#: PageController/Questions/RecentlyUpdated.php:44
-#: PageController/Questions/RecentlyUpdated.php:49
-#: PageController/Root/Show.php:27 PageController/Sandbox/All.php:50
-#: PageController/Sandbox/All.php:55
-#: PageController/Sandbox/WithoutAnswers.php:59
-#: PageController/Sandbox/WithoutAnswers.php:64
-#: PageController/Sandbox/WithoutTopics.php:59
-#: PageController/Sandbox/WithoutTopics.php:64
-#: PageController/Search/Questions.php:30 PageController/Settings/Show.php:19
-#: PageController/Topic/Show.php:103 PageController/Topics/Newest.php:39
-#: PageController/Users/Newest.php:47 Templates/_common/navbar.phtml:8
+#: PageController/Answer/Edit.php:34 PageController/Answer/History.php:31
+#: PageController/Error/InternalServerError.php:13
+#: PageController/Error/PageNotFound.php:14
+#: PageController/Error/QuestionNotFound.php:21 PageController/Feed/Show.php:44
+#: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
+#: PageController/Main/Show.php:39 PageController/Main/Show.php:45
+#: PageController/Main/Show.php:64 PageController/Question/Show.php:47
+#: PageController/Question/Show.php:80
+#: PageController/Question/UpdateTopics.php:36
+#: PageController/Questions/Newest.php:46
+#: PageController/Questions/Newest.php:51
+#: PageController/Questions/RecentlyUpdated.php:43
+#: PageController/Questions/RecentlyUpdated.php:48
+#: PageController/Root/Show.php:25 PageController/Sandbox/All.php:49
+#: PageController/Sandbox/All.php:54
+#: PageController/Sandbox/WithoutAnswers.php:58
+#: PageController/Sandbox/WithoutAnswers.php:63
+#: PageController/Sandbox/WithoutTopics.php:58
+#: PageController/Sandbox/WithoutTopics.php:63
+#: PageController/Search/Questions.php:29 PageController/Settings/Show.php:18
+#: PageController/Topic/Show.php:99 PageController/Topics/Newest.php:37
+#: PageController/Users/Newest.php:45 Templates/_common/navbar.phtml:8
 msgid "OctoAnswers"
 msgstr "OctoAnswers"
 
-#: PageController/Answer/Edit.php:37
+#: PageController/Answer/Edit.php:35
 #, fuzzy
 #| msgid "User - Page description"
 msgid "Answer edit - Page description"
 msgstr "Wiki-answers on OctoAnswers"
 
-#: PageController/Answer/History.php:33
+#: PageController/Answer/History.php:31
 msgid "Answer history - Page title"
 msgstr "History of question"
 
-#: PageController/Answer/History.php:34
+#: PageController/Answer/History.php:32
 #, fuzzy
 #| msgid "Answer history - Page title"
 msgid "Answer history - Page description"
 msgstr "History of question"
 
-#: PageController/Error/InternalServerError.php:14
-#: PageController/Error/InternalServerError.php:17
+#: PageController/Error/InternalServerError.php:13
+#: PageController/Error/InternalServerError.php:16
 msgid "Error 500 - Page title"
 msgstr "Error 500"
 
-#: PageController/Error/InternalServerError.php:15
+#: PageController/Error/InternalServerError.php:14
 #, fuzzy
 #| msgid "Flow - Page description"
 msgid "Error 500 - Page description"
 msgstr "Questions and answers flow on OctoAnswers"
 
-#: PageController/Error/InternalServerError.php:18
+#: PageController/Error/InternalServerError.php:17
 #, fuzzy
 #| msgid "Flow - Page description"
 msgid "Error 500 - Error description"
 msgstr "Questions and answers flow on OctoAnswers"
 
-#: PageController/Error/PageNotFound.php:16
+#: PageController/Error/PageNotFound.php:14
 #, fuzzy
 #| msgid "Error 500 - Page title"
 msgid "Error 404 - Page title"
 msgstr "Error 500"
 
-#: PageController/Error/PageNotFound.php:17
+#: PageController/Error/PageNotFound.php:15
 #, fuzzy
 #| msgid "Flow - Page description"
 msgid "Error 404 - Page description"
 msgstr "Questions and answers flow on OctoAnswers"
 
-#: PageController/Error/QuestionNotFound.php:22
+#: PageController/Error/QuestionNotFound.php:21
 msgid "Question not found - Page title"
 msgstr "Question not found"
 
-#: PageController/Error/QuestionNotFound.php:23
-#, fuzzy
-#| msgid "Question - Page description"
+#: PageController/Error/QuestionNotFound.php:22
 msgid "Question not found - Page description"
-msgstr "Wiki-answer on question %question"
+msgstr "Question not found"
 
-#: PageController/Feed/Show.php:45
+#: PageController/Feed/Show.php:44
 msgid "Feed - Page title"
 msgstr "Feed"
 
-#: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
+#: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
 msgid "Flow - Page title"
 msgstr "Questions and answers flow"
 
-#: PageController/Flow/Show.php:34 PageController/Flow/Show.php:49
+#: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
 msgid "Flow - Page description"
 msgstr "Questions and answers flow on OctoAnswers"
 
-#: PageController/Main/Show.php:40 PageController/Main/Show.php:46
-#: PageController/Main/Show.php:65
+#: PageController/Main/Show.php:39 PageController/Main/Show.php:45
+#: PageController/Main/Show.php:64
 msgid "Main - Page title"
 msgstr "Ask a question and get one complete answer"
 
-#: PageController/Main/Show.php:41 PageController/Main/Show.php:47
-#: PageController/Main/Show.php:66
+#: PageController/Main/Show.php:40 PageController/Main/Show.php:46
+#: PageController/Main/Show.php:65
 msgid "Main - Page description"
 msgstr ""
 "OctoAnswers is like Wikipedia, only for questions and answers. You ask a "
 "question and get one complete, comprehensive and competent answer from the "
 "community"
 
-#: PageController/Question/Show.php:99
+#: PageController/Question/Show.php:95
 msgid "Question - Share description"
 msgstr "Wiki-answers to your questions on OctoAnswers"
 
-#: PageController/Question/Show.php:192
+#: PageController/Question/Show.php:188
 msgid "Question - Page description"
 msgstr "Wiki-answer on question %question"
 
-#: PageController/Question/UpdateTopics.php:27
+#: PageController/Question/UpdateTopics.php:25
 #, fuzzy
 #| msgid "Topic - Page description"
 msgid "Update topics - Page description"
 msgstr "Questions and answers on the topic %s"
 
-#: PageController/Question/UpdateTopics.php:38
+#: PageController/Question/UpdateTopics.php:36
 #, fuzzy
 #| msgid "Topic - Page title"
 msgid "Update topics - Page title"
 msgstr "Questions and answers on the topic %s"
 
-#: PageController/Questions/Newest.php:48
+#: PageController/Questions/Newest.php:46
 msgid "Questions - Newest - Page title"
 msgstr "Newest questions"
 
-#: PageController/Questions/Newest.php:48
-#: PageController/Questions/RecentlyUpdated.php:44
-#: PageController/Sandbox/All.php:50
-#: PageController/Sandbox/WithoutAnswers.php:59
-#: PageController/Sandbox/WithoutTopics.php:59
-#: PageController/Topics/Newest.php:39 PageController/Users/Newest.php:47
+#: PageController/Questions/Newest.php:46
+#: PageController/Questions/RecentlyUpdated.php:43
+#: PageController/Sandbox/All.php:49
+#: PageController/Sandbox/WithoutAnswers.php:58
+#: PageController/Sandbox/WithoutTopics.php:58
+#: PageController/Topics/Newest.php:37 PageController/Users/Newest.php:45
 msgid "Common - Page"
 msgstr "Page"
 
-#: PageController/Questions/RecentlyUpdated.php:44
+#: PageController/Questions/RecentlyUpdated.php:43
 msgid "Questions - Recently updated - Title"
 msgstr "Recently updated questions"
 
-#: PageController/Root/Show.php:28
-#, fuzzy
-#| msgid "Flow - Page description"
+#: PageController/Root/Show.php:26
 msgid "Root - Page description"
-msgstr "Questions and answers flow on OctoAnswers"
-
-#: PageController/Sandbox/All.php:50
-#, fuzzy
-#| msgid "Main - Page title"
-msgid "Sandbox - Page title"
 msgstr "Ask a question and get one complete answer"
 
-#: PageController/Sandbox/WithoutAnswers.php:19
-#: PageController/Sandbox/WithoutTopics.php:19
+#: PageController/Sandbox/All.php:49
+msgid "Sandbox - Page title"
+msgstr "Sandbox"
+
+#: PageController/Sandbox/WithoutAnswers.php:18
+#: PageController/Sandbox/WithoutTopics.php:18
 msgid "Question"
 msgid_plural "Questions"
 msgstr[0] "Question"
 msgstr[1] "Questions"
 
-#: PageController/Sandbox/WithoutAnswers.php:39
-#: PageController/Sandbox/WithoutTopics.php:39
+#: PageController/Sandbox/WithoutAnswers.php:38
+#: PageController/Sandbox/WithoutTopics.php:38
 msgid "Questions - Filter - Without answers"
 msgstr "Without answers"
 
-#: PageController/Sandbox/WithoutAnswers.php:59
+#: PageController/Sandbox/WithoutAnswers.php:58
 msgid "Questions - Without answers - Page title"
 msgstr "Questions without answers"
 
-#: PageController/Sandbox/WithoutTopics.php:59
-#, fuzzy
-#| msgid "Questions - Without answers - Page title"
+#: PageController/Sandbox/WithoutTopics.php:58
 msgid "Questions - Without topics - Page title"
-msgstr "Questions without answers"
+msgstr "Questions without topics"
 
-#: PageController/Search/Questions.php:30
+#: PageController/Search/Questions.php:29
 #, fuzzy
 #| msgid "Users - Page title"
 msgid "Search - Page title"
 msgstr "New users from around the world"
 
-#: PageController/Search/Questions.php:53
+#: PageController/Search/Questions.php:52
 msgid "Questions - Search input placeholder"
 msgstr "Search questions"
 
-#: PageController/Search/Questions.php:56
-#, fuzzy
-#| msgid "Questions - Search input placeholder"
+#: PageController/Search/Questions.php:55
 msgid "Topics - Search input placeholder"
-msgstr "Search questions"
+msgstr "Search topics"
 
-#: PageController/Search/Questions.php:59
+#: PageController/Search/Questions.php:58
 #, fuzzy
 #| msgid "Questions - Search input placeholder"
 msgid "Users - Search input placeholder"
 msgstr "Search questions"
 
-#: PageController/Topic/Show.php:73
+#: PageController/Topic/Show.php:69
 #, fuzzy
 #| msgid "Topic - Page title"
 msgid "Topic - Next page button"
 msgstr "Questions and answers on the topic %s"
 
-#: PageController/Topic/Show.php:103
+#: PageController/Topic/Show.php:99
 msgid "Topic - Page title"
 msgstr "Questions and answers on the topic %s"
 
-#: PageController/Topic/Show.php:133
+#: PageController/Topic/Show.php:129
 msgid "Topic - Page description"
 msgstr "Questions and answers on the topic %s"
 
-#: PageController/Topics/Newest.php:39
+#: PageController/Topics/Newest.php:37
 msgid "New topics"
-msgstr ""
+msgstr "New topics"
 
-#: PageController/User/Show.php:34
+#: PageController/User/Show.php:31
 msgid "User - Page title (postfix)"
 msgstr "Wiki-answers on OctoAnswers"
 
-#: PageController/User/Show.php:35 PageController/User/Show.php:71
+#: PageController/User/Show.php:32 PageController/User/Show.php:68
 msgid "User - Page description"
 msgstr "Wiki-answers on OctoAnswers"
 
-#: PageController/Users/Newest.php:40 Templates/users/block/nav.phtml:6
+#: PageController/Users/Newest.php:38 Templates/users/block/nav.phtml:6
 msgid "Users - Filter - Newest"
 msgstr "Newest"
 
-#: PageController/Users/Newest.php:47
+#: PageController/Users/Newest.php:45
 msgid "Users - Page title"
 msgstr "New users from around the world"
 
@@ -331,7 +321,7 @@ msgstr "Ask a question"
 
 #: Templates/_common/modal/login.phtml:8
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: Templates/_common/modal/login.phtml:17
 msgid "Email"
@@ -339,11 +329,11 @@ msgstr ""
 
 #: Templates/_common/modal/login.phtml:21
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: Templates/_common/modal/login.phtml:27
 msgid "Log in"
-msgstr ""
+msgstr "Log in"
 
 #: Templates/_common/modal/signup.phtml:8
 msgid "Signup modal - Title"
@@ -410,10 +400,8 @@ msgid "Navbar - Signup"
 msgstr "Signup"
 
 #: Templates/_common/sidebar/footer.phtml:25
-#, fuzzy
-#| msgid "Footer - Users"
 msgid "Footer - Rules"
-msgstr "Users"
+msgstr "Rules"
 
 #: Templates/answer/edit/header.phtml:3
 msgid "Edit answer - Subtitle"
@@ -512,19 +500,19 @@ msgstr "Answer a question"
 msgid "Flow - Title"
 msgstr "Last activity"
 
-#: Templates/main/_block/how_it_works.phtml:7
+#: Templates/main/_block/how_it_works.phtml:8
 msgid "Main - How it works - Title"
 msgstr "How it works"
 
-#: Templates/main/_block/how_it_works.phtml:13
+#: Templates/main/_block/how_it_works.phtml:16
 msgid "Main - How it works - First title"
 msgstr "You ask a question about any topic of interest to you"
 
-#: Templates/main/_block/how_it_works.phtml:18
+#: Templates/main/_block/how_it_works.phtml:22
 msgid "Main - How it works - Second title"
 msgstr "We find a specialist who can give a competent answer"
 
-#: Templates/main/_block/how_it_works.phtml:23
+#: Templates/main/_block/how_it_works.phtml:28
 msgid "Main - How it works - Third title"
 msgstr "You receive an answer to the email"
 
@@ -532,21 +520,23 @@ msgstr "You receive an answer to the email"
 msgid "Main - Jumbotron - Title"
 msgstr "Ask a question and get one complete answer"
 
-#: Templates/main/_block/jumbotron.phtml:12
+#: Templates/main/_block/jumbotron.phtml:11
 msgid "Main - Jumbotron - Subtitle"
 msgstr "What do you mean complete"
 
-#: Templates/main/_block/jumbotron.phtml:20
+#: Templates/main/_block/jumbotron.phtml:19
 msgid "Main - Jumbotron - Input placeholder"
 msgstr "What is your question"
 
-#: Templates/main/_block/jumbotron.phtml:23
+#: Templates/main/_block/jumbotron.phtml:22
 msgid "Main - Jumbotron - Ask button"
 msgstr "Ask a question"
 
 #: Templates/main/_block/share.phtml:3
 msgid "Main - Share title"
 msgstr ""
+"You can help the OctoAnswers project by simply sharing your link with your "
+"friends"
 
 #: Templates/question/block/actions.phtml:8
 #: Templates/question/block/actions.phtml:12
@@ -575,7 +565,7 @@ msgstr "History"
 
 #: Templates/question/block/actions.phtml:43
 msgid "More"
-msgstr ""
+msgstr "More"
 
 #: Templates/question/block/actions.phtml:51
 msgid "Question - Actions - Upload image"
@@ -673,6 +663,7 @@ msgstr "Register or log in and you can edit or supplement this question"
 #: Templates/question/modal/edit_answer_lure.phtml:13
 #: Templates/question/modal/first_answer__signup.phtml:13
 #: Templates/question/modal/follow_question_lure.phtml:13
+#: Templates/topic/block/actions.phtml:47
 #, fuzzy
 #| msgid "Button - Logout"
 msgid "Button - Signup"
@@ -724,10 +715,8 @@ msgid "Modal - Upload image - Submit button"
 msgstr "Upload image"
 
 #: Templates/question/show/signup_lure.phtml:5
-#, fuzzy
-#| msgid "Question - Signup lure - Text 1"
 msgid "Question - Signup lure - Title"
-msgstr "See what questions your friends are asking today"
+msgstr "Register on OctoAnswers and you will be able to"
 
 #: Templates/question/show/signup_lure.phtml:7
 msgid "Question - Signup lure - Text 1"
@@ -759,7 +748,7 @@ msgstr "More questions"
 
 #: Templates/sandbox/show/nav.phtml:5
 msgid "Questions without answer"
-msgstr ""
+msgstr "Questions without answer"
 
 #: Templates/sandbox/show/nav.phtml:10
 msgid "Without topics"
@@ -920,38 +909,38 @@ msgstr "Followed"
 msgid "Button - Unfollow"
 msgstr "Unfollow"
 
-#: Templates/topic/block/actions.phtml:35
+#: Templates/topic/block/actions.phtml:36
 msgid "Topic - Fake follow modal - Title"
 msgstr "Want to follow"
 
-#: Templates/topics/block/nav.phtml:6
+#: Templates/topic/block/actions.phtml:46
 #, fuzzy
-#| msgid "Users - Filter - Newest"
+#| msgid "Button - Close"
+msgid "Button - Cancel"
+msgstr "Close"
+
+#: Templates/topics/block/nav.phtml:6
 msgid "Topics - Filter - Newest"
 msgstr "Newest"
 
 #: Templates/topics/block/nav.phtml:11
-#, fuzzy
-#| msgid "Questions - Filter - Popular"
 msgid "Topics - Filter - Popular"
 msgstr "Popular"
 
 #: Templates/user/block/div__no_answers.phtml:4
-msgid "User - No answers alert - Title"
+msgid "User - No answers alert @ No answers"
 msgstr "No answers"
 
 #: Templates/user/block/div__no_answers.phtml:5
-msgid "User - No answers alert - Text"
-msgstr "The user still has not answered for any question"
+msgid "User - No answers alert @ User has not written any answers yet"
+msgstr "User has not written any answers yet"
 
 #: Templates/user/block/header.phtml:47
-#, fuzzy
-#| msgid "Button - Close"
-msgid "Button - Settings"
-msgstr "Close"
+msgid "User - Actions button @ Settings"
+msgstr "Settings"
 
 #: Templates/user/block/header.phtml:51
-msgid "Button - Logout"
+msgid "User - Actions button @ Logout"
 msgstr "Logout"
 
 #: Templates/user/block/knows_about.phtml:4
@@ -977,10 +966,16 @@ msgid "Users - Signup lure - Text"
 msgstr "See what questions your friends are asking today"
 
 #: Templates/users/block/nav.phtml:11
-#, fuzzy
-#| msgid "Questions - Filter - Popular"
 msgid "Users - Filter - Popular"
 msgstr "Popular"
+
+#, fuzzy
+#~| msgid "Button - Close"
+#~ msgid "Button - Settings"
+#~ msgstr "Close"
+
+#~ msgid "Button - Logout"
+#~ msgstr "Logout"
 
 #~ msgid "Page"
 #~ msgstr "Page"
