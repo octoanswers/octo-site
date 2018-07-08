@@ -156,7 +156,8 @@ a.badge-dark:hover {
   color: #FFFFFF !important; }
 
 body {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  font-family: 'Roboto',-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; }
 
 .border-top {
   border-top: 1px solid #E0E0E0 !important; }
@@ -532,8 +533,13 @@ label {
   color: #757575; }
 
 h1, .h1 {
-  font-size: 2rem;
-  font-weight: 700; }
+  font-size: 1.5rem; }
+  @media (min-width: 576px) {
+    h1, .h1 {
+      font-size: 1.75rem; } }
+  @media (min-width: 768px) {
+    h1, .h1 {
+      font-size: 2.25rem; } }
 
 h2, .h2 {
   font-size: 1.5rem; }

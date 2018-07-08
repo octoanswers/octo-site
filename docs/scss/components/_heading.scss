@@ -1,7 +1,14 @@
 
 h1, .h1 {
-    font-size: $font-size-h1;
-    font-weight: 700;
+    font-size: $font-size-h1 - 0.75rem;
+
+    @media (min-width: $breakpoint_sm) {
+        font-size: $font-size-h1 - 0.5rem;
+    }
+
+    @media (min-width: $breakpoint_md) {
+        font-size: $font-size-h1;
+    }
 }
 
 h2, .h2 {
