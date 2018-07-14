@@ -1,14 +1,9 @@
 
 <!-- header info -->
-<div class="color-gray-500 small mt-4">
-
-    <?php if ($this->answer->getText()): ?>
-        <?= $this->question->getHumanizedMinutesToRead() ?>
-        <span class="color-gray-900 font-weight-800 mx-1">&middot;</span>
-    <?php endif; ?>
+<div class="color-gray-500 small my-4">
 
     <?php if (count($this->contributors)): ?>
-        <a href="#contributors_full_list" class="color-gray-500 no-underline-hover">
+        <a href="#contributors_full_list" class="color-gray-500">
             <?= count($this->contributors).' '.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
         </a>
     <?php else: ?>
@@ -18,11 +13,16 @@
     <?php endif; ?>
 
     <!-- time to read -->
-    <span class="d-none d-md-inline color-gray-900 font-weight-800 mx-1">&middot;</span>
-    <span class="d-none d-md-inline">
-        <?= _('Answer updated').' '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->answer->getUpdatedAt()) ?>
-    </span>
+    <span class="color-gray-900 font-weight-800 mx-1">&middot;</span>
+    <?= _('Answer updated').' '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->answer->getUpdatedAt()) ?>
     <!-- / time to read -->
+
+    <?php if ($this->answer->getText()): ?>
+        <span class="d-none d-md-inline color-gray-900 font-weight-800 mx-1">&middot;</span>
+        <span class="d-none d-md-inline">
+            <?= $this->question->getHumanizedMinutesToRead() ?>
+        </span>
+    <?php endif; ?>
 
 </div>
 <!-- / header info -->

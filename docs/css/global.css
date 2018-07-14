@@ -208,13 +208,11 @@ a.badge-dark:hover {
   margin-right: .125rem; }
 
 .btn-primary {
-  color: #22618C;
-  background-color: #DAECF8;
-  border-color: #A2D0EE; }
+  background-color: #3498db;
+  border-color: #3498db; }
   .btn-primary:hover {
-    color: #22618C;
-    background-color: #C7E2F5;
-    border-color: #A2D0EE; }
+    background-color: #2B7DB4;
+    border-color: #2B7DB4; }
 
 .btn-secondary {
   color: #424242;
@@ -1203,9 +1201,6 @@ pre {
 
 .text-secondary {
   color: #757575 !important; }
-
-.container {
-  max-width: 991px; }
 
 .lead {
   font-size: 1.5rem;

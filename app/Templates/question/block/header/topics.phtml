@@ -1,42 +1,45 @@
 
 <!-- header_topics -->
-<?php if (count($this->question->getTopics())): ?>
+<div class="mt-4 mt-md-5">
+    <?php if (count($this->question->getTopics())): ?>
 
-    <?php foreach ($this->question->getFirstTwoTopics() as $topic): ?>
-        <a class="badge badge-sm badge-secondary mb-2 mr-2" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
-            <?= $topic ?>
-        </a>
-    <?php endforeach; ?>
+        <?php foreach ($this->question->getFirstTwoTopics() as $topic): ?>
+            <a class="badge badge-sm badge-secondary mb-2 mr-2" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
+                <?= $topic ?>
+            </a>
+        <?php endforeach; ?>
 
-    <?php if (count($this->question->getTopics()) > count($this->question->getFirstTwoTopics())): ?>
-        <a class="badge badge-sm badge-secondary mb-2 mr-2" data-scroll href="#question_topics_list">
-            +<?= count($this->question->getTopics()) - count($this->question->getFirstTwoTopics()) ?>
-        </a>
-    <?php endif; ?>
+        <?php if (count($this->question->getTopics()) > count($this->question->getFirstTwoTopics())): ?>
+            <a class="badge badge-sm badge-secondary mb-2 mr-2" data-scroll href="#question_topics_list">
+                +<?= count($this->question->getTopics()) - count($this->question->getFirstTwoTopics()) ?>
+            </a>
+        <?php endif; ?>
 
-    <?php if ($this->authUser): ?>
-        <a class="badge badge-sm badge-primary mb-2 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-            <img class="badge-icon" src="https://png.icons8.com/small/16/22618C/edit.png">
-            <?= _('Update topics') ?>
-        </a>
-    <?php endif; ?>
+        <?php if ($this->authUser): ?>
+            <a class="badge badge-sm badge-primary mb-2 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+                <img class="badge-icon" src="https://png.icons8.com/small/16/22618C/edit.png">
+                <?= _('Update topics') ?>
+            </a>
+        <?php endif; ?>
 
-<?php else: ?>
-
-    <?php if ($this->authUser): ?>
-        <!-- / header_topics -->
-        <a class="badge badge-sm badge-primary mb-2 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-            <img class="badge-icon" src="https://png.icons8.com/small/14/22618C/settings.png">
-            <?= _('Set question topics') ?>
-        </a>
-        <!-- / header_topics -->
     <?php else: ?>
-        <!-- / fake header_topics -->
-        <a class="badge badge-sm badge-primary mb-2 mr-2" href="#">
-            <img class="badge-icon" src="https://png.icons8.com/small/14/22618C/settings.png">
-            <?= _('Set question topics') ?>
-        </a>
-        <!-- / fake header_topics -->
-    <?php endif; ?>
 
-<?php endif; ?>
+        <?php if ($this->authUser): ?>
+            <!-- / header_topics -->
+            <a class="badge badge-sm badge-primary mb-2 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+                <img class="badge-icon" src="https://png.icons8.com/small/14/22618C/settings.png">
+                <?= _('Set question topics') ?>
+            </a>
+            <!-- / header_topics -->
+        <?php else: ?>
+            <!-- / fake header_topics -->
+            <a class="badge badge-sm badge-primary mb-2 mr-2" href="#">
+                <img class="badge-icon" src="https://png.icons8.com/small/14/22618C/settings.png">
+                <?= _('Set question topics') ?>
+            </a>
+            <!-- / fake header_topics -->
+        <?php endif; ?>
+
+    <?php endif; ?>
+</div>
+<!-- / header_topics -->
