@@ -155,9 +155,6 @@ a.badge-dark:hover {
   background-color: #BDBDBD !important;
   color: #FFFFFF !important; }
 
-body {
-  background-color: #FFFFFF; }
-
 .border-top {
   border-top: 1px solid #E0E0E0 !important; }
 
@@ -525,15 +522,22 @@ body {
   -ms-flex-item-align: start;
   align-self: flex-start; }
 
-label {
-  font-size: .9rem;
-  font-weight: 400;
-  margin-bottom: .75rem;
-  color: #757575; }
+form input.bg-icon-magnifier-lg {
+  background: url("https://png.icons8.com/material/28/546e7a/search.png") no-repeat 10px 10px;
+  padding-left: 48px; }
+
+form input.bg-icon-magnifier-sm {
+  background: url("https://png.icons8.com/material/20/545e7a/search.png") no-repeat 8px 5px;
+  padding-left: 36px; }
 
 h1, .h1 {
-  font-size: 2rem;
-  font-weight: 700; }
+  font-size: 1.5rem; }
+  @media (min-width: 576px) {
+    h1, .h1 {
+      font-size: 1.75rem; } }
+  @media (min-width: 768px) {
+    h1, .h1 {
+      font-size: 2.25rem; } }
 
 h2, .h2 {
   font-size: 1.5rem; }
@@ -1288,11 +1292,6 @@ ul.nav-main > li > a:hover {
   text-decoration: none; }
 
 /* light blue 700 */
-.input-bg-icon-magnifier-lg {
-  background: url("https://png.icons8.com/material/28/546e7a/search.png") no-repeat 10px 10px;
-  background-color: #ffffff;
-  padding-left: 48px; }
-
 .menu-section {
   margin-bottom: 2.5rem; }
 

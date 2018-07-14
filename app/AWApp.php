@@ -93,6 +93,7 @@ class AWApp
             $this->get('/sandbox/without-answers', 'WithoutAnswers_Sandbox_PageController:handle');
             $this->get('/sandbox/without-topics', 'WithoutTopics_Sandbox_PageController:handle');
             $this->get('/search', 'Questions_Search_PageController:handle'); // @NOTE Dont used
+            $this->get('/search/topics', 'Topics_Search_PageController:handle');
             $this->get('/settings', 'Show_Settings_PageController:handle');
             $this->get('/sitemap.xml', 'Lang_SitemapXML_PageController:handle');
             $this->get('/user/{id}', 'ShortURL_User_PageController:handle');

@@ -1,7 +1,13 @@
 
-label {
-    font-size: .9rem;
-    font-weight: 400;
-    margin-bottom: .75rem;
-    color: $color-gray-600;
+form {
+
+    input.bg-icon-magnifier-lg {
+        background: url("https://png.icons8.com/material/28/546e7a/search.png") no-repeat 10px 10px;
+        padding-left: 48px;
+    }
+
+    input.bg-icon-magnifier-sm {
+        background: url("https://png.icons8.com/material/20/545e7a/search.png") no-repeat 8px 5px;
+        padding-left: 36px;
+    }
 }

@@ -16,8 +16,9 @@ class Questions_Search_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         $this->query = $request->getParam('q');
 
-        $this->list = self::LIST_QUESTIONS;
-
+        $this->list = $request->getParam('list');
+        $this->list = ($this->list != self::LIST_QUESTIONS || $this->list != self::LIST_TOPICS || $this->list != self::LIST_USERS) ? self::LIST_QUESTIONS : $this->list ;
+        
         // @TODO check query
 
         if ($this->query) {

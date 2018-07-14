@@ -1,7 +1,6 @@
 
 .btn {
     cursor: pointer;
-    border-radius: $border-radius;
 
     .btn-icon {
         width: 20px;
@@ -12,11 +11,10 @@
 }
 
 .btn-lg {
-    border-radius: $border-radius-lg;
+    
 }
 
 .btn-sm {
-    border-radius: $border-radius-sm;
 
     .btn-icon {
         width: 16px;

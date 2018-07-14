@@ -6,7 +6,7 @@ Disallow: /*/question/*/rename
 Disallow: /*/question/*/topics
 Disallow: /*/sandbox/*
 Disallow: /*/settings/*
-Disallow: /*/search?*
+Disallow: /*/search*
 
 Sitemap: https://octoanswers.com/sitemap.xml
 Host: octoanswers.com

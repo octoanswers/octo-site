@@ -3,7 +3,6 @@
 @import "components/_alert";
 @import "components/_avatar";
 @import "components/_badge";
-@import "components/_body";
 @import "components/_border";
 @import "components/_button";
 @import "components/_box";
@@ -84,8 +83,6 @@ ul.nav-main > li { font-size: 1rem; padding: .2rem 0; }
 ul.nav-main > li > span.header { font-size: .8rem; color: #9E9E9E; }
 ul.nav-main > li > a { color: #616161; } /* grey 700 */
 ul.nav-main > li > a:hover { color: #0288D1; text-decoration: none; } /* light blue 700 */
-
-.input-bg-icon-magnifier-lg { background:url("https://png.icons8.com/material/28/546e7a/search.png") no-repeat 10px 10px; background-color: #ffffff; padding-left: 48px; }
 
 .menu-section { margin-bottom: 2.5rem; }
 .menu-section-title { color: rgba(0,0,0,.55); margin-bottom: 0.5rem; font-weight: bold; }

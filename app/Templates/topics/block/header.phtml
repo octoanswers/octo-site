@@ -1,6 +1,15 @@
 
 <!-- header -->
-<div class="h2 my-4">
-    Темы вопросов
+<div class="my-4 border-bottom clearfix">
+
+    <h1 class="h5 mt-1 mb-3 float-sm-left">Темы вопросов</h1>
+
+    <form class="form-inline float-sm-right" action="<?= SITE_URL.'/'.$this->lang.'/search/topics' ?>" method="GET">
+        <div class="form-group mb-2">
+            <input name="q" class="form-control form-control-sm bg-icon-magnifier-sm" type="text" placeholder="<?= _('Topics - Search input placeholder') ?>" aria-label="Search">
+        </div>
+        <input type="hidden" name="list" value="topics">
+    </form>
+
 </div>
 <!-- / header -->
