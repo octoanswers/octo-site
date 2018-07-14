@@ -1204,7 +1204,7 @@ pre {
 .text-secondary {
   color: #757575 !important; }
 
-.container-fluid {
+.container {
   max-width: 991px; }
 
 .lead {
