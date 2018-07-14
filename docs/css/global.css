@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
 .alert {
   padding: 1rem;
   border-radius: 2px; }
@@ -243,13 +244,13 @@ a.badge-dark:hover {
     border-color: #E8D87D; }
 
 .btn-outline-primary {
-  color: #2B7DB4;
-  border-color: #A2D0EE;
+  color: #3498db;
+  border-color: #3498db;
   background-color: transparent; }
   .btn-outline-primary:hover {
-    color: #2B7DB4;
-    border-color: #A2D0EE;
-    background-color: #DAECF8; }
+    color: #3498db;
+    border-color: #22618C;
+    background-color: transparent; }
 
 .btn-outline-secondary {
   color: #616161;
@@ -692,32 +693,25 @@ img.border-2 {
     font-weight: 600; }
 
 .navbar {
-  background-color: #FAFAFA !important;
+  background-color: #FFFFFF !important;
   border-bottom: 1px solid #E0E0E0; }
-  .navbar .container-fluid {
-    /* Fix bug width x-paddings */ }
-    @media (min-width: 576px) {
-      .navbar .container-fluid {
-        padding-left: 0;
-        padding-right: 0; } }
-    @media (min-width: 768px) {
-      .navbar .container-fluid {
-        padding-right: 15px;
-        padding-left: 15px; } }
-    .navbar .container-fluid .nav-link {
-      color: #9E9E9E; }
-    .navbar .container-fluid a.user-avatar {
-      display: inline-block;
-      width: 38px;
-      height: 38px;
-      border: 1px solid #E0E0E0;
+  .navbar .container a.navbar-brand {
+    color: #3498db;
+    font-weight: 600; }
+  .navbar .container .nav-link {
+    color: #9E9E9E; }
+  .navbar .container a.user-avatar {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px; }
+    .navbar .container a.user-avatar img {
+      width: 36px;
+      height: 36px;
       border-radius: 3px; }
-      .navbar .container-fluid a.user-avatar img {
-        width: 36px;
-        height: 36px;
-        border-radius: 3px; }
-        .navbar .container-fluid a.user-avatar img:hover {
-          opacity: .8; }
+      .navbar .container a.user-avatar img:hover {
+        opacity: .8; }
 
 .pseudo_table {
   display: table;

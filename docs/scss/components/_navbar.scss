@@ -1,19 +1,15 @@
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
 .navbar {
-    background-color: $color-gray-50 !important;
+    background-color: $color-white !important;
     border-bottom: 1px solid $color-gray-300;
 
-    .container-fluid {
+    .container {
 
-        /* Fix bug width x-paddings */
-        @media (min-width: $breakpoint_sm) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        @media (min-width: $breakpoint_md) {
-            padding-right: 15px;
-            padding-left: 15px;
+        a.navbar-brand {
+            color: $color-primary-500;
+            font-weight: 600;
         }
 
         .nav-link {

@@ -1,13 +1,13 @@
 
 .btn-outline-primary {
-    color: $color-primary-600;
-    border-color: $color-primary-200;
+    color: $color-primary-500;
+    border-color: $color-primary-500;
     background-color: transparent;
 
     &:hover {
-        color: $color-primary-600;
-        border-color: $color-primary-200;
-        background-color: $color-primary-50;
+        color: $color-primary-500;
+        border-color: $color-primary-700;
+        background-color: transparent;
     }
 }
 

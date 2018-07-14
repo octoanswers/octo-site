@@ -1,11 +1,10 @@
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
 
         <a class="navbar-brand" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
-            <img class="rounded d-inline-block align-top opacity-80 hover-opacity-100" src="<?= IMAGE_URL.'/octo-logo-30x30.svg' ?>" width="30" height="30" alt="Octoanswers">
-            <span class="ml-2 d-inline d-sm-none"><?= _('OctoAnswers') ?><span>
+            <?= _('OctoAnswers') ?>
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +16,7 @@
 
                 <?php if (!$this->authUser): ?>
                     <li class="nav-item d-sm-none d-md-inline-block">
-                        <a class="nav-link color-primary font-weight-600" href="#">
+                        <a class="nav-link" href="#">
                             <?= _('Navbar - About site') ?>
                         </a>
                     </li>
