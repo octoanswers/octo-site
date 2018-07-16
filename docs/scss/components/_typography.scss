@@ -1,12 +1,9 @@
 
 @import "typography/_blockquote";
 @import "typography/_font-weight";
+@import "typography/_lead";
 @import "typography/_links";
 @import "typography/_small";
-
-.font-size-125 {
-    font-size: 1.25rem !important;
-}
 
 p {
     line-height: 1.75;
@@ -27,6 +24,10 @@ pre {
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.text-nowrap {
+    white-space: nowrap;
 }
 
 .font-size-16 {

@@ -1121,6 +1121,11 @@ blockquote {
 .font-weight-800 {
   font-weight: 800; }
 
+.lead {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #424242; }
+
 a {
   color: #3498db; }
   a:hover {
@@ -1154,9 +1159,6 @@ small, .small {
 
 .small-xs {
   font-size: .75rem; }
-
-.font-size-125 {
-  font-size: 1.25rem !important; }
 
 p {
   line-height: 1.75; }
@@ -1192,6 +1194,9 @@ pre {
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */ }
 
+.text-nowrap {
+  white-space: nowrap; }
+
 .font-size-16 {
   font-size: 16px; }
 
@@ -1200,95 +1205,3 @@ pre {
 
 .text-secondary {
   color: #757575 !important; }
-
-.lead {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #424242; }
-
-.lead-thin {
-  font-weight: 300; }
-
-.text-nowrap {
-  white-space: nowrap; }
-
-.overflow-x-hidden {
-  overflow-x: hidden; }
-
-.overflow-y-hidden {
-  overflow-y: hidden; }
-
-@media (min-width: 768px) {
-  .pt-md-32px {
-    padding-top: 32px !important; }
-  .pb-md-32px {
-    padding-bottom: 32px !important; }
-  .pl-md-32px {
-    padding-left: 32px !important; }
-  .pr-md-32px {
-    padding-right: 32px !important; } }
-
-.underline-blue-3px {
-  border-bottom: 3px solid #2196F3; }
-
-.ml_minus_1 {
-  margin-left: -0.25rem !important; }
-
-.border-grey-400 {
-  border: 21px solid #BDBDBD; }
-
-.border-grey-500 {
-  border: 1px solid #9E9E9E; }
-
-.text-warning {
-  color: #FFA000 !important; }
-
-.border-primary {
-  border-color: #039BE5 !important; }
-
-.line-height-1 {
-  line-height: 1rem; }
-
-.line-height-1dot1 {
-  line-height: 1.1rem; }
-
-ul.nav-main {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 1rem; }
-
-ul.nav-main > li {
-  font-size: 1rem;
-  padding: .2rem 0; }
-
-ul.nav-main > li > span.header {
-  font-size: .8rem;
-  color: #9E9E9E; }
-
-ul.nav-main > li > a {
-  color: #616161; }
-
-/* grey 700 */
-ul.nav-main > li > a:hover {
-  color: #0288D1;
-  text-decoration: none; }
-
-/* light blue 700 */
-.menu-section {
-  margin-bottom: 2.5rem; }
-
-.menu-section-title {
-  color: rgba(0, 0, 0, 0.55);
-  margin-bottom: 0.5rem;
-  font-weight: bold; }
-
-.menu-list {
-  margin-bottom: 0; }
-
-.menu-list-link {
-  color: #99979c;
-  text-decoration: none; }
-
-.menu-list-link:hover {
-  color: #007bff;
-  text-decoration: none; }
