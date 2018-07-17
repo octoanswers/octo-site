@@ -240,6 +240,9 @@ a.badge-dark:hover {
     background-color: #EEE3A2;
     border-color: #E8D87D; }
 
+.btn-link {
+  color: #3498db; }
+
 .btn-outline-primary {
   color: #3498db;
   border-color: #3498db;
@@ -457,7 +460,7 @@ a.badge-dark:hover {
 .dropdown_item_icon {
   width: 20px;
   height: 20px;
-  margin-right: .75rem;
+  margin-right: .5rem;
   margin-top: -2px; }
 
 .flex-container {

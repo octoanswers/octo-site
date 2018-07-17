@@ -1,0 +1,52 @@
+
+<div class="mt-5 mb-5 py-2 border-top border-bottom">
+
+    <!-- edit answer -->
+    <?php if ($this->authUser): ?>
+        <a href="<?= $this->question->getEditURL($this->lang) ?>" class="btn btn-link p-0 my-2 mr-3">
+            <?= _('Common - Button - Edit answer') ?>
+        </a>
+    <?php else: ?>
+        <button type="button" class="btn btn-link p-0 my-2 mr-3" data-toggle="modal" data-target="#modal_lure__edit_answer">
+            <?= _('Common - Button - Edit answer') ?>
+        </button>
+        <?php require_once TEMPLATE_PATH.'/question/modal/edit_answer_lure.phtml' ?>
+    <?php endif; ?>
+    <!-- / edit answer -->
+
+    <a class="btn btn-link color-gray-600 p-0 my-2 mr-3" href="#" data-question-id="14858" data-follow-title="Подписаться" data-followed-title="Подписан" data-unfollow-title="Отписаться">
+        <?= $this->followed ? _('Common - Button - Followed') : _('Common - Button - Follow'); ?>
+    </a>
+
+    <?php if (mb_strlen($this->answer->getText()) > 0): ?>
+        <a href="<?= $this->question->getHistoryURL($this->lang) ?>" class="btn btn-link color-gray-600 p-0 my-2 mr-3">
+            <?= _('Question - Actions - History') ?>
+        </a>
+    <?php endif; ?>
+
+    <div class="dropdown d-inline-block float-lg-right">
+        <button role="button" class="btn btn-link color-gray-600 p-0 my-2 mr-2 dropdown-toggle" href="#" id="dropdown_menu__more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?= _('More') ?>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdown_menu__more">
+            <?php if ($this->authUser): ?>
+
+                <!-- Show "Upload image" modal -->
+                <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_upload_image">
+                    <img class="dropdown_item_icon" src="https://png.icons8.com/small/20/333333/compact-camera.png">
+                    <?= _('Question - Actions - Upload image') ?>
+                </a>
+
+                <!-- Button trigger modal "Question rename" -->
+                <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_rename">
+                    <img class="dropdown_item_icon" src="https://png.icons8.com/small/20/333333/rename.png">
+                    <?= _('Question - Actions - Rename question') ?>
+                </a>
+            <?php endif; ?>
+            <a class="dropdown-item" rel="nofollow" href="#">
+                <img class="dropdown_item_icon" src="https://png.icons8.com/small/20/333333/box-important.png">
+                <?= _('Question - Actions - Report') ?>
+            </a>
+        </div>
+    </div>
+</div>

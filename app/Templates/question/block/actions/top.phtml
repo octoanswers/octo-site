@@ -1,0 +1,40 @@
+
+<div class="my-4">
+
+    <!-- edit answer -->
+    <?php if ($this->authUser): ?>
+        <a href="<?= $this->question->getEditURL($this->lang) ?>" role="button" class="btn btn-primary mb-2 mr-2">
+            <?= _('Common - Button - Edit answer') ?>
+        </a>
+    <?php else: ?>
+        <button type="button" class="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target="#modal_lure__edit_answer">
+            <?= _('Common - Button - Edit answer') ?>
+        </button>
+        <?php require_once TEMPLATE_PATH.'/question/modal/edit_answer_lure.phtml' ?>
+    <?php endif; ?>
+    <!-- / edit answer -->
+
+    <?php if ($this->authUser): ?>
+        <button
+            class="btn follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-secondary'; ?>"
+            data-question-id="<?= $this->question->getID() ?>"
+            data-follow-title="<?= _('Common - Button - Follow') ?>"
+            data-followed-title="<?= _('Common - Button - Followed') ?>"
+            data-unfollow-title="<?= _('Common - Button - Unfollow') ?>"
+            type="button">
+            <?= $this->followed ? _('Common - Button - Followed') : _('Common - Button - Follow'); ?>
+        </button>
+    <?php else: ?>
+        <button type="button" class="btn btn-outline-secondary mb-2 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
+            <?= _('Common - Button - Follow'); ?>
+        </button>
+        <?php require_once TEMPLATE_PATH.'/question/modal/follow_question_lure.phtml' ?>
+    <?php endif; ?>
+
+    <?php if (mb_strlen($this->answer->getText()) > 0): ?>
+        <a href="<?= $this->question->getHistoryURL($this->lang) ?>" class="btn btn-outline-secondary mb-2 mr-2">
+            <?= _('Question - Actions - History') ?>
+        </a>
+    <?php endif; ?>
+
+</div>
