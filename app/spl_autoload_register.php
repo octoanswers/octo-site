@@ -1,5 +1,7 @@
 <?php
 
+// Hack for PHPUnit on OS X
+
 if (!function_exists('_')) {
     function _($value)
     {

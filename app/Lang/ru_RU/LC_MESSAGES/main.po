@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-18 18:24+0500\n"
-"PO-Revision-Date: 2018-07-18 18:26+0500\n"
+"POT-Creation-Date: 2018-07-18 18:26+0500\n"
+"PO-Revision-Date: 2018-07-18 18:48+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -189,7 +189,7 @@ msgstr "Поиск"
 
 #: PageController/Search/Topics.php:26 Templates/topics/block/header.phtml:9
 msgid "Search topics"
-msgstr "Поиск темы"
+msgstr "Поиск тем"
 
 #: PageController/Topic/Show.php:69
 msgid "More topics"
@@ -213,7 +213,7 @@ msgid "Wiki-answers on OctoAnswers"
 msgstr "Вики-ответы на OctoAnswers"
 
 #: PageController/Users/Newest.php:38 Templates/questions/show_list/nav.phtml:5
-#: Templates/topics/block/nav.phtml:6
+#: Templates/topics/block/nav.phtml:6 Templates/users/block/nav.phtml:6
 msgid "Newest"
 msgstr "Новые"
 
@@ -797,9 +797,8 @@ msgstr ""
 "OctoAnswers — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы"
 
-#: Templates/users/block/nav.phtml:6
-msgid "Users - Filter - Newest"
-msgstr "Новые"
+#~ msgid "Users - Filter - Newest"
+#~ msgstr "Новые"
 
 #~ msgid "Answer edit - Page title"
 #~ msgstr "Редактирование ответа"
