@@ -13,7 +13,7 @@ class Show_Flow_PageController extends Abstract_PageController
     public function handle(Request $request, Response $response, $args): Response
     {
         $this->lang = $args['lang'];
-        
+
         $this->activities = (new Flow_Query($this->lang))->findFlow();
 
         $human_date_timezone = new DateTimeZone('UTC');
@@ -29,8 +29,8 @@ class Show_Flow_PageController extends Abstract_PageController
         };
 
         $this->template = 'flow/show';
-        $this->pageTitle = _('Flow - Page title').' — '._('OctoAnswers');
-        $this->pageDescription = _('Flow - Page description');
+        $this->pageTitle = _('Flow').' — '._('OctoAnswers');
+        $this->pageDescription = _('Questions and answers flow on OctoAnswers');
         $this->canonicalURL = Page_URL_Helper::getFlowURL($this->lang);
 
         $output = $this->renderPage();
@@ -44,8 +44,8 @@ class Show_Flow_PageController extends Abstract_PageController
         $og = [
             'url' => SITE_URL,
             'type' => "website",
-            'title' => _('Flow - Page title').' - '._('OctoAnswers'),
-            'description' => _('Flow - Page description'),
+            'title' => _('Flow').' - '._('OctoAnswers'),
+            'description' => _('Questions and answers flow on OctoAnswers'),
             'locale' => $this->lang,
             'image' => IMAGE_URL.'/og-image.png'
         ];

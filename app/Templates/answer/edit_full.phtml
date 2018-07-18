@@ -18,12 +18,12 @@
                 <form id="form__update_answer" data-answer-id="<?= $this->answer->getID() ?>">
                     <div class="form-group">
                         <textarea id="form__update_answer__answer_text" name="answer_text" class="form-control" rows="10"><?= $this->answer->getText() ?></textarea>
-                        <label class="mt-0 small text-muted"><?= _('Edit answer - Description of changes') ?></label>
+                        <label class="mt-0 small text-muted"><?= _('Description of changes') ?></label>
                         <input id="form__update_answer__changes_comment" type="text" class="form-control">
                     </div>
                     <div class="form-group mt-4">
                         <button type="submit" id="form__update_answer__submit" class="btn btn-success btn-lg btn-block">
-                            <?= _('Edit answer - Save button') ?>
+                            <?= _('Save') ?>
                         </button>
                     </div>
                 </form>

@@ -11,13 +11,13 @@
         <button
             class="btn follow_topic_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
             data-topic-id="<?= $this->topic->getID() ?>"
-            data-follow-title="<?= _('Button - Follow') ?>"
-            data-followed-title="<?= _('Button - Followed') ?>"
-            data-unfollow-title="<?= _('Button - Unfollow') ?>"
+            data-follow-title="<?= _('Follow') ?>"
+            data-followed-title="<?= _('Followed') ?>"
+            data-unfollow-title="<?= _('Unfollow') ?>"
             type="button">
             <img class="btn-icon" src="https://png.icons8.com/small/20/ffffff/bookmark-ribbon.png">
             <span>
-                <?= $this->followed ? _('Button - Followed') : _('Button - Follow'); ?>
+                <?= $this->followed ? _('Followed') : _('Follow'); ?>
             </span>
         </button>
     <?php endif; ?>
@@ -25,7 +25,7 @@
     <?php if (false): ?>
         <!-- fake follow topic button -->
         <button type="button" class="btn btn-primary mr-2 mb-3" data-toggle="modal" data-target="#fake-follow-topic-modal">
-            <?= _('Button - Follow') ?>
+            <?= _('Follow') ?>
         </button>
         <!-- fake follow topic modal -->
         <div class="modal fade" id="fake-follow-topic-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -33,7 +33,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">
-                            <?= _('Topic - Fake follow modal - Title') ?>?
+                            <?= _('Register or sign in and you can subscribe to this question') ?>?
                         </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -43,8 +43,8 @@
                         <a href="#" data-toggle="modal" data-target="#modal_login">Log in</a> or <a href="#" data-toggle="modal" data-target="#modal_signup">signup</a> to follow this topic and get notifications when new questions will be added!
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= _('Button - Cancel') ?></button>
-                        <a href="#" data-toggle="modal" data-target="#modal_signup" type="button" class="btn btn-primary"><?= _('Button - Signup') ?></a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= _('Cancel') ?></button>
+                        <a href="#" data-toggle="modal" data-target="#modal_signup" type="button" class="btn btn-primary"><?= _('Signup') ?></a>
                     </div>
                 </div>
             </div>

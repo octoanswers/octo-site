@@ -8,7 +8,7 @@ class Show_Feed_PageController extends Abstract_PageController
     public function handle(Request $request, Response $response, $args): Response
     {
         $this->lang = $args['lang'];
-        
+
         if (!$this->authUser) {
             exit('Not logged!');
         }
@@ -41,7 +41,7 @@ class Show_Feed_PageController extends Abstract_PageController
 
         $this->template = 'feed/show';
         $this->showFooter = false;
-        $this->pageTitle = _('Feed - Page title').' - '._('OctoAnswers');
+        $this->pageTitle = _('Feed').' - '._('OctoAnswers');
         $this->canonicalURL = SITE_URL;
 
         $output = $this->renderPage();

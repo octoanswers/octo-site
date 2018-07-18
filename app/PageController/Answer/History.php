@@ -28,8 +28,8 @@ class History_Answer_PageController extends Abstract_PageController
         }
 
         $this->template = 'answer/history';
-        $this->pageTitle = _('Answer history - Page title').$this->question->getTitle().' - '._('OctoAnswers');
-        $this->pageDescription = _('Answer history - Page description');
+        $this->pageTitle = _('Answer history').' '.$this->question->getTitle().' - '._('OctoAnswers');
+        $this->pageDescription = _('Answer history');
 
         $output = $this->renderPage();
         $response->getBody()->write($output);

@@ -7,7 +7,7 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        
+
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $this->questions = (new Questions_Query($this->lang))->findRecentlyUpdated($this->page - 1);
@@ -40,7 +40,7 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Questions - Recently updated - Title').' &middot; '._('Common - Page').' '.$this->page.' &middot; '._('OctoAnswers');
+        return _('Recently updated').' &middot; '._('Page').' '.$this->page.' &middot; '._('OctoAnswers');
     }
 
     public function _getPageDescription(): string

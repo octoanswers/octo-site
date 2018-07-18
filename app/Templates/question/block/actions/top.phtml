@@ -4,11 +4,11 @@
     <!-- edit answer -->
     <?php if ($this->authUser): ?>
         <a href="<?= $this->question->getEditURL($this->lang) ?>" role="button" class="btn btn-primary mb-2 mr-2">
-            <?= _('Common - Button - Edit answer') ?>
+            <?= _('Edit answer') ?>
         </a>
     <?php else: ?>
         <button type="button" class="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target="#modal_lure__edit_answer">
-            <?= _('Common - Button - Edit answer') ?>
+            <?= _('Edit answer') ?>
         </button>
         <?php require_once TEMPLATE_PATH.'/question/modal/edit_answer_lure.phtml' ?>
     <?php endif; ?>
@@ -18,22 +18,22 @@
         <button
             class="btn follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-secondary'; ?>"
             data-question-id="<?= $this->question->getID() ?>"
-            data-follow-title="<?= _('Common - Button - Follow') ?>"
-            data-followed-title="<?= _('Common - Button - Followed') ?>"
-            data-unfollow-title="<?= _('Common - Button - Unfollow') ?>"
+            data-follow-title="<?= _('Follow') ?>"
+            data-followed-title="<?= _('Followed') ?>"
+            data-unfollow-title="<?= _('Unfollow') ?>"
             type="button">
-            <?= $this->followed ? _('Common - Button - Followed') : _('Common - Button - Follow'); ?>
+            <?= $this->followed ? _('Followed') : _('Follow'); ?>
         </button>
     <?php else: ?>
         <button type="button" class="btn btn-outline-secondary mb-2 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
-            <?= _('Common - Button - Follow'); ?>
+            <?= _('Follow'); ?>
         </button>
         <?php require_once TEMPLATE_PATH.'/question/modal/follow_question_lure.phtml' ?>
     <?php endif; ?>
 
     <?php if (mb_strlen($this->answer->getText()) > 0): ?>
         <a href="<?= $this->question->getHistoryURL($this->lang) ?>" class="btn btn-outline-secondary mb-2 mr-2">
-            <?= _('Question - Actions - History') ?>
+            <?= _('History') ?>
         </a>
     <?php endif; ?>
 

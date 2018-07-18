@@ -21,9 +21,9 @@ class Topics_Search_PageController extends Abstract_PageController
 
         $this->template = 'search/topics';
         $this->jumbortonBgStyle = 'red';
-        $this->pageTitle = str_replace('%query%', $this->query, _('Search - Page title')).' - '._('OctoAnswers');
+        $this->pageTitle = str_replace('%query%', $this->query, _('Search')).' - '._('OctoAnswers');
 
-        $this->searchPlaceholder = _('Topics - Search input placeholder');
+        $this->searchPlaceholder = _('Search topics');
 
         $searchLinkPostfix = $this->query ? '&q='.$this->query : '';
         $this->searchQuestionsLink = SITE_URL.'/search?list=questions'.$searchLinkPostfix;

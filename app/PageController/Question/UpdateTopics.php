@@ -21,18 +21,13 @@ class UpdateTopics_Question_PageController extends Abstract_PageController
         $this->topics_string = $this->question->getTopics() ? implode(", ", $this->question->getTopics()) : '';
 
         $this->template = 'question/update_topics';
-        $this->pageTitle = $this->_getPageTitle();
-        $this->pageDescription = _('Update topics - Page description');
+        $this->pageTitle = str_replace("%question%", $this->question->getTitle(), _('Update topics for question "%question%" - OctoAnswers'));
+        $this->pageDescription = str_replace("%question%", $this->question->getTitle(), _('Update topics for question "%question%"'));
         $this->additionalJavascript[] = 'question/update_topics';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
 
         return $response;
-    }
-
-    private function _getPageTitle()
-    {
-        return _('Update topics - Page title').': '.$this->question->getTitle().' - '._('OctoAnswers');
     }
 }

@@ -2,12 +2,12 @@
 <?php if ((count($this->users) == 0) && ($this->query != '')): ?>
     <div class="alert alert-secondary pb-5 mt-4">
         <div class="text-center">
-            <p class="mb-2"><strong><?= _('Search - Users not found alert - Title') ?></strong></p>
+            <p class="mb-2"><strong><?= _('No users found') ?></strong></p>
             <p class="mb-4">
-                <?= str_replace('%query%', $this->query, _('Search - Users not found alert - Text')); ?>
+                <?= str_replace('%query%', $this->query, _('On request "% query%" could not find any users')); ?>
             </p>
             <a class="btn btn-outline-primary" href="#" role="button">
-                <?= _('Search - Users not found alert - Button') ?>
+                <?= _('View all users') ?>
             </a>
         </div>
     </div>

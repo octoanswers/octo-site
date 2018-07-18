@@ -66,7 +66,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
         if (count($this->topic_questions) == 10) {
             $data['next_page_button'] = [
-                'title' => _('Topic - Next page button'),
+                'title' => _('More topics'),
                 'url' => '#',
             ];
         }
@@ -96,7 +96,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
     protected function _get_page_title()
     {
-        return str_replace('%topic', $this->topic->getTitle(), _('Topic - Page title')).' &mdash; '._('OctoAnswers');
+        return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic% - OctoAnswers');
     }
 
     protected function _prepareFollowButton()
@@ -126,7 +126,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
     protected function _get_page_description()
     {
-        return str_replace('%topic', $this->topic->getTitle(), _('Topic - Page description'));
+        return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic%'));
     }
 
     /**

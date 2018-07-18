@@ -5,11 +5,11 @@
     <?php if ($this->authUser): ?>
         <a href="<?= $this->question->getEditURL($this->lang) ?>" role="button" class="btn btn-primary my-2 mr-2">
             <img class="btn-icon" src="https://png.icons8.com/small/20/ffffff/ball-point-pen.png">
-            <?= _('Common - Button - Edit answer') ?>
+            <?= _('Edit answer') ?>
         </a>
     <?php else: ?>
         <button type="button" class="btn btn-primary my-2 mr-2" data-toggle="modal" data-target="#modal_lure__edit_answer">
-            <?= _('Common - Button - Edit answer') ?>
+            <?= _('Edit answer') ?>
         </button>
         <?php require_once TEMPLATE_PATH.'/question/modal/edit_answer_lure.phtml' ?>
     <?php endif; ?>
@@ -19,22 +19,22 @@
         <button
             class="btn follow_question_button my-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-secondary'; ?>"
             data-question-id="<?= $this->question->getID() ?>"
-            data-follow-title="<?= _('Common - Button - Follow') ?>"
-            data-followed-title="<?= _('Common - Button - Followed') ?>"
-            data-unfollow-title="<?= _('Common - Button - Unfollow') ?>"
+            data-follow-title="<?= _('Follow') ?>"
+            data-followed-title="<?= _('Followed') ?>"
+            data-unfollow-title="<?= _('Unfollow') ?>"
             type="button">
-            <span><?= $this->followed ? _('Common - Button - Followed') : _('Common - Button - Follow'); ?></span>
+            <span><?= $this->followed ? _('Followed') : _('Follow'); ?></span>
         </button>
     <?php else: ?>
         <button type="button" class="btn btn-outline-secondary my-2 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
-            <span><?= _('Common - Button - Follow'); ?></span>
+            <span><?= _('Follow'); ?></span>
         </button>
         <?php require_once TEMPLATE_PATH.'/question/modal/follow_question_lure.phtml' ?>
     <?php endif; ?>
 
     <?php if (mb_strlen($this->answer->getText()) > 0): ?>
         <a href="<?= $this->question->getHistoryURL($this->lang) ?>" class="btn btn-outline-secondary my-2 mr-2">
-            <?= _('Question - Actions - History') ?>
+            <?= _('History') ?>
         </a>
     <?php endif; ?>
 
@@ -48,18 +48,18 @@
                 <!-- Show "Upload image" modal -->
                 <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_upload_image">
                     <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/compact-camera.png">
-                    <?= _('Question - Actions - Upload image') ?>
+                    <?= _('Upload image') ?>
                 </a>
 
                 <!-- Button trigger modal "Question rename" -->
                 <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_rename">
                     <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/rename.png">
-                    <?= _('Question - Actions - Rename question') ?>
+                    <?= _('Rename question') ?>
                 </a>
             <?php endif; ?>
             <a class="dropdown-item" rel="nofollow" href="#">
                 <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/box-important.png">
-                <?= _('Question - Actions - Report') ?>
+                <?= _('Report') ?>
             </a>
         </div>
     </div>

@@ -11,26 +11,26 @@
             <div class="col-12 col-sm-11 col-md-10 col-lg-7 mx-auto">
 
                 <h1 class="mt-2 mt-md-5">
-                    <?= _('Settings - Title') ?>
+                    <?= _('Settings') ?>
                 </h1>
                 <a href="<?= $this->authUser->getURL($this->lang) ?>" class="btn btn-sm btn-outline-secondary">
-                    <?= _('Settings - Back to profile') ?>
+                    <?= _('Back to profile') ?>
                 </a>
 
                 <hr class="my-4 my-md-5">
-                <h2><?= _('Settings - Upload avatar - Title') ?></h2>
+                <h2><?= _('Upload avatar') ?></h2>
                 <div class="pseudo_table">
                     <div class="pseudo_cell pr-4 pr-xl-5">
                         <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data" class="mt-4">
                             <div class="form-group">
                                 <label for="form__update_name__name">
-                                    <?= _('Settings - Upload avatar - Text') ?>
+                                    <?= _('It is advisable to use your real photo as an avatar - this causes more confidence among users.') ?>
                                 </label>
                                 <input type="file" name="new_avatar_file" class="form-control-file w-100">
                             </div>
                             <div class="form-group">
                                 <button type="submit" id="form__upload_avatar__submit_btn" class="btn btn-primary submit_button">
-                                    <?= _('Settings - Upload avatar - Upload') ?>
+                                    <?= _('Upload avatar') ?>
                                 </button>
                             </div>
                         </form>
@@ -41,51 +41,51 @@
                 </div>
 
                 <hr class="my-4 my-md-5">
-                <h2><?= _('Settings - Real name - Title') ?></h2>
+                <h2><?= _('Real name') ?></h2>
                 <form id="form__update_name" data-user-id="<?= $this->authUser->getID() ?>">
                     <div class="form-group">
                         <label for="form__update_name__name">
-                            <?= _('Settings - Real name - Text') ?>.
+                            <?= _('The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.') ?>.
                         </label>
                         <input id="form__update_name__name" type="text" class="form-control" value="<?= @$this->authUser->getName() ?>">
                     </div>
                     <div class="form-group">
                         <button type="submit" id="form__update_name__submit" class="btn btn-primary">
-                            <?= _('Settings - Real name - Save button') ?>
+                            <?= _('Save') ?>
                         </button>
                     </div>
                 </form>
 
                 <hr class="my-4 my-md-5">
-                <h2><?= _('Settings - Signature - Title') ?></h2>
+                <h2><?= _('Signature') ?></h2>
                 <form id="form__update_signature" data-user-id="<?= $this->authUser->getID() ?>">
                     <div class="form-group">
                         <label for="form__update_signature__signature">
-                            <?= _('Settings - Signature - Text') ?>
+                            <?= _('Enter a signature describing your professional skills and knowledge.') ?>
                         </label>
-                        <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->getSignature() ?>" placeholder="<?= _('Settings - Signature - Input placeholder') ?>">
+                        <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->getSignature() ?>" placeholder="<?= _('For example: Professor of Psychology, entrepreneur, novice poet') ?>">
                     </div>
                     <div class="form-group mt-3">
                         <button type="submit" id="form__update_signature__submit" class="btn btn-primary">
-                            <?= _('Settings - Signature - Save button') ?>
+                            <?= _('Save') ?>
                         </button>
                     </div>
                 </form>
 
                 <hr class="my-4 my-md-5">
                 <h2>
-                    <?= _('Settings - Site - Title') ?>
+                    <?= _('Site') ?>
                 </h2>
                 <form id="frm__update_site" data-user-id="<?= $this->authUser->getID() ?>">
                     <div class="form-group">
                         <label for="frm__update_site__site">
-                            <?= _('Settings - Site - Text') ?>
+                            <?= _('Enter the address of your website or page on the social network.') ?>
                         </label>
                         <input id="frm__update_site__site" type="text" class="form-control" value="<?= @$this->authUser->getSite() ?>">
                     </div>
                     <div class="form-group">
                         <button type="submit" id="frm__update_site__submit" class="btn btn-primary">
-                            <?= _('Settings - Site - Save button') ?>
+                            <?= _('Save') ?>
                         </button>
                     </div>
                 </form>

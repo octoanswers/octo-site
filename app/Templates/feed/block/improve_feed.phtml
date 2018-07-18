@@ -2,7 +2,7 @@
 <!-- improve_feed -->
 <div class="box my-4 d-none d-md-block">
     <div class="box-header font-weight-600 color-gray-800">
-        <?= _('Feed - Improve your feed - Title') ?>
+        <?= _('Improve your feed') ?>
     </div>
     <div class="box-body pt-0 pb-0 small">
 
@@ -10,7 +10,7 @@
             <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
             <span class="color-gray-600">
                 <s>
-                    <?= _('Feed - Improve your feed - Visit your feed') ?>
+                    <?= _('Visit your feed') ?>
                 </s>
             </span>
         </div>
@@ -18,13 +18,13 @@
         <div class="my-3">
             <?php if ($this->authUser->getUsername() == $this->authUser->getName()): ?>
                 <a class="color-gray-800 no-underline-hover" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
-                    <?= _('Feed - Improve your feed - Set real name') ?>
+                    <?= _('Set real name') ?>
                 </a>
             <?php else: ?>
                 <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Feed - Improve your feed - Set real name') ?>
+                        <?= _('Set real name') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -33,13 +33,13 @@
         <div class="my-3">
             <?php if (strlen($this->authUser->getSignature()) == 0): ?>
                 <a class="color-gray-800 no-underline-hover" href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>">
-                    <?= _('Feed - Improve your feed - Set signature') ?>
+                    <?= _('Set signature') ?>
                 </a>
             <?php else: ?>
                 <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Feed - Improve your feed - Set signature') ?>
+                        <?= _('Set signature') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -48,13 +48,13 @@
         <div class="my-3">
             <?php if ($this->isShowTopicsFollowLure): ?>
                 <a class="color-gray-800 no-underline-hover" href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Feed - Improve your feed - Follow 3 more topics') ?>
+                    <?= _('Follow 3 more topics') ?>
                 </a>
             <?php else: ?>
                 <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Feed - Improve your feed - Follow 3 more topics') ?>
+                        <?= _('Follow 3 more topics') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -63,13 +63,13 @@
         <div class="my-3">
             <?php if ($this->isShowQuestionsFollowLure): ?>
                 <a class="color-gray-800 no-underline-hover" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Feed - Improve your feed - Follow your first question') ?>
+                    <?= _('Follow your first question') ?>
                 </a>
             <?php else: ?>
                 <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Feed - Improve your feed - Follow your first question') ?>
+                        <?= _('Follow your first question') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -78,13 +78,13 @@
         <div class="my-3">
             <?php if ($this->isShowUsersFollowLure): ?>
                 <a class="color-gray-800 no-underline-hover" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Feed - Improve your feed - Find your friends') ?>
+                    <?= _('Find your friends') ?>
                 </a>
             <?php else: ?>
                 <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Feed - Improve your feed - Find your friends') ?>
+                        <?= _('Find your friends') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -94,7 +94,7 @@
             <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
             <span class="color-gray-600">
                 <s>
-                    <?= _('Feed - Improve your feed - Ask your first question') ?>
+                    <?= _('Ask your first question') ?>
                 </s>
             </span>
         </div>
@@ -103,7 +103,7 @@
             <img class="size-18px mt-minus-4px mr-1" src="https://png.icons8.com/ios/18/43A047/checkmark-filled.png">
             <span class="color-gray-600">
                 <s>
-                    <?= _('Feed - Improve your feed - Answer a question') ?>
+                    <?= _('Answer a question') ?>
                 </s>
             </span>
         </div> -->

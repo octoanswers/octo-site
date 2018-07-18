@@ -8,10 +8,10 @@
         </div>
         <div class="width-full">
             <div class="color-gray-900 font-weight-600 mb-2">
-                <?= _('Question - Subscribe alert - Title') ?>
+                <?= _('Subscription to the question') ?>
             </div>
             <div class="small color-gray-700 mb-3">
-                <?= _('Question - Subscribe alert - Text') ?>
+                <?= _('Enter your email address to get notified about the answer as soon as it appears') ?>
             </div>
 
             <form id="form__question_subscribe">
@@ -20,7 +20,7 @@
                         <span class="input-group-text" id="basic-addon1">@</span>
                     </div>
                     <input type="hidden" id="question_id" value="<?= $this->question->getID(); ?>">
-                    <input type="email" id="email" class="form-control" placeholder="<?= _('Question - Subscribe alert - Input placeholder') ?>">
+                    <input type="email" id="email" class="form-control" placeholder="<?= _('Your email') ?>">
                 </div>
             </form>
 

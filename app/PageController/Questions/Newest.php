@@ -43,7 +43,7 @@ class Newest_Questions_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Questions - Newest - Page title').' - '._('Common - Page').' '.$this->page.' - '._('OctoAnswers');
+        return _('Newest questions').' - '._('Page').' '.$this->page.' - '._('OctoAnswers');
     }
 
     public function _getPageDescription(): string

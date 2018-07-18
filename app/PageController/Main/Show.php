@@ -15,7 +15,7 @@ class Show_Main_PageController extends Abstract_PageController
     public function handle(Request $request, Response $response, $args): Response
     {
         $this->lang = $args['lang'];
-        
+
         $this->recent_questions = (new Questions_Query($this->lang))->findNewestWithAnswer(1, 5);
 
         // foreach ($this->recent_questions as $question) {
@@ -36,14 +36,14 @@ class Show_Main_PageController extends Abstract_PageController
         $this->parsedown = new ExtendedParsedown($this->lang);
 
         $this->template = 'main/show';
-        $this->pageTitle = _('OctoAnswers').' - '. _('Main - Page title');
-        $this->pageDescription = _('Main - Page description');
+        $this->pageTitle = _('OctoAnswers').' - '. _('Ask a question and get one complete answer');
+        $this->pageDescription = _('OctoAnswers is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
         $this->canonicalURL = Page_URL_Helper::getMainURL($this->lang);
 
         $this->openGraph = $this->_getOpenGraph();
 
-        $this->shareLink['title'] = _('Main - Page title').' - '._('OctoAnswers');
-        $this->shareLink['description'] = _('Main - Page description');
+        $this->shareLink['title'] = _('Ask a question and get one complete answer').' - '._('OctoAnswers');
+        $this->shareLink['description'] = _('OctoAnswers is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
         $this->shareLink['url'] = SITE_URL;
         $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
 
@@ -61,8 +61,8 @@ class Show_Main_PageController extends Abstract_PageController
         $og = [
             'url' => SITE_URL,
             'type' => "website",
-            'title' => _('OctoAnswers').' - '._('Main - Page title'),
-            'description' => _('Main - Page description'),
+            'title' => _('OctoAnswers').' - '._('Ask a question and get one complete answer'),
+            'description' => _('OctoAnswers is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.'),
             'locale' => $this->lang,
             'image' => IMAGE_URL.'/og-image.png'
         ];

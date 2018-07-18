@@ -34,21 +34,21 @@
                 <button
                     class="btn btn-block follow_user_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
                     data-user-id="<?= $this->user->getID() ?>"
-                    data-follow-title="<?= _('Button - Follow') ?>"
-                    data-followed-title="<?= _('Button - Followed') ?>"
-                    data-unfollow-title="<?= _('Button - Unfollow') ?>" type="button">
+                    data-follow-title="<?= _('Follow') ?>"
+                    data-followed-title="<?= _('Followed') ?>"
+                    data-unfollow-title="<?= _('Unfollow') ?>" type="button">
                     <img class="btn-icon" src="https://png.icons8.com/material/20/ffffff/bookmark-ribbon.png">
-                    <span><?= $this->followed ? _('Button - Followed') : _('Button - Follow'); ?></span>
+                    <span><?= $this->followed ? _('Followed') : _('Follow'); ?></span>
                 </button>
             <?php endif; ?>
             <?php if ($this->authUser && ($this->authUser->getID() == $this->user->getID())): ?>
                 <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::getSettingsURL($this->lang) ?>">
                     <img class="btn-icon" src="https://png.icons8.com/material/20/616161/settings.png">
-                    <?= _('User - Actions button @ Settings') ?>
+                    <?= _('Settings') ?>
                 </a>
                 <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="#" data-toggle="modal" data-target="#modal__logout">
                     <img class="btn-icon" src="https://png.icons8.com/material/20/616161/shutdown.png">
-                    <?= _('User - Actions button @ Logout') ?>
+                    <?= _('Logout') ?>
                 </a>
             <?php endif; ?>
         </div>

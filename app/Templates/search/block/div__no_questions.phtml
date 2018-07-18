@@ -2,12 +2,12 @@
 <?php if ((count($this->questions) == 0) && ($this->query != '')): ?>
     <div class="alert alert-secondary pb-5 mt-4">
         <div class="text-center">
-            <p class="mb-2"><strong><?= _('Search - Alert - Questions not found - Title') ?></strong></p>
+            <p class="mb-2"><strong><?= _('No questions found') ?></strong></p>
             <p class="mb-4">
-                <?= str_replace('%query%', $this->query, _('Search - Alert - Questions not found - Text')); ?>
+                <?= str_replace('%query%', $this->query, _('On request "%query%" could not find any questions')); ?>
             </p>
             <a class="btn btn-outline-primary" href="#" role="button">
-                <?= _('Search - Alert - Questions not found - Button') ?>
+                <?= _('View all questions') ?>
             </a>
         </div>
     </div>

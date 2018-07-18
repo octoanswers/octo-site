@@ -17,7 +17,7 @@
                 <?php if (!$this->authUser): ?>
                     <li class="nav-item d-sm-none d-md-inline-block">
                         <a class="nav-link" href="#">
-                            <?= _('Navbar - About site') ?>
+                            <?= _('About site') ?>
                         </a>
                     </li>
                 <?php endif; ?>
@@ -25,24 +25,24 @@
                 <?php if ($this->authUser): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
-                            <?= _('Navbar - Feed') ?>
+                            <?= _('Feed') ?>
                         </a>
                     </li>
                 <?php endif; ?>
 
                 <li class="nav-item">
                     <a class="nav-link" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-                        <?= _('Navbar - Sandbox') ?>
+                        <?= _('Sandbox') ?>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
-                        <?= _('Navbar - Questions') ?>
+                        <?= _('Questions') ?>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
-                        <?= _('Navbar - Topics') ?>
+                        <?= _('Topics') ?>
                     </a>
                 </li>
 
@@ -51,19 +51,19 @@
 
                 <li class="nav-item">
                     <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-3" role="button" data-toggle="modal" data-target="#modal_ask">
-                        <?= _('Navbar - Ask') ?>
+                        <?= _('Ask') ?>
                     </button>
                 </li>
 
                 <?php if (!$this->authUser): ?>
                     <li class="nav-item">
                         <button class="btn btn-outline-secondary my-2 my-sm-0" role="button" data-toggle="modal" data-target="#modal_login">
-                            <?= _('Navbar - Login') ?>
+                            <?= _('Login') ?>
                         </button>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
-                            <?= _('Navbar - Signup') ?>
+                            <?= _('Signup') ?>
                         </a>
                     </li> -->
                 <?php endif; ?>

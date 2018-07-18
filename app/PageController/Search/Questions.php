@@ -18,7 +18,7 @@ class Questions_Search_PageController extends Abstract_PageController
 
         $this->list = $request->getParam('list');
         $this->list = ($this->list != self::LIST_QUESTIONS || $this->list != self::LIST_TOPICS || $this->list != self::LIST_USERS) ? self::LIST_QUESTIONS : $this->list ;
-        
+
         // @TODO check query
 
         if ($this->query) {
@@ -27,7 +27,7 @@ class Questions_Search_PageController extends Abstract_PageController
 
         $this->template = 'search/questions';
         $this->jumbortonBgStyle = 'red';
-        $this->pageTitle = str_replace('%query%', $this->query, _('Search - Page title')).' - '._('OctoAnswers');
+        $this->pageTitle = str_replace('%query%', $this->query, _('Search %query% - OctoAnswers');
 
         $this->searchPlaceholder = $this->__getSearchPlaceholder($this->list);
 
@@ -50,13 +50,13 @@ class Questions_Search_PageController extends Abstract_PageController
     {
         switch ($list) {
             case self::LIST_QUESTIONS:
-                $placeholder = _('Questions - Search input placeholder');
+                $placeholder = _('Questions');
                 break;
             case self::LIST_TOPICS:
-                $placeholder = _('Topics - Search input placeholder');
+                $placeholder = _('Topics');
                 break;
             case self::LIST_USERS:
-                $placeholder = _('Users - Search input placeholder');
+                $placeholder = _('Contributors');
                 break;
             default:
                 throw new Exception("Incorrect list param", 0);
