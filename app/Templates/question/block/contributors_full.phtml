@@ -1,63 +1,63 @@
 
 <?php if (count($this->contributors)): ?>
-    <div class="my-5">
-        <div class="border-bottom pb-3" id="contributors_full_list">
-            <span class="color-gray-400 float-right">
+    <!-- contributors tail -->
+    <div class="box-filled my-5">
+        <div class="box-header">
+            <div class="float-right color-gray-500" data-scroll href="#contributors_full_list">
                 <?= count($this->contributors).' '.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
-            </span>
-            <span class="title">Авторы ответа</span> <!-- Answer contributor -->
+            </div>
+            <a class="color-gray-800 font-weight-600 no-underline-hover" data-scroll href="#contributors_full_list">
+                <?= _('All Answer Contributors') ?>
+            </a>
+        </div>
+        <div class="box-body color-gray-800">
+            <div class="d-flex flex-wrap">
+
+                <?php foreach ($this->contributors as $contributor): ?>
+                    <div class="my-3 w-100">
+                        <span class="float-left">
+                            <a href="<?= $contributor->getURL($this->lang) ?>">
+                                <img class="size-4 rounded mt-1" src="<?= $contributor->getAvatarMediumURL() ?>" alt="<?= $contributor->getName() ?>">
+                            </a>
+                        </span>
+                        <div class="ml-5">
+                            <a class="font-weight-500 color-gray-800 no-underline-hover" href="<?= $contributor->getURL($this->lang) ?>">
+                                <?= $contributor->getName() ?>
+                            </a>
+                            <div class="progress my-2">
+                                <?php $tail_max_contribution = $this->contributors[0]->getContribution(); ?>
+                                <?php $percentage = $contributor->getContribution() * (1 / $tail_max_contribution); ?>
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?= ceil(100 * $percentage) ?>%;" aria-valuenow="<?= $percentage ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="small color-gray-600 mt-1">
+                                <span class="color-gray-700 font-weight-600">
+                                    <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
+                                </span>
+                                <span class="font-weight-800 mx-1 color-gray-800">&middot;</span>
+
+                                <?= $contributor->getSignature() ? $contributor->getSignature() : '+'.$contributor->getUsername() ?>
+
+                                <?php if ($contributor->getSite()): ?>
+                                    <span class="color-gray-800 mx-1 font-weight-800">&middot;</span>
+                                    <a href="<?= $contributor->getSite() ?>">
+                                        <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
+                                    </a>
+                                <?php endif; ?>
+
+                                <?php if ($contributor->getID() == $this->lastContributorID): ?>
+                                    <span class="color-gray-800 mx-1 font-weight-800">&middot;</span>
+                                    <span class="color-success-500 font-weight-600">
+                                        <?= _('Last contribution') ?>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
         </div>
 
-        <?php foreach ($this->contributors as $contributor): ?>
-            <div class="flex-container my-4">
-                <div class="width-6">
-                    <a class="size-6" href="<?= $contributor->getURL($this->lang) ?>">
-                        <img class="size-6 rounded-circle" src="<?= $contributor->getAvatarMediumURL() ?>">
-                    </a>
-                </div>
-                <div class="flex-grow-4 ml-3">
-                    <div class="font-weight-700">
-                        <a class="color-gray-900 no_underline" href="<?= $contributor->getURL($this->lang) ?>">
-                            <?= $contributor->getName() ?>
-                        </a>
-                    </div>
-                    <div class="small color-gray-600">
-                        <?= $contributor->getSignature() ? $contributor->getSignature() : '+'.$contributor->getUsername() ?>
-
-                        <?php if ($contributor->getSite()): ?>
-                            <span class="color-gray-800 mx-1 font-weight-800">&middot;</span>
-                            <a href="<?= $contributor->getSite() ?>">
-                                <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
-                            </a>
-                        <?php endif; ?>
-
-                        <?php if ($contributor->getID() == $this->lastContributorID): ?>
-                            <span class="color-gray-800 mx-1 font-weight-800">&middot;</span>
-                            <span class="badge badge-success badge-sm">
-                                Последняя правка
-                            </span>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="width-11 d-none d-sm-block text-nowrap">
-                    <img class="size-18px mt-minus-4px" src="https://png.icons8.com/ios-glyphs/18/78909C/pull-request.png">
-                    <span class="color-gray-700">
-                        <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
-                        <!--
-                        <?= Contribution_Humanizer::humanizeCount($contributor->getInsertionsCount()) ?>
-                        <?= Contribution_Humanizer::humanizeCount($contributor->getDeletionsCount()) ?>
-                        -->
-                    </span>
-                </div>
-                <div class="width-2 d-none d-sm-block">
-                    <?php $tail_max_contribution = $this->contributors[0]->getContribution(); ?>
-                    <?php $percentage = $contributor->getContribution() * (1 / $tail_max_contribution); ?>
-                    <?php $contribution_color = ColorMixer_Helper::colorBetween('1E88E5', '8BC34A', $percentage); ?>
-                    <span class="status ml-1" style="background-color: #<?= $contribution_color ?>;"></span>
-                </div>
-            </div>
-        <?php endforeach; ?>
-
     </div>
-
+    <!-- / contributors tail -->
 <?php endif; ?>

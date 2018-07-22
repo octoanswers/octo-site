@@ -49,7 +49,12 @@
 //
 
 .color-success-light { color: $color-success-300; }
-.color-success { color: $color-success-500; }
+.color-success-500, .color-success {
+    color: $color-success-500;
+}
+.color-success-700 {
+    color: $color-success-700;
+}
 .color-success-dark { color: $color-success-700; }
 
 .bg-color-success-light { background-color: $color-success-300; }
