@@ -39,13 +39,12 @@ class PDOFactory
     public static function getConnection(string $database)
     {
         if (!isset(self::$connection[$database])) {
+            $DB_DSN = 'mysql:host=localhost;dbname=ap_'.$database.';charset=utf8';
 
-            $DB_DSN = 'mysql:dbname=octo_'.$database.';host=localhost;charset=utf8';
-
-            if (defined('LOCAL_TESTS')) {
-                $DB_DSN = $DB_DSN.';unix_socket=/tmp/mysql.sock';
-            }
-
+            // if (defined('LOCAL_TESTS')) {
+            //     $DB_DSN = $DB_DSN.';unix_socket=/tmp/mysql.sock';
+            // }
+            
             $pdo = new PDO($DB_DSN, DB_USERNAME, DB_PASSWORD);
             $pdo->exec('SET CHARACTER SET utf8');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

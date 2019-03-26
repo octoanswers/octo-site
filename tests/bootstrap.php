@@ -1,7 +1,6 @@
 <?php
 
 define('ASKWIKI', 'ASKWIKI');
-define('LOCAL_TESTS', 'true');
 
 require_once './app/spl_autoload_register.php';
 

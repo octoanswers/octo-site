@@ -63,9 +63,7 @@ class Signup_POST_APIController extends Abstract_APIController
                 'destination_url' => Page_URL_Helper::getMainURL($this->lang),
             ];
 
-            if (!defined('LOCAL_TESTS')) {
-                $this->_copyDefaultAvatar($user->getID());
-            }
+            $this->_copyDefaultAvatar($user->getID());
         } catch (Throwable $e) {
             $this->output = [
                 'error_code' => $e->getCode(),
@@ -87,8 +85,7 @@ class Signup_POST_APIController extends Abstract_APIController
             $fromFile = $uploadFolder.'/0_'.$size.'.jpg';
             $toFile = $uploadFolder.'/'.$userID.'_'.$size.'.jpg';
 
-            if(!@copy($fromFile, $toFile))
-            {
+            if (!@copy($fromFile, $toFile)) {
                 $errors= error_get_last();
                 $this->output['avatar_'.$size] = 'Avatar file "'.$userID.'_'.$size.'.png" not copied: '.$errors['type'].' '.$errors['message'];
             } else {
