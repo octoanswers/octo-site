@@ -104,7 +104,7 @@ msgstr ""
 
 #: PageController/Question/Show.php:95
 msgid "Wiki-answers to your questions on OctoAnswers"
-msgstr "Вики-ответы на Ваши вопросы на octoanswers.com"
+msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
 
 #: PageController/Question/Show.php:188
 msgid "Wiki-answer on question: %question%"
@@ -854,7 +854,7 @@ msgstr ""
 #~ "ответы"
 
 #~ msgid "Question - Share description"
-#~ msgstr "Вики-ответы на Ваши вопросы на octoanswers.com"
+#~ msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
 
 #~ msgid "Question - Page description"
 #~ msgstr "Вики-ответ на вопрос: %question"

@@ -8,5 +8,5 @@ Disallow: /*/sandbox/*
 Disallow: /*/settings/*
 Disallow: /*/search*
 
-Sitemap: https://octoanswers.com/sitemap.xml
-Host: octoanswers.com
+Sitemap: https://answeropedia.org/sitemap.xml
+Host: answeropedia.org

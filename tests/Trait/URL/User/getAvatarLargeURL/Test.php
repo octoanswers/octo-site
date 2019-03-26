@@ -7,6 +7,6 @@ class User_URL_Trait__getAvatarLargeURL__Test extends PHPUnit\Framework\TestCase
         $user = new User_Model();
         $user->setID(13);
 
-        $this->assertEquals('https://octoanswers.com/uploads/avatar/13_400.jpg', $user->getAvatarLargeURL());
+        $this->assertEquals('https://answeropedia.org/uploads/avatar/13_400.jpg', $user->getAvatarLargeURL());
     }
 }

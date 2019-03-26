@@ -9,7 +9,7 @@ define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 
-define('SITE_URL', 'https://octoanswers.com');
+define('SITE_URL', 'https://answeropedia.org');
 define('IMAGE_URL', SITE_URL.'/assets/img');
 define('JS_URL', SITE_URL.'/assets/js');
 

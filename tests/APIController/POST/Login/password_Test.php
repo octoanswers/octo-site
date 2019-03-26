@@ -9,7 +9,7 @@ class Login_POST_APIController__NegativePasswordTest extends Abstract_Frontend_T
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'POST',
             'REQUEST_URI' => '/api/v1/ru/login.json',
-            'QUERY_STRING' => 'email=admin@octoanswers.com&password=foo',
+            'QUERY_STRING' => 'email=admin@answeropedia.org&password=foo',
             'CONTENT_TYPE' => 'application/json;charset=utf8',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
@@ -32,7 +32,7 @@ class Login_POST_APIController__NegativePasswordTest extends Abstract_Frontend_T
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'POST',
             'REQUEST_URI' => '/api/v1/ru/login.json',
-            'QUERY_STRING' => 'email=admin@octoanswers.com&password=123456789',
+            'QUERY_STRING' => 'email=admin@answeropedia.org&password=123456789',
             'CONTENT_TYPE' => 'application/json;charset=utf8',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);

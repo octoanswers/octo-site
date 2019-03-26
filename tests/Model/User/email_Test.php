@@ -5,8 +5,8 @@ class Model_User_email_Test extends PHPUnit\Framework\TestCase
     public function testFullParams()
     {
         $user = new User_Model();
-        $user->setEmail('boris@octoanswers.com');
+        $user->setEmail('boris@answeropedia.org');
 
-        $this->assertEquals('boris@octoanswers.com', $user->getEmail());
+        $this->assertEquals('boris@answeropedia.org', $user->getEmail());
     }
 }

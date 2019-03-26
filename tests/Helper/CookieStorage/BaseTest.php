@@ -9,7 +9,7 @@ class CookieStorage_BaseTest extends TestCase
         $user = User_Model::initWithDBState([
             'u_id' => 13,
             'u_name' => 'Joe Milk',
-            'u_email' => 'joe@octoanswers.com',
+            'u_email' => 'joe@answeropedia.org',
             'u_created_at' => '2016-03-19 06:47:41',
         ]);
 
@@ -33,6 +33,6 @@ class CookieStorage_BaseTest extends TestCase
         $user = $this->storage->getAuthUser();
 
         $this->assertEquals('Joe Milk', $user->getName());
-        $this->assertEquals('joe@octoanswers.com', $user->getEmail());
+        $this->assertEquals('joe@answeropedia.org', $user->getEmail());
     }
 }

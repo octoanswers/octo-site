@@ -9,7 +9,7 @@ class Login_POST_APIController__NegativeEmailTest extends Abstract_Frontend_Test
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'POST',
             'REQUEST_URI' => '/api/v1/ru/login.json',
-            'QUERY_STRING' => 'email=admin_octoanswers.com&password=jd754fJGFD99',
+            'QUERY_STRING' => 'email=admin_answeropedia.org&password=jd754fJGFD99',
             'CONTENT_TYPE' => 'application/json;charset=utf8',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
@@ -20,7 +20,7 @@ class Login_POST_APIController__NegativeEmailTest extends Abstract_Frontend_Test
 
         $expectedResponse = [
             'error_code' => 0,
-            'error_message' => 'User "email" property "admin_octoanswers.com" must be valid email',
+            'error_message' => 'User "email" property "admin_answeropedia.org" must be valid email',
         ];
 
         $this->assertSame(200, $response->getStatusCode());

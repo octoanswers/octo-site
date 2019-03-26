@@ -16,8 +16,8 @@ class ExtendedParsedown__links__ru_Test extends TestCase
 
     public function test__normal_link_to_octoanswers()
     {
-        $stringMD = "Это текст о [каше](https://octoanswers.com/ru/123/chto-takoe-kasha) и молоке.";
-        $stringHTML = "<p>Это текст о <a href=\"https://octoanswers.com/ru/123/chto-takoe-kasha\">каше</a> и молоке.</p>";
+        $stringMD = "Это текст о [каше](https://answeropedia.org/ru/123/chto-takoe-kasha) и молоке.";
+        $stringHTML = "<p>Это текст о <a href=\"https://answeropedia.org/ru/123/chto-takoe-kasha\">каше</a> и молоке.</p>";
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
@@ -32,8 +32,8 @@ class ExtendedParsedown__links__ru_Test extends TestCase
 
     public function test__normal_and_external_links()
     {
-        $stringMD = "Это текст о [каше](https://octoanswers.com/ru/123/chto-takoe-kasha) и [молоке](http://site.com/page).";
-        $stringHTML = "<p>Это текст о <a href=\"https://octoanswers.com/ru/123/chto-takoe-kasha\">каше</a> и <a href=\"http://site.com/page\" class=\"link-external\" target=\"_blank\" rel=\"nofollow\">молоке</a>.</p>";
+        $stringMD = "Это текст о [каше](https://answeropedia.org/ru/123/chto-takoe-kasha) и [молоке](http://site.com/page).";
+        $stringHTML = "<p>Это текст о <a href=\"https://answeropedia.org/ru/123/chto-takoe-kasha\">каше</a> и <a href=\"http://site.com/page\" class=\"link-external\" target=\"_blank\" rel=\"nofollow\">молоке</a>.</p>";
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }

@@ -6,7 +6,7 @@ class Signup_POST_APIController__email_Test extends Abstract_Frontend_TestCase
 
     public function testEmailIsIncorrect()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=foo_octoanswers.com&password=jd754fJGFD99&username=ivanivanov', true);
+        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=foo_answeropedia.org&password=jd754fJGFD99&username=ivanivanov', true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -15,7 +15,7 @@ class Signup_POST_APIController__email_Test extends Abstract_Frontend_TestCase
 
         $expectedResponse = [
         'error_code' => 0,
-        'error_message' => 'User "email" property "foo_octoanswers.com" must be valid email',
+        'error_message' => 'User "email" property "foo_answeropedia.org" must be valid email',
     ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
@@ -24,7 +24,7 @@ class Signup_POST_APIController__email_Test extends Abstract_Frontend_TestCase
 
     public function testEmailAlreadyRegistered()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=admin@octoanswers.com&password=jd754fJGFD99&username=ivanivanov', true);
+        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=admin@answeropedia.org&password=jd754fJGFD99&username=ivanivanov', true);
 
         $this->app->getContainer()['request'] = $request;
 

@@ -7,7 +7,7 @@ class User_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
         $user = new User_Model();
         $user->setUsername('vladimir');
 
-        $this->assertEquals('https://octoanswers.com/en/+vladimir', $user->getURL('en'));
+        $this->assertEquals('https://answeropedia.org/en/+vladimir', $user->getURL('en'));
     }
 
     public function test__ru()
@@ -15,6 +15,6 @@ class User_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
         $user = new User_Model();
         $user->setUsername('foxy');
 
-        $this->assertEquals('https://octoanswers.com/ru/+foxy', $user->getURL('ru'));
+        $this->assertEquals('https://answeropedia.org/ru/+foxy', $user->getURL('ru'));
     }
 }

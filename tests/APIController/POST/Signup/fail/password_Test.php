@@ -4,7 +4,7 @@ class Signup_POST_APIController__Password_Test extends Abstract_Frontend_TestCas
 {
     public function testPasswordTooShort()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=new@octoanswers.com&password=1234&username=ivanivanov', true);
+        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=new@answeropedia.org&password=1234&username=ivanivanov', true);
 
         $this->app->getContainer()['request'] = $request;
 

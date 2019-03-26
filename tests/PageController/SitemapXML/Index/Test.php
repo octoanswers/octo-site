@@ -14,8 +14,8 @@ class Index_SitemapXML_PageController__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('https://octoanswers.com/en', $responseBody);
-        $this->assertContains('https://octoanswers.com/ru', $responseBody);
+        $this->assertContains('https://answeropedia.org/en', $responseBody);
+        $this->assertContains('https://answeropedia.org/ru', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 

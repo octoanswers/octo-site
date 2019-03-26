@@ -5,18 +5,18 @@ class Questions_URL_Helper__getNewestURL__Test extends PHPUnit\Framework\TestCas
     public function test_withoutPage()
     {
         $url = Questions_URL_Helper::getNewestURL('en');
-        $this->assertEquals('https://octoanswers.com/en/questions/newest', $url);
+        $this->assertEquals('https://answeropedia.org/en/questions/newest', $url);
     }
 
     public function test_1()
     {
         $url = Questions_URL_Helper::getNewestURL('en', 1);
-        $this->assertEquals('https://octoanswers.com/en/questions/newest', $url);
+        $this->assertEquals('https://answeropedia.org/en/questions/newest', $url);
     }
 
     public function test_13()
     {
         $url = Questions_URL_Helper::getNewestURL('en', 13);
-        $this->assertEquals('https://octoanswers.com/en/questions/newest?page=13', $url);
+        $this->assertEquals('https://answeropedia.org/en/questions/newest?page=13', $url);
     }
 }

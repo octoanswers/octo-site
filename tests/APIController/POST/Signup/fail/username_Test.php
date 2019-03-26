@@ -6,7 +6,7 @@ class Signup_POST_APIController__username_Test extends Abstract_Frontend_TestCas
 
     public function test_UsernameAlreadyExists()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'username=kozel&email=new@octoanswers.com&password=jd754fJGFD99', true);
+        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'username=kozel&email=new@answeropedia.org&password=jd754fJGFD99', true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -24,7 +24,7 @@ class Signup_POST_APIController__username_Test extends Abstract_Frontend_TestCas
 
     public function testNameTooShort()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=new@octoanswers.com&password=jd754fJGFD99&username=J', true);
+        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=new@answeropedia.org&password=jd754fJGFD99&username=J', true);
 
         $this->app->getContainer()['request'] = $request;
 

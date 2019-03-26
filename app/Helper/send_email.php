@@ -2,7 +2,7 @@
 
 function send_email($to_email, $subject, $message)
 {
-    $header = 'From: OctoAnswers <no_reply@octoanswers.com>'."\r\n";
+    $header = 'From: OctoAnswers <no_reply@answeropedia.org>'."\r\n";
     $header .= "MIME-Version: 1.0\r\n";
     $header .= "Content-type: text/html; charset=UTF-8\r\n";
 
