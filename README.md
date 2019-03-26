@@ -1,6 +1,6 @@
-# OctoAnswers
+# Answeropedia
 
-OctoAnswers is a wiki-based Q&A (questions and answers) service, running on PHP/MySQL.
+Answeropedia is a wiki-based Q&A (questions and answers) service, running on PHP/MySQL.
 
 Currently, OctoAnswers is launched only in [Russian](https://octoanswers.com/ru). If you want that OctoAnswers to work in your own language, please [contact me](https://www.facebook.com/alexandergomzyakov) on Facebook, we can talk about it.
 
