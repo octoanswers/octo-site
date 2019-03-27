@@ -40,7 +40,7 @@ class Validator_User__negative_site__Test extends PHPUnit\Framework\TestCase
     {
         $this->user->setSite('example.com');
 
-        $this->expectExceptionMessage('User "site" property "example.com" must be an URL');
+        $this->expectExceptionMessage('User "site" property "example.com" must be a URL');
         $this->assertEquals(true, User_Validator::validateExists($this->user));
     }
 
@@ -48,7 +48,7 @@ class Validator_User__negative_site__Test extends PHPUnit\Framework\TestCase
     {
         $this->user->setSite('www.example.com');
 
-        $this->expectExceptionMessage('User "site" property "www.example.com" must be an URL');
+        $this->expectExceptionMessage('User "site" property "www.example.com" must be a URL');
         $this->assertEquals(true, User_Validator::validateExists($this->user));
     }
 
@@ -56,7 +56,7 @@ class Validator_User__negative_site__Test extends PHPUnit\Framework\TestCase
     {
         $this->user->setSite('example_com');
 
-        $this->expectExceptionMessage('User "site" property "example_com" must be an URL');
+        $this->expectExceptionMessage('User "site" property "example_com" must be a URL');
         $this->assertEquals(true, User_Validator::validateExists($this->user));
     }
 
@@ -64,7 +64,7 @@ class Validator_User__negative_site__Test extends PHPUnit\Framework\TestCase
     {
         $this->user->setSite('http:/example.com');
 
-        $this->expectExceptionMessage('User "site" property "http:/example.com" must be an URL');
+        $this->expectExceptionMessage('User "site" property "http:/example.com" must be a URL');
         $this->assertEquals(true, User_Validator::validateExists($this->user));
     }
 }
