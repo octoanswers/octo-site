@@ -418,6 +418,14 @@ class FineDiff
     private function _processGranularity($from_segment, $to_segment)
     {
         $delimiters = $this->granularityStack[$this->stackpointer++];
+
+
+        // @TODO
+        // Hack to remove error "Parameter must be an array or an object that implements Countable"
+        if (!is_array($this->granularityStack)) {
+            $this->granularityStack = [$this->granularityStack];
+        }
+
         $has_next_stage = $this->stackpointer < count($this->granularityStack);
         foreach (FineDiff::doFragmentDiff($from_segment, $to_segment, $delimiters) as $fragment_edit) {
             // increase granularity

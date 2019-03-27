@@ -8,8 +8,8 @@ class FineDiff__renderDiffToHTMLFromOpcodes__Test extends TestCase
     {
         $from_text = 'К середине сентября 2008 года была успешно завершена первая часть испытаний.';
         $to_text = 'К середине сентября была успешно завершена первая часть испытаний.';
-
-        $opcodes = FineDiff::getDiffOpcodes($from_text, $to_text, FineDiff::wordDelimiters);
+        
+        $opcodes = FineDiff::getDiffOpcodes($from_text, $to_text, FineDiff::$wordGranularity);
         $rendered_diff = FineDiff::renderDiffToHTMLFromOpcodes($from_text, $opcodes);
 
         $this->assertEquals('К середине сентября <del>2008 года </del>была успешно завершена первая часть испытаний.', $rendered_diff);

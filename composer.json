@@ -4,6 +4,6 @@
     "erusev/parsedown": "^1.6",
     "respect/validation": "^1.1",
     "verot/class.upload.php": "dev-master",
-    "gorhill/php-fine-diff": "^0.1.0"
+    "jblond/php-diff": "^1.12"
   }
 }
