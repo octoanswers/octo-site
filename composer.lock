@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0bf28c61261ff4d844b07930e558608",
+    "content-hash": "1018085f38a9c1f95fc5a6609bad18d3",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -81,6 +81,50 @@
                 "parser"
             ],
             "time": "2018-02-28T11:41:37+00:00"
+        },
+        {
+            "name": "gorhill/php-fine-diff",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/falk-graeser/PHP-FineDiff.git",
+                "reference": "b0c9ab136958882c501d461b0ad204f908e19392"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/falk-graeser/PHP-FineDiff/zipball/b0c9ab136958882c501d461b0ad204f908e19392",
+                "reference": "b0c9ab136958882c501d461b0ad204f908e19392",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GorHill\\FineDiff\\": "GorHill/FineDiff"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raymond Hill",
+                    "email": "r.michael@queo-group.com",
+                    "homepage": "http://www.queoflow.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Falk Gräser",
+                    "email": "f.graeser@queo-group.com",
+                    "homepage": "http://www.queoflow.com/",
+                    "role": "The-Clean-Up-Guy"
+                }
+            ],
+            "homepage": "http://www.raymondhill.net/finediff/",
+            "keywords": [
+                "finediff"
+            ],
+            "time": "2015-07-30T10:21:26+00:00"
         },
         {
             "name": "nikic/fast-route",
