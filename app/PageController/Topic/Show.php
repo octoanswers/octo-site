@@ -96,7 +96,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
     protected function _get_page_title()
     {
-        return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic% - OctoAnswers');
+        return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic% - OctoAnswers'));
     }
 
     protected function _prepareFollowButton()
