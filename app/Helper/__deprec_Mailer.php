@@ -1,6 +1,6 @@
 <?php
 /*
- * Mailer for OctoAnswers
+ * Mailer for Answeropedia
  */
 
 class Mailer
@@ -29,10 +29,10 @@ class Mailer
             throw new Exception('Email is empty.');
         }
 
-        $subject = 'Вас добавили в друзья на OctoAnswers';
+        $subject = 'Вас добавили в друзья на Answeropedia';
 
         $message = '<p>Пользователь <a href="https://answeropedia.org/'.$this->followerUsername.'">'.$this->followerRealName.'</a> добавил вас в друзья.</p>';
-        $message .= '<p>Социальная сеть вопросов и ответов, <a href="https://answeropedia.org">OctoAnswers</a>:</p>';
+        $message .= '<p>Социальная сеть вопросов и ответов, <a href="https://answeropedia.org">'.SITE_NAME.'</a>:</p>';
 
         $this->sendEmail($subject, $message);
     }
@@ -43,7 +43,7 @@ class Mailer
             throw new Exception('Email is empty.');
         }
 
-        $subject = 'Вы получили новый ответ на OctoAnswers';
+        $subject = 'Вы получили новый ответ на '.SITE_NAME;
 
         $message = '<p>Пользователь <a href="https://answeropedia.org/'.$this->answerOwnerUsername.'">'.$this->answerOwnerRealName.'</a> ответил на ваш вопрос: <a href="https://answeropedia.org/ru/'.$this->questionId.'">'.$this->questionTitle.'</a></p>';
         $message .= '<p><em>Ответ:</em></p>';

@@ -14,7 +14,7 @@ class ExtendedParsedown__links__ru_Test extends TestCase
         $this->pd = null;
     }
 
-    public function test__normal_link_to_octoanswers()
+    public function test__normal_link_to_answeropedia()
     {
         $stringMD = "Это текст о [каше](https://answeropedia.org/ru/123/chto-takoe-kasha) и молоке.";
         $stringHTML = "<p>Это текст о <a href=\"https://answeropedia.org/ru/123/chto-takoe-kasha\">каше</a> и молоке.</p>";

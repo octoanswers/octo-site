@@ -31,7 +31,7 @@ class ExtendedParsedown extends Parsedown
             return $Element;
         }
 
-        if ($this->isOctoanswersURL($Element['attributes']['href'])) {
+        if ($this->isAnsweropediaURL($Element['attributes']['href'])) {
             return $Element;
         }
 
@@ -49,8 +49,8 @@ class ExtendedParsedown extends Parsedown
         return $Element;
     }
 
-    protected function isOctoanswersURL($url) {
-        return preg_match('/^https:\/\/octoanswers\.com/', $url);
+    protected function isAnsweropediaURL($url) {
+        return preg_match('/^https:\/\/'.SITE_URL_NAME.'\.org/', $url);
     }
 
     protected function isExternalUrl($url) {
