@@ -7,8 +7,8 @@ class Question_Model
 
     private $id;
     private $title;
-    private $isRedirect;
-    private $answer;
+    private $isRedirect; // bool
+    public $answer; // Answer_Model
     private $topics;
     private $imageBaseName;
 
