@@ -12,8 +12,6 @@ class Show_Topic_PageController extends Abstract_PageController
 
         try {
             $topic_title = Topic_URL_Helper::titleFromURI($topic_uri);
-            // var_dump($topic_title);
-            // exit;
             $this->topic = (new Topic_Query($this->lang))->findWithTitle($topic_title);
             if ($this->topic === null) {
                 throw new \Exception("Topic not exists", 1);
@@ -44,9 +42,10 @@ class Show_Topic_PageController extends Abstract_PageController
         $humanDateTimezone = new DateTimeZone('UTC');
         $dateHumanizer = new HumanDate($humanDateTimezone, $this->lang);
 
-        $topic_questions = (new TopicsToQuestions_Relations_Query($this->lang))->findNewestFortopicWithID($this->topic->getID());
+        $topic_questions = (new TopicsToQuestions_Relations_Query($this->lang))->findNewestForTopicWithID($this->topic->getID());
+        $this->topic_questions = [];
+
         foreach ($topic_questions as $topic_question_er) {
-            //var_dump($topic_question_er);
             $this->topic_questions[] = (new Question_Query($this->lang))->questionWithID($topic_question_er->getQuestionID());
 
             //$question['date_humanized'] = $dateHumanizer->format($question->getCreatedAt());
@@ -64,7 +63,7 @@ class Show_Topic_PageController extends Abstract_PageController
             // do nothing
         }
 
-        if (count($this->topic_questions) == 10) {
+        if (is_array($this->topic_questions) && count($this->topic_questions) == 10) {
             $data['next_page_button'] = [
                 'title' => _('More topics'),
                 'url' => '#',
@@ -75,13 +74,18 @@ class Show_Topic_PageController extends Abstract_PageController
 
         //$data['most_viewed_writers'] = $this->__get_most_viewed_writers();
 
-        $this->related_topics = $this->_get_related_topics($this->topic_questions);
+        if (is_array($this->topic_questions)) {
+            $this->related_topics = $this->_get_related_topics($this->topic_questions);
+        }
+        //} else {
+          //  $this->related_topics = [];
+        //}
 
         $this->_prepareFollowButton();
 
         $this->template = 'topic/show';
         $this->pageTitle = $this->_get_page_title();
-         //str_replace('%topic%', , _('Topic - Page title')).' • '._('OctoAnswers');
+        //str_replace('%topic%', , _('Topic - Page title')).' • '._('OctoAnswers');
         $this->pageDescription = $this->_get_page_description();
         $this->nextPageURL = null;
 
@@ -161,15 +165,17 @@ class Show_Topic_PageController extends Abstract_PageController
         return $most_viewed_writers;
     }
 
-    public function _get_related_topics($questions)
+    public function _get_related_topics(array $questions): array
     {
         if (count($questions) == 0) {
             return [];
         }
 
+        $related_titles = [];
+
         foreach ($questions as $question) {
             $topics_titles = $question->getTopics();
-            if (count($topics_titles)) {
+            if (is_array($topics_titles) && count($topics_titles)) {
                 foreach ($topics_titles as $title) {
                     //@TODO need a query
                     $related_titles[] = $title;
@@ -186,9 +192,13 @@ class Show_Topic_PageController extends Abstract_PageController
         }
 
         $related_topics = [];
-        foreach ($related_titles as $title) {
-            $topic = Topic_Model::initWithTitle($title);
-            $related_topics[] = $topic;
+        if (count($related_titles)) {
+            foreach ($related_titles as $title) {
+                $topic = Topic_Model::initWithTitle($title);
+                $related_topics[] = $topic;
+            }
+        } else {
+            $related_topics = [];
         }
 
         return $related_topics;

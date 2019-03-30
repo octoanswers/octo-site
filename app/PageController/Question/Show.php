@@ -2,6 +2,8 @@
 
 class Show_Question_PageController extends Abstract_PageController
 {
+    public $followed;
+
     // @TODO Deprecated
     public function handleByURI($request, $response, $args)
     {
@@ -122,7 +124,7 @@ class Show_Question_PageController extends Abstract_PageController
             $authUserID = $this->authUser->getID();
             $question_id = $this->question->getID();
 
-            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relationWithUserIDAndQuestionID($authUserID, $question_id);;
+            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relationWithUserIDAndQuestionID($authUserID, $question_id);
 
             $this->followed = $relation ? true : false;
             $this->additionalJavascript[] = 'question/follow';

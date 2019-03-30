@@ -7,7 +7,7 @@ class TopicsToQuestions_Relations_Query extends Abstract_Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
 
-    public function findNewestFortopicWithID(int $topic_id, int $page = 1, int $per_page = 10): array
+    public function findNewestForTopicWithID(int $topic_id, int $page = 1, int $per_page = 10): array
     {
         TopicToQuestion_Relation_Validator::validateTopicID($topic_id);
         QuestionsList_Validator::validatePage($page);

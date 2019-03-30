@@ -27,7 +27,7 @@ class Questions_Search_PageController extends Abstract_PageController
 
         $this->template = 'search/questions';
         $this->jumbortonBgStyle = 'red';
-        $this->pageTitle = str_replace('%query%', $this->query, _('Search %query% - OctoAnswers');
+        $this->pageTitle = str_replace('%query%', $this->query, _('Search %query% - OctoAnswers'));
 
         $this->searchPlaceholder = $this->__getSearchPlaceholder($this->list);
 

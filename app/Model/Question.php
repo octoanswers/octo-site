@@ -87,9 +87,9 @@ class Question_Model
         $this->answer = $answer;
     }
 
-    public function getTopics()
+    public function getTopics(): array
     {
-        return $this->topics;
+        return is_array($this->topics) ? $this->topics : [];
     }
 
     public function setTopics(array $topics)

@@ -38,7 +38,7 @@
 
                 <?php require_once 'block/div__no_questions.phtml' ?>
 
-                <?php if (count($this->questions)): ?>
+                <?php if ($this->questions && count($this->questions)): ?>
                     <?php foreach ($this->questions as $question): ?>
                         <div class="mt-5">
                             <div class="" style="display: inline-block; max-width: 78%; flex: 1;">

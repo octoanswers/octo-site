@@ -4,7 +4,7 @@ class Show_Topic_PageController__en__Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['en' => ['questions', 'topics', 'er_topics_questions', 'er_users_follow_topics']];
 
-    public function test__ShowENPage()
+    public function test__ShowPage()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
@@ -15,8 +15,8 @@ class Show_Topic_PageController__en__Test extends Abstract_Frontend_TestCase
 
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
-
-        $this->assertContains('<title>Questions and answers on the topic &laquo;Cashmere&raquo; &mdash; OctoAnswers</title>', $responseBody);
+        
+        $this->assertContains('<title>Questions and answers on the topic Cashmere - OctoAnswers</title>', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

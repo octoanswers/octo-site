@@ -16,7 +16,7 @@ class Unlogged_Main_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('OctoAnswers - Задай вопрос и получи один компетентный ответ', $responseBody);
+        $this->assertContains('OctoAnswers - Задайте вопрос и получите один исчерпывающий ответ', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

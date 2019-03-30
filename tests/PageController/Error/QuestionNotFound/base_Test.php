@@ -16,7 +16,7 @@ class PageController_QuestionNotFound_base_Test extends Abstract_Frontend_TestCa
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Вопрос не найден: Some unfounded question? - OctoAnswers', $responseBody);
+        $this->assertContains('Вопрос не найден Some unfounded question? - OctoAnswers', $responseBody);
         $this->assertSame(404, $response->getStatusCode());
     }
 }

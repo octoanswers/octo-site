@@ -16,7 +16,7 @@ class List_Topics_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Новые хештеги - Страница 1 - OctoAnswers', $responseBody);
+        $this->assertContains('Новые темы - Страница 1 - OctoAnswers', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }
