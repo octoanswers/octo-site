@@ -22,6 +22,6 @@ class Question_Mapper__questionWithID_Base_Test extends Abstract_DB_TestCase
         $this->assertEquals(7, $question->getID());
         $this->assertEquals('Какую роль играет почва во взаимосвязи неживой и живой природы?', $question->getTitle());
         $this->assertEquals(null, $question->getTopicsJSON());
-        $this->assertEquals(null, $question->getTopics());
+        $this->assertEquals([], $question->getTopics());
     }
 }

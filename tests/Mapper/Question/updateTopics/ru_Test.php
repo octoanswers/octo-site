@@ -39,6 +39,6 @@ class Mapper_Question__updateTopics__ru_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(13, $question->getID());
         $this->assertEquals(null, $question->getTopicsJSON());
-        $this->assertEquals(null, $question->getTopics());
+        $this->assertEquals([], $question->getTopics());
     }
 }

@@ -106,8 +106,12 @@ class Question_Model
         return json_encode($this->topics, JSON_UNESCAPED_UNICODE);
     }
 
-    public function setTopicsJSON($topicsJSON)
+    public function setTopicsJSON(string $topicsJSON)
     {
+        if (strlen($topicsJSON) == 0) {
+            throw new Exception("Topics JSON must be longer than 0 char", 1);
+        }
+
         $this->topics = json_decode($topicsJSON, true);
     }
 
