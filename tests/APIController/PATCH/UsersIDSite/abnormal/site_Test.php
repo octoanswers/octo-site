@@ -16,7 +16,7 @@ class UsersIDSite_PATCH_APIController__abnormal__site__Test extends Abstract_Fro
 
         $expectedResponse = [
             'error_code' => 0,
-            'error_message' => 'User "site" property "example37.com" must be an URL',
+            'error_message' => 'User "site" property "example37.com" must be a URL',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
@@ -35,7 +35,7 @@ class UsersIDSite_PATCH_APIController__abnormal__site__Test extends Abstract_Fro
 
         $expectedResponse = [
             'error_code' => 0,
-            'error_message' => 'User "site" property "www.example32.com" must be an URL',
+            'error_message' => 'User "site" property "www.example32.com" must be a URL',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

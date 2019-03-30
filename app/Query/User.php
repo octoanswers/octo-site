@@ -62,7 +62,7 @@ class User_Query
         User_Validator::validateUsername($username);
 
         $stmt = $this->pdo->prepare('SELECT * FROM users WHERE u_username=:u_username LIMIT 1');
-        $stmt->bindParam(':u_username', $username, PDO::PARAM_INT);
+        $stmt->bindParam(':u_username', $username, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);

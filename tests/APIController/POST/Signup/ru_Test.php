@@ -18,7 +18,10 @@ class Signup_POST_APIController__ru__Test extends Abstract_Frontend_TestCase
             'username' => 'jasonborn',
             'email' => 'new@answeropedia.org',
             'url' => 'https://answeropedia.org/ru/+jasonborn',
-            'destination_url' => 'https://answeropedia.org/ru'
+            'destination_url' => 'https://answeropedia.org/ru',
+            'avatar_100' => 'Avatar file "16_100.png" copied',
+            'avatar_200' => 'Avatar file "16_200.png" copied',
+            'avatar_400' => 'Avatar file "16_400.png" copied'
         ];
 
         $responseArray = json_decode($responseBody, true);

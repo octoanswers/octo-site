@@ -16,7 +16,7 @@ class UsersIDSite_PATCH_APIController__site__Test extends Abstract_Frontend_Test
 
         $expectedResponse = [
             'error_code' => 0,
-            'error_message' => 'User "site" property "xxx" must be an URL',
+            'error_message' => 'User "site" property "xxx" must be a URL',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
