@@ -659,16 +659,6 @@ a.badge-dark:hover {
       align-self: flex-start;
 }
 
-form input.bg-icon-magnifier-lg {
-  background: url("https://png.icons8.com/material/28/546e7a/search.png") no-repeat 10px 10px;
-  padding-left: 48px;
-}
-
-form input.bg-icon-magnifier-sm {
-  background: url("https://png.icons8.com/material/20/545e7a/search.png") no-repeat 8px 5px;
-  padding-left: 36px;
-}
-
 h1, .h1 {
   font-size: 1.5rem;
 }

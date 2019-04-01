@@ -7,9 +7,8 @@
 
             <?php if ($this->authUser): ?>
                 <div class="float-right">
-                    <a class="small" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>"><img class="size-16px mt-minus-2px" src="https://png.icons8.com/material/16/3498db/edit.png"></a>
                     <a class="small" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-                        Изменить
+                        <i class="far fa-edit"></i> Изменить
                     </a>
                 </div>
             <?php endif; ?>
@@ -28,7 +27,7 @@
 
             <?php if ($this->authUser): ?>
                 <a class="badge badge-primary mb-3 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-                    <img class="size-16px" src="https://png.icons8.com/small/16/1565c0/plus-math.png">
+                    <i class="far fa-plus-square"></i>
                 </a>
             <?php endif; ?>
 
@@ -42,7 +41,7 @@
     <?php if ($this->authUser): ?>
         <div class="mt-5">
             <a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-                <img class="badge-icon" src="https://png.icons8.com/material/16/1565c0/edit.png">
+                <i class="far fa-plus-square"></i>
                 Задать темы вопроса
             </a>
         </div>
