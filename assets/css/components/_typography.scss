@@ -1,38 +1,46 @@
-
 @import "typography/_blockquote";
 @import "typography/_font-weight";
 @import "typography/_links";
 @import "typography/_small";
 
-del, ins { padding-left: .25rem; padding-right: .25rem; }
-del { background-color: #ffdce0; text-decoration: none; }
-ins { background-color: #cdffd8; text-decoration: none; }
+del,
+ins {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+del {
+  background-color: #ffdce0;
+  text-decoration: none;
+}
+ins {
+  background-color: #cdffd8;
+  text-decoration: none;
+}
 
-ul { padding-left: 1.25rem; margin-bottom: 1.5rem; }
+ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
 
 pre {
-    padding: 1rem;
-    background-color: $color-gray-200;
-    border-radius: $border-radius;
-    white-space: pre-wrap;       /* Since CSS 2.1 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  padding: 1rem;
+  background-color: $color-gray-200;
+  border-radius: $border-radius;
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 .text-nowrap {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .font-size-16 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .font-size-18px {
-    font-size: 18px;
-}
-
-.text-secondary {
-    color: $color-gray-600!important;
+  font-size: 18px;
 }
