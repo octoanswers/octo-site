@@ -58,11 +58,6 @@
 }
 
 .badge {
-  font-size: 1rem;
-  font-weight: 400;
-  border-radius: 3px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #DAECF8;
   background-color: #DAECF8;
   color: #22618C;
