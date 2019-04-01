@@ -4,7 +4,7 @@
     <!-- edit answer -->
     <?php if ($this->authUser): ?>
         <a href="<?= $this->question->getEditURL($this->lang) ?>" role="button" class="btn btn-primary my-2 mr-2">
-            <img class="btn-icon" src="https://png.icons8.com/small/20/ffffff/ball-point-pen.png">
+            <i class="fas fa-edit"></i>
             <?= _('Edit answer') ?>
         </a>
     <?php else: ?>
@@ -47,18 +47,18 @@
 
                 <!-- Show "Upload image" modal -->
                 <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_upload_image">
-                    <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/compact-camera.png">
+                    <i class="fas fa-edit mr-1"></i>
                     <?= _('Upload image') ?>
                 </a>
 
                 <!-- Button trigger modal "Question rename" -->
                 <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_rename">
-                    <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/rename.png">
+                    <i class="fas fa-edit mr-1"></i>
                     <?= _('Rename question') ?>
                 </a>
             <?php endif; ?>
             <a class="dropdown-item" rel="nofollow" href="#">
-                <img class="dropdown_item_icon" src="https://png.icons8.com/material/20/333333/box-important.png">
+                <i class="fas fa-edit mr-1"></i>
                 <?= _('Report') ?>
             </a>
         </div>

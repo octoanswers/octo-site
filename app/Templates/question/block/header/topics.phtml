@@ -17,7 +17,7 @@
 
         <?php if ($this->authUser): ?>
             <a class="badge badge-sm badge-primary mb-2 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-                <img class="badge-icon" src="https://png.icons8.com/small/16/22618C/edit.png">
+                <i class="far fa-edit mr-1"></i>    
                 <?= _('Update topics') ?>
             </a>
         <?php endif; ?>
@@ -27,14 +27,14 @@
         <?php if ($this->authUser): ?>
             <!-- / header_topics -->
             <a class="badge badge-sm badge-primary mb-2 mr-2" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
-                <img class="badge-icon" src="https://png.icons8.com/small/14/22618C/settings.png">
+                <i class="fas fa-cog mr-1"></i>
                 <?= _('Set question topics') ?>
             </a>
             <!-- / header_topics -->
         <?php else: ?>
             <!-- / fake header_topics -->
             <a class="badge badge-sm badge-primary mb-2 mr-2" href="#">
-                <img class="badge-icon" src="https://png.icons8.com/small/14/22618C/settings.png">
+                <i class="fas fa-cog mr-1"></i>
                 <?= _('Set question topics') ?>
             </a>
             <!-- / fake header_topics -->

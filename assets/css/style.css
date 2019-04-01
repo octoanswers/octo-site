@@ -227,7 +227,6 @@ a.badge-dark:hover {
 }
 
 .btn-primary {
-  background-color: #3498db;
   border-color: #3498db;
   background-color: #3498db;
 }
@@ -238,7 +237,6 @@ a.badge-dark:hover {
 }
 
 .btn-secondary {
-  color: #BDBDBD;
   border-color: #BDBDBD;
   background-color: #BDBDBD;
 }
@@ -249,7 +247,6 @@ a.badge-dark:hover {
 }
 
 .btn-success {
-  color: #2BB462;
   border-color: #2BB462;
   background-color: #2BB462;
 }
