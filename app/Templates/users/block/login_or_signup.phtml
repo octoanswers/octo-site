@@ -1,0 +1,16 @@
+
+<?php if (!$this->authUser): ?>
+            <div class="alert alert-warning">
+                <p><strong><?= _('Signup') ?></strong></p>
+                <p><?= _('OctoAnswers is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers') ?></p>
+
+                <div class="mt-4">
+                    <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal_login">
+                        <?= _('Login') ?>
+                    </a>
+                    <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal_signup">
+                        <?= _('Signup') ?>
+                    </a>
+                </div>
+            </div>
+<?php endif; ?>

@@ -1,39 +1,20 @@
-
 // Default
 
 .badge {
-    border-color: $color-primary-50;
-    background-color: $color-primary-50;
-    color: $color-primary-700;
-    padding: .5em .75em;
-    white-space: nowrap;
-    vertical-align: middle;
+  border-color: $color-primary-50;
+  background-color: $color-primary-50;
+  color: $color-primary-500;
 
-    .badge-icon {
-        width: 1rem;
-        height: 1rem;
-        margin-top: -3px;
-        margin-right: .25rem;
-    }
-}
-
-a.badge:hover {
+  &:hover {
     text-decoration: none !important;
+  }
 }
 
 // Sizes
 
 .badge-sm {
-    font-size: .875rem;
-    padding: .25rem .5rem;
-
-    .badge-icon {
-        width: .75rem;
-        height: .75rem;
-        margin-left: 0;
-        margin-top: -2px;
-        margin-right: .125rem;
-    }
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
 }
 
 // Force cursor style for links
@@ -46,117 +27,124 @@ a.badge-danger,
 a.badge-info,
 a.badge-light,
 a.badge-dark {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 // Primary badge
 
 span.badge-primary a.badge-primary {
-    border-color: $color-primary-50;
-    background-color: $color-primary-50;
-    color: $color-primary-700;
+  border-color: $color-primary-50;
+  background-color: $color-primary-50;
+  color: $color-primary-700;
 }
 
 a.badge-primary:hover {
-    border-color: $color-primary-100 !important;
-    background-color: $color-primary-100 !important;
-    color: $color-primary-800 !important;
+  border-color: $color-primary-100 !important;
+  background-color: $color-primary-100 !important;
+  color: $color-primary-800 !important;
 }
 
 // Secondary badge
 
-span.badge-secondary, a.badge-secondary {
-    border-color: $color-gray-200;
-    background-color: $color-gray-200;
-    color: $color-gray-800;
+span.badge-secondary,
+a.badge-secondary {
+  border-color: $color-gray-200;
+  background-color: $color-gray-200;
+  color: $color-gray-800;
 }
 
 a.badge-secondary:hover {
-    border-color: $color-gray-300 !important;
-    background-color: $color-gray-300 !important;
-    color: $color-gray-800 !important;
+  border-color: $color-gray-300 !important;
+  background-color: $color-gray-300 !important;
+  color: $color-gray-800 !important;
 }
 
 // Success badge
 
-span.badge-success, a.badge-success {
-    border-color: $color-success-100;
-    background-color: $color-success-100;
-    color: $color-success-800;
+span.badge-success,
+a.badge-success {
+  border-color: $color-success-100;
+  background-color: $color-success-100;
+  color: $color-success-800;
 }
 
 a.badge-success:hover {
-    border-color: $color-success-200 !important;
-    background-color: $color-success-200 !important;
-    color: $color-success-800 !important;
+  border-color: $color-success-200 !important;
+  background-color: $color-success-200 !important;
+  color: $color-success-800 !important;
 }
 
 // Warning badge
 
-span.badge-warning, a.badge-warning {
-    border-color: $color-secondary-100;
-    background-color: $color-secondary-100;
-    color: $color-secondary-800;
+span.badge-warning,
+a.badge-warning {
+  border-color: $color-secondary-100;
+  background-color: $color-secondary-100;
+  color: $color-secondary-800;
 }
 
 a.badge-warning:hover {
-    border-color: $color-secondary-100 !important;
-    background-color: $color-secondary-100 !important;
-    color: $color-secondary-800 !important;
+  border-color: $color-secondary-100 !important;
+  background-color: $color-secondary-100 !important;
+  color: $color-secondary-800 !important;
 }
 
 // Danger badge
 
-span.badge-danger, a.badge-danger {
-    border-color: $color-danger-100;
-    background-color: $color-danger-100;
-    color: $color-danger-800;
-}
+span.badge-danger,
+a.badge-danger {
+  border-color: $color-danger-100;
+  background-color: $color-danger-100;
+  color: $color-danger-800;
 
-a.badge-danger:hover {
+  &:hover {
     border-color: $color-danger-100 !important;
     background-color: $color-danger-100 !important;
     color: $color-danger-800 !important;
+  }
 }
 
 // Info badge
 
-span.badge-info, a.badge-info {
-    // border-color: $color-teal-50;
-    // background-color: $color-teal-50;
-    // color: $color-teal-600;
+span.badge-info,
+a.badge-info {
+  // border-color: $color-teal-50;
+  // background-color: $color-teal-50;
+  // color: $color-teal-600;
 }
 
 a.badge-info:hover {
-    // border-color: $color-teal-100 !important;
-    // background-color: $color-teal-100 !important;
-    // color: $color-teal-600 !important;
+  // border-color: $color-teal-100 !important;
+  // background-color: $color-teal-100 !important;
+  // color: $color-teal-600 !important;
 }
 
 // Light badge
 
-span.badge-light, a.badge-light {
-    border-color: $color-gray-50;
-    background-color: $color-gray-50;
-    color: $color-gray-400;
+span.badge-light,
+a.badge-light {
+  border-color: $color-gray-50;
+  background-color: $color-gray-50;
+  color: $color-gray-400;
 }
 
 a.badge-light:hover {
-    border-color: $color-gray-100 !important;
-    background-color: $color-gray-100 !important;
-    color: $color-gray-400 !important;
+  border-color: $color-gray-100 !important;
+  background-color: $color-gray-100 !important;
+  color: $color-gray-400 !important;
 }
 
 // Dark badge
 
-span.badge-dark, a.badge-dark {
-    border-color: $color-gray-600;
-    background-color: $color-gray-600;
-    color: $color-white;
+span.badge-dark,
+a.badge-dark {
+  border-color: $color-gray-600;
+  background-color: $color-gray-600;
+  color: $color-white;
 }
 
 a.badge-dark:hover {
-    border-color: $color-gray-400 !important;
-    background-color: $color-gray-400 !important;
-    color: $color-white !important;
+  border-color: $color-gray-400 !important;
+  background-color: $color-gray-400 !important;
+  color: $color-white !important;
 }
