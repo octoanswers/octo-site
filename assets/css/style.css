@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:700");
 .alert {
   padding: 1rem;
   border-radius: 2px;
@@ -234,9 +233,14 @@ a.badge-dark:hover {
   border-radius: 4px !important;
 }
 
+.btn-link {
+  color: #3498db;
+}
+
 .btn-primary {
   background-color: #3498db;
   border-color: #3498db;
+  background-color: #3498db;
 }
 
 .btn-primary:hover {
@@ -245,53 +249,36 @@ a.badge-dark:hover {
 }
 
 .btn-secondary {
-  color: #424242;
-  background-color: #F5F5F5;
+  color: #BDBDBD;
   border-color: #BDBDBD;
+  background-color: #BDBDBD;
 }
 
 .btn-secondary:hover {
-  color: #424242;
-  background-color: #E0E0E0;
-  border-color: #BDBDBD;
+  background-color: #424242;
+  border-color: #424242;
 }
 
 .btn-success {
-  color: #228C4C;
-  background-color: #ECFBF2;
+  color: #2BB462;
   border-color: #2BB462;
+  background-color: #2BB462;
 }
 
 .btn-success:hover {
-  color: #228C4C;
-  background-color: #C7F5D9;
-  border-color: #2BB462;
+  background-color: #228C4C;
+  border-color: #228C4C;
 }
 
 .btn-warning {
-  color: #8C7C22;
-  background-color: #F5EEC7;
-  border-color: #E8D87D;
+  color: #dbc234;
+  background-color: #dbc234;
+  border-color: #dbc234;
 }
 
 .btn-warning:hover {
-  color: #8C7C22;
-  background-color: #EEE3A2;
-  border-color: #E8D87D;
-}
-
-.btn-link {
-  color: #3498db;
-}
-
-.btn {
-  cursor: pointer;
-}
-
-.btn .btn-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-right: .25rem;
+  background-color: #B49F2B;
+  border-color: #B49F2B;
 }
 
 .btn-outline-primary {
@@ -300,7 +287,7 @@ a.badge-dark:hover {
 }
 
 .btn-outline-primary:hover {
-  color: #3498db;
+  background-color: #3498db;
   border-color: #22618C;
 }
 
@@ -310,7 +297,7 @@ a.badge-dark:hover {
 }
 
 .btn-outline-secondary:hover {
-  color: #616161;
+  background-color: #616161;
   border-color: #616161;
 }
 
@@ -320,8 +307,8 @@ a.badge-dark:hover {
 }
 
 .btn-outline-success:hover {
-  border-color: #228C4C;
   background-color: #228C4C;
+  border-color: #228C4C;
 }
 
 .btn-outline-warning {
@@ -330,9 +317,8 @@ a.badge-dark:hover {
 }
 
 .btn-outline-warning:hover {
-  color: #dbc234;
+  background-color: #dbc234;
   border-color: #dbc234;
-  background-color: transparent;
 }
 
 .box {
@@ -916,7 +902,6 @@ img.border-2 {
 
 .navbar .container a.navbar-brand {
   color: #3498db;
-  font-weight: 600;
 }
 
 .navbar .container .nav-link {
@@ -938,7 +923,7 @@ img.border-2 {
 }
 
 .navbar .container a.user-avatar img:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .progress {
