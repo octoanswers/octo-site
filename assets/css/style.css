@@ -294,23 +294,14 @@ a.badge-dark:hover {
   margin-right: .25rem;
 }
 
-.btn-sm .btn-icon {
-  width: 16px;
-  height: 16px;
-  margin-top: -2px;
-  margin-right: .125rem;
-}
-
 .btn-outline-primary {
   color: #3498db;
   border-color: #3498db;
-  background-color: transparent;
 }
 
 .btn-outline-primary:hover {
   color: #3498db;
   border-color: #22618C;
-  background-color: transparent;
 }
 
 .btn-outline-secondary {
@@ -321,18 +312,16 @@ a.badge-dark:hover {
 .btn-outline-secondary:hover {
   color: #616161;
   border-color: #616161;
-  background-color: transparent;
 }
 
 .btn-outline-success {
   color: #228C4C;
-  border-color: #2BB462;
+  border-color: #228C4C;
 }
 
 .btn-outline-success:hover {
-  color: #228C4C;
-  border-color: #2BB462;
-  background-color: #C7F5D9;
+  border-color: #228C4C;
+  background-color: #228C4C;
 }
 
 .btn-outline-warning {
@@ -1256,12 +1245,6 @@ blockquote p:last-child {
   font-weight: 800;
 }
 
-.lead {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #424242;
-}
-
 a {
   color: #3498db;
 }
@@ -1308,10 +1291,6 @@ small, .small {
 
 .small-xs {
   font-size: .75rem;
-}
-
-p {
-  line-height: 1.75;
 }
 
 del, ins {

@@ -1,13 +1,8 @@
 
 @import "typography/_blockquote";
 @import "typography/_font-weight";
-@import "typography/_lead";
 @import "typography/_links";
 @import "typography/_small";
-
-p {
-    line-height: 1.75;
-}
 
 del, ins { padding-left: .25rem; padding-right: .25rem; }
 del { background-color: #ffdce0; text-decoration: none; }
