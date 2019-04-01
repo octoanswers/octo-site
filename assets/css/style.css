@@ -902,6 +902,7 @@ img.border-2 {
 
 .navbar .container a.navbar-brand {
   color: #3498db;
+  font-weight: 600;
 }
 
 .navbar .container .nav-link {
