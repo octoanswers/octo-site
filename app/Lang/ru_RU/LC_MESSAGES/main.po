@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-02 22:16+0500\n"
-"PO-Revision-Date: 2019-04-02 22:16+0500\n"
+"POT-Creation-Date: 2019-04-02 23:26+0500\n"
+"PO-Revision-Date: 2019-04-02 23:26+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -23,7 +23,6 @@ msgstr ""
 #: Templates/question/block/actions/bottom.phtml:11
 #: Templates/question/block/actions/top.phtml:7
 #: Templates/question/block/actions/top.phtml:11
-#: Templates/question/block/info_about_question.phtml:13
 msgid "Edit answer"
 msgstr "Править ответ"
 
@@ -351,6 +350,7 @@ msgstr ""
 "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами."
 
 #: Templates/_common/navbar.phtml:21
+#: Templates/question/block/sidebar/sidebar.phtml:12
 msgid "About site"
 msgstr "О сайте"
 
@@ -512,7 +512,7 @@ msgstr "Загрузить картинку"
 
 #: Templates/question/block/actions.phtml:57
 #: Templates/question/block/actions/bottom.phtml:43
-#: Templates/question/block/sidebar/sidebar.phtml:257
+#: Templates/question/block/sidebar/sidebar.phtml:248
 #: Templates/question/modal/rename.phtml:8
 #: Templates/question/modal/rename.phtml:30
 msgid "Rename question"
@@ -523,13 +523,18 @@ msgstr "Переименовать вопрос"
 msgid "Report"
 msgstr "Пожаловаться"
 
+#: Templates/question/block/col_right/info_about_question.phtml:9
 #: Templates/question/block/contributors_full.phtml:7
-#: Templates/question/block/info_about_question.phtml:9
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Автор"
 msgstr[1] "Автора"
 msgstr[2] "Авторов"
+
+#: Templates/question/block/col_right/info_about_question.phtml:24
+#: Templates/question/block/related_questions.phtml:19
+msgid "Answer updated"
+msgstr "Ответ обновлен"
 
 #: Templates/question/block/contributors_full.phtml:10
 msgid "All Answer Contributors"
@@ -547,11 +552,6 @@ msgstr "Изменить темы"
 #: Templates/question/block/header/topics.phtml:38
 msgid "Set question topics"
 msgstr "Задать темы вопроса"
-
-#: Templates/question/block/info_about_question.phtml:19
-#: Templates/question/block/related_questions.phtml:19
-msgid "Answer updated"
-msgstr "Ответ обновлен"
 
 #: Templates/question/block/lure/be_first_contributor.phtml:14
 #: Templates/question/block/lure/be_first_contributor.phtml:37
@@ -583,11 +583,23 @@ msgstr "Топ авторов ответа"
 msgid "All answer contributors"
 msgstr "Все авторы ответа"
 
-#: Templates/question/block/sidebar/sidebar.phtml:247
+#: Templates/question/block/sidebar/sidebar.phtml:7
+msgid "Main page"
+msgstr "Главная страница"
+
+#: Templates/question/block/sidebar/sidebar.phtml:17
+msgid "Popular hashtags"
+msgstr "Популярные хештеги"
+
+#: Templates/question/block/sidebar/sidebar.phtml:22
+msgid "Random question"
+msgstr "Случайный вопрос"
+
+#: Templates/question/block/sidebar/sidebar.phtml:238
 msgid "Tools"
 msgstr "Инструменты"
 
-#: Templates/question/block/sidebar/sidebar.phtml:252
+#: Templates/question/block/sidebar/sidebar.phtml:243
 msgid "Change history"
 msgstr "История изменений"
 

@@ -1,42 +1,38 @@
 		  
 <nav class="collapse bd-links" id="bd-docs-nav">
-	<!--<div class="bd-toc-item">
-	  <a class="bd-toc-link" href="/docs/4.3/getting-started/introduction/">
-		Getting started
-	  </a>
+	<div class="bd-toc-item active">
+		<ul class="nav bd-sidenav">
+			<li>
+				<a href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
+					<?= _('Main page') ?>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<s><?= _('About site') ?></s>
+				</a>
+			</li>
+			<li>
+				<a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+					<?= _('Recent changes') ?>
+				</a>
+			</li>
+			<li>
+				<a href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
+					<?= _('Popular hashtags') ?>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<s><?= _('Random question') ?></s>
+				</a>
+			</li>
 
-	  
-	</div><div class="bd-toc-item active">
-	  <a class="bd-toc-link" href="/docs/4.3/content/reboot/">
-		Content
-	  </a>
-
-	  <ul class="nav bd-sidenav"><li>
-			<a href="/docs/4.3/content/reboot/">
-			  Reboot
-			</a>
-		  </li><li>
-			<a href="/docs/4.3/content/typography/">
-			  Typography
-			</a>
-		  </li><li>
-			<a href="/docs/4.3/content/code/">
-			  Code
-			</a>
-		  </li><li>
-			<a href="/docs/4.3/content/images/">
-			  Images
-			</a>
-		  </li><li>
-			<a href="/docs/4.3/content/tables/">
-			  Tables
-			</a>
-		  </li><li>
-			<a href="/docs/4.3/content/figures/">
-			  Figures
-			</a>
-		  </li></ul>
-	</div><div class="bd-toc-item active">
+		</ul>
+	</div>
+	
+	
+	<!--<div class="bd-toc-item active">
 	  <a class="bd-toc-link" href="/docs/4.3/components/alerts/">
 		Components
 	  </a>
@@ -249,7 +245,7 @@
 		<ul class="nav bd-sidenav">
 			<li>
 				<a href="<?= $this->question->getHistoryURL($this->lang) ?>">
-					<i class="fas fa-history mr-1"></i> <?= _('Change history') ?>
+					<?= _('Change history') ?>
 				</a>
 			</li>
 			<li>
