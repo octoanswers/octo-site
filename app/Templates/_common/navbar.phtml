@@ -1,7 +1,6 @@
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="container">
+<header class="navbar navbar-expand-md navbar-light bg-light">
 
         <?php if ($this->authUser): ?>
             <a class="navbar-brand" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
@@ -82,8 +81,8 @@
 
             </ul>
         </div>
-    </div>
-</nav>
+    
+</header>
 <!-- / navbar -->
 
 <!-- <li class="nav-item dropdown mr-3 ">

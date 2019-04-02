@@ -966,16 +966,16 @@ img.border-2 {
   border-bottom: 1px solid #E0E0E0;
 }
 
-.navbar .container a.navbar-brand {
+.navbar a.navbar-brand {
   color: #3498db;
   font-weight: 600;
 }
 
-.navbar .container .nav-link {
+.navbar .nav-link {
   color: #9E9E9E;
 }
 
-.navbar .container a.user-avatar {
+.navbar a.user-avatar {
   display: inline-block;
   width: 38px;
   height: 38px;
@@ -983,13 +983,13 @@ img.border-2 {
   border-radius: 3px;
 }
 
-.navbar .container a.user-avatar img {
+.navbar a.user-avatar img {
   width: 36px;
   height: 36px;
   border-radius: 3px;
 }
 
-.navbar .container a.user-avatar img:hover {
+.navbar a.user-avatar img:hover {
   opacity: 0.8;
 }
 
