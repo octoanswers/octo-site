@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-02 21:40+0500\n"
-"PO-Revision-Date: 2019-04-02 21:40+0500\n"
+"POT-Creation-Date: 2019-04-02 22:16+0500\n"
+"PO-Revision-Date: 2019-04-02 22:16+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -512,6 +512,7 @@ msgstr "Загрузить картинку"
 
 #: Templates/question/block/actions.phtml:57
 #: Templates/question/block/actions/bottom.phtml:43
+#: Templates/question/block/sidebar/sidebar.phtml:257
 #: Templates/question/modal/rename.phtml:8
 #: Templates/question/modal/rename.phtml:30
 msgid "Rename question"
@@ -581,6 +582,14 @@ msgstr "Топ авторов ответа"
 #: Templates/question/block/sidebar/contributors_top.phtml:60
 msgid "All answer contributors"
 msgstr "Все авторы ответа"
+
+#: Templates/question/block/sidebar/sidebar.phtml:247
+msgid "Tools"
+msgstr "Инструменты"
+
+#: Templates/question/block/sidebar/sidebar.phtml:252
+msgid "Change history"
+msgstr "История изменений"
 
 #: Templates/question/block/subscribe.phtml:13
 msgid "Subscription to the question"

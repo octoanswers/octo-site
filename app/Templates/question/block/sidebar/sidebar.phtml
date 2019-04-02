@@ -244,27 +244,27 @@
 	
 	<div class="bd-toc-item active">
 		<a class="bd-toc-link" href="#">
-			Инструменты
+			<?= _('Tools') ?>
 		</a>
 		<ul class="nav bd-sidenav">
 			<li>
-				<a href="#/docs/4.3/about/team/">
-					История
+				<a href="<?= $this->question->getHistoryURL($this->lang) ?>">
+					<i class="fas fa-history mr-1"></i> <?= _('Change history') ?>
 				</a>
 			</li>
 			<li>
-				<a href="#/docs/4.3/about/brand/">
-					Переименовать
+				<a href="#">
+					<s><?= _('Rename question') ?></s>
 				</a>
 			</li>
 			<li>
-				<a href="#/docs/4.3/about/license/">
-					Ссылки сюда
+				<a href="#">
+					<s>Ссылки сюда</s>
 				</a>
 			</li>
 			<li>
-				<a href="#/docs/4.3/about/translations/">
-					Сведения о странице
+				<a href="#">
+					<s>Сведения о странице</s>
 				</a>
 			</li>
 		</ul>
