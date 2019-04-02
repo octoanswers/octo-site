@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-03 00:34+0500\n"
-"PO-Revision-Date: 2019-04-03 00:34+0500\n"
+"POT-Creation-Date: 2019-04-03 01:18+0500\n"
+"PO-Revision-Date: 2019-04-03 01:18+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -94,7 +94,7 @@ msgstr "Задайте вопрос и получите один исчерпы�
 
 #: PageController/Main/Show.php:40 PageController/Main/Show.php:46
 #: PageController/Main/Show.php:65 Templates/_common/lure/about_octo.phtml:10
-#: Templates/question/block/col_right/about_answeropedia.phtml:10
+#: Templates/question/block/right/about_answeropedia.phtml:10
 msgid ""
 "Answeropedia is like Wikipedia, only for questions and answers. You ask a "
 "question and get one complete, comprehensive and competent answer from the "
@@ -142,7 +142,7 @@ msgstr "Недавно обновленные"
 msgid "Questions and Answers"
 msgstr "Вопросы и ответы"
 
-#: PageController/Sandbox/All.php:49 Templates/_common/navbar.phtml:34
+#: PageController/Sandbox/All.php:49 Templates/_common/navbar.phtml:46
 msgid "Sandbox"
 msgstr "Песочница"
 
@@ -171,12 +171,12 @@ msgstr "Вопросы без тем"
 msgid "Search %query% - Answeropedia"
 msgstr "Поиск %query% - Answeropedia"
 
-#: PageController/Search/Questions.php:53 Templates/_common/navbar.phtml:40
+#: PageController/Search/Questions.php:53 Templates/_common/navbar.phtml:34
 #: Templates/search/questions.phtml:11
 msgid "Questions"
 msgstr "Вопросы"
 
-#: PageController/Search/Questions.php:56 Templates/_common/navbar.phtml:46
+#: PageController/Search/Questions.php:56 Templates/_common/navbar.phtml:40
 #: Templates/search/questions.phtml:14
 msgid "Topics"
 msgstr "Темы"
@@ -236,7 +236,7 @@ msgstr "Пустой ответ"
 
 #: Templates/_common/block/about_octoanswers.phtml:4
 #: Templates/_common/col_sidebar/footer.phtml:5
-#: Templates/question/block/col_right/about_answeropedia.phtml:7
+#: Templates/question/block/right/about_answeropedia.phtml:7
 #: Templates/root/block/navbar.phtml:19
 msgid "About Answeropedia"
 msgstr "О Answeropedia"
@@ -527,22 +527,13 @@ msgstr "Переименовать вопрос"
 msgid "Report"
 msgstr "Пожаловаться"
 
-#: Templates/question/block/col_right/about_answeropedia.phtml:13
-msgid "Join the community"
-msgstr "Присоединиться к сообществу"
-
-#: Templates/question/block/col_right/info_about_question.phtml:9
 #: Templates/question/block/contributors_full.phtml:7
+#: Templates/question/block/right/info_about_question.phtml:9
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Автор"
 msgstr[1] "Автора"
 msgstr[2] "Авторов"
-
-#: Templates/question/block/col_right/info_about_question.phtml:24
-#: Templates/question/block/related_questions.phtml:19
-msgid "Answer updated"
-msgstr "Ответ обновлен"
 
 #: Templates/question/block/contributors_full.phtml:10
 msgid "All Answer Contributors"
@@ -574,6 +565,19 @@ msgid ""
 msgstr ""
 "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
 "тема вопроса вам близка!"
+
+#: Templates/question/block/related_questions.phtml:19
+#: Templates/question/block/right/info_about_question.phtml:24
+msgid "Answer updated"
+msgstr "Ответ обновлен"
+
+#: Templates/question/block/right/about_answeropedia.phtml:13
+msgid "Join the community"
+msgstr "Присоединиться к сообществу"
+
+#: Templates/question/block/right/image.phtml:10
+msgid "Update picture"
+msgstr "Обновить картинку"
 
 #: Templates/question/block/share.phtml:5
 #: Templates/question/block/share.phtml:9
