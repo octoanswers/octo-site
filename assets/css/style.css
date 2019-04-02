@@ -1592,13 +1592,15 @@ table.no-border {
   display: block;
 }
 
-.toc-entry a {
+.toc-entry a,
+.toc-entry span {
   display: block;
   padding: 0.125rem 1.5rem;
   color: #77757a;
 }
 
-.toc-entry a:hover {
+.toc-entry a:hover,
+.toc-entry span:hover {
   color: #3498db;
   text-decoration: none;
 }

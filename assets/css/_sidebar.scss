@@ -29,7 +29,8 @@
 .toc-entry {
   display: block;
 
-  a {
+  a,
+  span {
     display: block;
     padding: 0.125rem 1.5rem;
     color: #77757a;

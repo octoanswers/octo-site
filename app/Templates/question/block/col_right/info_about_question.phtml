@@ -1,0 +1,29 @@
+
+<!-- info_about_question -->
+<div class="my-4">
+	<ul class="section-nav">
+
+		<?php if (count($this->contributors)): ?>
+			<li class="toc-entry toc-h2">
+				<a href="#contributors_full_list">
+					<?= count($this->contributors).' '.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
+				</a>
+			</li>
+		<?php endif; ?>
+
+		<?php if ($this->answer->getText()): ?>
+			<li class="toc-entry toc-h2">
+				<span>
+				<?= $this->question->getHumanizedMinutesToRead() ?>
+				</span>
+			</li>
+		<?php endif; ?>
+		
+		<li class="toc-entry toc-h2">
+			<span>
+				<?= _('Answer updated').': '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->answer->getUpdatedAt()) ?>
+			</span>
+		</li>
+	</ul>
+</div>
+<!-- / info_about_question -->
