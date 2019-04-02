@@ -10,12 +10,12 @@
     width: $user-avatar-size;
     height: $user-avatar-size;
     border: 1px solid $color-gray-300;
-    border-radius: $border-radius;
+    border-radius: 50%;
 
     img {
       width: $user-avatar-size - 2;
       height: $user-avatar-size - 2;
-      border-radius: $border-radius;
+      border-radius: 50%;
 
       &:hover {
         opacity: 0.8;
