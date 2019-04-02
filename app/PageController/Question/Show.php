@@ -46,7 +46,7 @@ class Show_Question_PageController extends Abstract_PageController
             }
 
             $this->template = 'question/redirect';
-            $this->pageTitle = 'Redirect page: '.$this->question->getTitle().' - '._('OctoAnswers');
+            $this->pageTitle = 'Redirect page: '.$this->question->getTitle().' - '._('Answeropedia');
 
             $output = $this->renderPage();
             $response->getBody()->write($output);
@@ -79,7 +79,7 @@ class Show_Question_PageController extends Abstract_PageController
         }
 
         $this->template = 'question/show';
-        $this->pageTitle = $this->question->getTitle().' - '._('OctoAnswers');
+        $this->pageTitle = $this->question->getTitle().' - '._('Answeropedia');
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->getURL($this->lang);
 
@@ -94,7 +94,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->openGraph = $this->_getOpenGraph();
 
         $this->shareLink['title'] = $this->question->getTitle();
-        $this->shareLink['description'] = _('Wiki-answers to your questions on OctoAnswers');
+        $this->shareLink['description'] = _('Wiki-answers to your questions on Answeropedia');
         $this->shareLink['url'] = $this->question->getURL($this->lang);
         $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
 

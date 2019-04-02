@@ -16,7 +16,7 @@ class List_Topics_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('New topics - Page 1 - OctoAnswers', $responseBody);
+        $this->assertContains('New topics - Page 1 - Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

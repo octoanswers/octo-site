@@ -16,7 +16,7 @@ class Show_Question_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Where i am born? - OctoAnswers', $responseBody);
+        $this->assertContains('Where i am born? - Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

@@ -17,7 +17,7 @@ class Questions_Search_PageController__ru__Test extends Abstract_Frontend_TestCa
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Поиск Apple - OctoAnswers', $responseBody);
+        $this->assertContains('Поиск Apple - Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -33,7 +33,7 @@ class Questions_Search_PageController__ru__Test extends Abstract_Frontend_TestCa
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Поиск  - OctoAnswers', $responseBody);
+        $this->assertContains('Поиск  - Answeropedia', $responseBody);
         //$this->assertSame(200, $response->getStatusCode());
     }
 }

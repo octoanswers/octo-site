@@ -34,6 +34,6 @@ class Newest_Topics_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('New topics').' - '._('Page').' '.$this->page.' - '._('OctoAnswers');
+        return _('New topics').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
     }
 }

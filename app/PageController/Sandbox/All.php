@@ -46,12 +46,12 @@ class All_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Sandbox').' - '._('Page').' '.$this->page.' - '._('OctoAnswers');
+        return _('Sandbox').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
     }
 
     public function _getPageDescription(): string
     {
-        $postfix = ' (страница '.$this->page.') на сайте '._('OctoAnswers');
+        $postfix = ' (страница '.$this->page.') на сайте '._('Answeropedia');
         $description = 'Список вопросы и ответы'.$postfix;
 
         return $description;

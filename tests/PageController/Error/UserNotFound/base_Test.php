@@ -19,7 +19,7 @@ class UserNotFound_Error_PageController__Test extends Abstract_Frontend_TestCase
     //     $response = $this->app->run(true);
     //     $responseBody = (string) $response->getBody();
     //
-    //     $this->assertContains('User not found: unexistsusername - OctoAnswers', $responseBody);
+    //     $this->assertContains('User not found: unexistsusername - Answeropedia', $responseBody);
     //     $this->assertSame(404, $response->getStatusCode());
     // }
     //
@@ -35,7 +35,7 @@ class UserNotFound_Error_PageController__Test extends Abstract_Frontend_TestCase
     //     $response = $this->app->run(true);
     //     $responseBody = (string) $response->getBody();
     //
-    //     $this->assertContains('Пользователь не найден: unexistsusername - OctoAnswers', $responseBody);
+    //     $this->assertContains('Пользователь не найден: unexistsusername - Answeropedia', $responseBody);
     //     $this->assertSame(404, $response->getStatusCode());
     // }
 }

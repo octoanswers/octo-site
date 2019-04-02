@@ -15,7 +15,7 @@ class Show_Settings_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         
         $this->template = 'settings/show';
-        $this->pageTitle = 'Настройки'.' - '._('OctoAnswers');
+        $this->pageTitle = 'Настройки'.' - '._('Answeropedia');
 
         $this->additionalJavascript[] = 'user/upload_avatar';
         $this->additionalJavascript[] = 'user/update_name';

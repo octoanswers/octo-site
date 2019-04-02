@@ -2,12 +2,12 @@
 
 Answeropedia is a wiki-based Q&A (questions and answers) service, running on PHP/MySQL.
 
-Currently, OctoAnswers is launched only in [Russian](https://answeropedia.org/ru). If you want that OctoAnswers to work in your own language, please [contact me](https://www.facebook.com/alexandergomzyakov) on Facebook, we can talk about it.
+Currently, Answeropedia is launched only in [Russian](https://answeropedia.org/ru). If you want that Answeropedia to work in your own language, please [contact me](https://www.facebook.com/alexandergomzyakov) on Facebook, we can talk about it.
 
 ## Requirements 
 
 + Apache/Nginx
-+ PHP 5.4+;
++ PHP 7.0+;
 + MySQL/MariaDB databases;
 + Gettext module;
 

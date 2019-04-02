@@ -22,7 +22,7 @@ class Show_Root_PageController extends Abstract_PageController
 
         $this->template = 'root/show';
         $this->showFooter = false;
-        $this->pageTitle = _('OctoAnswers');
+        $this->pageTitle = _('Answeropedia');
         $this->pageDescription = _('Questions and Answers');
         $this->canonicalURL = SITE_URL;
 

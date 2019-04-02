@@ -78,14 +78,14 @@ class Show_Topic_PageController extends Abstract_PageController
             $this->related_topics = $this->_get_related_topics($this->topic_questions);
         }
         //} else {
-          //  $this->related_topics = [];
+        //  $this->related_topics = [];
         //}
 
         $this->_prepareFollowButton();
 
         $this->template = 'topic/show';
         $this->pageTitle = $this->_get_page_title();
-        //str_replace('%topic%', , _('Topic - Page title')).' • '._('OctoAnswers');
+        //str_replace('%topic%', , _('Topic - Page title')).' • '._('Answeropedia');
         $this->pageDescription = $this->_get_page_description();
         $this->nextPageURL = null;
 
@@ -100,7 +100,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
     protected function _get_page_title()
     {
-        return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic% - OctoAnswers'));
+        return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic% - Answeropedia'));
     }
 
     protected function _prepareFollowButton()

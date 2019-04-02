@@ -2,7 +2,7 @@
 
 <phpunit bootstrap="tests/bootstrap.php">
   <testsuites>
-    <testsuite name="OctoAnswers Test Suite">
+    <testsuite name="Answeropedia Test Suite">
       <directory>tests</directory>
     </testsuite>
   </testsuites>

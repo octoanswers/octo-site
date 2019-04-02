@@ -16,7 +16,7 @@ class History_Answer_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('История изменений ответа Чем занимается гинеколог? - OctoAnswers', $responseBody);
+        $this->assertContains('История изменений ответа Чем занимается гинеколог? - Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

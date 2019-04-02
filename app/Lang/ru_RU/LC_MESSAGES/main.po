@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-18 18:26+0500\n"
-"PO-Revision-Date: 2018-07-18 18:48+0500\n"
+"POT-Creation-Date: 2019-04-02 21:40+0500\n"
+"PO-Revision-Date: 2019-04-02 21:40+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.9\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: Templates/question/block/actions/bottom.phtml:11
 #: Templates/question/block/actions/top.phtml:7
 #: Templates/question/block/actions/top.phtml:11
-#: Templates/question/block/header/info.phtml:11
+#: Templates/question/block/info_about_question.phtml:13
 msgid "Edit answer"
 msgstr "Править ответ"
 
@@ -33,8 +33,8 @@ msgstr "Править ответ"
 #: PageController/Error/QuestionNotFound.php:21 PageController/Feed/Show.php:44
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
 #: PageController/Main/Show.php:39 PageController/Main/Show.php:45
-#: PageController/Main/Show.php:64 PageController/Question/Show.php:47
-#: PageController/Question/Show.php:80 PageController/Questions/Newest.php:46
+#: PageController/Main/Show.php:64 PageController/Question/Show.php:49
+#: PageController/Question/Show.php:82 PageController/Questions/Newest.php:46
 #: PageController/Questions/Newest.php:51
 #: PageController/Questions/RecentlyUpdated.php:43
 #: PageController/Questions/RecentlyUpdated.php:48
@@ -46,9 +46,10 @@ msgstr "Править ответ"
 #: PageController/Sandbox/WithoutTopics.php:63
 #: PageController/Search/Topics.php:24 PageController/Settings/Show.php:18
 #: PageController/Topics/Newest.php:37 PageController/Users/Newest.php:45
-#: Templates/_common/navbar.phtml:7
-msgid "OctoAnswers"
-msgstr "OctoAnswers"
+#: Templates/_common/navbar.phtml:7 Templates/_common/navbar.phtml:11
+#: Templates/root/block/navbar.phtml:6
+msgid "Answeropedia"
+msgstr "Answeropedia"
 
 #: PageController/Answer/History.php:31 PageController/Answer/History.php:32
 #: Templates/answer/history/jumbotron.phtml:6
@@ -73,19 +74,19 @@ msgstr "Ошибка 404"
 msgid "Question not found"
 msgstr "Вопрос не найден"
 
-#: PageController/Feed/Show.php:44 Templates/_common/navbar.phtml:28
+#: PageController/Feed/Show.php:44
 msgid "Feed"
 msgstr "Лента"
 
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: Templates/_common/footer.phtml:26 Templates/_common/sidebar/footer.phtml:20
-#: Templates/flow/block/header.phtml:4
+#: Templates/_common/col_sidebar/footer.phtml:20
+#: Templates/_common/footer.phtml:26 Templates/flow/block/header.phtml:4
 msgid "Flow"
 msgstr "Поток"
 
 #: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
-msgid "Questions and answers flow on OctoAnswers"
-msgstr "Поток вопросов и ответов на ОктоАнсверс"
+msgid "Questions and answers flow on Answeropedia."
+msgstr "Поток вопросов и ответов на Answeropedia."
 
 #: PageController/Main/Show.php:39 PageController/Main/Show.php:45
 #: PageController/Main/Show.php:64 Templates/main/_block/jumbotron.phtml:8
@@ -93,26 +94,27 @@ msgid "Ask a question and get one complete answer"
 msgstr "Задайте вопрос и получите один исчерпывающий ответ"
 
 #: PageController/Main/Show.php:40 PageController/Main/Show.php:46
-#: PageController/Main/Show.php:65
+#: PageController/Main/Show.php:65 Templates/_common/lure/about_octo.phtml:10
 msgid ""
-"OctoAnswers is like Wikipedia, only for questions and answers. You ask a "
+"Answeropedia is like Wikipedia, only for questions and answers. You ask a "
 "question and get one complete, comprehensive and competent answer from the "
 "community."
 msgstr ""
-"OctoAnswers - это как Википедия, только для вопросов и ответов. Пользователи "
-"могут задавать вопросы, отвечать на них и дополнять чужие ответы."
+"Answeropedia - это как Википедия, только для вопросов и ответов. "
+"Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
+"ответы."
 
-#: PageController/Question/Show.php:95
-msgid "Wiki-answers to your questions on OctoAnswers"
+#: PageController/Question/Show.php:97
+msgid "Wiki-answers to your questions on Answeropedia"
 msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
 
-#: PageController/Question/Show.php:188
+#: PageController/Question/Show.php:190
 msgid "Wiki-answer on question: %question%"
 msgstr "Вики-ответ на вопрос: %question%"
 
 #: PageController/Question/UpdateTopics.php:24
-msgid "Update topics for question \"%question%\" - OctoAnswers"
-msgstr "Обновление тем вопроса «%question%» - OctoAnswers"
+msgid "Update topics for question \"%question%\" - Answeropedia"
+msgstr "Обновление тем вопроса «%question%» - Answeropedia"
 
 #: PageController/Question/UpdateTopics.php:25
 msgid "Update topics for question \"%question%\""
@@ -140,7 +142,7 @@ msgstr "Недавно обновленные"
 msgid "Questions and Answers"
 msgstr "Вопросы и ответы"
 
-#: PageController/Sandbox/All.php:49 Templates/_common/navbar.phtml:35
+#: PageController/Sandbox/All.php:49 Templates/_common/navbar.phtml:34
 msgid "Sandbox"
 msgstr "Песочница"
 
@@ -166,15 +168,15 @@ msgid "Questions without topics"
 msgstr "Вопросы без тем"
 
 #: PageController/Search/Questions.php:30
-msgid "Search %query% - OctoAnswers"
-msgstr "Поиск %query% - OctoAnswers"
+msgid "Search %query% - Answeropedia"
+msgstr "Поиск %query% - Answeropedia"
 
 #: PageController/Search/Questions.php:53 Templates/_common/navbar.phtml:40
 #: Templates/search/questions.phtml:11
 msgid "Questions"
 msgstr "Вопросы"
 
-#: PageController/Search/Questions.php:56 Templates/_common/navbar.phtml:45
+#: PageController/Search/Questions.php:56 Templates/_common/navbar.phtml:46
 #: Templates/search/questions.phtml:14
 msgid "Topics"
 msgstr "Темы"
@@ -191,15 +193,15 @@ msgstr "Поиск"
 msgid "Search topics"
 msgstr "Поиск тем"
 
-#: PageController/Topic/Show.php:69
+#: PageController/Topic/Show.php:68
 msgid "More topics"
 msgstr "Больше тем"
 
-#: PageController/Topic/Show.php:99
-msgid "Questions and answers on the topic %topic% - OctoAnswers"
-msgstr "Вопросы и ответы на тему %topic% - OctoAnswers"
+#: PageController/Topic/Show.php:103
+msgid "Questions and answers on the topic %topic% - Answeropedia"
+msgstr "Вопросы и ответы на тему %topic% - Answeropedia"
 
-#: PageController/Topic/Show.php:129
+#: PageController/Topic/Show.php:133
 msgid "Questions and answers on the topic %topic%"
 msgstr "Вопросы и ответы на тему %topic%"
 
@@ -209,8 +211,8 @@ msgstr "Новые темы"
 
 #: PageController/User/Show.php:31 PageController/User/Show.php:32
 #: PageController/User/Show.php:68
-msgid "Wiki-answers on OctoAnswers"
-msgstr "Вики-ответы на OctoAnswers"
+msgid "Wiki-answers on Answeropedia"
+msgstr "Вики-ответы на Answeropedia"
 
 #: PageController/Users/Newest.php:38 Templates/questions/show_list/nav.phtml:5
 #: Templates/topics/block/nav.phtml:6 Templates/users/block/nav.phtml:6
@@ -233,63 +235,65 @@ msgid "Empty answer"
 msgstr "Пустой ответ"
 
 #: Templates/_common/block/about_octoanswers.phtml:4
-#: Templates/_common/sidebar/footer.phtml:5
-msgid "About OctoAnswers"
-msgstr "О сайте"
+#: Templates/_common/col_sidebar/footer.phtml:5
+#: Templates/root/block/navbar.phtml:19
+msgid "About Answeropedia"
+msgstr "О Answeropedia"
 
 #: Templates/_common/block/about_octoanswers.phtml:7
 msgid ""
-"OctoAnswers is a wiki-based site where users can ask questions, respond to "
+"Answeropedia is a wiki-based site where users can ask questions, respond to "
 "them and supplement other people’s answers."
 msgstr ""
-"OctoAnswers — это основанный на вики-принципах сайт, где пользователи могут "
+"Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
 
 #: Templates/_common/block/about_octoanswers.phtml:10
 #: Templates/_common/modal/signup.phtml:8
-#: Templates/_common/modal/signup.phtml:36 Templates/_common/navbar.phtml:66
-#: Templates/question/modal/edit_answer_lure.phtml:13
-#: Templates/question/modal/first_answer__signup.phtml:13
-#: Templates/question/modal/follow_question_lure.phtml:13
+#: Templates/_common/modal/signup.phtml:36 Templates/_common/navbar.phtml:76
+#: Templates/question/modal/edit_answer_lure.phtml:15
+#: Templates/question/modal/first_answer__signup.phtml:15
+#: Templates/question/modal/follow_question_lure.phtml:15
 #: Templates/topic/block/actions.phtml:47
-#: Templates/users/block/container_login_or_signup.phtml:11
-#: Templates/users/block/container_login_or_signup.phtml:19
+#: Templates/users/block/login_or_signup.phtml:4
+#: Templates/users/block/login_or_signup.phtml:12
 msgid "Signup"
 msgstr "Зарегистрироваться"
+
+#: Templates/_common/col_sidebar/footer.phtml:10
+#: Templates/_common/footer.phtml:16
+msgid "Support"
+msgstr "Поддержка"
+
+#: Templates/_common/col_sidebar/footer.phtml:15
+#: Templates/_common/footer.phtml:21 Templates/search/questions.phtml:17
+msgid "Users"
+msgstr "Пользователи"
+
+#: Templates/_common/col_sidebar/footer.phtml:25
+msgid "Rules"
+msgstr "Правила"
 
 #: Templates/_common/footer.phtml:11
 msgid "About"
 msgstr "О сайте"
 
-#: Templates/_common/footer.phtml:16 Templates/_common/sidebar/footer.phtml:10
-msgid "Support"
-msgstr "Поддержка"
-
-#: Templates/_common/footer.phtml:21 Templates/_common/sidebar/footer.phtml:15
-#: Templates/search/questions.phtml:17
-msgid "Users"
-msgstr "Пользователи"
-
-#: Templates/_common/footer.phtml:34 Templates/_common/sidebar/footer.phtml:30
-msgid "Icon pack by icons8"
-msgstr "Иконки от icons8"
-
-#: Templates/_common/footer.phtml:43
+#: Templates/_common/footer.phtml:35
 msgid "Change language"
 msgstr "Изменить язык"
 
-#: Templates/_common/footer.phtml:47
+#: Templates/_common/footer.phtml:39
 msgid "English"
 msgstr "Английский"
 
-#: Templates/_common/footer.phtml:50
+#: Templates/_common/footer.phtml:42
 msgid "Russian"
 msgstr "Русский"
 
-#: Templates/_common/item/question_with_answer.phtml:32
-#: Templates/question/block/lure/be_first_contributor.phtml:18
-#: Templates/question/block/lure/be_first_contributor.phtml:39
-#: Templates/question/block/related_questions.phtml:29
+#: Templates/_common/item/question_with_answer.phtml:31
+#: Templates/question/block/lure/be_first_contributor.phtml:20
+#: Templates/question/block/lure/be_first_contributor.phtml:43
+#: Templates/question/block/related_questions.phtml:24
 msgid "Write first answer"
 msgstr "Написать первый ответ"
 
@@ -316,8 +320,8 @@ msgstr "Какой у вас вопрос?"
 msgid "Ask a question"
 msgstr "Задать вопрос"
 
-#: Templates/_common/modal/login.phtml:8 Templates/_common/navbar.phtml:61
-#: Templates/users/block/container_login_or_signup.phtml:16
+#: Templates/_common/modal/login.phtml:8 Templates/_common/navbar.phtml:71
+#: Templates/users/block/login_or_signup.phtml:9
 msgid "Login"
 msgstr "Вход"
 
@@ -346,25 +350,17 @@ msgid ""
 msgstr ""
 "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами."
 
-#: Templates/_common/navbar.phtml:20
+#: Templates/_common/navbar.phtml:21
 msgid "About site"
 msgstr "О сайте"
 
-#: Templates/_common/navbar.phtml:54
-msgid "Ask"
-msgstr "Спросить"
+#: Templates/_common/navbar.phtml:28
+msgid "Recent changes"
+msgstr "Свежие правки"
 
 #: Templates/_common/navbar.phtml:91
-msgid "Lang - English"
-msgstr "Английский"
-
-#: Templates/_common/navbar.phtml:94
-msgid "Lang - Russian"
-msgstr "Русский"
-
-#: Templates/_common/sidebar/footer.phtml:25
-msgid "Rules"
-msgstr "Правила"
+msgid "Ask a Question"
+msgstr "Задать вопрос"
 
 #: Templates/answer/edit/header.phtml:11
 #: Templates/answer/history/jumbotron.phtml:13
@@ -442,15 +438,15 @@ msgstr "Ответьте на вопрос"
 msgid "How it works?"
 msgstr "Как это работает?"
 
-#: Templates/main/_block/how_it_works.phtml:16
+#: Templates/main/_block/how_it_works.phtml:20
 msgid "You ask a question about any topic of interest to you"
 msgstr "Вы задаете вопрос на любую интересующую вас тему"
 
-#: Templates/main/_block/how_it_works.phtml:22
+#: Templates/main/_block/how_it_works.phtml:31
 msgid "We find a specialist who can give a competent answer"
 msgstr "Мы находим специалистов, которые могут дать компетентный ответ"
 
-#: Templates/main/_block/how_it_works.phtml:28
+#: Templates/main/_block/how_it_works.phtml:42
 msgid "You receive an answer to the email"
 msgstr "Вы получаете исчерпывающий ответ на email"
 
@@ -460,10 +456,10 @@ msgstr "Что значит исчерпывающий?"
 
 #: Templates/main/_block/share.phtml:3
 msgid ""
-"You can help the OctoAnswers project by simply sharing your link with your "
+"You can help the Answeropedia project by simply sharing your link with your "
 "friends."
 msgstr ""
-"Вы можете помочь проекту OctoAnswers, просто поделившись со своими друзьями "
+"Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями "
 "ссылкой на него."
 
 #: Templates/question/block/actions.phtml:22
@@ -526,18 +522,21 @@ msgstr "Переименовать вопрос"
 msgid "Report"
 msgstr "Пожаловаться"
 
-#: Templates/question/block/contributors_full.phtml:6
-#: Templates/question/block/header/info.phtml:7
+#: Templates/question/block/contributors_full.phtml:7
+#: Templates/question/block/info_about_question.phtml:9
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Автор"
 msgstr[1] "Автора"
 msgstr[2] "Авторов"
 
-#: Templates/question/block/header/info.phtml:17
-#: Templates/question/block/related_questions.phtml:24
-msgid "Answer updated"
-msgstr "Ответ обновлен"
+#: Templates/question/block/contributors_full.phtml:10
+msgid "All Answer Contributors"
+msgstr "Все авторы ответа"
+
+#: Templates/question/block/contributors_full.phtml:50
+msgid "Last contribution"
+msgstr "Топ авторов ответа"
 
 #: Templates/question/block/header/topics.phtml:21
 msgid "Update topics"
@@ -548,15 +547,18 @@ msgstr "Изменить темы"
 msgid "Set question topics"
 msgstr "Задать темы вопроса"
 
-#: Templates/question/block/lure/be_first_contributor.phtml:8
-#: Templates/question/block/lure/be_first_contributor.phtml:12
-#: Templates/question/block/lure/be_first_contributor.phtml:29
-#: Templates/question/block/lure/be_first_contributor.phtml:33
+#: Templates/question/block/info_about_question.phtml:19
+#: Templates/question/block/related_questions.phtml:19
+msgid "Answer updated"
+msgstr "Ответ обновлен"
+
+#: Templates/question/block/lure/be_first_contributor.phtml:14
+#: Templates/question/block/lure/be_first_contributor.phtml:37
 msgid "Be the first author"
 msgstr "Станьте первым автором"
 
-#: Templates/question/block/lure/be_first_contributor.phtml:15
-#: Templates/question/block/lure/be_first_contributor.phtml:36
+#: Templates/question/block/lure/be_first_contributor.phtml:17
+#: Templates/question/block/lure/be_first_contributor.phtml:40
 msgid ""
 "Still no one tried to write an answer to this question. Be the first if the "
 "topic of the question is close to you!"
@@ -572,19 +574,19 @@ msgid ""
 msgstr ""
 "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь ссылкой"
 
-#: Templates/question/block/sidebar/contributors_top.phtml:14
+#: Templates/question/block/sidebar/contributors_top.phtml:15
 msgid "Top answer contributors"
 msgstr "Топ авторов ответа"
 
-#: Templates/question/block/sidebar/contributors_top.phtml:65
+#: Templates/question/block/sidebar/contributors_top.phtml:60
 msgid "All answer contributors"
 msgstr "Все авторы ответа"
 
-#: Templates/question/block/subscribe.phtml:11
+#: Templates/question/block/subscribe.phtml:13
 msgid "Subscription to the question"
 msgstr "Подписка на вопрос"
 
-#: Templates/question/block/subscribe.phtml:14
+#: Templates/question/block/subscribe.phtml:16
 msgid ""
 "Enter your email address to get notified about the answer as soon as it "
 "appears"
@@ -592,28 +594,28 @@ msgstr ""
 "Укажите адрес электронной почты и мы сообщим об ответе, как только он "
 "появится"
 
-#: Templates/question/block/subscribe.phtml:23
+#: Templates/question/block/subscribe.phtml:25
 msgid "Your email"
 msgstr "Ваш email"
 
-#: Templates/question/modal/edit_answer_lure.phtml:9
+#: Templates/question/modal/edit_answer_lure.phtml:11
 msgid "Register or log in and you can edit or supplement this question."
 msgstr ""
 "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить "
 "этот вопрос."
 
-#: Templates/question/modal/edit_answer_lure.phtml:16
-#: Templates/question/modal/feedback_thanks.phtml:13
-#: Templates/question/modal/first_answer__signup.phtml:16
-#: Templates/question/modal/follow_question_lure.phtml:16
+#: Templates/question/modal/edit_answer_lure.phtml:18
+#: Templates/question/modal/feedback_thanks.phtml:15
+#: Templates/question/modal/first_answer__signup.phtml:18
+#: Templates/question/modal/follow_question_lure.phtml:18
 msgid "Close"
 msgstr "Закрыть"
 
-#: Templates/question/modal/feedback_thanks.phtml:9
+#: Templates/question/modal/feedback_thanks.phtml:11
 msgid "Thanks for the feedback!"
 msgstr "Спасибо за отзыв!"
 
-#: Templates/question/modal/first_answer__signup.phtml:9
+#: Templates/question/modal/first_answer__signup.phtml:11
 msgid ""
 "Register or log in and you will be the first to write the answer to this "
 "question."
@@ -621,7 +623,7 @@ msgstr ""
 "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
 "вопрос."
 
-#: Templates/question/modal/follow_question_lure.phtml:9
+#: Templates/question/modal/follow_question_lure.phtml:11
 msgid "Register or sign in and you can subscribe to this question."
 msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
 
@@ -640,8 +642,8 @@ msgid "Upload question image"
 msgstr "Загрузка картинки вопроса"
 
 #: Templates/question/show/signup_lure.phtml:5
-msgid "Register on OctoAnswers and you will be able to"
-msgstr "Зарегистрируйтесь на OctoAnswers и вы сможете"
+msgid "Register on Answeropedia and you will be able to"
+msgstr "Зарегистрируйтесь на Answeropedia и вы сможете"
 
 #: Templates/question/show/signup_lure.phtml:7
 msgid "See what questions your friends are asking today"
@@ -663,6 +665,10 @@ msgstr "Популярные"
 #: Templates/questions/show_list_full.phtml:22
 msgid "More questions"
 msgstr "Больше вопросов"
+
+#: Templates/root/block/navbar.phtml:14
+msgid "It's like wikipedia, only for questions and answers."
+msgstr "Это как Википедия, только для вопросов и ответов."
 
 #: Templates/sandbox/show/nav.phtml:5
 msgid "Questions without answer"
@@ -788,594 +794,27 @@ msgstr "Выйти"
 msgid "Knows about"
 msgstr "Знает о"
 
-#: Templates/users/block/container_login_or_signup.phtml:8
-#: Templates/users/block/container_login_or_signup.phtml:12
+#: Templates/users/block/login_or_signup.phtml:5
 msgid ""
-"OctoAnswers is a wiki-based site where users can ask questions, respond to "
+"Answeropedia is a wiki-based site where users can ask questions, respond to "
 "them and supplement other people’s answers"
 msgstr ""
-"OctoAnswers — это основанный на вики-принципах сайт, где пользователи могут "
+"Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы"
 
-#~ msgid "Users - Filter - Newest"
-#~ msgstr "Новые"
+#~ msgid "Свежие правки"
+#~ msgstr "Recent changes"
 
-#~ msgid "Answer edit - Page title"
-#~ msgstr "Редактирование ответа"
+#~ msgid "Questions and answers flow on Answeropedia"
+#~ msgstr "Поток вопросов и ответов на Answeropedia"
 
-#~ msgid "Answer edit - Page description"
-#~ msgstr "Редактирование ответа"
+#~ msgid "OctoAnswers"
+#~ msgstr "OctoAnswers"
 
-#~ msgid "Answer history - Page title"
-#~ msgstr "История вопроса"
-
-#~ msgid "Answer history - Page description"
-#~ msgstr "История вопроса"
-
-#~ msgid "Error 500 - Page title"
-#~ msgstr "Ошибка 500"
-
-#~ msgid "Error 500 - Page description"
-#~ msgstr "Ошибка 500"
-
-#~ msgid "Error 500 - Error description"
-#~ msgstr "Ошибка 500"
-
-#~ msgid "Error 404 - Page title"
-#~ msgstr "Страница не найдена"
-
-#, fuzzy
-#~| msgid "Error 500 - Page description"
-#~ msgid "Error 404 - Page description"
-#~ msgstr "Ошибка 500"
-
-#~ msgid "Question not found - Page title"
-#~ msgstr "Вопрос не найден"
-
-#~ msgid "Question not found - Page description"
-#~ msgstr "Вопрос не найден"
-
-#~ msgid "Feed - Page title"
-#~ msgstr "Лента новостей"
-
-#~ msgid "Flow - Page title"
-#~ msgstr "Поток вопросов и ответов"
-
-#~ msgid "Flow - Page description"
-#~ msgstr "Поток вопросов и ответов на ОктоАнсверс"
-
-#~ msgid "Main - Page title"
-#~ msgstr "Задайте вопрос и получите ответ"
-
-#~ msgid "Main - Page description"
-#~ msgstr ""
-#~ "OctoAnswers - это как Википедия, только для вопросов и ответов. "
-#~ "Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
-#~ "ответы"
-
-#~ msgid "Question - Share description"
-#~ msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
-
-#~ msgid "Question - Page description"
-#~ msgstr "Вики-ответ на вопрос: %question"
-
-#~ msgid "Questions - Newest - Page title"
-#~ msgstr "Новые вопросы"
-
-#~ msgid "Common - Page"
-#~ msgstr "Страница"
-
-#~ msgid "Questions - Recently updated - Title"
-#~ msgstr "Недавно обновленные вопросы"
-
-#~ msgid "Root - Page description"
-#~ msgstr "Ответы на вопросы"
-
-#~ msgid "Sandbox - Page title"
-#~ msgstr "Песочница"
-
-#~ msgid "Questions - Filter - Without answers"
-#~ msgstr "Без ответа"
-
-#~ msgid "Questions - Without answers - Page title"
-#~ msgstr "Вопросы без ответов"
-
-#~ msgid "Questions - Without topics - Page title"
-#~ msgstr "Вопросы без темы"
-
-#~ msgid "Search - Page title"
-#~ msgstr "Поиск"
-
-#~ msgid "Topics - Search input placeholder"
-#~ msgstr "Поиск темы"
-
-#~ msgid "Topic - Next page button"
-#~ msgstr "Еще темы"
-
-#~ msgid "Topic - Page title"
-#~ msgstr "Вопросы и ответы на тему %topic"
-
-#~ msgid "Topic - Page description"
-#~ msgstr "Вопросы и ответы на тему %topic"
-
-#~ msgid "User - Page title (postfix)"
-#~ msgstr "Вики-ответы на OctoAnswers"
-
-#~ msgid "User - Page description"
-#~ msgstr "Вики-ответы на OctoAnswers"
-
-#~ msgid "Users - Page title"
-#~ msgstr "Новые пользователи со всего мира"
-
-#~ msgid "Block - About OctoAnswers - Title"
-#~ msgstr "О проекте OctoAnswers"
-
-#~ msgid "Block - About OctoAnswers - Message"
-#~ msgstr ""
-#~ "OctoAnswers — это основанный на вики-принципах сайт, где пользователи "
-#~ "могут задавать вопросы, отвечать на них и дополнять чужие ответы"
-
-#~ msgid "Block - About OctoAnswers - Signup button"
-#~ msgstr "Зарегистрироваться"
-
-#~ msgid "Footer - About"
+#~ msgid "About OctoAnswers"
 #~ msgstr "О сайте"
 
-#~ msgid "Footer - Support"
-#~ msgstr "Поддержка"
-
-#~ msgid "Footer - Users"
-#~ msgstr "Пользователи"
-
-#~ msgid "Footer - Flow"
-#~ msgstr "Поток"
-
-#~ msgid "Footer - Icon pack by icons8"
-#~ msgstr "Иконки с Icons8"
-
-#~ msgid "Signup modal - Title"
-#~ msgstr "Регистрация"
-
-#~ msgid "Signup modal - Username"
-#~ msgstr "Имя"
-
-#~ msgid "Signup modal - Email"
-#~ msgstr "Email"
-
-#~ msgid "Signup modal - Password"
-#~ msgstr "Пароль"
-
-#~ msgid "Signup modal - Note"
-#~ msgstr ""
-#~ "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими "
-#~ "правилами"
-
-#~ msgid "Signup modal - Signup button"
-#~ msgstr "Регистрация"
-
-#~ msgid "Navbar - Feed"
-#~ msgstr "Лента"
-
-#~ msgid "Navbar - Questions"
-#~ msgstr "Вопросы"
-
-#~ msgid "Navbar - Topics"
-#~ msgstr "Темы"
-
-#~ msgid "Navbar - Ask"
-#~ msgstr "Задать вопрос"
-
-#~ msgid "Navbar - Login"
-#~ msgstr "Вход"
-
-#~ msgid "Navbar - Signup"
-#~ msgstr "Регистрация"
-
-#~ msgid "Footer - Rules"
-#~ msgstr "Правила"
-
-#~ msgid "Edit answer - Subtitle"
-#~ msgstr "Правка ответа на вопрос"
-
-#~ msgid "Edit answer - Back to question"
-#~ msgstr "Вернуться к вопросу"
-
-#~ msgid "Edit answer - Search in DDG"
-#~ msgstr "Поискать в DuckDuckGo"
-
-#~ msgid "Edit answer - Description of changes"
-#~ msgstr "Описание изменений, если необходимо"
-
-#~ msgid "Edit answer - Save button"
-#~ msgstr "Сохранить правки"
-
-#~ msgid "Answer history - Back to question"
-#~ msgstr "Вернуться к вопросу"
-
-#~ msgid "Answer history - Change ID"
-#~ msgstr "Правка"
-
-#~ msgid "Answer history - Description of changes"
-#~ msgstr "Описание изменений"
-
-#~ msgid "Question not found - Create a question"
-#~ msgstr "Создать вопрос"
-
-#~ msgid "Question not found - Go back"
-#~ msgstr "Вернуться назад"
-
-#~ msgid "Feed - Improve your feed - Answer a question"
-#~ msgstr "Ответьте на вопрос"
-
-#~ msgid "Feed - Improve your feed - Ask your first question"
-#~ msgstr "Задайте первый вопрос"
-
-#~ msgid "Feed - Improve your feed - Find your friends"
-#~ msgstr "Найдите друзей"
-
-#~ msgid "Feed - Improve your feed - Follow 3 more topics"
-#~ msgstr "Подпишитесь на три темы"
-
-#~ msgid "Feed - Improve your feed - Set signature"
-#~ msgstr "Придумайте подпись"
-
-#~ msgid "Feed - Improve your feed - Set real name"
-#~ msgstr "Введите реальное имя"
-
-#~ msgid "Feed - Improve your feed - Visit your feed"
-#~ msgstr "Посетите ленту"
-
-#~ msgid "Flow - Title"
-#~ msgstr "Поток событий"
-
-#~ msgid "Main - How it works - First title"
-#~ msgstr "Вы задаете вопрос на любую интересующую вас тему"
-
-#~ msgid "Main - How it works - Second title"
-#~ msgstr "Мы находим специалистов, которые могут дать компетентный ответ"
-
-#~ msgid "Main - How it works - Third title"
-#~ msgstr "Вы получаете исчерпывающий ответ на email"
-
-#~ msgid "Main - Jumbotron - Title"
-#~ msgstr "Задайте вопрос и получите один исчерпывающий ответ"
-
-#~ msgid "Main - Jumbotron - Subtitle"
-#~ msgstr "Что значит исчерпывающий"
-
-#~ msgid "Main - Jumbotron - Input placeholder"
-#~ msgstr "Какой у вас вопрос"
-
-#~ msgid "Main - Jumbotron - Ask button"
-#~ msgstr "Задать свой первый вопрос"
-
-#~ msgid "Main - Share title"
-#~ msgstr ""
-#~ "Вы можете помочь проекту OctoAnswers, просто поделившись со своими "
-#~ "друзьями ссылкой на него"
-
-#~ msgid "Common - Button - Edit answer"
-#~ msgstr "Править ответ"
-
-#~ msgid "Common - Button - Follow"
-#~ msgstr "Подписаться"
-
-#~ msgid "Common - Button - Followed"
-#~ msgstr "Подписан"
-
-#~ msgid "Common - Button - Unfollow"
-#~ msgstr "Отписаться"
-
-#~ msgid "Question - Actions - History"
-#~ msgstr "История"
-
-#~ msgid "Question - Actions - Upload image"
-#~ msgstr "Загрузить картинку"
-
-#~ msgid "Question - Actions - Rename question"
-#~ msgstr "Переименовать вопрос"
-
-#~ msgid "Question - Actions - Report"
-#~ msgstr "Пожаловаться"
-
-#~ msgid "Question - First answer - Title"
-#~ msgstr "Будьте первым автором"
-
-#~ msgid "Question - First answer - Lead"
-#~ msgstr ""
-#~ "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
-#~ "тема вопроса вам близка"
-
-#~ msgid "Question - First answer - Answer button"
-#~ msgstr "Написать первый ответ"
-
-#~ msgid "Question - Last updated"
-#~ msgstr "Ответ обновлен"
-
-#~ msgid "Question page - Share block - Text"
-#~ msgstr ""
-#~ "Если ответ вам понравился или вы знаете того, кому он может быть "
-#~ "интересен, поделитесь ссылкой с друзьями"
-
-#~ msgid "Question page - Share block - Text empty"
-#~ msgstr ""
-#~ "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь "
-#~ "ссылкой"
-
-#~ msgid "Question - Top contributors - Title"
-#~ msgstr "Топ авторов ответа"
-
-#~ msgid "Question - Top contributors - All answer contributors"
-#~ msgstr "Все авторы ответа"
-
-#~ msgid "Question - Subscribe alert - Title"
-#~ msgstr "Ответ на email"
-
-#~ msgid "Question - Subscribe alert - Text"
-#~ msgstr ""
-#~ "Укажите адрес электронной почты и мы сообщим об ответе, как только он "
-#~ "появится"
-
-#~ msgid "Question - Subscribe alert - Input placeholder"
-#~ msgstr "Ваш email"
-
-#~ msgid "Question - Fake edit modal - Text"
-#~ msgstr ""
-#~ "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить "
-#~ "этот вопрос"
-
-#~ msgid "Button - Signup"
-#~ msgstr "Регистрация"
-
-#~ msgid "Button - Close"
-#~ msgstr "Закрыть"
-
-#~ msgid "Feedback modal - Thanks"
-#~ msgstr "Спасибо за отзыв"
-
-#~ msgid "Question - First answer modal - Text"
-#~ msgstr ""
-#~ "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
-#~ "вопрос"
-
-#~ msgid "Fake follow question modal - Text"
-#~ msgstr ""
-#~ "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос"
-
-#~ msgid "Rename question modal - Title"
-#~ msgstr "Переименовать вопрос"
-
-#~ msgid "Rename question modal - Note"
-#~ msgstr ""
-#~ "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь "
-#~ "с основными правилами переименования"
-
-#~ msgid "Rename question modal - Leave redirect"
-#~ msgstr "Оставить редирект"
-
-#~ msgid "Rename question modal - Rename button"
-#~ msgstr "Переименовать вопрос"
-
-#~ msgid "Modal - Upload image - Title"
-#~ msgstr "Загрузка картинки вопроса"
-
-#~ msgid "Modal - Upload image - Submit button"
-#~ msgstr "Загрузить картинку"
-
-#~ msgid "Question - Signup lure - Title"
-#~ msgstr "Зарегистрируйтесь на OctoAnswers и вы сможете"
-
-#~ msgid "Question - Signup lure - Text 1"
-#~ msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
-
-#~ msgid "Question - Signup lure - Text 2"
-#~ msgstr "Следите за новыми вопросами с интересными для вас хештегами"
-
-#~ msgid "Question - Signup lure - Text 3"
-#~ msgstr "И делитесь своими знаниями с окружающими"
-
-#~ msgid "Questions - Filter - Newest"
-#~ msgstr "Новые вопросы"
-
-#~ msgid "Questions - Filter - Recently updated"
-#~ msgstr "Недавно обновленные"
-
-#~ msgid "Questions - Filter - Popular"
-#~ msgstr "Популярные"
-
-#~ msgid "Questions - Next button"
-#~ msgstr "Еще вопросы"
-
-#~ msgid "Search - Alert - Questions not found - Title"
-#~ msgstr "Вопросов не найдено"
-
-#~ msgid "Search - Alert - Questions not found - Text"
-#~ msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
-
-#~ msgid "Search - Alert - Questions not found - Button"
-#~ msgstr "Задать вопрос"
-
-#~ msgid "Search - Topics not found - Title"
-#~ msgstr "Темы не найды"
-
-#~ msgid "Search - Topics not found - Text"
-#~ msgstr "По запросу «%query%» не удалось найти ни одной темы"
-
-#~ msgid "Search - Topics not found - Button"
-#~ msgstr "Создать тему"
-
-#~ msgid "Search - Users not found alert - Title"
-#~ msgstr "Пользователи не найды"
-
-#~ msgid "Search - Users not found alert - Button"
-#~ msgstr "Посмотреть всех пользователей"
-
-#~ msgid "Search - Users not found alert - Text"
-#~ msgstr "По запросу «%query%» не удалось найти ни одного пользователя"
-
-#~ msgid "Search - Filter title"
-#~ msgstr "Поиск"
-
-#~ msgid "Search - Filter - Questions"
-#~ msgstr "Вопросы"
-
-#~ msgid "Search - Filter - Users"
-#~ msgstr "Пользователи"
-
-#~ msgid "Settings - Title"
-#~ msgstr "Настройки профиля"
-
-#~ msgid "Settings - Upload avatar - Title"
-#~ msgstr "Загрузка аватарки"
-
-#~ msgid "Settings - Upload avatar - Text"
-#~ msgstr ""
-#~ "Желательно использовать в качестве аватарки ваше реальное фото — это "
-#~ "вызывает больше доверия у пользователей"
-
-#~ msgid "Settings - Upload avatar - Upload"
-#~ msgstr "Загрузить"
-
-#~ msgid "Settings - Real name - Title"
-#~ msgstr "Реальное имя"
-
-#~ msgid "Settings - Real name - Text"
-#~ msgstr ""
-#~ "Реальное имя вызывает больше доверия, чем @username. Оно будет "
-#~ "показываться рядом с вашими правками и в ТОПе авторов"
-
-#~ msgid "Settings - Real name - Save button"
-#~ msgstr "Сохранить реальное имя"
-
-#~ msgid "Settings - Signature - Title"
-#~ msgstr "Подпись"
-
-#~ msgid "Settings - Signature - Text"
-#~ msgstr "Введите подпись, описывающую ваши профессиональные навыки и знания"
-
-#~ msgid "Settings - Signature - Input placeholder"
-#~ msgstr "Напримере: Профессор психологии, предприниматель, начинающий поэт"
-
-#~ msgid "Settings - Signature - Save button"
-#~ msgstr "Сохранить подпись"
-
-#~ msgid "Settings - Site - Title"
-#~ msgstr "Персональный сайт"
-
-#~ msgid "Settings - Site - Text"
-#~ msgstr "Введите адрес вашего сайта или странички в социальной сети"
-
-#~ msgid "Settings - Site - Save button"
-#~ msgstr "Сохранить сайт"
-
-#~ msgid "Button - Follow"
-#~ msgstr "Подписаться"
-
-#~ msgid "Button - Followed"
-#~ msgstr "Подписан"
-
-#~ msgid "Button - Unfollow"
-#~ msgstr "Отписаться"
-
-#~ msgid "Button - Cancel"
-#~ msgstr "Отмена"
-
-#~ msgid "Topics - Filter - Newest"
-#~ msgstr "Новые"
-
-#~ msgid "Topics - Filter - Popular"
-#~ msgstr "Популярные"
-
-#~ msgid "User - No answers alert @ No answers"
-#~ msgstr "Нет ответов"
-
-#~ msgid "User - Actions button @ Settings"
-#~ msgstr "Настройки"
-
-#~ msgid "User - Actions button @ Logout"
-#~ msgstr "Выйти"
-
-#~ msgid "Users - Filter - Popular"
-#~ msgstr "Популярные"
-
-#~ msgid "Ask modal - Title"
-#~ msgstr "Новый вопрос"
-
-#~ msgid "Ask modal - Submit button"
-#~ msgstr "Задать вопрос"
-
-#~ msgid "Ask modal - Note"
-#~ msgstr ""
-#~ "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а "
-#~ "не поисковые роботы"
-
-#~ msgid "Ask modal - Input placeholder"
-#~ msgstr "Какой у вас вопрос"
-
 #, fuzzy
-#~| msgid "Question - Signup lure - Text 1"
-#~ msgid "Users - Signup lure - Image alt"
-#~ msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
-
-#, fuzzy
-#~| msgid "Question - Signup lure - Text 1"
-#~ msgid "Users - Signup lure - Title"
-#~ msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
-
-#, fuzzy
-#~| msgid "Question - Signup lure - Text 1"
-#~ msgid "Users - Signup lure - Text"
-#~ msgstr "Смотрите, какие вопросы ваши друзья задают сегодня"
-
-#, fuzzy
-#~| msgid "Fake follow question modal - Text"
-#~ msgid "Topic - Fake follow modal - Title"
-#~ msgstr ""
-#~ "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос"
-
-#, fuzzy
-#~| msgid "Topic - Page title"
-#~ msgid "Update topics - Page title"
-#~ msgstr "Вопросы и ответы на тему %topic"
-
-#~ msgid "Questions - Search input placeholder"
-#~ msgstr "Поиск вопроса"
-
-#, fuzzy
-#~| msgid "Questions - Search input placeholder"
-#~ msgid "Users - Search input placeholder"
-#~ msgstr "Поиск вопроса"
-
-#~ msgid "Navbar - Search"
-#~ msgstr "Поиск"
-
-#~ msgid "User has not written any answers yet @ User - No answers alert"
-#~ msgstr "Пользователь пока не написал ни одного ответа"
-
-#~ msgid "Settings @ User - Actions button"
-#~ msgstr "Настройки"
-
-#~ msgid "Button - Settings"
-#~ msgstr "Настройки"
-
-#~ msgid "Button - Logout"
-#~ msgstr "Выйти"
-
-#~ msgid "question.share.text"
-#~ msgstr ""
-#~ "Если ответ вам понравился или вы знаете того, кому он может быть "
-#~ "интересен, поделитесь ссылкой с друзьям"
-
-#~ msgid "question.share.text_empty"
-#~ msgstr ""
-#~ "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь "
-#~ "ссылкой."
-
-#~ msgid ""
-#~ "If you have friends who know the answer to this question, share the link."
-#~ msgstr ""
-#~ "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь "
-#~ "ссылкой."
-
-#~ msgid "Have a nice day"
-#~ msgstr "Хорошего дня!!!"
+#~| msgid "OctoAnswers"
+#~ msgid "OctoAnswers TRANSLATORS:"
+#~ msgstr "OctoAnswers"

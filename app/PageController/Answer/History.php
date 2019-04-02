@@ -28,7 +28,7 @@ class History_Answer_PageController extends Abstract_PageController
         }
 
         $this->template = 'answer/history';
-        $this->pageTitle = _('Answer history').' '.$this->question->getTitle().' - '._('OctoAnswers');
+        $this->pageTitle = _('Answer history').' '.$this->question->getTitle().' - '._('Answeropedia');
         $this->pageDescription = _('Answer history');
 
         $output = $this->renderPage();

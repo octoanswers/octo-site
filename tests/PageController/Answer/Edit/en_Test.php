@@ -16,7 +16,7 @@ class Edit_Answer_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('What is you dream? &middot; Edit answer &middot; OctoAnswers', $responseBody);
+        $this->assertContains('What is you dream? &middot; Edit answer &middot; Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

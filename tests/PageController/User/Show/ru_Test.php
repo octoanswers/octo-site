@@ -16,7 +16,7 @@ class Show_User_PageController__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Виталий Козлов Вики-ответы на OctoAnswers', $responseBody);
+        $this->assertContains('Виталий Козлов Вики-ответы на Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

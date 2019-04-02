@@ -10,7 +10,7 @@ class InternalServerError_Error_PageController extends Abstract_PageController
         $this->lang = $lang;
 
         $this->template = 'error/500';
-        $this->pageTitle = _('Error 500').' - '._('OctoAnswers');
+        $this->pageTitle = _('Error 500').' - '._('Answeropedia');
         $this->pageDescription = _('Error 500');
 
         $this->errorTitle = _('Error 500');

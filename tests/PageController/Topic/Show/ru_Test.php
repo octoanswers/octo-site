@@ -16,7 +16,7 @@ class Show_Topic_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('<title>Вопросы и ответы на тему Птицы - OctoAnswers</title>', $responseBody);
+        $this->assertContains('<title>Вопросы и ответы на тему Птицы - Answeropedia</title>', $responseBody);
         //$this->assertSame(200, $response->getStatusCode());
     }
 }
