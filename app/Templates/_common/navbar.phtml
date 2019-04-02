@@ -80,7 +80,7 @@
 
         <?php if ($this->authUser): ?>
             <li class="nav-item">
-                <a class="user-avatar my-2 my-sm-0 mx-3" href="<?= $this->authUser->getURL($this->lang) ?>">
+                <a class="user-avatar d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->getURL($this->lang) ?>">
                     <img src="<?= $this->authUser->getAvatarSmallURL() ?>" alt="<?= $this->authUser->getName() ?>">
                 </a>
             </li>
