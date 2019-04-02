@@ -2,39 +2,31 @@
 <?php if (isset($this->related_questions)): ?>
 
     <!-- related questions -->
-    <div class="box my-4">
-        <div class="box-header">
-            <span class="color-gray-800 font-weight-600">
-                Похожие вопросы
-            </span>
-        </div>
-        <div class="box-body pt-0 pb-1">
-
-            <?php foreach ($this->related_questions as $question): ?>
-                <div class="my-4">
-                    <a class="font-size-18px color-gray-900 no-underline-hover" href="<?= $question->getURL($this->lang) ?>">
-                        <?= $question->getTitle() ?>
-                    </a>
-                    <div class="small color-gray-500 mt-1">
-                        <?php if (strlen($question->getAnswer()->getText())): ?>
-                            <?= $question->getHumanizedMinutesToRead() ?>
-                            <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
-                        <?php endif; ?>
-
-                        <?= _('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
-
-                        <?php if (strlen($question->getAnswer()->getText()) == 0): ?>
-                            <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
-                            <a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
-                                <?= _('Write first answer') ?>
-                            </a>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-
-        </div>
+    <div class="border-bottom">
+        <h2 class="h6 color-gray-600">Похожие вопросы</h2>
     </div>
+    <?php foreach ($this->related_questions as $question): ?>
+        <div class="my-4">
+            <a class="h4 color-gray-800 no-underline-hover" href="<?= $question->getURL($this->lang) ?>">
+                <?= $question->getTitle() ?>
+            </a>
+            <div class="small color-gray-500">
+                <?php if (strlen($question->getAnswer()->getText())): ?>
+                    <?= $question->getHumanizedMinutesToRead() ?>
+                    <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
+                <?php endif; ?>
+
+                <?= _('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+
+                <?php if (strlen($question->getAnswer()->getText()) == 0): ?>
+                    <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
+                    <a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
+                        <?= _('Write first answer') ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
     <!-- / related questions -->
 
 <?php endif; ?>

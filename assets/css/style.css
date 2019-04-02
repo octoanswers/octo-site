@@ -645,80 +645,170 @@ a.badge-dark:hover {
       align-self: flex-start;
 }
 
-h1, .h1 {
-  font-size: 1.5rem;
+blockquote {
+  background-color: #F5F5F5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-@media (min-width: 576px) {
-  h1, .h1 {
-    font-size: 1.75rem;
-  }
+blockquote p:last-child {
+  margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
-  h1, .h1 {
-    font-size: 2.25rem;
-  }
+.blockquote {
+  background-color: #FFFFFF;
+  border-left: 4px solid #BDBDBD;
+  padding-left: 1rem;
+  color: #616161;
+  margin-bottom: 0 !important;
 }
 
-h2, .h2 {
-  font-size: 1.5rem;
+.font-weight-200 {
+  font-weight: 200;
 }
 
-h3, .h3 {
-  font-size: 1.4rem;
+.font-weight-300 {
+  font-weight: 300;
 }
 
-h4, .h4 {
-  font-size: 1.3rem;
+.font-weight-400 {
+  font-weight: 400;
 }
 
-h5, .h5 {
-  font-size: 1.2rem;
+.font-weight-500 {
+  font-weight: 500;
 }
 
-h6, .h6 {
-  font-size: 1.1rem;
-}
-
-.display-1, .display-2, .display-3, .display-4 {
+.font-weight-600 {
   font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-weight-800 {
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 500;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-weight: 500;
   line-height: 1.2;
 }
 
-.display-1 {
-  font-size: 3.5rem;
+a {
+  color: #3498db;
 }
 
-.display-2 {
-  font-size: 3rem;
+a:hover {
+  color: #2B7DB4;
 }
 
-.display-3 {
-  font-size: 1.5rem;
+.text-decoration-underline, a.link-underlined {
+  text-decoration: underline !important;
 }
 
-@media (min-width: 576px) {
-  .display-3 {
-    font-size: 2rem;
-  }
+a.no-underline, a.no_underline {
+  text-decoration: none;
 }
 
-@media (min-width: 768px) {
-  .display-3 {
-    font-size: 2.5rem;
-  }
+a.no-underline:hover, a.no_underline:hover {
+  text-decoration: none;
 }
 
-.display-4 {
-  font-size: 2rem;
+a.link-broken {
+  color: #db3466;
 }
 
-.display-subtitle {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.4;
-  color: #757575;
+a.link-broken:after {
+  content: url("https://png.icons8.com/small/16/db3466/unavailable-cloud.png");
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+
+a.link-external:after {
+  content: url("https://png.icons8.com/small/16/3498db/external-link.png");
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+
+a.no-underline-hover:hover {
+  text-decoration: none;
+}
+
+small, .small {
+  font-size: .875rem;
+}
+
+.small-xs {
+  font-size: .75rem;
+}
+
+del,
+ins {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+del {
+  background-color: #ffdce0;
+  text-decoration: none;
+}
+
+ins {
+  background-color: #cdffd8;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  padding: 1rem;
+  background-color: #EEEEEE;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-18px {
+  font-size: 18px;
 }
 
 .rounded-circle-8 {
@@ -1401,148 +1491,5 @@ table.no-border {
 
 .font-weight-300 {
   font-weight: 300;
-}
-
-blockquote {
-  background-color: #F5F5F5;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-.blockquote {
-  background-color: #FFFFFF;
-  border-left: 4px solid #BDBDBD;
-  padding-left: 1rem;
-  color: #616161;
-  margin-bottom: 0 !important;
-}
-
-.font-weight-200 {
-  font-weight: 200;
-}
-
-.font-weight-300 {
-  font-weight: 300;
-}
-
-.font-weight-400 {
-  font-weight: 400;
-}
-
-.font-weight-500 {
-  font-weight: 500;
-}
-
-.font-weight-600 {
-  font-weight: 600;
-}
-
-.font-weight-700 {
-  font-weight: 700;
-}
-
-.font-weight-800 {
-  font-weight: 800;
-}
-
-a {
-  color: #3498db;
-}
-
-a:hover {
-  color: #2B7DB4;
-}
-
-.text-decoration-underline, a.link-underlined {
-  text-decoration: underline !important;
-}
-
-a.no-underline, a.no_underline {
-  text-decoration: none;
-}
-
-a.no-underline:hover, a.no_underline:hover {
-  text-decoration: none;
-}
-
-a.link-broken {
-  color: #db3466;
-}
-
-a.link-broken:after {
-  content: url("https://png.icons8.com/small/16/db3466/unavailable-cloud.png");
-  margin: 0 0 0 5px;
-  vertical-align: middle;
-}
-
-a.link-external:after {
-  content: url("https://png.icons8.com/small/16/3498db/external-link.png");
-  margin: 0 0 0 5px;
-  vertical-align: middle;
-}
-
-a.no-underline-hover:hover {
-  text-decoration: none;
-}
-
-small, .small {
-  font-size: .875rem;
-}
-
-.small-xs {
-  font-size: .75rem;
-}
-
-del,
-ins {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-del {
-  background-color: #ffdce0;
-  text-decoration: none;
-}
-
-ins {
-  background-color: #cdffd8;
-  text-decoration: none;
-}
-
-ul {
-  padding-left: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-pre {
-  padding: 1rem;
-  background-color: #EEEEEE;
-  border-radius: 3px;
-  white-space: pre-wrap;
-  /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
-}
-
-.text-nowrap {
-  white-space: nowrap;
-}
-
-.font-size-16 {
-  font-size: 16px;
-}
-
-.font-size-18px {
-  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */

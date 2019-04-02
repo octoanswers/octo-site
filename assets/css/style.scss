@@ -13,7 +13,14 @@
 @import "components/_color/_main";
 @import "components/_dropdowns";
 @import "components/_flex";
-@import "components/_heading";
+
+@import "components/typography/_blockquote";
+@import "components/typography/_font-weight";
+@import "components/typography/_heading";
+@import "components/typography/_links";
+@import "components/typography/_small";
+@import "components/typography/_other";
+
 @import "components/_image";
 @import "components/_jumbotron";
 @import "components/_list-group";
@@ -29,4 +36,3 @@
 @import "components/_table";
 @import "components/_table-box";
 @import "components/_title";
-@import "components/_typography";
