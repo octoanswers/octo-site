@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-02 23:26+0500\n"
-"PO-Revision-Date: 2019-04-02 23:26+0500\n"
+"POT-Creation-Date: 2019-04-03 00:21+0500\n"
+"PO-Revision-Date: 2019-04-03 00:21+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -99,7 +99,7 @@ msgid ""
 "question and get one complete, comprehensive and competent answer from the "
 "community."
 msgstr ""
-"Answeropedia - это как Википедия, только для вопросов и ответов. "
+"Answeropedia — это как Википедия, только для вопросов и ответов. "
 "Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
 "ответы."
 
@@ -240,6 +240,7 @@ msgid "About Answeropedia"
 msgstr "О Answeropedia"
 
 #: Templates/_common/block/about_octoanswers.phtml:7
+#: Templates/users/block/login_or_signup.phtml:5
 msgid ""
 "Answeropedia is a wiki-based site where users can ask questions, respond to "
 "them and supplement other people’s answers."
@@ -355,6 +356,7 @@ msgid "About site"
 msgstr "О сайте"
 
 #: Templates/_common/navbar.phtml:28
+#: Templates/question/block/sidebar/sidebar.phtml:17
 msgid "Recent changes"
 msgstr "Свежие правки"
 
@@ -512,7 +514,7 @@ msgstr "Загрузить картинку"
 
 #: Templates/question/block/actions.phtml:57
 #: Templates/question/block/actions/bottom.phtml:43
-#: Templates/question/block/sidebar/sidebar.phtml:248
+#: Templates/question/block/sidebar/sidebar.phtml:253
 #: Templates/question/modal/rename.phtml:8
 #: Templates/question/modal/rename.phtml:30
 msgid "Rename question"
@@ -587,19 +589,19 @@ msgstr "Все авторы ответа"
 msgid "Main page"
 msgstr "Главная страница"
 
-#: Templates/question/block/sidebar/sidebar.phtml:17
+#: Templates/question/block/sidebar/sidebar.phtml:22
 msgid "Popular hashtags"
 msgstr "Популярные хештеги"
 
-#: Templates/question/block/sidebar/sidebar.phtml:22
+#: Templates/question/block/sidebar/sidebar.phtml:27
 msgid "Random question"
 msgstr "Случайный вопрос"
 
-#: Templates/question/block/sidebar/sidebar.phtml:238
+#: Templates/question/block/sidebar/sidebar.phtml:243
 msgid "Tools"
 msgstr "Инструменты"
 
-#: Templates/question/block/sidebar/sidebar.phtml:243
+#: Templates/question/block/sidebar/sidebar.phtml:248
 msgid "Change history"
 msgstr "История изменений"
 
@@ -645,6 +647,7 @@ msgstr ""
 "вопрос."
 
 #: Templates/question/modal/follow_question_lure.phtml:11
+#: Templates/topic/block/actions.phtml:36
 msgid "Register or sign in and you can subscribe to this question."
 msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
 
@@ -781,7 +784,7 @@ msgstr "Введите подпись, описывающую ваши проф�
 
 #: Templates/settings/show_full.phtml:66
 msgid "For example: Professor of Psychology, entrepreneur, novice poet"
-msgstr "Напримере: Профессор психологии, предприниматель, начинающий поэт"
+msgstr "Например: Профессор психологии, предприниматель, начинающий поэт"
 
 #: Templates/settings/show_full.phtml:77
 msgid "Site"
@@ -790,10 +793,6 @@ msgstr "Сайт"
 #: Templates/settings/show_full.phtml:82
 msgid "Enter the address of your website or page on the social network."
 msgstr "Введите адрес вашего сайта или страницы в социальной сети."
-
-#: Templates/topic/block/actions.phtml:36
-msgid "Register or sign in and you can subscribe to this question"
-msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос"
 
 #: Templates/topic/block/actions.phtml:46
 msgid "Cancel"
@@ -814,28 +813,3 @@ msgstr "Выйти"
 #: Templates/user/block/knows_about.phtml:4
 msgid "Knows about"
 msgstr "Знает о"
-
-#: Templates/users/block/login_or_signup.phtml:5
-msgid ""
-"Answeropedia is a wiki-based site where users can ask questions, respond to "
-"them and supplement other people’s answers"
-msgstr ""
-"Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
-"задавать вопросы, отвечать на них и дополнять чужие ответы"
-
-#~ msgid "Свежие правки"
-#~ msgstr "Recent changes"
-
-#~ msgid "Questions and answers flow on Answeropedia"
-#~ msgstr "Поток вопросов и ответов на Answeropedia"
-
-#~ msgid "OctoAnswers"
-#~ msgstr "OctoAnswers"
-
-#~ msgid "About OctoAnswers"
-#~ msgstr "О сайте"
-
-#, fuzzy
-#~| msgid "OctoAnswers"
-#~ msgid "OctoAnswers TRANSLATORS:"
-#~ msgstr "OctoAnswers"
