@@ -1,0 +1,42 @@
+
+<!-- right_actions -->
+<div class="my-4">
+	<ul class="section-nav">
+		
+		<!-- add or update image -->
+		<?php if ($this->authUser): ?>
+			<li class="toc-entry toc-h2">
+				<a href="#" data-toggle="modal" data-target="#modal_upload_image">
+					<i class="fas fa-camera mr-1"></i>
+					<?php if ($this->question->getImageBaseName()): ?>
+						<?= _('Update picture') ?>
+					<?php else: ?>
+						<?= _('Add a picture to the question') ?>
+					<?php endif; ?>
+				</a>
+			</li>
+		<?php endif; ?>
+		<!-- add or update image -->
+
+		<?php if ($this->authUser): ?>
+			<!-- rename question -->
+			<li class="toc-entry toc-h2">
+				<a href="#" data-toggle="modal" data-target="#modal_rename">
+					<i class="fas fa-edit mr-1"></i>
+                    <?= _('Rename question') ?>	
+				</a>
+			</li>
+			<!-- / rename question -->
+		<?php endif; ?>
+			
+		<li class="toc-entry toc-h2">
+			<a href="#" rel="nofollow">
+				<i class="fas fa-flag mr-1"></i>
+				<?= _('Report') ?>
+			</a>
+		</li>
+		
+	</ul>
+</div>
+<!-- / right_actions -->
+
