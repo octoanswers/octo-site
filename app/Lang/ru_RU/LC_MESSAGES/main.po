@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-04 00:27+0500\n"
-"PO-Revision-Date: 2019-04-04 00:27+0500\n"
+"POT-Creation-Date: 2019-04-04 01:19+0500\n"
+"PO-Revision-Date: 2019-04-04 01:20+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -576,12 +576,8 @@ msgid "All answer contributors"
 msgstr "Все авторы ответа"
 
 #: Templates/question/block/share.phtml:5
-#: Templates/question/block/share.phtml:9
-msgid ""
-"If you like the answer or you know someone to whom it might be interesting, "
-"share a link with your friends"
-msgstr ""
-"Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь ссылкой"
+msgid "Share link"
+msgstr "Поделиться ссылкой"
 
 #: Templates/question/block/sidebar/sidebar.phtml:7
 msgid "Main page"
@@ -815,6 +811,13 @@ msgstr "Выйти"
 #: Templates/user/block/knows_about.phtml:4
 msgid "Knows about"
 msgstr "Знает о"
+
+#~ msgid ""
+#~ "If you like the answer or you know someone to whom it might be "
+#~ "interesting, share a link with your friends"
+#~ msgstr ""
+#~ "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь "
+#~ "ссылкой"
 
 #~ msgid "Question marked by hashtags"
 #~ msgstr "Вопрос отмечен хэштегами"
