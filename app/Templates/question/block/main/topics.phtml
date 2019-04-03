@@ -11,7 +11,7 @@
 
 		<?php if (count($this->question->getTopics()) > count($this->question->getFirstTwoTopics())): ?>
 			<a class="text-secondary text-decoration-none mb-2 mr-2" data-scroll href="#question_topics_list">
-				+<?= count($this->question->getTopics()) - count($this->question->getFirstTwoTopics()) ?> ddd
+				+<?= $this->question->getHumanizedMoreHashtags() ?>
 			</a>
 		<?php endif; ?>
 

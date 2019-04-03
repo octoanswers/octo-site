@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-03 12:22+0500\n"
-"PO-Revision-Date: 2019-04-03 12:22+0500\n"
+"POT-Creation-Date: 2019-04-03 15:37+0500\n"
+"PO-Revision-Date: 2019-04-03 15:38+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: Templates/question/block/actions.phtml:12
 #: Templates/question/block/actions/bottom.phtml:7
 #: Templates/question/block/actions/bottom.phtml:11
-#: Templates/question/block/main/actions_top.phtml:14
+#: Templates/question/block/main/actions_top.phtml:15
 msgid "Edit answer"
 msgstr "Править ответ"
 
@@ -147,7 +147,7 @@ msgstr "Песочница"
 
 #: PageController/Sandbox/WithoutAnswers.php:18
 #: PageController/Sandbox/WithoutTopics.php:18
-#: Templates/question/block/main/actions_top.phtml:6
+#: Templates/question/block/main/actions_top.phtml:7
 msgid "Question"
 msgid_plural "Questions"
 msgstr[0] "Вопрос"
@@ -233,6 +233,17 @@ msgstr[2] "Мминут на чтение"
 #: Trait/Question.php:34
 msgid "Empty answer"
 msgstr "Пустой ответ"
+
+#: Trait/Question.php:42
+msgid "No hashtags"
+msgstr "Нет хештегов"
+
+#: Trait/Question.php:45
+msgid "Hashtag"
+msgid_plural "Hashtags"
+msgstr[0] "Хештег"
+msgstr[1] "Хештега"
+msgstr[2] "Хештегов"
 
 #: Templates/_common/block/about_octoanswers.phtml:4
 #: Templates/_common/col_sidebar/footer.phtml:5
@@ -470,9 +481,9 @@ msgstr ""
 #: Templates/question/block/actions.phtml:26
 #: Templates/question/block/actions.phtml:30
 #: Templates/question/block/actions/bottom.phtml:18
-#: Templates/question/block/main/actions_top.phtml:52
-#: Templates/question/block/main/actions_top.phtml:56
-#: Templates/question/block/main/actions_top.phtml:60
+#: Templates/question/block/main/actions_follow.phtml:8
+#: Templates/question/block/main/actions_follow.phtml:12
+#: Templates/question/block/main/actions_follow.phtml:16
 #: Templates/topic/block/actions.phtml:14
 #: Templates/topic/block/actions.phtml:20
 #: Templates/topic/block/actions.phtml:28 Templates/user/block/header.phtml:37
@@ -483,8 +494,8 @@ msgstr "Подписаться"
 #: Templates/question/block/actions.phtml:23
 #: Templates/question/block/actions.phtml:26
 #: Templates/question/block/actions/bottom.phtml:18
-#: Templates/question/block/main/actions_top.phtml:53
-#: Templates/question/block/main/actions_top.phtml:56
+#: Templates/question/block/main/actions_follow.phtml:9
+#: Templates/question/block/main/actions_follow.phtml:12
 #: Templates/topic/block/actions.phtml:15
 #: Templates/topic/block/actions.phtml:20 Templates/user/block/header.phtml:38
 #: Templates/user/block/header.phtml:41
@@ -492,14 +503,15 @@ msgid "Followed"
 msgstr "Подписан"
 
 #: Templates/question/block/actions.phtml:24
-#: Templates/question/block/main/actions_top.phtml:54
+#: Templates/question/block/main/actions_follow.phtml:10
 #: Templates/topic/block/actions.phtml:16 Templates/user/block/header.phtml:39
 msgid "Unfollow"
 msgstr "Отписаться"
 
 #: Templates/question/block/actions.phtml:37
 #: Templates/question/block/actions/bottom.phtml:23
-#: Templates/question/block/main/actions_top.phtml:31
+#: Templates/question/block/main/actions_top.phtml:32
+#: Templates/question/block/main/actions_top.phtml:37
 msgid "History"
 msgstr "История"
 
@@ -557,18 +569,9 @@ msgstr ""
 "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
 "тема вопроса вам близка!"
 
-#: Templates/question/block/main/actions_top.phtml:20
+#: Templates/question/block/main/actions_top.phtml:21
 msgid "Edit"
 msgstr "Править"
-
-#: Templates/question/block/main/topics.phtml:21
-msgid "Update topics"
-msgstr "Изменить темы"
-
-#: Templates/question/block/main/topics.phtml:31
-#: Templates/question/block/main/topics.phtml:38
-msgid "Set question topics"
-msgstr "Задать темы вопроса"
 
 #: Templates/question/block/related_questions.phtml:19
 #: Templates/question/block/right/info_about_question.phtml:24
@@ -831,3 +834,9 @@ msgstr "Выйти"
 #: Templates/user/block/knows_about.phtml:4
 msgid "Knows about"
 msgstr "Знает о"
+
+#~ msgid "Update topics"
+#~ msgstr "Изменить темы"
+
+#~ msgid "Set question topics"
+#~ msgstr "Задать темы вопроса"

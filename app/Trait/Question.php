@@ -2,7 +2,7 @@
 
 trait Question_Trait
 {
-    function getShortAnswer()
+    public function getShortAnswer()
     {
         if ($this->getAnswer()->getText()) {
             return mb_substr($this->getAnswer()->getText(), 0, mb_strpos($this->getAnswer()->getText(), "\n"));
@@ -22,7 +22,7 @@ trait Question_Trait
         return $topics_slice;
     }
 
-    function getHumanizedMinutesToRead()
+    public function getHumanizedMinutesToRead()
     {
         $answer_len = mb_strlen($this->getAnswer()->getText());
         if ($answer_len) {
@@ -32,5 +32,27 @@ trait Question_Trait
         }
 
         return _('Empty answer');
+    }
+
+    public function getHumanizedHashtags()
+    {
+        $hashtagsCount = count($this->getTopics());
+        
+        if ($hashtagsCount == 0) {
+            return _('No hashtags');
+        }
+
+        return $hashtagsCount . ' ' . mb_strtolower(ngettext("Hashtag", "Hashtags", $hashtagsCount));
+    }
+    
+    public function getHumanizedMoreHashtags(int $trimmedHashtagsCount = 2): string
+    {
+        $hashtagsCount = count($this->getTopics());
+        
+        if ($hashtagsCount - $trimmedHashtagsCount <= 0) {
+            return '';
+        }
+
+        return $hashtagsCount - $trimmedHashtagsCount . ' ' . mb_strtolower(ngettext("Hashtag", "Hashtags", $hashtagsCount));
     }
 }
