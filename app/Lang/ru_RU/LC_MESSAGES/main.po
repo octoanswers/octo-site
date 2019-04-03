@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-03 01:18+0500\n"
-"PO-Revision-Date: 2019-04-03 01:18+0500\n"
+"POT-Creation-Date: 2019-04-03 10:05+0500\n"
+"PO-Revision-Date: 2019-04-03 10:05+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -578,6 +578,10 @@ msgstr "Присоединиться к сообществу"
 #: Templates/question/block/right/image.phtml:10
 msgid "Update picture"
 msgstr "Обновить картинку"
+
+#: Templates/question/block/right/image_add.phtml:8
+msgid "Add a picture to the question"
+msgstr "Добавить изображение к вопросу"
 
 #: Templates/question/block/share.phtml:5
 #: Templates/question/block/share.phtml:9

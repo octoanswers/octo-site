@@ -3,14 +3,14 @@
 	<div class="mb-4">
 		<img id="question_image" class="w-100" src="<?= $this->question->getImageURLMedium($this->lang) ?>" alt="<?= $this->question->getTitle() ?>">
 
-	<?php if ($this->authUser): ?>
-		<div class="text-right mt-1">
-			<a class="small text-decoration-none text-secondary" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_upload_image">
-				<i class="fas fa-camera mr-1"></i>
-				<?= _('Update picture') ?>
-			</a>
-		</div>
-	<?php endif; ?>
+		<?php if ($this->authUser): ?>
+			<div class="text-right mt-1">
+				<a class="small text-decoration-none text-secondary" rel="nofollow" href="#" data-toggle="modal" data-target="#modal_upload_image">
+					<i class="fas fa-camera mr-1"></i>
+					<?= _('Update picture') ?>
+				</a>
+			</div>
+		<?php endif; ?>
 
 	</div>
 <?php endif; ?>

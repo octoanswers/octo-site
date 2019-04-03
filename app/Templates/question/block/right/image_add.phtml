@@ -1,25 +1,13 @@
 
 <?php if ($this->authUser && !$this->question->getImageBaseName()): ?>
-    
-    <!-- lure add_image -->
-    <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
-        <div class="mr-3 d-none d-sm-block">
-            <p class="h1" style="color: #3498db;">
-                <i class="far fa-image"></i>
-            </p>
-        </div>
-        <div class="width-full">
-            <div class="color-gray-900 font-weight-600 mb-2">
-                Добавьте изображение к вопросу
-            </div>
-            <div class="small color-gray-700 mb-3">
-                Изображение украшает вопрос и помогает понять о чем конкретно идет речь. Помимо этого изображение показывается на списках вопросов.
-            </div>
-            <a  class="btn btn-sm btn-outline-primary btn-block" href="#" data-toggle="modal" data-target="#modal_upload_image">
-                Добавить
-            </a>
-        </div>
-    </div>
-    <!-- / lure add_image -->
+	
+	<!-- image_add -->
+	<div class="mb-4">
+		<a  class="btn btn-sm btn-outline-primary btn-block" href="#" data-toggle="modal" data-target="#modal_upload_image">
+			<i class="fas fa-camera mr-1"></i>
+			<?= _('Add a picture to the question') ?>
+		</a>
+	</div>
+	<!-- / image_add -->
 
 <?php endif; ?>
