@@ -1,0 +1,37 @@
+
+<?php if (count($this->question->getTopics())): ?>
+	<!-- hashtags -->
+	<div class="my-5" id="question_topics_list">
+		<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
+			<?= _('Hashtags') ?>
+		</div>
+
+		<?php foreach ($this->question->getTopics() as $topic): ?>
+			<a class="text-decoration-none mb-2 mr-2" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
+				#<?= $topic ?>
+			</a>
+		<?php endforeach; ?>
+
+		<?php if ($this->authUser): ?>
+			<a class="text-secondary mb-2 ml-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+				<i class="far fa-edit"></i> Изменить
+			</a>
+		<?php endif; ?>
+
+	</div>
+		
+
+	<!-- / hashtags -->
+
+<?php else: ?>
+
+	<?php if ($this->authUser): ?>
+		<div class="mt-5">
+			<a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+				<i class="far fa-plus-square"></i>
+				Задать темы вопроса
+			</a>
+		</div>
+	<?php endif; ?>
+
+<?php endif; ?>

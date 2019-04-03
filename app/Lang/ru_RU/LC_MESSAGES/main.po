@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-03 15:37+0500\n"
-"PO-Revision-Date: 2019-04-03 15:38+0500\n"
+"POT-Creation-Date: 2019-04-04 00:27+0500\n"
+"PO-Revision-Date: 2019-04-04 00:27+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -17,10 +17,6 @@ msgstr ""
 
 #: PageController/Answer/Edit.php:34 PageController/Answer/Edit.php:35
 #: Templates/answer/edit/header.phtml:3
-#: Templates/question/block/actions.phtml:8
-#: Templates/question/block/actions.phtml:12
-#: Templates/question/block/actions/bottom.phtml:7
-#: Templates/question/block/actions/bottom.phtml:11
 #: Templates/question/block/main/actions_top.phtml:15
 msgid "Edit answer"
 msgstr "Править ответ"
@@ -77,8 +73,8 @@ msgid "Feed"
 msgstr "Лента"
 
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: Templates/_common/col_sidebar/footer.phtml:20
-#: Templates/_common/footer.phtml:26 Templates/flow/block/header.phtml:4
+#: Templates/_common/footer.phtml:26 Templates/_common/sidebar/footer.phtml:20
+#: Templates/flow/block/header.phtml:4
 msgid "Flow"
 msgstr "Поток"
 
@@ -238,7 +234,7 @@ msgstr "Пустой ответ"
 msgid "No hashtags"
 msgstr "Нет хештегов"
 
-#: Trait/Question.php:45
+#: Trait/Question.php:45 Trait/Question.php:56
 msgid "Hashtag"
 msgid_plural "Hashtags"
 msgstr[0] "Хештег"
@@ -246,7 +242,7 @@ msgstr[1] "Хештега"
 msgstr[2] "Хештегов"
 
 #: Templates/_common/block/about_octoanswers.phtml:4
-#: Templates/_common/col_sidebar/footer.phtml:5
+#: Templates/_common/sidebar/footer.phtml:5
 #: Templates/question/block/right/about_answeropedia.phtml:7
 #: Templates/root/block/navbar.phtml:19
 msgid "About Answeropedia"
@@ -273,23 +269,18 @@ msgstr ""
 msgid "Signup"
 msgstr "Зарегистрироваться"
 
-#: Templates/_common/col_sidebar/footer.phtml:10
-#: Templates/_common/footer.phtml:16
-msgid "Support"
-msgstr "Поддержка"
-
-#: Templates/_common/col_sidebar/footer.phtml:15
-#: Templates/_common/footer.phtml:21 Templates/search/questions.phtml:17
-msgid "Users"
-msgstr "Пользователи"
-
-#: Templates/_common/col_sidebar/footer.phtml:25
-msgid "Rules"
-msgstr "Правила"
-
 #: Templates/_common/footer.phtml:11
 msgid "About"
 msgstr "О сайте"
+
+#: Templates/_common/footer.phtml:16 Templates/_common/sidebar/footer.phtml:10
+msgid "Support"
+msgstr "Поддержка"
+
+#: Templates/_common/footer.phtml:21 Templates/_common/sidebar/footer.phtml:15
+#: Templates/search/questions.phtml:17
+msgid "Users"
+msgstr "Пользователи"
 
 #: Templates/_common/footer.phtml:35
 msgid "Change language"
@@ -306,7 +297,7 @@ msgstr "Русский"
 #: Templates/_common/item/question_with_answer.phtml:31
 #: Templates/question/block/lure/be_first_contributor.phtml:20
 #: Templates/question/block/lure/be_first_contributor.phtml:43
-#: Templates/question/block/related_questions.phtml:24
+#: Templates/question/block/main/related_questions.phtml:24
 msgid "Write first answer"
 msgstr "Написать первый ответ"
 
@@ -376,6 +367,10 @@ msgstr "Свежие правки"
 #: Templates/_common/navbar.phtml:91
 msgid "Ask a Question"
 msgstr "Задать вопрос"
+
+#: Templates/_common/sidebar/footer.phtml:25
+msgid "Rules"
+msgstr "Правила"
 
 #: Templates/answer/edit/header.phtml:11
 #: Templates/answer/history/jumbotron.phtml:13
@@ -477,68 +472,6 @@ msgstr ""
 "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями "
 "ссылкой на него."
 
-#: Templates/question/block/actions.phtml:22
-#: Templates/question/block/actions.phtml:26
-#: Templates/question/block/actions.phtml:30
-#: Templates/question/block/actions/bottom.phtml:18
-#: Templates/question/block/main/actions_follow.phtml:8
-#: Templates/question/block/main/actions_follow.phtml:12
-#: Templates/question/block/main/actions_follow.phtml:16
-#: Templates/topic/block/actions.phtml:14
-#: Templates/topic/block/actions.phtml:20
-#: Templates/topic/block/actions.phtml:28 Templates/user/block/header.phtml:37
-#: Templates/user/block/header.phtml:41
-msgid "Follow"
-msgstr "Подписаться"
-
-#: Templates/question/block/actions.phtml:23
-#: Templates/question/block/actions.phtml:26
-#: Templates/question/block/actions/bottom.phtml:18
-#: Templates/question/block/main/actions_follow.phtml:9
-#: Templates/question/block/main/actions_follow.phtml:12
-#: Templates/topic/block/actions.phtml:15
-#: Templates/topic/block/actions.phtml:20 Templates/user/block/header.phtml:38
-#: Templates/user/block/header.phtml:41
-msgid "Followed"
-msgstr "Подписан"
-
-#: Templates/question/block/actions.phtml:24
-#: Templates/question/block/main/actions_follow.phtml:10
-#: Templates/topic/block/actions.phtml:16 Templates/user/block/header.phtml:39
-msgid "Unfollow"
-msgstr "Отписаться"
-
-#: Templates/question/block/actions.phtml:37
-#: Templates/question/block/actions/bottom.phtml:23
-#: Templates/question/block/main/actions_top.phtml:32
-#: Templates/question/block/main/actions_top.phtml:37
-msgid "History"
-msgstr "История"
-
-#: Templates/question/block/actions.phtml:43
-#: Templates/question/block/actions/bottom.phtml:29
-msgid "More"
-msgstr "Ещё"
-
-#: Templates/question/block/actions.phtml:51
-#: Templates/question/block/actions/bottom.phtml:37
-#: Templates/question/modal/upload_image.phtml:21
-msgid "Upload image"
-msgstr "Загрузить картинку"
-
-#: Templates/question/block/actions.phtml:57
-#: Templates/question/block/actions/bottom.phtml:43
-#: Templates/question/block/sidebar/sidebar.phtml:253
-#: Templates/question/modal/rename.phtml:8
-#: Templates/question/modal/rename.phtml:30
-msgid "Rename question"
-msgstr "Переименовать вопрос"
-
-#: Templates/question/block/actions.phtml:62
-#: Templates/question/block/actions/bottom.phtml:48
-msgid "Report"
-msgstr "Пожаловаться"
-
 #: Templates/question/block/contributors_full.phtml:7
 #: Templates/question/block/right/info_about_question.phtml:9
 msgid "Contributor"
@@ -569,11 +502,43 @@ msgstr ""
 "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
 "тема вопроса вам близка!"
 
+#: Templates/question/block/main/actions_follow.phtml:8
+#: Templates/question/block/main/actions_follow.phtml:12
+#: Templates/question/block/main/actions_follow.phtml:16
+#: Templates/topic/block/actions.phtml:14
+#: Templates/topic/block/actions.phtml:20
+#: Templates/topic/block/actions.phtml:28 Templates/user/block/header.phtml:37
+#: Templates/user/block/header.phtml:41
+msgid "Follow"
+msgstr "Подписаться"
+
+#: Templates/question/block/main/actions_follow.phtml:9
+#: Templates/question/block/main/actions_follow.phtml:12
+#: Templates/topic/block/actions.phtml:15
+#: Templates/topic/block/actions.phtml:20 Templates/user/block/header.phtml:38
+#: Templates/user/block/header.phtml:41
+msgid "Followed"
+msgstr "Подписан"
+
+#: Templates/question/block/main/actions_follow.phtml:10
+#: Templates/topic/block/actions.phtml:16 Templates/user/block/header.phtml:39
+msgid "Unfollow"
+msgstr "Отписаться"
+
 #: Templates/question/block/main/actions_top.phtml:21
 msgid "Edit"
 msgstr "Править"
 
-#: Templates/question/block/related_questions.phtml:19
+#: Templates/question/block/main/actions_top.phtml:32
+#: Templates/question/block/main/actions_top.phtml:37
+msgid "History"
+msgstr "История"
+
+#: Templates/question/block/main/hashtags.phtml:6
+msgid "Hashtags"
+msgstr "Хештеги"
+
+#: Templates/question/block/main/related_questions.phtml:19
 #: Templates/question/block/right/info_about_question.phtml:24
 msgid "Answer updated"
 msgstr "Ответ обновлен"
@@ -582,6 +547,26 @@ msgstr "Ответ обновлен"
 msgid "Join the community"
 msgstr "Присоединиться к сообществу"
 
+#: Templates/question/block/right/actions.phtml:12
+#: Templates/question/block/right/image.phtml:10
+msgid "Update picture"
+msgstr "Обновить картинку"
+
+#: Templates/question/block/right/actions.phtml:14
+msgid "Add a picture to the question"
+msgstr "Добавить изображение к вопросу"
+
+#: Templates/question/block/right/actions.phtml:26
+#: Templates/question/block/sidebar/sidebar.phtml:253
+#: Templates/question/modal/rename.phtml:8
+#: Templates/question/modal/rename.phtml:30
+msgid "Rename question"
+msgstr "Переименовать вопрос"
+
+#: Templates/question/block/right/actions.phtml:35
+msgid "Report"
+msgstr "Пожаловаться"
+
 #: Templates/question/block/right/contributors_top.phtml:15
 msgid "Top answer contributors"
 msgstr "Топ авторов ответа"
@@ -589,14 +574,6 @@ msgstr "Топ авторов ответа"
 #: Templates/question/block/right/contributors_top.phtml:60
 msgid "All answer contributors"
 msgstr "Все авторы ответа"
-
-#: Templates/question/block/right/image.phtml:10
-msgid "Update picture"
-msgstr "Обновить картинку"
-
-#: Templates/question/block/right/image_add.phtml:8
-msgid "Add a picture to the question"
-msgstr "Добавить изображение к вопросу"
 
 #: Templates/question/block/share.phtml:5
 #: Templates/question/block/share.phtml:9
@@ -685,6 +662,10 @@ msgstr "Оставить редирект"
 #: Templates/question/modal/upload_image.phtml:7
 msgid "Upload question image"
 msgstr "Загрузка картинки вопроса"
+
+#: Templates/question/modal/upload_image.phtml:21
+msgid "Upload image"
+msgstr "Загрузить картинку"
 
 #: Templates/question/show/signup_lure.phtml:5
 msgid "Register on Answeropedia and you will be able to"
@@ -834,6 +815,12 @@ msgstr "Выйти"
 #: Templates/user/block/knows_about.phtml:4
 msgid "Knows about"
 msgstr "Знает о"
+
+#~ msgid "Question marked by hashtags"
+#~ msgstr "Вопрос отмечен хэштегами"
+
+#~ msgid "More"
+#~ msgstr "Ещё"
 
 #~ msgid "Update topics"
 #~ msgstr "Изменить темы"
