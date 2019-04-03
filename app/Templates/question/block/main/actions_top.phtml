@@ -1,0 +1,48 @@
+
+<!-- actions_top -->
+<div class="mb-3">
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" href="<?= $this->question->getURL($this->lang) ?>">
+				<?= _('Question') ?>
+			</a>
+		</li>
+
+		<!-- edit answer -->
+		<?php if ($this->authUser): ?>
+			<li class="nav-item">
+				<a class="nav-link" href="<?= $this->question->getEditURL($this->lang) ?>">
+					<?= _('Edit answer') ?>
+				</a>
+			</li>
+		<?php else: ?>
+			<li class="nav-item">
+				<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
+					<?= _('Edit') ?>
+				</a>
+				<?php require_once TEMPLATE_PATH.'/question/modal/edit_answer_lure.phtml' ?>
+			</li>
+		<?php endif; ?>
+		<!-- / edit answer -->
+
+		<!-- tab_history -->
+		<?php if (mb_strlen($this->answer->getText()) > 0): ?>
+			<li class="nav-item">
+				<a class="nav-link" href="<?= $this->question->getHistoryURL($this->lang) ?>">
+					<?= _('History') ?>
+				</a>
+			</li>		
+		<?php else: ?>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><?= _('History') ?></a>
+			</li>
+		<?php endif; ?>
+		<!-- tab_history -->
+
+		<li class="nav-item">
+			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Обсуждение</a>
+		</li>
+
+	</ul>
+</div>
+<!-- / actions_top -->

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-03 10:05+0500\n"
-"PO-Revision-Date: 2019-04-03 10:05+0500\n"
+"POT-Creation-Date: 2019-04-03 12:22+0500\n"
+"PO-Revision-Date: 2019-04-03 12:22+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -21,8 +21,7 @@ msgstr ""
 #: Templates/question/block/actions.phtml:12
 #: Templates/question/block/actions/bottom.phtml:7
 #: Templates/question/block/actions/bottom.phtml:11
-#: Templates/question/block/actions/top.phtml:7
-#: Templates/question/block/actions/top.phtml:11
+#: Templates/question/block/main/actions_top.phtml:14
 msgid "Edit answer"
 msgstr "Править ответ"
 
@@ -148,6 +147,7 @@ msgstr "Песочница"
 
 #: PageController/Sandbox/WithoutAnswers.php:18
 #: PageController/Sandbox/WithoutTopics.php:18
+#: Templates/question/block/main/actions_top.phtml:6
 msgid "Question"
 msgid_plural "Questions"
 msgstr[0] "Вопрос"
@@ -470,9 +470,9 @@ msgstr ""
 #: Templates/question/block/actions.phtml:26
 #: Templates/question/block/actions.phtml:30
 #: Templates/question/block/actions/bottom.phtml:18
-#: Templates/question/block/actions/top.phtml:21
-#: Templates/question/block/actions/top.phtml:25
-#: Templates/question/block/actions/top.phtml:29
+#: Templates/question/block/main/actions_top.phtml:52
+#: Templates/question/block/main/actions_top.phtml:56
+#: Templates/question/block/main/actions_top.phtml:60
 #: Templates/topic/block/actions.phtml:14
 #: Templates/topic/block/actions.phtml:20
 #: Templates/topic/block/actions.phtml:28 Templates/user/block/header.phtml:37
@@ -483,8 +483,8 @@ msgstr "Подписаться"
 #: Templates/question/block/actions.phtml:23
 #: Templates/question/block/actions.phtml:26
 #: Templates/question/block/actions/bottom.phtml:18
-#: Templates/question/block/actions/top.phtml:22
-#: Templates/question/block/actions/top.phtml:25
+#: Templates/question/block/main/actions_top.phtml:53
+#: Templates/question/block/main/actions_top.phtml:56
 #: Templates/topic/block/actions.phtml:15
 #: Templates/topic/block/actions.phtml:20 Templates/user/block/header.phtml:38
 #: Templates/user/block/header.phtml:41
@@ -492,14 +492,14 @@ msgid "Followed"
 msgstr "Подписан"
 
 #: Templates/question/block/actions.phtml:24
-#: Templates/question/block/actions/top.phtml:23
+#: Templates/question/block/main/actions_top.phtml:54
 #: Templates/topic/block/actions.phtml:16 Templates/user/block/header.phtml:39
 msgid "Unfollow"
 msgstr "Отписаться"
 
 #: Templates/question/block/actions.phtml:37
 #: Templates/question/block/actions/bottom.phtml:23
-#: Templates/question/block/actions/top.phtml:36
+#: Templates/question/block/main/actions_top.phtml:31
 msgid "History"
 msgstr "История"
 
@@ -543,15 +543,6 @@ msgstr "Все авторы ответа"
 msgid "Last contribution"
 msgstr "Топ авторов ответа"
 
-#: Templates/question/block/header/topics.phtml:21
-msgid "Update topics"
-msgstr "Изменить темы"
-
-#: Templates/question/block/header/topics.phtml:31
-#: Templates/question/block/header/topics.phtml:38
-msgid "Set question topics"
-msgstr "Задать темы вопроса"
-
 #: Templates/question/block/lure/be_first_contributor.phtml:14
 #: Templates/question/block/lure/be_first_contributor.phtml:37
 msgid "Be the first author"
@@ -566,6 +557,19 @@ msgstr ""
 "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
 "тема вопроса вам близка!"
 
+#: Templates/question/block/main/actions_top.phtml:20
+msgid "Edit"
+msgstr "Править"
+
+#: Templates/question/block/main/topics.phtml:21
+msgid "Update topics"
+msgstr "Изменить темы"
+
+#: Templates/question/block/main/topics.phtml:31
+#: Templates/question/block/main/topics.phtml:38
+msgid "Set question topics"
+msgstr "Задать темы вопроса"
+
 #: Templates/question/block/related_questions.phtml:19
 #: Templates/question/block/right/info_about_question.phtml:24
 msgid "Answer updated"
@@ -574,6 +578,14 @@ msgstr "Ответ обновлен"
 #: Templates/question/block/right/about_answeropedia.phtml:13
 msgid "Join the community"
 msgstr "Присоединиться к сообществу"
+
+#: Templates/question/block/right/contributors_top.phtml:15
+msgid "Top answer contributors"
+msgstr "Топ авторов ответа"
+
+#: Templates/question/block/right/contributors_top.phtml:60
+msgid "All answer contributors"
+msgstr "Все авторы ответа"
 
 #: Templates/question/block/right/image.phtml:10
 msgid "Update picture"
@@ -590,14 +602,6 @@ msgid ""
 "share a link with your friends"
 msgstr ""
 "Если у вас есть друзья которые знают ответ на этот вопрос, поделитесь ссылкой"
-
-#: Templates/question/block/sidebar/contributors_top.phtml:15
-msgid "Top answer contributors"
-msgstr "Топ авторов ответа"
-
-#: Templates/question/block/sidebar/contributors_top.phtml:60
-msgid "All answer contributors"
-msgstr "Все авторы ответа"
 
 #: Templates/question/block/sidebar/sidebar.phtml:7
 msgid "Main page"
