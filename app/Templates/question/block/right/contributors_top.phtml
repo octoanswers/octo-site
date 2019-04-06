@@ -1,70 +1,55 @@
 
 <?php if (count($this->contributors_top)): ?>
-    <!--noindex-->
-    <!--googleoff: index-->
+	<!--noindex-->
+	<!--googleoff: index-->
 
+	<!-- top contributors @ sidebar -->
+	<div class="mb-4">
+		<a class="float-right text-black-50 no-underline-hover" data-scroll href="#contributors_full_list">
+			<?= count($this->contributors).'&nbsp;'.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
+		</a>
+		<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
+			<?= _('Top contributors') ?>
+		</div>
+	</div>
+		
+	<?php foreach ($this->contributors_top as $contributor): ?>
 
-    <!-- top contributors @ sidebar -->
-    <div class="bg-light p-0 p-md-3 mb-4 d-none d-lg-block">
-        <div class="box-header">
-            <a class="float-right color-gray-600 no-underline-hover" data-scroll href="#contributors_full_list">
-                <?= count($this->contributors) ?>
-                <i class="fas fa-user-friends"></i>
-            </a>
-            <a class="color-gray-800 font-weight-600 no-underline-hover" data-scroll href="#contributors_full_list">
-                <?= _('Top answer contributors') ?>
-            </a>
-        </div>
-        <div class="box-body color-gray-800">
-            <div class="d-flex flex-wrap">
+	<div class="media position-relative mb-3">
+		<img src="<?= $contributor->getAvatarMediumURL() ?>" class="size-6 mr-3" alt="<?= $contributor->getName() ?>">
+		<div class="media-body">
+			<a class="h6 mt-0 mr-2 font-weight-bold text-dark no-underline-hover" href="<?= $contributor->getURL($this->lang) ?>">
+				<?= $contributor->getName() ?>
+			</a>
 
-                <?php foreach ($this->contributors_top as $contributor): ?>
-                    <div class="my-3 w-100">
-                        <span class="float-left">
-                            <a href="<?= $contributor->getURL($this->lang) ?>">
-                                <img class="size-4 rounded mt-1" src="<?= $contributor->getAvatarMediumURL() ?>" alt="<?= $contributor->getName() ?>">
-                            </a>
-                        </span>
-                        <div class="ml-5">
-                            <a class="font-weight-500 color-gray-800 no-underline-hover" href="<?= $contributor->getURL($this->lang) ?>">
-                                <?= $contributor->getName() ?>
-                            </a>
-                            <div class="progress my-2">
-                                <?php $tail_max_contribution = $this->contributors[0]->getContribution(); ?>
-                                <?php $percentage = $contributor->getContribution() * (1 / $tail_max_contribution); ?>
-                                <div class="progress-bar bg-success" role="progressbar" style="width: <?= ceil(100 * $percentage) ?>%;" aria-valuenow="<?= $percentage ?>" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="small color-gray-600 mt-1">
-                                <span class="color-gray-700 font-weight-600">
-                                    <?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
-                                </span>
-                                <span class="font-weight-800 mx-1 color-gray-800">&middot;</span>
-                                <?= $contributor->getSignature() ? $contributor->getSignature() : $contributor->getUsername() ?>
-                                <?php if ($contributor->getSite()): ?>
-                                    <span class="font-weight-800 mx-1 color-gray-800">&middot;</span>
-                                    <a href="<?= $contributor->getSite() ?>">
-                                        <?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
-                                    </a>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+			<span class="small text-muted font-weight-normal">
+				<i class="far fa-dot-circle"></i>&nbsp;<?= Contribution_Humanizer::humanizeCount($contributor->getContribution()) ?>
+			</span>
 
-            </div>
-        </div>
+			<p class="text-secondary mb-0">
+				<?= $contributor->getSignature() ? $contributor->getSignature() : $contributor->getUsername() ?>
+				<?php if ($contributor->getSite()): ?>
+					<a href="<?= $contributor->getSite() ?>">
+						<?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
+					</a>
+				<?php endif; ?>
+			</p>
+		</div>
+	</div>
+	<?php endforeach; ?>
 
-        <?php if (count($this->contributors) > count($this->contributors_top)): ?>
-            <div class="box-footer">
-                <a class="ml-5 small" data-scroll href="#contributors_full_list">
-                    <?= _('All answer contributors') ?>
-                </a>
-            </div>
-        <?php endif; ?>
+	<!--
+	<?php if (count($this->contributors) > count($this->contributors_top)): ?>
+		<div class="box-footer">
+			<a class="ml-5 small" data-scroll href="#contributors_full_list">
+				<?= _('All answer contributors') ?>
+			</a>
+		</div>
+	<?php endif; ?>
+	-->
 
-    </div>
-    <!-- / top contributors @ sidebar -->
+	<!-- / top contributors @ sidebar -->
 
-    <!--googleon: index -->
-    <!--/noindex-->
+	<!--googleon: index -->
+	<!--/noindex-->
 <?php endif; ?>

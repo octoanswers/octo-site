@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-04 01:19+0500\n"
-"PO-Revision-Date: 2019-04-04 01:20+0500\n"
+"POT-Creation-Date: 2019-04-06 19:26+0500\n"
+"PO-Revision-Date: 2019-04-06 19:26+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -472,7 +472,12 @@ msgstr ""
 "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями "
 "ссылкой на него."
 
-#: Templates/question/block/contributors_full.phtml:7
+#: Templates/question/block/contributors_full.phtml:6
+msgid "Answer contributors"
+msgstr "Авторы ответа"
+
+#: Templates/question/block/contributors_full.phtml:13
+#: Templates/question/block/right/contributors_top.phtml:9
 #: Templates/question/block/right/info_about_question.phtml:9
 msgid "Contributor"
 msgid_plural "Contributors"
@@ -480,11 +485,12 @@ msgstr[0] "Автор"
 msgstr[1] "Автора"
 msgstr[2] "Авторов"
 
-#: Templates/question/block/contributors_full.phtml:10
-msgid "All Answer Contributors"
+#: Templates/question/block/contributors_full.phtml:16
+#: Templates/question/block/right/contributors_top.phtml:45
+msgid "All answer contributors"
 msgstr "Все авторы ответа"
 
-#: Templates/question/block/contributors_full.phtml:50
+#: Templates/question/block/contributors_full.phtml:56
 msgid "Last contribution"
 msgstr "Топ авторов ответа"
 
@@ -543,41 +549,41 @@ msgstr "Хештеги"
 msgid "Answer updated"
 msgstr "Ответ обновлен"
 
+#: Templates/question/block/main/share.phtml:5
+msgid "Share link"
+msgstr "Поделиться ссылкой"
+
 #: Templates/question/block/right/about_answeropedia.phtml:13
 msgid "Join the community"
 msgstr "Присоединиться к сообществу"
 
-#: Templates/question/block/right/actions.phtml:12
+#: Templates/question/block/right/actions.phtml:6
+msgid "Actions"
+msgstr "Действия"
+
+#: Templates/question/block/right/actions.phtml:17
 #: Templates/question/block/right/image.phtml:10
 msgid "Update picture"
 msgstr "Обновить картинку"
 
-#: Templates/question/block/right/actions.phtml:14
+#: Templates/question/block/right/actions.phtml:19
 msgid "Add a picture to the question"
 msgstr "Добавить изображение к вопросу"
 
-#: Templates/question/block/right/actions.phtml:26
+#: Templates/question/block/right/actions.phtml:31
 #: Templates/question/block/sidebar/sidebar.phtml:253
 #: Templates/question/modal/rename.phtml:8
 #: Templates/question/modal/rename.phtml:30
 msgid "Rename question"
 msgstr "Переименовать вопрос"
 
-#: Templates/question/block/right/actions.phtml:35
+#: Templates/question/block/right/actions.phtml:40
 msgid "Report"
 msgstr "Пожаловаться"
 
-#: Templates/question/block/right/contributors_top.phtml:15
-msgid "Top answer contributors"
-msgstr "Топ авторов ответа"
-
-#: Templates/question/block/right/contributors_top.phtml:60
-msgid "All answer contributors"
-msgstr "Все авторы ответа"
-
-#: Templates/question/block/share.phtml:5
-msgid "Share link"
-msgstr "Поделиться ссылкой"
+#: Templates/question/block/right/contributors_top.phtml:12
+msgid "Top contributors"
+msgstr "Топ авторов"
 
 #: Templates/question/block/sidebar/sidebar.phtml:7
 msgid "Main page"
@@ -811,6 +817,9 @@ msgstr "Выйти"
 #: Templates/user/block/knows_about.phtml:4
 msgid "Knows about"
 msgstr "Знает о"
+
+#~ msgid "All Answer Contributors"
+#~ msgstr "Все авторы ответа"
 
 #~ msgid ""
 #~ "If you like the answer or you know someone to whom it might be "
