@@ -80,12 +80,6 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->related_questions = $this->_related_questions();
 
-        $questions_with_image_offset = $this->question->getID();
-
-        if ($this->question->getImageBaseName()) {
-            $this->questions_with_image = (new Questions_Query($this->lang))->findQuestionsWithImage($questions_with_image_offset);
-        }
-
         $this->openGraph = $this->_getOpenGraph();
 
         $this->shareLink['title'] = $this->question->getTitle();
