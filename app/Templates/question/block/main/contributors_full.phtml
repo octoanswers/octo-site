@@ -1,0 +1,21 @@
+
+<?php if (count($this->contributors)): ?>
+	<!-- contributors_full -->
+	<div class="my-5">
+		<div class="mb-3">
+			<a class="float-right text-black-50 no-underline-hover" data-scroll href="#contributors_full_list">
+				<?= count($this->contributors).'&nbsp;'.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
+			</a>
+			<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
+				<?= _('Answer contributors') ?>
+			</div>
+		</div>
+
+		<?php foreach ($this->contributors as $contributor): ?>
+			<a class="size-4 mr-2 mb-2" href="<?= $contributor->getURL($this->lang) ?>">
+				<img class="size-4 rounded mt-1" src="<?= $contributor->getAvatarMediumURL() ?>" alt="<?= $contributor->getName() ?>">
+			</a>
+		<?php endforeach; ?>
+	</div>
+	<!-- / contributors tail -->
+<?php endif; ?>

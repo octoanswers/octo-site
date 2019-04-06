@@ -73,11 +73,6 @@ class Show_Question_PageController extends Abstract_PageController
             $this->contributors_top = $this->contributors;
         }
 
-        if (count($this->contributors)) {
-            $this->lastContributorID = end($this->contributors)->getID();
-            $this->maxContribution = $this->contributors[0]->getContribution();
-        }
-
         $this->template = 'question/show';
         $this->pageTitle = $this->question->getTitle().' - '._('Answeropedia');
         $this->pageDescription = $this->__getPageDescription();

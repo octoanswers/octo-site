@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-06 19:26+0500\n"
-"PO-Revision-Date: 2019-04-06 19:26+0500\n"
+"POT-Creation-Date: 2019-04-06 21:08+0500\n"
+"PO-Revision-Date: 2019-04-06 21:08+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -28,7 +28,7 @@ msgstr "Править ответ"
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
 #: PageController/Main/Show.php:39 PageController/Main/Show.php:45
 #: PageController/Main/Show.php:64 PageController/Question/Show.php:49
-#: PageController/Question/Show.php:82 PageController/Questions/Newest.php:46
+#: PageController/Question/Show.php:77 PageController/Questions/Newest.php:46
 #: PageController/Questions/Newest.php:51
 #: PageController/Questions/RecentlyUpdated.php:43
 #: PageController/Questions/RecentlyUpdated.php:48
@@ -99,11 +99,11 @@ msgstr ""
 "Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
 "ответы."
 
-#: PageController/Question/Show.php:97
+#: PageController/Question/Show.php:92
 msgid "Wiki-answers to your questions on Answeropedia"
 msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
 
-#: PageController/Question/Show.php:190
+#: PageController/Question/Show.php:185
 msgid "Wiki-answer on question: %question%"
 msgstr "Вики-ответ на вопрос: %question%"
 
@@ -297,7 +297,7 @@ msgstr "Русский"
 #: Templates/_common/item/question_with_answer.phtml:31
 #: Templates/question/block/lure/be_first_contributor.phtml:20
 #: Templates/question/block/lure/be_first_contributor.phtml:43
-#: Templates/question/block/main/related_questions.phtml:24
+#: Templates/question/block/main/related_questions.phtml:25
 msgid "Write first answer"
 msgstr "Написать первый ответ"
 
@@ -472,28 +472,6 @@ msgstr ""
 "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями "
 "ссылкой на него."
 
-#: Templates/question/block/contributors_full.phtml:6
-msgid "Answer contributors"
-msgstr "Авторы ответа"
-
-#: Templates/question/block/contributors_full.phtml:13
-#: Templates/question/block/right/contributors_top.phtml:9
-#: Templates/question/block/right/info_about_question.phtml:9
-msgid "Contributor"
-msgid_plural "Contributors"
-msgstr[0] "Автор"
-msgstr[1] "Автора"
-msgstr[2] "Авторов"
-
-#: Templates/question/block/contributors_full.phtml:16
-#: Templates/question/block/right/contributors_top.phtml:45
-msgid "All answer contributors"
-msgstr "Все авторы ответа"
-
-#: Templates/question/block/contributors_full.phtml:56
-msgid "Last contribution"
-msgstr "Топ авторов ответа"
-
 #: Templates/question/block/lure/be_first_contributor.phtml:14
 #: Templates/question/block/lure/be_first_contributor.phtml:37
 msgid "Be the first author"
@@ -540,11 +518,28 @@ msgstr "Править"
 msgid "History"
 msgstr "История"
 
+#: Templates/question/block/main/contributors_full.phtml:7
+#: Templates/question/block/right/contributors_top.phtml:9
+#: Templates/question/block/right/info_about_question.phtml:9
+msgid "Contributor"
+msgid_plural "Contributors"
+msgstr[0] "Автор"
+msgstr[1] "Автора"
+msgstr[2] "Авторов"
+
+#: Templates/question/block/main/contributors_full.phtml:10
+msgid "Answer contributors"
+msgstr "Авторы ответа"
+
 #: Templates/question/block/main/hashtags.phtml:6
 msgid "Hashtags"
 msgstr "Хештеги"
 
-#: Templates/question/block/main/related_questions.phtml:19
+#: Templates/question/block/main/related_questions.phtml:6
+msgid "Related questions"
+msgstr "Похожие вопросы"
+
+#: Templates/question/block/main/related_questions.phtml:20
 #: Templates/question/block/right/info_about_question.phtml:24
 msgid "Answer updated"
 msgstr "Ответ обновлен"
@@ -584,6 +579,10 @@ msgstr "Пожаловаться"
 #: Templates/question/block/right/contributors_top.phtml:12
 msgid "Top contributors"
 msgstr "Топ авторов"
+
+#: Templates/question/block/right/contributors_top.phtml:45
+msgid "All answer contributors"
+msgstr "Все авторы ответа"
 
 #: Templates/question/block/sidebar/sidebar.phtml:7
 msgid "Main page"
@@ -817,6 +816,9 @@ msgstr "Выйти"
 #: Templates/user/block/knows_about.phtml:4
 msgid "Knows about"
 msgstr "Знает о"
+
+#~ msgid "Last contribution"
+#~ msgstr "Топ авторов ответа"
 
 #~ msgid "All Answer Contributors"
 #~ msgstr "Все авторы ответа"
