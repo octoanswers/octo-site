@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="<?= $this->lang ?>">
 <head>
-    <?php require TEMPLATE_PATH.'/_common/head.phtml'; ?>
+	<?php require TEMPLATE_PATH.'/_common/head.phtml'; ?>
 </head>
 <body>
-    <?php require TEMPLATE_PATH.'/_common/navbar.phtml'; ?>
+	<?php require TEMPLATE_PATH.'/_common/navbar.phtml'; ?>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-8 col-xl-8">
-                <?php require_once TEMPLATE_PATH.'/questions/show_list/nav.phtml' ?>
+	<div class="container-fluid">
+		<div class="row flex-xl-nowrap">
+			
+			<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+				<?php require_once TEMPLATE_PATH.'/_common//sidebar/nav_main.phtml';?>
+			</div>
+			
+			<!-- right_column -->
+			<div class="d-none d-xl-block col-xl-3 bd-toc">
+				
+				<?php require_once TEMPLATE_PATH.'/_common/sidebar/social_groups.phtml' ?>
+				<?php require_once TEMPLATE_PATH.'/_common/sidebar/footer.phtml' ?>
 
-                <?php if (count($this->questions)): ?>
-                    <?php foreach ($this->questions as $question): ?>
-                        <?php require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml'; ?>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+			</div>
+			<!-- / right_column -->
 
-                <?php if (isset($this->nextPageURL)): ?>
-                    <div class="my-5">
-                        <a class="btn btn-primary btn-block" href="<?= $this->nextPageURL ?>"><?= _('More questions') ?></a>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <div class="col-12 col-md-4 col-xl-4">
-                <?php require_once TEMPLATE_PATH.'/questions/show_list/sandbox_questions.phtml' ?>
+			<!-- main_column -->
+			<main class="col-12 col-md-9 col-xl-7 py-md-3 pl-md-5 bd-content">
 
-                <?php require_once TEMPLATE_PATH.'/_common/sidebar/social_groups.phtml' ?>
-                <?php require_once TEMPLATE_PATH.'/_common/sidebar/footer.phtml' ?>
-            </div>
+				<?php require_once TEMPLATE_PATH.'/questions/main/nav.phtml' ?>
 
-        </div>
-    </div>
+				<?php if (count($this->questions)): ?>
+					<?php foreach ($this->questions as $question): ?>
+						<?php require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml'; ?>
+					<?php endforeach; ?>
+				<?php endif; ?>
 
-    <?php require TEMPLATE_PATH.'/_common/js_bottom.phtml'; ?>
+				<?php if (isset($this->nextPageURL)): ?>
+					<div class="my-5">
+						<a class="btn btn-primary btn-block" href="<?= $this->nextPageURL ?>"><?= _('More questions') ?></a>
+					</div>
+				<?php endif; ?>
+
+			</main>
+			<!-- / main_column -->
+			
+		</div>
+	</div>
+
+	<?php require TEMPLATE_PATH.'/_common/js_bottom.phtml'; ?>
 </body>
 </html>
