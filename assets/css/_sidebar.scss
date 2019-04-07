@@ -67,8 +67,8 @@
 }
 
 .bd-links {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-right: -15px;
   margin-left: -15px;
 
@@ -83,24 +83,6 @@
   @media (min-width: $breakpoint-md) {
     display: block !important;
   }
-}
-
-.bd-search {
-  position: relative; // To contain the Algolia search
-  padding: 1rem 15px;
-  margin-right: -15px;
-  margin-left: -15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-
-  .form-control:focus {
-    border-color: $color-primary-500;
-    box-shadow: 0 0 0 3px rgba($color-primary-500, 0.25);
-  }
-}
-
-.bd-search-docs-toggle {
-  line-height: 1;
-  color: $color-gray-900;
 }
 
 .bd-sidenav {
@@ -121,7 +103,7 @@
 
 .bd-toc-item {
   &.active {
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
 
     &:not(:first-child) {
       margin-top: 1rem;
