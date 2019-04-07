@@ -24,7 +24,7 @@ class Show_Question_PageController extends Abstract_PageController
     {
         $this->lang = $args['lang'];
         $question_id = $args['id'];
-        $question_uri_slug = $args['uri_slug'];
+        $question_uri_slug = isset($args['uri_slug']) ? $args['uri_slug'] : null;
 
         try {
             $this->question = (new Question_Query($this->lang))->questionWithID($question_id);
