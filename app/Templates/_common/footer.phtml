@@ -1,54 +1,72 @@
 <?php if ($this->showFooter): ?>
 
-    <!-- footer -->
-    <footer class="bg-color-gray-100 border-top small">
-        <div class="container">
-            <div class="row pt-4 pb-2">
-                <div class="col-12 col-md-9">
-                    <ul class="list-inline font-weight-bold mb-3">
-                        <li class="list-inline-item">
-                            <a class="color-gray-800 no-underline-hover" href="#">
-                                <?= _('About') ?>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="color-gray-800 no-underline-hover" rel="nofollow" target="_blank" href="https://vk.com/alexandergomzyakov">
-                                <?= _('Support') ?>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="color-gray-800 no-underline-hover" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
-                                <?= _('Users') ?>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="color-gray-800 no-underline-hover" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-                                <?= _('Flow') ?>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+	<!-- footer -->
+	<footer class="border-top">
+		<div class="mt-4 mb-1">
 
-                <div class="col-12 col-md-3">
-                    <div class="dropup">
-                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle mb-3" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  type="button">
-                            <?= _('Change language') ?>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" data-lang="en" href="<?= Page_URL_Helper::getMainURL('en') ?>">
-                                <?= _('English') ?>
-                            </a>
-                            <a class="dropdown-item" data-lang="ru" href="<?= Page_URL_Helper::getMainURL('ru') ?>">
-                                <?= _('Russian') ?>
-                            </a>
-                        </div>
-                    </div>
+			<ul class="list-inline small mb-3">
+				<li class="list-inline-item">
+					<a class="text-black-50 text-decoration-none" href="<?= SITE_URL.'/'.$this->lang.'/1' ?>">
+						<?= _('About') ?>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a class="text-black-50 text-decoration-none" href="<?= SITE_URL.'/'.$this->lang.'/2' ?>">
+						<?= _('Rules') ?>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a class="text-black-50 no-underline-hover" rel="nofollow" target="_blank" href="https://vk.com/alexandergomzyakov">
+						<?= _('Support') ?>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a class="text-black-50 no-underline-hover" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+						<?= _('Users') ?>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a class="text-black-50 text-decoration-none" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+						<?= _('Flow') ?>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<div class="dropup">
+						<a href="#" class="dropdown-toggle text-black-50" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<?= _('Change language') ?>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" data-lang="en" href="<?= Page_URL_Helper::getMainURL('en') ?>">
+								<?= _('English') ?>
+							</a>
+							<a class="dropdown-item" data-lang="ru" href="<?= Page_URL_Helper::getMainURL('ru') ?>">
+								<?= _('Russian') ?>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
 
-                </div>
-            </div>
+		</div>
+		
+		<!-- social_groups -->
+		<div class="mb-5">
+			<ul class="list-inline">
+				<li class="list-inline-item">
+					<a href="https://vk.com/answeropedia" target="_blank" rel="noopener">
+						<i class="fab fa-vk"></i>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="https://www.facebook.com/en.answeropedia" target="_blank" rel="noopener">
+						<i class="fab fa-facebook"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- / social_groups -->
 
-        </div>
-    </footer>
-    <!-- / footer -->
+	</footer>
+	<!-- / footer -->
 
 <?php endif; ?>

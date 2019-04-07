@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-06 21:08+0500\n"
-"PO-Revision-Date: 2019-04-06 21:08+0500\n"
+"POT-Creation-Date: 2019-04-07 10:53+0500\n"
+"PO-Revision-Date: 2019-04-07 10:53+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -28,8 +28,8 @@ msgstr "Править ответ"
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
 #: PageController/Main/Show.php:39 PageController/Main/Show.php:45
 #: PageController/Main/Show.php:64 PageController/Question/Show.php:49
-#: PageController/Question/Show.php:77 PageController/Questions/Newest.php:46
-#: PageController/Questions/Newest.php:51
+#: PageController/Question/Show.php:77 PageController/Questions/Newest.php:44
+#: PageController/Questions/Newest.php:49
 #: PageController/Questions/RecentlyUpdated.php:43
 #: PageController/Questions/RecentlyUpdated.php:48
 #: PageController/Root/Show.php:25 PageController/Sandbox/All.php:49
@@ -73,7 +73,7 @@ msgid "Feed"
 msgstr "Лента"
 
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: Templates/_common/footer.phtml:26 Templates/_common/sidebar/footer.phtml:20
+#: Templates/_common/footer.phtml:20 Templates/_common/footer.phtml:52
 #: Templates/flow/block/header.phtml:4
 msgid "Flow"
 msgstr "Поток"
@@ -99,11 +99,11 @@ msgstr ""
 "Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
 "ответы."
 
-#: PageController/Question/Show.php:92
+#: PageController/Question/Show.php:86
 msgid "Wiki-answers to your questions on Answeropedia"
 msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
 
-#: PageController/Question/Show.php:185
+#: PageController/Question/Show.php:179
 msgid "Wiki-answer on question: %question%"
 msgstr "Вики-ответ на вопрос: %question%"
 
@@ -115,11 +115,11 @@ msgstr "Обновление тем вопроса «%question%» - Answeropedia
 msgid "Update topics for question \"%question%\""
 msgstr "Обновление тем вопроса «%question%»"
 
-#: PageController/Questions/Newest.php:46
+#: PageController/Questions/Newest.php:44
 msgid "Newest questions"
 msgstr "Новые вопросы"
 
-#: PageController/Questions/Newest.php:46
+#: PageController/Questions/Newest.php:44
 #: PageController/Questions/RecentlyUpdated.php:43
 #: PageController/Sandbox/All.php:49
 #: PageController/Sandbox/WithoutAnswers.php:58
@@ -129,7 +129,7 @@ msgid "Page"
 msgstr "Страница"
 
 #: PageController/Questions/RecentlyUpdated.php:43
-#: Templates/questions/show_list/nav.phtml:10
+#: Templates/questions/main/nav.phtml:10
 msgid "Recently updated"
 msgstr "Недавно обновленные"
 
@@ -210,7 +210,7 @@ msgstr "Новые темы"
 msgid "Wiki-answers on Answeropedia"
 msgstr "Вики-ответы на Answeropedia"
 
-#: PageController/Users/Newest.php:38 Templates/questions/show_list/nav.phtml:5
+#: PageController/Users/Newest.php:38 Templates/questions/main/nav.phtml:5
 #: Templates/topics/block/nav.phtml:6 Templates/users/block/nav.phtml:6
 msgid "Newest"
 msgstr "Новые"
@@ -242,7 +242,7 @@ msgstr[1] "Хештега"
 msgstr[2] "Хештегов"
 
 #: Templates/_common/block/about_octoanswers.phtml:4
-#: Templates/_common/sidebar/footer.phtml:5
+#: Templates/_common/footer.phtml:5
 #: Templates/question/block/right/about_answeropedia.phtml:7
 #: Templates/root/block/navbar.phtml:19
 msgid "About Answeropedia"
@@ -269,28 +269,32 @@ msgstr ""
 msgid "Signup"
 msgstr "Зарегистрироваться"
 
-#: Templates/_common/footer.phtml:11
-msgid "About"
-msgstr "О сайте"
-
-#: Templates/_common/footer.phtml:16 Templates/_common/sidebar/footer.phtml:10
+#: Templates/_common/footer.phtml:10 Templates/_common/footer.phtml:42
 msgid "Support"
 msgstr "Поддержка"
 
-#: Templates/_common/footer.phtml:21 Templates/_common/sidebar/footer.phtml:15
+#: Templates/_common/footer.phtml:15 Templates/_common/footer.phtml:47
 #: Templates/search/questions.phtml:17
 msgid "Users"
 msgstr "Пользователи"
 
-#: Templates/_common/footer.phtml:35
+#: Templates/_common/footer.phtml:25
+msgid "Rules"
+msgstr "Правила"
+
+#: Templates/_common/footer.phtml:37
+msgid "About"
+msgstr "О сайте"
+
+#: Templates/_common/footer.phtml:61
 msgid "Change language"
 msgstr "Изменить язык"
 
-#: Templates/_common/footer.phtml:39
+#: Templates/_common/footer.phtml:65
 msgid "English"
 msgstr "Английский"
 
-#: Templates/_common/footer.phtml:42
+#: Templates/_common/footer.phtml:68
 msgid "Russian"
 msgstr "Русский"
 
@@ -355,12 +359,12 @@ msgstr ""
 "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами."
 
 #: Templates/_common/navbar.phtml:21
-#: Templates/question/block/sidebar/sidebar.phtml:12
+#: Templates/_common/sidebar/nav_main.phtml:12
 msgid "About site"
 msgstr "О сайте"
 
 #: Templates/_common/navbar.phtml:28
-#: Templates/question/block/sidebar/sidebar.phtml:17
+#: Templates/_common/sidebar/nav_main.phtml:17
 msgid "Recent changes"
 msgstr "Свежие правки"
 
@@ -368,9 +372,17 @@ msgstr "Свежие правки"
 msgid "Ask a Question"
 msgstr "Задать вопрос"
 
-#: Templates/_common/sidebar/footer.phtml:25
-msgid "Rules"
-msgstr "Правила"
+#: Templates/_common/sidebar/nav_main.phtml:7
+msgid "Main page"
+msgstr "Главная страница"
+
+#: Templates/_common/sidebar/nav_main.phtml:22
+msgid "Popular hashtags"
+msgstr "Популярные хештеги"
+
+#: Templates/_common/sidebar/nav_main.phtml:27
+msgid "Random question"
+msgstr "Случайный вопрос"
 
 #: Templates/answer/edit/header.phtml:11
 #: Templates/answer/history/jumbotron.phtml:13
@@ -566,7 +578,7 @@ msgid "Add a picture to the question"
 msgstr "Добавить изображение к вопросу"
 
 #: Templates/question/block/right/actions.phtml:31
-#: Templates/question/block/sidebar/sidebar.phtml:253
+#: Templates/question/block/sidebar/sidebar.phtml:222
 #: Templates/question/modal/rename.phtml:8
 #: Templates/question/modal/rename.phtml:30
 msgid "Rename question"
@@ -580,27 +592,15 @@ msgstr "Пожаловаться"
 msgid "Top contributors"
 msgstr "Топ авторов"
 
-#: Templates/question/block/right/contributors_top.phtml:45
+#: Templates/question/block/right/contributors_top.phtml:47
 msgid "All answer contributors"
 msgstr "Все авторы ответа"
 
-#: Templates/question/block/sidebar/sidebar.phtml:7
-msgid "Main page"
-msgstr "Главная страница"
-
-#: Templates/question/block/sidebar/sidebar.phtml:22
-msgid "Popular hashtags"
-msgstr "Популярные хештеги"
-
-#: Templates/question/block/sidebar/sidebar.phtml:27
-msgid "Random question"
-msgstr "Случайный вопрос"
-
-#: Templates/question/block/sidebar/sidebar.phtml:243
+#: Templates/question/block/sidebar/sidebar.phtml:212
 msgid "Tools"
 msgstr "Инструменты"
 
-#: Templates/question/block/sidebar/sidebar.phtml:248
+#: Templates/question/block/sidebar/sidebar.phtml:217
 msgid "Change history"
 msgstr "История изменений"
 
@@ -684,12 +684,12 @@ msgstr "Следите за новыми вопросами с интересн�
 msgid "And share your knowledge with others"
 msgstr "И делитесь своими знаниями с окружающими"
 
-#: Templates/questions/show_list/nav.phtml:15
-#: Templates/topics/block/nav.phtml:11 Templates/users/block/nav.phtml:11
+#: Templates/questions/main/nav.phtml:15 Templates/topics/block/nav.phtml:11
+#: Templates/users/block/nav.phtml:11
 msgid "Popular"
 msgstr "Популярные"
 
-#: Templates/questions/show_list_full.phtml:22
+#: Templates/questions/show_list_full.phtml:36
 msgid "More questions"
 msgstr "Больше вопросов"
 
