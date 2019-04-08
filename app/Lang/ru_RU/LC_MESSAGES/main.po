@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-07 10:53+0500\n"
-"PO-Revision-Date: 2019-04-07 10:53+0500\n"
+"POT-Creation-Date: 2019-04-08 14:12+0500\n"
+"PO-Revision-Date: 2019-04-08 14:12+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -73,8 +73,7 @@ msgid "Feed"
 msgstr "Лента"
 
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: Templates/_common/footer.phtml:20 Templates/_common/footer.phtml:52
-#: Templates/flow/block/header.phtml:4
+#: Templates/_common/footer.phtml:30 Templates/flow/block/header.phtml:4
 msgid "Flow"
 msgstr "Поток"
 
@@ -242,7 +241,6 @@ msgstr[1] "Хештега"
 msgstr[2] "Хештегов"
 
 #: Templates/_common/block/about_octoanswers.phtml:4
-#: Templates/_common/footer.phtml:5
 #: Templates/question/block/right/about_answeropedia.phtml:7
 #: Templates/root/block/navbar.phtml:19
 msgid "About Answeropedia"
@@ -269,34 +267,21 @@ msgstr ""
 msgid "Signup"
 msgstr "Зарегистрироваться"
 
-#: Templates/_common/footer.phtml:10 Templates/_common/footer.phtml:42
-msgid "Support"
-msgstr "Поддержка"
-
-#: Templates/_common/footer.phtml:15 Templates/_common/footer.phtml:47
-#: Templates/search/questions.phtml:17
-msgid "Users"
-msgstr "Пользователи"
-
-#: Templates/_common/footer.phtml:25
-msgid "Rules"
-msgstr "Правила"
-
-#: Templates/_common/footer.phtml:37
+#: Templates/_common/footer.phtml:10
 msgid "About"
 msgstr "О сайте"
 
-#: Templates/_common/footer.phtml:61
-msgid "Change language"
-msgstr "Изменить язык"
+#: Templates/_common/footer.phtml:15
+msgid "Rules"
+msgstr "Правила"
 
-#: Templates/_common/footer.phtml:65
-msgid "English"
-msgstr "Английский"
+#: Templates/_common/footer.phtml:20
+msgid "Support"
+msgstr "Поддержка"
 
-#: Templates/_common/footer.phtml:68
-msgid "Russian"
-msgstr "Русский"
+#: Templates/_common/footer.phtml:25 Templates/search/questions.phtml:17
+msgid "Users"
+msgstr "Пользователи"
 
 #: Templates/_common/item/question_with_answer.phtml:31
 #: Templates/question/block/lure/be_first_contributor.phtml:20
@@ -383,6 +368,22 @@ msgstr "Популярные хештеги"
 #: Templates/_common/sidebar/nav_main.phtml:27
 msgid "Random question"
 msgstr "Случайный вопрос"
+
+#: Templates/_common/sidebar/nav_other_languages.phtml:5
+msgid "In other languages"
+msgstr "На других языках"
+
+#: Templates/_common/sidebar/nav_other_languages.phtml:10
+msgid "English"
+msgstr "Английский"
+
+#: Templates/_common/sidebar/nav_other_languages.phtml:15
+msgid "Russian"
+msgstr "Русский"
+
+#: Templates/_common/sidebar/nav_other_languages.phtml:20
+msgid "All languages"
+msgstr "Все языки"
 
 #: Templates/answer/edit/header.phtml:11
 #: Templates/answer/history/jumbotron.phtml:13
@@ -689,7 +690,7 @@ msgstr "И делитесь своими знаниями с окружающи�
 msgid "Popular"
 msgstr "Популярные"
 
-#: Templates/questions/show_list_full.phtml:36
+#: Templates/questions/show_list_full.phtml:37
 msgid "More questions"
 msgstr "Больше вопросов"
 
@@ -816,6 +817,11 @@ msgstr "Выйти"
 #: Templates/user/block/knows_about.phtml:4
 msgid "Knows about"
 msgstr "Знает о"
+
+#, fuzzy
+#~| msgid "Change language"
+#~ msgid "Languages"
+#~ msgstr "Изменить язык"
 
 #~ msgid "Last contribution"
 #~ msgstr "Топ авторов ответа"
