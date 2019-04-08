@@ -5,7 +5,7 @@
 
 	<!-- top contributors @ sidebar -->
 	<div class="mb-4">
-		<a class="float-right text-black-50 no-underline-hover" data-scroll href="#contributors_full_list">
+		<a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
 			<?= count($this->contributors).'&nbsp;'.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
 		</a>
 		<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
@@ -20,7 +20,7 @@
     		<img src="<?= $contributor->getAvatarMediumURL() ?>" class="size-6" alt="<?= $contributor->getName() ?>">
         </a>
 		<div class="media-body">
-			<a class="h6 mt-0 mr-2 font-weight-bold text-dark no-underline-hover" href="<?= $contributor->getURL($this->lang) ?>">
+			<a class="h6 mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
 				<?= $contributor->getName() ?>
 			</a>
 

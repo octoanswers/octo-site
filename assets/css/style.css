@@ -699,15 +699,18 @@ a:hover {
   color: #2B7DB4;
 }
 
-.text-decoration-underline, a.link-underlined {
+.text-decoration-underline,
+a.link-underlined {
   text-decoration: underline !important;
 }
 
-a.no-underline, a.no_underline {
+a.no-underline,
+a.no_underline {
   text-decoration: none;
 }
 
-a.no-underline:hover, a.no_underline:hover {
+a.no-underline:hover,
+a.no_underline:hover {
   text-decoration: none;
 }
 
@@ -725,10 +728,6 @@ a.link-external:after {
   content: url("https://png.icons8.com/small/16/3498db/external-link.png");
   margin: 0 0 0 5px;
   vertical-align: middle;
-}
-
-a.no-underline-hover:hover {
-  text-decoration: none;
 }
 
 small, .small {

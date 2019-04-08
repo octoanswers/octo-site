@@ -17,7 +17,7 @@
 
         <div class="my-3">
             <?php if ($this->authUser->getUsername() == $this->authUser->getName()): ?>
-                <a class="color-gray-800 no-underline-hover" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
+                <a class="color-gray-800 text-decoration-none" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
                     <?= _('Set real name') ?>
                 </a>
             <?php else: ?>
@@ -32,7 +32,7 @@
 
         <div class="my-3">
             <?php if (strlen($this->authUser->getSignature()) == 0): ?>
-                <a class="color-gray-800 no-underline-hover" href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>">
+                <a class="color-gray-800 text-decoration-none" href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>">
                     <?= _('Set signature') ?>
                 </a>
             <?php else: ?>
@@ -47,7 +47,7 @@
 
         <div class="my-3">
             <?php if ($this->isShowTopicsFollowLure): ?>
-                <a class="color-gray-800 no-underline-hover" href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
+                <a class="color-gray-800 text-decoration-none" href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
                     <?= _('Follow 3 more topics') ?>
                 </a>
             <?php else: ?>
@@ -62,7 +62,7 @@
 
         <div class="my-3">
             <?php if ($this->isShowQuestionsFollowLure): ?>
-                <a class="color-gray-800 no-underline-hover" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
+                <a class="color-gray-800 text-decoration-none" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
                     <?= _('Follow your first question') ?>
                 </a>
             <?php else: ?>
@@ -77,7 +77,7 @@
 
         <div class="my-3">
             <?php if ($this->isShowUsersFollowLure): ?>
-                <a class="color-gray-800 no-underline-hover" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+                <a class="color-gray-800 text-decoration-none" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
                     <?= _('Find your friends') ?>
                 </a>
             <?php else: ?>
