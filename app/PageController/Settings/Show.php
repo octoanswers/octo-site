@@ -17,10 +17,10 @@ class Show_Settings_PageController extends Abstract_PageController
         $this->template = 'settings';
         $this->pageTitle = 'Настройки'.' - '._('Answeropedia');
 
-        $this->additionalJavascript[] = 'user/upload_avatar';
-        $this->additionalJavascript[] = 'user/update_name';
-        $this->additionalJavascript[] = 'user/update_signature';
-        $this->additionalJavascript[] = 'user/update_site';
+        $this->includeJS[] = 'user/upload_avatar';
+        $this->includeJS[] = 'user/update_name';
+        $this->includeJS[] = 'user/update_signature';
+        $this->includeJS[] = 'user/update_site';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);

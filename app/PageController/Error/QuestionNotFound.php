@@ -22,7 +22,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
         $this->pageDescription = _('Question not found');
 
         $this->questionURI = $questionURI;
-        $this->additionalJavascript[] = 'goal/question_not_found';
+        $this->includeJS[] = 'goal/question_not_found';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);

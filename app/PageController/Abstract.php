@@ -14,7 +14,7 @@ abstract class Abstract_PageController
 
     protected $v = [];
     protected $authUser = null;
-    protected $additionalJavascript = [];
+    protected $includeJS = [];
 
     public $container;
 
@@ -31,11 +31,11 @@ abstract class Abstract_PageController
         $this->includeModals = [];
         
         // JS for all pages
-        $this->additionalJavascript[] = 'question/create';
+        $this->includeJS[] = 'question/create';
 
         if (!$this->authUser) {
-            $this->additionalJavascript[] = 'user/login';
-            $this->additionalJavascript[] = 'user/signup';
+            $this->includeJS[] = 'user/login';
+            $this->includeJS[] = 'user/signup';
         }
     }
 

@@ -36,8 +36,8 @@ class Show_User_PageController extends Abstract_PageController
 
         // prepare 'logout' button
         if (($this->authUser != null) && ($this->authUser->getID() == $this->user->getID())) {
-            $this->additionalJavascript[] = 'user/logout';
-            $this->additionalJavascript[] = 'enable_tooltips';
+            $this->includeJS[] = 'user/logout';
+            $this->includeJS[] = 'enable_tooltips';
 
             $this->includeModals[] = 'user/modal/logout';
         }
@@ -57,7 +57,7 @@ class Show_User_PageController extends Abstract_PageController
             $relation = (new UsersFollowUsers_Relations_Query($this->lang))->relationWithUserIDAndFollowedUserID($authUserID, $followedUserID);
 
             $this->followed = $relation ? true : false;
-            $this->additionalJavascript[] = 'user/follow';
+            $this->includeJS[] = 'user/follow';
         }
     }
 

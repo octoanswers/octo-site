@@ -101,12 +101,13 @@ class Show_Question_PageController extends Abstract_PageController
     protected function _prepareAdditionalJavascript()
     {
         if (!$this->answer->getText() && !$this->authUser) {
-            $this->additionalJavascript[] = 'question/subscribe';
+            $this->includeJS[] = 'question/subscribe';
         }
 
         if ($this->authUser) {
-            $this->additionalJavascript[] = 'question/rename';
-            $this->additionalJavascript[] = 'question/upload_image';
+            $this->includeJS[] = 'question/rename';
+            $this->includeJS[] = 'question/upload_image';
+            $this->includeJS[] = 'question/follow';
         }
     }
 
@@ -127,7 +128,6 @@ class Show_Question_PageController extends Abstract_PageController
             $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relationWithUserIDAndQuestionID($authUserID, $question_id);
 
             $this->followed = $relation ? true : false;
-            $this->additionalJavascript[] = 'question/follow';
         }
     }
 

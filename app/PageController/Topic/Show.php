@@ -112,7 +112,7 @@ class Show_Topic_PageController extends Abstract_PageController
             $relation = (new UsersFollowTopics_Relations_Query($this->lang))->relationWithUserIDAndTopicID($authUserID, $topicID);
 
             $this->followed = $relation ? true : false;
-            $this->additionalJavascript[] = 'topic/follow';
+            $this->includeJS[] = 'topic/follow';
         }
     }
 

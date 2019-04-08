@@ -15,7 +15,7 @@ class InternalServerError_Error_PageController extends Abstract_PageController
 
         $this->errorTitle = _('Error 500');
         $this->errorDescription = _('Error 500');
-        $this->additionalJavascript[] = 'goal/error_404';
+        $this->includeJS[] = 'goal/error_404';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);

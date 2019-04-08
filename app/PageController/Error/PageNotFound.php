@@ -13,7 +13,7 @@ class PageNotFound_Error_PageController extends Abstract_PageController
         $this->template = 'error/404';
         $this->pageTitle = _('Error 404').' — '._('Answeropedia');
         $this->pageDescription = _('Error 404');
-        $this->additionalJavascript[] = 'goal/page_not_found';
+        $this->includeJS[] = 'goal/page_not_found';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
