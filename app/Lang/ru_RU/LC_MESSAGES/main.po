@@ -87,7 +87,6 @@ msgid "Ask a question and get one complete answer"
 msgstr "Задайте вопрос и получите один исчерпывающий ответ"
 
 #: PageController/Main/Show.php:40 PageController/Main/Show.php:46
-#: PageController/Main/Show.php:65 Templates/_common/lure/about_octo.phtml:10
 #: Templates/question/block/right/about_answeropedia.phtml:10
 msgid ""
 "Answeropedia is like Wikipedia, only for questions and answers. You ask a "
@@ -240,13 +239,11 @@ msgstr[0] "Хештег"
 msgstr[1] "Хештега"
 msgstr[2] "Хештегов"
 
-#: Templates/_common/block/about_octoanswers.phtml:4
 #: Templates/question/block/right/about_answeropedia.phtml:7
 #: Templates/root/block/navbar.phtml:19
 msgid "About Answeropedia"
 msgstr "О Answeropedia"
 
-#: Templates/_common/block/about_octoanswers.phtml:7
 #: Templates/users/block/login_or_signup.phtml:5
 msgid ""
 "Answeropedia is a wiki-based site where users can ask questions, respond to "
@@ -255,7 +252,6 @@ msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
 
-#: Templates/_common/block/about_octoanswers.phtml:10
 #: Templates/_common/modal/signup.phtml:8
 #: Templates/_common/modal/signup.phtml:36 Templates/_common/navbar.phtml:76
 #: Templates/question/modal/edit_answer_lure.phtml:15
