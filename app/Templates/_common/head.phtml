@@ -4,11 +4,11 @@
 <title><?= $this->pageTitle ?></title>
 
 <?php if ($this->pageDescription): ?>
-<meta name="description" content="<?= $this->pageDescription ?>">
+    <meta name="description" content="<?= $this->pageDescription ?>">
 <?php endif; ?>
 
 <?php if (isset($this->canonicalURL)): ?>
-<link rel="canonical" href="<?= $this->canonicalURL ?>" />
+    <link rel="canonical" href="<?= $this->canonicalURL ?>" />
 <?php endif; ?>
 
 <!-- Favicons -->
@@ -28,6 +28,13 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 <link rel="stylesheet" href="https://answeropedia.org/assets/css/style.css?v=1">
+
+<?php if (isset($this->includeCSS) && count($this->includeCSS)): ?>
+    <!-- additional CSS -->
+    <?php foreach ($this->includeCSS as $linkToCSS): ?>
+        <link rel="stylesheet" href="<?= $linkToCSS ?>">
+    <?php endforeach; ?>
+<?php endif; ?>
 
 <!-- Open Graph tags -->
 <?php if (isset($this->openGraph['url'])): ?>

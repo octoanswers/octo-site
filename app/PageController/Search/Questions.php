@@ -25,7 +25,7 @@ class Questions_Search_PageController extends Abstract_PageController
             $this->questions = (new Search_Query($this->lang))->searchQuestions($this->query);
         }
 
-        $this->template = 'search/questions';
+        $this->template = 'search_questions';
         $this->jumbortonBgStyle = 'red';
         $this->pageTitle = str_replace('%query%', $this->query, _('Search %query% - Answeropedia'));
 

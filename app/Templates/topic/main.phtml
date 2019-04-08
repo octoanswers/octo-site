@@ -1,0 +1,15 @@
+
+<?php require_once TEMPLATE_PATH.'/topic/main/header.phtml' ?>
+<?php require_once TEMPLATE_PATH.'/topic/main/actions.phtml' ?>
+
+<?php require_once TEMPLATE_PATH.'/topic/main/nav.phtml' ?>
+
+<?php if (count($this->topic_questions)): ?>
+    <?php foreach ($this->topic_questions as $question): ?>
+        <?php require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml'; ?>
+    <?php endforeach; ?>
+<?php endif; ?>
+
+<div class="bg-color-gray-100 p-4 mb-5">
+    Есть вопрос на тему &laquo;<?= $this->topic->getTitle() ?>&raquo;?
+</div>

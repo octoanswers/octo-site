@@ -83,7 +83,7 @@ class Show_Topic_PageController extends Abstract_PageController
 
         $this->_prepareFollowButton();
 
-        $this->template = 'topic/show';
+        $this->template = 'topic';
         $this->pageTitle = $this->_get_page_title();
         //str_replace('%topic%', , _('Topic - Page title')).' • '._('Answeropedia');
         $this->pageDescription = $this->_get_page_description();

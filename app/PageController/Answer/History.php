@@ -27,7 +27,7 @@ class History_Answer_PageController extends Abstract_PageController
             $this->users[] = (new User_Query())->userWithID($revision->getUserID());
         }
 
-        $this->template = 'answer/history';
+        $this->template = 'answer_history';
         $this->pageTitle = _('Answer history').' '.$this->question->getTitle().' - '._('Answeropedia');
         $this->pageDescription = _('Answer history');
 

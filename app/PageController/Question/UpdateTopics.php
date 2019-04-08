@@ -20,7 +20,7 @@ class UpdateTopics_Question_PageController extends Abstract_PageController
 
         $this->topics_string = $this->question->getTopics() ? implode(", ", $this->question->getTopics()) : '';
 
-        $this->template = 'question/update_topics';
+        $this->template = 'question_update_topics';
         $this->pageTitle = str_replace("%question%", $this->question->getTitle(), _('Update topics for question "%question%" - Answeropedia'));
         $this->pageDescription = str_replace("%question%", $this->question->getTitle(), _('Update topics for question "%question%"'));
         $this->additionalJavascript[] = 'question/update_topics';

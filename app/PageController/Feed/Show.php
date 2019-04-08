@@ -39,7 +39,7 @@ class Show_Feed_PageController extends Abstract_PageController
         $follows_questions = (new UsersFollowQuestions_Relations_Query($this->lang))->findQuestionsFollowedByUser($userID);
         $this->isShowQuestionsFollowLure = (count($follows_questions) < 3);
 
-        $this->template = 'feed/show';
+        $this->template = 'feed';
         $this->showFooter = false;
         $this->pageTitle = _('Feed').' - '._('Answeropedia');
         $this->canonicalURL = SITE_URL;

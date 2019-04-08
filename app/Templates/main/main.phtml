@@ -1,0 +1,17 @@
+
+<?php require_once TEMPLATE_PATH.'/main/main/jumbotron.phtml' ?>
+<?php require_once TEMPLATE_PATH.'/main/main/how_it_works.phtml' ?>
+
+
+<?php require_once TEMPLATE_PATH.'/main/main/nav.phtml' ?>
+
+<!-- interesting questions -->
+<?php if (isset($this->recent_questions)): ?>
+    <?php foreach ($this->recent_questions as $question): ?>
+        <?php require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml'; ?>
+    <?php endforeach; ?>
+<?php endif; ?>
+<!-- /interesting questions -->
+
+<?php require_once TEMPLATE_PATH.'/main/main/share.phtml' ?>
+

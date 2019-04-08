@@ -17,7 +17,7 @@ class Newest_Users_PageController extends Abstract_PageController
 
         $this->users = (new Users_Query())->usersNewest();
 
-        $this->template = 'users/newest';
+        $this->template = 'users';
         $this->pageTitle = $this->_getPageTitle();
         $this->activeFilter = $this->__getActiveFilterName();
 

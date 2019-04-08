@@ -29,11 +29,13 @@ class Edit_Answer_PageController extends Abstract_PageController
             $this->answer = (new Answer_Mapper())->create($answer);
         }
 
-        $this->template = 'answer/edit';
+        $this->template = 'answer_edit';
         $this->showFooter = false;
         $this->pageTitle = $this->question->getTitle().' &middot; '._('Edit answer').' &middot; '._('Answeropedia');
         $this->pageDescription = _('Edit answer');
+
         $this->includeJS[] = 'answer/update.js?v=1';
+        $this->includeCSS[] = 'https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);

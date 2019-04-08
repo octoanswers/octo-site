@@ -13,7 +13,7 @@ class Newest_Topics_PageController extends Abstract_PageController
 
         $this->topics = (new Topics_Query($this->lang))->findNewest($this->page);
 
-        $this->template = 'topics/newest';
+        $this->template = 'topics';
         $this->pageTitle = $this->_getPageTitle();
         $this->pageDescription = "Хештеги";
         $this->activeFilter = 'newest';

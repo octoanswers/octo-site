@@ -27,7 +27,7 @@ class Show_User_PageController extends Abstract_PageController
 
         $this->_prepareFollowButton();
 
-        $this->template = 'user/show';
+        $this->template = 'user';
         $this->pageTitle = $this->user->getName().' '._('Wiki-answers on Answeropedia');
         $this->pageDescription = $this->user->getName().' '._('Wiki-answers on Answeropedia');
         $this->canonicalURL = $this->user->getURL($this->lang);
@@ -38,6 +38,8 @@ class Show_User_PageController extends Abstract_PageController
         if (($this->authUser != null) && ($this->authUser->getID() == $this->user->getID())) {
             $this->additionalJavascript[] = 'user/logout';
             $this->additionalJavascript[] = 'enable_tooltips';
+
+            $this->includeModals[] = 'user/modal/logout';
         }
 
         $output = $this->renderPage();

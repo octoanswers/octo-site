@@ -28,7 +28,7 @@ class Show_Flow_PageController extends Abstract_PageController
             $activity['created_at__humanized'] = $date_humanizer->format($activity['created_at']);
         };
 
-        $this->template = 'flow/show';
+        $this->template = 'flow';
         $this->pageTitle = _('Flow').' — '._('Answeropedia');
         $this->pageDescription = _('Questions and answers flow on Answeropedia.');
         $this->canonicalURL = Page_URL_Helper::getFlowURL($this->lang);

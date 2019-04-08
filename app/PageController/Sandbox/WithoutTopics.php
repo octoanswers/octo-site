@@ -32,7 +32,7 @@ class WithoutTopics_Sandbox_PageController extends Abstract_PageController
             }
         }
 
-        $this->template = 'sandbox/show';
+        $this->template = 'sandbox';
         $this->pageTitle = $this->_getPageTitle();
         $this->pageDescription = $this->_getPageDescription();
         $this->activeFilter = _('Without answers');
