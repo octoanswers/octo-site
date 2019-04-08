@@ -73,7 +73,9 @@ class Show_Question_PageController extends Abstract_PageController
             $this->contributors_top = $this->contributors;
         }
 
-        $this->template = 'question/show';
+        $this->template = 'question';
+        $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
+        $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
         $this->pageTitle = $this->question->getTitle().' - '._('Answeropedia');
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->getURL($this->lang);
@@ -88,6 +90,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
 
         $this->_prepareAdditionalJavascript();
+        $this->_prepareModals();
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
@@ -104,6 +107,14 @@ class Show_Question_PageController extends Abstract_PageController
         if ($this->authUser) {
             $this->additionalJavascript[] = 'question/rename';
             $this->additionalJavascript[] = 'question/upload_image';
+        }
+    }
+
+    protected function _prepareModals()
+    {
+        if (!$this->authUser) {
+            $this->includeModals[] = 'question/rename';
+            $this->includeModals[] = 'question/upload_image';
         }
     }
 

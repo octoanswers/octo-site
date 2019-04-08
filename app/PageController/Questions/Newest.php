@@ -20,7 +20,7 @@ class Newest_Questions_PageController extends Abstract_PageController
             }
         }
 
-        $this->template = 'questions/show_list';
+        $this->template = 'questions';
         $this->pageTitle = $this->_getPageTitle();
         $this->pageDescription = $this->_getPageDescription();
         $this->list = 'with-answers';

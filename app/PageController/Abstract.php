@@ -27,6 +27,8 @@ abstract class Abstract_PageController
         $cookieStorage = new CookieStorage(); // @TODO Вынести бы
         $this->authUser = $cookieStorage->getAuthUser();
 
+        $this->includeModals = [];
+        
         // JS for all pages
         $this->additionalJavascript[] = 'question/create';
 
@@ -39,7 +41,7 @@ abstract class Abstract_PageController
     protected function renderPage()
     {
         if (!$this->template) {
-            exit('Page template not set!');
+            throw new Exception("Page template not set!", 1);
         }
 
         $fullPage = TEMPLATE_PATH.'/'.$this->template.'_full.phtml';
