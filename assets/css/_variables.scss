@@ -6,30 +6,15 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
-// The baseline Material color theme
+// Primary color (triad blue from https://convertingcolors.com/rgb-color-0_176_56.html)
 
-// Main color #0076B0
-// https://convertingcolors.com/rgb-color-0_118_176.html
+$color-primary-lightest: #70ddff;
+$color-primary-light: #4ac1ff;
+$color-primary: #00a6ff;
+$color-primary-dark: #008ce2;
+$color-primary-darkest: #005aaa;
 
-$color-primary-lightest: #7ac5ff;
-$color-primary-light: #3990cc;
-$color-primary: #0076b0;
-$color-primary-dark: #005d95;
-$color-primary-darkest: #00467b;
-
-$color-complementary-red: #b03a00;
-
-//
-// Secondary & tertiary Complementary colors
-//
-// Colors calculated with https://www.sessions.edu/color-calculator/
-//
-// Full coolors Palette
-// https://coolors.co/3498db-db3466-dbc234-34db77-db4534
-//
-
-// Secondary
-// Sweetspot gray
+// Secondary colors (sweetspot gray)
 
 $color-secondary-lightest: #dedede;
 $color-secondary-light: #a7a7a7;
@@ -37,13 +22,13 @@ $color-secondary: #737373;
 $color-secondary-dark: #5a5a5a;
 $color-secondary-darkest: #434343;
 
-// Success
-// Triad green + 1 step lighter
+// Success colors (triad green)
 
-$color-success-lightest: #93cd90;
-$color-success-light: #5e965d;
-$color-success: #457c45;
-$color-success-dark: #2c632e;
+$color-success-lightest: #bbffbe;
+$color-success-light: #3ccc52;
+$color-success: #00b038;
+$color-success-dark: #00941c;
+$color-success-darkest: #007a00;
 
 // Warning color
 // Analogous complementary yellow for primary color
@@ -58,7 +43,7 @@ $color-danger-100: #f5ccc7;
 $color-danger-200: #eeaaa2;
 $color-danger-300: #e8887d;
 $color-danger-400: #e16658;
-$color-danger-500: #db4534; // main color (red)
+$color-danger: #db4534; // main color (red)
 $color-danger-600: #b4392b;
 $color-danger-700: #8c2c22;
 $color-danger-800: #642018;
