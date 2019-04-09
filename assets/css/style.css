@@ -1123,7 +1123,8 @@ img.border-2 {
   line-height: 1.2 !important;
 }
 
-.cm-header, .cm-strong {
+.cm-header,
+.cm-strong {
   font-weight: 500 !important;
 }
 

@@ -1,37 +1,44 @@
+// Variables for CodeMirror
+
+$font-size-h1: 2.25rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.4rem;
+$font-size-h4: 1.3rem;
+$font-size-h5: 1.2rem;
 
 .CodeMirror .CodeMirror-code {
+  .cm-header-1 {
+    font-size: $font-size-h2 !important;
+    line-height: 1.2 !important;
+  }
 
-    .cm-header-1 {
-        font-size: $font-size-h2 !important;
-        line-height: 1.2 !important;
-    }
+  .cm-header-2 {
+    font-size: $font-size-h3 !important;
+    line-height: 1.2 !important;
+  }
 
-    .cm-header-2 {
-        font-size: $font-size-h3 !important;
-        line-height: 1.2 !important;
-    }
+  .cm-header-3 {
+    font-size: $font-size-h4 !important;
+    line-height: 1.2 !important;
+  }
 
-    .cm-header-3 {
-        font-size: $font-size-h4 !important;
-        line-height: 1.2 !important;
-    }
+  .cm-header-4 {
+    font-size: $font-size-h5 !important;
+    line-height: 1.2 !important;
+  }
 
-    .cm-header-4 {
-        font-size: $font-size-h5 !important;
-        line-height: 1.2 !important;
-    }
+  .cm-header-5 {
+    font-size: $font-size-h5 !important;
+    line-height: 1.2 !important;
+  }
 
-    .cm-header-5 {
-        font-size: $font-size-h5 !important;
-        line-height: 1.2 !important;
-    }
-
-    .cm-header-6 {
-        font-size: $font-size-h5 !important;
-        line-height: 1.2 !important;
-    }
+  .cm-header-6 {
+    font-size: $font-size-h5 !important;
+    line-height: 1.2 !important;
+  }
 }
 
-.cm-header, .cm-strong {
-    font-weight: 500 !important;
+.cm-header,
+.cm-strong {
+  font-weight: 500 !important;
 }
