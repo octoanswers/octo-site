@@ -1,4 +1,4 @@
-@import "_variables";
+@import "variables";
 
 @import "components/_alert";
 @import "components/_avatar";
@@ -14,7 +14,6 @@
 @import "components/_flex";
 
 @import "components/typography/_blockquote";
-@import "components/typography/_font-weight";
 @import "components/typography/_heading";
 @import "components/typography/_links";
 @import "components/typography/_small";
@@ -28,13 +27,10 @@
 @import "components/_navbar";
 @import "components/_progress";
 @import "components/_pseudo_table";
+@import "components/_sidebar";
 @import "components/_simplemde/_base";
 @import "components/_size";
 @import "components/_spacing";
 @import "components/_status";
 @import "components/_table";
 @import "components/_table-box";
-@import "components/_title";
-
-@import "_nav";
-@import "_sidebar";

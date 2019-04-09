@@ -1,34 +1,33 @@
-
 .status {
-    display: inline-block;
-    width: .5rem;
-    height: .5rem;
-    background-color: $color-gray-200;
-    border-radius: 50%;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: $color-gray-200;
+  border-radius: 50%;
 }
 
 // Status sizes
 
 .status-sm {
-    width: .25rem;
-    height: .25rem;
+  width: 0.25rem;
+  height: 0.25rem;
 }
 .status-lg {
-    width: 1rem;
-    height: 1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 // Status colors
 
 .status-primary {
-    background-color: $color-primary-500;
+  background-color: $color-primary;
 }
 .status-positive {
-    background-color: $color-success-500;
+  background-color: $color-success-500;
 }
 .status-intermediate {
-    background-color: $color-secondary-500;
+  background-color: $color-secondary-500;
 }
 .status-negative {
-    background-color: $color-danger-500;
+  background-color: $color-danger-500;
 }

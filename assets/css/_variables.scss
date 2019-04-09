@@ -1,4 +1,140 @@
-@import "variables/_breakpoint";
-@import "variables/_color";
-@import "variables/_spacing";
-@import "variables/_font_size";
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// The baseline Material color theme
+
+// Main color #0076B0
+// https://convertingcolors.com/rgb-color-0_118_176.html
+
+$color-primary-lightest: #7ac5ff;
+$color-primary-light: #3990cc;
+$color-primary: #0076b0;
+$color-primary-dark: #005d95;
+$color-primary-darkest: #00467b;
+
+//
+// Secondary & tertiary Complementary colors
+//
+// Colors calculated with https://www.sessions.edu/color-calculator/
+//
+// Full coolors Palette
+// https://coolors.co/3498db-db3466-dbc234-34db77-db4534
+//
+
+// Secondary & tertiary colors - it's a triadic complementary
+
+$color-secondary-100: #f5eec7;
+$color-secondary-200: #eee3a2;
+$color-secondary-300: #e8d87d;
+$color-secondary-400: #e1cd58;
+$color-secondary-500: #dbc234; // main color (yellow)
+$color-secondary-600: #b49f2b;
+$color-secondary-700: #8c7c22;
+$color-secondary-800: #645918;
+$color-secondary-900: #3c350f;
+
+$color-tertiary-100: #f5c7d5;
+$color-tertiary-200: #eea2b9;
+$color-tertiary-300: #e87d9d;
+$color-tertiary-400: #e15881;
+$color-tertiary-500: #db3466; // main color (pink)
+$color-tertiary-600: #b42b54;
+$color-tertiary-700: #8c2241;
+$color-tertiary-800: #64182f;
+$color-tertiary-900: #3c0f1c;
+
+//
+// Success, warning and etc. colors
+//
+
+// Success color
+// Analogous complementary green for primary color
+
+$color-success-25: #ecfbf2;
+$color-success-50: #daf8e6;
+$color-success-100: #c7f5d9;
+$color-success-200: #a2eec1;
+$color-success-300: #7de8a8;
+$color-success-400: #58e18f;
+$color-success-500: #28a745; // main color (green)
+$color-success-600: #2bb462;
+$color-success-700: #228c4c;
+$color-success-800: #186437;
+$color-success-900: #0f3c21;
+
+// Warning color
+// Analogous complementary yellow for primary color
+// @ used secondary yellow
+
+// Danger color
+// Split complementary red for primary color
+
+$color-danger-100: #f5ccc7;
+$color-danger-200: #eeaaa2;
+$color-danger-300: #e8887d;
+$color-danger-400: #e16658;
+$color-danger-500: #db4534; // main color (red)
+$color-danger-600: #b4392b;
+$color-danger-700: #8c2c22;
+$color-danger-800: #642018;
+$color-danger-900: #3c130f;
+
+// Info color
+// Analogous complementary purple for primary color
+
+$color-info-100: #d0c7f5;
+$color-info-200: #b2a2ee;
+$color-info-300: #937de8;
+$color-info-400: #7458e1;
+$color-info-500: #5634db; // main color (purple)
+$color-info-600: #472bb4;
+$color-info-700: #37228c;
+$color-info-800: #281864;
+$color-info-900: #180f3c;
+
+//
+// White-black gradiend for text & borders
+//
+
+$color-white: #ffffff;
+$color-gray-50: #fafafa;
+$color-gray-100: #f5f5f5;
+$color-gray-200: #eeeeee;
+$color-gray-300: #e0e0e0;
+$color-gray-400: #bdbdbd;
+$color-gray-500: #9e9e9e;
+$color-gray-600: #757575;
+$color-gray-700: #616161;
+$color-gray-800: #424242;
+$color-gray-900: #212121;
+$color-black: #000000;
+
+$font-size-h1: 2.25rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.4rem;
+$font-size-h4: 1.3rem;
+$font-size-h5: 1.2rem;
+
+$font-size-large: 20px;
+$font-size-base: 16px;
+$font-size-small: 13px;
+
+$margin: 16px;
+$fontSize: 14px;
+
+// --spacing-100: .8rem;
+// --spacing-200: 1.6rem;
+// --spacing-300: 2.4rem;
+// --spacing-400: 3.2rem;
+// --spacing-500: 4rem;
+// --spacing-600: 4.8rem;
+// --spacing-700: 6.4rem;
+// --spacing-800: 8rem;
+// --spacing-900: 9.6rem;
+
+$border-radius-sm: 2px;
+$border-radius: 3px;
+$border-radius-lg: 4px;

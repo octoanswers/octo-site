@@ -39,7 +39,7 @@
         <?php foreach ($this->questions as $question): ?>
             <div class="mt-5">
                 <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
-                    <a class="link-inverted no-underline lead" href="<?= $question->getURL($this->lang) ?>"><?= $question->getTitle() ?></a>
+                    <a class="link-inverted text-decoration-none lead" href="<?= $question->getURL($this->lang) ?>"><?= $question->getTitle() ?></a>
                     <div>
                     <?php if ($question->getAnswer()): ?>
                         <span class="text-muted">
@@ -66,7 +66,7 @@
         <?php foreach ($this->topics as $topic): ?>
             <div class="mt-5">
                 <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
-                    <a class="link-inverted no-underline lead" href="<?= $topic->getURL($this->lang) ?>"><?= $topic->getTitle() ?></a>
+                    <a class="link-inverted text-decoration-none lead" href="<?= $topic->getURL($this->lang) ?>"><?= $topic->getTitle() ?></a>
                     <div>
                         <span class="text-muted">
                             X вопросов
@@ -94,7 +94,7 @@
                     <img class="card-img-top" src="<?= $user->getAvatarLargeURL() ?>" alt="Card image cap">
                 </a>
                 <div class="card-body">
-                    <a href="<?= $user->getURL($this->lang) ?>" class="link-inverted no-underline">
+                    <a href="<?= $user->getURL($this->lang) ?>" class="link-inverted text-decoration-none">
                         <h4 class="h5 card-title"><?= $user->getName() ?></h4>
                     </a>
                     <h5 class="h6 card-subtitle mb-2 text-muted">

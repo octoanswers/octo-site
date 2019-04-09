@@ -1,22 +1,8 @@
 a {
-  color: $color-primary-500;
+  color: $color-primary;
 
   &:hover {
-    color: $color-primary-600;
-  }
-}
-
-.text-decoration-underline,
-a.link-underlined {
-  text-decoration: underline !important;
-}
-
-a.no-underline,
-a.no_underline {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
+    color: $color-primary-dark;
   }
 }
 

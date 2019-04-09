@@ -1,9 +1,8 @@
 // Default
 
 .badge {
-  border-color: $color-primary-50;
-  background-color: $color-primary-50;
-  color: $color-primary-500;
+  border-color: $color-primary;
+  background-color: $color-primary;
 
   &:hover {
     text-decoration: none !important;
@@ -33,15 +32,13 @@ a.badge-dark {
 // Primary badge
 
 span.badge-primary a.badge-primary {
-  border-color: $color-primary-50;
-  background-color: $color-primary-50;
-  color: $color-primary-700;
+  border-color: $color-primary;
+  background-color: $color-primary;
 }
 
 a.badge-primary:hover {
-  border-color: $color-primary-100 !important;
-  background-color: $color-primary-100 !important;
-  color: $color-primary-800 !important;
+  border-color: $color-primary-dark !important;
+  background-color: $color-primary-dark !important;
 }
 
 // Secondary badge

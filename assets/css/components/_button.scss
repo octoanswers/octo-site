@@ -1,18 +1,18 @@
 // Link Buttons
 
 .btn-link {
-  color: $color-primary-500;
+  color: $color-primary;
 }
 
 // Filled buttons
 
 .btn-primary {
-  border-color: $color-primary-500;
-  background-color: $color-primary-500;
+  border-color: $color-primary;
+  background-color: $color-primary;
 
   &:hover {
-    background-color: $color-primary-600;
-    border-color: $color-primary-600;
+    background-color: $color-primary-dark;
+    border-color: $color-primary-dark;
   }
 }
 
@@ -49,12 +49,12 @@
 // Outline Buttons
 
 .btn-outline-primary {
-  color: $color-primary-500;
-  border-color: $color-primary-500;
+  color: $color-primary;
+  border-color: $color-primary;
 
   &:hover {
-    background-color: $color-primary-500;
-    border-color: $color-primary-700;
+    background-color: $color-primary;
+    border-color: $color-primary;
   }
 }
 

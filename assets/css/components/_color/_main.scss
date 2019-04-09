@@ -1,92 +1,88 @@
-
-// Primary color
-
-// Complementary colors
-
-
-
-// Coolors Palette
-// https://coolors.co/888888-1e88e5-e51e24-e5de1e-888888
-
-
 //
 // Primary colors
 //
 
-.color-primary-lightest { color: $color-primary-100; }
-.color-primary-light { color: $color-primary-300; }
-.color-primary { color: $color-primary-500 !important; }
-.color-primary-dark { color: $color-primary-700; }
-.color-primary-darkest { color: $color-primary-900; }
-
-.bg-color-primary-lightest { background-color: $color-primary-100; }
-.bg-color-primary-light { background-color: $color-primary-300; }
-.bg-color-primary { background-color: $color-primary-500; }
-.bg-color-primary-dark { background-color: $color-primary-700; }
-.bg-color-primary-darkest { background-color: $color-primary-900; }
+.color-primary-lightest {
+  color: $color-primary-lightest;
+}
+.color-primary-light {
+  color: $color-primary-light;
+}
+.color-primary {
+  color: $color-primary !important;
+}
+.color-primary-dark {
+  color: $color-primary-dark;
+}
+.color-primary-darkest {
+  color: $color-primary-darkest;
+}
 
 //
 // Secondary colors
 //
 
-.color-secondary-lightest { color: $color-secondary-200; }
-.color-secondary-light { color: $color-secondary-400; }
-.color-secondary { color: $color-secondary-500; }
-.color-secondary-dark { color: $color-secondary-700; }
-.color-secondary-darkest { color: $color-secondary-900; }
-
-.bg-color-secondary-lightest { background-color: $color-secondary-200; }
-.bg-color-secondary-light { background-color: $color-secondary-400; }
-.bg-color-secondary { background-color: $color-secondary-500; }
-.bg-color-secondary-dark { background-color: $color-secondary-700; }
-.bg-color-secondary-darkest { background-color: $color-secondary-900; }
+.color-secondary-lightest {
+  color: $color-secondary-200;
+}
+.color-secondary-light {
+  color: $color-secondary-400;
+}
+.color-secondary {
+  color: $color-secondary-500;
+}
+.color-secondary-dark {
+  color: $color-secondary-700;
+}
+.color-secondary-darkest {
+  color: $color-secondary-900;
+}
 
 //
 // Success colors
 //
 
-.color-success-light { color: $color-success-300; }
-.color-success-500, .color-success {
-    color: $color-success-500;
+.color-success-light {
+  color: $color-success-300;
+}
+.color-success-500,
+.color-success {
+  color: $color-success-500;
 }
 .color-success-700 {
-    color: $color-success-700;
+  color: $color-success-700;
 }
-.color-success-dark { color: $color-success-700; }
-
-.bg-color-success-light { background-color: $color-success-300; }
-.bg-color-success { background-color: $color-success-500; }
-.bg-color-success-dark { background-color: $color-success-700; }
-
-
-
+.color-success-dark {
+  color: $color-success-700;
+}
 
 //
 // Warning colors
 //
 
-.color-warning-light { color: $color-secondary-300; }
-.color-warning { color: $color-secondary-500; }
-.color-warning-dark { color: $color-secondary-700; }
-
-.bg-color-warning-light { background-color: $color-secondary-300; }
-.bg-color-warning { background-color: $color-secondary-500; }
-.bg-color-warning-dark { background-color: $color-secondary-700; }
-
-
-
-//
-// Stroke colors
-//
-
-.color-stroke-light { color: $color-gray-300; }
-.color-stroke { color: $color-gray-400; }
+.color-warning-light {
+  color: $color-secondary-300;
+}
+.color-warning {
+  color: $color-secondary-500;
+}
+.color-warning-dark {
+  color: $color-secondary-700;
+}
 
 //
 // Text colors
 //
 
-.color-text-white { color: $color-white; }
-.color-text-lighter { color: $color-gray-600; }
-.color-text-light { color: $color-gray-700; }
-.color-text-normal { color: $color-gray-900; }
+.color-text-white {
+  color: $color-white;
+}
+.color-text-lighter {
+  color: $color-gray-600;
+}
+.color-text-light {
+  color: $color-gray-700;
+}
+.color-text-normal {
+  color: $color-gray-900;
+}

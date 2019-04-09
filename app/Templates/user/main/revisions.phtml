@@ -3,18 +3,18 @@
     <?php for ($i=0; $i < count($this->revisions); $i++): ?>
         <div class="my-5">
             <div class="mb-3">
-                <a class="h5 color-gray-900 no_underline" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
+                <a class="h5 color-gray-900 text-decoration-none" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
                     <?= $this->questions[$i]->getTitle() ?>
                 </a>
                 <div class="small color-gray-600 mt-2">
                     Правка #<?= $this->revisions[$i]->getID() ?>
-                    <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
+                    <span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
                     <?php if ($this->revisions[$i]->getComment()): ?>
                         <strong><?= $this->revisions[$i]->getComment() ?></strong>
                     <?php else: ?>
                         Нет описания изменений
                     <?php endif; ?>
-                    <span class="mx-1 color-gray-900 font-weight-800">&middot;</span>
+                    <span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
                     <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->getCreatedAt()) ?>
                 </div>
             </div>
