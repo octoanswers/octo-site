@@ -7,7 +7,7 @@ a {
 }
 
 a.link-broken {
-  color: $color-tertiary-500;
+  color: $color-complementary-red;
 
   &:after {
     content: url("https://png.icons8.com/small/16/db3466/unavailable-cloud.png");
