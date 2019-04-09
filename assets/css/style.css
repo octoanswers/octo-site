@@ -106,15 +106,13 @@ a.badge-secondary:hover {
 
 span.badge-success,
 a.badge-success {
-  border-color: #c7f5d9;
-  background-color: #c7f5d9;
-  color: #186437;
+  border-color: #457c45;
+  background-color: #457c45;
 }
 
 a.badge-success:hover {
-  border-color: #a2eec1 !important;
-  background-color: #a2eec1 !important;
-  color: #186437 !important;
+  border-color: #2c632e !important;
+  background-color: #2c632e !important;
 }
 
 span.badge-warning,
@@ -211,13 +209,13 @@ a.badge-dark:hover {
 }
 
 .btn-success {
-  border-color: #2bb462;
-  background-color: #2bb462;
+  border-color: #457c45;
+  background-color: #457c45;
 }
 
 .btn-success:hover {
-  background-color: #228c4c;
-  border-color: #228c4c;
+  background-color: #2c632e;
+  border-color: #2c632e;
 }
 
 .btn-warning {
@@ -251,13 +249,13 @@ a.badge-dark:hover {
 }
 
 .btn-outline-success {
-  color: #228c4c;
-  border-color: #228c4c;
+  color: #457c45;
+  border-color: #457c45;
 }
 
 .btn-outline-success:hover {
-  background-color: #228c4c;
-  border-color: #228c4c;
+  background-color: #457c45;
+  border-color: #457c45;
 }
 
 .btn-outline-warning {
@@ -398,21 +396,8 @@ a.badge-dark:hover {
   color: #3c350f;
 }
 
-.color-success-light {
-  color: #7de8a8;
-}
-
-.color-success-500,
 .color-success {
-  color: #28a745;
-}
-
-.color-success-700 {
-  color: #228c4c;
-}
-
-.color-success-dark {
-  color: #228c4c;
+  color: #457c45;
 }
 
 .color-warning-light {
@@ -1386,40 +1371,6 @@ img.border-2 {
 
 .mr-14 {
   margin-right: 7rem;
-}
-
-.status {
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #eeeeee;
-  border-radius: 50%;
-}
-
-.status-sm {
-  width: 0.25rem;
-  height: 0.25rem;
-}
-
-.status-lg {
-  width: 1rem;
-  height: 1rem;
-}
-
-.status-primary {
-  background-color: #0076b0;
-}
-
-.status-positive {
-  background-color: #28a745;
-}
-
-.status-intermediate {
-  background-color: #dbc234;
-}
-
-.status-negative {
-  background-color: #db4534;
 }
 
 table {

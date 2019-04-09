@@ -60,15 +60,13 @@ a.badge-secondary:hover {
 
 span.badge-success,
 a.badge-success {
-  border-color: $color-success-100;
-  background-color: $color-success-100;
-  color: $color-success-800;
+  border-color: $color-success;
+  background-color: $color-success;
 }
 
 a.badge-success:hover {
-  border-color: $color-success-200 !important;
-  background-color: $color-success-200 !important;
-  color: $color-success-800 !important;
+  border-color: $color-success-dark !important;
+  background-color: $color-success-dark !important;
 }
 
 // Warning badge

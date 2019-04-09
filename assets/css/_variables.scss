@@ -40,24 +40,13 @@ $color-secondary-700: #8c7c22;
 $color-secondary-800: #645918;
 $color-secondary-900: #3c350f;
 
-//
-// Success, warning and etc. colors
-//
+// Success
+// Equal: Triad green for Primary + 1 light
 
-// Success color
-// Analogous complementary green for primary color
-
-$color-success-25: #ecfbf2;
-$color-success-50: #daf8e6;
-$color-success-100: #c7f5d9;
-$color-success-200: #a2eec1;
-$color-success-300: #7de8a8;
-$color-success-400: #58e18f;
-$color-success-500: #28a745; // main color (green)
-$color-success-600: #2bb462;
-$color-success-700: #228c4c;
-$color-success-800: #186437;
-$color-success-900: #0f3c21;
+$color-success-lightest: #93cd90;
+$color-success-light: #5e965d;
+$color-success: #457c45;
+$color-success-dark: #2c632e;
 
 // Warning color
 // Analogous complementary yellow for primary color

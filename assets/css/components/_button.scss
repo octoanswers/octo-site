@@ -27,12 +27,12 @@
 }
 
 .btn-success {
-  border-color: $color-success-600;
-  background-color: $color-success-600;
+  border-color: $color-success;
+  background-color: $color-success;
 
   &:hover {
-    background-color: $color-success-700;
-    border-color: $color-success-700;
+    background-color: $color-success-dark;
+    border-color: $color-success-dark;
   }
 }
 
@@ -69,12 +69,12 @@
 }
 
 .btn-outline-success {
-  color: $color-success-700;
-  border-color: $color-success-700;
+  color: $color-success;
+  border-color: $color-success;
 
   &:hover {
-    background-color: $color-success-700;
-    border-color: $color-success-700;
+    background-color: $color-success;
+    border-color: $color-success;
   }
 }
 
