@@ -23,19 +23,19 @@
 //
 
 .color-secondary-lightest {
-  color: $color-secondary-200;
+  color: $color-secondary-lightest;
 }
 .color-secondary-light {
-  color: $color-secondary-400;
+  color: $color-secondary-light;
 }
 .color-secondary {
-  color: $color-secondary-500;
+  color: $color-secondary;
 }
 .color-secondary-dark {
-  color: $color-secondary-700;
+  color: $color-secondary-dark;
 }
 .color-secondary-darkest {
-  color: $color-secondary-900;
+  color: $color-secondary-darkest;
 }
 
 // Success colors
@@ -48,14 +48,8 @@
 // Warning colors
 //
 
-.color-warning-light {
-  color: $color-secondary-300;
-}
 .color-warning {
-  color: $color-secondary-500;
-}
-.color-warning-dark {
-  color: $color-secondary-700;
+  color: $color-warning;
 }
 
 //

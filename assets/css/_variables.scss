@@ -28,20 +28,17 @@ $color-complementary-red: #b03a00;
 // https://coolors.co/3498db-db3466-dbc234-34db77-db4534
 //
 
-// Secondary & tertiary colors - it's a triadic complementary
+// Secondary
+// Sweetspot gray
 
-$color-secondary-100: #f5eec7;
-$color-secondary-200: #eee3a2;
-$color-secondary-300: #e8d87d;
-$color-secondary-400: #e1cd58;
-$color-secondary-500: #dbc234; // main color (yellow)
-$color-secondary-600: #b49f2b;
-$color-secondary-700: #8c7c22;
-$color-secondary-800: #645918;
-$color-secondary-900: #3c350f;
+$color-secondary-lightest: #dedede;
+$color-secondary-light: #a7a7a7;
+$color-secondary: #737373;
+$color-secondary-dark: #5a5a5a;
+$color-secondary-darkest: #434343;
 
 // Success
-// Equal: Triad green for Primary + 1 light
+// Triad green + 1 step lighter
 
 $color-success-lightest: #93cd90;
 $color-success-light: #5e965d;
@@ -51,6 +48,8 @@ $color-success-dark: #2c632e;
 // Warning color
 // Analogous complementary yellow for primary color
 // @ used secondary yellow
+
+$color-warning: #b49f2b;
 
 // Danger color
 // Split complementary red for primary color

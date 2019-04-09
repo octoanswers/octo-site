@@ -117,15 +117,13 @@ a.badge-success:hover {
 
 span.badge-warning,
 a.badge-warning {
-  border-color: #f5eec7;
-  background-color: #f5eec7;
-  color: #645918;
+  border-color: #737373;
+  background-color: #737373;
 }
 
 a.badge-warning:hover {
-  border-color: #f5eec7 !important;
-  background-color: #f5eec7 !important;
-  color: #645918 !important;
+  border-color: #5a5a5a !important;
+  background-color: #5a5a5a !important;
 }
 
 span.badge-danger,
@@ -199,18 +197,18 @@ a.badge-dark:hover {
 }
 
 .btn-secondary {
-  border-color: #bdbdbd;
-  background-color: #bdbdbd;
+  border-color: #737373;
+  background-color: #737373;
 }
 
 .btn-secondary:hover {
-  background-color: #424242;
-  border-color: #424242;
+  background-color: #5a5a5a;
+  border-color: #5a5a5a;
 }
 
 .btn-success {
-  border-color: #457c45;
-  background-color: #457c45;
+  border-color: #5e965d;
+  background-color: #5e965d;
 }
 
 .btn-success:hover {
@@ -219,8 +217,8 @@ a.badge-dark:hover {
 }
 
 .btn-warning {
-  background-color: #dbc234;
-  border-color: #dbc234;
+  background-color: #b49f2b;
+  border-color: #b49f2b;
 }
 
 .btn-warning:hover {
@@ -239,13 +237,13 @@ a.badge-dark:hover {
 }
 
 .btn-outline-secondary {
-  color: #616161;
-  border-color: #bdbdbd;
+  color: #737373;
+  border-color: #737373;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #616161;
-  border-color: #616161;
+  background-color: #737373;
+  border-color: #737373;
 }
 
 .btn-outline-success {
@@ -259,13 +257,13 @@ a.badge-dark:hover {
 }
 
 .btn-outline-warning {
-  color: #dbc234;
-  border-color: #f5eec7;
+  color: #b49f2b;
+  border-color: #b49f2b;
 }
 
 .btn-outline-warning:hover {
-  background-color: #dbc234;
-  border-color: #dbc234;
+  background-color: #b49f2b;
+  border-color: #b49f2b;
 }
 
 .box {
@@ -377,39 +375,31 @@ a.badge-dark:hover {
 }
 
 .color-secondary-lightest {
-  color: #eee3a2;
+  color: #dedede;
 }
 
 .color-secondary-light {
-  color: #e1cd58;
+  color: #a7a7a7;
 }
 
 .color-secondary {
-  color: #dbc234;
+  color: #737373;
 }
 
 .color-secondary-dark {
-  color: #8c7c22;
+  color: #5a5a5a;
 }
 
 .color-secondary-darkest {
-  color: #3c350f;
+  color: #434343;
 }
 
 .color-success {
   color: #457c45;
 }
 
-.color-warning-light {
-  color: #e8d87d;
-}
-
 .color-warning {
-  color: #dbc234;
-}
-
-.color-warning-dark {
-  color: #8c7c22;
+  color: #b49f2b;
 }
 
 .color-text-white {

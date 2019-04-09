@@ -17,18 +17,18 @@
 }
 
 .btn-secondary {
-  border-color: $color-gray-400;
-  background-color: $color-gray-400;
+  border-color: $color-secondary;
+  background-color: $color-secondary;
 
   &:hover {
-    background-color: $color-gray-800;
-    border-color: $color-gray-800;
+    background-color: $color-secondary-dark;
+    border-color: $color-secondary-dark;
   }
 }
 
 .btn-success {
-  border-color: $color-success;
-  background-color: $color-success;
+  border-color: $color-success-light;
+  background-color: $color-success-light;
 
   &:hover {
     background-color: $color-success-dark;
@@ -37,12 +37,12 @@
 }
 
 .btn-warning {
-  background-color: $color-secondary-500;
-  border-color: $color-secondary-500;
+  background-color: $color-warning;
+  border-color: $color-warning;
 
   &:hover {
-    background-color: $color-secondary-600;
-    border-color: $color-secondary-600;
+    background-color: $color-warning;
+    border-color: $color-warning;
   }
 }
 
@@ -59,12 +59,12 @@
 }
 
 .btn-outline-secondary {
-  color: $color-gray-700;
-  border-color: $color-gray-400;
+  color: $color-secondary;
+  border-color: $color-secondary;
 
   &:hover {
-    background-color: $color-gray-700;
-    border-color: $color-gray-700;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
   }
 }
 
@@ -79,11 +79,11 @@
 }
 
 .btn-outline-warning {
-  color: $color-secondary-500;
-  border-color: $color-secondary-100;
+  color: $color-warning;
+  border-color: $color-warning;
 
   &:hover {
-    background-color: $color-secondary-500;
-    border-color: $color-secondary-500;
+    background-color: $color-warning;
+    border-color: $color-warning;
   }
 }

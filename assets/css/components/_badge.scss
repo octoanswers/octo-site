@@ -73,15 +73,13 @@ a.badge-success:hover {
 
 span.badge-warning,
 a.badge-warning {
-  border-color: $color-secondary-100;
-  background-color: $color-secondary-100;
-  color: $color-secondary-800;
+  border-color: $color-secondary;
+  background-color: $color-secondary;
 }
 
 a.badge-warning:hover {
-  border-color: $color-secondary-100 !important;
-  background-color: $color-secondary-100 !important;
-  color: $color-secondary-800 !important;
+  border-color: $color-secondary-dark !important;
+  background-color: $color-secondary-dark !important;
 }
 
 // Danger badge
