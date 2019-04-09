@@ -126,44 +126,19 @@ a.badge-warning:hover {
   background-color: #5a5a5a !important;
 }
 
-span.badge-danger,
+span.badge-danger {
+  border-color: #ff4e68;
+  background-color: #ff4e68;
+}
+
 a.badge-danger {
-  border-color: #f5ccc7;
-  background-color: #f5ccc7;
-  color: #642018;
+  border-color: #ff4e68;
+  background-color: #ff4e68;
 }
 
-span.badge-danger:hover,
 a.badge-danger:hover {
-  border-color: #f5ccc7 !important;
-  background-color: #f5ccc7 !important;
-  color: #642018 !important;
-}
-
-span.badge-light,
-a.badge-light {
-  border-color: #fafafa;
-  background-color: #fafafa;
-  color: #bdbdbd;
-}
-
-a.badge-light:hover {
-  border-color: #f5f5f5 !important;
-  background-color: #f5f5f5 !important;
-  color: #bdbdbd !important;
-}
-
-span.badge-dark,
-a.badge-dark {
-  border-color: #757575;
-  background-color: #757575;
-  color: #ffffff;
-}
-
-a.badge-dark:hover {
-  border-color: #bdbdbd !important;
-  background-color: #bdbdbd !important;
-  color: #ffffff !important;
+  border-color: #df2c50 !important;
+  background-color: #df2c50 !important;
 }
 
 .border-top {
@@ -539,7 +514,7 @@ a:hover {
 }
 
 a.link-broken {
-  color: #db4534;
+  color: #ff4e68;
 }
 
 a.link-broken:after {

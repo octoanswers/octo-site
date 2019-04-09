@@ -36,18 +36,13 @@ $color-success-darkest: #007a00;
 
 $color-warning: #b49f2b;
 
-// Danger color
-// Split complementary red for primary color
+// Danger color (triad pink-red)
 
-$color-danger-100: #f5ccc7;
-$color-danger-200: #eeaaa2;
-$color-danger-300: #e8887d;
-$color-danger-400: #e16658;
-$color-danger: #db4534; // main color (red)
-$color-danger-600: #b4392b;
-$color-danger-700: #8c2c22;
-$color-danger-800: #642018;
-$color-danger-900: #3c130f;
+$color-danger-lightest: #ffc4d1;
+$color-danger-light: #ff899b;
+$color-danger: #ff4e68;
+$color-danger-dark: #df2c50;
+$color-danger-darkest: #a00024;
 
 // Info color
 // Analogous complementary purple for primary color

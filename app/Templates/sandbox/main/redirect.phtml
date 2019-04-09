@@ -6,10 +6,9 @@
         </a>
     </div>
 
-
     <?php $redirect = $this->redirects[$question->getID()]; ?>
     <div class="my-1">
-        <span class="badge badge-sm badge-warning">Redirect</span>
+        <span class="badge badge-warning">Redirect</span>
         <span class="mx-1">→</span>
         <a href="<?= Redirect_URL_Helper::getURL($this->lang, $redirect) ?>">
             <?= $redirect->getRedirectTitle() ?>
