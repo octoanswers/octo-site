@@ -1,25 +1,23 @@
-
 .box {
-    border: 1px solid $color-gray-300;
-    border-radius: $border-radius;
-    background-color: $color-white;
+  border: 1px solid $color-gray-300;
+  background-color: $color-white;
 
-    .box-header {
-        padding: .75rem 1rem;
-        //margin-top: -1px;
-        border-bottom: 1px solid $color-gray-300;
-        background-color: $color-gray-100
-    }
+  .box-header {
+    padding: 0.75rem 1rem;
+    //margin-top: -1px;
+    border-bottom: 1px solid $color-gray-300;
+    background-color: $color-gray-100;
+  }
 
-    .box-body {
-        padding: .75rem 1rem;
-        border-bottom: 1px solid $color-gray-300;
-    }
+  .box-body {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid $color-gray-300;
+  }
 
-    .box-footer {
-        padding: 1rem;
-        margin-top: -1px;
-        border-top: 1px solid $color-gray-300;
-        background-color: $color-gray-100
-    }
+  .box-footer {
+    padding: 1rem;
+    margin-top: -1px;
+    border-top: 1px solid $color-gray-300;
+    background-color: $color-gray-100;
+  }
 }

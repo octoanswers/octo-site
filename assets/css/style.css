@@ -174,16 +174,8 @@ a.badge-dark:hover {
   border-top: 1px solid #e0e0e0 !important;
 }
 
-.border-top-dark {
-  border-top: 1px solid #bdbdbd !important;
-}
-
 .border-bottom {
   border-bottom: 1px solid #e0e0e0 !important;
-}
-
-.border-bottom-dark {
-  border-bottom: 1px solid #bdbdbd !important;
 }
 
 .border-left {
@@ -192,31 +184,6 @@ a.badge-dark:hover {
 
 .border-right {
   border-right: 1px solid #e0e0e0 !important;
-}
-
-.border-x {
-  border-left: 1px solid #e0e0e0 !important;
-  border-right: 1px solid #e0e0e0 !important;
-}
-
-.border-double {
-  border-width: 2px !important;
-}
-
-.border-radius {
-  border-radius: 4px;
-}
-
-.rounded {
-  border-radius: 3px !important;
-}
-
-.rounded-small {
-  border-radius: 2px !important;
-}
-
-.rounded-large {
-  border-radius: 4px !important;
 }
 
 .btn-link {
@@ -305,18 +272,17 @@ a.badge-dark:hover {
 
 .box {
   border: 1px solid #e0e0e0;
-  border-radius: 3px;
   background-color: #ffffff;
 }
 
 .box .box-header {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-bottom: 1px solid #e0e0e0;
   background-color: #f5f5f5;
 }
 
 .box .box-body {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -645,7 +611,6 @@ ul {
 pre {
   padding: 1rem;
   background-color: #eeeeee;
-  border-radius: 3px;
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;
@@ -764,23 +729,13 @@ img.border-2 {
 }
 
 .list-group .list-group-item {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
 }
 
 .list-group .list-group-item:hover {
   background-color: #f5f5f5;
-}
-
-.list-group .list-group-item:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-
-.list-group .list-group-item:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
 }
 
 .list-group .list-group-item.active {
@@ -792,10 +747,6 @@ img.border-2 {
 
 .list-group .list-group-item.disabled {
   color: #bdbdbd;
-}
-
-.modal-content {
-  border-radius: 4px;
 }
 
 .modal-content .modal-header {
@@ -1498,26 +1449,5 @@ table.no-border {
 
 .table-no-paddings td {
   padding: 0;
-}
-
-.table-box {
-  border: 1px solid #e0e0e0;
-  border-radius: 3px;
-  background-color: #ffffff;
-}
-
-.table-box thead {
-  padding: .75rem 1rem;
-  border-bottom: 1px solid #e0e0e0;
-  background-color: #f5f5f5;
-}
-
-.table-box thead tr th {
-  border-bottom: none;
-  color: #424242;
-}
-
-.table-box tbody tr td {
-  vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */
