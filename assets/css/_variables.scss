@@ -30,11 +30,13 @@ $color-success: #00b038;
 $color-success-dark: #00941c;
 $color-success-darkest: #007a00;
 
-// Warning color
-// Analogous complementary yellow for primary color
-// @ used secondary yellow
+// Warning color (square orange)
 
-$color-warning: #b49f2b;
+$color-warning-lightest: #ffde8f;
+$color-warning-light: #ffa65a;
+$color-warning: #f86f25;
+$color-warning-dark: #d85403;
+$color-warning-darkest: #b83900;
 
 // Danger color (triad pink-red)
 
@@ -46,11 +48,11 @@ $color-danger-darkest: #a00024;
 
 // Info color (square orange)
 
-$color-info-lightest: #937de8;
-$color-info-light: #7458e1;
-$color-info: #f86f25;
-$color-info-dark: #472bb4;
-$color-info-darkest: #37228c;
+$color-info-lightest: #a3ffff;
+$color-info-light: #64f0eb;
+$color-info: #00b7b3;
+$color-info-dark: #009c98;
+$color-info-darkest: #00817e;
 
 //
 // White-black gradiend for text & borders

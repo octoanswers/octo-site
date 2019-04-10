@@ -56,20 +56,6 @@
   height: 2rem;
 }
 
-.badge {
-  border-color: #00a6ff;
-  background-color: #00a6ff;
-}
-
-.badge:hover {
-  text-decoration: none !important;
-}
-
-.badge-sm {
-  font-size: 0.875rem;
-  padding: 0.25rem 0.5rem;
-}
-
 a.badge-primary,
 a.badge-secondary,
 a.badge-success,
@@ -81,7 +67,9 @@ a.badge-dark {
   cursor: pointer;
 }
 
-span.badge-primary a.badge-primary {
+.badge,
+span.badge-primary,
+a.badge-primary {
   border-color: #00a6ff;
   background-color: #00a6ff;
 }
@@ -93,15 +81,14 @@ a.badge-primary:hover {
 
 span.badge-secondary,
 a.badge-secondary {
-  border-color: #eeeeee;
-  background-color: #eeeeee;
-  color: #424242;
+  border-color: #737373;
+  background-color: #737373;
 }
 
+span.badge-secondary:hover,
 a.badge-secondary:hover {
-  border-color: #e0e0e0 !important;
-  background-color: #e0e0e0 !important;
-  color: #424242 !important;
+  border-color: #5a5a5a !important;
+  background-color: #5a5a5a !important;
 }
 
 span.badge-success,
@@ -117,13 +104,13 @@ a.badge-success:hover {
 
 span.badge-warning,
 a.badge-warning {
-  border-color: #737373;
-  background-color: #737373;
+  border-color: #f86f25;
+  background-color: #f86f25;
 }
 
 a.badge-warning:hover {
-  border-color: #5a5a5a !important;
-  background-color: #5a5a5a !important;
+  border-color: #d85403 !important;
+  background-color: #d85403 !important;
 }
 
 span.badge-danger {
@@ -192,13 +179,13 @@ a.badge-danger:hover {
 }
 
 .btn-warning {
-  background-color: #b49f2b;
-  border-color: #b49f2b;
+  background-color: #f86f25;
+  border-color: #f86f25;
 }
 
 .btn-warning:hover {
-  background-color: #b49f2b;
-  border-color: #b49f2b;
+  background-color: #f86f25;
+  border-color: #f86f25;
 }
 
 .btn-outline-primary {
@@ -232,13 +219,13 @@ a.badge-danger:hover {
 }
 
 .btn-outline-warning {
-  color: #b49f2b;
-  border-color: #b49f2b;
+  color: #f86f25;
+  border-color: #f86f25;
 }
 
 .btn-outline-warning:hover {
-  background-color: #b49f2b;
-  border-color: #b49f2b;
+  background-color: #f86f25;
+  border-color: #f86f25;
 }
 
 .box {
@@ -374,7 +361,7 @@ a.badge-danger:hover {
 }
 
 .color-warning {
-  color: #b49f2b;
+  color: #f86f25;
 }
 
 .color-text-white {
