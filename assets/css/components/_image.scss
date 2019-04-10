@@ -1,96 +1,27 @@
-
-// 64px image
-.rounded-circle-8 {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-}
-
-// Deprec ???
-img.cover_w100_h8rem {
-    display: block;
-    width: 100%;
-    height: 8rem;
-    object-fit: cover;
-
-    &:hover {
-        opacity: .85;
-    }
-}
-
-.img-cover {
-    object-fit: cover;
-}
-
 img.cover-h8 {
-    display: block;
-    width: 100%;
-    height: 8rem;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
 }
 
 img.cover-height-8 {
-    display: block;
-    width: 100%;
-    height: 4rem;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 4rem;
+  object-fit: cover;
 }
 
 img.cover-height-12 {
-    display: block;
-    width: 100%;
-    height: 6rem;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 6rem;
+  object-fit: cover;
 }
 
 img.cover-height-16 {
-    display: block;
-    width: 100%;
-    height: 8rem;
-    object-fit: cover;
-}
-
-// Opacity
-
-img.opacity-80 {
-    opacity: .80;
-}
-
-img.opacity-85 {
-    opacity: .85;
-}
-
-img.opacity-90 {
-    opacity: .90;
-}
-
-// Hoveropacity
-
-img.hover-opacity-85 {
-    &:hover {
-        opacity: .85;
-    }
-}
-
-img.hover-opacity-100 {
-    &:hover {
-        opacity: 1;
-    }
-}
-
-img.hover-opacity-9 {
-    &:hover {
-        opacity: .9;
-    }
-}
-
-// Square image
-
-img.box_2 {
-    width: 2rem;
-    height: 2rem;
-}
-
-img.border-2 {
-    border: 2px solid $color-gray-300;
+  display: block;
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
 }

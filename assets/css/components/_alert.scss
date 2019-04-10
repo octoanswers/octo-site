@@ -1,37 +1,22 @@
-
 .alert {
-    padding: 1rem;
-    border-radius: 2px;
+  padding: 1rem;
 
-    .alert-heading {
-        font-size: 1rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    }
+  .alert-heading {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
 }
 
 .alert-secondary {
-    color: #333;
-    background-color: $color-gray-100;
-    border-color: $color-gray-200;
+  color: $color-secondary-darkest;
+  background-color: $color-secondary-lightest;
+  border-color: $color-secondary-lightest;
 }
 
-.alert-bordered {
-    color: #333;
-    background-color: transparent;
-    border-color: $color-gray-200;
-}
-
-.alert-dashed {
-    color: #333;
-    border: 1px dashed $color-gray-400;
-    background-color: transparent;
-}
-
-/* bg light green 100  */
 .alert-success {
-    color: #33691E;
-    background-color: #DCEDC8;
-    border-color: #DCEDC8;
+  color: $color-success-darkest;
+  background-color: $color-success-lightest;
+  border-color: $color-success-lightest;
 }

@@ -8,8 +8,8 @@
 
 <hr class="my-4 my-md-5">
 <h2><?= _('Upload avatar') ?></h2>
-<div class="pseudo_table">
-    <div class="pseudo_cell pr-4 pr-xl-5">
+<div class="">
+    <div class=" pr-4 pr-xl-5">
         <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data" class="mt-4">
             <div class="form-group">
                 <label for="form__update_name__name">
@@ -24,8 +24,8 @@
             </div>
         </form>
     </div>
-    <div class="pseudo_cell">
-        <img class="rounded-circle size-12 my-4" id="settings_pg__user_avatar" src="<?= $this->authUser->getAvatarMediumURL() ?>"/>
+    <div class="">
+        <img class="rounded-circle wh-4 my-4" id="settings_pg__user_avatar" src="<?= $this->authUser->getAvatarMediumURL() ?>"/>
     </div>
 </div>
 

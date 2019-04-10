@@ -4,7 +4,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th class="width-6" scope="col"></th>
+                <th class="w-6" scope="col"></th>
                 <th scope="col">Автор</th>
                 <th scope="col">
                     <i class="fas fa-edit" style="color: #1e88e5;"></i>
@@ -20,9 +20,9 @@
         <tbody>
             <?php foreach ($this->users as $user): ?>
                 <tr>
-                    <td class="width-6">
-                        <a class="size-6" href="<?= $user->getURL($this->lang) ?>">
-                            <img class="size-6 rounded" src="<?= $user->getAvatarSmallURL() ?>">
+                    <td class="w-6">
+                        <a class="wh-3" href="<?= $user->getURL($this->lang) ?>">
+                            <img class="wh-3 rounded" src="<?= $user->getAvatarSmallURL() ?>">
                         </a>
                     </td>
                     <td>

@@ -3,10 +3,12 @@ ins {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
+
 del {
   background-color: #ffdce0;
   text-decoration: none;
 }
+
 ins {
   background-color: #cdffd8;
   text-decoration: none;
@@ -27,14 +29,17 @@ pre {
   word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
-.text-nowrap {
-  white-space: nowrap;
-}
+blockquote,
+.blockquote {
+  background-color: $color-white;
+  border-left: 4px solid $color-gray-400;
+  padding-left: 1rem;
+  color: $color-gray-700;
+  margin-bottom: 0 !important;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 
-.font-size-16 {
-  font-size: 16px;
-}
-
-.font-size-18px {
-  font-size: 18px;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

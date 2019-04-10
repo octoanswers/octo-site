@@ -2,13 +2,13 @@
 <?php if (count($this->related_topics)): ?>
 
     <!-- related_topics -->
-    <div class="box my-4">
-        <div class="box-header">
+    <div class="my-4">
+        <div class="">
             <a class="font-weight-bold color-gray-800" href="#">
                 Похожие темы
             </a>
         </div>
-        <div class="box-body pt-4 pb-0">
+        <div class="pt-4 pb-0">
             <?php foreach ($this->related_topics as $topic): ?>
                 <a class="badge badge-secondary mr-2 mb-3" href="<?= $topic->getURL($this->lang) ?>">
                     <?= $topic->getTitle() ?>
