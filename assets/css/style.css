@@ -353,13 +353,13 @@ a.link-broken {
 }
 
 a.link-broken:after {
-  content: url("https://png.icons8.com/small/16/db3466/unavailable-cloud.png");
+  content: url("http://images.answeropedia.org/images/unavailable.png");
   margin: 0 0 0 5px;
   vertical-align: middle;
 }
 
 a.link-external:after {
-  content: url("https://png.icons8.com/small/16/3498db/external-link.png");
+  content: url("http://images.answeropedia.org/images/external-link.png");
   margin: 0 0 0 5px;
   vertical-align: middle;
 }
