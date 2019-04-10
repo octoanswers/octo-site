@@ -19,9 +19,9 @@ class Newest_Users_PageController extends Abstract_PageController
 
         $this->template = 'users';
         $this->pageTitle = $this->_getPageTitle();
-        $this->activeFilter = $this->__getActiveFilterName();
+        $this->activeFilter = $this->_getActiveFilterName();
 
-        $this->nextPageURL = $this->__nextPageURL();
+        $this->nextPageURL = $this->_nextPageURL();
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
@@ -33,7 +33,7 @@ class Newest_Users_PageController extends Abstract_PageController
     # Helper methods
     #
 
-    public function __getActiveFilterName(): string
+    public function _getActiveFilterName(): string
     {
         $filterName = _('Newest');
 
@@ -45,7 +45,7 @@ class Newest_Users_PageController extends Abstract_PageController
         return _('New users from around the world').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
     }
 
-    public function __nextPageURL()
+    public function _nextPageURL()
     {
         $nextPageURL = null;
 

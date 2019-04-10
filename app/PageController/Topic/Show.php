@@ -72,10 +72,10 @@ class Show_Topic_PageController extends Abstract_PageController
 
         //$data['alternate_url_prefix'] = $topic['url'].'?';
 
-        //$data['most_viewed_writers'] = $this->__get_most_viewed_writers();
+        //$data['most_viewed_writers'] = $this->_getMostViewedWriters();
 
         if (is_array($this->topic_questions)) {
-            $this->related_topics = $this->_get_related_topics($this->topic_questions);
+            $this->related_topics = $this->_getRelatedTopics($this->topic_questions);
         }
         //} else {
         //  $this->related_topics = [];
@@ -84,9 +84,9 @@ class Show_Topic_PageController extends Abstract_PageController
         $this->_prepareFollowButton();
 
         $this->template = 'topic';
-        $this->pageTitle = $this->_get_page_title();
+        $this->pageTitle = $this->_getPageTitle();
         //str_replace('%topic%', , _('Topic - Page title')).' • '._('Answeropedia');
-        $this->pageDescription = $this->_get_page_description();
+        $this->pageDescription = $this->_getPageDescription();
         $this->nextPageURL = null;
 
         $this->openGraph = $this->_getOpenGraph();
@@ -98,7 +98,7 @@ class Show_Topic_PageController extends Abstract_PageController
         return $response;
     }
 
-    protected function _get_page_title()
+    protected function _getPageTitle()
     {
         return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic% - Answeropedia'));
     }
@@ -121,14 +121,14 @@ class Show_Topic_PageController extends Abstract_PageController
         $og = [
             'url' => $this->topic->getURL($this->lang),
             'type' => "website",
-            'title' => $this->_get_page_title(),
-            'description' => $this->_get_page_description(),
+            'title' => $this->_getPageTitle(),
+            'description' => $this->_getPageDescription(),
             'image' => IMAGE_URL.'/og-image.png'
         ];
         return $og;
     }
 
-    protected function _get_page_description()
+    protected function _getPageDescription()
     {
         return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic%'));
     }
@@ -136,7 +136,7 @@ class Show_Topic_PageController extends Abstract_PageController
     /**
      * Get most_viewed_writers.
      */
-    public function __get_most_viewed_writers()
+    public function _getMostViewedWriters()
     {
         $most_viewed_writers = [
             [
@@ -165,7 +165,7 @@ class Show_Topic_PageController extends Abstract_PageController
         return $most_viewed_writers;
     }
 
-    public function _get_related_topics(array $questions): array
+    public function _getRelatedTopics(array $questions): array
     {
         if (count($questions) == 0) {
             return [];

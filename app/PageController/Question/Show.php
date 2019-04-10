@@ -80,7 +80,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->getURL($this->lang);
 
-        $this->related_questions = $this->_related_questions();
+        $this->related_questions = $this->_relatedQuestions();
 
         $this->openGraph = $this->_getOpenGraph();
 
@@ -131,7 +131,7 @@ class Show_Question_PageController extends Abstract_PageController
         }
     }
 
-    protected function _related_questions(): array
+    protected function _relatedQuestions(): array
     {
         $question_id = $this->question->getID();
         $delta = strlen($this->question->getTitle());
