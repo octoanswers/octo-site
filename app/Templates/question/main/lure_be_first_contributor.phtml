@@ -24,6 +24,8 @@
         <!-- / lure be_first_contributor -->
 
     <?php else: ?>
+        <!--noindex-->
+        <!--googleoff: index-->
 
         <!-- lure be_first_contributor -->
         <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-4">
@@ -48,5 +50,7 @@
 
         <?php require_once TEMPLATE_PATH.'/_modal/question/_lure/first_answer_signup.phtml' ?>
 
+        <!--googleon: index -->
+        <!--/noindex-->
     <?php endif; ?>
 <?php endif; ?>
