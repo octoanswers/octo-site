@@ -763,6 +763,16 @@ img.cover-height-16 {
   height: 4rem;
 }
 
+.wh-5 {
+  width: 5rem;
+  height: 5rem;
+}
+
+.wh-6 {
+  width: 6rem;
+  height: 6rem;
+}
+
 .w-1 {
   width: 1rem;
 }
@@ -777,6 +787,14 @@ img.cover-height-16 {
 
 .w-4 {
   width: 4rem;
+}
+
+.w-5 {
+  width: 5rem;
+}
+
+.w-6 {
+  width: 6rem;
 }
 
 @media (min-width: 576px) {
