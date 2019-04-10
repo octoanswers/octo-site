@@ -16,8 +16,8 @@
     </div>
 
     <?php if ($question->getImageBaseName()): ?>
-        <a class="d-block size-rectangle-30x15" href="<?= $question->getURL($this->lang) ?>">
-            <img class="size-rectangle-30x15" src="<?= $question->getImageURLMedium($this->lang) ?>" alt="<?= $question->getTitle() ?>">
+        <a class="d-block" href="<?= $question->getURL($this->lang) ?>">
+            <img src="<?= $question->getImageURLMedium($this->lang) ?>" alt="<?= $question->getTitle() ?>">
         </a>
     <?php endif; ?>
 
