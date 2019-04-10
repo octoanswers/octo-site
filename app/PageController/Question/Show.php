@@ -113,7 +113,7 @@ class Show_Question_PageController extends Abstract_PageController
 
     protected function _prepareModals()
     {
-        if (!$this->authUser) {
+        if ($this->authUser) {
             $this->includeModals[] = 'question/rename';
             $this->includeModals[] = 'question/upload_image';
         }

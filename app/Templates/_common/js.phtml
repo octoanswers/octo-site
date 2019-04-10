@@ -17,7 +17,7 @@
 
 <?php if (isset($this->includeJS) && count($this->includeJS)): ?>
     <?php foreach ($this->includeJS as $filename): ?>
-        <script src="<?= JS_URL.'/'.$filename ?>" type="text/javascript"></script>
+        <script src="<?= JS_URL.'/'.$filename.'.js' ?>" type="text/javascript"></script>
     <?php endforeach; ?>
 <?php endif; ?>
 
