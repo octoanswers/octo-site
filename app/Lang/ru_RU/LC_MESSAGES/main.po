@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-04-12 22:01+0500\n"
-"PO-Revision-Date: 2019-04-12 22:02+0500\n"
+"PO-Revision-Date: 2019-04-12 22:05+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -362,13 +362,14 @@ msgid ""
 msgstr ""
 "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами."
 
+# &nbsp; необходим для корректного отображения.
 #: Templates/_common/navbar.phtml:21
 msgid "Navbar.About_site"
-msgstr "О проекте"
+msgstr "О&nbsp;проекте"
 
 #: Templates/_common/navbar.phtml:28
 msgid "Navbar.Recent_changes"
-msgstr "Свежие правки"
+msgstr "Свежие&nbsp;правки"
 
 #: Templates/_common/navbar.phtml:34
 msgid "Navbar.Topics"
@@ -380,7 +381,7 @@ msgstr "Песочница"
 
 #: Templates/_common/navbar.phtml:85
 msgid "Navbar.Ask_a_question"
-msgstr "Задать вопрос"
+msgstr "Задать&nbsp;вопрос"
 
 # 123xxx
 #: Templates/_common/right/about_answeropedia.phtml:5
