@@ -18,26 +18,26 @@
 			<?php if (!$this->authUser): ?>
                 <li class="nav-item d-sm-none d-md-inline-block">
                     <a class="nav-link" href="#">
-                        <?= _('Navbar - About site') ?>
+                        <?= _('Navbar.About_site') ?>
                     </a>
                 </li>
             <?php endif; ?>
 		
 			<li class="nav-item">
 				<a class="nav-link " href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= _('Navbar - Recent changes') ?>
+					<?= _('Navbar.Recent_changes') ?>
 				</a>
 			</li>
 			
 			<li class="nav-item">
                 <a class="nav-link " href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Navbar - Topics') ?>
+                    <?= _('Navbar.Topics') ?>
                 </a>
             </li>
 
 			<li class="nav-item">
                 <a class="nav-link <?= true ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-                    <i class="fas fa-dice"></i>&nbsp;<?= _('Navbar - Sandbox') ?>
+                    <i class="fas fa-dice"></i>&nbsp;<?= _('Navbar.Sandbox') ?>
                 </a>
             </li>
 
@@ -82,7 +82,7 @@
 
 		<li class="nav-item">
 			<button class="btn btn-warning d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
-        		<?= _('Ask a Question') ?>
+        		<?= _('Navbar.Ask_a_question') ?>
 			</button>
 		</li>
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-12 17:30+0500\n"
-"PO-Revision-Date: 2019-04-12 17:31+0500\n"
+"POT-Creation-Date: 2019-04-12 22:01+0500\n"
+"PO-Revision-Date: 2019-04-12 22:02+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -363,23 +363,23 @@ msgstr ""
 "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами."
 
 #: Templates/_common/navbar.phtml:21
-msgid "Navbar - About site"
-msgstr "About site"
+msgid "Navbar.About_site"
+msgstr "О проекте"
 
 #: Templates/_common/navbar.phtml:28
-msgid "Navbar - Recent changes"
-msgstr "Recent changes"
+msgid "Navbar.Recent_changes"
+msgstr "Свежие правки"
 
 #: Templates/_common/navbar.phtml:34
-msgid "Navbar - Topics"
+msgid "Navbar.Topics"
 msgstr "Темы"
 
 #: Templates/_common/navbar.phtml:40
-msgid "Navbar - Sandbox"
+msgid "Navbar.Sandbox"
 msgstr "Песочница"
 
 #: Templates/_common/navbar.phtml:85
-msgid "Ask a Question"
+msgid "Navbar.Ask_a_question"
 msgstr "Задать вопрос"
 
 # 123xxx
@@ -810,3 +810,6 @@ msgid ""
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
+
+#~ msgid "Ask a Question"
+#~ msgstr "Задать вопрос"
