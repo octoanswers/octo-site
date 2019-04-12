@@ -1,18 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-12 17:30+0500\n"
-"PO-Revision-Date: 2019-04-12 17:31+0500\n"
+"POT-Creation-Date: 2019-04-12 18:04+0500\n"
+"PO-Revision-Date: 2019-04-12 21:27+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
-"Language: ru_RU\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ../../..\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: PageController/Answer/Edit.php:34 PageController/Answer/Edit.php:35
@@ -147,7 +146,6 @@ msgid "Question"
 msgid_plural "Questions"
 msgstr[0] "Вопрос"
 msgstr[1] "Вопроса"
-msgstr[2] "Вопросов"
 
 #: PageController/Sandbox/WithoutAnswers.php:38
 #: PageController/Sandbox/WithoutTopics.php:38
@@ -223,7 +221,6 @@ msgid "Minute to read"
 msgid_plural "Minutes to read"
 msgstr[0] "Минута на чтение"
 msgstr[1] "Минуты на чтение"
-msgstr[2] "Мминут на чтение"
 
 #: Trait/Question.php:34
 msgid "Empty answer"
@@ -238,11 +235,10 @@ msgid "Hashtag"
 msgid_plural "Hashtags"
 msgstr[0] "Хештег"
 msgstr[1] "Хештега"
-msgstr[2] "Хештегов"
 
 #: Templates/_common/footer.phtml:10
 msgid "About"
-msgstr "О сайте"
+msgstr "About"
 
 #: Templates/_common/footer.phtml:15
 msgid "Rules"
@@ -269,7 +265,7 @@ msgstr "Главная страница"
 
 #: Templates/_common/left/nav_main.phtml:12
 msgid "About site"
-msgstr "О сайте"
+msgstr "About site"
 
 #: Templates/_common/left/nav_main.phtml:17
 msgid "Recent changes"
@@ -372,21 +368,20 @@ msgstr "Recent changes"
 
 #: Templates/_common/navbar.phtml:34
 msgid "Navbar - Topics"
-msgstr "Темы"
+msgstr "Topics"
 
 #: Templates/_common/navbar.phtml:40
 msgid "Navbar - Sandbox"
-msgstr "Песочница"
+msgstr "Sandbox"
 
 #: Templates/_common/navbar.phtml:85
 msgid "Ask a Question"
 msgstr "Задать вопрос"
 
-# 123xxx
 #: Templates/_common/right/about_answeropedia.phtml:5
 #: Templates/root/block/navbar.phtml:18
 msgid "About Answeropedia"
-msgstr "О Answeropedia"
+msgstr "About Answeropedia"
 
 #: Templates/_common/right/about_answeropedia.phtml:11
 msgid "Join the community"
@@ -592,7 +587,6 @@ msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Автор"
 msgstr[1] "Автора"
-msgstr[2] "Авторов"
 
 #: Templates/question/main/contributors_full.phtml:10
 msgid "Answer contributors"

@@ -26,28 +26,24 @@ class Gettext_Middleware
         $lang = $routeParams['lang'];
 
         // Get locale for lang
-        $locale = self::getLocaleForLanguage($lang);
+        $locale = self::_getLocaleForLanguage($lang);
 
         // Set language
         $results = putenv("LC_ALL=$locale");
         if (!$results) {
-            exit ('putenv failed');
+            exit('putenv failed');
         }
 
         // Set locale
         if (!setlocale(LC_ALL, $locale.'.utf8')) {
-            if (!setlocale(LC_ALL, $locale.'.UTF-8')) {
-                if (!setlocale(LC_ALL, $locale)) {
-                    exit ('setlocale failed: locale function is not available on this platform, or the given local does not exist in this environment');
-                }
-            }
+            exit('setlocale failed: locale function is not available on this platform, or the given local does not exist in this environment: '.$locale);
         }
 
         if (function_exists('bindtextdomain') && function_exists('bind_textdomain_codeset') && function_exists('textdomain')) {
             // Specify location of translation tables
             $full_domain_path = bindtextdomain($domain, ROOT_PATH.'/app/Lang');
             if (!$full_domain_path) {
-                exit ('new text domain is set: ' . $full_domain_path);
+                exit('new text domain is set: ' . $full_domain_path);
             }
 
             bind_textdomain_codeset($domain, 'UTF-8');
@@ -55,7 +51,7 @@ class Gettext_Middleware
             // Choose domain
             $results = textdomain($domain);
             if (!$results) {
-                exit ('textdomain failed: domain is set to: '. $domain);
+                exit('textdomain failed: domain is set to: '. $domain);
             }
         } else {
             // Run locally on OS X
@@ -74,7 +70,7 @@ class Gettext_Middleware
      * @param string $lang
      * @return return string
      */
-    public static function getLocaleForLanguage(string $lang): string
+    public static function _getLocaleForLanguage(string $lang): string
     {
         if ($lang == 'ru') {
             return 'ru_RU';

@@ -18,26 +18,26 @@
 			<?php if (!$this->authUser): ?>
                 <li class="nav-item d-sm-none d-md-inline-block">
                     <a class="nav-link" href="#">
-                        <?= _('About site') ?>
+                        <?= _('Navbar - About site') ?>
                     </a>
                 </li>
             <?php endif; ?>
 		
 			<li class="nav-item">
 				<a class="nav-link " href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= _('Recent changes') ?>
+					<?= _('Navbar - Recent changes') ?>
 				</a>
 			</li>
 			
 			<li class="nav-item">
                 <a class="nav-link " href="<?= Topics_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Topics') ?>
+                    <?= _('Navbar - Topics') ?>
                 </a>
             </li>
 
 			<li class="nav-item">
                 <a class="nav-link <?= true ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-                    <i class="fas fa-dice"></i> <?= _('Sandbox') ?>
+                    <i class="fas fa-dice"></i>&nbsp;<?= _('Navbar - Sandbox') ?>
                 </a>
             </li>
 
