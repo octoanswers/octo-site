@@ -9,7 +9,7 @@ class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
         $topic = new Hashtag_Model();
         $topic->setTitle('newtopic');
 
-        $topic = (new Topic_Mapper('ru'))->create($topic);
+        $topic = (new Hashtag_Mapper('ru'))->create($topic);
 
         $this->assertEquals(18, $topic->getID());
         $this->assertEquals('newtopic', $topic->getTitle());
@@ -20,7 +20,7 @@ class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
         $topic = new Hashtag_Model();
         $topic->setTitle('новаятема');
 
-        $topic = (new Topic_Mapper('ru'))->create($topic);
+        $topic = (new Hashtag_Mapper('ru'))->create($topic);
 
         $this->assertEquals(18, $topic->getID());
         $this->assertEquals('новаятема', $topic->getTitle());

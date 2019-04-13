@@ -11,7 +11,7 @@ class Mapper_Hashtag_update_title_Test extends Abstract_DB_TestCase
         $topic->setTitle('');
 
         $this->expectExceptionMessage('Topic title param "" must have a length between 2 and 127');
-        $topic = (new Topic_Mapper('ru'))->update($topic);
+        $topic = (new Hashtag_Mapper('ru'))->update($topic);
     }
 
     public function test_TitleTooShort_throwException()
@@ -21,7 +21,7 @@ class Mapper_Hashtag_update_title_Test extends Abstract_DB_TestCase
         $topic->setTitle('x');
 
         $this->expectExceptionMessage('Topic title param "x" must have a length between 2 and 127');
-        $topic = (new Topic_Mapper('ru'))->update($topic);
+        $topic = (new Hashtag_Mapper('ru'))->update($topic);
     }
 
     public function test_UpdateWithTooLongTitle_throwException()
@@ -31,6 +31,6 @@ class Mapper_Hashtag_update_title_Test extends Abstract_DB_TestCase
         $topic->setTitle('title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title');
 
         $this->expectExceptionMessage('Topic title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
-        $topic = (new Topic_Mapper('ru'))->update($topic);
+        $topic = (new Hashtag_Mapper('ru'))->update($topic);
     }
 }

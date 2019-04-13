@@ -11,7 +11,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
         $topic->setTitle('impossible');
 
         $this->expectExceptionMessage("Topic with ID 2215 not exists");
-        $topic = (new Topic_Mapper('ru'))->update($topic);
+        $topic = (new Hashtag_Mapper('ru'))->update($topic);
     }
 
     public function test_UpdateWithIDEqualZero_ThrowException()
@@ -21,7 +21,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
         $topic->setTitle('car');
 
         $this->expectExceptionMessage('Topic id param 0 must be greater than or equal to 1');
-        $topic = (new Topic_Mapper('ru'))->update($topic);
+        $topic = (new Hashtag_Mapper('ru'))->update($topic);
     }
 
     public function test_UpdateWithIDBelowZero_ThrowException()
@@ -31,6 +31,6 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
         $topic->setTitle('guf');
 
         $this->expectExceptionMessage('Topic id param -1 must be greater than or equal to 1');
-        $topic = (new Topic_Mapper('ru'))->update($topic);
+        $topic = (new Hashtag_Mapper('ru'))->update($topic);
     }
 }

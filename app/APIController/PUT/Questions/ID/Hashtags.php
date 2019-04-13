@@ -44,7 +44,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                     $topic = new Hashtag_Model();
                     $topic->setTitle($topic_title);
 
-                    $topic = (new Topic_Mapper($this->lang))->create($topic);
+                    $topic = (new Hashtag_Mapper($this->lang))->create($topic);
                 }
 
                 $er = (new TopicsToQuestions_Relations_Query($this->lang))->findByTopicIDAndQuestionID($topic->getID(), $question->getID());
@@ -52,7 +52,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                     $er = new HashtagsToQuestions_Relation_Model();
                     $er->setTopicID($topic->getID());
                     $er->setQuestionID($question->getID());
-                    $er = (new TopicToQuestion_Relation_Mapper($this->lang))->create($er);
+                    $er = (new HashtagToQuestion_Relation_Mapper($this->lang))->create($er);
 
                     # create activity
                     $activity = new Activity_Model();

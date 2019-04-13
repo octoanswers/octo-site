@@ -10,7 +10,7 @@ class Mapper_ER_TopicsQuestions__create__Test extends Abstract_DB_TestCase
         $er->setTopicID(3);
         $er->setQuestionID(9);
 
-        $er = (new TopicToQuestion_Relation_Mapper('ru'))->create($er);
+        $er = (new HashtagToQuestion_Relation_Mapper('ru'))->create($er);
 
         $this->assertEquals(25, $er->getID());
         $this->assertEquals(3, $er->getTopicID());
@@ -23,7 +23,7 @@ class Mapper_ER_TopicsQuestions__create__Test extends Abstract_DB_TestCase
         $er->setTopicID(3);
         $er->setQuestionID(9);
 
-        $er = (new TopicToQuestion_Relation_Mapper('ru'))->create($er);
+        $er = (new HashtagToQuestion_Relation_Mapper('ru'))->create($er);
 
         $this->assertEquals(25, $er->getID());
         $this->assertEquals(3, $er->getTopicID());
