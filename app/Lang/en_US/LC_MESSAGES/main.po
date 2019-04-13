@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-13 19:03+0500\n"
-"PO-Revision-Date: 2019-04-13 19:03+0500\n"
+"POT-Creation-Date: 2019-04-13 19:24+0500\n"
+"PO-Revision-Date: 2019-04-13 19:24+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -270,15 +270,15 @@ msgstr "About site"
 
 #: Templates/_common/left/nav_main.phtml:17
 msgid "Recent changes"
-msgstr "Свежие правки"
+msgstr "Recent changes"
 
 #: Templates/_common/left/nav_main.phtml:22
 msgid "Popular hashtags"
-msgstr "Популярные хештеги"
+msgstr "Popular hashtags"
 
 #: Templates/_common/left/nav_main.phtml:27
 msgid "Random question"
-msgstr "Случайный вопрос"
+msgstr "Random question"
 
 #: Templates/_common/left/nav_other_languages.phtml:5
 msgid "In other languages"
