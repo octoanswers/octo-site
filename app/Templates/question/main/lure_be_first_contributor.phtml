@@ -1,5 +1,5 @@
 
-<?php if (!$this->answer->getText()): ?>
+<?php if (isset($this->question->answer) && !$this->question->answer->getText()): ?>
     <?php if ($this->authUser): ?>
 
         <!-- lure be_first_contributor -->

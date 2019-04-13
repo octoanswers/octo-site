@@ -19,10 +19,10 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(13, $question->getID());
         $this->assertEquals('This is question?', $question->getTitle());
         $this->assertEquals(true, $question->isRedirect());
-        $this->assertEquals('Yes, it is!', $question->getAnswer()->getText());
+        $this->assertEquals('Yes, it is!', $question->answer->getText());
         $this->assertEquals('["ICQ","Web"]', $question->getTopicsJSON());
         $this->assertEquals(["ICQ","Web"], $question->getTopics());
-        $this->assertEquals('2015-11-29 09:28:34', $question->getAnswer()->getUpdatedAt());
+        $this->assertEquals('2015-11-29 09:28:34', $question->answer->getUpdatedAt());
     }
 
     public function test_RuFullParams_ReturnObject()
@@ -40,9 +40,9 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(13, $question->getID());
         $this->assertEquals('Это вопрос?', $question->getTitle());
         $this->assertEquals(true, $question->isRedirect());
-        $this->assertEquals('Да, это вопрос!', $question->getAnswer()->getText());
+        $this->assertEquals('Да, это вопрос!', $question->answer->getText());
         $this->assertEquals(null, $question->getTopicsJSON());
         $this->assertEquals([], $question->getTopics());
-        $this->assertEquals('2015-11-29 09:28:34', $question->getAnswer()->getUpdatedAt());
+        $this->assertEquals('2015-11-29 09:28:34', $question->answer->getUpdatedAt());
     }
 }

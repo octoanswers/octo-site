@@ -4,8 +4,8 @@ trait Question_Trait
 {
     public function getShortAnswer()
     {
-        if ($this->getAnswer()->getText()) {
-            return mb_substr($this->getAnswer()->getText(), 0, mb_strpos($this->getAnswer()->getText(), "\n"));
+        if ($this->answer->getText()) {
+            return mb_substr($this->answer->getText(), 0, mb_strpos($this->answer->getText(), "\n"));
         }
 
         return null;
@@ -24,7 +24,7 @@ trait Question_Trait
 
     public function getHumanizedMinutesToRead()
     {
-        $answer_len = mb_strlen($this->getAnswer()->getText());
+        $answer_len = mb_strlen($this->answer->getText());
         if ($answer_len) {
             $minites_to_read = ceil($answer_len/1000);
             $humanized_minutes_to_read = $minites_to_read.' '.mb_strtolower(ngettext("Minute to read", "Minutes to read", $minites_to_read));

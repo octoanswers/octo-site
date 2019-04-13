@@ -5,12 +5,12 @@ class Question_Model
     use Question_Trait;
     use Question_URL_Trait;
 
-    private $id;
-    private $title;
-    private $isRedirect; // bool
+    public $id; // int
+    public $title;
+    public $isRedirect; // bool
     public $answer; // Answer_Model
-    private $topics;
-    private $imageBaseName;
+    public $topics;
+    public $imageBaseName;
 
     #
     # Init methods
@@ -21,7 +21,7 @@ class Question_Model
         $question = new self();
         $question->setTitle($title);
 
-        $question->setAnswer(new Answer_Model);
+        $question->answer = new Answer_Model;
 
         return $question;
     }
@@ -37,9 +37,8 @@ class Question_Model
             $question->setTopicsJSON($state['a_topics']);
         }
 
-        $answer = Answer_Model::initWithDBState($state);
-        $question->setAnswer($answer);
-
+        $question->answer = Answer_Model::initWithDBState($state);
+        
         return $question;
     }
 
@@ -75,16 +74,6 @@ class Question_Model
     public function setRedirect(bool $isRedirect)
     {
         $this->isRedirect = $isRedirect ? 1 : 0;
-    }
-
-    public function getAnswer()
-    {
-        return $this->answer;
-    }
-
-    public function setAnswer(Answer_Model $answer)
-    {
-        $this->answer = $answer;
     }
 
     public function getTopics(): array

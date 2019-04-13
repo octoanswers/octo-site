@@ -54,11 +54,9 @@ class Show_Question_PageController extends Abstract_PageController
             return $response;
         }
 
-        $this->answer = $this->question->getAnswer();
-
-        if (strlen($this->answer->getText())) {
+        if (isset($this->question->answer) && strlen($this->question->answer->getText())) {
             // trim first paragraph of answer
-            $answer_other_text = preg_replace("/^.+\n/iu", "", $this->answer->getText());
+            $answer_other_text = preg_replace("/^.+\n/iu", "", $this->question->answer->getText());
             $parsedown = new ExtendedParsedown($this->lang);
             $this->formattedAnswerText = trim($parsedown->text($answer_other_text));
         }
@@ -94,16 +92,12 @@ class Show_Question_PageController extends Abstract_PageController
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
-
+        
         return $response;
     }
 
     protected function _prepareAdditionalJavascript()
     {
-        if (!$this->answer->getText() && !$this->authUser) {
-            $this->includeJS[] = 'question/subscribe';
-        }
-
         if ($this->authUser) {
             $this->includeJS[] = 'question/rename';
             $this->includeJS[] = 'question/upload_image';

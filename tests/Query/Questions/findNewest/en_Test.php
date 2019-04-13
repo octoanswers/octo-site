@@ -12,10 +12,10 @@ class Query_Questions__findNewest__en__Test extends Abstract_DB_TestCase
 
         $this->assertEquals(29, $questions[0]->getID());
         $this->assertEquals('What is main president daily function?', $questions[0]->getTitle());
-        $this->assertEquals('Oh, he make some work.', $questions[0]->getAnswer()->getText());
+        $this->assertEquals('Oh, he make some work.', $questions[0]->answer->getText());
 
         $this->assertEquals(20, $questions[9]->getID());
         $this->assertEquals('How developers made interesting games?', $questions[9]->getTitle());
-        $this->assertEquals('#Games', $questions[9]->getAnswer()->getText());
+        $this->assertEquals('#Games', $questions[9]->answer->getText());
     }
 }

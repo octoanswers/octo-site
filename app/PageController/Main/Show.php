@@ -19,7 +19,7 @@ class Show_Main_PageController extends Abstract_PageController
         $this->recent_questions = (new Questions_Query($this->lang))->findNewestWithAnswer(1, 5);
 
         // foreach ($this->recent_questions as $question) {
-        //     $topicsTitles = Topic_Extractor_Helper::extractTopics($question->getAnswer()->getText());
+        //     $topicsTitles = Topic_Extractor_Helper::extractTopics($question->answer->getText());
         //     foreach ($topicsTitles as $title) {
         //         $topic = Topic_Model::initWithTitle($title);
         //         $this->topics[$question->getID()][] = $topic;

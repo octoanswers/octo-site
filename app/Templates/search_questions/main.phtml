@@ -41,7 +41,7 @@
                 <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
                     <a class="link-inverted text-decoration-none lead" href="<?= $question->getURL($this->lang) ?>"><?= $question->getTitle() ?></a>
                     <div>
-                    <?php if ($question->getAnswer()): ?>
+                    <?php if ($question->answer): ?>
                         <span class="text-muted">
                             <i class="fas fa-mail" style="color: #2BB462;"></i>
                             <?= 'getHumanizedMinutesToRead' ?>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <span class="text-muted float-right">
-                    <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+                    <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->getUpdatedAt()) ?>
                 </span>
             </div>
         <?php endforeach; ?>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <span class="text-muted float-right">
-                        22 декабря 2016 <!-- $topic->getAnswer()->getHumanizedUpdatedAt() -->
+                        22 декабря 2016 <!-- $topic->answer->getHumanizedUpdatedAt() -->
                 </span>
             </div>
         <?php endforeach; ?>

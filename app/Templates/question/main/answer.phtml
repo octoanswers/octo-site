@@ -1,5 +1,5 @@
 
-<?php if ($this->answer->getText()): ?>
+<?php if (isset($this->question->answer) && $this->question->answer->getText()): ?>
     <div class="my-4">
         <?= $this->formattedAnswerText ?>
     </div>

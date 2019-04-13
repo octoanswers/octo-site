@@ -12,11 +12,11 @@ class Query_Questions__findNewest__ru_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(33, $questions[0]->getID());
         $this->assertEquals('Птицы играют в игры?', $questions[0]->getTitle());
-        $this->assertEquals('Нет, не играют.', $questions[0]->getAnswer()->getText());
+        $this->assertEquals('Нет, не играют.', $questions[0]->answer->getText());
 
         $this->assertEquals(24, $questions[9]->getID());
         $this->assertEquals('Расскажете о своем опыте в области управления проектами?', $questions[9]->getTitle());
-        $this->assertEquals('Hmm, it`s a long-long story...', $questions[9]->getAnswer()->getText());
+        $this->assertEquals('Hmm, it`s a long-long story...', $questions[9]->answer->getText());
     }
 
     public function test_firstPage()
@@ -27,11 +27,11 @@ class Query_Questions__findNewest__ru_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(33, $questions[0]->getID());
         $this->assertEquals('Птицы играют в игры?', $questions[0]->getTitle());
-        $this->assertEquals('Нет, не играют.', $questions[0]->getAnswer()->getText());
+        $this->assertEquals('Нет, не играют.', $questions[0]->answer->getText());
 
         $this->assertEquals(24, $questions[9]->getID());
         $this->assertEquals('Расскажете о своем опыте в области управления проектами?', $questions[9]->getTitle());
-        $this->assertEquals('Hmm, it`s a long-long story...', $questions[9]->getAnswer()->getText());
+        $this->assertEquals('Hmm, it`s a long-long story...', $questions[9]->answer->getText());
     }
 
     public function test_secondPage()
@@ -42,10 +42,10 @@ class Query_Questions__findNewest__ru_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(23, $questions[0]->getID());
         $this->assertEquals('Как армия тренирует солдат?', $questions[0]->getTitle());
-        $this->assertEquals(null, $questions[0]->getAnswer()->getText());
+        $this->assertEquals(null, $questions[0]->answer->getText());
 
         $this->assertEquals(14, $questions[9]->getID());
         $this->assertEquals('Как ты?', $questions[9]->getTitle());
-        $this->assertEquals('I`m fine, bro!', $questions[9]->getAnswer()->getText());
+        $this->assertEquals('I`m fine, bro!', $questions[9]->answer->getText());
     }
 }

@@ -12,14 +12,14 @@
 				<?= $question->getTitle() ?>
 			</a>
 			<div class="small color-gray-500">
-				<?php if (strlen($question->getAnswer()->getText())): ?>
+				<?php if (strlen($question->answer->getText())): ?>
 					<?= $question->getHumanizedMinutesToRead() ?>
 					<span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
 				<?php endif; ?>
 
-				<?= _('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->getAnswer()->getUpdatedAt()) ?>
+				<?= _('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->getUpdatedAt()) ?>
 
-				<?php if (strlen($question->getAnswer()->getText()) == 0): ?>
+				<?php if (strlen($question->answer->getText()) == 0): ?>
 					<span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
 					<a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
 						<?= _('Write first answer') ?>

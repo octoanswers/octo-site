@@ -1,5 +1,5 @@
 
-<?php if (!$this->answer->getText() && !$this->authUser): ?>
+<?php if (isset($this->question->answer) && !$this->question->answer->getText() && !$this->authUser): ?>
 
     <!-- lure subscribe -->
     <div class="d-flex box px-2 bg-color-gray-50 px-sm-3 py-2 py-sm-3 my-4">
