@@ -1,26 +1,66 @@
 <?php
 
-class UserFollowHashtag_Relation_Validator__id__Test extends PHPUnit\Framework\TestCase
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
+
+class HashtagsIDFollow_POST_APIController extends Abstract_APIController
 {
-    public function test_IDEqualZero()
+    public function handle(Request $request, Response $response, $args): Response
     {
-        $relation = new UserFollowHashtag_Relation_Model();
-        $relation->setID(0);
-        $relation->setUserID(3);
-        $relation->setHashtagID(9);
+        try {
+            $this->lang = $args['lang'];
+            $hashtagID = (int) $args['id'];
+            $api_key = (string) $request->getParam('api_key');
 
-        $this->expectExceptionMessage('UserFollowHashtag relation "id" property 0 must be greater than or equal to 1');
-        UserFollowHashtag_Relation_Validator::validateExists($relation);
-    }
+            #
+            # Validate params
+            #
 
-    public function test__IDBelowZero()
-    {
-        $relation = new UserFollowHashtag_Relation_Model();
-        $relation->setID(-1);
-        $relation->setUserID(3);
-        $relation->setHashtagID(9);
+            $user = (new User_Query())->userWithAPIKey($api_key);
+            $userID = $user->getID();
 
-        $this->expectExceptionMessage('UserFollowHashtag relation "id" property -1 must be greater than or equal to 1');
-        UserFollowHashtag_Relation_Validator::validateExists($relation);
+            $hashtag = (new Hashtag_Query($this->lang))->hashtagWithID($hashtagID);
+
+
+            $relation = (new UsersFollowHashtags_Relations_Query($this->lang))->relationWithUserIDAndHashtagID($userID, $hashtagID);
+            if ($relation) {
+                throw new Exception('User with ID "'.$userID.'" already followed hashtag with ID "'.$hashtagID.'"', 0);
+            }
+
+            #
+            # Save UserFollowHashtag relation
+            #
+
+            $relation = new UserFollowHashtag_Relation_Model();
+            $relation->setUserID($userID);
+            $relation->setHashtagID($hashtagID);
+
+            $relation = (new UserFollowHashtag_Relation_Mapper($this->lang))->create($relation);
+
+            # Create activity
+
+            $activity = new Activity_Model();
+            $activity->setType(Activity_Model::F_U_FOLLOW_H);
+            $activity->setSubject($user);
+            $activity->setData($hashtag);
+            $activity = (new UFollowH_Activity_Mapper($this->lang))->create($activity);
+            $output = [
+                'lang' => $this->lang,
+                'relation_id' => $relation->getID(),
+                'user_id' => $user->getID(),
+                'user_name' => $user->getName(),
+                'followed_hashtag_id' => $hashtag->getID(),
+                'followed_hashtag_title' => $hashtag->getTitle(),
+            ];
+        } catch (Throwable $e) {
+            $output = [
+                'error_code' => $e->getCode(),
+                'error_message' => $e->getMessage(),
+            ];
+        }
+
+        $json = json_encode($output, JSON_UNESCAPED_UNICODE);
+
+        return $response->withHeader('Content-Type', 'application/json')->write($json);
     }
 }

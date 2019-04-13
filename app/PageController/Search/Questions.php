@@ -53,7 +53,7 @@ class Questions_Search_PageController extends Abstract_PageController
                 $placeholder = _('Questions');
                 break;
             case self::LIST_HASHTAGS:
-                $placeholder = _('Hashtags');
+                $placeholder = _('Search.Filter.Hashtags');
                 break;
             case self::LIST_USERS:
                 $placeholder = _('Contributors');

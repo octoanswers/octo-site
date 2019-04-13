@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-12 22:01+0500\n"
-"PO-Revision-Date: 2019-04-12 22:05+0500\n"
+"POT-Creation-Date: 2019-04-13 19:02+0500\n"
+"PO-Revision-Date: 2019-04-13 19:02+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -26,9 +26,10 @@ msgstr "Править ответ"
 #: PageController/Error/PageNotFound.php:14
 #: PageController/Error/QuestionNotFound.php:21 PageController/Feed/Show.php:44
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: PageController/Main/Show.php:39 PageController/Main/Show.php:45
-#: PageController/Main/Show.php:64 PageController/Question/Show.php:49
-#: PageController/Question/Show.php:79 PageController/Questions/Newest.php:44
+#: PageController/Hashtags/Newest.php:37 PageController/Main/Show.php:39
+#: PageController/Main/Show.php:45 PageController/Main/Show.php:64
+#: PageController/Question/Show.php:49 PageController/Question/Show.php:77
+#: PageController/Questions/Newest.php:44
 #: PageController/Questions/Newest.php:49
 #: PageController/Questions/RecentlyUpdated.php:43
 #: PageController/Questions/RecentlyUpdated.php:48
@@ -39,9 +40,8 @@ msgstr "Править ответ"
 #: PageController/Sandbox/WithoutHashtags.php:58
 #: PageController/Sandbox/WithoutHashtags.php:63
 #: PageController/Search/Hashtags.php:24 PageController/Settings/Show.php:18
-#: PageController/Hashtags/Newest.php:37 PageController/Users/Newest.php:45
-#: Templates/_common/navbar.phtml:7 Templates/_common/navbar.phtml:11
-#: Templates/root/block/navbar.phtml:5
+#: PageController/Users/Newest.php:45 Templates/_common/navbar.phtml:7
+#: Templates/_common/navbar.phtml:11 Templates/root/block/navbar.phtml:5
 msgid "Answeropedia"
 msgstr "Answeropedia"
 
@@ -64,7 +64,7 @@ msgstr "Ошибка 404"
 
 #: PageController/Error/QuestionNotFound.php:21
 #: PageController/Error/QuestionNotFound.php:22
-#: Templates/error/question_not_found.phtml:8
+#: Templates/error/question_not_found/main.phtml:8
 msgid "Question not found"
 msgstr "Вопрос не найден"
 
@@ -80,6 +80,31 @@ msgstr "Поток"
 #: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
 msgid "Questions and answers flow on Answeropedia."
 msgstr "Поток вопросов и ответов на Answeropedia."
+
+#: PageController/Hashtag/Show.php:68
+msgid "More hashtags"
+msgstr "Больше тем"
+
+#: PageController/Hashtag/Show.php:103
+msgid "Questions and answers on the hashtag %hashtag% - Answeropedia"
+msgstr "Вопросы и ответы на тему %hashtag% - Answeropedia"
+
+#: PageController/Hashtag/Show.php:133
+msgid "Questions and answers on the hashtag %hashtag%"
+msgstr "Вопросы и ответы на тему %hashtag%"
+
+#: PageController/Hashtags/Newest.php:37
+msgid "New hashtags"
+msgstr "Новые темы"
+
+#: PageController/Hashtags/Newest.php:37 PageController/Questions/Newest.php:44
+#: PageController/Questions/RecentlyUpdated.php:43
+#: PageController/Sandbox/All.php:49
+#: PageController/Sandbox/WithoutAnswers.php:58
+#: PageController/Sandbox/WithoutHashtags.php:58
+#: PageController/Users/Newest.php:45
+msgid "Page"
+msgstr "Страница"
 
 #: PageController/Main/Show.php:39 PageController/Main/Show.php:45
 #: PageController/Main/Show.php:64 Templates/main/main/jumbotron.phtml:8
@@ -98,11 +123,11 @@ msgstr ""
 "Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
 "ответы."
 
-#: PageController/Question/Show.php:88
+#: PageController/Question/Show.php:86
 msgid "Wiki-answers to your questions on Answeropedia"
 msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
 
-#: PageController/Question/Show.php:190
+#: PageController/Question/Show.php:184
 msgid "Wiki-answer on question: %question%"
 msgstr "Вики-ответ на вопрос: %question%"
 
@@ -117,15 +142,6 @@ msgstr "Обновление тем вопроса «%question%»"
 #: PageController/Questions/Newest.php:44
 msgid "Newest questions"
 msgstr "Новые вопросы"
-
-#: PageController/Questions/Newest.php:44
-#: PageController/Questions/RecentlyUpdated.php:43
-#: PageController/Sandbox/All.php:49
-#: PageController/Sandbox/WithoutAnswers.php:58
-#: PageController/Sandbox/WithoutHashtags.php:58
-#: PageController/Hashtags/Newest.php:37 PageController/Users/Newest.php:45
-msgid "Page"
-msgstr "Страница"
 
 #: PageController/Questions/RecentlyUpdated.php:43
 #: Templates/questions/main/nav.phtml:10
@@ -162,6 +178,15 @@ msgstr "Вопросы без ответа"
 msgid "Questions without hashtags"
 msgstr "Вопросы без тем"
 
+#: PageController/Search/Hashtags.php:24
+#: Templates/search_questions/main.phtml:8
+msgid "Search"
+msgstr "Поиск"
+
+#: PageController/Search/Hashtags.php:26 Templates/hashtags/main/header.phtml:9
+msgid "Search hashtags"
+msgstr "Поиск тем"
+
 #: PageController/Search/Questions.php:30
 msgid "Search %query% - Answeropedia"
 msgstr "Поиск %query% - Answeropedia"
@@ -173,44 +198,20 @@ msgstr "Вопросы"
 
 #: PageController/Search/Questions.php:56
 #: Templates/search_questions/main.phtml:14
-msgid "Hashtags"
-msgstr "Темы"
+msgid "Search.Filter.Hashtags"
+msgstr "Хештеги"
 
 #: PageController/Search/Questions.php:59
 msgid "Contributors"
 msgstr "Авторы"
-
-#: PageController/Search/Hashtags.php:24 Templates/search_questions/main.phtml:8
-msgid "Search"
-msgstr "Поиск"
-
-#: PageController/Search/Hashtags.php:26 Templates/hashtags/main/header.phtml:9
-msgid "Search hashtags"
-msgstr "Поиск тем"
-
-#: PageController/Hashtag/Show.php:68
-msgid "More hashtags"
-msgstr "Больше тем"
-
-#: PageController/Hashtag/Show.php:103
-msgid "Questions and answers on the hashtag %hashtag% - Answeropedia"
-msgstr "Вопросы и ответы на тему %hashtag% - Answeropedia"
-
-#: PageController/Hashtag/Show.php:133
-msgid "Questions and answers on the hashtag %hashtag%"
-msgstr "Вопросы и ответы на тему %hashtag%"
-
-#: PageController/Hashtags/Newest.php:37
-msgid "New hashtags"
-msgstr "Новые темы"
 
 #: PageController/User/Show.php:31 PageController/User/Show.php:32
 #: PageController/User/Show.php:70
 msgid "Wiki-answers on Answeropedia"
 msgstr "Вики-ответы на Answeropedia"
 
-#: PageController/Users/Newest.php:38 Templates/questions/main/nav.phtml:5
-#: Templates/hashtags/main/nav.phtml:6 Templates/users/main/nav.phtml:6
+#: PageController/Users/Newest.php:38 Templates/hashtags/main/nav.phtml:6
+#: Templates/questions/main/nav.phtml:5 Templates/users/main/nav.phtml:6
 msgid "Newest"
 msgstr "Новые"
 
@@ -316,13 +317,13 @@ msgid "What is your question?"
 msgstr "Какой у вас вопрос?"
 
 #: Templates/_common/modal/ask.phtml:25
-#: Templates/error/question_not_found.phtml:12
+#: Templates/error/question_not_found/main.phtml:12
 #: Templates/main/main/jumbotron.phtml:22
 msgid "Ask a question"
 msgstr "Задать вопрос"
 
 #: Templates/_common/modal/login.phtml:8 Templates/_common/navbar.phtml:65
-#: Templates/users/main/login_or_signup.phtml:9
+#: Templates/users/right/login_or_signup.phtml:9
 msgid "Login"
 msgstr "Вход"
 
@@ -342,12 +343,12 @@ msgstr "Войти"
 
 #: Templates/_common/modal/signup.phtml:8
 #: Templates/_common/modal/signup.phtml:36 Templates/_common/navbar.phtml:70
+#: Templates/hashtag/main/actions.phtml:47
 #: Templates/question/_modal/_lure/edit_answer.phtml:17
 #: Templates/question/_modal/_lure/first_answer_signup.phtml:17
 #: Templates/question/_modal/_lure/follow_question.phtml:17
-#: Templates/hashtag/main/actions.phtml:47
-#: Templates/users/main/login_or_signup.phtml:4
-#: Templates/users/main/login_or_signup.phtml:12
+#: Templates/users/right/login_or_signup.phtml:4
+#: Templates/users/right/login_or_signup.phtml:12
 msgid "Signup"
 msgstr "Зарегистрироваться"
 
@@ -420,7 +421,7 @@ msgstr "Правка"
 msgid "No description of changes"
 msgstr "Нет описания изменений"
 
-#: Templates/error/question_not_found.phtml:15
+#: Templates/error/question_not_found/main.phtml:15
 msgid "Go back"
 msgstr "Вернуться назад"
 
@@ -464,6 +465,44 @@ msgstr "Задайте первый вопрос"
 #: Templates/feed/right/improve_feed.phtml:106
 msgid "Answer a question"
 msgstr "Ответьте на вопрос"
+
+#: Templates/hashtag/main/actions.phtml:14
+#: Templates/hashtag/main/actions.phtml:20
+#: Templates/hashtag/main/actions.phtml:28
+#: Templates/question/main/actions_follow.phtml:8
+#: Templates/question/main/actions_follow.phtml:12
+#: Templates/question/main/actions_follow.phtml:16
+#: Templates/user/main/header.phtml:37 Templates/user/main/header.phtml:41
+msgid "Follow"
+msgstr "Подписаться"
+
+#: Templates/hashtag/main/actions.phtml:15
+#: Templates/hashtag/main/actions.phtml:20
+#: Templates/question/main/actions_follow.phtml:9
+#: Templates/question/main/actions_follow.phtml:12
+#: Templates/user/main/header.phtml:38 Templates/user/main/header.phtml:41
+msgid "Followed"
+msgstr "Подписан"
+
+#: Templates/hashtag/main/actions.phtml:16
+#: Templates/question/main/actions_follow.phtml:10
+#: Templates/user/main/header.phtml:39
+msgid "Unfollow"
+msgstr "Отписаться"
+
+#: Templates/hashtag/main/actions.phtml:36
+#: Templates/question/_modal/_lure/follow_question.phtml:13
+msgid "Register or sign in and you can subscribe to this question."
+msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
+
+#: Templates/hashtag/main/actions.phtml:46
+msgid "Cancel"
+msgstr "Отмена"
+
+#: Templates/hashtags/main/nav.phtml:11 Templates/questions/main/nav.phtml:15
+#: Templates/users/main/nav.phtml:11
+msgid "Popular"
+msgstr "Популярные"
 
 #: Templates/main/main/how_it_works.phtml:8
 msgid "How it works?"
@@ -518,15 +557,10 @@ msgstr ""
 "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
 "вопрос."
 
-#: Templates/question/_modal/_lure/follow_question.phtml:13
-#: Templates/hashtag/main/actions.phtml:36
-msgid "Register or sign in and you can subscribe to this question."
-msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
-
 #: Templates/question/_modal/rename.phtml:8
 #: Templates/question/_modal/rename.phtml:30
 #: Templates/question/left/sidebar.phtml:222
-#: Templates/question/right/actions.phtml:31
+#: Templates/question/right/actions.phtml:30
 msgid "Rename question"
 msgstr "Переименовать вопрос"
 
@@ -556,27 +590,6 @@ msgstr "Инструменты"
 msgid "Change history"
 msgstr "История изменений"
 
-#: Templates/question/main/actions_follow.phtml:8
-#: Templates/question/main/actions_follow.phtml:12
-#: Templates/question/main/actions_follow.phtml:16
-#: Templates/hashtag/main/actions.phtml:14 Templates/hashtag/main/actions.phtml:20
-#: Templates/hashtag/main/actions.phtml:28 Templates/user/main/header.phtml:37
-#: Templates/user/main/header.phtml:41
-msgid "Follow"
-msgstr "Подписаться"
-
-#: Templates/question/main/actions_follow.phtml:9
-#: Templates/question/main/actions_follow.phtml:12
-#: Templates/hashtag/main/actions.phtml:15 Templates/hashtag/main/actions.phtml:20
-#: Templates/user/main/header.phtml:38 Templates/user/main/header.phtml:41
-msgid "Followed"
-msgstr "Подписан"
-
-#: Templates/question/main/actions_follow.phtml:10
-#: Templates/hashtag/main/actions.phtml:16 Templates/user/main/header.phtml:39
-msgid "Unfollow"
-msgstr "Отписаться"
-
 #: Templates/question/main/actions_top.phtml:21
 msgid "Edit"
 msgstr "Править"
@@ -600,7 +613,7 @@ msgid "Answer contributors"
 msgstr "Авторы ответа"
 
 #: Templates/question/main/hashtags.phtml:6
-msgid "Hashtags"
+msgid "Question.Hashtags.Title"
 msgstr "Хештеги"
 
 #: Templates/question/main/lure_be_first_contributor.phtml:14
@@ -659,7 +672,7 @@ msgstr "Обновить картинку"
 msgid "Add a picture to the question"
 msgstr "Добавить изображение к вопросу"
 
-#: Templates/question/right/actions.phtml:40
+#: Templates/question/right/actions.phtml:39
 msgid "Report"
 msgstr "Пожаловаться"
 
@@ -674,11 +687,6 @@ msgstr "Все авторы ответа"
 #: Templates/questions/main.phtml:12
 msgid "More questions"
 msgstr "Больше вопросов"
-
-#: Templates/questions/main/nav.phtml:15 Templates/hashtags/main/nav.phtml:11
-#: Templates/users/main/nav.phtml:11
-msgid "Popular"
-msgstr "Популярные"
 
 #: Templates/root/block/navbar.phtml:13
 msgid "It's like wikipedia, only for questions and answers."
@@ -696,18 +704,6 @@ msgstr "Без тем"
 msgid "All"
 msgstr "Все"
 
-#: Templates/search_questions/block/div__no_questions.phtml:5
-msgid "No questions found"
-msgstr "Вопросы не найды"
-
-#: Templates/search_questions/block/div__no_questions.phtml:7
-msgid "On request \"%query%\" could not find any questions"
-msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
-
-#: Templates/search_questions/block/div__no_questions.phtml:10
-msgid "View all questions"
-msgstr "Посмотреть все вопросы"
-
 #: Templates/search_questions/block/div__no_hashtags.phtml:5
 msgid "No hashtags found"
 msgstr "Темы не найды"
@@ -719,6 +715,18 @@ msgstr "Не удалось найти ни одной темы по запро�
 #: Templates/search_questions/block/div__no_hashtags.phtml:10
 msgid "View all hashtags"
 msgstr "Посмотреть все темы"
+
+#: Templates/search_questions/block/div__no_questions.phtml:5
+msgid "No questions found"
+msgstr "Вопросы не найды"
+
+#: Templates/search_questions/block/div__no_questions.phtml:7
+msgid "On request \"%query%\" could not find any questions"
+msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
+
+#: Templates/search_questions/block/div__no_questions.phtml:10
+msgid "View all questions"
+msgstr "Посмотреть все вопросы"
 
 #: Templates/search_questions/block/div__no_users.phtml:5
 msgid "No users found"
@@ -784,10 +792,6 @@ msgstr "Сайт"
 msgid "Enter the address of your website or page on the social network."
 msgstr "Введите адрес вашего сайта или страницы в социальной сети."
 
-#: Templates/hashtag/main/actions.phtml:46
-msgid "Cancel"
-msgstr "Отмена"
-
 #: Templates/user/main/div__no_answers.phtml:4
 msgid "No answers"
 msgstr "Нет ответов"
@@ -804,13 +808,16 @@ msgstr "Выйти"
 msgid "Knows about"
 msgstr "Знает о"
 
-#: Templates/users/main/login_or_signup.phtml:5
+#: Templates/users/right/login_or_signup.phtml:5
 msgid ""
 "Answeropedia is a wiki-based site where users can ask questions, respond to "
 "them and supplement other people’s answers."
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
+
+#~ msgid "Hashtags"
+#~ msgstr "Темы"
 
 #~ msgid "Ask a Question"
 #~ msgstr "Задать вопрос"
