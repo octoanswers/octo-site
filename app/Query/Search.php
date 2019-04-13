@@ -52,7 +52,7 @@ class Search_Query extends Abstract_Query
 
         $id_offset = 0;
 
-        $sql = "SELECT * FROM topics WHERE (t_title LIKE '%".$query."%') LIMIT :id_offset, :per_page";
+        $sql = "SELECT * FROM topics WHERE (h_title LIKE '%".$query."%') LIMIT :id_offset, :per_page";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id_offset', $id_offset, PDO::PARAM_INT);

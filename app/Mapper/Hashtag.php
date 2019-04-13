@@ -6,20 +6,20 @@ class Hashtag_Mapper extends Abstract_Mapper
     {
         Topic_Validator::validateNew($topic);
 
-        $t_title = $topic->getTitle();
+        $hashtagTitle = $topic->getTitle();
 
-        $sql = 'INSERT INTO topics (t_title) VALUES (:t_title)';
+        $sql = 'INSERT INTO hashtags (h_title) VALUES (:h_title)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':t_title', $t_title, PDO::PARAM_STR);
+        $stmt->bindParam(':h_title', $hashtagTitle, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
         }
 
-        $topicID = (int) $this->pdo->lastInsertId();
-        $topic->setID($topicID);
+        $hashtagID = (int) $this->pdo->lastInsertId();
+        $topic->setID($hashtagID);
         if ($topic->getID() === 0) {
-            throw new Exception('Topic not saved', 1);
+            throw new Exception('Hashtag not saved', 1);
         }
 
         return $topic;
@@ -29,20 +29,20 @@ class Hashtag_Mapper extends Abstract_Mapper
     {
         Topic_Validator::validateExists($topic);
 
-        $t_id = $topic->getID();
-        $t_title = $topic->getTitle();
+        $hashtagID = $topic->getID();
+        $hashtagTitle = $topic->getTitle();
 
-        $sql = 'UPDATE topics SET t_title=:t_title WHERE t_id=:t_id';
+        $sql = 'UPDATE hashtags SET h_title=:h_title WHERE h_id=:h_id';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':t_id', $t_id, PDO::PARAM_INT);
-        $stmt->bindParam(':t_title', $t_title, PDO::PARAM_STR);
+        $stmt->bindParam(':h_id', $hashtagID, PDO::PARAM_INT);
+        $stmt->bindParam(':h_title', $hashtagTitle, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
         }
         $count = $stmt->rowCount();
         if ($count == 0) {
-            throw new Exception('Topic with ID '.$t_id.' not exists', 0);
+            throw new Exception('Hashtag with ID '.$hashtagID.' not exists', 0);
         }
 
         return $topic;

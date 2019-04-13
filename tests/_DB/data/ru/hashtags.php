@@ -1,7 +1,7 @@
 <?php
 
 $pdo->exec(
-    "INSERT INTO topics (t_id, t_title, t_words) VALUES
+    "INSERT INTO hashtags (h_id, h_title, h_words) VALUES
     (1, 'русскаялитература', 'лермонтов пушкин'),
     (2, 'тест', NULL),
     (3, 'отделочныематериалы', NULL),

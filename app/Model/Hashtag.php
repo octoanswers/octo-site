@@ -23,8 +23,8 @@ class Hashtag_Model
     public static function initWithDBState(array $state): Hashtag_Model
     {
         $topic = new self();
-        $topic->setID($state['t_id']);
-        $topic->setTitle($state['t_title']);
+        $topic->setID($state['h_id']);
+        $topic->setTitle($state['h_title']);
 
         return $topic;
     }

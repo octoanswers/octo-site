@@ -7,7 +7,7 @@ class Hashtags_Query extends Abstract_Query
 {
     public function topicsLastID(): int
     {
-        $stmt = $this->pdo->prepare('SELECT MAX(t_id) FROM topics');
+        $stmt = $this->pdo->prepare('SELECT MAX(h_id) FROM hashtags');
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
@@ -18,7 +18,7 @@ class Hashtags_Query extends Abstract_Query
             throw new Exception('Error', 1);
         }
 
-        return (int) $result['MAX(t_id)'];
+        return (int) $result['MAX(h_id)'];
     }
 
     public function findNewest($page = 1, $perPage = 10): array
@@ -30,7 +30,7 @@ class Hashtags_Query extends Abstract_Query
 
         $offset = $topicsLastID - ($perPage * $page);
 
-        $stmt = $this->pdo->prepare('SELECT * FROM `topics` WHERE `t_id` > :id_offset LIMIT :per_page');
+        $stmt = $this->pdo->prepare('SELECT * FROM hashtags WHERE `h_id` > :id_offset LIMIT :per_page');
         $stmt->bindParam(':id_offset', $offset, PDO::PARAM_INT);
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {

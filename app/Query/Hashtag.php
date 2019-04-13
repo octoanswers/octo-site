@@ -5,12 +5,12 @@ use Respect\Validation\Validator as v;
 
 class Hashtag_Query extends Abstract_Query
 {
-    public function topicWithID(int $topicID): Hashtag_Model
+    public function topicWithID(int $hashtagID): Hashtag_Model
     {
-        Topic_Validator::validateID($topicID);
+        Topic_Validator::validateID($hashtagID);
 
-        $stmt = $this->pdo->prepare('SELECT * FROM topics WHERE t_id=:t_id LIMIT 1');
-        $stmt->bindParam(':t_id', $topicID, PDO::PARAM_INT);
+        $stmt = $this->pdo->prepare('SELECT * FROM hashtags WHERE h_id=:h_id LIMIT 1');
+        $stmt->bindParam(':h_id', $hashtagID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
@@ -18,7 +18,7 @@ class Hashtag_Query extends Abstract_Query
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new Exception('Topic with ID "'.$topicID.'" not exists', 1);
+            throw new Exception('Hashtag with ID "'.$hashtagID.'" not exists', 1);
         }
 
         return Hashtag_Model::initWithDBState($row);
@@ -28,8 +28,8 @@ class Hashtag_Query extends Abstract_Query
     {
         Topic_Validator::validateTitle($title);
 
-        $stmt = $this->pdo->prepare('SELECT * FROM topics WHERE t_title=:t_title LIMIT 1');
-        $stmt->bindParam(':t_title', $title, PDO::PARAM_STR);
+        $stmt = $this->pdo->prepare('SELECT * FROM hashtags WHERE h_title=:h_title LIMIT 1');
+        $stmt->bindParam(':h_title', $title, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
