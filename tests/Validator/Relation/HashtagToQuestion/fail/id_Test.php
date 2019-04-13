@@ -1,6 +1,6 @@
 <?php
 
-class Validator_ER_TopicsQuestions__id__Test extends PHPUnit\Framework\TestCase
+class Validator_ER_HashtagQuestions__id__Test extends PHPUnit\Framework\TestCase
 {
     public function test_IDEqualZero()
     {

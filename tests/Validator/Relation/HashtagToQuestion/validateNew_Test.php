@@ -1,6 +1,6 @@
 <?php
 
-class Validator_ER_TopicsQuestions__validateNew__Test extends PHPUnit\Framework\TestCase
+class Validator_ER_HashtagsQuestions__validateNew__Test extends PHPUnit\Framework\TestCase
 {
     public function test__FullParams__OK()
     {

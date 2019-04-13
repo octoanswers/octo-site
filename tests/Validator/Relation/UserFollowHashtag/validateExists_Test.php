@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowTopic_Relation_Validator__validateExists__Test extends PHPUnit\Framework\TestCase
+class UserFollowHashtag_Relation_Validator__validateExists__Test extends PHPUnit\Framework\TestCase
 {
     public function test__FullParams__OK()
     {
