@@ -11,7 +11,7 @@ class HashtagsIDFollow_DELETE_APIController extends Abstract_APIController
             $this->lang = $args['lang'];
             
             $api_key = (string) $request->getParam('api_key');
-            $topicID = (int) $args['id'];
+            $hashtagID = (int) $args['id'];
 
             #
             # Validate params
@@ -20,25 +20,25 @@ class HashtagsIDFollow_DELETE_APIController extends Abstract_APIController
             $user = (new User_Query())->userWithAPIKey($api_key);
             $userID = $user->getID();
 
-            $topic = (new Topic_Query($this->lang))->topicWithID($topicID);
+            $hashtag = (new Hashtag_Query($this->lang))->hashtagWithID($hashtagID);
 
-            $relation = (new UsersFollowTopics_Relations_Query($this->lang))->relationWithUserIDAndTopicID($userID, $topicID);
+            $relation = (new UsersFollowHashtags_Relations_Query($this->lang))->relationWithUserIDAndHashtagID($userID, $hashtagID);
             if (!$relation) {
-                throw new Exception('User with ID "'.$userID.'" not followed topic with ID "'.$topicID.'"', 0);
+                throw new Exception('User with ID "'.$userID.'" not followed hashtag with ID "'.$hashtagID.'"', 0);
             }
 
             #
             # Delete follow record
             #
 
-            (new UserFollowTopic_Relation_Mapper($this->lang))->deleteRelation($relation);
+            (new UserFollowHashtag_Relation_Mapper($this->lang))->deleteRelation($relation);
 
             $output = [
                 'user_id' => $user->getID(),
                 'user_name' => $user->getName(),
-                'unfollowed_topic' => [
-                    'id' => $topic->getID(),
-                    'title' => $topic->getTitle(),
+                'unfollowed_hashtag' => [
+                    'id' => $hashtag->getID(),
+                    'title' => $hashtag->getTitle(),
                 ],
             ];
         } catch (Throwable $e) {

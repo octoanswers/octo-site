@@ -3,7 +3,7 @@
 use Respect\Validation\Exceptions\NestedValidationException;
 use Respect\Validation\Validator as v;
 
-class UserFollowTopic_Relation_Validator
+class UserFollowHashtag_Relation_Validator
 {
     #
     # Model validator
@@ -20,7 +20,7 @@ class UserFollowTopic_Relation_Validator
     public static function validateNew(UserFollowHashtag_Relation_Model $relation)
     {
         self::validateUserID($relation->getUserID());
-        self::validateTopicID($relation->getTopicID());
+        self::validateHashtagID($relation->getHashtagID());
         self::validateCreatedAt($relation->getCreatedAt());
 
         return true;
@@ -35,7 +35,7 @@ class UserFollowTopic_Relation_Validator
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('UserFollowTopic relation "id" property '.$exception->getMessages()[0], 0);
+            throw new Exception('UserFollowHashtag relation "id" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -44,16 +44,16 @@ class UserFollowTopic_Relation_Validator
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('UserFollowTopic relation "userID" property '.$exception->getMessages()[0], 0);
+            throw new Exception('UserFollowHashtag relation "userID" property '.$exception->getMessages()[0], 0);
         }
     }
 
-    public static function validateTopicID($id)
+    public static function validateHashtagID($id)
     {
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('UserFollowTopic relation "questionID" property '.$exception->getMessages()[0], 0);
+            throw new Exception('UserFollowHashtag relation "questionID" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -62,7 +62,7 @@ class UserFollowTopic_Relation_Validator
         try {
             v::optional(v::stringType())->assert($createdAt);
         } catch (NestedValidationException $exception) {
-            throw new Exception('UserFollowTopic relation "createdAt" property '.$exception->getMessages()[0], 0);
+            throw new Exception('UserFollowHashtag relation "createdAt" property '.$exception->getMessages()[0], 0);
         }
     }
 }

@@ -4,12 +4,12 @@
 </h1>
 <p><?= $this->question->getTitle() ?></p>
 
-<form id="form__update_topics" data-question-id="<?= $this->question->getID() ?>">
+<form id="form__update_hashtags" data-question-id="<?= $this->question->getID() ?>">
     <div class="form-group">
-        <input id="new_topics" type="text" class="form-control mt-3" value="<?= $this->topics_string ?>">
+        <input id="new_hashtags" type="text" class="form-control mt-3" value="<?= $this->hashtags_string ?>">
     </div>
     <div class="form-group mt-5">
-        <button type="submit" id="form__update_topics__submit" class="btn btn-primary">
+        <button type="submit" id="form__update_hashtags__submit" class="btn btn-primary">
             Обновить темы
         </button>
         <a href="<?= $this->question->getURL($this->lang) ?>" class="btn color-text-normal bg-color-white">

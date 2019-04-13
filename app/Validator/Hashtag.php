@@ -12,22 +12,22 @@ class Hashtag_Validator
     # Model validator
     #
 
-    public static function validateNew(Hashtag_Model $topic)
+    public static function validateNew(Hashtag_Model $hashtag)
     {
-        return self::validate($topic, false);
+        return self::validate($hashtag, false);
     }
 
-    public static function validateExists(Hashtag_Model $topic)
+    public static function validateExists(Hashtag_Model $hashtag)
     {
-        return self::validate($topic, true);
+        return self::validate($hashtag, true);
     }
 
-    protected static function validate(Hashtag_Model $topic, $isExists = true)
+    protected static function validate(Hashtag_Model $hashtag, $isExists = true)
     {
         if ($isExists) {
-            self::validateID($topic->getID());
+            self::validateID($hashtag->getID());
         }
-        self::validateTitle($topic->getTitle());
+        self::validateTitle($hashtag->getTitle());
 
         return true;
     }
@@ -41,7 +41,7 @@ class Hashtag_Validator
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Topic id param '.$exception->getMessages()[0], 0);
+            throw new Exception('Hashtag id param '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -50,7 +50,7 @@ class Hashtag_Validator
         try {
             v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, true)->assert($title);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Topic title param '.$exception->getMessages()[0], 0);
+            throw new Exception('Hashtag title param '.$exception->getMessages()[0], 0);
         }
     }
 }

@@ -3,7 +3,7 @@
 class HashtagsToQuestions_Relation_Model
 {
     private $id;
-    private $topicID;
+    private $hashtagID;
     private $questionID;
     private $createdAt;
 
@@ -11,10 +11,10 @@ class HashtagsToQuestions_Relation_Model
     # Init methods
     #
 
-    public static function initWithTopicIDAndQuestionID(int $topicID, int $questionID): HashtagsToQuestions_Relation_Model
+    public static function initWithHashtagIDAndQuestionID(int $hashtagID, int $questionID): HashtagsToQuestions_Relation_Model
     {
         $er = new self();
-        $er->topicID = $topicID;
+        $er->hashtagID = $hashtagID;
         $er->questionID = $questionID;
 
         return $er;
@@ -25,7 +25,7 @@ class HashtagsToQuestions_Relation_Model
         $er = new self();
 
         $er->id = $state['er_id'];
-        $er->topicID = $state['er_topic_id'];
+        $er->hashtagID = $state['er_hashtag_id'];
         $er->questionID = $state['er_question_id'];
         $er->createdAt = $state['er_created_at'];
 
@@ -44,14 +44,14 @@ class HashtagsToQuestions_Relation_Model
         $this->id = $id;
     }
 
-    public function getTopicID()
+    public function getHashtagID()
     {
-        return $this->topicID;
+        return $this->hashtagID;
     }
 
-    public function setTopicID(int $topicID)
+    public function setHashtagID(int $hashtagID)
     {
-        $this->topicID = $topicID;
+        $this->hashtagID = $hashtagID;
     }
 
     public function getQuestionID()

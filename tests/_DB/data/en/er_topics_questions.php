@@ -1,7 +1,7 @@
 <?php
 
 $pdo->query(
-    "INSERT INTO `er_topics_questions` (`er_id`, `er_topic_id`, `er_question_id`, `er_created_at`) VALUES
+    "INSERT INTO `er_hashtags_questions` (`er_id`, `er_hashtag_id`, `er_question_id`, `er_created_at`) VALUES
         (1, 236, 21832, '2016-05-06 09:47:51'),
         (2, 236, 29833, '2016-05-06 09:48:24'),
         (3, 37,  5344,  '2015-12-16 13:24:26'),

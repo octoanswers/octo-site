@@ -87,21 +87,21 @@ class Question_Validator
         }
     }
 
-    public static function validateTopicsJSON($topicsJSON)
+    public static function validateHashtagsJSON($hashtagsJSON)
     {
         try {
-            v::stringType()->json()->assert($topicsJSON);
+            v::stringType()->json()->assert($hashtagsJSON);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Question property "topicsJSON" '.$exception->getMessages()[0], 0);
+            throw new Exception('Question property "hashtagsJSON" '.$exception->getMessages()[0], 0);
         }
     }
 
-    public static function validateTopics($topicsArray)
+    public static function validateHashtags($hashtagsArray)
     {
         try {
-            v::optional(v::arrayType())->assert($topicsArray);
+            v::optional(v::arrayType())->assert($hashtagsArray);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Question property "topics" '.$exception->getMessages()[0], 0);
+            throw new Exception('Question property "hashtags" '.$exception->getMessages()[0], 0);
         }
     }
 }

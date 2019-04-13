@@ -2,27 +2,27 @@
 
 class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['topics']];
+    protected $setUpDB = ['ru' => ['hashtags']];
 
     public function test_CreateWithEnTitle_Ok()
     {
-        $topic = new Hashtag_Model();
-        $topic->setTitle('newtopic');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setTitle('newhashtag');
 
-        $topic = (new Hashtag_Mapper('ru'))->create($topic);
+        $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
 
-        $this->assertEquals(18, $topic->getID());
-        $this->assertEquals('newtopic', $topic->getTitle());
+        $this->assertEquals(18, $hashtag->getID());
+        $this->assertEquals('newhashtag', $hashtag->getTitle());
     }
 
     public function test_CreateWithRuTitle_Ok()
     {
-        $topic = new Hashtag_Model();
-        $topic->setTitle('новаятема');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setTitle('новаятема');
 
-        $topic = (new Hashtag_Mapper('ru'))->create($topic);
+        $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
 
-        $this->assertEquals(18, $topic->getID());
-        $this->assertEquals('новаятема', $topic->getTitle());
+        $this->assertEquals(18, $hashtag->getID());
+        $this->assertEquals('новаятема', $hashtag->getTitle());
     }
 }

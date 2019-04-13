@@ -2,13 +2,13 @@
 
 class Show_Hashtag_PageController__ru__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'topics', 'er_topics_questions', 'er_users_follow_topics']];
+    protected $setUpDB = ['ru' => ['questions', 'hashtags', 'er_hashtags_questions', 'er_users_follow_hashtags']];
 
     public function test__ShowPage()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/ru/topic/13/Птицы',
+            'REQUEST_URI' => '/ru/hashtag/13/Птицы',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

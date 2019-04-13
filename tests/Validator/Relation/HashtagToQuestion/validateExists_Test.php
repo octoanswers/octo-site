@@ -1,25 +1,26 @@
 <?php
 
-class Validator_ER_HashtagsQuestions__validateExists__Test extends PHPUnit\Framework\TestCase
+class Validator_ER_HashtagQuestions__id__Test extends PHPUnit\Framework\TestCase
 {
-    public function test__FullParams__OK()
+    public function test_IDEqualZero()
     {
         $rel = new HashtagsToQuestions_Relation_Model();
-        $rel->setID(13);
-        $rel->setTopicID(3);
+        $rel->setID(0);
+        $rel->setHashtagID(3);
         $rel->setQuestionID(9);
-        $rel->setCreatedAt('2015-11-29 09:28:34');
 
-        $this->assertEquals(true, TopicToQuestion_Relation_Validator::validateExists($rel));
+        $this->expectExceptionMessage('HashtagToQuestion relation "id" property 0 must be greater than or equal to 1');
+        HashtagToQuestion_Relation_Validator::validateExists($rel);
     }
 
-    public function test__MinParams__OK()
+    public function test__IDBelowZero()
     {
         $rel = new HashtagsToQuestions_Relation_Model();
-        $rel->setID(13);
-        $rel->setTopicID(3);
+        $rel->setID(-1);
+        $rel->setHashtagID(3);
         $rel->setQuestionID(9);
 
-        $this->assertEquals(true, TopicToQuestion_Relation_Validator::validateExists($rel));
+        $this->expectExceptionMessage('HashtagToQuestion relation "id" property -1 must be greater than or equal to 1');
+        HashtagToQuestion_Relation_Validator::validateExists($rel);
     }
 }

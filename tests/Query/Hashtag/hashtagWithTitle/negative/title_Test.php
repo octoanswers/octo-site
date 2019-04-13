@@ -4,15 +4,15 @@ use PHPUnit\Framework\TestCase;
 
 class Hashtag_Query__findWithTitle__questionTitle__Test extends TestCase
 {
-    public function test_TopicURIIsEmpty_ThrowsException()
+    public function test_HashtagURIIsEmpty_ThrowsException()
     {
-        $this->expectExceptionMessage('Topic title param "" must have a length between 2 and 127');
-        $question = (new Topic_Query('ru'))->findWithTitle('');
+        $this->expectExceptionMessage('Hashtag title param "" must have a length between 2 and 127');
+        $question = (new Hashtag_Query('ru'))->findWithTitle('');
     }
 
-    public function test_TopicURITooShort_ThrowsException()
+    public function test_HashtagURITooShort_ThrowsException()
     {
-        $this->expectExceptionMessage('Topic title param "x" must have a length between 2 and 127');
-        $question = (new Topic_Query('ru'))->findWithTitle('x');
+        $this->expectExceptionMessage('Hashtag title param "x" must have a length between 2 and 127');
+        $question = (new Hashtag_Query('ru'))->findWithTitle('x');
     }
 }

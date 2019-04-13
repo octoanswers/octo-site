@@ -2,7 +2,7 @@
 
 class Hashtag_Model
 {
-    use Topic_URL_Trait;
+    use Hashtag_URL_Trait;
 
     private $id;
     private $title;
@@ -14,19 +14,19 @@ class Hashtag_Model
 
     public static function initWithTitle(string $title): Hashtag_Model
     {
-        $topic = new self();
-        $topic->setTitle($title);
+        $hashtag = new self();
+        $hashtag->setTitle($title);
 
-        return $topic;
+        return $hashtag;
     }
 
     public static function initWithDBState(array $state): Hashtag_Model
     {
-        $topic = new self();
-        $topic->setID($state['h_id']);
-        $topic->setTitle($state['h_title']);
+        $hashtag = new self();
+        $hashtag->setID($state['h_id']);
+        $hashtag->setTitle($state['h_title']);
 
-        return $topic;
+        return $hashtag;
     }
 
     #

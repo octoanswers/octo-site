@@ -1,8 +1,8 @@
 <?php
 
-class UserFollowTopic_Relation_Mapper__deleteRelation__Test extends Abstract_DB_TestCase
+class UserFollowHashtag_Relation_Mapper__deleteRelation__Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['er_users_follow_topics']];
+    protected $setUpDB = ['ru' => ['er_users_follow_hashtags']];
 
     public function test__FullParams__OK()
     {
@@ -10,10 +10,10 @@ class UserFollowTopic_Relation_Mapper__deleteRelation__Test extends Abstract_DB_
         $relation = new UserFollowHashtag_Relation_Model();
         $relation->setID(6);
         $relation->setUserID(2);
-        $relation->setTopicID(16);
+        $relation->setHashtagID(16);
         $relation->setCreatedAt('2014-12-16 11:28:56');
 
-        $deleted = (new UserFollowTopic_Relation_Mapper('ru'))->deleteRelation($relation);
+        $deleted = (new UserFollowHashtag_Relation_Mapper('ru'))->deleteRelation($relation);
 
         $this->assertEquals(true, $deleted);
     }
@@ -24,10 +24,10 @@ class UserFollowTopic_Relation_Mapper__deleteRelation__Test extends Abstract_DB_
         $relation = new UserFollowHashtag_Relation_Model();
         $relation->setID(6);
         $relation->setUserID(22);
-        $relation->setTopicID(61);
+        $relation->setHashtagID(61);
         $relation->setCreatedAt('2014-12-16 11:28:56');
 
-        $this->expectExceptionMessage('UserFollowTopic relation not deleted');
-        $deleted = (new UserFollowTopic_Relation_Mapper('ru'))->deleteRelation($relation);
+        $this->expectExceptionMessage('UserFollowHashtag relation not deleted');
+        $deleted = (new UserFollowHashtag_Relation_Mapper('ru'))->deleteRelation($relation);
     }
 }

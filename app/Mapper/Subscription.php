@@ -34,6 +34,6 @@ class Subscription_Mapper extends Abstract_Mapper
 
     public function delete(HashtagsToQuestions_Relation_Model $s): HashtagsToQuestions_Relation_Model
     {
-        throw new Exception('TopicsQuestions ER delete not realized', 1);
+        throw new Exception('HashtagsQuestions ER delete not realized', 1);
     }
 }

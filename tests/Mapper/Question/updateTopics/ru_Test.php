@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Question__updateTopics__ru_Test extends Abstract_DB_TestCase
+class Mapper_Question__updateHashtags__ru_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 
@@ -8,37 +8,37 @@ class Mapper_Question__updateTopics__ru_Test extends Abstract_DB_TestCase
     {
         $question = new Question_Model();
         $question->setID(13);
-        $question->setTopics(['iPhone 8', 'Apple']);
+        $question->setHashtags(['iPhone 8', 'Apple']);
 
-        $question = (new Question_Mapper('ru'))->updateTopics($question);
+        $question = (new Question_Mapper('ru'))->updateHashtags($question);
 
         $this->assertEquals(13, $question->getID());
-        $this->assertEquals('["iPhone 8","Apple"]', $question->getTopicsJSON());
-        $this->assertEquals(['iPhone 8', 'Apple'], $question->getTopics());
+        $this->assertEquals('["iPhone 8","Apple"]', $question->getHashtagsJSON());
+        $this->assertEquals(['iPhone 8', 'Apple'], $question->getHashtags());
     }
 
     public function test__EmptyArray()
     {
         $question = new Question_Model();
         $question->setID(13);
-        $question->setTopics([]);
+        $question->setHashtags([]);
 
-        $question = (new Question_Mapper('ru'))->updateTopics($question);
+        $question = (new Question_Mapper('ru'))->updateHashtags($question);
 
         $this->assertEquals(13, $question->getID());
-        $this->assertEquals(null, $question->getTopicsJSON());
-        $this->assertEquals([], $question->getTopics());
+        $this->assertEquals(null, $question->getHashtagsJSON());
+        $this->assertEquals([], $question->getHashtags());
     }
 
-    public function test__TopicsNotSet()
+    public function test__HashtagsNotSet()
     {
         $question = new Question_Model();
         $question->setID(13);
 
-        $question = (new Question_Mapper('ru'))->updateTopics($question);
+        $question = (new Question_Mapper('ru'))->updateHashtags($question);
 
         $this->assertEquals(13, $question->getID());
-        $this->assertEquals(null, $question->getTopicsJSON());
-        $this->assertEquals([], $question->getTopics());
+        $this->assertEquals(null, $question->getHashtagsJSON());
+        $this->assertEquals([], $question->getHashtags());
     }
 }

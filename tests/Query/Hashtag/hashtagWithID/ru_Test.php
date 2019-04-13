@@ -1,14 +1,14 @@
 <?php
 
-class Hashtag_Query__topicWithID__ru__Test extends Abstract_DB_TestCase
+class Hashtag_Query__hashtagWithID__ru__Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['topics']];
+    protected $setUpDB = ['ru' => ['hashtags']];
 
-    public function test_CorrectTopicID_ReturnTopicObj()
+    public function test_CorrectHashtagID_ReturnHashtagObj()
     {
-        $topic = (new Topic_Query('ru'))->topicWithID(6);
+        $hashtag = (new Hashtag_Query('ru'))->hashtagWithID(6);
 
-        $this->assertEquals(6, $topic->getID());
-        $this->assertEquals('автоспорт', $topic->getTitle());
+        $this->assertEquals(6, $hashtag->getID());
+        $this->assertEquals('автоспорт', $hashtag->getTitle());
     }
 }

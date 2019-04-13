@@ -26,9 +26,9 @@ trait Question_URL_Trait
 
     // Some actions
 
-    function getUpdateTopicsURL(string $lang): string
+    function getUpdateHashtagsURL(string $lang): string
     {
-        return SITE_URL.'/'.$lang.'/question/'.$this->getID().'/topics';
+        return SITE_URL.'/'.$lang.'/question/'.$this->getID().'/hashtags';
     }
 
     function getHistoryURL(string $lang): string

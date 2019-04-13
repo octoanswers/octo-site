@@ -2,7 +2,7 @@
 
 class Show_Main_PageController__BaseTest extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'revisions', 'topics'], 'users' => ['users']];
+    protected $setUpDB = ['ru' => ['questions', 'revisions', 'hashtags'], 'users' => ['users']];
 
     public function testBase()
     {

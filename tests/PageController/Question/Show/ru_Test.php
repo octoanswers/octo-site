@@ -2,7 +2,7 @@
 
 class Show_Question_PageController__ru__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'revisions', 'topics']];
+    protected $setUpDB = ['ru' => ['questions', 'revisions', 'hashtags']];
 
     public function test__ShowENPage()
     {

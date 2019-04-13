@@ -2,11 +2,11 @@
 
 class Hashtag_Mapper extends Abstract_Mapper
 {
-    public function create(Hashtag_Model $topic): Hashtag_Model
+    public function create(Hashtag_Model $hashtag): Hashtag_Model
     {
-        Topic_Validator::validateNew($topic);
+        Hashtag_Validator::validateNew($hashtag);
 
-        $hashtagTitle = $topic->getTitle();
+        $hashtagTitle = $hashtag->getTitle();
 
         $sql = 'INSERT INTO hashtags (h_title) VALUES (:h_title)';
         $stmt = $this->pdo->prepare($sql);
@@ -17,20 +17,20 @@ class Hashtag_Mapper extends Abstract_Mapper
         }
 
         $hashtagID = (int) $this->pdo->lastInsertId();
-        $topic->setID($hashtagID);
-        if ($topic->getID() === 0) {
+        $hashtag->setID($hashtagID);
+        if ($hashtag->getID() === 0) {
             throw new Exception('Hashtag not saved', 1);
         }
 
-        return $topic;
+        return $hashtag;
     }
 
-    public function update(Hashtag_Model $topic): Hashtag_Model
+    public function update(Hashtag_Model $hashtag): Hashtag_Model
     {
-        Topic_Validator::validateExists($topic);
+        Hashtag_Validator::validateExists($hashtag);
 
-        $hashtagID = $topic->getID();
-        $hashtagTitle = $topic->getTitle();
+        $hashtagID = $hashtag->getID();
+        $hashtagTitle = $hashtag->getTitle();
 
         $sql = 'UPDATE hashtags SET h_title=:h_title WHERE h_id=:h_id';
         $stmt = $this->pdo->prepare($sql);
@@ -45,6 +45,6 @@ class Hashtag_Mapper extends Abstract_Mapper
             throw new Exception('Hashtag with ID '.$hashtagID.' not exists', 0);
         }
 
-        return $topic;
+        return $hashtag;
     }
 }

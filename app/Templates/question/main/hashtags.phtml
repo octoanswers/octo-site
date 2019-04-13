@@ -1,19 +1,19 @@
 
-<?php if (count($this->question->getTopics())): ?>
+<?php if (count($this->question->getHashtags())): ?>
 	<!-- hashtags -->
-	<div class="my-5" id="question_topics_list">
+	<div class="my-5" id="question_hashtags_list">
 		<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
 			<?= _('Hashtags') ?>
 		</div>
 
-		<?php foreach ($this->question->getTopics() as $topic): ?>
-			<a class="text-decoration-none mb-2 mr-2" href="<?= Topic_URL_Helper::getURLFromTitle($this->lang, $topic) ?>">
-				#<?= $topic ?>
+		<?php foreach ($this->question->getHashtags() as $hashtag): ?>
+			<a class="text-decoration-none mb-2 mr-2" href="<?= Hashtag_URL_Helper::getURLFromTitle($this->lang, $hashtag) ?>">
+				#<?= $hashtag ?>
 			</a>
 		<?php endforeach; ?>
 
 		<?php if ($this->authUser): ?>
-			<a class="text-secondary mb-2 ml-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+			<a class="text-secondary mb-2 ml-3" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>">
 				<i class="far fa-edit"></i> Изменить
 			</a>
 		<?php endif; ?>
@@ -27,7 +27,7 @@
 
 	<?php if ($this->authUser): ?>
 		<div class="mt-5">
-			<a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateTopicsURL($this->lang) ?>">
+			<a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>">
 				<i class="far fa-plus-square"></i>
 				Задать темы вопроса
 			</a>

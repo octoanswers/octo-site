@@ -32,8 +32,8 @@
             </a>
         <?php endif; ?>
 
-        <?php if (count($question->getTopics()) == 0): ?>
-            <a class="badge badge-success mr-3" href="<?= $question->getUpdateTopicsURL($this->lang) ?>" rel="nofollow">
+        <?php if (count($question->getHashtags()) == 0): ?>
+            <a class="badge badge-success mr-3" href="<?= $question->getUpdateHashtagsURL($this->lang) ?>" rel="nofollow">
                 Проставить темы
             </a>
         <?php endif; ?>

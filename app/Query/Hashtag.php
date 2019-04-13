@@ -5,9 +5,9 @@ use Respect\Validation\Validator as v;
 
 class Hashtag_Query extends Abstract_Query
 {
-    public function topicWithID(int $hashtagID): Hashtag_Model
+    public function hashtagWithID(int $hashtagID): Hashtag_Model
     {
-        Topic_Validator::validateID($hashtagID);
+        Hashtag_Validator::validateID($hashtagID);
 
         $stmt = $this->pdo->prepare('SELECT * FROM hashtags WHERE h_id=:h_id LIMIT 1');
         $stmt->bindParam(':h_id', $hashtagID, PDO::PARAM_INT);
@@ -26,7 +26,7 @@ class Hashtag_Query extends Abstract_Query
 
     public function findWithTitle(string $title)
     {
-        Topic_Validator::validateTitle($title);
+        Hashtag_Validator::validateTitle($title);
 
         $stmt = $this->pdo->prepare('SELECT * FROM hashtags WHERE h_title=:h_title LIMIT 1');
         $stmt->bindParam(':h_title', $title, PDO::PARAM_STR);

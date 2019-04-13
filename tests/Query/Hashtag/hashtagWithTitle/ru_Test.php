@@ -2,20 +2,20 @@
 
 class Hashtag_Query__findWithTitle__ru__Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['topics']];
+    protected $setUpDB = ['ru' => ['hashtags']];
 
     public function test__HastagExists()
     {
-        $topic = (new Topic_Query('ru'))->findWithTitle('парфюмерия');
+        $hashtag = (new Hashtag_Query('ru'))->findWithTitle('парфюмерия');
 
-        $this->assertEquals(8, $topic->getID());
-        $this->assertEquals('парфюмерия', $topic->getTitle());
+        $this->assertEquals(8, $hashtag->getID());
+        $this->assertEquals('парфюмерия', $hashtag->getTitle());
     }
 
-    public function test__TopicNotExists()
+    public function test__HashtagNotExists()
     {
-        $topic = (new Topic_Query('ru'))->findWithTitle('notexists');
+        $hashtag = (new Hashtag_Query('ru'))->findWithTitle('notexists');
 
-        $this->assertEquals(null, $topic);
+        $this->assertEquals(null, $hashtag);
     }
 }

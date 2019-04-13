@@ -3,7 +3,7 @@ User-agent: *
 Disallow: /*/answer/*/edit
 Disallow: /*/answer/*/history
 Disallow: /*/question/*/rename
-Disallow: /*/question/*/topics
+Disallow: /*/question/*/hashtags
 Disallow: /*/sandbox/*
 Disallow: /*/settings/*
 Disallow: /*/search*

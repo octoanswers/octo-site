@@ -36,10 +36,10 @@ msgstr "Править ответ"
 #: PageController/Sandbox/All.php:54
 #: PageController/Sandbox/WithoutAnswers.php:58
 #: PageController/Sandbox/WithoutAnswers.php:63
-#: PageController/Sandbox/WithoutTopics.php:58
-#: PageController/Sandbox/WithoutTopics.php:63
-#: PageController/Search/Topics.php:24 PageController/Settings/Show.php:18
-#: PageController/Topics/Newest.php:37 PageController/Users/Newest.php:45
+#: PageController/Sandbox/WithoutHashtags.php:58
+#: PageController/Sandbox/WithoutHashtags.php:63
+#: PageController/Search/Hashtags.php:24 PageController/Settings/Show.php:18
+#: PageController/Hashtags/Newest.php:37 PageController/Users/Newest.php:45
 #: Templates/_common/navbar.phtml:7 Templates/_common/navbar.phtml:11
 #: Templates/root/block/navbar.phtml:5
 msgid "Answeropedia"
@@ -106,12 +106,12 @@ msgstr "Вики-ответы на Ваши вопросы на answeropedia.org
 msgid "Wiki-answer on question: %question%"
 msgstr "Вики-ответ на вопрос: %question%"
 
-#: PageController/Question/UpdateTopics.php:24
-msgid "Update topics for question \"%question%\" - Answeropedia"
+#: PageController/Question/UpdateHashtags.php:24
+msgid "Update hashtags for question \"%question%\" - Answeropedia"
 msgstr "Обновление тем вопроса «%question%» - Answeropedia"
 
-#: PageController/Question/UpdateTopics.php:25
-msgid "Update topics for question \"%question%\""
+#: PageController/Question/UpdateHashtags.php:25
+msgid "Update hashtags for question \"%question%\""
 msgstr "Обновление тем вопроса «%question%»"
 
 #: PageController/Questions/Newest.php:44
@@ -122,8 +122,8 @@ msgstr "Новые вопросы"
 #: PageController/Questions/RecentlyUpdated.php:43
 #: PageController/Sandbox/All.php:49
 #: PageController/Sandbox/WithoutAnswers.php:58
-#: PageController/Sandbox/WithoutTopics.php:58
-#: PageController/Topics/Newest.php:37 PageController/Users/Newest.php:45
+#: PageController/Sandbox/WithoutHashtags.php:58
+#: PageController/Hashtags/Newest.php:37 PageController/Users/Newest.php:45
 msgid "Page"
 msgstr "Страница"
 
@@ -141,7 +141,7 @@ msgid "Sandbox"
 msgstr "Песочница"
 
 #: PageController/Sandbox/WithoutAnswers.php:18
-#: PageController/Sandbox/WithoutTopics.php:18
+#: PageController/Sandbox/WithoutHashtags.php:18
 #: Templates/question/main/actions_top.phtml:7
 msgid "Question"
 msgid_plural "Questions"
@@ -150,7 +150,7 @@ msgstr[1] "Вопроса"
 msgstr[2] "Вопросов"
 
 #: PageController/Sandbox/WithoutAnswers.php:38
-#: PageController/Sandbox/WithoutTopics.php:38
+#: PageController/Sandbox/WithoutHashtags.php:38
 msgid "Without answers"
 msgstr "Без ответов"
 
@@ -158,8 +158,8 @@ msgstr "Без ответов"
 msgid "Questions without answers"
 msgstr "Вопросы без ответа"
 
-#: PageController/Sandbox/WithoutTopics.php:58
-msgid "Questions without topics"
+#: PageController/Sandbox/WithoutHashtags.php:58
+msgid "Questions without hashtags"
 msgstr "Вопросы без тем"
 
 #: PageController/Search/Questions.php:30
@@ -173,35 +173,35 @@ msgstr "Вопросы"
 
 #: PageController/Search/Questions.php:56
 #: Templates/search_questions/main.phtml:14
-msgid "Topics"
+msgid "Hashtags"
 msgstr "Темы"
 
 #: PageController/Search/Questions.php:59
 msgid "Contributors"
 msgstr "Авторы"
 
-#: PageController/Search/Topics.php:24 Templates/search_questions/main.phtml:8
+#: PageController/Search/Hashtags.php:24 Templates/search_questions/main.phtml:8
 msgid "Search"
 msgstr "Поиск"
 
-#: PageController/Search/Topics.php:26 Templates/topics/main/header.phtml:9
-msgid "Search topics"
+#: PageController/Search/Hashtags.php:26 Templates/hashtags/main/header.phtml:9
+msgid "Search hashtags"
 msgstr "Поиск тем"
 
-#: PageController/Topic/Show.php:68
-msgid "More topics"
+#: PageController/Hashtag/Show.php:68
+msgid "More hashtags"
 msgstr "Больше тем"
 
-#: PageController/Topic/Show.php:103
-msgid "Questions and answers on the topic %topic% - Answeropedia"
-msgstr "Вопросы и ответы на тему %topic% - Answeropedia"
+#: PageController/Hashtag/Show.php:103
+msgid "Questions and answers on the hashtag %hashtag% - Answeropedia"
+msgstr "Вопросы и ответы на тему %hashtag% - Answeropedia"
 
-#: PageController/Topic/Show.php:133
-msgid "Questions and answers on the topic %topic%"
-msgstr "Вопросы и ответы на тему %topic%"
+#: PageController/Hashtag/Show.php:133
+msgid "Questions and answers on the hashtag %hashtag%"
+msgstr "Вопросы и ответы на тему %hashtag%"
 
-#: PageController/Topics/Newest.php:37
-msgid "New topics"
+#: PageController/Hashtags/Newest.php:37
+msgid "New hashtags"
 msgstr "Новые темы"
 
 #: PageController/User/Show.php:31 PageController/User/Show.php:32
@@ -210,7 +210,7 @@ msgid "Wiki-answers on Answeropedia"
 msgstr "Вики-ответы на Answeropedia"
 
 #: PageController/Users/Newest.php:38 Templates/questions/main/nav.phtml:5
-#: Templates/topics/main/nav.phtml:6 Templates/users/main/nav.phtml:6
+#: Templates/hashtags/main/nav.phtml:6 Templates/users/main/nav.phtml:6
 msgid "Newest"
 msgstr "Новые"
 
@@ -345,7 +345,7 @@ msgstr "Войти"
 #: Templates/question/_modal/_lure/edit_answer.phtml:17
 #: Templates/question/_modal/_lure/first_answer_signup.phtml:17
 #: Templates/question/_modal/_lure/follow_question.phtml:17
-#: Templates/topic/main/actions.phtml:47
+#: Templates/hashtag/main/actions.phtml:47
 #: Templates/users/main/login_or_signup.phtml:4
 #: Templates/users/main/login_or_signup.phtml:12
 msgid "Signup"
@@ -372,7 +372,7 @@ msgid "Navbar.Recent_changes"
 msgstr "Свежие&nbsp;правки"
 
 #: Templates/_common/navbar.phtml:34
-msgid "Navbar.Topics"
+msgid "Navbar.Hashtags"
 msgstr "Темы"
 
 #: Templates/_common/navbar.phtml:40
@@ -444,7 +444,7 @@ msgstr "Придумайте подпись"
 
 #: Templates/feed/right/improve_feed.phtml:51
 #: Templates/feed/right/improve_feed.phtml:57
-msgid "Follow 3 more topics"
+msgid "Follow 3 more hashtags"
 msgstr "Подпишитесь на три темы"
 
 #: Templates/feed/right/improve_feed.phtml:66
@@ -470,7 +470,7 @@ msgid "How it works?"
 msgstr "Как это работает?"
 
 #: Templates/main/main/how_it_works.phtml:20
-msgid "You ask a question about any topic of interest to you"
+msgid "You ask a question about any hashtag of interest to you"
 msgstr "Вы задаете вопрос на любую интересующую вас тему"
 
 #: Templates/main/main/how_it_works.phtml:31
@@ -519,7 +519,7 @@ msgstr ""
 "вопрос."
 
 #: Templates/question/_modal/_lure/follow_question.phtml:13
-#: Templates/topic/main/actions.phtml:36
+#: Templates/hashtag/main/actions.phtml:36
 msgid "Register or sign in and you can subscribe to this question."
 msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
 
@@ -559,21 +559,21 @@ msgstr "История изменений"
 #: Templates/question/main/actions_follow.phtml:8
 #: Templates/question/main/actions_follow.phtml:12
 #: Templates/question/main/actions_follow.phtml:16
-#: Templates/topic/main/actions.phtml:14 Templates/topic/main/actions.phtml:20
-#: Templates/topic/main/actions.phtml:28 Templates/user/main/header.phtml:37
+#: Templates/hashtag/main/actions.phtml:14 Templates/hashtag/main/actions.phtml:20
+#: Templates/hashtag/main/actions.phtml:28 Templates/user/main/header.phtml:37
 #: Templates/user/main/header.phtml:41
 msgid "Follow"
 msgstr "Подписаться"
 
 #: Templates/question/main/actions_follow.phtml:9
 #: Templates/question/main/actions_follow.phtml:12
-#: Templates/topic/main/actions.phtml:15 Templates/topic/main/actions.phtml:20
+#: Templates/hashtag/main/actions.phtml:15 Templates/hashtag/main/actions.phtml:20
 #: Templates/user/main/header.phtml:38 Templates/user/main/header.phtml:41
 msgid "Followed"
 msgstr "Подписан"
 
 #: Templates/question/main/actions_follow.phtml:10
-#: Templates/topic/main/actions.phtml:16 Templates/user/main/header.phtml:39
+#: Templates/hashtag/main/actions.phtml:16 Templates/user/main/header.phtml:39
 msgid "Unfollow"
 msgstr "Отписаться"
 
@@ -612,7 +612,7 @@ msgstr "Станьте первым автором"
 #: Templates/question/main/lure_be_first_contributor.phtml:42
 msgid ""
 "Still no one tried to write an answer to this question. Be the first if the "
-"topic of the question is close to you!"
+"hashtag of the question is close to you!"
 msgstr ""
 "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
 "тема вопроса вам близка!"
@@ -675,7 +675,7 @@ msgstr "Все авторы ответа"
 msgid "More questions"
 msgstr "Больше вопросов"
 
-#: Templates/questions/main/nav.phtml:15 Templates/topics/main/nav.phtml:11
+#: Templates/questions/main/nav.phtml:15 Templates/hashtags/main/nav.phtml:11
 #: Templates/users/main/nav.phtml:11
 msgid "Popular"
 msgstr "Популярные"
@@ -689,7 +689,7 @@ msgid "Questions without answer"
 msgstr "Вопросы без ответа"
 
 #: Templates/sandbox/main/nav.phtml:10
-msgid "Without topics"
+msgid "Without hashtags"
 msgstr "Без тем"
 
 #: Templates/sandbox/main/nav.phtml:15
@@ -708,16 +708,16 @@ msgstr "По запросу «%query%» не удалось найти ни од
 msgid "View all questions"
 msgstr "Посмотреть все вопросы"
 
-#: Templates/search_questions/block/div__no_topics.phtml:5
-msgid "No topics found"
+#: Templates/search_questions/block/div__no_hashtags.phtml:5
+msgid "No hashtags found"
 msgstr "Темы не найды"
 
-#: Templates/search_questions/block/div__no_topics.phtml:7
-msgid "No topic found for \"%query%\""
+#: Templates/search_questions/block/div__no_hashtags.phtml:7
+msgid "No hashtag found for \"%query%\""
 msgstr "Не удалось найти ни одной темы по запросу «%query%»"
 
-#: Templates/search_questions/block/div__no_topics.phtml:10
-msgid "View all topics"
+#: Templates/search_questions/block/div__no_hashtags.phtml:10
+msgid "View all hashtags"
 msgstr "Посмотреть все темы"
 
 #: Templates/search_questions/block/div__no_users.phtml:5
@@ -784,7 +784,7 @@ msgstr "Сайт"
 msgid "Enter the address of your website or page on the social network."
 msgstr "Введите адрес вашего сайта или страницы в социальной сети."
 
-#: Templates/topic/main/actions.phtml:46
+#: Templates/hashtag/main/actions.phtml:46
 msgid "Cancel"
 msgstr "Отмена"
 

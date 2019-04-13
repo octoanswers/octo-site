@@ -1,6 +1,6 @@
 <?php
 
-class WithoutTopics_Sandbox_PageController extends Abstract_PageController
+class WithoutHashtags_Sandbox_PageController extends Abstract_PageController
 {
     const LIST_NEWEST = 'newest';
     const LIST_WITH_ANSWERS = 'with-answers';
@@ -18,7 +18,7 @@ class WithoutTopics_Sandbox_PageController extends Abstract_PageController
         $this->humanizedQuestionsCount = $questionsCount.' '.mb_strtolower(ngettext("Question", "Questions", $questionsCount));
 
         try {
-            $this->questions = (new Sandbox_Query($this->lang))->questionsWithoutTopics($this->page);
+            $this->questions = (new Sandbox_Query($this->lang))->questionsWithoutHashtags($this->page);
         } catch (\Exception $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -41,7 +41,7 @@ class WithoutTopics_Sandbox_PageController extends Abstract_PageController
             $this->nextPageURL = Sandbox_URL_Helper::getWithoutAnswersURL($this->lang, ($this->page + 1));
         }
 
-        $this->list = 'without_topics';
+        $this->list = 'without_hashtags';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
@@ -55,7 +55,7 @@ class WithoutTopics_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Questions without topics').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
+        return _('Questions without hashtags').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
     }
 
     public function _getPageDescription(): string

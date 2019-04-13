@@ -2,12 +2,12 @@
 
 class HashtagsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['topics', 'er_users_follow_topics'], 'users' => ['users']];
+    protected $setUpDB = ['ru' => ['hashtags', 'er_users_follow_hashtags'], 'users' => ['users']];
 
     public function test__BaseUnfollow()
     {
         $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/topics/7/follow.json', $query_string, true);
+        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/hashtags/7/follow.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -17,7 +17,7 @@ class HashtagsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend_
         $expectedResponse = [
             'user_id' => 3,
             'user_name' => 'Иван Коршунов',
-            'unfollowed_topic' => [
+            'unfollowed_hashtag' => [
                 'id' => 7,
                 'title' => 'косметика',
             ],
@@ -30,7 +30,7 @@ class HashtagsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend_
     public function test__NotFollowed()
     {
         $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/topics/4/follow.json', $query_string, true);
+        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/hashtags/4/follow.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -39,7 +39,7 @@ class HashtagsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend_
 
         $expectedResponse = [
             'error_code' => 0,
-            'error_message' => 'User with ID "3" not followed topic with ID "4"'
+            'error_message' => 'User with ID "3" not followed hashtag with ID "4"'
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

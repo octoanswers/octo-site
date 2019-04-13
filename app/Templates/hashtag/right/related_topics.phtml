@@ -1,7 +1,7 @@
 
-<?php if (count($this->related_topics)): ?>
+<?php if (count($this->related_hashtags)): ?>
 
-    <!-- related_topics -->
+    <!-- related_hashtags -->
     <div class="my-4">
         <div class="">
             <a class="font-weight-bold color-gray-800" href="#">
@@ -9,19 +9,19 @@
             </a>
         </div>
         <div class="pt-4 pb-0">
-            <?php foreach ($this->related_topics as $topic): ?>
-                <a class="badge badge-secondary mr-2 mb-3" href="<?= $topic->getURL($this->lang) ?>">
-                    <?= $topic->getTitle() ?>
+            <?php foreach ($this->related_hashtags as $hashtag): ?>
+                <a class="badge badge-secondary mr-2 mb-3" href="<?= $hashtag->getURL($this->lang) ?>">
+                    <?= $hashtag->getTitle() ?>
                 </a>
             <?php endforeach; ?>
         </div>
     </div>
-    <!-- / related_topics -->
+    <!-- / related_hashtags -->
 <?php else: ?>
     <!-- <div class="alert alert-super" role="alert">
-        <img src="/public/img/Ghost-96.png" alt="Нет вопросов в теме «{{ topic.getTitle }}»"/>
+        <img src="/public/img/Ghost-96.png" alt="Нет вопросов в теме «{{ hashtag.getTitle }}»"/>
         <p><strong>Вопросов нет</strong></p>
-        <p>Нет ни одного вопроса относящегося к теме «{{ topic.getTitle }}»</p>
+        <p>Нет ни одного вопроса относящегося к теме «{{ hashtag.getTitle }}»</p>
         {% if authUser %}
             <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal__ask">Задать вопрос</button></p>
         {% else %}

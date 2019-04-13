@@ -5,7 +5,7 @@ use Respect\Validation\Validator as v;
 
 class Hashtags_Query extends Abstract_Query
 {
-    public function topicsLastID(): int
+    public function hashtagsLastID(): int
     {
         $stmt = $this->pdo->prepare('SELECT MAX(h_id) FROM hashtags');
         if (!$stmt->execute()) {
@@ -26,9 +26,9 @@ class Hashtags_Query extends Abstract_Query
         List_Validator::validatePage($page);
         List_Validator::validatePerPage($perPage);
 
-        $topicsLastID = (new Topics_Query($this->lang))->topicsLastID();
+        $hashtagsLastID = (new Hashtags_Query($this->lang))->hashtagsLastID();
 
-        $offset = $topicsLastID - ($perPage * $page);
+        $offset = $hashtagsLastID - ($perPage * $page);
 
         $stmt = $this->pdo->prepare('SELECT * FROM hashtags WHERE `h_id` > :id_offset LIMIT :per_page');
         $stmt->bindParam(':id_offset', $offset, PDO::PARAM_INT);
@@ -40,11 +40,11 @@ class Hashtags_Query extends Abstract_Query
 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $topics = [];
+        $hashtags = [];
         foreach ($rows as $row) {
-            $topics[] = Hashtag_Model::initWithDBState($row);
+            $hashtags[] = Hashtag_Model::initWithDBState($row);
         }
 
-        return array_reverse($topics);
+        return array_reverse($hashtags);
     }
 }

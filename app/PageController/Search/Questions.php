@@ -3,7 +3,7 @@
 class Questions_Search_PageController extends Abstract_PageController
 {
     const LIST_QUESTIONS = 'questions';
-    const LIST_TOPICS = 'topics';
+    const LIST_HASHTAGS = 'hashtags';
     const LIST_USERS = 'users';
 
     const QUESTIONS_PER_PAGE = 10;
@@ -17,7 +17,7 @@ class Questions_Search_PageController extends Abstract_PageController
         $this->query = $request->getParam('q');
 
         $this->list = $request->getParam('list');
-        $this->list = ($this->list != self::LIST_QUESTIONS || $this->list != self::LIST_TOPICS || $this->list != self::LIST_USERS) ? self::LIST_QUESTIONS : $this->list ;
+        $this->list = ($this->list != self::LIST_QUESTIONS || $this->list != self::LIST_HASHTAGS || $this->list != self::LIST_USERS) ? self::LIST_QUESTIONS : $this->list ;
 
         // @TODO check query
 
@@ -33,7 +33,7 @@ class Questions_Search_PageController extends Abstract_PageController
 
         $searchLinkPostfix = $this->query ? '&q='.$this->query : '';
         $this->searchQuestionsLink = SITE_URL.'/search?list=questions'.$searchLinkPostfix;
-        $this->searchTopicsLink = SITE_URL.'/search?list=topics'.$searchLinkPostfix;
+        $this->searchHashtagsLink = SITE_URL.'/search?list=hashtags'.$searchLinkPostfix;
         $this->searchUsersLink = SITE_URL.'/search?list=users'.$searchLinkPostfix;
 
         $output = $this->renderPage();
@@ -52,8 +52,8 @@ class Questions_Search_PageController extends Abstract_PageController
             case self::LIST_QUESTIONS:
                 $placeholder = _('Questions');
                 break;
-            case self::LIST_TOPICS:
-                $placeholder = _('Topics');
+            case self::LIST_HASHTAGS:
+                $placeholder = _('Hashtags');
                 break;
             case self::LIST_USERS:
                 $placeholder = _('Contributors');

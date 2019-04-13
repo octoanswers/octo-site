@@ -1,22 +1,22 @@
 <?php
 
-class Question_Model__setTopics__Test extends PHPUnit\Framework\TestCase
+class Question_Model__setHashtags__Test extends PHPUnit\Framework\TestCase
 {
-    public function test__setTopics__Base()
+    public function test__setHashtags__Base()
     {
         $question = new Question_Model();
-        $question->setTopics(["iPhone 8","Apple"]);
+        $question->setHashtags(["iPhone 8","Apple"]);
 
-        $this->assertEquals('["iPhone 8","Apple"]', $question->getTopicsJSON());
-        $this->assertEquals(["iPhone 8","Apple"], $question->getTopics());
+        $this->assertEquals('["iPhone 8","Apple"]', $question->getHashtagsJSON());
+        $this->assertEquals(["iPhone 8","Apple"], $question->getHashtags());
     }
 
-    public function test__setTopics__Empty()
+    public function test__setHashtags__Empty()
     {
         $question = new Question_Model();
-        $question->setTopics([]);
+        $question->setHashtags([]);
 
-        $this->assertEquals(null, $question->getTopicsJSON());
-        $this->assertEquals([], $question->getTopics());
+        $this->assertEquals(null, $question->getHashtagsJSON());
+        $this->assertEquals([], $question->getHashtags());
     }
 }

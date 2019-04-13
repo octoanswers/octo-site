@@ -2,35 +2,35 @@
 
 class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['topics']];
+    protected $setUpDB = ['ru' => ['hashtags']];
 
     public function test_UpdateWithNotExistsID_ThrowException()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(2215);
-        $topic->setTitle('impossible');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(2215);
+        $hashtag->setTitle('impossible');
 
-        $this->expectExceptionMessage("Topic with ID 2215 not exists");
-        $topic = (new Hashtag_Mapper('ru'))->update($topic);
+        $this->expectExceptionMessage("Hashtag with ID 2215 not exists");
+        $hashtag = (new Hashtag_Mapper('ru'))->update($hashtag);
     }
 
     public function test_UpdateWithIDEqualZero_ThrowException()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(0);
-        $topic->setTitle('car');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(0);
+        $hashtag->setTitle('car');
 
-        $this->expectExceptionMessage('Topic id param 0 must be greater than or equal to 1');
-        $topic = (new Hashtag_Mapper('ru'))->update($topic);
+        $this->expectExceptionMessage('Hashtag id param 0 must be greater than or equal to 1');
+        $hashtag = (new Hashtag_Mapper('ru'))->update($hashtag);
     }
 
     public function test_UpdateWithIDBelowZero_ThrowException()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(-1);
-        $topic->setTitle('guf');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(-1);
+        $hashtag->setTitle('guf');
 
-        $this->expectExceptionMessage('Topic id param -1 must be greater than or equal to 1');
-        $topic = (new Hashtag_Mapper('ru'))->update($topic);
+        $this->expectExceptionMessage('Hashtag id param -1 must be greater than or equal to 1');
+        $hashtag = (new Hashtag_Mapper('ru'))->update($hashtag);
     }
 }

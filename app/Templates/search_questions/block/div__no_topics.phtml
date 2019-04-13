@@ -1,13 +1,13 @@
 
-<?php if ((count($this->topics) == 0) && ($this->query != '')): ?>
+<?php if ((count($this->hashtags) == 0) && ($this->query != '')): ?>
     <div class="alert alert-secondary pb-5 mt-4">
         <div class="text-center">
-            <p class="mb-2"><strong><?= _('No topics found') ?></strong></p>
+            <p class="mb-2"><strong><?= _('No hashtags found') ?></strong></p>
             <p class="mb-4">
-                <?= str_replace('%query%', $this->query, _('No topic found for "%query%"')); ?>
+                <?= str_replace('%query%', $this->query, _('No hashtag found for "%query%"')); ?>
             </p>
             <a class="btn btn-outline-primary" href="#" role="button">
-                <?= _('View all topics') ?>
+                <?= _('View all hashtags') ?>
             </a>
         </div>
     </div>

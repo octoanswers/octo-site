@@ -2,17 +2,17 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Query_ER_TopicsQuestions__findByTopicIDAndQuestionID__topic_id__Test extends TestCase
+class Query_ER_HashtagsQuestions__findByHashtagIDAndQuestionID__hashtag_id__Test extends TestCase
 {
-    public function test__TopicIDEqualZero_ThrowException()
+    public function test__HashtagIDEqualZero_ThrowException()
     {
-        $this->expectExceptionMessage('TopicToQuestion relation "topicID" property 0 must be greater than or equal to 1');
-        $ERs = (new TopicsToQuestions_Relations_Query('ru'))->findByTopicIDAndQuestionID(0, 1);
+        $this->expectExceptionMessage('HashtagToQuestion relation "hashtagID" property 0 must be greater than or equal to 1');
+        $ERs = (new HashtagsToQuestions_Relations_Query('ru'))->findByHashtagIDAndQuestionID(0, 1);
     }
 
-    public function test__TopicIDBelowZero_ThrowException()
+    public function test__HashtagIDBelowZero_ThrowException()
     {
-        $this->expectExceptionMessage('TopicToQuestion relation "topicID" property -1 must be greater than or equal to 1');
-        $ERs = (new TopicsToQuestions_Relations_Query('ru'))->findByTopicIDAndQuestionID(-1, 1);
+        $this->expectExceptionMessage('HashtagToQuestion relation "hashtagID" property -1 must be greater than or equal to 1');
+        $ERs = (new HashtagsToQuestions_Relations_Query('ru'))->findByHashtagIDAndQuestionID(-1, 1);
     }
 }

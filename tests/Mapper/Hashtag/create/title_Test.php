@@ -2,32 +2,32 @@
 
 class Mapper_Hashtag_create_title_Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['topics']];
+    protected $setUpDB = ['ru' => ['hashtags']];
 
     public function test_CreateWithEmptyTitle_throwException()
     {
-        $topic = new Hashtag_Model();
-        $topic->setTitle('');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setTitle('');
 
-        $this->expectExceptionMessage('Topic title param "" must have a length between 2 and 127');
-        $topic = (new Hashtag_Mapper('ru'))->create($topic);
+        $this->expectExceptionMessage('Hashtag title param "" must have a length between 2 and 127');
+        $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
     }
 
     public function test_CreateWithTooShortTitle_throwException()
     {
-        $topic = new Hashtag_Model();
-        $topic->setTitle('x');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setTitle('x');
 
-        $this->expectExceptionMessage('Topic title param "x" must have a length between 2 and 127');
-        $topic = (new Hashtag_Mapper('ru'))->create($topic);
+        $this->expectExceptionMessage('Hashtag title param "x" must have a length between 2 and 127');
+        $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
     }
 
     public function test_CreateWithTooLongTitle_throwException()
     {
-        $topic = new Hashtag_Model();
-        $topic->setTitle('title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setTitle('title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title');
 
-        $this->expectExceptionMessage('Topic title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
-        $topic = (new Hashtag_Mapper('ru'))->create($topic);
+        $this->expectExceptionMessage('Hashtag title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
+        $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
     }
 }

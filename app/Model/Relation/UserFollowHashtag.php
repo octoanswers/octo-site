@@ -4,18 +4,18 @@ class UserFollowHashtag_Relation_Model
 {
     private $id;
     private $userID;
-    private $topicID;
+    private $hashtagID;
     private $createdAt;
 
     #
     # Init methods
     #
 
-    public static function initWithUserIDAndTopicID(int $userID, int $topicID): UserFollowHashtag_Relation_Model
+    public static function initWithUserIDAndHashtagID(int $userID, int $hashtagID): UserFollowHashtag_Relation_Model
     {
         $er = new self();
         $er->userID = $userID;
-        $er->topicID = $topicID;
+        $er->hashtagID = $hashtagID;
 
         return $er;
     }
@@ -26,7 +26,7 @@ class UserFollowHashtag_Relation_Model
 
         $er->id = (int) $state['id'];
         $er->userID = (int) $state['user_id'];
-        $er->topicID = (int) $state['topic_id'];
+        $er->hashtagID = (int) $state['hashtag_id'];
         $er->createdAt = $state['created_at'];
 
         return $er;
@@ -56,14 +56,14 @@ class UserFollowHashtag_Relation_Model
         $this->userID = $userID;
     }
 
-    public function getTopicID()
+    public function getHashtagID()
     {
-        return $this->topicID;
+        return $this->hashtagID;
     }
 
-    public function setTopicID(int $topicID)
+    public function setHashtagID(int $hashtagID)
     {
-        $this->topicID = $topicID;
+        $this->hashtagID = $hashtagID;
     }
 
     public function getCreatedAt()

@@ -3,7 +3,7 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-class UpdateTopics_Question_PageController extends Abstract_PageController
+class UpdateHashtags_Question_PageController extends Abstract_PageController
 {
     protected $question;
 
@@ -18,12 +18,12 @@ class UpdateTopics_Question_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->topics_string = $this->question->getTopics() ? implode(", ", $this->question->getTopics()) : '';
+        $this->hashtags_string = $this->question->getHashtags() ? implode(", ", $this->question->getHashtags()) : '';
 
-        $this->template = 'question_update_topics';
-        $this->pageTitle = str_replace("%question%", $this->question->getTitle(), _('Update topics for question "%question%" - Answeropedia'));
-        $this->pageDescription = str_replace("%question%", $this->question->getTitle(), _('Update topics for question "%question%"'));
-        $this->includeJS[] = 'question/update_topics';
+        $this->template = 'question_update_hashtags';
+        $this->pageTitle = str_replace("%question%", $this->question->getTitle(), _('Update hashtags for question "%question%" - Answeropedia'));
+        $this->pageDescription = str_replace("%question%", $this->question->getTitle(), _('Update hashtags for question "%question%"'));
+        $this->includeJS[] = 'question/update_hashtags';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);

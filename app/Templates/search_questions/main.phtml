@@ -11,7 +11,7 @@
                         <a class="nav-link <?= $this->list == 'questions' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchQuestionsLink ?>"><?= _('Questions'); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= $this->list == 'topics' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchTopicsLink ?>"><?= _('Topics'); ?></a>
+                        <a class="nav-link <?= $this->list == 'hashtags' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchHashtagsLink ?>"><?= _('Hashtags'); ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= $this->list == 'users' ? 'active-yellow' : 'text-light' ?>" href="<?= $this->searchUsersLink ?>"><?= _('Users'); ?></a>
@@ -58,15 +58,15 @@
 
 <?php endif; ?>
 
-<?php if ($this->list == 'topics'): ?>
+<?php if ($this->list == 'hashtags'): ?>
 
-    <?php require_once 'block/div__no_topics.phtml' ?>
+    <?php require_once 'block/div__no_hashtags.phtml' ?>
 
-    <?php if (isset($this->topics)): ?>
-        <?php foreach ($this->topics as $topic): ?>
+    <?php if (isset($this->hashtags)): ?>
+        <?php foreach ($this->hashtags as $hashtag): ?>
             <div class="mt-5">
                 <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
-                    <a class="link-inverted text-decoration-none lead" href="<?= $topic->getURL($this->lang) ?>"><?= $topic->getTitle() ?></a>
+                    <a class="link-inverted text-decoration-none lead" href="<?= $hashtag->getURL($this->lang) ?>"><?= $hashtag->getTitle() ?></a>
                     <div>
                         <span class="text-muted">
                             X вопросов
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <span class="text-muted float-right">
-                        22 декабря 2016 <!-- $topic->answer->getHumanizedUpdatedAt() -->
+                        22 декабря 2016 <!-- $hashtag->answer->getHumanizedUpdatedAt() -->
                 </span>
             </div>
         <?php endforeach; ?>

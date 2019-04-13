@@ -2,36 +2,36 @@
 
 class Show_Hashtag_PageController extends Abstract_PageController
 {
-    protected $topic_questions;
+    protected $hashtag_questions;
 
     // @TODO Deprecated
     public function handleByURI($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $topic_uri = $args['uri'];
+        $hashtag_uri = $args['uri'];
 
         try {
-            $topic_title = Topic_URL_Helper::titleFromURI($topic_uri);
-            $this->topic = (new Topic_Query($this->lang))->findWithTitle($topic_title);
-            if ($this->topic === null) {
-                throw new \Exception("Topic not exists", 1);
+            $hashtag_title = Hashtag_URL_Helper::titleFromURI($hashtag_uri);
+            $this->hashtag = (new Hashtag_Query($this->lang))->findWithTitle($hashtag_title);
+            if ($this->hashtag === null) {
+                throw new \Exception("Hashtag not exists", 1);
             }
         } catch (\Exception $e) {
             //return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        return $response->withRedirect($this->topic->getURL($this->lang), 301);
+        return $response->withRedirect($this->hashtag->getURL($this->lang), 301);
     }
 
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $topic_id = $args['id'];
-        $topic_uri_slug = $args['uri_slug'];
+        $hashtagID = $args['id'];
+        $hashtag_uri_slug = $args['uri_slug'];
 
         try {
-            $this->topic = (new Topic_Query($this->lang))->topicWithID($topic_id);
+            $this->hashtag = (new Hashtag_Query($this->lang))->hashtagWithID($hashtagID);
         } catch (\Exception $e) {
             //return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
@@ -42,11 +42,11 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $humanDateTimezone = new DateTimeZone('UTC');
         $dateHumanizer = new HumanDate($humanDateTimezone, $this->lang);
 
-        $topic_questions = (new TopicsToQuestions_Relations_Query($this->lang))->findNewestForTopicWithID($this->topic->getID());
-        $this->topic_questions = [];
+        $hashtag_questions = (new HashtagsToQuestions_Relations_Query($this->lang))->findNewestForHashtagWithID($this->hashtag->getID());
+        $this->hashtag_questions = [];
 
-        foreach ($topic_questions as $topic_question_er) {
-            $this->topic_questions[] = (new Question_Query($this->lang))->questionWithID($topic_question_er->getQuestionID());
+        foreach ($hashtag_questions as $hashtag_question_er) {
+            $this->hashtag_questions[] = (new Question_Query($this->lang))->questionWithID($hashtag_question_er->getQuestionID());
 
             //$question['date_humanized'] = $dateHumanizer->format($question->getCreatedAt());
         }
@@ -54,38 +54,38 @@ class Show_Hashtag_PageController extends Abstract_PageController
         // recount questions count if GET-param on 20% random
         try {
             // if ((mt_rand(0, 10) > 7) || isset($_GET['upd'])) {
-            //     $questionsCount = api_v1_get_topics_ID_questions_count($args['topic_id']);
-            //     $topic->setQuestionsCount($questionsCount);
-            //     $topicMapper = new CategoryMapper($pdo);
-            //     $topicMapper->saveTopic($topic);
+            //     $questionsCount = api_v1_get_hashtags_ID_questions_count($args['hashtag_id']);
+            //     $hashtag->setQuestionsCount($questionsCount);
+            //     $hashtagMapper = new CategoryMapper($pdo);
+            //     $hashtagMapper->saveHashtag($hashtag);
             // }
         } catch (Throwable $e) {
             // do nothing
         }
 
-        if (is_array($this->topic_questions) && count($this->topic_questions) == 10) {
+        if (is_array($this->hashtag_questions) && count($this->hashtag_questions) == 10) {
             $data['next_page_button'] = [
-                'title' => _('More topics'),
+                'title' => _('More hashtags'),
                 'url' => '#',
             ];
         }
 
-        //$data['alternate_url_prefix'] = $topic['url'].'?';
+        //$data['alternate_url_prefix'] = $hashtag['url'].'?';
 
         //$data['most_viewed_writers'] = $this->_getMostViewedWriters();
 
-        if (is_array($this->topic_questions)) {
-            $this->related_topics = $this->_getRelatedTopics($this->topic_questions);
+        if (is_array($this->hashtag_questions)) {
+            $this->related_hashtags = $this->_getRelatedHashtags($this->hashtag_questions);
         }
         //} else {
-        //  $this->related_topics = [];
+        //  $this->related_hashtags = [];
         //}
 
         $this->_prepareFollowButton();
 
-        $this->template = 'topic';
+        $this->template = 'hashtag';
         $this->pageTitle = $this->_getPageTitle();
-        //str_replace('%topic%', , _('Topic - Page title')).' • '._('Answeropedia');
+        //str_replace('%hashtag%', , _('Hashtag - Page title')).' • '._('Answeropedia');
         $this->pageDescription = $this->_getPageDescription();
         $this->nextPageURL = null;
 
@@ -100,26 +100,26 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageTitle()
     {
-        return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic% - Answeropedia'));
+        return str_replace('%hashtag%', $this->hashtag->getTitle(), _('Questions and answers on the hashtag %hashtag% - Answeropedia'));
     }
 
     protected function _prepareFollowButton()
     {
         if ($this->authUser) {
             $authUserID = $this->authUser->getID();
-            $topicID = $this->topic->getID();
+            $hashtagID = $this->hashtag->getID();
 
-            $relation = (new UsersFollowTopics_Relations_Query($this->lang))->relationWithUserIDAndTopicID($authUserID, $topicID);
+            $relation = (new UsersFollowHashtags_Relations_Query($this->lang))->relationWithUserIDAndHashtagID($authUserID, $hashtagID);
 
             $this->followed = $relation ? true : false;
-            $this->includeJS[] = 'topic/follow';
+            $this->includeJS[] = 'hashtag/follow';
         }
     }
 
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => $this->topic->getURL($this->lang),
+            'url' => $this->hashtag->getURL($this->lang),
             'type' => "website",
             'title' => $this->_getPageTitle(),
             'description' => $this->_getPageDescription(),
@@ -130,7 +130,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageDescription()
     {
-        return str_replace('%topic%', $this->topic->getTitle(), _('Questions and answers on the topic %topic%'));
+        return str_replace('%hashtag%', $this->hashtag->getTitle(), _('Questions and answers on the hashtag %hashtag%'));
     }
 
     /**
@@ -165,7 +165,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
         return $most_viewed_writers;
     }
 
-    public function _getRelatedTopics(array $questions): array
+    public function _getRelatedHashtags(array $questions): array
     {
         if (count($questions) == 0) {
             return [];
@@ -174,9 +174,9 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $related_titles = [];
 
         foreach ($questions as $question) {
-            $topics_titles = $question->getTopics();
-            if (is_array($topics_titles) && count($topics_titles)) {
-                foreach ($topics_titles as $title) {
+            $hashtags_titles = $question->getHashtags();
+            if (is_array($hashtags_titles) && count($hashtags_titles)) {
+                foreach ($hashtags_titles as $title) {
                     //@TODO need a query
                     $related_titles[] = $title;
                 }
@@ -186,21 +186,21 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $related_titles = array_unique($related_titles);
         $related_titles = array_reverse($related_titles);
 
-        $del_val = $this->topic->getTitle();
+        $del_val = $this->hashtag->getTitle();
         if (($key = array_search($del_val, $related_titles)) !== false) {
             unset($related_titles[$key]);
         }
 
-        $related_topics = [];
+        $related_hashtags = [];
         if (count($related_titles)) {
             foreach ($related_titles as $title) {
-                $topic = Hashtag_Model::initWithTitle($title);
-                $related_topics[] = $topic;
+                $hashtag = Hashtag_Model::initWithTitle($title);
+                $related_hashtags[] = $hashtag;
             }
         } else {
-            $related_topics = [];
+            $related_hashtags = [];
         }
 
-        return $related_topics;
+        return $related_hashtags;
     }
 }

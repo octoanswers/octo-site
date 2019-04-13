@@ -9,7 +9,7 @@ class Question_Model
     public $title;
     public $isRedirect; // bool
     public $answer; // Answer_Model
-    public $topics;
+    public $hashtags;
     public $imageBaseName;
 
     #
@@ -33,8 +33,8 @@ class Question_Model
         $question->setTitle($state['q_title']);
         $question->setRedirect((bool) $state['q_is_redirect']);
         $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
-        if (isset($state['a_topics'])) {
-            $question->setTopicsJSON($state['a_topics']);
+        if (isset($state['a_hashtags'])) {
+            $question->setHashtagsJSON($state['a_hashtags']);
         }
 
         $question->answer = Answer_Model::initWithDBState($state);
@@ -76,32 +76,32 @@ class Question_Model
         $this->isRedirect = $isRedirect ? 1 : 0;
     }
 
-    public function getTopics(): array
+    public function getHashtags(): array
     {
-        return is_array($this->topics) ? $this->topics : [];
+        return is_array($this->hashtags) ? $this->hashtags : [];
     }
 
-    public function setTopics(array $topics)
+    public function setHashtags(array $hashtags)
     {
-        $this->topics = $topics;
+        $this->hashtags = $hashtags;
     }
 
-    public function getTopicsJSON()
+    public function getHashtagsJSON()
     {
-        if ($this->topics === null || count($this->topics) == 0) {
+        if ($this->hashtags === null || count($this->hashtags) == 0) {
             return null;
         }
 
-        return json_encode($this->topics, JSON_UNESCAPED_UNICODE);
+        return json_encode($this->hashtags, JSON_UNESCAPED_UNICODE);
     }
 
-    public function setTopicsJSON(string $topicsJSON)
+    public function setHashtagsJSON(string $hashtagsJSON)
     {
-        if (strlen($topicsJSON) == 0) {
-            throw new Exception("Topics JSON must be longer than 0 char", 1);
+        if (strlen($hashtagsJSON) == 0) {
+            throw new Exception("Hashtags JSON must be longer than 0 char", 1);
         }
 
-        $this->topics = json_decode($topicsJSON, true);
+        $this->hashtags = json_decode($hashtagsJSON, true);
     }
 
     public function getImageBaseName()

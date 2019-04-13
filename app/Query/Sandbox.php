@@ -34,7 +34,7 @@ class Sandbox_Query extends Abstract_Query
         return $questions;
     }
 
-    public function questionsWithoutTopics($page = 1, $perPage = 10): array
+    public function questionsWithoutHashtags($page = 1, $perPage = 10): array
     {
         QuestionsList_Validator::validatePage($page);
         QuestionsList_Validator::validatePerPage($perPage);
@@ -43,7 +43,7 @@ class Sandbox_Query extends Abstract_Query
 
         $offset = $perPage * ($page - 1);
 
-        $query = 'SELECT * FROM `questions` WHERE (a_topics IS NULL) AND q_is_redirect = 0 ORDER BY `questions`.`a_updated_at` DESC LIMIT :offset, :per_page';
+        $query = 'SELECT * FROM `questions` WHERE (a_hashtags IS NULL) AND q_is_redirect = 0 ORDER BY `questions`.`a_updated_at` DESC LIMIT :offset, :per_page';
 
         $stmt = $this->pdo->prepare($query);
         $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);

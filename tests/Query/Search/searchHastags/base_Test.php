@@ -1,19 +1,19 @@
 <?php
 
-class Query_Search_searchTopics_base_Test extends Abstract_DB_TestCase
+class Query_Search_searchHashtags_base_Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['topics']];
+    protected $setUpDB = ['ru' => ['hashtags']];
 
     public function test_SearchWithTwoResults_Ok()
     {
-        $topics = (new Search_Query('ru'))->searchTopics('фото');
+        $hashtags = (new Search_Query('ru'))->searchHashtags('фото');
 
-        $this->assertEquals(2, count($topics));
+        $this->assertEquals(2, count($hashtags));
 
-        $this->assertEquals(16, $topics[0]->getID());
-        $this->assertEquals('фотография', $topics[0]->getTitle());
+        $this->assertEquals(16, $hashtags[0]->getID());
+        $this->assertEquals('фотография', $hashtags[0]->getTitle());
 
-        $this->assertEquals(17, $topics[1]->getID());
-        $this->assertEquals('фотосинтез', $topics[1]->getTitle());
+        $this->assertEquals(17, $hashtags[1]->getID());
+        $this->assertEquals('фотосинтез', $hashtags[1]->getTitle());
     }
 }

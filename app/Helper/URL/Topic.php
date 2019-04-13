@@ -1,10 +1,10 @@
 <?php
 
-class Topic_URL_Helper extends Abstract_URL_Helper
+class Hashtag_URL_Helper extends Abstract_URL_Helper
 {
-    public static function getURLFromTitle(string $lang, string $topicTitle): string
+    public static function getURLFromTitle(string $lang, string $hashtagTitle): string
     {
-        return SITE_URL.'/'.$lang.'/topic/'.self::URIFromTitle($topicTitle);
+        return SITE_URL.'/'.$lang.'/hashtag/'.self::URIFromTitle($hashtagTitle);
     }
 
     // @TODO Deprecated
@@ -17,5 +17,4 @@ class Topic_URL_Helper extends Abstract_URL_Helper
         $title = self::_decodeURI($uri);
         return $title;
     }
-
 }

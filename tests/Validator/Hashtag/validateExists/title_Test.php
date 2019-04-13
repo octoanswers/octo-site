@@ -4,30 +4,30 @@ class Validator_Hashtag_negative_title_Test extends PHPUnit\Framework\TestCase
 {
     public function test_titleNotSet()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(13);
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(13);
 
-        $this->expectExceptionMessage('Topic title param null must be a string');
-        $this->assertEquals(true, Topic_Validator::validateExists($topic));
+        $this->expectExceptionMessage('Hashtag title param null must be a string');
+        $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 
     public function test_titleIsEmpty()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(13);
-        $topic->setTitle('');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(13);
+        $hashtag->setTitle('');
 
-        $this->expectExceptionMessage('Topic title param "" must have a length between 2 and 127');
-        $this->assertEquals(true, Topic_Validator::validateExists($topic));
+        $this->expectExceptionMessage('Hashtag title param "" must have a length between 2 and 127');
+        $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 
     public function test_TitleTooLong()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(13);
-        $topic->setTitle('title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(13);
+        $hashtag->setTitle('title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title');
 
-        $this->expectExceptionMessage('Topic title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
-        $this->assertEquals(true, Topic_Validator::validateExists($topic));
+        $this->expectExceptionMessage('Hashtag title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
+        $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 }

@@ -1,6 +1,6 @@
 
-<?php if (count($this->topics)): ?>
-    <!-- topics_table -->
+<?php if (count($this->hashtags)): ?>
+    <!-- hashtags_table -->
     <table class="table">
         <thead>
             <tr>
@@ -16,25 +16,25 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($this->topics as $topic): ?>
+            <?php foreach ($this->hashtags as $hashtag): ?>
                 <tr>
                     <td class="w-4">
-                        <a class="wh-2" href="<?= $topic->getURL($this->lang) ?>">
+                        <a class="wh-2" href="<?= $hashtag->getURL($this->lang) ?>">
                             <img class="wh-2 rounded" src="https://answeropedia.org/uploads/avatar/0_100.jpg">
                         </a>
                     </td>
                     <td>
                         <div class="font-weight-bold">
-                            <a class="color-gray-900 text-decoration-none" href="<?= $topic->getURL($this->lang) ?>">
-                                <?= $topic->getTitle() ?>
+                            <a class="color-gray-900 text-decoration-none" href="<?= $hashtag->getURL($this->lang) ?>">
+                                <?= $hashtag->getTitle() ?>
                             </a>
                         </div>
                     </td>
                     <td>
-                        <?= (int) (1 + strlen($topic->getTitle()) / 2) ?>
+                        <?= (int) (1 + strlen($hashtag->getTitle()) / 2) ?>
                     </td>
                     <td>
-                        <?= strlen($topic->getTitle()) ?>
+                        <?= strlen($hashtag->getTitle()) ?>
                     </td>
                     <td class="d-none d-sm-table-cell">
                         <button class="btn btn-sm btn-outline-success" role="button">
@@ -45,5 +45,5 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <!-- / topics_table -->
+    <!-- / hashtags_table -->
 <?php endif; ?>

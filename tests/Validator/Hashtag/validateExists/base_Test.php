@@ -4,28 +4,28 @@ class Validator_Hashtag__validateExists__BaseTest extends PHPUnit\Framework\Test
 {
     public function test_EN_Ok()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(13);
-        $topic->setTitle('apple');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(13);
+        $hashtag->setTitle('apple');
 
-        $this->assertEquals(true, Topic_Validator::validateExists($topic));
+        $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 
     public function test_RU_Ok()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(13);
-        $topic->setTitle('яблоко');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(13);
+        $hashtag->setTitle('яблоко');
 
-        $this->assertEquals(true, Topic_Validator::validateExists($topic));
+        $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 
     public function test_OneLetterTitle_Ok()
     {
-        $topic = new Hashtag_Model();
-        $topic->setID(13);
-        $topic->setTitle('xy');
+        $hashtag = new Hashtag_Model();
+        $hashtag->setID(13);
+        $hashtag->setTitle('xy');
 
-        $this->assertEquals(true, Topic_Validator::validateExists($topic));
+        $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 }

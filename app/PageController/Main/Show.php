@@ -10,7 +10,7 @@ class Show_Main_PageController extends Abstract_PageController
     protected $contributors;
     protected $activities;
 
-    protected $topics;
+    protected $hashtags;
 
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -19,10 +19,10 @@ class Show_Main_PageController extends Abstract_PageController
         $this->recent_questions = (new Questions_Query($this->lang))->findNewestWithAnswer(1, 5);
 
         // foreach ($this->recent_questions as $question) {
-        //     $topicsTitles = Topic_Extractor_Helper::extractTopics($question->answer->getText());
-        //     foreach ($topicsTitles as $title) {
-        //         $topic = Hashtag_Model::initWithTitle($title);
-        //         $this->topics[$question->getID()][] = $topic;
+        //     $hashtagsTitles = Hashtag_Extractor_Helper::extractHashtags($question->answer->getText());
+        //     foreach ($hashtagsTitles as $title) {
+        //         $hashtag = Hashtag_Model::initWithTitle($title);
+        //         $this->hashtags[$question->getID()][] = $hashtag;
         //     }
         // }
 

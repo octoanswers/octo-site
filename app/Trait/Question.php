@@ -11,15 +11,15 @@ trait Question_Trait
         return null;
     }
 
-    public function getFirstTwoTopics()
+    public function getFirstTwoHashtags()
     {
-        if (count($this->topics) >= 2) {
-            $topics_slice = array_slice($this->topics, 0, 2);
+        if (count($this->hashtags) >= 2) {
+            $hashtags_slice = array_slice($this->hashtags, 0, 2);
         } else {
-            $topics_slice = $this->topics;
+            $hashtags_slice = $this->hashtags;
         }
 
-        return $topics_slice;
+        return $hashtags_slice;
     }
 
     public function getHumanizedMinutesToRead()
@@ -36,7 +36,7 @@ trait Question_Trait
 
     public function getHumanizedHashtags()
     {
-        $hashtagsCount = count($this->getTopics());
+        $hashtagsCount = count($this->getHashtags());
         
         if ($hashtagsCount == 0) {
             return _('No hashtags');
@@ -47,7 +47,7 @@ trait Question_Trait
     
     public function getHumanizedMoreHashtags(int $trimmedHashtagsCount = 2): string
     {
-        $hashtagsCount = count($this->getTopics());
+        $hashtagsCount = count($this->getHashtags());
         
         if ($hashtagsCount - $trimmedHashtagsCount <= 0) {
             return '';

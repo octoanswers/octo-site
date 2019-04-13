@@ -6,13 +6,13 @@ class Mapper_Activity_HAQ__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $topic = Hashtag_Model::initWithTitle('tag1102');
+        $hashtag = Hashtag_Model::initWithTitle('tag1102');
 
         $question = Question_Model::initWithTitle('Когда закончится дождь?');
 
         $activity = new Activity_Model();
         $activity->setType(Activity_Model::F_H_ADDED_Q);
-        $activity->setSubject($topic);
+        $activity->setSubject($hashtag);
         $activity->setData($question);
 
         $activity = (new HAddedQ_Activity_Mapper('ru'))->create($activity);

@@ -9,17 +9,17 @@ class Newest_Hashtags_PageController extends Abstract_PageController
         $this->lang = $args['lang'];
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $topicsCount = (new Topics_Query($this->lang))->topicsLastID();
+        $hashtagsCount = (new Hashtags_Query($this->lang))->hashtagsLastID();
 
-        $this->topics = (new Topics_Query($this->lang))->findNewest($this->page);
+        $this->hashtags = (new Hashtags_Query($this->lang))->findNewest($this->page);
 
-        $this->template = 'topics';
+        $this->template = 'hashtags';
         $this->pageTitle = $this->_getPageTitle();
         $this->pageDescription = "Хештеги";
         $this->activeFilter = 'newest';
 
-        if ((isset($this->topics[9])) && ($this->topics[9]->getID() > 1)) {
-            $this->nextPageURL = Topics_URL_Helper::getNewestURL($this->lang, ($this->page + 1));
+        if ((isset($this->hashtags[9])) && ($this->hashtags[9]->getID() > 1)) {
+            $this->nextPageURL = Hashtags_URL_Helper::getNewestURL($this->lang, ($this->page + 1));
         }
 
         $output = $this->renderPage();
@@ -34,6 +34,6 @@ class Newest_Hashtags_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('New topics').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
+        return _('New hashtags').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
     }
 }

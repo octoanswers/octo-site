@@ -13,10 +13,10 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
             $api_key = (string) $request->getParam('api_key');
             $question_id = (int) $args['id'];
 
-            $new_topics_string = (string) $request->getParam('new_topics');
+            $new_hashtags_string = (string) $request->getParam('new_hashtags');
 
-            if (strlen($new_topics_string) == 0) {
-                throw new \Exception("Topics param not set", 0);
+            if (strlen($new_hashtags_string) == 0) {
+                throw new \Exception("Hashtags param not set", 0);
             }
 
             #
@@ -28,36 +28,36 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
 
             $question = (new Question_Query($this->lang))->questionWithID($question_id);
             $questionID = $question->getID();
-            $old_topics_array = $question->getTopics();
+            $old_hashtags_array = $question->getHashtags();
 
-            # Check topics-questions ER & creat new, if needed
+            # Check hashtags-questions ER & creat new, if needed
 
-            $topics_titles = explode(',', $new_topics_string);
-            $new_topics = [];
-            foreach ($topics_titles as $topic_title) {
-                $new_topics[] = trim($topic_title);
+            $hashtags_titles = explode(',', $new_hashtags_string);
+            $new_hashtags = [];
+            foreach ($hashtags_titles as $hashtag_title) {
+                $new_hashtags[] = trim($hashtag_title);
             }
 
-            foreach ($new_topics as $topic_title) {
-                $topic = (new Topic_Query($this->lang))->findWithTitle($topic_title);
-                if ($topic === null) {
-                    $topic = new Hashtag_Model();
-                    $topic->setTitle($topic_title);
+            foreach ($new_hashtags as $hashtag_title) {
+                $hashtag = (new Hashtag_Query($this->lang))->findWithTitle($hashtag_title);
+                if ($hashtag === null) {
+                    $hashtag = new Hashtag_Model();
+                    $hashtag->setTitle($hashtag_title);
 
-                    $topic = (new Hashtag_Mapper($this->lang))->create($topic);
+                    $hashtag = (new Hashtag_Mapper($this->lang))->create($hashtag);
                 }
 
-                $er = (new TopicsToQuestions_Relations_Query($this->lang))->findByTopicIDAndQuestionID($topic->getID(), $question->getID());
+                $er = (new HashtagsToQuestions_Relations_Query($this->lang))->findByHashtagIDAndQuestionID($hashtag->getID(), $question->getID());
                 if ($er === null) {
                     $er = new HashtagsToQuestions_Relation_Model();
-                    $er->setTopicID($topic->getID());
+                    $er->setHashtagID($hashtag->getID());
                     $er->setQuestionID($question->getID());
                     $er = (new HashtagToQuestion_Relation_Mapper($this->lang))->create($er);
 
                     # create activity
                     $activity = new Activity_Model();
                     $activity->setType(Activity_Model::F_H_ADDED_Q);
-                    $activity->setSubject($topic);
+                    $activity->setSubject($hashtag);
                     $activity->setData($question);
                     $activity = (new HAddedQ_Activity_Mapper($this->lang))->create($activity);
                 }
@@ -67,8 +67,8 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
             # Update question
             #
 
-            $question->setTopics($new_topics);
-            $question = (new Question_Mapper($this->lang))->updateTopics($question);
+            $question->setHashtags($new_hashtags);
+            $question = (new Question_Mapper($this->lang))->updateHashtags($question);
 
             # Save activity
 
@@ -93,8 +93,8 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                 ],
                 'user_id' => $user->getID(),
                 'user_name' => $user->getName(),
-                'old_topics' => $old_topics_array,
-                'new_topics' => $new_topics,
+                'old_hashtags' => $old_hashtags_array,
+                'new_hashtags' => $new_hashtags,
             ];
         } catch (Throwable $e) {
             $output = [

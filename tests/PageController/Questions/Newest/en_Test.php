@@ -2,7 +2,7 @@
 
 class Newest_Questions_PageController__en__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['en' => ['questions', 'topics', 'revisions'], 'users' => ['users']];
+    protected $setUpDB = ['en' => ['questions', 'hashtags', 'revisions'], 'users' => ['users']];
 
     public function testBase()
     {

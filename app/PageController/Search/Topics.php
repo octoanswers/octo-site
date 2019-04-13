@@ -1,6 +1,6 @@
 <?php
 
-class Topics_Search_PageController extends Abstract_PageController
+class Hashtags_Search_PageController extends Abstract_PageController
 {
     const QUESTIONS_PER_PAGE = 10;
 
@@ -11,23 +11,23 @@ class Topics_Search_PageController extends Abstract_PageController
     {
         $this->lang = $args['lang'];
         $this->query = $request->getParam('q');
-        $this->list = 'topics';
+        $this->list = 'hashtags';
 
         // @TODO check query
 
         if ($this->query) {
-            $this->questions = (new Search_Query($this->lang))->searchTopics($this->query);
+            $this->questions = (new Search_Query($this->lang))->searchHashtags($this->query);
         }
 
-        $this->template = 'search_topics';
+        $this->template = 'search_hashtags';
         $this->jumbortonBgStyle = 'red';
         $this->pageTitle = str_replace('%query%', $this->query, _('Search')).' - '._('Answeropedia');
 
-        $this->searchPlaceholder = _('Search topics');
+        $this->searchPlaceholder = _('Search hashtags');
 
         $searchLinkPostfix = $this->query ? '&q='.$this->query : '';
         $this->searchQuestionsLink = SITE_URL.'/search?list=questions'.$searchLinkPostfix;
-        $this->searchTopicsLink = SITE_URL.'/search?list=topics'.$searchLinkPostfix;
+        $this->searchHashtagsLink = SITE_URL.'/search?list=hashtags'.$searchLinkPostfix;
         $this->searchUsersLink = SITE_URL.'/search?list=users'.$searchLinkPostfix;
 
         $output = $this->renderPage();

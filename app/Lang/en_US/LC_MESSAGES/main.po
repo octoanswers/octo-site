@@ -35,10 +35,10 @@ msgstr "Edit answer"
 #: PageController/Sandbox/All.php:54
 #: PageController/Sandbox/WithoutAnswers.php:58
 #: PageController/Sandbox/WithoutAnswers.php:63
-#: PageController/Sandbox/WithoutTopics.php:58
-#: PageController/Sandbox/WithoutTopics.php:63
-#: PageController/Search/Topics.php:24 PageController/Settings/Show.php:18
-#: PageController/Topics/Newest.php:37 PageController/Users/Newest.php:45
+#: PageController/Sandbox/WithoutHashtags.php:58
+#: PageController/Sandbox/WithoutHashtags.php:63
+#: PageController/Search/Hashtags.php:24 PageController/Settings/Show.php:18
+#: PageController/Hashtags/Newest.php:37 PageController/Users/Newest.php:45
 #: Templates/_common/navbar.phtml:7 Templates/_common/navbar.phtml:11
 #: Templates/root/block/navbar.phtml:5
 msgid "Answeropedia"
@@ -105,13 +105,13 @@ msgstr "Wiki-answers to your questions on Answeropedia"
 msgid "Wiki-answer on question: %question%"
 msgstr "Wiki-answer on question: %question%"
 
-#: PageController/Question/UpdateTopics.php:24
-msgid "Update topics for question \"%question%\" - Answeropedia"
-msgstr "Update topics for question \"%question%\" - Answeropedia"
+#: PageController/Question/UpdateHashtags.php:24
+msgid "Update hashtags for question \"%question%\" - Answeropedia"
+msgstr "Update hashtags for question \"%question%\" - Answeropedia"
 
-#: PageController/Question/UpdateTopics.php:25
-msgid "Update topics for question \"%question%\""
-msgstr "Update topics for question \"%question%\""
+#: PageController/Question/UpdateHashtags.php:25
+msgid "Update hashtags for question \"%question%\""
+msgstr "Update hashtags for question \"%question%\""
 
 #: PageController/Questions/Newest.php:44
 msgid "Newest questions"
@@ -121,8 +121,8 @@ msgstr "Newest questions"
 #: PageController/Questions/RecentlyUpdated.php:43
 #: PageController/Sandbox/All.php:49
 #: PageController/Sandbox/WithoutAnswers.php:58
-#: PageController/Sandbox/WithoutTopics.php:58
-#: PageController/Topics/Newest.php:37 PageController/Users/Newest.php:45
+#: PageController/Sandbox/WithoutHashtags.php:58
+#: PageController/Hashtags/Newest.php:37 PageController/Users/Newest.php:45
 msgid "Page"
 msgstr "Page"
 
@@ -140,7 +140,7 @@ msgid "Sandbox"
 msgstr "Sandbox"
 
 #: PageController/Sandbox/WithoutAnswers.php:18
-#: PageController/Sandbox/WithoutTopics.php:18
+#: PageController/Sandbox/WithoutHashtags.php:18
 #: Templates/question/main/actions_top.phtml:7
 msgid "Question"
 msgid_plural "Questions"
@@ -148,7 +148,7 @@ msgstr[0] "Question"
 msgstr[1] "Questions"
 
 #: PageController/Sandbox/WithoutAnswers.php:38
-#: PageController/Sandbox/WithoutTopics.php:38
+#: PageController/Sandbox/WithoutHashtags.php:38
 msgid "Without answers"
 msgstr "Without answers"
 
@@ -156,9 +156,9 @@ msgstr "Without answers"
 msgid "Questions without answers"
 msgstr "Questions without answers"
 
-#: PageController/Sandbox/WithoutTopics.php:58
-msgid "Questions without topics"
-msgstr "Questions without topics"
+#: PageController/Sandbox/WithoutHashtags.php:58
+msgid "Questions without hashtags"
+msgstr "Questions without hashtags"
 
 #: PageController/Search/Questions.php:30
 msgid "Search %query% - Answeropedia"
@@ -171,36 +171,36 @@ msgstr "Questions"
 
 #: PageController/Search/Questions.php:56
 #: Templates/search_questions/main.phtml:14
-msgid "Topics"
-msgstr "Topics"
+msgid "Hashtags"
+msgstr "Hashtags"
 
 #: PageController/Search/Questions.php:59
 msgid "Contributors"
 msgstr "Contributors"
 
-#: PageController/Search/Topics.php:24 Templates/search_questions/main.phtml:8
+#: PageController/Search/Hashtags.php:24 Templates/search_questions/main.phtml:8
 msgid "Search"
 msgstr "Search"
 
-#: PageController/Search/Topics.php:26 Templates/topics/main/header.phtml:9
-msgid "Search topics"
-msgstr "Search topics"
+#: PageController/Search/Hashtags.php:26 Templates/hashtags/main/header.phtml:9
+msgid "Search hashtags"
+msgstr "Search hashtags"
 
-#: PageController/Topic/Show.php:68
-msgid "More topics"
-msgstr "More topics"
+#: PageController/Hashtag/Show.php:68
+msgid "More hashtags"
+msgstr "More hashtags"
 
-#: PageController/Topic/Show.php:103
-msgid "Questions and answers on the topic %topic% - Answeropedia"
-msgstr "Questions and answers on the topic %topic% - Answeropedia"
+#: PageController/Hashtag/Show.php:103
+msgid "Questions and answers on the hashtag %hashtag% - Answeropedia"
+msgstr "Questions and answers on the hashtag %hashtag% - Answeropedia"
 
-#: PageController/Topic/Show.php:133
-msgid "Questions and answers on the topic %topic%"
-msgstr "Questions and answers on the topic %topic%"
+#: PageController/Hashtag/Show.php:133
+msgid "Questions and answers on the hashtag %hashtag%"
+msgstr "Questions and answers on the hashtag %hashtag%"
 
-#: PageController/Topics/Newest.php:37
-msgid "New topics"
-msgstr "New topics"
+#: PageController/Hashtags/Newest.php:37
+msgid "New hashtags"
+msgstr "New hashtags"
 
 #: PageController/User/Show.php:31 PageController/User/Show.php:32
 #: PageController/User/Show.php:70
@@ -208,7 +208,7 @@ msgid "Wiki-answers on Answeropedia"
 msgstr "Wiki-answers on Answeropedia"
 
 #: PageController/Users/Newest.php:38 Templates/questions/main/nav.phtml:5
-#: Templates/topics/main/nav.phtml:6 Templates/users/main/nav.phtml:6
+#: Templates/hashtags/main/nav.phtml:6 Templates/users/main/nav.phtml:6
 msgid "Newest"
 msgstr "Newest"
 
@@ -341,7 +341,7 @@ msgstr "Log in"
 #: Templates/question/_modal/_lure/edit_answer.phtml:17
 #: Templates/question/_modal/_lure/first_answer_signup.phtml:17
 #: Templates/question/_modal/_lure/follow_question.phtml:17
-#: Templates/topic/main/actions.phtml:47
+#: Templates/hashtag/main/actions.phtml:47
 #: Templates/users/main/login_or_signup.phtml:4
 #: Templates/users/main/login_or_signup.phtml:12
 msgid "Signup"
@@ -368,8 +368,8 @@ msgid "Navbar.Recent_changes"
 msgstr "Recent&nbsp;changes"
 
 #: Templates/_common/navbar.phtml:34
-msgid "Navbar.Topics"
-msgstr "Topics"
+msgid "Navbar.Hashtags"
+msgstr "Hashtags"
 
 #: Templates/_common/navbar.phtml:40
 msgid "Navbar.Sandbox"
@@ -439,8 +439,8 @@ msgstr "Set signature"
 
 #: Templates/feed/right/improve_feed.phtml:51
 #: Templates/feed/right/improve_feed.phtml:57
-msgid "Follow 3 more topics"
-msgstr "Follow 3 more topics"
+msgid "Follow 3 more hashtags"
+msgstr "Follow 3 more hashtags"
 
 #: Templates/feed/right/improve_feed.phtml:66
 #: Templates/feed/right/improve_feed.phtml:72
@@ -465,8 +465,8 @@ msgid "How it works?"
 msgstr "How it works?"
 
 #: Templates/main/main/how_it_works.phtml:20
-msgid "You ask a question about any topic of interest to you"
-msgstr "You ask a question about any topic of interest to you"
+msgid "You ask a question about any hashtag of interest to you"
+msgstr "You ask a question about any hashtag of interest to you"
 
 #: Templates/main/main/how_it_works.phtml:31
 msgid "We find a specialist who can give a competent answer"
@@ -512,7 +512,7 @@ msgstr ""
 "question."
 
 #: Templates/question/_modal/_lure/follow_question.phtml:13
-#: Templates/topic/main/actions.phtml:36
+#: Templates/hashtag/main/actions.phtml:36
 msgid "Register or sign in and you can subscribe to this question."
 msgstr "Register or sign in and you can subscribe to this question."
 
@@ -550,21 +550,21 @@ msgstr "Change history"
 #: Templates/question/main/actions_follow.phtml:8
 #: Templates/question/main/actions_follow.phtml:12
 #: Templates/question/main/actions_follow.phtml:16
-#: Templates/topic/main/actions.phtml:14 Templates/topic/main/actions.phtml:20
-#: Templates/topic/main/actions.phtml:28 Templates/user/main/header.phtml:37
+#: Templates/hashtag/main/actions.phtml:14 Templates/hashtag/main/actions.phtml:20
+#: Templates/hashtag/main/actions.phtml:28 Templates/user/main/header.phtml:37
 #: Templates/user/main/header.phtml:41
 msgid "Follow"
 msgstr "Follow"
 
 #: Templates/question/main/actions_follow.phtml:9
 #: Templates/question/main/actions_follow.phtml:12
-#: Templates/topic/main/actions.phtml:15 Templates/topic/main/actions.phtml:20
+#: Templates/hashtag/main/actions.phtml:15 Templates/hashtag/main/actions.phtml:20
 #: Templates/user/main/header.phtml:38 Templates/user/main/header.phtml:41
 msgid "Followed"
 msgstr "Followed"
 
 #: Templates/question/main/actions_follow.phtml:10
-#: Templates/topic/main/actions.phtml:16 Templates/user/main/header.phtml:39
+#: Templates/hashtag/main/actions.phtml:16 Templates/user/main/header.phtml:39
 msgid "Unfollow"
 msgstr "Unfollow"
 
@@ -602,10 +602,10 @@ msgstr "Be the first author"
 #: Templates/question/main/lure_be_first_contributor.phtml:42
 msgid ""
 "Still no one tried to write an answer to this question. Be the first if the "
-"topic of the question is close to you!"
+"hashtag of the question is close to you!"
 msgstr ""
 "Still no one tried to write an answer to this question. Be the first if the "
-"topic of the question is close to you!"
+"hashtag of the question is close to you!"
 
 #: Templates/question/main/related_questions.phtml:6
 msgid "Related questions"
@@ -665,7 +665,7 @@ msgstr "All answer contributors"
 msgid "More questions"
 msgstr "More questions"
 
-#: Templates/questions/main/nav.phtml:15 Templates/topics/main/nav.phtml:11
+#: Templates/questions/main/nav.phtml:15 Templates/hashtags/main/nav.phtml:11
 #: Templates/users/main/nav.phtml:11
 msgid "Popular"
 msgstr "Popular"
@@ -679,8 +679,8 @@ msgid "Questions without answer"
 msgstr "Questions without answer"
 
 #: Templates/sandbox/main/nav.phtml:10
-msgid "Without topics"
-msgstr "Without topics"
+msgid "Without hashtags"
+msgstr "Without hashtags"
 
 #: Templates/sandbox/main/nav.phtml:15
 msgid "All"
@@ -698,17 +698,17 @@ msgstr "On request \"%query%\" could not find any questions"
 msgid "View all questions"
 msgstr "View all questions"
 
-#: Templates/search_questions/block/div__no_topics.phtml:5
-msgid "No topics found"
-msgstr "No topics found"
+#: Templates/search_questions/block/div__no_hashtags.phtml:5
+msgid "No hashtags found"
+msgstr "No hashtags found"
 
-#: Templates/search_questions/block/div__no_topics.phtml:7
-msgid "No topic found for \"%query%\""
-msgstr "No topic found for \"%query%\""
+#: Templates/search_questions/block/div__no_hashtags.phtml:7
+msgid "No hashtag found for \"%query%\""
+msgstr "No hashtag found for \"%query%\""
 
-#: Templates/search_questions/block/div__no_topics.phtml:10
-msgid "View all topics"
-msgstr "View all topics"
+#: Templates/search_questions/block/div__no_hashtags.phtml:10
+msgid "View all hashtags"
+msgstr "View all hashtags"
 
 #: Templates/search_questions/block/div__no_users.phtml:5
 msgid "No users found"
@@ -774,7 +774,7 @@ msgstr "Site"
 msgid "Enter the address of your website or page on the social network."
 msgstr "Enter the address of your website or page on the social network."
 
-#: Templates/topic/main/actions.phtml:46
+#: Templates/hashtag/main/actions.phtml:46
 msgid "Cancel"
 msgstr "Cancel"
 

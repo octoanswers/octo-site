@@ -10,8 +10,8 @@ class Mapper_Question_questionWithTitle_Base_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(6, $question->getID());
         $this->assertEquals('Как птицы помечают свою территорию?', $question->getTitle());
-        $this->assertEquals('["iPhone 8","Apple"]', $question->getTopicsJSON());
-        $this->assertEquals(["iPhone 8","Apple"], $question->getTopics());
+        $this->assertEquals('["iPhone 8","Apple"]', $question->getHashtagsJSON());
+        $this->assertEquals(["iPhone 8","Apple"], $question->getHashtags());
         $this->assertEquals('4_2013_05_09_123', $question->getImageBaseName());
     }
 
