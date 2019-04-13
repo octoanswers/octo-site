@@ -11,7 +11,7 @@ class HashtagsToQuestions_Relation_Model
     # Init methods
     #
 
-    public static function initWithTopicIDAndQuestionID(int $topicID, int $questionID): TopicsToQuestions_Relation_Model
+    public static function initWithTopicIDAndQuestionID(int $topicID, int $questionID): HashtagsToQuestions_Relation_Model
     {
         $er = new self();
         $er->topicID = $topicID;
@@ -20,7 +20,7 @@ class HashtagsToQuestions_Relation_Model
         return $er;
     }
 
-    public static function initWithDBState(array $state): TopicsToQuestions_Relation_Model
+    public static function initWithDBState(array $state): HashtagsToQuestions_Relation_Model
     {
         $er = new self();
 

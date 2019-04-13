@@ -6,7 +6,7 @@ class Mapper_Hashtag_update_base_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithFullParams_Ok()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(2);
         $topic->setTitle('updatedtopic');
 
@@ -18,7 +18,7 @@ class Mapper_Hashtag_update_base_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithMinParams_Ok()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(4);
         $topic->setTitle('обновленнаятема');
 

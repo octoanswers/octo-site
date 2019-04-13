@@ -12,7 +12,7 @@ class Hashtag_Model
     # Init methods
     #
 
-    public static function initWithTitle(string $title): Topic_Model
+    public static function initWithTitle(string $title): Hashtag_Model
     {
         $topic = new self();
         $topic->setTitle($title);
@@ -20,7 +20,7 @@ class Hashtag_Model
         return $topic;
     }
 
-    public static function initWithDBState(array $state): Topic_Model
+    public static function initWithDBState(array $state): Hashtag_Model
     {
         $topic = new self();
         $topic->setID($state['t_id']);

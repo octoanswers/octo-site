@@ -6,7 +6,7 @@ class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
 
     public function test_CreateWithEnTitle_Ok()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setTitle('newtopic');
 
         $topic = (new Topic_Mapper('ru'))->create($topic);
@@ -17,7 +17,7 @@ class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
 
     public function test_CreateWithRuTitle_Ok()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setTitle('новаятема');
 
         $topic = (new Topic_Mapper('ru'))->create($topic);

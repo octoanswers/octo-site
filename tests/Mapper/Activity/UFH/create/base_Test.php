@@ -10,7 +10,7 @@ class Mapper_Activity_UFH__create__Test extends Abstract_DB_TestCase
         $user->setID(46);
         $user->setName('Steve Bo');
 
-        $topic = Topic_Model::initWithTitle('tag10');
+        $topic = Hashtag_Model::initWithTitle('tag10');
 
         $activity = new Activity_Model();
         $activity->setType(Activity_Model::F_U_FOLLOW_H);

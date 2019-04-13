@@ -9,7 +9,7 @@ class HashtagToQuestion_Relation_Validator
     # Model validator
     #
 
-    public static function validateExists(TopicsToQuestions_Relation_Model $rel)
+    public static function validateExists(HashtagsToQuestions_Relation_Model $rel)
     {
         self::validateID($rel->getID());
         self::validateNew($rel);
@@ -17,7 +17,7 @@ class HashtagToQuestion_Relation_Validator
         return true;
     }
 
-    public static function validateNew(TopicsToQuestions_Relation_Model $rel)
+    public static function validateNew(HashtagsToQuestions_Relation_Model $rel)
     {
         self::validateTopicID($rel->getTopicID());
         self::validateQuestionID($rel->getQuestionID());

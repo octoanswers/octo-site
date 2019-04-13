@@ -2,7 +2,7 @@
 
 class UserFollowTopic_Relation_Mapper extends Abstract_Mapper
 {
-    public function create(UserFollowTopic_Relation_Model $relation): UserFollowTopic_Relation_Model
+    public function create(UserFollowHashtag_Relation_Model $relation): UserFollowHashtag_Relation_Model
     {
         UserFollowTopic_Relation_Validator::validateNew($relation);
 
@@ -27,12 +27,12 @@ class UserFollowTopic_Relation_Mapper extends Abstract_Mapper
         return $relation;
     }
 
-    private function update(UserFollowTopic_Relation_Model $relation)
+    private function update(UserFollowHashtag_Relation_Model $relation)
     {
         throw new Exception('UserFollowTopic relation "update" method not applicable', 0);
     }
 
-    public function deleteRelation(UserFollowTopic_Relation_Model $relation): bool
+    public function deleteRelation(UserFollowHashtag_Relation_Model $relation): bool
     {
         UserFollowTopic_Relation_Validator::validateExists($relation);
 

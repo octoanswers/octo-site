@@ -6,7 +6,7 @@ class Mapper_Hashtag_update_title_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithEmptyTitle_throwException()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(2);
         $topic->setTitle('');
 
@@ -16,7 +16,7 @@ class Mapper_Hashtag_update_title_Test extends Abstract_DB_TestCase
 
     public function test_TitleTooShort_throwException()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(2);
         $topic->setTitle('x');
 
@@ -26,7 +26,7 @@ class Mapper_Hashtag_update_title_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithTooLongTitle_throwException()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(2);
         $topic->setTitle('title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title');
 

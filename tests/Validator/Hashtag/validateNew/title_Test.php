@@ -4,7 +4,7 @@ class Validator_Hashtag_validateNew_title_Test extends PHPUnit\Framework\TestCas
 {
     public function test_titleNotSet()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
 
         $this->expectExceptionMessage('Topic title param null must be a string');
         $this->assertEquals(true, Topic_Validator::validateNew($topic));
@@ -12,7 +12,7 @@ class Validator_Hashtag_validateNew_title_Test extends PHPUnit\Framework\TestCas
 
     public function test_titleIsEmpty()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setTitle('');
 
         $this->expectExceptionMessage('Topic title param "" must have a length between 2 and 127');
@@ -21,7 +21,7 @@ class Validator_Hashtag_validateNew_title_Test extends PHPUnit\Framework\TestCas
 
     public function test_TitleTooLong()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(13);
         $topic->setTitle('title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title');
 

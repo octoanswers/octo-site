@@ -31,7 +31,7 @@ class HashtagsIDFollow_POST_APIController extends Abstract_APIController
             # Save UserFollowTopic relation
             #
 
-            $relation = new UserFollowTopic_Relation_Model();
+            $relation = new UserFollowHashtag_Relation_Model();
             $relation->setUserID($userID);
             $relation->setTopicID($topicID);
 

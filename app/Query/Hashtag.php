@@ -5,7 +5,7 @@ use Respect\Validation\Validator as v;
 
 class Hashtag_Query extends Abstract_Query
 {
-    public function topicWithID(int $topicID): Topic_Model
+    public function topicWithID(int $topicID): Hashtag_Model
     {
         Topic_Validator::validateID($topicID);
 
@@ -21,7 +21,7 @@ class Hashtag_Query extends Abstract_Query
             throw new Exception('Topic with ID "'.$topicID.'" not exists', 1);
         }
 
-        return Topic_Model::initWithDBState($row);
+        return Hashtag_Model::initWithDBState($row);
     }
 
     public function findWithTitle(string $title)
@@ -40,6 +40,6 @@ class Hashtag_Query extends Abstract_Query
             return null;
         }
 
-        return Topic_Model::initWithDBState($row);
+        return Hashtag_Model::initWithDBState($row);
     }
 }

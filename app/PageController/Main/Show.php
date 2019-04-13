@@ -21,7 +21,7 @@ class Show_Main_PageController extends Abstract_PageController
         // foreach ($this->recent_questions as $question) {
         //     $topicsTitles = Topic_Extractor_Helper::extractTopics($question->answer->getText());
         //     foreach ($topicsTitles as $title) {
-        //         $topic = Topic_Model::initWithTitle($title);
+        //         $topic = Hashtag_Model::initWithTitle($title);
         //         $this->topics[$question->getID()][] = $topic;
         //     }
         // }

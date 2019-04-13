@@ -6,7 +6,7 @@ class UserFollowTopic_Relation_Mapper__create__Test extends Abstract_DB_TestCase
 
     public function test__FullParams__OK()
     {
-        $relation = new UserFollowTopic_Relation_Model();
+        $relation = new UserFollowHashtag_Relation_Model();
         $relation->setUserID(3);
         $relation->setTopicID(19);
 

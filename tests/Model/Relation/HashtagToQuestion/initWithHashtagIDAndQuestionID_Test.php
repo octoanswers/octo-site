@@ -4,7 +4,7 @@ class Model_ER_TopicsQuestions__initWithTopicIDAndQuestionID__Test extends PHPUn
 {
     public function test__BaseParams()
     {
-        $rel = TopicsToQuestions_Relation_Model::initWithTopicIDAndQuestionID(3, 9);
+        $rel = HashtagsToQuestions_Relation_Model::initWithTopicIDAndQuestionID(3, 9);
 
         $this->assertEquals(null, $rel->getID());
         $this->assertEquals(3, $rel->getTopicID());

@@ -4,7 +4,7 @@ class Validator_Hashtag_negative_title_Test extends PHPUnit\Framework\TestCase
 {
     public function test_titleNotSet()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(13);
 
         $this->expectExceptionMessage('Topic title param null must be a string');
@@ -13,7 +13,7 @@ class Validator_Hashtag_negative_title_Test extends PHPUnit\Framework\TestCase
 
     public function test_titleIsEmpty()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(13);
         $topic->setTitle('');
 
@@ -23,7 +23,7 @@ class Validator_Hashtag_negative_title_Test extends PHPUnit\Framework\TestCase
 
     public function test_TitleTooLong()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(13);
         $topic->setTitle('title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title');
 

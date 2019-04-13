@@ -7,7 +7,7 @@ class UserFollowTopic_Relation_Mapper__deleteRelation__Test extends Abstract_DB_
     public function test__FullParams__OK()
     {
         // Relation must be in DB
-        $relation = new UserFollowTopic_Relation_Model();
+        $relation = new UserFollowHashtag_Relation_Model();
         $relation->setID(6);
         $relation->setUserID(2);
         $relation->setTopicID(16);
@@ -21,7 +21,7 @@ class UserFollowTopic_Relation_Mapper__deleteRelation__Test extends Abstract_DB_
     public function test__RelationNotExists()
     {
         // Not exists relation
-        $relation = new UserFollowTopic_Relation_Model();
+        $relation = new UserFollowHashtag_Relation_Model();
         $relation->setID(6);
         $relation->setUserID(22);
         $relation->setTopicID(61);

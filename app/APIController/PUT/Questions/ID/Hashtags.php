@@ -41,7 +41,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
             foreach ($new_topics as $topic_title) {
                 $topic = (new Topic_Query($this->lang))->findWithTitle($topic_title);
                 if ($topic === null) {
-                    $topic = new Topic_Model();
+                    $topic = new Hashtag_Model();
                     $topic->setTitle($topic_title);
 
                     $topic = (new Topic_Mapper($this->lang))->create($topic);
@@ -49,7 +49,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
 
                 $er = (new TopicsToQuestions_Relations_Query($this->lang))->findByTopicIDAndQuestionID($topic->getID(), $question->getID());
                 if ($er === null) {
-                    $er = new TopicsToQuestions_Relation_Model();
+                    $er = new HashtagsToQuestions_Relation_Model();
                     $er->setTopicID($topic->getID());
                     $er->setQuestionID($question->getID());
                     $er = (new TopicToQuestion_Relation_Mapper($this->lang))->create($er);

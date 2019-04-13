@@ -12,17 +12,17 @@ class Hashtag_Validator
     # Model validator
     #
 
-    public static function validateNew(Topic_Model $topic)
+    public static function validateNew(Hashtag_Model $topic)
     {
         return self::validate($topic, false);
     }
 
-    public static function validateExists(Topic_Model $topic)
+    public static function validateExists(Hashtag_Model $topic)
     {
         return self::validate($topic, true);
     }
 
-    protected static function validate(Topic_Model $topic, $isExists = true)
+    protected static function validate(Hashtag_Model $topic, $isExists = true)
     {
         if ($isExists) {
             self::validateID($topic->getID());

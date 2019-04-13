@@ -2,7 +2,7 @@
 
 class HashtagToQuestion_Relation_Mapper extends Abstract_Mapper
 {
-    public function create(TopicsToQuestions_Relation_Model $er): TopicsToQuestions_Relation_Model
+    public function create(HashtagsToQuestions_Relation_Model $er): HashtagsToQuestions_Relation_Model
     {
         TopicToQuestion_Relation_Validator::validateNew($er);
 
@@ -27,13 +27,13 @@ class HashtagToQuestion_Relation_Mapper extends Abstract_Mapper
         return $er;
     }
 
-    private function update(TopicsToQuestions_Relation_Model $er): TopicsToQuestions_Relation_Model
+    private function update(HashtagsToQuestions_Relation_Model $er): HashtagsToQuestions_Relation_Model
     {
         // We don`t need to update ER
         return $er;
     }
 
-    public function delete(TopicsToQuestions_Relation_Model $er): TopicsToQuestions_Relation_Model
+    public function delete(HashtagsToQuestions_Relation_Model $er): HashtagsToQuestions_Relation_Model
     {
         throw new Exception('TopicsQuestions ER delete not realized', 1);
     }

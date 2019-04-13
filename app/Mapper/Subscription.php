@@ -26,13 +26,13 @@ class Subscription_Mapper extends Abstract_Mapper
         return $s;
     }
 
-    private function update(TopicsToQuestions_Relation_Model $s): TopicsToQuestions_Relation_Model
+    private function update(HashtagsToQuestions_Relation_Model $s): HashtagsToQuestions_Relation_Model
     {
         // We don`t need to update ER
         return $s;
     }
 
-    public function delete(TopicsToQuestions_Relation_Model $s): TopicsToQuestions_Relation_Model
+    public function delete(HashtagsToQuestions_Relation_Model $s): HashtagsToQuestions_Relation_Model
     {
         throw new Exception('TopicsQuestions ER delete not realized', 1);
     }

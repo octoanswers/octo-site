@@ -4,7 +4,7 @@ class Validator_ER_HashtagQuestions__id__Test extends PHPUnit\Framework\TestCase
 {
     public function test_IDEqualZero()
     {
-        $rel = new TopicsToQuestions_Relation_Model();
+        $rel = new HashtagsToQuestions_Relation_Model();
         $rel->setID(0);
         $rel->setTopicID(3);
         $rel->setQuestionID(9);
@@ -15,7 +15,7 @@ class Validator_ER_HashtagQuestions__id__Test extends PHPUnit\Framework\TestCase
 
     public function test__IDBelowZero()
     {
-        $rel = new TopicsToQuestions_Relation_Model();
+        $rel = new HashtagsToQuestions_Relation_Model();
         $rel->setID(-1);
         $rel->setTopicID(3);
         $rel->setQuestionID(9);

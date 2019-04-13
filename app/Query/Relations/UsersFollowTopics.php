@@ -17,7 +17,7 @@ class UsersFollowTopics_Relations_Query extends Abstract_Query
             return null;
         }
 
-        return UserFollowTopic_Relation_Model::initWithDBState($row);
+        return UserFollowHashtag_Relation_Model::initWithDBState($row);
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowTopic_Relation_Model
+class UserFollowHashtag_Relation_Model
 {
     private $id;
     private $userID;
@@ -11,7 +11,7 @@ class UserFollowTopic_Relation_Model
     # Init methods
     #
 
-    public static function initWithUserIDAndTopicID(int $userID, int $topicID): UserFollowTopic_Relation_Model
+    public static function initWithUserIDAndTopicID(int $userID, int $topicID): UserFollowHashtag_Relation_Model
     {
         $er = new self();
         $er->userID = $userID;
@@ -20,7 +20,7 @@ class UserFollowTopic_Relation_Model
         return $er;
     }
 
-    public static function initWithDBState(array $state): UserFollowTopic_Relation_Model
+    public static function initWithDBState(array $state): UserFollowHashtag_Relation_Model
     {
         $er = new self();
 

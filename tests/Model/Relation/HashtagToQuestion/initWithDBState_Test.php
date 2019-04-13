@@ -4,7 +4,7 @@ class Model_ER_TopicsQuestions__initWithDBState__Test extends PHPUnit\Framework\
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = TopicsToQuestions_Relation_Model::initWithDBState([
+        $rel = HashtagsToQuestions_Relation_Model::initWithDBState([
             'er_id' => 13,
             'er_topic_id' => 3,
             'er_question_id' => 9,
@@ -19,7 +19,7 @@ class Model_ER_TopicsQuestions__initWithDBState__Test extends PHPUnit\Framework\
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = TopicsToQuestions_Relation_Model::initWithDBState([
+        $rel = HashtagsToQuestions_Relation_Model::initWithDBState([
             'er_id' => 13,
             'er_topic_id' => 3,
             'er_question_id' => 9,

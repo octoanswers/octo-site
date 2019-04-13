@@ -6,7 +6,7 @@ class Mapper_Activity_HAQ__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $topic = Topic_Model::initWithTitle('tag1102');
+        $topic = Hashtag_Model::initWithTitle('tag1102');
 
         $question = Question_Model::initWithTitle('Когда закончится дождь?');
 

@@ -4,7 +4,7 @@ class Validator_Hashtag__validateExists__BaseTest extends PHPUnit\Framework\Test
 {
     public function test_EN_Ok()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(13);
         $topic->setTitle('apple');
 
@@ -13,7 +13,7 @@ class Validator_Hashtag__validateExists__BaseTest extends PHPUnit\Framework\Test
 
     public function test_RU_Ok()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(13);
         $topic->setTitle('яблоко');
 
@@ -22,7 +22,7 @@ class Validator_Hashtag__validateExists__BaseTest extends PHPUnit\Framework\Test
 
     public function test_OneLetterTitle_Ok()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(13);
         $topic->setTitle('xy');
 

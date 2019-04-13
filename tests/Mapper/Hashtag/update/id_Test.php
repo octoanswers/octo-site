@@ -6,7 +6,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithNotExistsID_ThrowException()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(2215);
         $topic->setTitle('impossible');
 
@@ -16,7 +16,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithIDEqualZero_ThrowException()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(0);
         $topic->setTitle('car');
 
@@ -26,7 +26,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithIDBelowZero_ThrowException()
     {
-        $topic = new Topic_Model();
+        $topic = new Hashtag_Model();
         $topic->setID(-1);
         $topic->setTitle('guf');
 

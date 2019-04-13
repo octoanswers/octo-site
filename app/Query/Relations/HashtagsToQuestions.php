@@ -28,7 +28,7 @@ class HashtagsToQuestions_Relations_Query extends Abstract_Query
 
         $ERs = [];
         foreach ($rows as $row) {
-            $ERs[] = TopicsToQuestions_Relation_Model::initWithDBState($row);
+            $ERs[] = HashtagsToQuestions_Relation_Model::initWithDBState($row);
         }
 
         return $ERs;
@@ -52,7 +52,7 @@ class HashtagsToQuestions_Relations_Query extends Abstract_Query
             return null;
         }
 
-        return TopicsToQuestions_Relation_Model::initWithDBState($row);
+        return HashtagsToQuestions_Relation_Model::initWithDBState($row);
     }
 
     public function findByTopicTitleAndQuestionID(string $topic_title, int $question_id)

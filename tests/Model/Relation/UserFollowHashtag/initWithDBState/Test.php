@@ -1,10 +1,10 @@
 <?php
 
-class UserFollowTopic_Relation_Model__initWithDBState__Test extends PHPUnit\Framework\TestCase
+class UserFollowHashtag_Relation_Model__initWithDBState__Test extends PHPUnit\Framework\TestCase
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = UserFollowTopic_Relation_Model::initWithDBState([
+        $rel = UserFollowHashtag_Relation_Model::initWithDBState([
             'id' => 13,
             'user_id' => 3,
             'topic_id' => 9,
@@ -19,7 +19,7 @@ class UserFollowTopic_Relation_Model__initWithDBState__Test extends PHPUnit\Fram
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = UserFollowTopic_Relation_Model::initWithDBState([
+        $rel = UserFollowHashtag_Relation_Model::initWithDBState([
             'id' => 13,
             'user_id' => 3,
             'topic_id' => 9,

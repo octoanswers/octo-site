@@ -65,7 +65,7 @@ class Search_Query extends Abstract_Query
 
         $topics = [];
         foreach ($rows as $row) {
-            $topics[] = Topic_Model::initWithDBState($row);
+            $topics[] = Hashtag_Model::initWithDBState($row);
         }
 
         return $topics;

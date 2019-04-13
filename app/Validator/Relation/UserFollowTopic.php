@@ -9,7 +9,7 @@ class UserFollowTopic_Relation_Validator
     # Model validator
     #
 
-    public static function validateExists(UserFollowTopic_Relation_Model $relation)
+    public static function validateExists(UserFollowHashtag_Relation_Model $relation)
     {
         self::validateID($relation->getID());
         self::validateNew($relation);
@@ -17,7 +17,7 @@ class UserFollowTopic_Relation_Validator
         return true;
     }
 
-    public static function validateNew(UserFollowTopic_Relation_Model $relation)
+    public static function validateNew(UserFollowHashtag_Relation_Model $relation)
     {
         self::validateUserID($relation->getUserID());
         self::validateTopicID($relation->getTopicID());

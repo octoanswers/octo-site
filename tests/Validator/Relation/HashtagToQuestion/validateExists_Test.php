@@ -4,7 +4,7 @@ class Validator_ER_HashtagsQuestions__validateExists__Test extends PHPUnit\Frame
 {
     public function test__FullParams__OK()
     {
-        $rel = new TopicsToQuestions_Relation_Model();
+        $rel = new HashtagsToQuestions_Relation_Model();
         $rel->setID(13);
         $rel->setTopicID(3);
         $rel->setQuestionID(9);
@@ -15,7 +15,7 @@ class Validator_ER_HashtagsQuestions__validateExists__Test extends PHPUnit\Frame
 
     public function test__MinParams__OK()
     {
-        $rel = new TopicsToQuestions_Relation_Model();
+        $rel = new HashtagsToQuestions_Relation_Model();
         $rel->setID(13);
         $rel->setTopicID(3);
         $rel->setQuestionID(9);

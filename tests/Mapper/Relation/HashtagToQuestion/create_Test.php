@@ -6,7 +6,7 @@ class Mapper_ER_TopicsQuestions__create__Test extends Abstract_DB_TestCase
 
     public function test__FullParams__OK()
     {
-        $er = new TopicsToQuestions_Relation_Model();
+        $er = new HashtagsToQuestions_Relation_Model();
         $er->setTopicID(3);
         $er->setQuestionID(9);
 
@@ -19,7 +19,7 @@ class Mapper_ER_TopicsQuestions__create__Test extends Abstract_DB_TestCase
 
     public function test__MinParams__OK()
     {
-        $er = new TopicsToQuestions_Relation_Model();
+        $er = new HashtagsToQuestions_Relation_Model();
         $er->setTopicID(3);
         $er->setQuestionID(9);
 
