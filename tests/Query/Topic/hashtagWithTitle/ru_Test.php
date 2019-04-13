@@ -6,10 +6,10 @@ class Topic_Query__findWithTitle__ru__Test extends Abstract_DB_TestCase
 
     public function test__HastagExists()
     {
-        $topic = (new Topic_Query('ru'))->findWithTitle('Парфюмерия');
+        $topic = (new Topic_Query('ru'))->findWithTitle('парфюмерия');
 
         $this->assertEquals(8, $topic->getID());
-        $this->assertEquals('Парфюмерия', $topic->getTitle());
+        $this->assertEquals('парфюмерия', $topic->getTitle());
     }
 
     public function test__TopicNotExists()

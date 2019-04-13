@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-04-12 22:00+0500\n"
-"PO-Revision-Date: 2019-04-12 22:06+0500\n"
+"PO-Revision-Date: 2019-04-13 14:42+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -18,7 +18,7 @@ msgstr ""
 #: Templates/answer_edit/main/header.phtml:3
 #: Templates/question/main/actions_top.phtml:15
 msgid "Edit answer"
-msgstr "Править ответ"
+msgstr "Edit answer"
 
 #: PageController/Answer/Edit.php:34 PageController/Answer/History.php:31
 #: PageController/Error/InternalServerError.php:13

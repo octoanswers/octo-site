@@ -20,7 +20,7 @@ class TopicsIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_Test
             'user_id' => 3,
             'user_name' => 'Иван Коршунов',
             'followed_topic_id' => 4,
-            'followed_topic_title' => 'Автомобили',
+            'followed_topic_title' => 'автомобили',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

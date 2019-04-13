@@ -11,10 +11,10 @@ class Topics_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(10, count($topics));
 
         $this->assertEquals(17, $topics[0]->getID());
-        $this->assertEquals('Фотосинтез', $topics[0]->getTitle());
+        $this->assertEquals('фотосинтез', $topics[0]->getTitle());
 
         $this->assertEquals(8, $topics[9]->getID());
-        $this->assertEquals('Парфюмерия', $topics[9]->getTitle());
+        $this->assertEquals('парфюмерия', $topics[9]->getTitle());
     }
 
     public function test_firstPage()
@@ -24,10 +24,10 @@ class Topics_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(10, count($topics));
 
         $this->assertEquals(17, $topics[0]->getID());
-        $this->assertEquals('Фотосинтез', $topics[0]->getTitle());
+        $this->assertEquals('фотосинтез', $topics[0]->getTitle());
 
         $this->assertEquals(8, $topics[9]->getID());
-        $this->assertEquals('Парфюмерия', $topics[9]->getTitle());
+        $this->assertEquals('парфюмерия', $topics[9]->getTitle());
     }
 
     public function test_secondPage()
@@ -37,10 +37,10 @@ class Topics_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(10, count($topics));
 
         $this->assertEquals(10, $topics[0]->getID());
-        $this->assertEquals('Религия', $topics[0]->getTitle());
+        $this->assertEquals('религия', $topics[0]->getTitle());
 
         $this->assertEquals(1, $topics[9]->getID());
-        $this->assertEquals('Русская литература', $topics[9]->getTitle());
+        $this->assertEquals('русскаялитература', $topics[9]->getTitle());
     }
 
     public function test_FindFirst13Questions_Ok()
@@ -50,9 +50,9 @@ class Topics_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(13, count($topics));
 
         $this->assertEquals(17, $topics[0]->getID());
-        $this->assertEquals('Фотосинтез', $topics[0]->getTitle());
+        $this->assertEquals('фотосинтез', $topics[0]->getTitle());
 
         $this->assertEquals(5, $topics[12]->getID());
-        $this->assertEquals('Москва', $topics[12]->getTitle());
+        $this->assertEquals('москва', $topics[12]->getTitle());
     }
 }

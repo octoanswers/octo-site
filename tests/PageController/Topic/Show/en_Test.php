@@ -16,7 +16,7 @@ class Show_Topic_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
         
-        $this->assertContains('<title>Questions and answers on the topic Cashmere - Answeropedia</title>', $responseBody);
+        $this->assertContains('<title>Questions and answers on the topic cashmere - Answeropedia</title>', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

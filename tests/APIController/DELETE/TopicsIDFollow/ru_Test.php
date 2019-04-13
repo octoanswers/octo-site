@@ -19,7 +19,7 @@ class TopicsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend_Te
             'user_name' => 'Иван Коршунов',
             'unfollowed_topic' => [
                 'id' => 7,
-                'title' => 'Косметика',
+                'title' => 'косметика',
             ],
         ];
 
