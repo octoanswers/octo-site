@@ -83,6 +83,7 @@ class AWApp
             $this->get('/question/{id}/hashtags', 'UpdateHashtags_Question_PageController:handle');
             $this->get('/questions/newest', 'Newest_Questions_PageController:handle');
             $this->get('/questions/recently-updated', 'RecentlyUpdated_Questions_PageController:handle');
+            $this->get('/random-question', 'Random_Question_PageController:handle');
             $this->get('/sandbox/all', 'All_Sandbox_PageController:handle');
             $this->get('/sandbox/without-answers', 'WithoutAnswers_Sandbox_PageController:handle');
             $this->get('/sandbox/without-hashtags', 'WithoutHashtags_Sandbox_PageController:handle');
