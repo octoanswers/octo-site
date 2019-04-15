@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-13 19:24+0500\n"
-"PO-Revision-Date: 2019-04-13 19:24+0500\n"
+"POT-Creation-Date: 2019-04-15 12:45+0500\n"
+"PO-Revision-Date: 2019-04-15 12:46+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -553,7 +553,6 @@ msgstr ""
 #: Templates/question/_modal/rename.phtml:8
 #: Templates/question/_modal/rename.phtml:30
 #: Templates/question/left/sidebar.phtml:222
-#: Templates/question/right/actions.phtml:30
 msgid "Rename question"
 msgstr "Rename question"
 
@@ -649,21 +648,24 @@ msgstr ""
 msgid "Your email"
 msgstr "Your email"
 
-#: Templates/question/right/actions.phtml:6
-msgid "Actions"
+#: Templates/question/right/actions.phtml:7
+msgid "Question.Actions.Title"
 msgstr "Actions"
 
-#: Templates/question/right/actions.phtml:17
-#: Templates/question/right/image.phtml:10
-msgid "Update picture"
+#: Templates/question/right/actions.phtml:18
+msgid "Question.Actions.Update_picture"
 msgstr "Update picture"
 
-#: Templates/question/right/actions.phtml:19
-msgid "Add a picture to the question"
+#: Templates/question/right/actions.phtml:20
+msgid "Question.Actions.Add_picture"
 msgstr "Add a picture to the question"
 
-#: Templates/question/right/actions.phtml:39
-msgid "Report"
+#: Templates/question/right/actions.phtml:31
+msgid "Question.Actions.Rename_question"
+msgstr "Rename_question"
+
+#: Templates/question/right/actions.phtml:40
+msgid "Question.Actions.Report"
 msgstr "Report"
 
 #: Templates/question/right/contributors_top.phtml:12
@@ -673,6 +675,10 @@ msgstr "Top contributors"
 #: Templates/question/right/contributors_top.phtml:47
 msgid "All answer contributors"
 msgstr "All answer contributors"
+
+#: Templates/question/right/image.phtml:10
+msgid "Update picture"
+msgstr "Update picture"
 
 #: Templates/questions/main.phtml:12
 msgid "More questions"
@@ -805,6 +811,15 @@ msgid ""
 msgstr ""
 "Answeropedia is a wiki-based site where users can ask questions, respond to "
 "them and supplement other people’s answers."
+
+#~ msgid "Actions"
+#~ msgstr "Actions"
+
+#~ msgid "Report"
+#~ msgstr "Report"
+
+#~ msgid "Add a picture to the question"
+#~ msgstr "Add a picture to the question"
 
 #~ msgid "Questions without topics"
 #~ msgstr "Questions without topics"

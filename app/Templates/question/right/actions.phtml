@@ -1,22 +1,23 @@
 
 <!-- right_actions -->
 <div class="my-5">
-    <div class="mb-4">
+
+	<div class="mb-4">
 		<div class="h6 font-weight-bold border-bottom pb-2 mb-2">
-			<?= _('Actions') ?>
+			<?= _('Question.Actions.Title') ?>
 		</div>
 	</div>
-	<ul class="section-nav">
+	<ul class="list-unstyled">
 		
 		<!-- add or update image -->
 		<?php if ($this->authUser): ?>
-			<li class="toc-entry toc-h2">
-				<a href="#" data-toggle="modal" data-target="#modal_upload_image">
+			<li class="my-1">
+				<a class="text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_upload_image">
 					<i class="fas fa-camera mr-1"></i>
 					<?php if ($this->question->getImageBaseName()): ?>
-						<?= _('Update picture') ?>
+						<?= _('Question.Actions.Update_picture') ?>
 					<?php else: ?>
-						<?= _('Add a picture to the question') ?>
+						<?= _('Question.Actions.Add_picture') ?>
 					<?php endif; ?>
 				</a>
 			</li>
@@ -25,18 +26,18 @@
 
 		<?php if ($this->authUser): ?>
 			<!-- rename question -->
-			<li class="toc-entry toc-h2">
-				<a href="#" data-toggle="modal" data-target="#modal_rename">
-					<i class="fas fa-edit mr-1"></i>&nbsp;<?= _('Rename question') ?>	
+			<li class="my-1">
+				<a class="text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_rename">
+					<i class="fas fa-edit mr-1"></i>&nbsp;<?= _('Question.Actions.Rename_question') ?>	
 				</a>
 			</li>
 			<!-- / rename question -->
 		<?php endif; ?>
 			
-		<li class="toc-entry toc-h2">
-			<a href="#" rel="nofollow">
+		<li class="my-1">
+			<a class="text-muted text-decoration-none" href="#" rel="nofollow">
 				<i class="fas fa-flag mr-1"></i>
-				<?= _('Report') ?>
+				<?= _('Question.Actions.Report') ?>
 			</a>
 		</li>
 		
