@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-15 12:46+0500\n"
-"PO-Revision-Date: 2019-04-15 12:47+0500\n"
+"POT-Creation-Date: 2019-04-15 13:14+0500\n"
+"PO-Revision-Date: 2019-04-15 13:15+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -343,10 +343,10 @@ msgstr "Войти"
 
 #: Templates/_common/modal/signup.phtml:8
 #: Templates/_common/modal/signup.phtml:36 Templates/_common/navbar.phtml:70
+#: Templates/_modal/question/_lure/edit_answer.phtml:17
+#: Templates/_modal/question/_lure/first_answer_signup.phtml:17
+#: Templates/_modal/question/_lure/follow_question.phtml:17
 #: Templates/hashtag/main/actions.phtml:47
-#: Templates/question/_modal/_lure/edit_answer.phtml:17
-#: Templates/question/_modal/_lure/first_answer_signup.phtml:17
-#: Templates/question/_modal/_lure/follow_question.phtml:17
 #: Templates/users/right/login_or_signup.phtml:4
 #: Templates/users/right/login_or_signup.phtml:12
 msgid "Signup"
@@ -394,6 +394,60 @@ msgstr "О Answeropedia"
 msgid "Join the community"
 msgstr "Присоединиться к сообществу"
 
+#: Templates/_modal/question/_lure/edit_answer.phtml:13
+msgid "Register or log in and you can edit or supplement this question."
+msgstr ""
+"Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить "
+"этот вопрос."
+
+#: Templates/_modal/question/_lure/edit_answer.phtml:20
+#: Templates/_modal/question/_lure/feedback_thanks.phtml:17
+#: Templates/_modal/question/_lure/first_answer_signup.phtml:20
+#: Templates/_modal/question/_lure/follow_question.phtml:20
+msgid "Close"
+msgstr "Закрыть"
+
+#: Templates/_modal/question/_lure/feedback_thanks.phtml:13
+msgid "Thanks for the feedback!"
+msgstr "Спасибо за отзыв!"
+
+#: Templates/_modal/question/_lure/first_answer_signup.phtml:13
+msgid ""
+"Register or log in and you will be the first to write the answer to this "
+"question."
+msgstr ""
+"Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
+"вопрос."
+
+#: Templates/_modal/question/_lure/follow_question.phtml:13
+#: Templates/hashtag/main/actions.phtml:36
+msgid "Register or sign in and you can subscribe to this question."
+msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
+
+#: Templates/_modal/question/rename.phtml:8
+#: Templates/_modal/question/rename.phtml:30
+#: Templates/question/left/sidebar.phtml:222
+msgid "Rename question"
+msgstr "Переименовать вопрос"
+
+#: Templates/_modal/question/rename.phtml:18
+msgid "Before you rename a question, please read the basic rules for renaming"
+msgstr ""
+"Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с "
+"основными правилами переименования"
+
+#: Templates/_modal/question/rename.phtml:24
+msgid "Leave redirect"
+msgstr "Оставить редирект"
+
+#: Templates/_modal/question/upload_image.phtml:7
+msgid "Upload question image"
+msgstr "Загрузка картинки вопроса"
+
+#: Templates/_modal/question/upload_image.phtml:21
+msgid "Upload image"
+msgstr "Загрузить картинку"
+
 #: Templates/answer_edit/main.phtml:7
 #: Templates/answer_history/main/revision_item.phtml:19
 msgid "Description of changes"
@@ -424,6 +478,62 @@ msgstr "Нет описания изменений"
 #: Templates/error/question_not_found/main.phtml:15
 msgid "Go back"
 msgstr "Вернуться назад"
+
+#: Templates/feed/main/lure/follow_3_questions.phtml:10
+msgid "FEED.LURE.FOLLOW_3_QUESTIONS.TITLE"
+msgstr "Подпишитесь на несколько вопросов"
+
+#: Templates/feed/main/lure/follow_3_questions.phtml:14
+msgid "FEED.LURE.FOLLOW_3_QUESTIONS.MSG"
+msgstr ""
+"Подписываясь на интересные вопросы, вы сможете следить за их правками. "
+"Найдите и подпишитесь на три или более вопроса"
+
+#: Templates/feed/main/lure/follow_3_questions.phtml:18
+msgid "FEED.LURE.FOLLOW_3_QUESTIONS.LINK"
+msgstr "Посмотреть вопросы"
+
+#: Templates/feed/main/lure/follow_3_topics.phtml:10
+msgid "FEED.LURE.FOLLOW_3_HASHTAGS.TITLE"
+msgstr "Подпишитесь на несколько тем"
+
+#: Templates/feed/main/lure/follow_3_topics.phtml:13
+msgid "FEED.LURE.FOLLOW_3_HASHTAGS.MSG"
+msgstr ""
+"Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут "
+"появляться у вас в ленте новостей"
+
+#: Templates/feed/main/lure/follow_3_topics.phtml:16
+msgid "FEED.LURE.FOLLOW_3_HASHTAGS.LINK"
+msgstr "Посмотреть популярные хештеги"
+
+#: Templates/feed/main/lure/follow_3_users.phtml:10
+msgid "Feed.Lure.Follow_three_users.TITLE"
+msgstr "Найдите первых друзей"
+
+#: Templates/feed/main/lure/follow_3_users.phtml:13
+msgid "Feed.Lure.Follow_three_users.MSG"
+msgstr ""
+"Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и "
+"прочие активности этих пользователей будут появляться у вас в ленте новостей"
+
+#: Templates/feed/main/lure/follow_3_users.phtml:16
+msgid "Feed.Lure.Follow_three_users.LINK"
+msgstr "Посмотреть пользователей"
+
+#: Templates/feed/main/lure/write_answer.phtml:10
+msgid "FEED.LURE.WRITE_ANSWER.TITLE"
+msgstr "Напишите первый ответ"
+
+#: Templates/feed/main/lure/write_answer.phtml:13
+msgid "FEED.LURE.WRITE_ANSWER.MSG"
+msgstr ""
+"Посмотрите вопросы на которые еще никто не написал ответа и станьте первым "
+"автором"
+
+#: Templates/feed/main/lure/write_answer.phtml:16
+msgid "FEED.LURE.WRITE_ANSWER.LINK"
+msgstr "Посмотреть вопросы в песочнице"
 
 #: Templates/feed/right/improve_feed.phtml:5
 msgid "Improve your feed"
@@ -490,11 +600,6 @@ msgstr "Подписан"
 msgid "Unfollow"
 msgstr "Отписаться"
 
-#: Templates/hashtag/main/actions.phtml:36
-#: Templates/question/_modal/_lure/follow_question.phtml:13
-msgid "Register or sign in and you can subscribe to this question."
-msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
-
 #: Templates/hashtag/main/actions.phtml:46
 msgid "Cancel"
 msgstr "Отмена"
@@ -531,55 +636,6 @@ msgid ""
 msgstr ""
 "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями "
 "ссылкой на него."
-
-#: Templates/question/_modal/_lure/edit_answer.phtml:13
-msgid "Register or log in and you can edit or supplement this question."
-msgstr ""
-"Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить "
-"этот вопрос."
-
-#: Templates/question/_modal/_lure/edit_answer.phtml:20
-#: Templates/question/_modal/_lure/feedback_thanks.phtml:17
-#: Templates/question/_modal/_lure/first_answer_signup.phtml:20
-#: Templates/question/_modal/_lure/follow_question.phtml:20
-msgid "Close"
-msgstr "Закрыть"
-
-#: Templates/question/_modal/_lure/feedback_thanks.phtml:13
-msgid "Thanks for the feedback!"
-msgstr "Спасибо за отзыв!"
-
-#: Templates/question/_modal/_lure/first_answer_signup.phtml:13
-msgid ""
-"Register or log in and you will be the first to write the answer to this "
-"question."
-msgstr ""
-"Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
-"вопрос."
-
-#: Templates/question/_modal/rename.phtml:8
-#: Templates/question/_modal/rename.phtml:30
-#: Templates/question/left/sidebar.phtml:222
-msgid "Rename question"
-msgstr "Переименовать вопрос"
-
-#: Templates/question/_modal/rename.phtml:18
-msgid "Before you rename a question, please read the basic rules for renaming"
-msgstr ""
-"Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с "
-"основными правилами переименования"
-
-#: Templates/question/_modal/rename.phtml:24
-msgid "Leave redirect"
-msgstr "Оставить редирект"
-
-#: Templates/question/_modal/upload_image.phtml:7
-msgid "Upload question image"
-msgstr "Загрузка картинки вопроса"
-
-#: Templates/question/_modal/upload_image.phtml:21
-msgid "Upload image"
-msgstr "Загрузить картинку"
 
 #: Templates/question/left/sidebar.phtml:212
 msgid "Tools"
