@@ -60,8 +60,7 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageDescription(): string
     {
-        $postfix = ' (страница '.$this->page.') на сайте '._('Answeropedia');
-        $description = 'Список вопросов без ответов'.$postfix;
+        $description = _('Questions without answers').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
 
         return $description;
     }

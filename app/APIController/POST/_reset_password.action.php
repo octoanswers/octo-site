@@ -8,11 +8,9 @@ use Parse\ParseException;
 $errors = array();
 $response = array();
 
-// пропускаем только AJAX-запросы
+// Get only AJAX-queries
 if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
     $currentUser = ParseUser::getCurrentUser();
-
-    // Валидиация данных ==========================================================
 
     if ($currentUser) {
         $errors['email'] = 'Перед сбросом пароля необходимо выйти из системы.';
@@ -32,8 +30,6 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
     if (empty($_POST['user_email'])) {
         $errors['email'] = 'Email is required.';
     }
-
-    // Возвращаем ответ ==========================================================
 
     if (!empty($errors)) {
         $response['success'] = false;

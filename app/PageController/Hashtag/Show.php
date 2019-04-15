@@ -140,26 +140,12 @@ class Show_Hashtag_PageController extends Abstract_PageController
     {
         $most_viewed_writers = [
             [
-                'name' => 'Александр Гомзяков',
+                'name' => 'Alexander Gomzyakov',
                 'url' => 'https://answeropedia.org/user/1/aleksandr-gomzyakov',
-                'signature' => 'Менеджер ИТ-проектов, answeropedia.org',
+                'signature' => 'IT Project Manager',
                 'avatar_url' => 'http://placehold.it/48x48',
-                'avatar_alt' => 'Александр Гомзяков',
-            ],
-            [
-                'name' => 'Виктор Белохвостов',
-                'url' => 'https://answeropedia.org/user/13/viktor-belohvostov',
-                'signature' => 'Менеджер, продавец корпоративных услуг в области ИТ',
-                'avatar_url' => 'http://placehold.it/48x48',
-                'avatar_alt' => 'Виктор Белохвостов',
-            ],
-            [
-                'name' => 'Александр Гомзяков',
-                'url' => 'https://answeropedia.org/user/1/aleksandr-gomzyakov',
-                'signature' => 'Менеджер ИТ-проектов, answeropedia.org',
-                'avatar_url' => 'http://placehold.it/48x48',
-                'avatar_alt' => 'Александр Гомзяков',
-            ],
+                'avatar_alt' => 'Answeropedia user',
+            ]
         ];
 
         return $most_viewed_writers;

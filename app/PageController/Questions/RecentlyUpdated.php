@@ -45,8 +45,7 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
 
     public function _getPageDescription(): string
     {
-        $postfix = ' (страница '.$this->page.') на сайте '._('Answeropedia');
-        $description = 'Список вопросы и ответы'.$postfix;
+        $description = _('Recently updated').' &middot; '._('Page').' '.$this->page.' &middot; '._('Answeropedia');
 
         return $description;
     }

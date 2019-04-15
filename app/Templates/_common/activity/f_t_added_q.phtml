@@ -8,7 +8,8 @@
     </div>
     <div class="width-full">
         <div class="color-gray-700">
-            Задан новый вопрос на тему <a class="color-gray-900 font-weight-bold" href="<?= $data['hashtag']['url'] ?>"><?= $data['hashtag']['title'] ?></a>
+            <?= _('activity__hashtag_added_question') ?>:
+            <a class="color-gray-900 font-weight-bold" href="<?= $data['hashtag']['url'] ?>"><?= $data['hashtag']['title'] ?></a>
         </div>
         <div class="my-1">
             <a class="h3 color-gray-900 text-decoration-none" href="<?= $data['question']['url'] ?>">
