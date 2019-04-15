@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-15 13:14+0500\n"
-"PO-Revision-Date: 2019-04-15 13:15+0500\n"
+"POT-Creation-Date: 2019-04-15 13:55+0500\n"
+"PO-Revision-Date: 2019-04-15 13:56+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -483,13 +483,13 @@ msgstr "Вернуться назад"
 msgid "FEED.LURE.FOLLOW_3_QUESTIONS.TITLE"
 msgstr "Подпишитесь на несколько вопросов"
 
-#: Templates/feed/main/lure/follow_3_questions.phtml:14
+#: Templates/feed/main/lure/follow_3_questions.phtml:13
 msgid "FEED.LURE.FOLLOW_3_QUESTIONS.MSG"
 msgstr ""
 "Подписываясь на интересные вопросы, вы сможете следить за их правками. "
 "Найдите и подпишитесь на три или более вопроса"
 
-#: Templates/feed/main/lure/follow_3_questions.phtml:18
+#: Templates/feed/main/lure/follow_3_questions.phtml:16
 msgid "FEED.LURE.FOLLOW_3_QUESTIONS.LINK"
 msgstr "Посмотреть вопросы"
 
@@ -508,17 +508,17 @@ msgid "FEED.LURE.FOLLOW_3_HASHTAGS.LINK"
 msgstr "Посмотреть популярные хештеги"
 
 #: Templates/feed/main/lure/follow_3_users.phtml:10
-msgid "Feed.Lure.Follow_three_users.TITLE"
+msgid "FEED.LURE.FOLLOW_3_USERS.TITLE"
 msgstr "Найдите первых друзей"
 
 #: Templates/feed/main/lure/follow_3_users.phtml:13
-msgid "Feed.Lure.Follow_three_users.MSG"
+msgid "FEED.LURE.FOLLOW_3_USERS.MSG"
 msgstr ""
 "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и "
 "прочие активности этих пользователей будут появляться у вас в ленте новостей"
 
 #: Templates/feed/main/lure/follow_3_users.phtml:16
-msgid "Feed.Lure.Follow_three_users.LINK"
+msgid "FEED.LURE.FOLLOW_3_USERS.LINK"
 msgstr "Посмотреть пользователей"
 
 #: Templates/feed/main/lure/write_answer.phtml:10
@@ -877,6 +877,54 @@ msgid ""
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
+
+#~ msgid "Feed.Lure.Follow_three_users.TITLE"
+#~ msgstr "Найдите первых друзей"
+
+#~ msgid "Feed.Lure.Follow_three_users.MSG"
+#~ msgstr ""
+#~ "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы "
+#~ "и прочие активности этих пользователей будут появляться у вас в ленте "
+#~ "новостей"
+
+#~ msgid "Feed.Lure.Follow_three_users.LINK"
+#~ msgstr "Посмотреть пользователей"
+
+#~ msgid "Feed.Lure.Follow_three_questions.Title"
+#~ msgstr "Подпишитесь на несколько вопросов"
+
+#~ msgid "Feed.Lure.Follow_three_questions.Msg"
+#~ msgstr ""
+#~ "Подписываясь на интересные вопросы, вы сможете следить за их правками. "
+#~ "Найдите и подпишитесь на три или более вопроса"
+
+#~ msgid "Feed.Lure.Follow_three_questions.Link"
+#~ msgstr "Посмотреть вопросы"
+
+#~ msgid "Feed.Lure.Follow_three_hashtags.Title"
+#~ msgstr "Подпишитесь на несколько тем"
+
+#~ msgid "Feed.Lure.Follow_three_hashtags.Msg"
+#~ msgstr ""
+#~ "Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут "
+#~ "появляться у вас в ленте новостей"
+
+#~ msgid "Feed.Lure.Follow_three_hashtags.Link"
+#~ msgstr "Посмотреть популярные хештеги"
+
+#~ msgid "Feed.Lure.Follow_three_users.Title"
+#~ msgstr "Найдите первых друзей"
+
+#~ msgid "Feed.Lure.Write_answer.Title"
+#~ msgstr "Напишите первый ответ"
+
+#~ msgid "Feed.Lure.Write_answer.Msg"
+#~ msgstr ""
+#~ "Посмотрите вопросы на которые еще никто не написал ответа и станьте "
+#~ "первым автором"
+
+#~ msgid "Feed.Lure.Write_answer.Link"
+#~ msgstr "Посмотреть вопросы без ответов"
 
 #~ msgid "Actions"
 #~ msgstr "Действия"
