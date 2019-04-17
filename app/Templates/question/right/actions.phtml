@@ -14,7 +14,7 @@
 			<li class="my-1">
 				<a class="text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_upload_image">
 					<i class="fas fa-camera mr-1"></i>
-					<?php if ($this->question->getImageBaseName()): ?>
+					<?php if ($this->question->imageBaseName): ?>
 						<?= _('Question.Actions.Update_picture') ?>
 					<?php else: ?>
 						<?= _('Question.Actions.Add_picture') ?>

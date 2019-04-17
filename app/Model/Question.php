@@ -103,14 +103,4 @@ class Question_Model extends Abstract_Model
 
         $this->hashtags = json_decode($hashtagsJSON, true);
     }
-
-    public function getImageBaseName()
-    {
-        return $this->imageBaseName;
-    }
-
-    public function setImageBaseName($imageBaseName)
-    {
-        $this->imageBaseName = $imageBaseName;
-    }
 }

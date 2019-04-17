@@ -59,7 +59,7 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
             }
 
             // Update question image base name
-            $this->question->setImageBaseName($imageBaseName);
+            $this->question->imageBaseName = $imageBaseName;
             $this->question = (new Question_Mapper($this->lang))->update($this->question);
 
             $output = [

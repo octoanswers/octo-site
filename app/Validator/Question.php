@@ -26,7 +26,7 @@ class Question_Validator
     {
         self::validateTitle($question->getTitle());
         self::validateRedirect($question->isRedirect());
-        self::validateImageBaseName($question->getImageBaseName());
+        self::validateImageBaseName($question->imageBaseName);
 
         return true;
     }

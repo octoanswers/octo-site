@@ -8,7 +8,7 @@ class Question_Mapper extends Abstract_Mapper
 
         $q_title = $question->getTitle();
         $q_is_redirect = $question->isRedirect() ? 1 : 0;
-        $q_image_base_name = $question->getImageBaseName();
+        $q_image_base_name = $question->imageBaseName;
 
         $sql = 'INSERT INTO questions (q_title, q_is_redirect, q_image_base_name) VALUES (:q_title, :q_is_redirect, :q_image_base_name)';
         $stmt = $this->pdo->prepare($sql);
@@ -36,7 +36,7 @@ class Question_Mapper extends Abstract_Mapper
         $q_id = $question->getID();
         $q_title = $question->getTitle();
         $q_is_redirect = $question->isRedirect() ? 1 : 0;
-        $q_image_base_name = $question->getImageBaseName();
+        $q_image_base_name = $question->imageBaseName;
 
         $sql = 'UPDATE questions SET q_title=:q_title, q_is_redirect=:q_is_redirect, q_image_base_name=:q_image_base_name WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);

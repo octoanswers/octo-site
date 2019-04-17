@@ -9,14 +9,14 @@ class Mapper_Question_create_base_Test extends Abstract_DB_TestCase
         $question = new Question_Model();
         $question->setTitle('This is question?');
         $question->setRedirect(true);
-        $question->setImageBaseName('4_2013_05_09_123');
+        $question->imageBaseName = '4_2013_05_09_123';
 
         $question = (new Question_Mapper('ru'))->create($question);
 
         $this->assertEquals(34, $question->getID());
         $this->assertEquals('This is question?', $question->getTitle());
         $this->assertEquals(true, $question->isRedirect());
-        $this->assertEquals('4_2013_05_09_123', $question->getImageBaseName());
+        $this->assertEquals('4_2013_05_09_123', $question->imageBaseName);
     }
 
     public function test_CreateWithMinParams_Ok()
@@ -29,6 +29,6 @@ class Mapper_Question_create_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(34, $question->getID());
         $this->assertEquals('Ready to work?', $question->getTitle());
         $this->assertEquals(false, $question->isRedirect());
-        $this->assertEquals(null, $question->getImageBaseName());
+        $this->assertEquals(null, $question->imageBaseName);
     }
 }

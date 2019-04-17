@@ -15,7 +15,7 @@
         <?php endif; ?>
     </div>
 
-    <?php if ($question->getImageBaseName()): ?>
+    <?php if ($question->imageBaseName): ?>
         <a class="d-block" href="<?= $question->getURL($this->lang) ?>">
             <img src="<?= $question->getImageURLMedium($this->lang) ?>" alt="<?= $question->getTitle() ?>">
         </a>
