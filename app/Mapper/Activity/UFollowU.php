@@ -22,13 +22,13 @@ class UFollowU_Activity_Mapper extends Abstract_Mapper
         $data = json_encode([
             'user' => [
                 'id' => $user->getID(),
-                'name' => $user->getName(),
+                'name' => $user->name,
                 'profile_url' => $user->getURL($this->lang),
                 'avatar_xs_url' => $user->getAvatarSmallURL(),
             ],
             'followed_user' => [
                 'id' => $followedUser->getID(),
-                'name' => $followedUser->getName(),
+                'name' => $followedUser->name,
                 'profile_url' => $user->getURL($this->lang),
                 'avatar_xs_url' => $user->getAvatarSmallURL(),
             ]

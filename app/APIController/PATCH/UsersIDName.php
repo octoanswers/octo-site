@@ -21,7 +21,7 @@ class UsersIDName_PATCH_APIController extends Abstract_APIController
             }
 
             $user = (new User_Query())->userWithAPIKey($api_key);
-            $oldName = $user->getName();
+            $oldName = $user->name;
 
             if ($user->getID() != $userID) {
                 throw new \Exception("Incorrect user id or API-key", 0);
@@ -29,13 +29,13 @@ class UsersIDName_PATCH_APIController extends Abstract_APIController
 
             # Change user signature
 
-            $user->setName($name);
+            $user->name = $name;
             $user = (new User_Mapper())->update($user);
 
             $output = [
                 'user' => [
                     'id' => $user->getID(),
-                    'name' => $user->getName(),
+                    'name' => $user->name,
                     'name_old' => $oldName,
                 ],
                 'message' => 'Name saved!',

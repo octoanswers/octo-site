@@ -16,13 +16,13 @@ class User_Mapper extends Abstract_Mapper
     {
         User_Validator::validateNew($user);
 
-        $u_username = $user->getUsername();
-        $u_name = $user->getName();
+        $u_username = $user->username;
+        $u_name = $user->name;
         $u_email = $user->email;
-        $u_signature = $user->getSignature();
-        $u_site = $user->getSite();
-        $u_password_hash = $user->getPasswordHash();
-        $u_api_key = $user->getAPIKey();
+        $u_signature = $user->signature;
+        $u_site = $user->site;
+        $u_password_hash = $user->passwordHash;
+        $u_api_key = $user->apiKey;
         $u_created_at = $user->createdAt;
 
         $sql = 'INSERT INTO users (u_username, u_name, u_email, u_signature, u_site, u_password_hash, u_api_key) VALUES (:u_username, :u_name, :u_email, :u_signature, :u_site, :u_password_hash, :u_api_key)';
@@ -56,13 +56,13 @@ class User_Mapper extends Abstract_Mapper
         User_Validator::validateExists($user);
 
         $u_id = (int) $user->getID();
-        $u_username = $user->getUsername();
-        $u_name = $user->getName();
+        $u_username = $user->username;
+        $u_name = $user->name;
         $u_email = $user->email;
-        $u_signature = $user->getSignature();
-        $u_site = $user->getSite();
-        $u_password_hash = $user->getPasswordHash();
-        $u_api_key = $user->getAPIKey();
+        $u_signature = $user->signature;
+        $u_site = $user->site;
+        $u_password_hash = $user->passwordHash;
+        $u_api_key = $user->apiKey;
 
         $sql = 'UPDATE users SET u_username=:u_username, u_name=:u_name, u_email=:u_email, u_signature=:u_signature, u_site=:u_site, u_password_hash=:u_password_hash, u_api_key=:u_api_key WHERE u_id=:u_id';
         $stmt = $this->pdo->prepare($sql);

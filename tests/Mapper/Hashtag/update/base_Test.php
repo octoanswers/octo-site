@@ -92,7 +92,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                     'url' => $question->getURL($this->lang),
                 ],
                 'user_id' => $user->getID(),
-                'user_name' => $user->getName(),
+                'user_name' => $user->name,
                 'old_hashtags' => $old_hashtags_array,
                 'new_hashtags' => $new_hashtags,
             ];

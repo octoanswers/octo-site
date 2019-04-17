@@ -52,7 +52,7 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
                 'lang' => $this->lang,
                 'relation_id' => $relation->getID(),
                 'user_id' => $user->getID(),
-                'user_name' => $user->getName(),
+                'user_name' => $user->name,
                 'followed_question_id' => $question->getID(),
                 'followed_question_title' => $question->getTitle(),
             ];

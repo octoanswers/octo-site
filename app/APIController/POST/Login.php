@@ -23,7 +23,7 @@ class Login_POST_APIController extends Abstract_APIController
 
             // check user password
             $passHash = new PassHash();
-            if (!$passHash->check_password($user->getPasswordHash(), $userPassword)) {
+            if (!$passHash->check_password($user->passwordHash, $userPassword)) {
                 throw new Exception('WRONG_PASSWORD', 1);
             }
 
@@ -36,8 +36,8 @@ class Login_POST_APIController extends Abstract_APIController
                 'lang' => $this->lang,
                 'id' => $user->getID(),
                 'email' => $user->email,
-                'name' => $user->getName(),
-                'api_key' => $user->getAPIKey(),
+                'name' => $user->name,
+                'api_key' => $user->apiKey,
                 'created_at' => $user->createdAt,
                 'url' => $user->getURL($this->lang),
                 'destination_url' => Page_URL_Helper::getMainURL($this->lang),

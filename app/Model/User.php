@@ -4,14 +4,14 @@ class User_Model extends Abstract_Model
 {
     use User_URL_Trait;
 
-    private $id;
-    private $username;
-    private $name;
+    public $id; // int
+    public $username; // string
+    public $name; // string
     public $email; // string
-    private $signature;
-    private $site;
-    private $passwordHash;
-    private $apiKey;
+    public $signature; // string
+    public $site; // string
+    public $passwordHash; // string
+    public $apiKey; // string
     public $createdAt;
 
     #
@@ -47,66 +47,5 @@ class User_Model extends Abstract_Model
     public function getID()
     {
         return $this->id;
-    }
-
-    public function setUsername($username)
-    {
-        $this->username = $username;
-    }
-
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-
-    public function setSignature(string $signature)
-    {
-        $this->signature = $signature;
-    }
-
-    public function getSignature()
-    {
-        return $this->signature;
-    }
-
-    public function setSite(string $site)
-    {
-        $this->site = $site;
-    }
-
-    public function getSite()
-    {
-        return $this->site;
-    }
-
-    public function setPasswordHash(string $passwordHash)
-    {
-        $this->passwordHash = $passwordHash;
-    }
-
-    public function getPasswordHash()
-    {
-        return $this->passwordHash;
-    }
-
-    public function setAPIKey(string $apiKey)
-    {
-        $this->apiKey = $apiKey;
-    }
-
-    public function getAPIKey()
-    {
-        return $this->apiKey;
     }
 }

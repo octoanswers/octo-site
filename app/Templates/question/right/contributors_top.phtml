@@ -17,11 +17,11 @@
 
 	<div class="media position-relative mb-3">
         <a class="wh-3 mr-3" href="<?= $contributor->getURL($this->lang) ?>">
-    		<img src="<?= $contributor->getAvatarMediumURL() ?>" class="wh-3" alt="<?= $contributor->getName() ?>">
+    		<img src="<?= $contributor->getAvatarMediumURL() ?>" class="wh-3" alt="<?= $contributor->name ?>">
         </a>
 		<div class="media-body">
 			<a class="h6 mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
-				<?= $contributor->getName() ?>
+				<?= $contributor->name ?>
 			</a>
 
 			<span class="small text-muted font-weight-normal">
@@ -29,10 +29,10 @@
 			</span>
 
 			<p class="text-secondary mb-0">
-				<?= $contributor->getSignature() ? $contributor->getSignature() : $contributor->getUsername() ?>
-				<?php if ($contributor->getSite()): ?>
-					<a href="<?= $contributor->getSite() ?>">
-						<?= parse_url($contributor->getSite(), PHP_URL_HOST) ?>
+				<?= $contributor->signature ? $contributor->signature : $contributor->username ?>
+				<?php if ($contributor->site): ?>
+					<a href="<?= $contributor->site ?>">
+						<?= parse_url($contributor->site, PHP_URL_HOST) ?>
 					</a>
 				<?php endif; ?>
 			</p>

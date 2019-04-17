@@ -35,7 +35,7 @@ class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
 
             $output = [
                 'user_id' => $user->getID(),
-                'user_name' => $user->getName(),
+                'user_name' => $user->name,
                 'followed_question_id' => $question->getID(),
                 'followed_question_title' => $question->getTitle(),
             ];

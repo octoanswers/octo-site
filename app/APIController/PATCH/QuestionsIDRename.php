@@ -67,7 +67,7 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
                 ],
                 'user' => [
                     'id' => $user->getID(),
-                    'name' => $user->getName(),
+                    'name' => $user->name,
                 ],
                 'activities' => [
                     [

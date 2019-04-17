@@ -13,7 +13,7 @@
 
 		<?php foreach ($this->contributors as $contributor): ?>
 			<a class="wh-2 mr-2 mb-2" href="<?= $contributor->getURL($this->lang) ?>">
-				<img class="wh-2 rounded mt-1" src="<?= $contributor->getAvatarMediumURL() ?>" alt="<?= $contributor->getName() ?>">
+				<img class="wh-2 rounded mt-1" src="<?= $contributor->getAvatarMediumURL() ?>" alt="<?= $contributor->name ?>">
 			</a>
 		<?php endforeach; ?>
 	</div>

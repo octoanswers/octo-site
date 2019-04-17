@@ -43,18 +43,18 @@ class Contributors_Query extends Abstract_Query
 
             $contributor = new Contributor_Model();
             $contributor->setID($user->getID());
-            $contributor->setUsername($user->getUsername());
-            $contributor->setName($user->getName());
+            $contributor->username = $user->username;
+            $contributor->name = $user->name;
             $contributor->email = $user->email;
             $contributor->createdAt = $user->createdAt;
             $contributor->contribution = $contribution;
             $contributor->insertionsCount = $insertionsCount;
             $contributor->deletionsCount = $deletionsCount;
-            if ($user->getSignature()) {
-                $contributor->setSignature($user->getSignature());
+            if ($user->signature) {
+                $contributor->signature = $user->signature;
             }
-            if ($user->getSite()) {
-                $contributor->setSite($user->getSite());
+            if ($user->site) {
+                $contributor->site = $user->site;
             }
             
             $contributors[] = $contributor;

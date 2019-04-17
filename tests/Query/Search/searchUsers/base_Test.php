@@ -11,6 +11,6 @@ class Query_Search_searchUsers_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(1, count($users));
 
         $this->assertEquals(2, $users[0]->getID());
-        $this->assertEquals('Сява Черемшов', $users[0]->getName());
+        $this->assertEquals('Сява Черемшов', $users[0]->name);
     }
 }

@@ -48,7 +48,7 @@ class HashtagsIDFollow_POST_APIController extends Abstract_APIController
                 'lang' => $this->lang,
                 'relation_id' => $relation->getID(),
                 'user_id' => $user->getID(),
-                'user_name' => $user->getName(),
+                'user_name' => $user->name,
                 'followed_hashtag_id' => $hashtag->getID(),
                 'followed_hashtag_title' => $hashtag->title,
             ];

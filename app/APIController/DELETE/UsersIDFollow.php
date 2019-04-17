@@ -34,9 +34,9 @@ class UsersIDFollow_DELETE_APIController extends Abstract_APIController
 
             $output = [
                 'user_id' => $user->getID(),
-                'user_name' => $user->getName(),
+                'user_name' => $user->name,
                 'followed_user_id' => $followed_user->getID(),
-                'followed_user_name' => $followed_user->getName(),
+                'followed_user_name' => $followed_user->name,
             ];
         } catch (Throwable $e) {
             $output = [

@@ -2,27 +2,27 @@
 
 trait User_URL_Trait
 {
-    function getURL(string $lang): string
+    public function getURL(string $lang): string
     {
-        return SITE_URL.'/'.$lang.'/+'.$this->getUsername();
+        return SITE_URL.'/'.$lang.'/+'.$this->username;
     }
 
-    function getShortURL(string $lang): string
+    public function getShortURL(string $lang): string
     {
         return SITE_URL.'/'.$lang.'/user/'.$this->getID();
     }
 
-    function getAvatarSmallURL(): string
+    public function getAvatarSmallURL(): string
     {
         return SITE_URL.'/uploads/avatar/'.$this->getID().'_100.jpg';
     }
 
-    function getAvatarMediumURL(): string
+    public function getAvatarMediumURL(): string
     {
         return SITE_URL.'/uploads/avatar/'.$this->getID().'_200.jpg';
     }
 
-    function getAvatarLargeURL(): string
+    public function getAvatarLargeURL(): string
     {
         return SITE_URL.'/uploads/avatar/'.$this->getID().'_400.jpg';
     }

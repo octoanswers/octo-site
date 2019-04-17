@@ -35,7 +35,7 @@ class HashtagsIDFollow_DELETE_APIController extends Abstract_APIController
 
             $output = [
                 'user_id' => $user->getID(),
-                'user_name' => $user->getName(),
+                'user_name' => $user->name,
                 'unfollowed_hashtag' => [
                     'id' => $hashtag->getID(),
                     'title' => $hashtag->title,

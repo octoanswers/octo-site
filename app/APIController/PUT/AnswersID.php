@@ -88,7 +88,7 @@ class AnswersID_PUT_APIController extends Abstract_APIController
                 'revision_comment' => $revision->comment,
                 'user' => [
                     'id' => $user->getID(),
-                    'name' => $user->getName(),
+                    'name' => $user->name,
                 ]
             ];
         } catch (Throwable $e) {

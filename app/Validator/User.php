@@ -30,13 +30,13 @@ class User_Validator
 
     public static function validateNew(User_Model $user)
     {
-        self::validateUsername($user->getUsername());
-        self::validateName($user->getName());
+        self::validateUsername($user->username);
+        self::validateName($user->name);
         self::validateEmail($user->email);
-        self::validateSignature($user->getSignature());
-        self::validateSite($user->getSite());
-        self::validatePasswordHash($user->getPasswordHash());
-        self::validateAPIKey($user->getAPIKey());
+        self::validateSignature($user->signature);
+        self::validateSite($user->site);
+        self::validatePasswordHash($user->passwordHash);
+        self::validateAPIKey($user->apiKey);
         self::validateCreatedAt($user->createdAt);
 
         return true;
@@ -45,10 +45,10 @@ class User_Validator
     public static function validateAuthUser(User_Model $user)
     {
         self::validateID($user->getID());
-        self::validateName($user->getName());
+        self::validateName($user->name);
         self::validateEmail($user->email);
-        self::validateSignature($user->getSignature());
-        self::validateSite($user->getSite());
+        self::validateSignature($user->signature);
+        self::validateSite($user->site);
 
         return true;
     }

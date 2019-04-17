@@ -8,7 +8,7 @@ class Mapper_Activity_QRenamedByU__create__Test extends Abstract_DB_TestCase
     {
         $user = new User_Model;
         $user->setID(46);
-        $user->setName('Steve Bo');
+        $user->name = 'Steve Bo';
 
         $question = (new Question_Query('ru'))->questionWithID(6);
 

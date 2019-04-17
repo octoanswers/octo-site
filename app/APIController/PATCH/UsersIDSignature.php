@@ -21,7 +21,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             }
 
             $user = (new User_Query())->userWithAPIKey($api_key);
-            $old_signature = $user->getSignature();
+            $old_signature = $user->signature;
 
             if ($user->getID() != $userID) {
                 throw new \Exception("Incorrect user id or API-key", 0);
@@ -29,7 +29,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
 
             # Change user signature
 
-            $user->setSignature($signature);
+            $user->signature = $signature;
             $user = (new User_Mapper())->update($user);
 
             # Create activity
@@ -43,7 +43,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             $output = [
                 'user' => [
                     'id' => $user->getID(),
-                    'name' => $user->getName(),
+                    'name' => $user->name,
                     'signature_old' => $old_signature,
                     'signature_new' => $signature,
                 ],

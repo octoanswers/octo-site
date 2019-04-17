@@ -35,7 +35,7 @@ class QRenamedByU_Activity_Mapper extends Abstract_Mapper
             ],
             'user' => [
                 'id' => $user->getID(),
-                'name' => $user->getName(),
+                'name' => $user->name,
                 'profile_url' => $user->getURL($this->lang),
                 'avatar_xs_url' => $user->getAvatarSmallURL(),
             ],

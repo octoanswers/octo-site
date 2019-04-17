@@ -95,7 +95,7 @@
                 </a>
                 <div class="card-body">
                     <a href="<?= $user->getURL($this->lang) ?>" class="link-inverted text-decoration-none">
-                        <h4 class="h5 card-title"><?= $user->getName() ?></h4>
+                        <h4 class="h5 card-title"><?= $user->name ?></h4>
                     </a>
                     <h5 class="h6 card-subtitle mb-2 text-muted">
                         <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $user->createdAt) ?>

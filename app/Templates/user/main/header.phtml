@@ -2,28 +2,28 @@
 <!-- header -->
 <div class="row mt-4">
     <div class="col-auto col-md-12">
-        <img class="wh-4 rounded-circle mb-4" src="<?= $this->user->getAvatarMediumURL() ?>" alt="<?= $this->user->getName() ?>">
+        <img class="wh-4 rounded-circle mb-4" src="<?= $this->user->getAvatarMediumURL() ?>" alt="<?= $this->user->name ?>">
     </div>
     <div class="col-auto col-md-12">
-        <h1 class="h2 mb-1"><?= $this->user->getName() ?></h1>
+        <h1 class="h2 mb-1"><?= $this->user->name ?></h1>
         <div class="mb-3 color-gray-500 small">
-            +<?= $this->user->getUsername() ?>
+            +<?= $this->user->username ?>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-12">
-        <?php if ($this->user->getSignature()): ?>
+        <?php if ($this->user->signature): ?>
             <div class="color-gray-700">
-                <?= $this->user->getSignature() ?>
+                <?= $this->user->signature ?>
             </div>
         <?php endif; ?>
 
-        <?php if ($this->user->getSite()): ?>
+        <?php if ($this->user->site): ?>
             <div class="mt-2">
                 <i class="fas fa-globe" style="color: #757575;"></i>
-                <a href="<?= $this->user->getSite() ?>">
-                    <?= parse_url($this->user->getSite(), PHP_URL_HOST) ?>
+                <a href="<?= $this->user->site ?>">
+                    <?= parse_url($this->user->site, PHP_URL_HOST) ?>
                 </a>
             </div>
         <?php endif; ?>

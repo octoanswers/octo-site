@@ -36,7 +36,7 @@
         <label for="form__update_name__name">
             <?= _('The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.') ?>.
         </label>
-        <input id="form__update_name__name" type="text" class="form-control" value="<?= @$this->authUser->getName() ?>">
+        <input id="form__update_name__name" type="text" class="form-control" value="<?= @$this->authUser->name ?>">
     </div>
     <div class="form-group">
         <button type="submit" id="form__update_name__submit" class="btn btn-primary">
@@ -52,7 +52,7 @@
         <label for="form__update_signature__signature">
             <?= _('Enter a signature describing your professional skills and knowledge.') ?>
         </label>
-        <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->getSignature() ?>" placeholder="<?= _('For example: Professor of Psychology, entrepreneur, novice poet') ?>">
+        <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->signature ?>" placeholder="<?= _('For example: Professor of Psychology, entrepreneur, novice poet') ?>">
     </div>
     <div class="form-group mt-3">
         <button type="submit" id="form__update_signature__submit" class="btn btn-primary">
@@ -70,7 +70,7 @@
         <label for="frm__update_site__site">
             <?= _('Enter the address of your website or page on the social network.') ?>
         </label>
-        <input id="frm__update_site__site" type="text" class="form-control" value="<?= @$this->authUser->getSite() ?>">
+        <input id="frm__update_site__site" type="text" class="form-control" value="<?= @$this->authUser->site ?>">
     </div>
     <div class="form-group">
         <button type="submit" id="frm__update_site__submit" class="btn btn-primary">

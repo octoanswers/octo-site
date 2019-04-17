@@ -8,7 +8,7 @@ class Mapper_Activity_UFQ__create__Test extends Abstract_DB_TestCase
     {
         $user = new User_Model;
         $user->setID(46);
-        $user->setName('Steve Bo');
+        $user->name = 'Steve Bo';
 
         $question = Question_Model::initWithTitle('Когда закончится дождь?');
 

@@ -41,18 +41,18 @@ class CookieStorage
         $expireTime = $this->_getExpireTime();
 
         @setcookie('u_id', $user->getID(), $expireTime, '/');
-        @setcookie('u_username', $user->getUsername(), $expireTime, '/');
+        @setcookie('u_username', $user->username, $expireTime, '/');
         @setcookie('u_email', $user->email, $expireTime, '/');
-        @setcookie('u_name', $user->getName(), $expireTime, '/');
-        if ($user->getSignature()) {
-            @setcookie('u_signature', $user->getSignature(), $expireTime, '/');
+        @setcookie('u_name', $user->name, $expireTime, '/');
+        if ($user->signature) {
+            @setcookie('u_signature', $user->signature, $expireTime, '/');
         }
-        if ($user->getSite()) {
-            @setcookie('u_site', $user->getSite(), $expireTime, '/');
+        if ($user->site) {
+            @setcookie('u_site', $user->site, $expireTime, '/');
         }
         @setcookie('u_created_at', $user->createdAt, $expireTime, '/');
-        if ($user->getAPIKey()) {
-            @setcookie('u_api_key', $user->getAPIKey(), $expireTime, '/');
+        if ($user->apiKey) {
+            @setcookie('u_api_key', $user->apiKey, $expireTime, '/');
         }
         static::$authUser = $user;
     }

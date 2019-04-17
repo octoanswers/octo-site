@@ -8,11 +8,11 @@ class Mapper_Activities__createUFU__Test extends Abstract_DB_TestCase
     {
         $user = new User_Model;
         $user->setID(46);
-        $user->setName('Steve Bo');
+        $user->name = 'Steve Bo';
 
         $followedUser = new User_Model;
         $followedUser->setID(6);
-        $followedUser->setName('Steve Bar');
+        $followedUser->name = 'Steve Bar';
 
         $activity = new Activity_Model();
         $activity->type = Activity_Model::F_U_FOLLOW_U;
