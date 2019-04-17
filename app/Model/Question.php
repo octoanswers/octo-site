@@ -1,6 +1,6 @@
 <?php
 
-class Question_Model
+class Question_Model extends Abstract_Model
 {
     use Question_Trait;
     use Question_URL_Trait;

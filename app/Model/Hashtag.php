@@ -1,6 +1,6 @@
 <?php
 
-class Hashtag_Model
+class Hashtag_Model extends Abstract_Model
 {
     use Hashtag_URL_Trait;
 

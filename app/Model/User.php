@@ -1,6 +1,6 @@
 <?php
 
-class User_Model
+class User_Model extends Abstract_Model
 {
     use User_URL_Trait;
 

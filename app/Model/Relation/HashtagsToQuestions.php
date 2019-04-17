@@ -1,6 +1,6 @@
 <?php
 
-class HashtagsToQuestions_Relation_Model
+class HashtagsToQuestions_Relation_Model extends Abstract_Model
 {
     private $id;
     private $hashtagID;

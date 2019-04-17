@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowHashtag_Relation_Model
+class UserFollowHashtag_Relation_Model extends Abstract_Model
 {
     private $id;
     private $userID;

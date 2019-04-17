@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowUser_Relation_Model
+class UserFollowUser_Relation_Model extends Abstract_Model
 {
     private $id;
     private $userID;

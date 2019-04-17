@@ -1,6 +1,6 @@
 <?php
 
-class Revision_Model
+class Revision_Model extends Abstract_Model
 {
     private $id;
     private $answerID;

@@ -1,6 +1,6 @@
 <?php
 
-class Subscription_Model
+class Subscription_Model extends Abstract_Model
 {
     private $id;
     private $questionID;

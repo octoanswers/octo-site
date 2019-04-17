@@ -1,6 +1,6 @@
 <?php
 
-class Answer_Model
+class Answer_Model extends Abstract_Model
 {
     private $id;
     private $text;

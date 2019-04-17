@@ -1,6 +1,6 @@
 <?php
 
-class Activity_Model
+class Activity_Model extends Abstract_Model
 {
     #
     # Activity types
