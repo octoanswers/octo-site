@@ -54,9 +54,9 @@ class Show_Question_PageController extends Abstract_PageController
             return $response;
         }
 
-        if (isset($this->question->answer) && strlen($this->question->answer->getText())) {
+        if (isset($this->question->answer) && strlen($this->question->answer->text)) {
             // trim first paragraph of answer
-            $answer_other_text = preg_replace("/^.+\n/iu", "", $this->question->answer->getText());
+            $answer_other_text = preg_replace("/^.+\n/iu", "", $this->question->answer->text);
             $parsedown = new ExtendedParsedown($this->lang);
             $this->formattedAnswerText = trim($parsedown->text($answer_other_text));
         }

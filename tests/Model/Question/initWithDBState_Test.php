@@ -19,10 +19,10 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(13, $question->getID());
         $this->assertEquals('This is question?', $question->getTitle());
         $this->assertEquals(true, $question->isRedirect());
-        $this->assertEquals('Yes, it is!', $question->answer->getText());
+        $this->assertEquals('Yes, it is!', $question->answer->text);
         $this->assertEquals('["ICQ","Web"]', $question->getHashtagsJSON());
         $this->assertEquals(["ICQ","Web"], $question->getHashtags());
-        $this->assertEquals('2015-11-29 09:28:34', $question->answer->getUpdatedAt());
+        $this->assertEquals('2015-11-29 09:28:34', $question->answer->updatedAt);
     }
 
     public function test_RuFullParams_ReturnObject()
@@ -40,9 +40,9 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(13, $question->getID());
         $this->assertEquals('Это вопрос?', $question->getTitle());
         $this->assertEquals(true, $question->isRedirect());
-        $this->assertEquals('Да, это вопрос!', $question->answer->getText());
+        $this->assertEquals('Да, это вопрос!', $question->answer->text);
         $this->assertEquals(null, $question->getHashtagsJSON());
         $this->assertEquals([], $question->getHashtags());
-        $this->assertEquals('2015-11-29 09:28:34', $question->answer->getUpdatedAt());
+        $this->assertEquals('2015-11-29 09:28:34', $question->answer->updatedAt);
     }
 }

@@ -27,7 +27,7 @@ class AnswersID_PUT_APIController extends Abstract_APIController
 
             $answer = (new Answers_Query($this->lang))->answerWithID($answer_id);
 
-            $old_answer_text = $answer->getText();
+            $old_answer_text = $answer->text;
             $opcodes = FineDiff::getDiffOpcodes($old_answer_text, $new_answer_text, FineDiff::$wordGranularity);
 
             # Update answer
@@ -35,8 +35,8 @@ class AnswersID_PUT_APIController extends Abstract_APIController
             $answerUpdatedAt = (new DateTime('NOW'))->format('Y-m-d H:i:s');
 
             $answer->setID($answer_id);
-            $answer->setText($new_answer_text);
-            $answer->setUpdatedAt($answerUpdatedAt);
+            $answer->text = $new_answer_text;
+            $answer->updatedAt = $answerUpdatedAt;
 
             $answer = (new Answer_Mapper($this->lang))->update($answer);
 

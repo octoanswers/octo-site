@@ -11,7 +11,7 @@ class Model_Answer_initWithDBState_Test extends PHPUnit\Framework\TestCase
         ]);
 
         $this->assertEquals(13, $answer->getID());
-        $this->assertEquals('Answer written at 20:54', $answer->getText());
-        $this->assertEquals('2016-03-19 06:47:41', $answer->getUpdatedAt());
+        $this->assertEquals('Answer written at 20:54', $answer->text);
+        $this->assertEquals('2016-03-19 06:47:41', $answer->updatedAt);
     }
 }

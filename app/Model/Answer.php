@@ -2,9 +2,9 @@
 
 class Answer_Model extends Abstract_Model
 {
-    private $id;
-    private $text;
-    private $updatedAt;
+    public $id; // int
+    public $text; // string
+    public $updatedAt; // string
 
     #
     # Init methods
@@ -33,25 +33,5 @@ class Answer_Model extends Abstract_Model
     public function getID()
     {
         return $this->id;
-    }
-
-    public function setText($text)
-    {
-        $this->text = $text;
-    }
-
-    public function getText()
-    {
-        return $this->text;
-    }
-
-    public function setUpdatedAt(string $updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-    }
-
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
     }
 }

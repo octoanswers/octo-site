@@ -19,7 +19,7 @@ class Show_Main_PageController extends Abstract_PageController
         $this->recent_questions = (new Questions_Query($this->lang))->findNewestWithAnswer(1, 5);
 
         // foreach ($this->recent_questions as $question) {
-        //     $hashtagsTitles = Hashtag_Extractor_Helper::extractHashtags($question->answer->getText());
+        //     $hashtagsTitles = Hashtag_Extractor_Helper::extractHashtags($question->answer->text);
         //     foreach ($hashtagsTitles as $title) {
         //         $hashtag = Hashtag_Model::initWithTitle($title);
         //         $this->hashtags[$question->getID()][] = $hashtag;

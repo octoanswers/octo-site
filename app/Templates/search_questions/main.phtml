@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <span class="text-muted float-right">
-                    <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->getUpdatedAt()) ?>
+                    <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
                 </span>
             </div>
         <?php endforeach; ?>

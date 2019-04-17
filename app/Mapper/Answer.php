@@ -7,9 +7,9 @@ class Answer_Mapper extends Abstract_Mapper
         Answer_Validator::validate($answer);
 
         $q_id = $answer->getID();
-        $a_text = $answer->getText();
-        $a_len = mb_strlen($answer->getText());
-        $a_updated_at = $answer->getUpdatedAt();
+        $a_text = $answer->text;
+        $a_len = mb_strlen($answer->text);
+        $a_updated_at = $answer->updatedAt;
 
         $sql = 'UPDATE questions SET a_text=:a_text, a_len=:a_len, a_updated_at=:a_updated_at WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);

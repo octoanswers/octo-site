@@ -12,11 +12,11 @@ class Sandbox_Query__findNewestWithoutAnswer_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(31, $questions[0]->getID());
         $this->assertEquals('Какая сейчас погода?', $questions[0]->getTitle());
-        $this->assertEquals(null, $questions[0]->answer->getText());
+        $this->assertEquals(null, $questions[0]->answer->text);
 
         $this->assertEquals(18, $questions[9]->getID());
         $this->assertEquals('Кто лучший драматический актер?', $questions[9]->getTitle());
-        $this->assertEquals(null, $questions[9]->answer->getText());
+        $this->assertEquals(null, $questions[9]->answer->text);
     }
 
     public function test_firstPage()
@@ -27,11 +27,11 @@ class Sandbox_Query__findNewestWithoutAnswer_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(31, $questions[0]->getID());
         $this->assertEquals('Какая сейчас погода?', $questions[0]->getTitle());
-        $this->assertEquals(null, $questions[0]->answer->getText());
+        $this->assertEquals(null, $questions[0]->answer->text);
 
         $this->assertEquals(18, $questions[9]->getID());
         $this->assertEquals('Кто лучший драматический актер?', $questions[9]->getTitle());
-        $this->assertEquals(null, $questions[9]->answer->getText());
+        $this->assertEquals(null, $questions[9]->answer->text);
     }
 
     public function test_secondPage()

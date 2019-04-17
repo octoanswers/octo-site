@@ -6,8 +6,8 @@ class Validator_Answer_timestamp_Test extends PHPUnit\Framework\TestCase
     {
         $answer = new Answer_Model();
         $answer->setID(4);
-        $answer->setText('Answer written at 08:04');
-        $answer->setUpdatedAt('2016-03-19 06:47:41');
+        $answer->text = 'Answer written at 08:04';
+        $answer->updatedAt = '2016-03-19 06:47:41';
 
         $this->assertEquals(true, Answer_Validator::validate($answer));
     }
@@ -16,10 +16,10 @@ class Validator_Answer_timestamp_Test extends PHPUnit\Framework\TestCase
     {
         $answer = new Answer_Model();
         $answer->setID(4);
-        $answer->setText('Answer written at 08:04');
-        $answer->setUpdatedAt('');
+        $answer->text = 'Answer written at 08:04';
+        $answer->updatedAt = '';
 
         $this->assertEquals(true, Answer_Validator::validate($answer));
-        $this->assertEquals(null, $answer->getUpdatedAt());
+        $this->assertEquals(null, $answer->updatedAt);
     }
 }

@@ -9,7 +9,7 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
         $question = Question_Model::initWithTitle('Когда закончится дождь?');
 
         $answer = new Answer_Model();
-        $answer->setText('Melody of my life.');
+        $answer->text = 'Melody of my life.';
 
         $user = new User_Model();
         $user->setID(13);

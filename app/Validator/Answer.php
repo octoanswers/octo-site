@@ -8,11 +8,11 @@ class Answer_Validator
     public static function validate(Answer_Model $answer)
     {
         self::validateID($answer->getID());
-        self::validateText($answer->getText());
+        self::validateText($answer->text);
 
         // @todo ->dateTime
         try {
-            v::optional(v::stringType())->assert($answer->getUpdatedAt());
+            v::optional(v::stringType())->assert($answer->updatedAt);
         } catch (NestedValidationException $exception) {
             throw new Exception('Answer timestamp param '.$exception->getMessages()[0], 0);
         }

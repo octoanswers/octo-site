@@ -3,7 +3,7 @@
 
 <form id="form__update_answer" data-answer-id="<?= $this->answer->getID() ?>">
     <div class="form-group">
-        <textarea id="form__update_answer__answer_text" name="answer_text" class="form-control" rows="10"><?= $this->answer->getText() ?></textarea>
+        <textarea id="form__update_answer__answer_text" name="answer_text" class="form-control" rows="10"><?= $this->answer->text ?></textarea>
         <label class="mt-0 small text-muted"><?= _('Description of changes') ?></label>
         <input id="form__update_answer__changes_comment" type="text" class="form-control">
     </div>

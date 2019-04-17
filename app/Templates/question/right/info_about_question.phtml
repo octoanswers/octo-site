@@ -11,7 +11,7 @@
 			</li>
 		<?php endif; ?>
 
-		<?php if ($this->question->answer->getText()): ?>
+		<?php if ($this->question->answer->text): ?>
 			<li class="toc-entry toc-h2">
 				<span>
 				<?= $this->question->getHumanizedMinutesToRead() ?>
@@ -21,7 +21,7 @@
 		
 		<li class="toc-entry toc-h2">
 			<span>
-				<?= _('Answer updated').': '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->question->answer->getUpdatedAt()) ?>
+				<?= _('Answer updated').': '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->question->answer->updatedAt) ?>
 			</span>
 		</li>
 	</ul>

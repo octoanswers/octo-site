@@ -24,7 +24,7 @@ class Edit_Answer_PageController extends Abstract_PageController
         if ($this->answer == null) {
             $answer = new Answer_Model();
             $answer->setID($this->question->getID());
-            $answer->setText(null);
+            $answer->text = null;
 
             $this->answer = (new Answer_Mapper())->create($answer);
         }
