@@ -5,7 +5,7 @@ class UserFollowHashtag_Relation_Model extends Abstract_Model
     private $id;
     private $userID;
     private $hashtagID;
-    private $createdAt;
+    public $createdAt;
 
     #
     # Init methods
@@ -64,15 +64,5 @@ class UserFollowHashtag_Relation_Model extends Abstract_Model
     public function setHashtagID(int $hashtagID)
     {
         $this->hashtagID = $hashtagID;
-    }
-
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(string $createdAt)
-    {
-        $this->createdAt = $createdAt;
     }
 }

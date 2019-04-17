@@ -6,7 +6,7 @@ class Validator_Subscription__email__Test extends PHPUnit\Framework\TestCase
     {
         $s = new Subscription_Model();
         $s->setID(18);
-        $s->setQuestionID(22);
+        $s->questionID = 22;
 
         $this->expectExceptionMessage('Subscription "email" property null must be a string');
         Subscription_Validator::validateExists($s);
@@ -16,8 +16,8 @@ class Validator_Subscription__email__Test extends PHPUnit\Framework\TestCase
     {
         $s = new Subscription_Model();
         $s->setID(18);
-        $s->setQuestionID(51);
-        $s->setEmail('loz_ba.com');
+        $s->questionID = 51;
+        $s->email = 'loz_ba.com';
 
         $this->expectExceptionMessage('Subscription "email" property "loz_ba.com" must be valid email');
         Subscription_Validator::validateExists($s);

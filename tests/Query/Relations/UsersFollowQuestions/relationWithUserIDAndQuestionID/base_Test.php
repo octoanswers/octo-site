@@ -10,8 +10,8 @@ class UsersFollowQuestions_Relations_Query__relationWithUserIDAndQuestionID__Tes
 
         $this->assertEquals(5, $relation->getID());
         $this->assertEquals(7, $relation->getUserID());
-        $this->assertEquals(23, $relation->getQuestionID());
-        $this->assertEquals('2015-12-16 13:28:56', $relation->getCreatedAt());
+        $this->assertEquals(23, $relation->questionID);
+        $this->assertEquals('2015-12-16 13:28:56', $relation->createdAt);
     }
 
     public function test__RelationNotExists()

@@ -8,7 +8,7 @@ class UserFollowUser_Relation_Validator__validateExists__Test extends PHPUnit\Fr
         $relation->setID(13);
         $relation->setUserID(3);
         $relation->setFollowedUserID(9);
-        $relation->setCreatedAt('2015-11-29 09:28:34');
+        $relation->createdAt = '2015-11-29 09:28:34';
 
         $this->assertEquals(true, UserFollowUser_Relation_Validator::validateExists($relation));
     }

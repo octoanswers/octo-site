@@ -4,8 +4,8 @@ class UserFollowQuestion_Relation_Model extends Abstract_Model
 {
     private $id;
     private $userID;
-    private $questionID;
-    private $createdAt;
+    public $questionID;
+    public $createdAt;
 
     #
     # Init methods
@@ -54,25 +54,5 @@ class UserFollowQuestion_Relation_Model extends Abstract_Model
     public function setUserID(int $userID)
     {
         $this->userID = $userID;
-    }
-
-    public function getQuestionID()
-    {
-        return $this->questionID;
-    }
-
-    public function setQuestionID(int $questionID)
-    {
-        $this->questionID = $questionID;
-    }
-
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(string $createdAt)
-    {
-        $this->createdAt = $createdAt;
     }
 }

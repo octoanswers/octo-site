@@ -10,7 +10,7 @@ class Query_ER_HashtagsQuestions__findByHashtagTitleAndQuestionID__Test extends 
 
         $this->assertEquals(21, $er->getID());
         $this->assertEquals(13, $er->getHashtagID());
-        $this->assertEquals(22, $er->getQuestionID());
+        $this->assertEquals(22, $er->questionID);
     }
 
     public function test__RelationNotExists()

@@ -21,7 +21,7 @@ class UserFollowUser_Relation_Validator
     {
         self::validateUserID($relation->getUserID());
         self::validateFollowedUserID($relation->getFollowedUserID());
-        self::validateCreatedAt($relation->getCreatedAt());
+        self::validateCreatedAt($relation->createdAt);
 
         return true;
     }

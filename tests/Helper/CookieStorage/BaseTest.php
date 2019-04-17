@@ -33,6 +33,6 @@ class CookieStorage_BaseTest extends TestCase
         $user = $this->storage->getAuthUser();
 
         $this->assertEquals('Joe Milk', $user->getName());
-        $this->assertEquals('joe@answeropedia.org', $user->getEmail());
+        $this->assertEquals('joe@answeropedia.org', $user->email);
     }
 }

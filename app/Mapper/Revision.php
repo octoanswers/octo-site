@@ -43,7 +43,7 @@ class Revision_Mapper extends Abstract_Mapper
             }
 
             $now = new DateTime('NOW');
-            $revision->setCreatedAt($now->format('Y-m-d H:i:s'));
+            $revision->createdAt = $now->format('Y-m-d H:i:s');
 
             $revisionID = (int) $this->pdo->lastInsertId();
             $revision->setID($revisionID);

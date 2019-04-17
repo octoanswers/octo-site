@@ -35,8 +35,8 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
             #
 
             $subscription = new Subscription_Model();
-            $subscription->setQuestionID($question_id);
-            $subscription->setEmail($email);
+            $subscription->questionID = $question_id;
+            $subscription->email = $email;
             $subscription = (new Subscription_Mapper($this->lang))->create($subscription);
 
             #
@@ -54,7 +54,7 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
                 'question_title' => $question->getTitle(),
                 'question_url' => $question->getURL($this->lang),
                 'subscription_id' => $subscription->getID(),
-                'subscription_email' => $subscription->getEmail(),
+                'subscription_email' => $subscription->email,
             ];
         } catch (Throwable $e) {
             $output = [

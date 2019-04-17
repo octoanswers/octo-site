@@ -12,8 +12,8 @@ class Model_Subscription__initWithDBState__Test extends PHPUnit\Framework\TestCa
         ]);
 
         $this->assertEquals(13, $s->getID());
-        $this->assertEquals(9, $s->getQuestionID());
-        $this->assertEquals('wer@sio.ru', $s->getEmail());
-        $this->assertEquals('2015-11-29 09:28:34', $s->getCreatedAt());
+        $this->assertEquals(9, $s->questionID);
+        $this->assertEquals('wer@sio.ru', $s->email);
+        $this->assertEquals('2015-11-29 09:28:34', $s->createdAt);
     }
 }

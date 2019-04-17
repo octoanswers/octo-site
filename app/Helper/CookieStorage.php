@@ -42,7 +42,7 @@ class CookieStorage
 
         @setcookie('u_id', $user->getID(), $expireTime, '/');
         @setcookie('u_username', $user->getUsername(), $expireTime, '/');
-        @setcookie('u_email', $user->getEmail(), $expireTime, '/');
+        @setcookie('u_email', $user->email, $expireTime, '/');
         @setcookie('u_name', $user->getName(), $expireTime, '/');
         if ($user->getSignature()) {
             @setcookie('u_signature', $user->getSignature(), $expireTime, '/');
@@ -50,7 +50,7 @@ class CookieStorage
         if ($user->getSite()) {
             @setcookie('u_site', $user->getSite(), $expireTime, '/');
         }
-        @setcookie('u_created_at', $user->getCreatedAt(), $expireTime, '/');
+        @setcookie('u_created_at', $user->createdAt, $expireTime, '/');
         if ($user->getAPIKey()) {
             @setcookie('u_api_key', $user->getAPIKey(), $expireTime, '/');
         }

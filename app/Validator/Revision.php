@@ -54,9 +54,9 @@ class Revision_Validator
 
         // @todo ->dateTime
         try {
-            v::optional(v::stringType())->assert($revision->getCreatedAt());
+            v::optional(v::stringType())->assert($revision->createdAt);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Revision timestamp param '.$exception->getMessages()[0], 0);
+            throw new Exception('Revision createdAt param '.$exception->getMessages()[0], 0);
         }
 
         return true;

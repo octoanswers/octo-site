@@ -7,7 +7,7 @@ class Validator__Relation__HashtagToQuestion__fail__id_Test extends PHPUnit\Fram
         $rel = new HashtagsToQuestions_Relation_Model();
         $rel->setID(0);
         $rel->setHashtagID(3);
-        $rel->setQuestionID(9);
+        $rel->questionID = 9;
 
         $this->expectExceptionMessage('HashtagToQuestion relation "id" property 0 must be greater than or equal to 1');
         HashtagToQuestion_Relation_Validator::validateExists($rel);
@@ -18,7 +18,7 @@ class Validator__Relation__HashtagToQuestion__fail__id_Test extends PHPUnit\Fram
         $rel = new HashtagsToQuestions_Relation_Model();
         $rel->setID(-1);
         $rel->setHashtagID(3);
-        $rel->setQuestionID(9);
+        $rel->questionID = 9;
 
         $this->expectExceptionMessage('HashtagToQuestion relation "id" property -1 must be greater than or equal to 1');
         HashtagToQuestion_Relation_Validator::validateExists($rel);

@@ -2,10 +2,10 @@
 
 class Subscription_Model extends Abstract_Model
 {
-    private $id;
-    private $questionID;
-    private $email;
-    private $createdAt;
+    public $id;
+    public $questionID;
+    public $email;
+    public $createdAt;
 
     // Init methods -----------------------------------------------------------
 
@@ -30,35 +30,5 @@ class Subscription_Model extends Abstract_Model
     public function getID()
     {
         return $this->id;
-    }
-
-    public function setQuestionID(int $id)
-    {
-        $this->questionID = $id;
-    }
-
-    public function getQuestionID()
-    {
-        return $this->questionID;
-    }
-
-    public function setEmail(string $email)
-    {
-        $this->email = $email;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    public function setCreatedAt(string $createdAt)
-    {
-        $this->createdAt = $createdAt;
-    }
-
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
     }
 }

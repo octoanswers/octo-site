@@ -8,7 +8,7 @@ class Model_ER_HashtagsQuestions__initWithHashtagIDAndQuestionID__Test extends P
 
         $this->assertEquals(null, $rel->getID());
         $this->assertEquals(3, $rel->getHashtagID());
-        $this->assertEquals(9, $rel->getQuestionID());
-        $this->assertEquals(null, $rel->getCreatedAt());
+        $this->assertEquals(9, $rel->questionID);
+        $this->assertEquals(null, $rel->createdAt);
     }
 }

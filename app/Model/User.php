@@ -7,12 +7,12 @@ class User_Model extends Abstract_Model
     private $id;
     private $username;
     private $name;
-    private $email;
+    public $email; // string
     private $signature;
     private $site;
     private $passwordHash;
     private $apiKey;
-    private $createdAt;
+    public $createdAt;
 
     #
     # Init methods
@@ -69,15 +69,6 @@ class User_Model extends Abstract_Model
         return $this->name;
     }
 
-    public function setEmail(string $email)
-    {
-        $this->email = $email;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
 
     public function setSignature(string $signature)
     {
@@ -117,15 +108,5 @@ class User_Model extends Abstract_Model
     public function getAPIKey()
     {
         return $this->apiKey;
-    }
-
-    public function setCreatedAt(string $createdAt)
-    {
-        $this->createdAt = $createdAt;
-    }
-
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
     }
 }

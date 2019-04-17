@@ -32,12 +32,12 @@ class User_Validator
     {
         self::validateUsername($user->getUsername());
         self::validateName($user->getName());
-        self::validateEmail($user->getEmail());
+        self::validateEmail($user->email);
         self::validateSignature($user->getSignature());
         self::validateSite($user->getSite());
         self::validatePasswordHash($user->getPasswordHash());
         self::validateAPIKey($user->getAPIKey());
-        self::validateCreatedAt($user->getCreatedAt());
+        self::validateCreatedAt($user->createdAt);
 
         return true;
     }
@@ -46,7 +46,7 @@ class User_Validator
     {
         self::validateID($user->getID());
         self::validateName($user->getName());
-        self::validateEmail($user->getEmail());
+        self::validateEmail($user->email);
         self::validateSignature($user->getSignature());
         self::validateSite($user->getSite());
 

@@ -35,17 +35,17 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
         $response['errors'] = $errors;
     } else {
         try {
-            $currentUserEmail = $parseUser->getEmail();
+            $currentUserEmail = $parseUser->email;
             $response['data']['currentUserEmail'] = $currentUserEmail;
 
             //TODO: В спам не попадем из-за таких рассылок?
             $fakeUserEmail = 'no-reply@qusoc.com';
             $response['data']['fakeUserEmail'] = $fakeUserEmail;
 
-            $parseUser->setEmail($fakeUserEmail);
+            $parseUser->email = $fakeUserEmail;
             $parseUser->save();
 
-            $parseUser->setEmail($currentUserEmail);
+            $parseUser->email = $currentUserEmail;
             $parseUser->save();
 
             $response['success'] = true;

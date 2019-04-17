@@ -9,10 +9,10 @@ class User_Validator__negative__username__Test extends PHPUnit\Framework\TestCas
         $this->user->setUsername('boris');
         $this->user->setName('Boris Bro');
         $this->user->setSignature('Foo bar');
-        $this->user->setEmail('steve@aw.org');
+        $this->user->email = 'steve@aw.org';
         $this->user->setPasswordHash('$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy');
         $this->user->setAPIKey('4447243e3e1766375d23b06bf6dd1271');
-        $this->user->setCreatedAt('2016-03-19 06:47:41');
+        $this->user->createdAt = '2016-03-19 06:47:41';
     }
 
     protected function tearDown()

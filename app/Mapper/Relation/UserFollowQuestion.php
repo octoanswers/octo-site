@@ -7,7 +7,7 @@ class UserFollowQuestion_Relation_Mapper extends Abstract_Mapper
         UserFollowQuestion_Relation_Validator::validateNew($relation);
 
         $userID = $relation->getUserID();
-        $questionID = $relation->getQuestionID();
+        $questionID = $relation->questionID;
 
         $sql = 'INSERT INTO er_users_follow_questions (user_id, question_id) VALUES (:user_id, :question_id)';
         $stmt = $this->pdo->prepare($sql);
@@ -37,7 +37,7 @@ class UserFollowQuestion_Relation_Mapper extends Abstract_Mapper
         UserFollowQuestion_Relation_Validator::validateExists($relation);
 
         $userID = $relation->getUserID();
-        $questionID = $relation->getQuestionID();
+        $questionID = $relation->questionID;
 
         $sql = 'DELETE FROM er_users_follow_questions WHERE question_id=:question_id AND user_id=:user_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);

@@ -11,7 +11,7 @@ class UsersFollowHashtags_Relations_Query__relationWithUserIDAndHashtagID__Test 
         $this->assertEquals(6, $relation->getID());
         $this->assertEquals(2, $relation->getUserID());
         $this->assertEquals(16, $relation->getHashtagID());
-        $this->assertEquals('2014-12-16 11:28:56', $relation->getCreatedAt());
+        $this->assertEquals('2014-12-16 11:28:56', $relation->createdAt);
     }
 
     public function test__RelationNotExists()

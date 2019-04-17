@@ -5,7 +5,7 @@ class UserFollowUser_Relation_Model extends Abstract_Model
     private $id;
     private $userID;
     private $followedUserID;
-    private $createdAt;
+    public $createdAt;
 
     #
     # Init methods
@@ -64,15 +64,5 @@ class UserFollowUser_Relation_Model extends Abstract_Model
     public function setFollowedUserID(int $followedUserID)
     {
         $this->followedUserID = $followedUserID;
-    }
-
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(string $createdAt)
-    {
-        $this->createdAt = $createdAt;
     }
 }

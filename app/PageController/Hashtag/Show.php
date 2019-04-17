@@ -46,9 +46,9 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $this->hashtag_questions = [];
 
         foreach ($hashtag_questions as $hashtag_question_er) {
-            $this->hashtag_questions[] = (new Question_Query($this->lang))->questionWithID($hashtag_question_er->getQuestionID());
+            $this->hashtag_questions[] = (new Question_Query($this->lang))->questionWithID($hashtag_question_er->questionID);
 
-            //$question['date_humanized'] = $dateHumanizer->format($question->getCreatedAt());
+            //$question['date_humanized'] = $dateHumanizer->format($question->createdAt);
         }
 
         // recount questions count if GET-param on 20% random

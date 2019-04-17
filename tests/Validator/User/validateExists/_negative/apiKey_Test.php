@@ -9,7 +9,7 @@ class Validator_User_negative_api_key_Test extends PHPUnit\Framework\TestCase
         $user->setUsername('boris');
         $user->setName('Boris Bro');
         $user->setSignature('Foo bar');
-        $user->setEmail('steve@aw.org');
+        $user->email = 'steve@aw.org';
         $user->setPasswordHash('$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy');
 
         $this->expectExceptionMessage('User "apiKey" property null must be a string');
@@ -23,7 +23,7 @@ class Validator_User_negative_api_key_Test extends PHPUnit\Framework\TestCase
         $user->setUsername('boris');
         $user->setName('Boris Bro');
         $user->setSignature('Foo bar');
-        $user->setEmail('steve@aw.org');
+        $user->email = 'steve@aw.org';
         $user->setPasswordHash('$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy');
         $user->setAPIKey('');
 
@@ -38,7 +38,7 @@ class Validator_User_negative_api_key_Test extends PHPUnit\Framework\TestCase
         $user->setUsername('boris');
         $user->setName('Boris Bro');
         $user->setSignature('Foo bar');
-        $user->setEmail('steve@aw.org');
+        $user->email = 'steve@aw.org';
         $user->setPasswordHash('$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy');
         $user->setAPIKey('4447');
 
@@ -53,7 +53,7 @@ class Validator_User_negative_api_key_Test extends PHPUnit\Framework\TestCase
         $user->setUsername('boris');
         $user->setName('Boris Bro');
         $user->setSignature('Foo bar');
-        $user->setEmail('steve@aw.org');
+        $user->email = 'steve@aw.org';
         $user->setPasswordHash('$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy');
         $user->setAPIKey('4447243e3e1766375d23b06bf6dd1271+4447243e3e1766375d23b06bf6dd1271');
 

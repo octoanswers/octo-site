@@ -11,7 +11,7 @@ class Users_Query__userWithEmail__Test extends Abstract_DB_TestCase
         $this->assertEquals(4, $user->getID());
         $this->assertEquals('sasha', $user->getUsername());
         $this->assertEquals('Александр Пушкин', $user->getName());
-        $this->assertEquals('pushka@answeropedia.org', $user->getEmail());
-        $this->assertEquals('2016-02-26 16:00:46', $user->getCreatedAt());
+        $this->assertEquals('pushka@answeropedia.org', $user->email);
+        $this->assertEquals('2016-02-26 16:00:46', $user->createdAt);
     }
 }

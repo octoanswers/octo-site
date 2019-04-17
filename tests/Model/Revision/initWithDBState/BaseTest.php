@@ -22,7 +22,7 @@ class Model_Revision_initWithDBState_Test extends PHPUnit\Framework\TestCase
         $this->assertEquals('Rev comment', $revision->getComment());
         $this->assertEquals(2, $revision->getParentID());
         $this->assertEquals(14, $revision->getUserID());
-        $this->assertEquals('2015-12-16 13:28:56', $revision->getCreatedAt());
+        $this->assertEquals('2015-12-16 13:28:56', $revision->createdAt);
     }
 
     public function testMinParams()
@@ -45,6 +45,6 @@ class Model_Revision_initWithDBState_Test extends PHPUnit\Framework\TestCase
         $this->assertEquals(null, $revision->getComment());
         $this->assertEquals(null, $revision->getParentID());
         $this->assertEquals(14, $revision->getUserID());
-        $this->assertEquals('2015-12-16 13:28:56', $revision->getCreatedAt());
+        $this->assertEquals('2015-12-16 13:28:56', $revision->createdAt);
     }
 }

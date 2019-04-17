@@ -19,12 +19,12 @@ class Model_User_initWithDBState_Test extends PHPUnit\Framework\TestCase
         $this->assertEquals(13, $user->getID());
         $this->assertEquals('steve', $user->getUsername());
         $this->assertEquals('Steve Bo', $user->getName());
-        $this->assertEquals('steve@aw.org', $user->getEmail());
+        $this->assertEquals('steve@aw.org', $user->email);
         $this->assertEquals('PHP Programmer', $user->getSignature());
         $this->assertEquals('http://site56.com/steve', $user->getSite());
         $this->assertEquals('$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy', $user->getPasswordHash());
         $this->assertEquals('4447243e3e1766375d23b06bf6dd1271', $user->getAPIKey());
-        $this->assertEquals('2016-03-19 06:47:41', $user->getCreatedAt());
+        $this->assertEquals('2016-03-19 06:47:41', $user->createdAt);
     }
 
     public function test_MinParams()
@@ -40,7 +40,7 @@ class Model_User_initWithDBState_Test extends PHPUnit\Framework\TestCase
         $this->assertEquals(13, $user->getID());
         $this->assertEquals('steve', $user->getUsername());
         $this->assertEquals('Steve Bo', $user->getName());
-        $this->assertEquals('steve@aw.org', $user->getEmail());
+        $this->assertEquals('steve@aw.org', $user->email);
         $this->assertEquals(null, $user->getSignature());
         $this->assertEquals(null, $user->getSite());
         $this->assertEquals(null, $user->getPasswordHash());

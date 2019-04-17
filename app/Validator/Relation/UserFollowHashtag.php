@@ -21,7 +21,7 @@ class UserFollowHashtag_Relation_Validator
     {
         self::validateUserID($relation->getUserID());
         self::validateHashtagID($relation->getHashtagID());
-        self::validateCreatedAt($relation->getCreatedAt());
+        self::validateCreatedAt($relation->createdAt);
 
         return true;
     }

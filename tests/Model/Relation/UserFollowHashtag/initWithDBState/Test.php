@@ -14,7 +14,7 @@ class UserFollowHashtag_Relation_Model__initWithDBState__Test extends PHPUnit\Fr
         $this->assertEquals(13, $rel->getID());
         $this->assertEquals(3, $rel->getUserID());
         $this->assertEquals(9, $rel->getHashtagID());
-        $this->assertEquals('2015-11-29 09:28:34', $rel->getCreatedAt());
+        $this->assertEquals('2015-11-29 09:28:34', $rel->createdAt);
     }
 
     public function test_RuFullParams_ReturnObject()
@@ -29,6 +29,6 @@ class UserFollowHashtag_Relation_Model__initWithDBState__Test extends PHPUnit\Fr
         $this->assertEquals(13, $rel->getID());
         $this->assertEquals(3, $rel->getUserID());
         $this->assertEquals(9, $rel->getHashtagID());
-        $this->assertEquals('2015-11-29 09:28:34', $rel->getCreatedAt());
+        $this->assertEquals('2015-11-29 09:28:34', $rel->createdAt);
     }
 }

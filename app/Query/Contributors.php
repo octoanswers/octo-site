@@ -45,8 +45,8 @@ class Contributors_Query extends Abstract_Query
             $contributor->setID($user->getID());
             $contributor->setUsername($user->getUsername());
             $contributor->setName($user->getName());
-            $contributor->setEmail($user->getEmail());
-            $contributor->setCreatedAt($user->getCreatedAt());
+            $contributor->email = $user->email;
+            $contributor->createdAt = $user->createdAt;
             $contributor->contribution = $contribution;
             $contributor->insertionsCount = $insertionsCount;
             $contributor->deletionsCount = $deletionsCount;

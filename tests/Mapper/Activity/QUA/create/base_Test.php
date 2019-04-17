@@ -14,7 +14,7 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
         $user = new User_Model();
         $user->setID(13);
         $user->setName('Boris Bro');
-        $user->setEmail('steve@aw.org');
+        $user->email = 'steve@aw.org';
 
         $revision = Revision_Model::initWithDBState([
             'rev_id' => 13,

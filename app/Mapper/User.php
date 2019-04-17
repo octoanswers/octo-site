@@ -18,12 +18,12 @@ class User_Mapper extends Abstract_Mapper
 
         $u_username = $user->getUsername();
         $u_name = $user->getName();
-        $u_email = $user->getEmail();
+        $u_email = $user->email;
         $u_signature = $user->getSignature();
         $u_site = $user->getSite();
         $u_password_hash = $user->getPasswordHash();
         $u_api_key = $user->getAPIKey();
-        $u_created_at = $user->getCreatedAt();
+        $u_created_at = $user->createdAt;
 
         $sql = 'INSERT INTO users (u_username, u_name, u_email, u_signature, u_site, u_password_hash, u_api_key) VALUES (:u_username, :u_name, :u_email, :u_signature, :u_site, :u_password_hash, :u_api_key)';
         $stmt = $this->pdo->prepare($sql);
@@ -40,7 +40,7 @@ class User_Mapper extends Abstract_Mapper
         }
 
         $now = new DateTime('NOW');
-        $user->setCreatedAt($now->format('Y-m-d H:i:s'));
+        $user->createdAt = $now->format('Y-m-d H:i:s');
 
         $userID = (int) $this->pdo->lastInsertId();
         $user->setID($userID);
@@ -58,7 +58,7 @@ class User_Mapper extends Abstract_Mapper
         $u_id = (int) $user->getID();
         $u_username = $user->getUsername();
         $u_name = $user->getName();
-        $u_email = $user->getEmail();
+        $u_email = $user->email;
         $u_signature = $user->getSignature();
         $u_site = $user->getSite();
         $u_password_hash = $user->getPasswordHash();

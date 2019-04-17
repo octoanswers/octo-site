@@ -19,7 +19,7 @@ class Validator_User_negative_email_Test extends PHPUnit\Framework\TestCase
         $user->setID(13);
         $user->setUsername('boris');
         $user->setName('Boris Bro');
-        $user->setEmail('steve_answeropedia.org');
+        $user->email = 'steve_answeropedia.org';
 
         $this->expectExceptionMessage('User "email" property "steve_answeropedia.org" must be valid email');
         $this->assertEquals(true, User_Validator::validateExists($user));

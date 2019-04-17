@@ -4,8 +4,8 @@ class HashtagsToQuestions_Relation_Model extends Abstract_Model
 {
     private $id;
     private $hashtagID;
-    private $questionID;
-    private $createdAt;
+    public $questionID;
+    public $createdAt;
 
     #
     # Init methods
@@ -52,25 +52,5 @@ class HashtagsToQuestions_Relation_Model extends Abstract_Model
     public function setHashtagID(int $hashtagID)
     {
         $this->hashtagID = $hashtagID;
-    }
-
-    public function getQuestionID()
-    {
-        return $this->questionID;
-    }
-
-    public function setQuestionID(int $questionID)
-    {
-        $this->questionID = $questionID;
-    }
-
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(string $createdAt)
-    {
-        $this->createdAt = $createdAt;
     }
 }

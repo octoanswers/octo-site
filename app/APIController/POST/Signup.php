@@ -41,7 +41,7 @@ class Signup_POST_APIController extends Abstract_APIController
             $user = new User_Model();
             $user->setUsername($username);
             $user->setName($name);
-            $user->setEmail($userEmail);
+            $user->email = $userEmail;
             $user->setPasswordHash($userPasswordHash);
             $user->setAPIKey($apiKey);
 
@@ -55,7 +55,7 @@ class Signup_POST_APIController extends Abstract_APIController
             $this->output = [
                 'id' => $user->getID(),
                 'username' => $user->getUsername(),
-                'email' => $user->getEmail(),
+                'email' => $user->email,
                 'password_hash' => $user->getPasswordHash(),
                 'api_key' => $user->getAPIKey(),
                 'created_at' => date('Y-m-d H:i:s'),

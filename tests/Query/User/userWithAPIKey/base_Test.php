@@ -11,7 +11,7 @@ class Query_Users_userWithAPIKey_Base_Test extends Abstract_DB_TestCase
         $this->assertEquals(3, $user->getID());
         $this->assertEquals('ivan', $user->getUsername());
         $this->assertEquals('Иван Коршунов', $user->getName());
-        $this->assertEquals('admin@answeropedia.org', $user->getEmail());
-        $this->assertEquals('2016-03-19 06:47:41', $user->getCreatedAt());
+        $this->assertEquals('admin@answeropedia.org', $user->email);
+        $this->assertEquals('2016-03-19 06:47:41', $user->createdAt);
     }
 }

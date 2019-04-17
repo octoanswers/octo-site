@@ -7,7 +7,7 @@ class HashtagToQuestion_Relation_Mapper extends Abstract_Mapper
         HashtagToQuestion_Relation_Validator::validateNew($er);
 
         $er_hashtag_id = $er->getHashtagID();
-        $er_question_id = $er->getQuestionID();
+        $er_question_id = $er->questionID;
 
         $sql = 'INSERT INTO er_hashtags_questions (er_hashtag_id, er_question_id) VALUES (:er_hashtag_id, :er_question_id)';
         $stmt = $this->pdo->prepare($sql);

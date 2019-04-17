@@ -12,7 +12,7 @@ class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
         $revision->setComment('Rev comment');
         $revision->setParentID(2);
         $revision->setUserID(14);
-        $revision->setCreatedAt('2015-12-16 13:28:56');
+        $revision->createdAt = '2015-12-16 13:28:56';
 
         $this->assertEquals(true, Revision_Validator::validate($revision));
     }
@@ -34,6 +34,6 @@ class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(null, $revision->getComment());
         $this->assertEquals(null, $revision->getParentID());
         $this->assertEquals(14, $revision->getUserID());
-        $this->assertEquals(null, $revision->getCreatedAt());
+        $this->assertEquals(null, $revision->createdAt);
     }
 }

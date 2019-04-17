@@ -19,9 +19,9 @@ class Subscription_Validator
 
     public static function validateNew(Subscription_Model $s)
     {
-        self::validateQuestionID($s->getQuestionID());
-        self::validateEmail($s->getEmail());
-        self::validateCreatedAt($s->getCreatedAt());
+        self::validateQuestionID($s->questionID);
+        self::validateEmail($s->email);
+        self::validateCreatedAt($s->createdAt);
 
         return true;
     }

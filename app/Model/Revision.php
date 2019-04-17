@@ -9,7 +9,7 @@ class Revision_Model extends Abstract_Model
     private $comment;
     private $parentID;
     private $userID;
-    private $createdAt;
+    public $createdAt;
 
     #
     # Init methods
@@ -105,15 +105,6 @@ class Revision_Model extends Abstract_Model
         return $this->userID;
     }
 
-    public function setCreatedAt(string $createdAt)
-    {
-        $this->createdAt = $createdAt;
-    }
-
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
 
     #
     # Supplementary methods

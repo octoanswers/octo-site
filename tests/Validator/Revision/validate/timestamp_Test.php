@@ -9,10 +9,10 @@ class Validator_Revision_NegativeTimestampID_Test extends PHPUnit\Framework\Test
         $revision->setOpcodes('xyz');
         $revision->setBaseText('Ответ на вопрос про птиц.');
         $revision->setUserID(14);
-        $revision->setCreatedAt(1234);
+        $revision->createdAt = 1234;
+
+        $this->expectExceptionMessage('Revision createdAt param 1234 must be a string');
 
         Revision_Validator::validate($revision);
-
-        $this->assertEquals('1234', $revision->getCreatedAt());
     }
 }

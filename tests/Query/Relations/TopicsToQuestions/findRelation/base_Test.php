@@ -10,7 +10,7 @@ class HashtagsToQuestions_Relations_Query__findByHashtagIDAndQuestionID__Test ex
 
         $this->assertEquals(14, $er->getID());
         $this->assertEquals(58, $er->getHashtagID());
-        $this->assertEquals(19, $er->getQuestionID());
+        $this->assertEquals(19, $er->questionID);
     }
 
     public function test__RelationNotExists()

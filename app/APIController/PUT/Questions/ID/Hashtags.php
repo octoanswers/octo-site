@@ -51,7 +51,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                 if ($er === null) {
                     $er = new HashtagsToQuestions_Relation_Model();
                     $er->setHashtagID($hashtag->getID());
-                    $er->setQuestionID($question->getID());
+                    $er->questionID = $question->getID();
                     $er = (new HashtagToQuestion_Relation_Mapper($this->lang))->create($er);
 
                     # create activity
