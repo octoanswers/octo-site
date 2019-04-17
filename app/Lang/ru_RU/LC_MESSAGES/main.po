@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-15 14:59+0500\n"
-"PO-Revision-Date: 2019-04-15 14:59+0500\n"
+"POT-Creation-Date: 2019-04-17 10:29+0500\n"
+"PO-Revision-Date: 2019-04-17 10:33+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -14,6 +14,40 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: APIController/POST/_answer-like.php:18
+msgid "API__ERROR__NEED_LOGIN_TO_LIKE_ANSWER"
+msgstr ""
+
+#: APIController/POST/_answer-like.php:22
+msgid "API__ERROR__ANSWER_ALREADY_LIKED"
+msgstr ""
+
+#: APIController/POST/_answer-like.php:66
+msgid "API__OK__ANSWER_LIKED"
+msgstr ""
+
+#: APIController/POST/_answer-like.php:68
+#: APIController/POST/_answer-unlike.php:62
+msgid "API__ERROR"
+msgstr ""
+
+#: APIController/POST/_answer-like.php:74
+#: APIController/POST/_answer-unlike.php:68
+msgid "API__ERROR__ONLY_AJAX"
+msgstr ""
+
+#: APIController/POST/_answer-unlike.php:16
+msgid "API__ERROR__NEED_LOGIN_TO_DISLIKE_ANSWER"
+msgstr ""
+
+#: APIController/POST/_answer-unlike.php:20
+msgid "API__ERROR__ANSWER_LIKE_NOT_EXISTS"
+msgstr ""
+
+#: APIController/POST/_answer-unlike.php:60
+msgid "API__OK__ANSWER_DISLIKED"
+msgstr ""
 
 #: PageController/Answer/Edit.php:34 PageController/Answer/Edit.php:35
 #: Templates/answer_edit/main/header.phtml:3
@@ -98,10 +132,14 @@ msgid "New hashtags"
 msgstr "Новые темы"
 
 #: PageController/Hashtags/Newest.php:37 PageController/Questions/Newest.php:44
+#: PageController/Questions/Newest.php:49
 #: PageController/Questions/RecentlyUpdated.php:43
-#: PageController/Sandbox/All.php:49
+#: PageController/Questions/RecentlyUpdated.php:48
+#: PageController/Sandbox/All.php:49 PageController/Sandbox/All.php:54
 #: PageController/Sandbox/WithoutAnswers.php:58
+#: PageController/Sandbox/WithoutAnswers.php:63
 #: PageController/Sandbox/WithoutHashtags.php:58
+#: PageController/Sandbox/WithoutHashtags.php:63
 #: PageController/Users/Newest.php:45
 msgid "Page"
 msgstr "Страница"
@@ -140,10 +178,12 @@ msgid "Update hashtags for question \"%question%\""
 msgstr "Обновление тем вопроса «%question%»"
 
 #: PageController/Questions/Newest.php:44
+#: PageController/Questions/Newest.php:49
 msgid "Newest questions"
 msgstr "Новые вопросы"
 
 #: PageController/Questions/RecentlyUpdated.php:43
+#: PageController/Questions/RecentlyUpdated.php:48
 #: Templates/questions/main/nav.phtml:10
 msgid "Recently updated"
 msgstr "Недавно обновленные"
@@ -152,7 +192,7 @@ msgstr "Недавно обновленные"
 msgid "Questions and Answers"
 msgstr "Вопросы и ответы"
 
-#: PageController/Sandbox/All.php:49
+#: PageController/Sandbox/All.php:49 PageController/Sandbox/All.php:54
 msgid "Sandbox"
 msgstr "Песочница"
 
@@ -171,10 +211,12 @@ msgid "Without answers"
 msgstr "Без ответов"
 
 #: PageController/Sandbox/WithoutAnswers.php:58
+#: PageController/Sandbox/WithoutAnswers.php:63
 msgid "Questions without answers"
 msgstr "Вопросы без ответа"
 
 #: PageController/Sandbox/WithoutHashtags.php:58
+#: PageController/Sandbox/WithoutHashtags.php:63
 msgid "Questions without hashtags"
 msgstr "Вопросы без тем"
 
@@ -204,6 +246,10 @@ msgstr "Хештеги"
 #: PageController/Search/Questions.php:59
 msgid "Contributors"
 msgstr "Авторы"
+
+#: PageController/Settings/Show.php:18
+msgid "SETTINGS__TITLE"
+msgstr ""
 
 #: PageController/User/Show.php:31 PageController/User/Show.php:32
 #: PageController/User/Show.php:70
@@ -240,6 +286,42 @@ msgid_plural "Hashtags"
 msgstr[0] "Хештег"
 msgstr[1] "Хештега"
 msgstr[2] "Хештегов"
+
+#: Templates/_common/activity/f_q_renamed_by_u.phtml:11
+msgid "activity__question_renamed"
+msgstr "переименовал вопрос"
+
+#: Templates/_common/activity/f_q_update_a.phtml:11
+msgid "activity__question_updated_answer"
+msgstr "обновил ответ"
+
+#: Templates/_common/activity/f_t_added_q.phtml:11
+msgid "activity__hashtag_added_question"
+msgstr "помечен вопрос"
+
+#: Templates/_common/activity/f_u_follow_q.phtml:14
+msgid "activity__follow_question"
+msgstr "подписался на вопрос"
+
+#: Templates/_common/activity/f_u_follow_t.phtml:12
+msgid "activity__follow_hashtag"
+msgstr "подписался на хештег"
+
+#: Templates/_common/activity/f_u_follow_u.phtml:14
+msgid "activity__follow_user"
+msgstr "подписался на пользователя"
+
+#: Templates/_common/activity/f_u_rename_q.phtml:12
+msgid "activity__renamed_question"
+msgstr "переименовал вопрос"
+
+#: Templates/_common/activity/f_u_update_a.phtml:12
+msgid "activity__change_answer"
+msgstr "обновил ответ"
+
+#: Templates/_common/activity/f_u_update_signature.phtml:24
+msgid "activity__change_signature"
+msgstr "обновил подпись"
 
 #: Templates/_common/footer.phtml:10
 msgid "About"
@@ -479,6 +561,20 @@ msgstr "Нет описания изменений"
 msgid "Go back"
 msgstr "Вернуться назад"
 
+#: Templates/feed/main/lure/follow_3_hashtags.phtml:10
+msgid "FEED__LURE__FOLLOW_3_HASHTAGS__TITLE"
+msgstr "Подпишитесь на несколько хештегов"
+
+#: Templates/feed/main/lure/follow_3_hashtags.phtml:13
+msgid "FEED__LURE__FOLLOW_3_HASHTAGS__MSG"
+msgstr ""
+"Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут "
+"появляться у вас в ленте новостей"
+
+#: Templates/feed/main/lure/follow_3_hashtags.phtml:16
+msgid "FEED__LURE__FOLLOW_3_HASHTAGS__LINK"
+msgstr "Посмотреть популярные хештеги"
+
 #: Templates/feed/main/lure/follow_3_questions.phtml:10
 msgid "FEED__LURE__FOLLOW_3_QUESTIONS__TITLE"
 msgstr "Подпишитесь на несколько вопросов"
@@ -492,20 +588,6 @@ msgstr ""
 #: Templates/feed/main/lure/follow_3_questions.phtml:16
 msgid "FEED__LURE__FOLLOW_3_QUESTIONS__LINK"
 msgstr "Посмотреть вопросы"
-
-#: Templates/feed/main/lure/follow_3_topics.phtml:10
-msgid "FEED__LURE__FOLLOW_3_HASHTAGS__TITLE"
-msgstr "Подпишитесь на несколько хештегов"
-
-#: Templates/feed/main/lure/follow_3_topics.phtml:13
-msgid "FEED__LURE__FOLLOW_3_HASHTAGS__MSG"
-msgstr ""
-"Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут "
-"появляться у вас в ленте новостей"
-
-#: Templates/feed/main/lure/follow_3_topics.phtml:16
-msgid "FEED__LURE__FOLLOW_3_HASHTAGS__LINK"
-msgstr "Посмотреть популярные хештеги"
 
 #: Templates/feed/main/lure/follow_3_users.phtml:10
 msgid "FEED__LURE__FOLLOW_3_USERS__TITLE"
@@ -575,6 +657,10 @@ msgstr "Задайте первый вопрос"
 #: Templates/feed/right/improve_feed.phtml:106
 msgid "Answer a question"
 msgstr "Ответьте на вопрос"
+
+#: Templates/flow/right/filter.phtml:4
+msgid "Flow__Filter__Title"
+msgstr "Фильтры"
 
 #: Templates/hashtag/main/actions.phtml:14
 #: Templates/hashtag/main/actions.phtml:20
