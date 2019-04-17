@@ -13,7 +13,7 @@ class UserFollowHashtag_Relation_Model__initWithDBState__Test extends PHPUnit\Fr
 
         $this->assertEquals(13, $rel->getID());
         $this->assertEquals(3, $rel->userID);
-        $this->assertEquals(9, $rel->getHashtagID());
+        $this->assertEquals(9, $rel->hashtagID);
         $this->assertEquals('2015-11-29 09:28:34', $rel->createdAt);
     }
 
@@ -28,7 +28,7 @@ class UserFollowHashtag_Relation_Model__initWithDBState__Test extends PHPUnit\Fr
 
         $this->assertEquals(13, $rel->getID());
         $this->assertEquals(3, $rel->userID);
-        $this->assertEquals(9, $rel->getHashtagID());
+        $this->assertEquals(9, $rel->hashtagID);
         $this->assertEquals('2015-11-29 09:28:34', $rel->createdAt);
     }
 }

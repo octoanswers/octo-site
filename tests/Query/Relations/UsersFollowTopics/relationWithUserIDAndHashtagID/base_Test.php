@@ -10,7 +10,7 @@ class UsersFollowHashtags_Relations_Query__relationWithUserIDAndHashtagID__Test 
 
         $this->assertEquals(6, $relation->getID());
         $this->assertEquals(2, $relation->userID);
-        $this->assertEquals(16, $relation->getHashtagID());
+        $this->assertEquals(16, $relation->hashtagID);
         $this->assertEquals('2014-12-16 11:28:56', $relation->createdAt);
     }
 

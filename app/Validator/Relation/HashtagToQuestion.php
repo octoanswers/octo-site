@@ -19,7 +19,7 @@ class HashtagToQuestion_Relation_Validator
 
     public static function validateNew(HashtagsToQuestions_Relation_Model $rel)
     {
-        self::validateHashtagID($rel->getHashtagID());
+        self::validateHashtagID($rel->hashtagID);
         self::validateQuestionID($rel->questionID);
         self::validateCreatedAt($rel->createdAt);
 

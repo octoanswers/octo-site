@@ -6,7 +6,7 @@ class Validator_ER_HashtagQuestions__id__Test extends PHPUnit\Framework\TestCase
     {
         $rel = new HashtagsToQuestions_Relation_Model();
         $rel->setID(0);
-        $rel->setHashtagID(3);
+        $rel->hashtagID = 3;
         $rel->questionID = 9;
 
         $this->expectExceptionMessage('HashtagToQuestion relation "id" property 0 must be greater than or equal to 1');
@@ -17,7 +17,7 @@ class Validator_ER_HashtagQuestions__id__Test extends PHPUnit\Framework\TestCase
     {
         $rel = new HashtagsToQuestions_Relation_Model();
         $rel->setID(-1);
-        $rel->setHashtagID(3);
+        $rel->hashtagID = 3;
         $rel->questionID = 9;
 
         $this->expectExceptionMessage('HashtagToQuestion relation "id" property -1 must be greater than or equal to 1');

@@ -9,7 +9,7 @@ class HashtagsToQuestions_Relations_Query__findByHashtagIDAndQuestionID__Test ex
         $er = (new HashtagsToQuestions_Relations_Query('ru'))->findByHashtagIDAndQuestionID(58, 19);
 
         $this->assertEquals(14, $er->getID());
-        $this->assertEquals(58, $er->getHashtagID());
+        $this->assertEquals(58, $er->hashtagID);
         $this->assertEquals(19, $er->questionID);
     }
 

@@ -7,7 +7,7 @@ class UserFollowHashtag_Relation_Validator__id__Test extends PHPUnit\Framework\T
         $relation = new UserFollowHashtag_Relation_Model();
         $relation->setID(0);
         $relation->userID = 3;
-        $relation->setHashtagID(9);
+        $relation->hashtagID = 9;
 
         $this->expectExceptionMessage('UserFollowHashtag relation "id" property 0 must be greater than or equal to 1');
         UserFollowHashtag_Relation_Validator::validateExists($relation);
@@ -18,7 +18,7 @@ class UserFollowHashtag_Relation_Validator__id__Test extends PHPUnit\Framework\T
         $relation = new UserFollowHashtag_Relation_Model();
         $relation->setID(-1);
         $relation->userID = 3;
-        $relation->setHashtagID(9);
+        $relation->hashtagID = 9;
 
         $this->expectExceptionMessage('UserFollowHashtag relation "id" property -1 must be greater than or equal to 1');
         UserFollowHashtag_Relation_Validator::validateExists($relation);

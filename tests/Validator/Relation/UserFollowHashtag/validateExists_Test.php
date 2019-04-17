@@ -7,7 +7,7 @@ class UserFollowHashtag_Relation_Validator__validateExists__Test extends PHPUnit
         $relation = new UserFollowHashtag_Relation_Model();
         $relation->setID(13);
         $relation->userID = 3;
-        $relation->setHashtagID(9);
+        $relation->hashtagID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
 
         $this->assertEquals(true, UserFollowHashtag_Relation_Validator::validateExists($relation));
@@ -18,7 +18,7 @@ class UserFollowHashtag_Relation_Validator__validateExists__Test extends PHPUnit
         $relation = new UserFollowHashtag_Relation_Model();
         $relation->setID(13);
         $relation->userID = 3;
-        $relation->setHashtagID(9);
+        $relation->hashtagID = 9;
 
         $this->assertEquals(true, UserFollowHashtag_Relation_Validator::validateExists($relation));
     }
