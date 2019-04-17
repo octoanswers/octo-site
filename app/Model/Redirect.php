@@ -1,12 +1,9 @@
 <?php
 
-class Redirect_Model
+class Redirect_Model extends Abstract_Model
 {
-    // int
-    public $fromID;
-    
-    // string
-    public $toTitle;
+    public $fromID; // int
+    public $toTitle; // string
 
     #
     # Init methods
