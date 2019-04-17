@@ -2,14 +2,14 @@
 
 class Model_Redirect_initWithDBState_Test extends PHPUnit\Framework\TestCase
 {
-    public function test_InitWithBaseParams_ReturnObject()
+    public function test_baseParams()
     {
         $redirect = Redirect_Model::initWithDBState([
             'rd_from' => 13,
             'rd_title' => 'This is question?',
         ]);
 
-        $this->assertEquals(13, $redirect->getFromID());
-        $this->assertEquals('This is question?', $redirect->getRedirectTitle());
+        $this->assertEquals(13, $redirect->fromID);
+        $this->assertEquals('This is question?', $redirect->toTitle);
     }
 }

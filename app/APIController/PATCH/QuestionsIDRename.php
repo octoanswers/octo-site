@@ -36,8 +36,8 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
 
                     # create redirect record
                     $this->redirect = new Redirect_Model();
-                    $this->redirect->setFromID($oldQuestion->getID());
-                    $this->redirect->setRedirectTitle($question->getTitle());
+                    $this->redirect->fromID = $oldQuestion->getID();
+                    $this->redirect->toTitle = $question->getTitle();
                     $this->redirect = (new Redirect_Mapper($this->lang))->create($this->redirect);
                 }
             }
@@ -83,8 +83,8 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
 
             if (isset($this->redirect)) {
                 $output['redirect'] = [
-                    'from_id' => $this->redirect->getFromID(),
-                    'to_title' => $this->redirect->getRedirectTitle(),
+                    'from_id' => $this->redirect->fromID,
+                    'to_title' => $this->redirect->toTitle,
                 ];
             }
         } catch (Throwable $e) {

@@ -8,8 +8,8 @@ class Redirects_Query__redirectForQuestionWithID__en__Test extends Abstract_DB_T
     {
         $redirect = (new Redirects_Query('en'))->redirectForQuestionWithID(7);
 
-        $this->assertEquals(7, $redirect->getFromID());
-        $this->assertEquals('How many showflakes in showrain?', $redirect->getRedirectTitle());
+        $this->assertEquals(7, $redirect->fromID);
+        $this->assertEquals('How many showflakes in showrain?', $redirect->toTitle);
     }
 
     public function test_RedirectNotExists()

@@ -14,8 +14,8 @@ class Redirect_Validator
 
     public static function validate(Redirect_Model $redirect)
     {
-        self::validateFromID($redirect->getFromID());
-        self::validateToTitle($redirect->getRedirectTitle());
+        self::validateFromID($redirect->fromID);
+        self::validateToTitle($redirect->toTitle);
 
         return true;
     }

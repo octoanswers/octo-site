@@ -36,7 +36,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         if ($this->question->isRedirect()) {
             $redirect = (new Redirects_Query($this->lang))->redirectForQuestionWithID($this->question->getID());
-            $this->questionRedirect = Question_Model::initWithTitle($redirect->getRedirectTitle());
+            $this->questionRedirect = Question_Model::initWithTitle($redirect->toTitle);
 
             $showRedirectPage = $request->getParam('show_rd');
             if (!$showRedirectPage) {

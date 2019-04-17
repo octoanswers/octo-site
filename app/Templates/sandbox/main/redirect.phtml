@@ -11,7 +11,7 @@
         <span class="badge badge-warning">Redirect</span>
         <span class="mx-1">→</span>
         <a href="<?= Redirect_URL_Helper::getURL($this->lang, $redirect) ?>">
-            <?= $redirect->getRedirectTitle() ?>
+            <?= $redirect->toTitle ?>
         </a>
     </div>
     <div class="mt-2 ml-1 small color-gray-500">
