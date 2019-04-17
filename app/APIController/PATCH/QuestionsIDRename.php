@@ -47,15 +47,15 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
             #
 
             $activity = new Activity_Model();
-            $activity->setType(Activity_Model::U_RENAME_Q);
-            $activity->setSubject($user);
-            $activity->setData(['question' => $question, 'old_title' => $old_title]);
+            $activity->type = Activity_Model::U_RENAME_Q;
+            $activity->subject = $user;
+            $activity->data = ['question' => $question, 'old_title' => $old_title];
             $activity = (new URenameQ_Activity_Mapper($this->lang))->create($activity);
 
             $activity2 = new Activity_Model();
-            $activity2->setType(Activity_Model::Q_RENAMED_BY_U);
-            $activity2->setSubject($question);
-            $activity2->setData(['user' => $user, 'old_title' => $old_title]);
+            $activity2->type = Activity_Model::Q_RENAMED_BY_U;
+            $activity2->subject = $question;
+            $activity2->data = ['user' => $user, 'old_title' => $old_title];
             $activity2 = (new QRenamedByU_Activity_Mapper($this->lang))->create($activity2);
 
             $output = [
@@ -72,11 +72,11 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
                 'activities' => [
                     [
                         'id' => $activity->getID(),
-                        'type' => $activity->getType(),
+                        'type' => $activity->type,
                     ],
                     [
                         'id' => $activity2->getID(),
-                        'type' => $activity2->getType(),
+                        'type' => $activity2->type,
                     ],
                 ]
             ];

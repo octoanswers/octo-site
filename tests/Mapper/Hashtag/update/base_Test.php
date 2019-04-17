@@ -56,9 +56,9 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
 
                     # create activity
                     $activity = new Activity_Model();
-                    $activity->setType(Activity_Model::F_H_ADDED_Q);
-                    $activity->setSubject($hashtag);
-                    $activity->setData($question);
+                    $activity->type = Activity_Model::F_H_ADDED_Q;
+                    $activity->subject = $hashtag;
+                    $activity->data = $question;
                     $activity = (new HAddedQ_Activity_Mapper($this->lang))->create($activity);
                 }
             }
@@ -73,15 +73,15 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
             # Save activity
 
             // $activity = new Activity_Model();
-            // $activity->setType(Activity_Model::F_U_UPDATE_A);
-            // $activity->setSubject($user);
-            // $activity->setData([ 'question' => $question, 'revision' => $revision]);
+            // $activity->type = Activity_Model::F_U_UPDATE_A;
+            // $activity->subject = $user;
+            // $activity->data = [ 'question' => $question, 'revision' => $revision];
             // $activity = (new UUpdateA_Activity_Mapper($this->lang))->create($activity);
             //
             // $activity = new Activity_Model();
-            // $activity->setType(Activity_Model::F_Q_UPDATE_A);
-            // $activity->setSubject($question);
-            // $activity->setData(['user' => $user, 'revision' => $revision]);
+            // $activity->type = Activity_Model::F_Q_UPDATE_A;
+            // $activity->subject = $question;
+            // $activity->data = ['user' => $user, 'revision' => $revision];
             // $activity = (new QUpdateA_Activity_Mapper($this->lang))->create($activity);
 
             $output = [

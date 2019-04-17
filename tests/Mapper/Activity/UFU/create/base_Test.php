@@ -15,13 +15,13 @@ class Mapper_Activities__createUFU__Test extends Abstract_DB_TestCase
         $followedUser->setName('Steve Bar');
 
         $activity = new Activity_Model();
-        $activity->setType(Activity_Model::F_U_FOLLOW_U);
-        $activity->setSubject($user);
-        $activity->setData($followedUser);
+        $activity->type = Activity_Model::F_U_FOLLOW_U;
+        $activity->subject = $user;
+        $activity->data = $followedUser;
 
         $activity = (new UFollowU_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->getID());
-        $this->assertEquals(Activity_Model::F_U_FOLLOW_U, $activity->getType());
+        $this->assertEquals(Activity_Model::F_U_FOLLOW_U, $activity->type);
     }
 }

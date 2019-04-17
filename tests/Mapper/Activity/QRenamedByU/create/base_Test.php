@@ -13,13 +13,13 @@ class Mapper_Activity_QRenamedByU__create__Test extends Abstract_DB_TestCase
         $question = (new Question_Query('ru'))->questionWithID(6);
 
         $activity = new Activity_Model();
-        $activity->setType(Activity_Model::Q_RENAMED_BY_U);
-        $activity->setSubject($question);
-        $activity->setData(['user' => $user, 'old_title' => 'Как ты?']);
+        $activity->type = Activity_Model::Q_RENAMED_BY_U;
+        $activity->subject = $question;
+        $activity->data = ['user' => $user, 'old_title' => 'Как ты?'];
 
         $activity = (new QRenamedByU_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->getID());
-        $this->assertEquals(Activity_Model::Q_RENAMED_BY_U, $activity->getType());
+        $this->assertEquals(Activity_Model::Q_RENAMED_BY_U, $activity->type);
     }
 }

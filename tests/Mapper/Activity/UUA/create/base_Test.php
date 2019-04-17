@@ -31,13 +31,13 @@ class Mapper_Activity_UUA__create__Test extends Abstract_DB_TestCase
         ]);
 
         $activity = new Activity_Model();
-        $activity->setType(Activity_Model::F_U_UPDATE_A);
-        $activity->setSubject($user);
-        $activity->setData([ 'question' => $question, 'revision' => $revision]);
+        $activity->type = Activity_Model::F_U_UPDATE_A;
+        $activity->subject = $user;
+        $activity->data = [ 'question' => $question, 'revision' => $revision];
 
         $activity = (new UUpdateA_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->getID());
-        $this->assertEquals(Activity_Model::F_U_UPDATE_A, $activity->getType());
+        $this->assertEquals(Activity_Model::F_U_UPDATE_A, $activity->type);
     }
 }

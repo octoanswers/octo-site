@@ -28,13 +28,13 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
         ]);
 
         $activity = new Activity_Model();
-        $activity->setType(Activity_Model::F_Q_UPDATE_A);
-        $activity->setSubject($question);
-        $activity->setData(['user' => $user, 'revision' => $revision]);
+        $activity->type = Activity_Model::F_Q_UPDATE_A;
+        $activity->subject = $question;
+        $activity->data = ['user' => $user, 'revision' => $revision];
 
         $activity = (new QUpdateA_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->getID());
-        $this->assertEquals(Activity_Model::F_Q_UPDATE_A, $activity->getType());
+        $this->assertEquals(Activity_Model::F_Q_UPDATE_A, $activity->type);
     }
 }

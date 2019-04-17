@@ -11,13 +11,13 @@ class Mapper_Activity_HAQ__create__Test extends Abstract_DB_TestCase
         $question = Question_Model::initWithTitle('Когда закончится дождь?');
 
         $activity = new Activity_Model();
-        $activity->setType(Activity_Model::F_H_ADDED_Q);
-        $activity->setSubject($hashtag);
-        $activity->setData($question);
+        $activity->type = Activity_Model::F_H_ADDED_Q;
+        $activity->subject = $hashtag;
+        $activity->data = $question;
 
         $activity = (new HAddedQ_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->getID());
-        $this->assertEquals(Activity_Model::F_H_ADDED_Q, $activity->getType());
+        $this->assertEquals(Activity_Model::F_H_ADDED_Q, $activity->type);
     }
 }

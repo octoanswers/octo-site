@@ -4,15 +4,15 @@ class UUpdateA_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {
-        $activity_type = $activity->getType();
-        $user = $activity->getSubject();
+        $activity_type = $activity->type;
+        $user = $activity->subject;
 
-        if (!isset($activity->getData()['question']) || !isset($activity->getData()['revision'])) {
+        if (!isset($activity->data['question']) || !isset($activity->data['revision'])) {
             throw new Exception("Incorrect data param", 1);
         }
 
-        $question = $activity->getData()['question'];
-        $revision = $activity->getData()['revision'];
+        $question = $activity->data['question'];
+        $revision = $activity->data['revision'];
 
         if ($activity_type != Activity_Model::F_U_UPDATE_A) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);

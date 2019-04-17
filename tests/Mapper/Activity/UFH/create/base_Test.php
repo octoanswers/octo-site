@@ -13,13 +13,13 @@ class Mapper_Activity_UFH__create__Test extends Abstract_DB_TestCase
         $hashtag = Hashtag_Model::initWithTitle('tag10');
 
         $activity = new Activity_Model();
-        $activity->setType(Activity_Model::F_U_FOLLOW_H);
-        $activity->setSubject($user);
-        $activity->setData($hashtag);
+        $activity->type = Activity_Model::F_U_FOLLOW_H;
+        $activity->subject = $user;
+        $activity->data = $hashtag;
 
         $activity = (new UFollowH_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->getID());
-        $this->assertEquals(Activity_Model::F_U_FOLLOW_H, $activity->getType());
+        $this->assertEquals(Activity_Model::F_U_FOLLOW_H, $activity->type);
     }
 }

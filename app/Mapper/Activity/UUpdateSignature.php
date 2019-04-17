@@ -4,14 +4,14 @@ class UUpdateSignature_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {
-        $activity_type = $activity->getType();
-        $user = $activity->getSubject();
+        $activity_type = $activity->type;
+        $user = $activity->subject;
 
-        if (!isset($activity->getData()['signature'])) {
+        if (!isset($activity->data['signature'])) {
             throw new Exception("Incorrect data param", 1);
         }
 
-        $signature = $activity->getData()['signature'];
+        $signature = $activity->data['signature'];
 
         if ($activity_type != Activity_Model::U_UPDATE_SIGNATURE) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);

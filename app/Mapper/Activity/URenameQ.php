@@ -4,21 +4,21 @@ class URenameQ_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {
-        $activity_type = $activity->getType();
+        $activity_type = $activity->type;
         if ($activity_type != Activity_Model::U_RENAME_Q) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);
         }
 
-        $user = $activity->getSubject();
+        $user = $activity->subject;
         if (!is_a($user, User_Model::class)) {
             throw new Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
 
-        if (!isset($activity->getData()['question']) || !isset($activity->getData()['old_title'])) {
+        if (!isset($activity->data['question']) || !isset($activity->data['old_title'])) {
             throw new Exception("Incorrect data param", 1);
         }
-        $question = $activity->getData()['question'];
-        $old_title = $activity->getData()['old_title'];
+        $question = $activity->data['question'];
+        $old_title = $activity->data['old_title'];
         if (!is_a($question, Question_Model::class)) {
             throw new Exception('Incorrect activity "data" class type: '.get_class($question), 0);
         }

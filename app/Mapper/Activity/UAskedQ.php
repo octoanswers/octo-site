@@ -4,9 +4,9 @@ class UAskedQ_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {
-        $activity_type = $activity->getType();
-        $user = $activity->getSubject();
-        $question = $activity->getData();
+        $activity_type = $activity->type;
+        $user = $activity->subject;
+        $question = $activity->data;
 
         if ($activity_type != Activity_Model::F_U_ASKED_Q) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);

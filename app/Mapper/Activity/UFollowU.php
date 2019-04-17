@@ -4,11 +4,11 @@ class UFollowU_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {
-        $user = $activity->getSubject();
-        $followedUser = $activity->getData();
+        $user = $activity->subject;
+        $followedUser = $activity->data;
 
-        if ($activity->getType() != Activity_Model::F_U_FOLLOW_U) {
-            throw new Exception("Incorrect activity type: ".$activity->getType(), 0);
+        if ($activity->type != Activity_Model::F_U_FOLLOW_U) {
+            throw new Exception("Incorrect activity type: ".$activity->type, 0);
         }
         if (!is_a($user, User_Model::class)) {
             throw new Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
@@ -18,7 +18,7 @@ class UFollowU_Activity_Mapper extends Abstract_Mapper
         }
 
         $userID = $user->getID();
-        $activity_type = $activity->getType();
+        $activity_type = $activity->type;
         $data = json_encode([
             'user' => [
                 'id' => $user->getID(),

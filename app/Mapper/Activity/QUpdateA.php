@@ -4,15 +4,15 @@ class QUpdateA_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {
-        $activity_type = $activity->getType();
+        $activity_type = $activity->type;
 
-        if (!isset($activity->getData()['user']) || !isset($activity->getData()['revision'])) {
+        if (!isset($activity->data['user']) || !isset($activity->data['revision'])) {
             throw new Exception("Incorrect data param", 1);
         }
 
-        $question = $activity->getSubject();
-        $user = $activity->getData()['user'];
-        $revision = $activity->getData()['revision'];
+        $question = $activity->subject;
+        $user = $activity->data['user'];
+        $revision = $activity->data['revision'];
 
         if ($activity_type != Activity_Model::F_Q_UPDATE_A) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);

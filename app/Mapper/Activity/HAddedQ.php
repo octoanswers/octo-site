@@ -4,9 +4,9 @@ class HAddedQ_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {
-        $activity_type = $activity->getType();
-        $hashtag = $activity->getSubject();
-        $question = $activity->getData();
+        $activity_type = $activity->type;
+        $hashtag = $activity->subject;
+        $question = $activity->data;
 
         if ($activity_type != Activity_Model::F_H_ADDED_Q) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);

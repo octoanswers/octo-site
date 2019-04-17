@@ -42,9 +42,9 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             #
 
             $activity = new Activity_Model();
-            $activity->setType(Activity_Model::F_U_FOLLOW_Q);
-            $activity->setSubject($user);
-            $activity->setData($question);
+            $activity->type = Activity_Model::F_U_FOLLOW_Q;
+            $activity->subject = $user;
+            $activity->data = $question;
 
             $activity = (new UFollowQ_Activity_Mapper($this->lang))->create($activity);
 

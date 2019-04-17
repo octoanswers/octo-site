@@ -35,9 +35,9 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             # Create activity
 
             $activity = new Activity_Model();
-            $activity->setType(Activity_Model::U_UPDATE_SIGNATURE);
-            $activity->setSubject($user);
-            $activity->setData(['signature' => $signature]);
+            $activity->type = Activity_Model::U_UPDATE_SIGNATURE;
+            $activity->subject = $user;
+            $activity->data = ['signature' => $signature];
             $activity = (new UUpdateSignature_Activity_Mapper($this->lang))->create($activity);
 
             $output = [

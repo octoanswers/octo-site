@@ -2,9 +2,7 @@
 
 class Activity_Model extends Abstract_Model
 {
-    #
-    # Activity types
-    #
+    // Activity types
 
     const F_U_FOLLOW_Q = 'F_U_FOLLOW_Q';
     const F_U_FOLLOW_H = 'F_U_FOLLOW_H';
@@ -17,17 +15,15 @@ class Activity_Model extends Abstract_Model
     const U_UPDATE_SIGNATURE = 'U_UPDATE_SIGNATURE';
     const F_U_GOT_ACHIEVEMENT = 'F_U_GOT_ACHIEVEMENT'; // @TODO don`t used
     const Q_RENAMED_BY_U = 'Q_RENAMED_BY_U';
-
     const F_H_ADDED_Q = 'F_H_ADDED_Q';
-
     const F_Q_UPDATE_A = 'F_Q_UPDATE_A';
 
-    // Activity properties ----------------------------------------------------
+    // Activity properties
 
-    private $id;
-    private $type;
-    private $subject;
-    private $data;
+    public $id; // int
+    public $type; // string
+    public $subject; // string
+    public $data; // string
 
     // Getters & setters ------------------------------------------------------
 
@@ -39,35 +35,5 @@ class Activity_Model extends Abstract_Model
     public function getID()
     {
         return $this->id;
-    }
-
-    public function setType(string $type)
-    {
-        $this->type = $type;
-    }
-
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    public function getSubject()
-    {
-        return $this->subject;
-    }
-
-    public function setSubject($subject)
-    {
-        $this->subject = $subject;
-    }
-
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    public function setData($data)
-    {
-        $this->data = $data;
     }
 }

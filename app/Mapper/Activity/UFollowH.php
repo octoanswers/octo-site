@@ -4,10 +4,10 @@ class UFollowH_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {
-        $user = $activity->getSubject();
-        $hashtag = $activity->getData();
+        $user = $activity->subject;
+        $hashtag = $activity->data;
 
-        if ($activity->getType() != Activity_Model::F_U_FOLLOW_H) {
+        if ($activity->type != Activity_Model::F_U_FOLLOW_H) {
             throw new Exception("Incorrect activity type", 0);
         }
         if (!is_a($user, User_Model::class)) {
@@ -18,7 +18,7 @@ class UFollowH_Activity_Mapper extends Abstract_Mapper
         }
 
         $userID = $user->getID();
-        $activity_type = $activity->getType();
+        $activity_type = $activity->type;
         $data = json_encode([
             'user' => [
                 'id' => $user->getID(),

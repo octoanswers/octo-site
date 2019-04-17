@@ -40,9 +40,9 @@ class UsersIDFollow_POST_APIController extends Abstract_APIController
             # Create activity
 
             $activity = new Activity_Model();
-            $activity->setType(Activity_Model::F_U_FOLLOW_U);
-            $activity->setSubject($user);
-            $activity->setData($followed_user);
+            $activity->type = Activity_Model::F_U_FOLLOW_U;
+            $activity->subject = $user;
+            $activity->data = $followed_user;
 
             $activity = (new UFollowU_Activity_Mapper($this->lang))->create($activity);
 

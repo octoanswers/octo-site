@@ -25,9 +25,9 @@ class Questions_POST_APIController extends Abstract_APIController
             # save activity if user want that
 
             // $activity = new Activity_Model();
-            // $activity->setType(Activity_Model::F_U_ASKED_Q);
-            // $activity->setSubject($user);
-            // $activity->setData($question);
+            // $activity->type = Activity_Model::F_U_ASKED_Q;
+            // $activity->subject = $user;
+            // $activity->data = $question;
             //
             // $activity = (new UAskedQ_Activity_Mapper())->create($activity);
 

@@ -40,9 +40,9 @@ class HashtagsIDFollow_POST_APIController extends Abstract_APIController
             # Create activity
 
             $activity = new Activity_Model();
-            $activity->setType(Activity_Model::F_U_FOLLOW_H);
-            $activity->setSubject($user);
-            $activity->setData($hashtag);
+            $activity->type = Activity_Model::F_U_FOLLOW_H;
+            $activity->subject = $user;
+            $activity->data = $hashtag;
             $activity = (new UFollowH_Activity_Mapper($this->lang))->create($activity);
             $output = [
                 'lang' => $this->lang,
