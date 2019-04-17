@@ -47,9 +47,9 @@ class Contributors_Query extends Abstract_Query
             $contributor->setName($user->getName());
             $contributor->setEmail($user->getEmail());
             $contributor->setCreatedAt($user->getCreatedAt());
-            $contributor->setContribution($contribution);
-            $contributor->setInsertionsCOunt($insertionsCount);
-            $contributor->setDeletionsCount($deletionsCount);
+            $contributor->contribution = $contribution;
+            $contributor->insertionsCount = $insertionsCount;
+            $contributor->deletionsCount = $deletionsCount;
             if ($user->getSignature()) {
                 $contributor->setSignature($user->getSignature());
             }

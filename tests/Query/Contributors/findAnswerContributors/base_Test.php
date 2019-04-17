@@ -10,15 +10,15 @@ class Query_Contributions__findAnswerContributors__Test extends Abstract_DB_Test
 
         $this->assertEquals(4, $contributors[0]->getID());
         $this->assertEquals('Известный писатель', $contributors[0]->getSignature());
-        $this->assertEquals(138, $contributors[0]->getContribution());
-        $this->assertEquals(136, $contributors[0]->getInsertionsCount());
-        $this->assertEquals(2, $contributors[0]->getDeletionsCount());
+        $this->assertEquals(138, $contributors[0]->contribution);
+        $this->assertEquals(136, $contributors[0]->insertionsCount);
+        $this->assertEquals(2, $contributors[0]->deletionsCount);
 
         $this->assertEquals(6, $contributors[1]->getID());
         $this->assertEquals(null, $contributors[1]->getSignature());
-        $this->assertEquals(103, $contributors[1]->getContribution());
-        $this->assertEquals(68, $contributors[1]->getInsertionsCount());
-        $this->assertEquals(35, $contributors[1]->getDeletionsCount());
+        $this->assertEquals(103, $contributors[1]->contribution);
+        $this->assertEquals(68, $contributors[1]->insertionsCount);
+        $this->assertEquals(35, $contributors[1]->deletionsCount);
 
         $this->assertEquals(3, count($contributors));
     }
