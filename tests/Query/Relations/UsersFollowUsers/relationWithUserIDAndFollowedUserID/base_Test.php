@@ -10,7 +10,7 @@ class UsersFollowUsers_Relations_Query__relationWithUserIDAndFollowedUserID__Tes
 
         $this->assertEquals(3, $relation->getID());
         $this->assertEquals(4, $relation->userID);
-        $this->assertEquals(5, $relation->getFollowedUserID());
+        $this->assertEquals(5, $relation->followedUserID);
         $this->assertEquals('2015-12-16 13:28:56', $relation->createdAt);
     }
 

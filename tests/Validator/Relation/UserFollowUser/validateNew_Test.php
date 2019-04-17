@@ -6,7 +6,7 @@ class UserFollowUser_Relation_Validator__validateNew__Test extends PHPUnit\Frame
     {
         $relation = new UserFollowUser_Relation_Model();
         $relation->userID = 3;
-        $relation->setFollowedUserID(9);
+        $relation->followedUserID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
 
         $this->assertEquals(true, UserFollowUser_Relation_Validator::validateNew($relation));
@@ -16,7 +16,7 @@ class UserFollowUser_Relation_Validator__validateNew__Test extends PHPUnit\Frame
     {
         $relation = new UserFollowUser_Relation_Model();
         $relation->userID = 3;
-        $relation->setFollowedUserID(9);
+        $relation->followedUserID = 9;
 
         $this->assertEquals(true, UserFollowUser_Relation_Validator::validateNew($relation));
     }

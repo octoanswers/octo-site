@@ -20,7 +20,7 @@ class UserFollowUser_Relation_Validator
     public static function validateNew(UserFollowUser_Relation_Model $relation)
     {
         self::validateUserID($relation->userID);
-        self::validateFollowedUserID($relation->getFollowedUserID());
+        self::validateFollowedUserID($relation->followedUserID);
         self::validateCreatedAt($relation->createdAt);
 
         return true;

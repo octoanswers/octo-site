@@ -7,7 +7,7 @@ class UserFollowUser_Relation_Validator__id__Test extends PHPUnit\Framework\Test
         $relation = new UserFollowUser_Relation_Model();
         $relation->setID(0);
         $relation->userID = 3;
-        $relation->setFollowedUserID(9);
+        $relation->followedUserID = 9;
 
         $this->expectExceptionMessage('UserFollowUser relation "id" property 0 must be greater than or equal to 1');
         UserFollowUser_Relation_Validator::validateExists($relation);
@@ -18,7 +18,7 @@ class UserFollowUser_Relation_Validator__id__Test extends PHPUnit\Framework\Test
         $relation = new UserFollowUser_Relation_Model();
         $relation->setID(-1);
         $relation->userID = 3;
-        $relation->setFollowedUserID(9);
+        $relation->followedUserID = 9;
 
         $this->expectExceptionMessage('UserFollowUser relation "id" property -1 must be greater than or equal to 1');
         UserFollowUser_Relation_Validator::validateExists($relation);

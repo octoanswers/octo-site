@@ -4,7 +4,7 @@ class UserFollowUser_Relation_Model extends Abstract_Model
 {
     private $id;
     public $userID;
-    private $followedUserID;
+    public $followedUserID;
     public $createdAt;
 
     #
@@ -44,15 +44,5 @@ class UserFollowUser_Relation_Model extends Abstract_Model
     public function setID(int $id)
     {
         $this->id = $id;
-    }
-
-    public function getFollowedUserID()
-    {
-        return $this->followedUserID;
-    }
-
-    public function setFollowedUserID(int $followedUserID)
-    {
-        $this->followedUserID = $followedUserID;
     }
 }

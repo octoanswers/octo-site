@@ -8,7 +8,7 @@ class UserFollowUser_Relation_Model__initWithUserIDAndFollowedUserID__Test exten
 
         $this->assertEquals(null, $rel->getID());
         $this->assertEquals(3, $rel->userID);
-        $this->assertEquals(9, $rel->getFollowedUserID());
+        $this->assertEquals(9, $rel->followedUserID);
         $this->assertEquals(null, $rel->createdAt);
     }
 }

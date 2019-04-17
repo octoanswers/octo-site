@@ -33,7 +33,7 @@ class UsersIDFollow_POST_APIController extends Abstract_APIController
 
             $relation = new UserFollowUser_Relation_Model();
             $relation->userID = $userID;
-            $relation->setFollowedUserID($followedUserID);
+            $relation->followedUserID = $followedUserID;
 
             $relation = (new UserFollowUser_Relation_Mapper($this->lang))->create($relation);
 
