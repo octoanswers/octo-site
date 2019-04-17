@@ -6,7 +6,7 @@ class Validator_Hashtag__validateExists__BaseTest extends PHPUnit\Framework\Test
     {
         $hashtag = new Hashtag_Model();
         $hashtag->setID(13);
-        $hashtag->setTitle('apple');
+        $hashtag->title = 'apple';
 
         $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
@@ -15,7 +15,7 @@ class Validator_Hashtag__validateExists__BaseTest extends PHPUnit\Framework\Test
     {
         $hashtag = new Hashtag_Model();
         $hashtag->setID(13);
-        $hashtag->setTitle('яблоко');
+        $hashtag->title = 'яблоко';
 
         $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
@@ -24,7 +24,7 @@ class Validator_Hashtag__validateExists__BaseTest extends PHPUnit\Framework\Test
     {
         $hashtag = new Hashtag_Model();
         $hashtag->setID(13);
-        $hashtag->setTitle('xy');
+        $hashtag->title = 'xy';
 
         $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }

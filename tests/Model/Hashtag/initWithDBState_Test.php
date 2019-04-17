@@ -11,7 +11,7 @@ class Model_Hashtag__initWithDBState_Test extends PHPUnit\Framework\TestCase
         ]);
 
         $this->assertEquals(13, $hashtag->getID());
-        $this->assertEquals('virtual', $hashtag->getTitle());
+        $this->assertEquals('virtual', $hashtag->title);
     }
 
     public function test_initWithDBState_FullRuParams_ReturnObj()
@@ -23,6 +23,6 @@ class Model_Hashtag__initWithDBState_Test extends PHPUnit\Framework\TestCase
         ]);
 
         $this->assertEquals(231, $hashtag->getID());
-        $this->assertEquals('медицинскиеуслуги', $hashtag->getTitle());
+        $this->assertEquals('медицинскиеуслуги', $hashtag->title);
     }
 }

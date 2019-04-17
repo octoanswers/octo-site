@@ -42,7 +42,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                 $hashtag = (new Hashtag_Query($this->lang))->findWithTitle($hashtag_title);
                 if ($hashtag === null) {
                     $hashtag = new Hashtag_Model();
-                    $hashtag->setTitle($hashtag_title);
+                    $hashtag->title = $hashtag_title;
 
                     $hashtag = (new Hashtag_Mapper($this->lang))->create($hashtag);
                 }

@@ -11,7 +11,7 @@
         <div class="pt-4 pb-0">
             <?php foreach ($this->related_hashtags as $hashtag): ?>
                 <a class="badge badge-secondary mr-2 mb-3" href="<?= $hashtag->getURL($this->lang) ?>">
-                    <?= $hashtag->getTitle() ?>
+                    <?= $hashtag->title ?>
                 </a>
             <?php endforeach; ?>
         </div>
@@ -21,7 +21,7 @@
     <!-- <div class="alert alert-super" role="alert">
         <img src="/public/img/Ghost-96.png" alt="Нет вопросов в теме «{{ hashtag.getTitle }}»"/>
         <p><strong>Вопросов нет</strong></p>
-        <p>Нет ни одного вопроса относящегося к теме «{{ hashtag.getTitle }}»</p>
+        <p>Нет ни одного вопроса относящегося к теме «{{ hashtag.title }}»</p>
         {% if authUser %}
             <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal__ask">Задать вопрос</button></p>
         {% else %}

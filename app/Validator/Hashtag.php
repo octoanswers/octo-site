@@ -27,7 +27,7 @@ class Hashtag_Validator
         if ($isExists) {
             self::validateID($hashtag->getID());
         }
-        self::validateTitle($hashtag->getTitle());
+        self::validateTitle($hashtag->title);
 
         return true;
     }

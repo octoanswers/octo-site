@@ -8,7 +8,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
     {
         $hashtag = new Hashtag_Model();
         $hashtag->setID(2215);
-        $hashtag->setTitle('impossible');
+        $hashtag->title = 'impossible';
 
         $this->expectExceptionMessage("Hashtag with ID 2215 not exists");
         $hashtag = (new Hashtag_Mapper('ru'))->update($hashtag);
@@ -18,7 +18,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
     {
         $hashtag = new Hashtag_Model();
         $hashtag->setID(0);
-        $hashtag->setTitle('car');
+        $hashtag->title = 'car';
 
         $this->expectExceptionMessage('Hashtag id param 0 must be greater than or equal to 1');
         $hashtag = (new Hashtag_Mapper('ru'))->update($hashtag);
@@ -28,7 +28,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
     {
         $hashtag = new Hashtag_Model();
         $hashtag->setID(-1);
-        $hashtag->setTitle('guf');
+        $hashtag->title = 'guf';
 
         $this->expectExceptionMessage('Hashtag id param -1 must be greater than or equal to 1');
         $hashtag = (new Hashtag_Mapper('ru'))->update($hashtag);

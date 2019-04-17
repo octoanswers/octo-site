@@ -4,9 +4,9 @@ class Hashtag_Model extends Abstract_Model
 {
     use Hashtag_URL_Trait;
 
-    private $id;
-    private $title;
-    private $words;
+    public $id; // int
+    public $title; // string
+    public $words; // string
 
     #
     # Init methods
@@ -15,7 +15,7 @@ class Hashtag_Model extends Abstract_Model
     public static function initWithTitle(string $title): Hashtag_Model
     {
         $hashtag = new self();
-        $hashtag->setTitle($title);
+        $hashtag->title = $title;
 
         return $hashtag;
     }
@@ -24,7 +24,7 @@ class Hashtag_Model extends Abstract_Model
     {
         $hashtag = new self();
         $hashtag->setID($state['h_id']);
-        $hashtag->setTitle($state['h_title']);
+        $hashtag->title = $state['h_title'];
 
         return $hashtag;
     }
@@ -41,15 +41,5 @@ class Hashtag_Model extends Abstract_Model
     public function setID(int $id)
     {
         $this->id = $id;
-    }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    public function setTitle(string $title)
-    {
-        $this->title = $title;
     }
 }

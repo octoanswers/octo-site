@@ -6,7 +6,7 @@ class Hashtag_Mapper extends Abstract_Mapper
     {
         Hashtag_Validator::validateNew($hashtag);
 
-        $hashtagTitle = $hashtag->getTitle();
+        $hashtagTitle = $hashtag->title;
 
         $sql = 'INSERT INTO hashtags (h_title) VALUES (:h_title)';
         $stmt = $this->pdo->prepare($sql);
@@ -30,7 +30,7 @@ class Hashtag_Mapper extends Abstract_Mapper
         Hashtag_Validator::validateExists($hashtag);
 
         $hashtagID = $hashtag->getID();
-        $hashtagTitle = $hashtag->getTitle();
+        $hashtagTitle = $hashtag->title;
 
         $sql = 'UPDATE hashtags SET h_title=:h_title WHERE h_id=:h_id';
         $stmt = $this->pdo->prepare($sql);

@@ -27,7 +27,7 @@ class UFollowH_Activity_Mapper extends Abstract_Mapper
                 'avatar_xs_url' => $user->getAvatarSmallURL(),
             ],
             'hashtag' => [
-                'title' => $hashtag->getTitle(),
+                'title' => $hashtag->title,
                 'url' => $hashtag->getURL($this->lang),
             ]
         ], JSON_UNESCAPED_UNICODE);

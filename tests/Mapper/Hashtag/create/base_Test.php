@@ -7,22 +7,22 @@ class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
     public function test_CreateWithEnTitle_Ok()
     {
         $hashtag = new Hashtag_Model();
-        $hashtag->setTitle('newhashtag');
+        $hashtag->title = 'newhashtag';
 
         $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
 
         $this->assertEquals(18, $hashtag->getID());
-        $this->assertEquals('newhashtag', $hashtag->getTitle());
+        $this->assertEquals('newhashtag', $hashtag->title);
     }
 
     public function test_CreateWithRuTitle_Ok()
     {
         $hashtag = new Hashtag_Model();
-        $hashtag->setTitle('новаятема');
+        $hashtag->title = 'новаятема';
 
         $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
 
         $this->assertEquals(18, $hashtag->getID());
-        $this->assertEquals('новаятема', $hashtag->getTitle());
+        $this->assertEquals('новаятема', $hashtag->title);
     }
 }

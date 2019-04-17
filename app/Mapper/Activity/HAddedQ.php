@@ -21,7 +21,7 @@ class HAddedQ_Activity_Mapper extends Abstract_Mapper
         $hashtagID = $hashtag->getID();
         $data = json_encode([
             'hashtag' => [
-                'title' => $hashtag->getTitle(),
+                'title' => $hashtag->title,
                 'url' => $hashtag->getURL($this->lang),
             ],
             'question' => [

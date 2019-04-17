@@ -100,7 +100,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageTitle()
     {
-        return str_replace('%hashtag%', $this->hashtag->getTitle(), _('Questions and answers on the hashtag %hashtag% - Answeropedia'));
+        return str_replace('%hashtag%', $this->hashtag->title, _('Questions and answers on the hashtag %hashtag% - Answeropedia'));
     }
 
     protected function _prepareFollowButton()
@@ -130,7 +130,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageDescription()
     {
-        return str_replace('%hashtag%', $this->hashtag->getTitle(), _('Questions and answers on the hashtag %hashtag%'));
+        return str_replace('%hashtag%', $this->hashtag->title, _('Questions and answers on the hashtag %hashtag%'));
     }
 
     /**
@@ -172,7 +172,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $related_titles = array_unique($related_titles);
         $related_titles = array_reverse($related_titles);
 
-        $del_val = $this->hashtag->getTitle();
+        $del_val = $this->hashtag->title;
         if (($key = array_search($del_val, $related_titles)) !== false) {
             unset($related_titles[$key]);
         }

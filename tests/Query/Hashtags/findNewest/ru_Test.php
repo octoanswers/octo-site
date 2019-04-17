@@ -11,10 +11,10 @@ class Hashtags_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(10, count($hashtags));
 
         $this->assertEquals(17, $hashtags[0]->getID());
-        $this->assertEquals('фотосинтез', $hashtags[0]->getTitle());
+        $this->assertEquals('фотосинтез', $hashtags[0]->title);
 
         $this->assertEquals(8, $hashtags[9]->getID());
-        $this->assertEquals('парфюмерия', $hashtags[9]->getTitle());
+        $this->assertEquals('парфюмерия', $hashtags[9]->title);
     }
 
     public function test_firstPage()
@@ -24,10 +24,10 @@ class Hashtags_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(10, count($hashtags));
 
         $this->assertEquals(17, $hashtags[0]->getID());
-        $this->assertEquals('фотосинтез', $hashtags[0]->getTitle());
+        $this->assertEquals('фотосинтез', $hashtags[0]->title);
 
         $this->assertEquals(8, $hashtags[9]->getID());
-        $this->assertEquals('парфюмерия', $hashtags[9]->getTitle());
+        $this->assertEquals('парфюмерия', $hashtags[9]->title);
     }
 
     public function test_secondPage()
@@ -37,10 +37,10 @@ class Hashtags_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(10, count($hashtags));
 
         $this->assertEquals(10, $hashtags[0]->getID());
-        $this->assertEquals('религия', $hashtags[0]->getTitle());
+        $this->assertEquals('религия', $hashtags[0]->title);
 
         $this->assertEquals(1, $hashtags[9]->getID());
-        $this->assertEquals('русскаялитература', $hashtags[9]->getTitle());
+        $this->assertEquals('русскаялитература', $hashtags[9]->title);
     }
 
     public function test_FindFirst13Questions_Ok()
@@ -50,9 +50,9 @@ class Hashtags_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(13, count($hashtags));
 
         $this->assertEquals(17, $hashtags[0]->getID());
-        $this->assertEquals('фотосинтез', $hashtags[0]->getTitle());
+        $this->assertEquals('фотосинтез', $hashtags[0]->title);
 
         $this->assertEquals(5, $hashtags[12]->getID());
-        $this->assertEquals('москва', $hashtags[12]->getTitle());
+        $this->assertEquals('москва', $hashtags[12]->title);
     }
 }
