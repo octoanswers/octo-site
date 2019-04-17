@@ -43,19 +43,19 @@ class AnswersID_PUT_APIController extends Abstract_APIController
             # Create revision
 
             $revision = new Revision_Model();
-            $revision->setAnswerID($answer_id);
-            $revision->setOpcodes($opcodes);
+            $revision->answerID = $answer_id;
+            $revision->opcodes = $opcodes;
             if ($old_answer_text) {
-                $revision->setBaseText($old_answer_text);
+                $revision->baseText = $old_answer_text;
             }
-            $revision->setComment($revisionComment);
-            $revision->setUserID($user->getID());
+            $revision->comment = $revisionComment;
+            $revision->userID = $user->getID();
 
             Revision_Validator::validateComment($revisionComment);
 
             $parentRevision = (new Revisions_Query($this->lang))->lastRevisionForAnswerWithID($answer_id);
             if ($parentRevision) {
-                $revision->setParentID($parentRevision->getID());
+                $revision->parentID = $parentRevision->getID();
             }
 
             $revision = (new Revision_Mapper($this->lang))->save($revision);
@@ -83,9 +83,9 @@ class AnswersID_PUT_APIController extends Abstract_APIController
                 'question_url' => $question->getURL($this->lang),
                 'answer_text' => $new_answer_text,
                 'revision_id' => $revision->getID(),
-                'revision_opcodes' => $revision->getOpcodes(),
-                'revision_base_text' => $revision->getBaseText(),
-                'revision_comment' => $revision->getComment(),
+                'revision_opcodes' => $revision->opcodes,
+                'revision_base_text' => $revision->baseText,
+                'revision_comment' => $revision->comment,
                 'user' => [
                     'id' => $user->getID(),
                     'name' => $user->getName(),

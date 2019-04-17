@@ -6,7 +6,7 @@ class UserFollowUser_Relation_Mapper extends Abstract_Mapper
     {
         UserFollowUser_Relation_Validator::validateNew($relation);
 
-        $userID = $relation->getUserID();
+        $userID = $relation->userID;
         $followedUserID = $relation->getFollowedUserID();
 
         $sql = 'INSERT INTO er_users_follow_users (user_id, followed_user_id) VALUES (:user_id, :followed_user_id)';
@@ -36,7 +36,7 @@ class UserFollowUser_Relation_Mapper extends Abstract_Mapper
     {
         UserFollowUser_Relation_Validator::validateExists($relation);
 
-        $userID = $relation->getUserID();
+        $userID = $relation->userID;
         $followedUserID = $relation->getFollowedUserID();
 
         $sql = 'DELETE FROM er_users_follow_users WHERE followed_user_id=:followed_user_id AND user_id=:user_id LIMIT 1';

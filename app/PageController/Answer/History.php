@@ -24,7 +24,7 @@ class History_Answer_PageController extends Abstract_PageController
 
         $this->users = [];
         foreach ($this->revisions as &$revision) {
-            $this->users[] = (new User_Query())->userWithID($revision->getUserID());
+            $this->users[] = (new User_Query())->userWithID($revision->userID);
         }
 
         $this->template = 'answer_history';

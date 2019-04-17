@@ -5,10 +5,10 @@ class Validator_Revision_NegativeTimestampID_Test extends PHPUnit\Framework\Test
     public function testWrongType()
     {
         $revision = new Revision_Model();
-        $revision->setAnswerID(11);
-        $revision->setOpcodes('xyz');
-        $revision->setBaseText('Ответ на вопрос про птиц.');
-        $revision->setUserID(14);
+        $revision->answerID = 11;
+        $revision->opcodes = 'xyz';
+        $revision->baseText = 'Ответ на вопрос про птиц.';
+        $revision->userID = 14;
         $revision->createdAt = 1234;
 
         $this->expectExceptionMessage('Revision createdAt param 1234 must be a string');

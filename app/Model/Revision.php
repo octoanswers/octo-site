@@ -2,13 +2,13 @@
 
 class Revision_Model extends Abstract_Model
 {
-    private $id;
-    private $answerID;
-    private $opcodes;
-    private $baseText;
-    private $comment;
-    private $parentID;
-    private $userID;
+    public $id;
+    public $answerID;
+    public $opcodes;
+    public $baseText;
+    public $comment;
+    public $parentID;
+    public $userID;
     public $createdAt;
 
     #
@@ -45,67 +45,6 @@ class Revision_Model extends Abstract_Model
         $this->id = $id;
     }
 
-    public function getAnswerID()
-    {
-        return $this->answerID;
-    }
-
-    public function setAnswerID(int $answerID)
-    {
-        $this->answerID = $answerID;
-    }
-
-    public function getOpcodes()
-    {
-        return $this->opcodes;
-    }
-
-    public function setOpcodes(string $opcodes)
-    {
-        $this->opcodes = $opcodes;
-    }
-
-    public function getBaseText()
-    {
-        return $this->baseText;
-    }
-
-    public function setBaseText(string $baseText)
-    {
-        $this->baseText = $baseText;
-    }
-
-    public function getComment()
-    {
-        return $this->comment;
-    }
-
-    public function setComment($comment)
-    {
-        $this->comment = $comment;
-    }
-
-    public function getParentID()
-    {
-        return $this->parentID;
-    }
-
-    public function setParentID(int $parentID)
-    {
-        $this->parentID = $parentID;
-    }
-
-    public function setUserID(int $userID)
-    {
-        $this->userID = $userID;
-    }
-
-    public function getUserID()
-    {
-        return $this->userID;
-    }
-
-
     #
     # Supplementary methods
     #
@@ -120,7 +59,7 @@ class Revision_Model extends Abstract_Model
 
     public function getUserInsertions(): int
     {
-        $opcodes_string = $this->getOpcodes();
+        $opcodes_string = $this->opcodes;
 
         $insertions = 0;
         preg_match_all("/i(\d+)/u", $opcodes_string, $matches);
@@ -135,7 +74,7 @@ class Revision_Model extends Abstract_Model
 
     public function getUserDeletions(): int
     {
-        $opcodes_string = $this->getOpcodes();
+        $opcodes_string = $this->opcodes;
 
         $deletions = 0;
         preg_match_all("/d(\d+)/u", $opcodes_string, $matches);

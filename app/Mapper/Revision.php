@@ -7,12 +7,12 @@ class Revision_Mapper extends Abstract_Mapper
         Revision_Validator::validate($revision);
 
         $rev_id = $revision->getID();
-        $rev_answer_id = $revision->getAnswerID();
-        $rev_opcodes = $revision->getOpcodes();
-        $rev_base_text = $revision->getBaseText();
-        $rev_comment = $revision->getComment();
-        $rev_parent_id = $revision->getParentID();
-        $rev_user_id = $revision->getUserID();
+        $rev_answer_id = $revision->answerID;
+        $rev_opcodes = $revision->opcodes;
+        $rev_base_text = $revision->baseText;
+        $rev_comment = $revision->comment;
+        $rev_parent_id = $revision->parentID;
+        $rev_user_id = $revision->userID;
 
         if (is_int($rev_id)) {
             $sql = 'UPDATE revisions SET rev_answer_id=:rev_answer_id, rev_opcodes=:rev_opcodes, rev_base_text=:rev_base_text, rev_comment=:rev_comment, rev_user_id=:rev_user_id, rev_parent_id=:rev_parent_id WHERE rev_id=:rev_id';

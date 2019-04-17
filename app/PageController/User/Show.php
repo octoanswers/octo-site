@@ -22,7 +22,7 @@ class Show_User_PageController extends Abstract_PageController
 
         $this->questions = [];
         foreach ($this->revisions as &$revision) {
-            $this->questions[] = (new Question_Query($this->lang))->questionWithID($revision->getAnswerID());
+            $this->questions[] = (new Question_Query($this->lang))->questionWithID($revision->answerID);
         }
 
         $this->_prepareFollowButton();

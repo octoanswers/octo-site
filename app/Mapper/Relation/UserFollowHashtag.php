@@ -6,7 +6,7 @@ class UserFollowHashtag_Relation_Mapper extends Abstract_Mapper
     {
         UserFollowHashtag_Relation_Validator::validateNew($relation);
 
-        $userID = $relation->getUserID();
+        $userID = $relation->userID;
         $hashtagID = $relation->getHashtagID();
 
         $sql = 'INSERT INTO er_users_follow_hashtags (user_id, hashtag_id) VALUES (:user_id, :hashtag_id)';
@@ -36,7 +36,7 @@ class UserFollowHashtag_Relation_Mapper extends Abstract_Mapper
     {
         UserFollowHashtag_Relation_Validator::validateExists($relation);
 
-        $userID = $relation->getUserID();
+        $userID = $relation->userID;
         $hashtagID = $relation->getHashtagID();
 
         $sql = 'DELETE FROM er_users_follow_hashtags WHERE hashtag_id=:hashtag_id AND user_id=:user_id LIMIT 1';

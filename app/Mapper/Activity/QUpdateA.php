@@ -40,8 +40,8 @@ class QUpdateA_Activity_Mapper extends Abstract_Mapper
                 'avatar_xs_url' => $user->getAvatarSmallURL(),
             ],
             'revision' => [
-                'diff_text' => FineDiff::renderDiffToHTMLFromOpcodes($revision->getBaseText(), $revision->getOpcodes()),
-                'comment' => $revision->getComment(),
+                'diff_text' => FineDiff::renderDiffToHTMLFromOpcodes($revision->baseText, $revision->opcodes),
+                'comment' => $revision->comment,
             ]
         ], JSON_UNESCAPED_UNICODE);
 

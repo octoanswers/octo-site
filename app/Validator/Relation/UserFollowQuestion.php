@@ -19,7 +19,7 @@ class UserFollowQuestion_Relation_Validator
 
     public static function validateNew(UserFollowQuestion_Relation_Model $rel)
     {
-        self::validateUserID($rel->getUserID());
+        self::validateUserID($rel->userID);
         self::validateQuestionID($rel->questionID);
         self::validateCreatedAt($rel->createdAt);
 

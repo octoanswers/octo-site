@@ -7,7 +7,7 @@ class UserFollowQuestion_Relation_Model__initWithUserIDAndQuestionID__Test exten
         $rel = UserFollowQuestion_Relation_Model::initWithUserIDAndQuestionID(3, 9);
 
         $this->assertEquals(null, $rel->getID());
-        $this->assertEquals(3, $rel->getUserID());
+        $this->assertEquals(3, $rel->userID);
         $this->assertEquals(9, $rel->questionID);
         $this->assertEquals(null, $rel->createdAt);
     }

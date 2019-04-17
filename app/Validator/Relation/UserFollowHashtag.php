@@ -19,7 +19,7 @@ class UserFollowHashtag_Relation_Validator
 
     public static function validateNew(UserFollowHashtag_Relation_Model $relation)
     {
-        self::validateUserID($relation->getUserID());
+        self::validateUserID($relation->userID);
         self::validateHashtagID($relation->getHashtagID());
         self::validateCreatedAt($relation->createdAt);
 

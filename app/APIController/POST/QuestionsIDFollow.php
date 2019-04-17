@@ -32,7 +32,7 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             #
 
             $relation = new UserFollowQuestion_Relation_Model();
-            $relation->setUserID($userID);
+            $relation->userID = $userID;
             $relation->questionID = $questionID;
 
             $relation = (new UserFollowQuestion_Relation_Mapper($this->lang))->create($relation);

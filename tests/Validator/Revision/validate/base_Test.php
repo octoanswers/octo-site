@@ -6,12 +6,12 @@ class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
     {
         $revision = new Revision_Model();
         $revision->setID(13);
-        $revision->setAnswerID(11);
-        $revision->setOpcodes('xyz');
-        $revision->setBaseText('Ответ на вопрос про птиц.');
-        $revision->setComment('Rev comment');
-        $revision->setParentID(2);
-        $revision->setUserID(14);
+        $revision->answerID = 11;
+        $revision->opcodes = 'xyz';
+        $revision->baseText = 'Ответ на вопрос про птиц.';
+        $revision->comment = 'Rev comment';
+        $revision->parentID = 2;
+        $revision->userID = 14;
         $revision->createdAt = '2015-12-16 13:28:56';
 
         $this->assertEquals(true, Revision_Validator::validate($revision));
@@ -20,20 +20,20 @@ class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
     public function test__RevisionWithMinParams()
     {
         $revision = new Revision_Model();
-        $revision->setAnswerID(11);
-        $revision->setOpcodes('xyz');
-        $revision->setBaseText('Ответ на вопрос про птиц.');
-        $revision->setUserID(14);
+        $revision->answerID = 11;
+        $revision->opcodes = 'xyz';
+        $revision->baseText = 'Ответ на вопрос про птиц.';
+        $revision->userID = 14;
 
         $validator = new Revision_Validator();
 
         $this->assertEquals(null, $revision->getID());
-        $this->assertEquals(11, $revision->getAnswerID());
-        $this->assertEquals('xyz', $revision->getOpcodes());
-        $this->assertEquals('Ответ на вопрос про птиц.', $revision->getBaseText());
-        $this->assertEquals(null, $revision->getComment());
-        $this->assertEquals(null, $revision->getParentID());
-        $this->assertEquals(14, $revision->getUserID());
+        $this->assertEquals(11, $revision->answerID);
+        $this->assertEquals('xyz', $revision->opcodes);
+        $this->assertEquals('Ответ на вопрос про птиц.', $revision->baseText);
+        $this->assertEquals(null, $revision->comment);
+        $this->assertEquals(null, $revision->parentID);
+        $this->assertEquals(14, $revision->userID);
         $this->assertEquals(null, $revision->createdAt);
     }
 }

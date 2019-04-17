@@ -9,7 +9,7 @@ class UserFollowQuestion_Relation_Mapper__deleteRelation__Test extends Abstract_
         // Relation must be in DB
         $relation = new UserFollowQuestion_Relation_Model();
         $relation->setID(5);
-        $relation->setUserID(7);
+        $relation->userID = 7;
         $relation->questionID = 23;
         $relation->createdAt = '2014-12-16 11:28:56';
 
@@ -23,7 +23,7 @@ class UserFollowQuestion_Relation_Mapper__deleteRelation__Test extends Abstract_
         // Not exists relation
         $relation = new UserFollowQuestion_Relation_Model();
         $relation->setID(6);
-        $relation->setUserID(22);
+        $relation->userID = 22;
         $relation->questionID = 61;
         $relation->createdAt = '2014-12-16 11:28:56';
 

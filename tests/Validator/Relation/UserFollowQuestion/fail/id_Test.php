@@ -6,7 +6,7 @@ class UserFollowQuestion_Relation_Validator__id__Test extends PHPUnit\Framework\
     {
         $rel = new UserFollowQuestion_Relation_Model();
         $rel->setID(0);
-        $rel->setUserID(3);
+        $rel->userID = 3;
         $rel->questionID = 9;
 
         $this->expectExceptionMessage('UserFollowQuestion relation "id" property 0 must be greater than or equal to 1');
@@ -17,7 +17,7 @@ class UserFollowQuestion_Relation_Validator__id__Test extends PHPUnit\Framework\
     {
         $rel = new UserFollowQuestion_Relation_Model();
         $rel->setID(-1);
-        $rel->setUserID(3);
+        $rel->userID = 3;
         $rel->questionID = 9;
 
         $this->expectExceptionMessage('UserFollowQuestion relation "id" property -1 must be greater than or equal to 1');

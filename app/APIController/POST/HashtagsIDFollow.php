@@ -32,7 +32,7 @@ class HashtagsIDFollow_POST_APIController extends Abstract_APIController
             #
 
             $relation = new UserFollowHashtag_Relation_Model();
-            $relation->setUserID($userID);
+            $relation->userID = $userID;
             $relation->setHashtagID($hashtagID);
 
             $relation = (new UserFollowHashtag_Relation_Mapper($this->lang))->create($relation);

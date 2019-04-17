@@ -15,8 +15,8 @@
             <span class="small color-gray-600">
                 <?= _('Change ID') ?> #<?= $this->revisions[$i]->getID() ?>
                 <span class="color-gray-900 font_weight_800">&middot;</span>
-                <?php if ($this->revisions[$i]->getComment()): ?>
-                    <?= _('Description of changes') ?>: <?= $this->revisions[$i]->getComment() ?>
+                <?php if ($this->revisions[$i]->comment): ?>
+                    <?= _('Description of changes') ?>: <?= $this->revisions[$i]->comment ?>
                 <?php else: ?>
                     <?= _('No description of changes') ?>
                 <?php endif; ?>
@@ -25,5 +25,5 @@
             </span>
         </div>
     </div>
-    <pre><?= FineDiff::renderDiffToHTMLFromOpcodes($this->revisions[$i]->getBaseText(), $this->revisions[$i]->getOpcodes()) ?></pre>
+    <pre><?= FineDiff::renderDiffToHTMLFromOpcodes($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
 </div>

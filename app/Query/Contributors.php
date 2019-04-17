@@ -8,7 +8,7 @@ class Contributors_Query extends Abstract_Query
         $contributions = [];
 
         foreach ($revisions as $revision) {
-            $revUserID = $revision->getUserID();
+            $revUserID = $revision->userID;
             if (isset($contributions[$revUserID])) {
                 $contributions[$revUserID]['total'] += $revision->getUserContribution();
                 $contributions[$revUserID]['plus'] += $revision->getUserInsertions();
