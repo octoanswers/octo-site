@@ -21,8 +21,8 @@ class UpdateHashtags_Question_PageController extends Abstract_PageController
         $this->hashtags_string = $this->question->getHashtags() ? implode(", ", $this->question->getHashtags()) : '';
 
         $this->template = 'question_update_hashtags';
-        $this->pageTitle = str_replace("%question%", $this->question->getTitle(), _('Update hashtags for question "%question%" - Answeropedia'));
-        $this->pageDescription = str_replace("%question%", $this->question->getTitle(), _('Update hashtags for question "%question%"'));
+        $this->pageTitle = str_replace("%question%", $this->question->title, _('Update hashtags for question "%question%" - Answeropedia'));
+        $this->pageDescription = str_replace("%question%", $this->question->title, _('Update hashtags for question "%question%"'));
         $this->includeJS[] = 'question/update_hashtags';
 
         $output = $this->renderPage();

@@ -4,7 +4,7 @@ trait Question_URL_Trait
 {
     public function getURL(string $lang): string
     {
-        return SITE_URL.'/'.$lang.'/'.$this->getID().'/'.URISlug_Helper::slug($this->getTitle());
+        return SITE_URL.'/'.$lang.'/'.$this->getID().'/'.URISlug_Helper::slug($this->title);
     }
 
     public function getShortURL(string $lang): string

@@ -11,10 +11,10 @@ class Sandbox_Query__questionsWithoutHashtags__Test extends Abstract_DB_TestCase
         $this->assertEquals(10, count($questions));
 
         $this->assertEquals(33, $questions[0]->getID());
-        $this->assertEquals('Птицы играют в игры?', $questions[0]->getTitle());
+        $this->assertEquals('Птицы играют в игры?', $questions[0]->title);
 
         $this->assertEquals(10, $questions[9]->getID());
-        $this->assertEquals('Как отрастить бороду?', $questions[9]->getTitle());
+        $this->assertEquals('Как отрастить бороду?', $questions[9]->title);
     }
 
     public function test_firstPage()
@@ -24,10 +24,10 @@ class Sandbox_Query__questionsWithoutHashtags__Test extends Abstract_DB_TestCase
         $this->assertEquals(10, count($questions));
 
         $this->assertEquals(33, $questions[0]->getID());
-        $this->assertEquals('Птицы играют в игры?', $questions[0]->getTitle());
+        $this->assertEquals('Птицы играют в игры?', $questions[0]->title);
 
         $this->assertEquals(10, $questions[9]->getID());
-        $this->assertEquals('Как отрастить бороду?', $questions[9]->getTitle());
+        $this->assertEquals('Как отрастить бороду?', $questions[9]->title);
     }
 
     public function test_secondPage()

@@ -37,7 +37,7 @@ class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
                 'user_id' => $user->getID(),
                 'user_name' => $user->name,
                 'followed_question_id' => $question->getID(),
-                'followed_question_title' => $question->getTitle(),
+                'followed_question_title' => $question->title,
             ];
         } catch (Throwable $e) {
             $output = [

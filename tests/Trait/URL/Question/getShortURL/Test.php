@@ -6,7 +6,7 @@ class Question_URL_Trait__getShortURL__Test extends PHPUnit\Framework\TestCase
     {
         $question = new Question_Model();
         $question->setID(13);
-        $question->setTitle("What is 'Touch ID' in iPhone?");
+        $question->title = "What is 'Touch ID' in iPhone?";
 
         $this->assertEquals('https://answeropedia.org/en/13', $question->getShortURL('en'));
     }

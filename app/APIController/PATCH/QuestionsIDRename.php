@@ -21,8 +21,8 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
             # change question title
 
             $question = (new Question_Query($this->lang))->questionWithID($questionID);
-            $old_title = $question->getTitle();
-            $question->setTitle($questionNewTitle);
+            $old_title = $question->title;
+            $question->title = $questionNewTitle;
             $question = (new Question_Mapper($this->lang))->update($question);
 
             $saveRedirect = (bool) $request->getParam('save_redirect');
@@ -30,14 +30,14 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
                 if (mb_strtolower($questionNewTitle) != mb_strtolower($old_title)) {
                     # create question record with OLD title & redirect flag
                     $oldQuestion = new Question_Model;
-                    $oldQuestion->setTitle($old_title);
+                    $oldQuestion->title = $old_title;
                     $oldQuestion->setRedirect(true);
                     $oldQuestion = (new Question_Mapper($this->lang))->create($oldQuestion);
 
                     # create redirect record
                     $this->redirect = new Redirect_Model();
                     $this->redirect->fromID = $oldQuestion->getID();
-                    $this->redirect->toTitle = $question->getTitle();
+                    $this->redirect->toTitle = $question->title;
                     $this->redirect = (new Redirect_Mapper($this->lang))->create($this->redirect);
                 }
             }
@@ -62,7 +62,7 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
                 'question' => [
                     'id' => $question->getID(),
                     'old_title' => $old_title,
-                    'new_title' => $question->getTitle(),
+                    'new_title' => $question->title,
                     'url' => $question->getURL($this->lang),
                 ],
                 'user' => [

@@ -17,7 +17,7 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
         ]);
 
         $this->assertEquals(13, $question->getID());
-        $this->assertEquals('This is question?', $question->getTitle());
+        $this->assertEquals('This is question?', $question->title);
         $this->assertEquals(true, $question->isRedirect());
         $this->assertEquals('Yes, it is!', $question->answer->text);
         $this->assertEquals('["ICQ","Web"]', $question->getHashtagsJSON());
@@ -38,7 +38,7 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
         ]);
 
         $this->assertEquals(13, $question->getID());
-        $this->assertEquals('Это вопрос?', $question->getTitle());
+        $this->assertEquals('Это вопрос?', $question->title);
         $this->assertEquals(true, $question->isRedirect());
         $this->assertEquals('Да, это вопрос!', $question->answer->text);
         $this->assertEquals(null, $question->getHashtagsJSON());

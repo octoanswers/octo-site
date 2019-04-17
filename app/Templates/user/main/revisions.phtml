@@ -4,7 +4,7 @@
         <div class="my-5">
             <div class="mb-3">
                 <a class="h5 color-gray-900 text-decoration-none" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
-                    <?= $this->questions[$i]->getTitle() ?>
+                    <?= $this->questions[$i]->title ?>
                 </a>
                 <div class="small color-gray-600 mt-2">
                     Правка #<?= $this->revisions[$i]->getID() ?>

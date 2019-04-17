@@ -36,7 +36,7 @@ class UUpdateA_Activity_Mapper extends Abstract_Mapper
                 'avatar_xs_url' => $user->getAvatarSmallURL(),
             ],
             'question' => [
-                'title' => $question->getTitle(),
+                'title' => $question->title,
                 'url' => $question->getURL($this->lang),
             ],
             'revision' => [

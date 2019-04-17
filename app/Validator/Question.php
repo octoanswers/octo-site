@@ -24,7 +24,7 @@ class Question_Validator
 
     public static function validateNew(Question_Model $question)
     {
-        self::validateTitle($question->getTitle());
+        self::validateTitle($question->title);
         self::validateRedirect($question->isRedirect());
         self::validateImageBaseName($question->imageBaseName);
 

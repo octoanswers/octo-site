@@ -1,7 +1,7 @@
 
 <?php if ($this->question->imageBaseName): ?>
 	<div class="mb-4">
-		<img id="question_image" class="w-100" src="<?= $this->question->getImageURLMedium($this->lang) ?>" alt="<?= $this->question->getTitle() ?>">
+		<img id="question_image" class="w-100" src="<?= $this->question->getImageURLMedium($this->lang) ?>" alt="<?= $this->question->title ?>">
 
 		<?php if ($this->authUser): ?>
 			<div class="text-right mt-1">

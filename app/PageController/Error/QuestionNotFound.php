@@ -14,7 +14,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
         $this->questionTitle = Question_URL_Helper::titleFromURI($questionURI);
 
         $question = new Question_Model();
-        $question->setTitle($this->questionTitle);
+        $question->title = $this->questionTitle;
 
         $this->template = 'error/question_not_found';
         $this->showFooter = false;

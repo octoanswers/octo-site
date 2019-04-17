@@ -30,7 +30,7 @@ class QRenamedByU_Activity_Mapper extends Abstract_Mapper
         $data = json_encode([
             'question' => [
                 'title_old' => $old_title,
-                'title_new' => $question->getTitle(),
+                'title_new' => $question->title,
                 'url' => $question->getURL($this->lang),
             ],
             'user' => [

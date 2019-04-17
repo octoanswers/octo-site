@@ -40,13 +40,13 @@ class Show_Question_PageController extends Abstract_PageController
 
             $showRedirectPage = $request->getParam('show_rd');
             if (!$showRedirectPage) {
-                $redirectTitle = $this->questionRedirect->getTitle();
+                $redirectTitle = $this->questionRedirect->title;
                 $redirectURL = Redirect_URL_Helper::getRedirectURLForTitle($this->lang, $redirectTitle);
                 return $response->withRedirect($redirectURL, 301);
             }
 
             $this->template = 'question/redirect';
-            $this->pageTitle = 'Redirect page: '.$this->question->getTitle().' - '._('Answeropedia');
+            $this->pageTitle = 'Redirect page: '.$this->question->title.' - '._('Answeropedia');
 
             $output = $this->renderPage();
             $response->getBody()->write($output);
@@ -74,7 +74,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->template = 'question';
         $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
-        $this->pageTitle = $this->question->getTitle().' - '._('Answeropedia');
+        $this->pageTitle = $this->question->title.' - '._('Answeropedia');
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->getURL($this->lang);
 
@@ -82,7 +82,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->openGraph = $this->_getOpenGraph();
 
-        $this->shareLink['title'] = $this->question->getTitle();
+        $this->shareLink['title'] = $this->question->title;
         $this->shareLink['description'] = _('Wiki-answers to your questions on Answeropedia');
         $this->shareLink['url'] = $this->question->getURL($this->lang);
         $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
@@ -128,7 +128,7 @@ class Show_Question_PageController extends Abstract_PageController
     protected function _relatedQuestions(): array
     {
         $question_id = $this->question->getID();
-        $delta = strlen($this->question->getTitle());
+        $delta = strlen($this->question->title);
         $related_questions = [];
 
         $keys = [];
@@ -152,9 +152,9 @@ class Show_Question_PageController extends Abstract_PageController
         // FIX bad "a" letter
         try {
             foreach ($related_questions as &$question) {
-                $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($question->getTitle());
-                if ($replacedTitle != $question->getTitle()) {
-                    $question->setTitle($replacedTitle);
+                $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($question->title);
+                if ($replacedTitle != $question->title) {
+                    $question->title = $replacedTitle;
                     $question = (new Question_Mapper($this->lang))->update($question);
                 }
             }
@@ -169,9 +169,9 @@ class Show_Question_PageController extends Abstract_PageController
     {
         try {
             // FIX bad "a" letter
-            $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($this->question->getTitle());
-            if ($replacedTitle != $this->question->getTitle()) {
-                $this->question->setTitle($replacedTitle);
+            $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($this->question->title);
+            if ($replacedTitle != $this->question->title) {
+                $this->question->title = $replacedTitle;
                 $this->question = (new Question_Mapper($this->lang))->update($this->question);
             }
         } catch (\Exception $e) {
@@ -181,7 +181,7 @@ class Show_Question_PageController extends Abstract_PageController
 
     protected function __getPageDescription()
     {
-        $pageDescription = str_replace('%question%', $this->question->getTitle(), _('Wiki-answer on question: %question%'));
+        $pageDescription = str_replace('%question%', $this->question->title, _('Wiki-answer on question: %question%'));
 
         return $pageDescription;
     }
@@ -191,7 +191,7 @@ class Show_Question_PageController extends Abstract_PageController
         $og = [
             'url' => $this->question->getURL($this->lang),
             'type' => "website",
-            'title' => $this->question->getTitle(),
+            'title' => $this->question->title,
             'description' => $this->__getPageDescription(),
             'locale' => $this->lang,
             'image' => IMAGE_URL.'/og-image.png'

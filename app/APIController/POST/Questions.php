@@ -34,7 +34,7 @@ class Questions_POST_APIController extends Abstract_APIController
             $output = [
                 'lang' => $this->lang,
                 'id' => $question->getID(),
-                'title' => $question->getTitle(),
+                'title' => $question->title,
                 'url' => $question->getURL($this->lang),
             ];
         } catch (Throwable $e) {

@@ -36,7 +36,7 @@ class URenameQ_Activity_Mapper extends Abstract_Mapper
             ],
             'question' => [
                 'title_old' => $old_title,
-                'title_new' => $question->getTitle(),
+                'title_new' => $question->title,
                 'url' => $question->getURL($this->lang),
             ]
         ], JSON_UNESCAPED_UNICODE);

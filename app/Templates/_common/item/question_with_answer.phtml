@@ -3,7 +3,7 @@
 <div class="my-4 pb-4 border-bottom">
     <div class="mb-3">
         <a class="h3 color-gray-900 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
-            <?= $question->getTitle() ?>
+            <?= $question->title ?>
         </a>
     </div>
     <div class="color-gray-700 my-3">
@@ -17,7 +17,7 @@
 
     <?php if ($question->imageBaseName): ?>
         <a class="d-block" href="<?= $question->getURL($this->lang) ?>">
-            <img src="<?= $question->getImageURLMedium($this->lang) ?>" alt="<?= $question->getTitle() ?>">
+            <img src="<?= $question->getImageURLMedium($this->lang) ?>" alt="<?= $question->title ?>">
         </a>
     <?php endif; ?>
 

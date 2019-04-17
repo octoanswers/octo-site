@@ -6,7 +6,7 @@ class Mapper_Question_update_title_Test extends Abstract_DB_TestCase
     {
         $question = new Question_Model();
         $question->setID(2);
-        $question->setTitle('');
+        $question->title = '';
         $question->setRedirect(true);
 
         $this->expectExceptionMessage('Question title param "" must have a length between 3 and 255');
@@ -17,7 +17,7 @@ class Mapper_Question_update_title_Test extends Abstract_DB_TestCase
     {
         $question = new Question_Model();
         $question->setID(2);
-        $question->setTitle('F');
+        $question->title = 'F';
         $question->setRedirect(true);
 
         $this->expectExceptionMessage('Question title param "F" must have a length between 3 and 255');
@@ -28,7 +28,7 @@ class Mapper_Question_update_title_Test extends Abstract_DB_TestCase
     {
         $question = new Question_Model();
         $question->setID(2);
-        $question->setTitle('Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... ');
+        $question->title = 'Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... ';
         $question->setRedirect(true);
 
         $this->expectExceptionMessage('Question title param "Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... " must have a length between 3 and 255');

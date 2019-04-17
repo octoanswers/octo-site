@@ -6,7 +6,7 @@ class Validator_Question_negative_isRedirect_Test extends PHPUnit\Framework\Test
     {
         $question = new Question_Model();
         $question->setID(13);
-        $question->setTitle('How iPhone 8 are charged?');
+        $question->title = 'How iPhone 8 are charged?';
 
         $this->assertEquals(false, $question->isRedirect());
         $this->assertEquals(true, Question_Validator::validateExists($question));

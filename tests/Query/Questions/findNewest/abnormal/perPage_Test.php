@@ -11,11 +11,11 @@ class Query_Questions_findNewest_perPage_Test extends Abstract_DB_TestCase
         $this->assertEquals(13, count($questions));
 
         $this->assertEquals(33, $questions[0]->getID());
-        $this->assertEquals('Птицы играют в игры?', $questions[0]->getTitle());
+        $this->assertEquals('Птицы играют в игры?', $questions[0]->title);
         $this->assertEquals('Нет, не играют.', $questions[0]->answer->text);
 
         $this->assertEquals(21, $questions[12]->getID());
-        $this->assertEquals('Как птицы делают видеоигры?', $questions[12]->getTitle());
+        $this->assertEquals('Как птицы делают видеоигры?', $questions[12]->title);
         $this->assertEquals('Никто не знает как птицы делают игры.', $questions[12]->answer->text);
     }
 }

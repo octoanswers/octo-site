@@ -88,7 +88,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                 'lang' => $this->lang,
                 'question' => [
                     'id' => $question->getID(),
-                    'title' => $question->getTitle(),
+                    'title' => $question->title,
                     'url' => $question->getURL($this->lang),
                 ],
                 'user_id' => $user->getID(),

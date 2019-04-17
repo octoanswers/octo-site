@@ -16,7 +16,7 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
     {
         $question = new Question_Model();
         $question->setID(13);
-        $question->setTitle('');
+        $question->title = '';
         $question->setRedirect(true);
 
         $this->expectExceptionMessage('Question title param "" must have a length between 3 and 255');
@@ -27,7 +27,7 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
     {
         $question = new Question_Model();
         $question->setID(13);
-        $question->setTitle('x');
+        $question->title = 'x';
         $question->setRedirect(true);
 
         $this->expectExceptionMessage('Question title param "x" must have a length between 3 and 255');
@@ -38,7 +38,7 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
     {
         $question = new Question_Model();
         $question->setID(13);
-        $question->setTitle('Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42.');
+        $question->title = 'Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42.';
         $question->setRedirect(true);
 
         $this->expectExceptionMessage('Question title param "Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42." must have a length between 3 and 255');

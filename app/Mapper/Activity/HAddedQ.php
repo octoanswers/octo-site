@@ -25,7 +25,7 @@ class HAddedQ_Activity_Mapper extends Abstract_Mapper
                 'url' => $hashtag->getURL($this->lang),
             ],
             'question' => [
-                'title' => $question->getTitle(),
+                'title' => $question->title,
                 'url' => $question->getURL($this->lang),
             ]
         ], JSON_UNESCAPED_UNICODE);

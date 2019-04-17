@@ -8,7 +8,7 @@ class Mapper_Question_update_id_Test extends Abstract_DB_TestCase
     {
         $question = new Question_Model();
         $question->setID(2215);
-        $question->setTitle('This is question?');
+        $question->title = 'This is question?';
         $question->setRedirect(false);
 
         $this->expectExceptionMessage("Question with ID 2215 not exists");
@@ -19,7 +19,7 @@ class Mapper_Question_update_id_Test extends Abstract_DB_TestCase
     {
         $question = new Question_Model();
         $question->setID(0);
-        $question->setTitle('This is question?');
+        $question->title = 'This is question?';
         $question->setRedirect(false);
 
         $this->expectExceptionMessage('Question id param 0 must be greater than or equal to 1');
@@ -30,7 +30,7 @@ class Mapper_Question_update_id_Test extends Abstract_DB_TestCase
     {
         $question = new Question_Model();
         $question->setID(-1);
-        $question->setTitle('This is question?');
+        $question->title = 'This is question?';
         $question->setRedirect(true);
 
         $this->expectExceptionMessage('Question id param -1 must be greater than or equal to 1');

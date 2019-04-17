@@ -25,9 +25,9 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
 
         // FIX bad "a" letter
         foreach ($this->questions as &$question) {
-            $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($question->getTitle());
-            if ($replacedTitle != $question->getTitle()) {
-                $question->setTitle($replacedTitle);
+            $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($question->title);
+            if ($replacedTitle != $question->title) {
+                $question->title = $replacedTitle;
                 $question = (new Question_Mapper($this->lang))->update($question);
             }
         }

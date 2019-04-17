@@ -6,7 +6,7 @@ class Question_Model extends Abstract_Model
     use Question_URL_Trait;
 
     public $id; // int
-    public $title;
+    public $title; // string
     public $isRedirect; // bool
     public $answer; // Answer_Model
     public $hashtags;
@@ -19,7 +19,7 @@ class Question_Model extends Abstract_Model
     public static function initWithTitle(string $title): Question_Model
     {
         $question = new self();
-        $question->setTitle($title);
+        $question->title = $title;
 
         $question->answer = new Answer_Model;
 
@@ -30,7 +30,7 @@ class Question_Model extends Abstract_Model
     {
         $question = new self();
         $question->id = (int) $state['q_id'];
-        $question->setTitle($state['q_title']);
+        $question->title = (string) $state['q_title'];
         $question->setRedirect((bool) $state['q_is_redirect']);
         $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
         if (isset($state['a_hashtags'])) {
@@ -54,16 +54,6 @@ class Question_Model extends Abstract_Model
     public function setID(int $id)
     {
         $this->id = $id;
-    }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    public function setTitle(string $title)
-    {
-        $this->title = $title;
     }
 
     public function isRedirect(): bool

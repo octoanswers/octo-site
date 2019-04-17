@@ -79,7 +79,7 @@ class AnswersID_PUT_APIController extends Abstract_APIController
 
             $output = [
                 'question_id' => $answer_id,
-                'question_title' => $question->getTitle(),
+                'question_title' => $question->title,
                 'question_url' => $question->getURL($this->lang),
                 'answer_text' => $new_answer_text,
                 'revision_id' => $revision->getID(),

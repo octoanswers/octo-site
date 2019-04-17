@@ -6,7 +6,7 @@ class Question_Mapper extends Abstract_Mapper
     {
         Question_Validator::validateNew($question);
 
-        $q_title = $question->getTitle();
+        $q_title = $question->title;
         $q_is_redirect = $question->isRedirect() ? 1 : 0;
         $q_image_base_name = $question->imageBaseName;
 
@@ -34,7 +34,7 @@ class Question_Mapper extends Abstract_Mapper
         Question_Validator::validateExists($question);
 
         $q_id = $question->getID();
-        $q_title = $question->getTitle();
+        $q_title = $question->title;
         $q_is_redirect = $question->isRedirect() ? 1 : 0;
         $q_image_base_name = $question->imageBaseName;
 

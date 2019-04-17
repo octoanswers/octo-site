@@ -6,7 +6,7 @@ class Question_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
     {
         $question = new Question_Model();
         $question->setID(19);
-        $question->setTitle('How iPhone 8 are charged?');
+        $question->title = 'How iPhone 8 are charged?';
 
         $this->assertEquals('https://answeropedia.org/en/19/how-iphone-8-are-charged', $question->getURL('en'));
     }
@@ -15,7 +15,7 @@ class Question_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
     {
         $question = new Question_Model();
         $question->setID(18);
-        $question->setTitle('Можно ли сохранить массив в COOKIE?');
+        $question->title = 'Можно ли сохранить массив в COOKIE?';
 
         $this->assertEquals('https://answeropedia.org/ru/18/mozhno-li-sohranit-massiv-v-cookie', $question->getURL('ru'));
     }
