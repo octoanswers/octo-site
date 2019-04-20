@@ -17,7 +17,7 @@ class Validator_User_validate_id_Test extends PHPUnit\Framework\TestCase
     public function test_IDEqualZero()
     {
         $user = new User_Model();
-        $user->setID(0);
+        $user->id = 0;
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';
@@ -30,7 +30,7 @@ class Validator_User_validate_id_Test extends PHPUnit\Framework\TestCase
     public function test_IDBelowZero()
     {
         $user = new User_Model();
-        $user->setID(-1);
+        $user->id = -1;
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';

@@ -17,7 +17,7 @@ class Mapper_Activity_HAQ__create__Test extends Abstract_DB_TestCase
 
         $activity = (new HAddedQ_Activity_Mapper('ru'))->create($activity);
 
-        $this->assertEquals(13, $activity->getID());
+        $this->assertEquals(13, $activity->id);
         $this->assertEquals(Activity_Model::F_H_ADDED_Q, $activity->type);
     }
 }

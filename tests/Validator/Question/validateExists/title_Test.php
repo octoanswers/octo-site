@@ -5,8 +5,8 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
     public function test_titleNotSet()
     {
         $question = new Question_Model();
-        $question->setID(13);
-        $question->setRedirect(true);
+        $question->id = 13;
+        $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param null must be a string');
         $this->assertEquals(true, Question_Validator::validateExists($question));
@@ -15,9 +15,9 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
     public function test_titleIsEmpty()
     {
         $question = new Question_Model();
-        $question->setID(13);
+        $question->id = 13;
         $question->title = '';
-        $question->setRedirect(true);
+        $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "" must have a length between 3 and 255');
         $this->assertEquals(true, Question_Validator::validateExists($question));
@@ -26,9 +26,9 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
     public function testCommentTooShort()
     {
         $question = new Question_Model();
-        $question->setID(13);
+        $question->id = 13;
         $question->title = 'x';
-        $question->setRedirect(true);
+        $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "x" must have a length between 3 and 255');
         $this->assertEquals(true, Question_Validator::validateExists($question));
@@ -37,9 +37,9 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
     public function testCommentTooLong()
     {
         $question = new Question_Model();
-        $question->setID(13);
+        $question->id = 13;
         $question->title = 'Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42.';
-        $question->setRedirect(true);
+        $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42." must have a length between 3 and 255');
         $this->assertEquals(true, Question_Validator::validateExists($question));

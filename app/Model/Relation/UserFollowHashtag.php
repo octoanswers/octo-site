@@ -2,7 +2,7 @@
 
 class UserFollowHashtag_Relation_Model extends Abstract_Model
 {
-    private $id;
+    public $id;
     public $userID;
     public $hashtagID;
     public $createdAt;
@@ -30,19 +30,5 @@ class UserFollowHashtag_Relation_Model extends Abstract_Model
         $er->createdAt = $state['created_at'];
 
         return $er;
-    }
-
-    #
-    # Getters & setters
-    #
-
-    public function getID()
-    {
-        return $this->id;
-    }
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
     }
 }

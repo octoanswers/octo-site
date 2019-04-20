@@ -5,7 +5,7 @@ class Validator_User__negative_name_Test extends PHPUnit\Framework\TestCase
     protected function setUp()
     {
         $this->user = new User_Model();
-        $this->user->setID(13);
+        $this->user->id = 13;
         $this->user->username = 'boris';
         $this->user->name = 'Boris Bro';
         $this->user->signature = 'Foo bar';

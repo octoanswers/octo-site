@@ -30,10 +30,10 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
             $question = (new Question_Mapper($this->lang))->update($question);
 
             $output = [
-                'id' => $question->getID(),
+                'id' => $question->id,
                 'title' => $question->title,
                 'url' => $question->getURL($this->lang),
-                'is_redirect' => $question->isRedirect(),
+                'is_redirect' => $question->isRedirect,
             ];
         } catch (Throwable $e) {
             $output = [

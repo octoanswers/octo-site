@@ -11,7 +11,7 @@ class HashtagToQuestion_Relation_Validator
 
     public static function validateExists(HashtagsToQuestions_Relation_Model $rel)
     {
-        self::validateID($rel->getID());
+        self::validateID($rel->id);
         self::validateNew($rel);
 
         return true;

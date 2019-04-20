@@ -10,12 +10,12 @@ class HashtagsToQuestions_Relations_Query__findNewestForhashtagWithID__Test exte
 
         $this->assertEquals(10, count($ERs));
 
-        $this->assertEquals(23, $ERs[0]->getID());
+        $this->assertEquals(23, $ERs[0]->id);
         $this->assertEquals(58, $ERs[0]->hashtagID);
         $this->assertEquals(338, $ERs[0]->questionID);
         //$this->assertEquals('Сколько зарабатывают миллионеры?', $ERs[0]->cachedQuestionTitle);
 
-        $this->assertEquals(13, $ERs[9]->getID());
+        $this->assertEquals(13, $ERs[9]->id);
         $this->assertEquals(58, $ERs[9]->hashtagID);
         $this->assertEquals(335, $ERs[9]->questionID);
         //$this->assertEquals('Исус существовал?', $ERs[9]->cachedQuestionTitle);
@@ -27,12 +27,12 @@ class HashtagsToQuestions_Relations_Query__findNewestForhashtagWithID__Test exte
 
         $this->assertEquals(10, count($ERs));
 
-        $this->assertEquals(23, $ERs[0]->getID());
+        $this->assertEquals(23, $ERs[0]->id);
         $this->assertEquals(58, $ERs[0]->hashtagID);
         $this->assertEquals(338, $ERs[0]->questionID);
         //$this->assertEquals('Сколько зарабатывают миллионеры?', $ERs[0]->cachedQuestionTitle);
 
-        $this->assertEquals(13, $ERs[9]->getID());
+        $this->assertEquals(13, $ERs[9]->id);
         $this->assertEquals(58, $ERs[9]->hashtagID);
         $this->assertEquals(335, $ERs[9]->questionID);
         //$this->assertEquals('Исус существовал?', $ERs[9]->cachedQuestionTitle);
@@ -44,12 +44,12 @@ class HashtagsToQuestions_Relations_Query__findNewestForhashtagWithID__Test exte
 
         $this->assertEquals(6, count($ERs));
 
-        $this->assertEquals(12, $ERs[0]->getID());
+        $this->assertEquals(12, $ERs[0]->id);
         $this->assertEquals(58, $ERs[0]->hashtagID);
         $this->assertEquals(33, $ERs[0]->questionID);
         //$this->assertEquals('Зачем нужен футбол?', $ERs[0]->cachedQuestionTitle);
 
-        $this->assertEquals(5, $ERs[5]->getID());
+        $this->assertEquals(5, $ERs[5]->id);
         $this->assertEquals(58, $ERs[5]->hashtagID);
         $this->assertEquals(161, $ERs[5]->questionID);
         //$this->assertEquals('Как насчитывают очки в футболе?', $ERs[5]->cachedQuestionTitle);

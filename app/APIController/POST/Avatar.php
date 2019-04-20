@@ -28,9 +28,9 @@ class Avatar_POST_APIController extends Abstract_APIController
 
             $this->handle = new upload($_FILES['new_avatar_file']);
             if ($this->handle->uploaded) {
-                $mediumAvatarFile = $this->__makeUserAvatarWithSize($user->getID(), 400);
-                $smallAvatarFile = $this->__makeUserAvatarWithSize($user->getID(), 200);
-                $extraSmallAvatarFile = $this->__makeUserAvatarWithSize($user->getID(), 100);
+                $mediumAvatarFile = $this->__makeUserAvatarWithSize($user->id, 400);
+                $smallAvatarFile = $this->__makeUserAvatarWithSize($user->id, 200);
+                $extraSmallAvatarFile = $this->__makeUserAvatarWithSize($user->id, 100);
 
                 // delete the original uploaded file
                 $this->handle->clean();

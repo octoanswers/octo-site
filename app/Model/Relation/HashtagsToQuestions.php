@@ -31,16 +31,4 @@ class HashtagsToQuestions_Relation_Model extends Abstract_Model
 
         return $er;
     }
-
-    // Getters & setters ------------------------------------------------------
-
-    public function getID()
-    {
-        return $this->id;
-    }
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
-    }
 }

@@ -53,7 +53,7 @@ class Signup_POST_APIController extends Abstract_APIController
             $cookieStorage->saveUser($user);
 
             $this->output = [
-                'id' => $user->getID(),
+                'id' => $user->id,
                 'username' => $user->username,
                 'email' => $user->email,
                 'password_hash' => $user->passwordHash,
@@ -63,7 +63,7 @@ class Signup_POST_APIController extends Abstract_APIController
                 'destination_url' => Page_URL_Helper::getMainURL($this->lang),
             ];
 
-            $this->_copyDefaultAvatar($user->getID());
+            $this->_copyDefaultAvatar($user->id);
         } catch (Throwable $e) {
             $this->output = [
                 'error_code' => $e->getCode(),

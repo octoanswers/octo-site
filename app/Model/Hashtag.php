@@ -23,23 +23,9 @@ class Hashtag_Model extends Abstract_Model
     public static function initWithDBState(array $state): Hashtag_Model
     {
         $hashtag = new self();
-        $hashtag->setID($state['h_id']);
-        $hashtag->title = $state['h_title'];
+        $hashtag->id = (int) $state['h_id'];
+        $hashtag->title = (string) $state['h_title'];
 
         return $hashtag;
-    }
-
-    #
-    # Get & Set
-    #
-
-    public function getID()
-    {
-        return $this->id;
-    }
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
     }
 }

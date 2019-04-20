@@ -10,10 +10,10 @@ class Query_Search_searchHashtags_base_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(2, count($hashtags));
 
-        $this->assertEquals(16, $hashtags[0]->getID());
+        $this->assertEquals(16, $hashtags[0]->id);
         $this->assertEquals('фотография', $hashtags[0]->title);
 
-        $this->assertEquals(17, $hashtags[1]->getID());
+        $this->assertEquals(17, $hashtags[1]->id);
         $this->assertEquals('фотосинтез', $hashtags[1]->title);
     }
 }

@@ -22,7 +22,7 @@ class Validator_Hashtag_validateNew_title_Test extends PHPUnit\Framework\TestCas
     public function test_TitleTooLong()
     {
         $hashtag = new Hashtag_Model();
-        $hashtag->setID(13);
+        $hashtag->id = 13;
         $hashtag->title = 'title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title';
 
         $this->expectExceptionMessage('Hashtag title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');

@@ -13,7 +13,7 @@ class Show_Feed_PageController extends Abstract_PageController
             exit('Not logged!');
         }
 
-        $userID = $this->authUser->getID();
+        $userID = $this->authUser->id;
 
         $res = (new Feeds_Query($this->lang))->findFeedsForUserWithID($userID);
         $this->activities = $res['activities'];

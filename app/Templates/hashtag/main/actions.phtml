@@ -10,7 +10,7 @@
     <?php if ($this->authUser): ?>
         <button
             class="btn follow_hashtag_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
-            data-hashtag-id="<?= $this->hashtag->getID() ?>"
+            data-hashtag-id="<?= $this->hashtag->id ?>"
             data-follow-title="<?= _('Follow') ?>"
             data-followed-title="<?= _('Followed') ?>"
             data-unfollow-title="<?= _('Unfollow') ?>"

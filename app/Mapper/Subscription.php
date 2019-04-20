@@ -18,8 +18,8 @@ class Subscription_Mapper extends Abstract_Mapper
             throw new Exception($sror[2], $sror[1]);
         }
 
-        $s->setID((int) $this->pdo->lastInsertId());
-        if ($s->getID() === 0) {
+        $s->id = (int) $this->pdo->lastInsertId();
+        if ($s->id === 0) {
             throw new Exception('Subscription to question not saved', 1);
         }
 

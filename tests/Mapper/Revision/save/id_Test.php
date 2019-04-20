@@ -9,7 +9,7 @@ class Mapper_Revisions_save_NegativeIDTest extends TestCase
     public function testIDEqualZero()
     {
         $revision = new Revision_Model();
-        $revision->setID(0);
+        $revision->id = 0;
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 14:22';
@@ -21,7 +21,7 @@ class Mapper_Revisions_save_NegativeIDTest extends TestCase
     public function testIDBelowZero()
     {
         $revision = new Revision_Model();
-        $revision->setID(-1);
+        $revision->id = -1;
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 14:22';

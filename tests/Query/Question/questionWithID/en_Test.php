@@ -8,7 +8,7 @@ class Question_Query__questionWithID__en__Test extends Abstract_DB_TestCase
     {
         $question = (new Question_Query('en'))->questionWithID(6);
 
-        $this->assertEquals(6, $question->getID());
+        $this->assertEquals(6, $question->id);
         $this->assertEquals('How birds are mark his territory?', $question->title);
         $this->assertEquals('4_2013_05_09_123', $question->imageBaseName);
     }

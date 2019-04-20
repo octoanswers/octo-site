@@ -11,7 +11,7 @@ class Subscription_Validator
 
     public static function validateExists(Subscription_Model $s)
     {
-        self::validateID($s->getID());
+        self::validateID($s->id);
         self::validateNew($s);
 
         return true;

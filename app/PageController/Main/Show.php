@@ -22,14 +22,14 @@ class Show_Main_PageController extends Abstract_PageController
         //     $hashtagsTitles = Hashtag_Extractor_Helper::extractHashtags($question->answer->text);
         //     foreach ($hashtagsTitles as $title) {
         //         $hashtag = Hashtag_Model::initWithTitle($title);
-        //         $this->hashtags[$question->getID()][] = $hashtag;
+        //         $this->hashtags[$question->id][] = $hashtag;
         //     }
         // }
 
         foreach ($this->recent_questions as $question) {
-            $contributors_array = (new Contributors_Query($this->lang))->findAnswerContributors($question->getID());
+            $contributors_array = (new Contributors_Query($this->lang))->findAnswerContributors($question->id);
             foreach ($contributors_array as $contributor) {
-                $this->contributors[$question->getID()][] = $contributor;
+                $this->contributors[$question->id][] = $contributor;
             }
         }
 

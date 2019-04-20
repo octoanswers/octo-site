@@ -7,7 +7,7 @@ class Mapper_User_Update_Base_Test extends Abstract_DB_TestCase
     public function test_UpdateUserWithFullParams_Ok()
     {
         $user = new User_Model();
-        $user->setID(11);
+        $user->id = 11;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->email = 'steve@aw.org';
@@ -18,7 +18,7 @@ class Mapper_User_Update_Base_Test extends Abstract_DB_TestCase
 
         $user = (new User_Mapper())->update($user);
 
-        $this->assertEquals(11, $user->getID());
+        $this->assertEquals(11, $user->id);
         $this->assertEquals('steve', $user->username);
         $this->assertEquals('Steve Bo', $user->name);
         $this->assertEquals('steve@aw.org', $user->email);

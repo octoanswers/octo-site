@@ -40,7 +40,7 @@ class CookieStorage
     {
         $expireTime = $this->_getExpireTime();
 
-        @setcookie('u_id', $user->getID(), $expireTime, '/');
+        @setcookie('u_id', $user->id, $expireTime, '/');
         @setcookie('u_username', $user->username, $expireTime, '/');
         @setcookie('u_email', $user->email, $expireTime, '/');
         @setcookie('u_name', $user->name, $expireTime, '/');

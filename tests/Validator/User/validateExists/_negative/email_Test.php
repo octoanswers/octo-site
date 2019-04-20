@@ -5,7 +5,7 @@ class Validator_User_negative_email_Test extends PHPUnit\Framework\TestCase
     public function test_NotSet()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
 
@@ -16,7 +16,7 @@ class Validator_User_negative_email_Test extends PHPUnit\Framework\TestCase
     public function test_IncorrectEmail()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->email = 'steve_answeropedia.org';

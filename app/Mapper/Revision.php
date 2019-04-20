@@ -6,7 +6,7 @@ class Revision_Mapper extends Abstract_Mapper
     {
         Revision_Validator::validate($revision);
 
-        $rev_id = $revision->getID();
+        $rev_id = $revision->id;
         $rev_answer_id = $revision->answerID;
         $rev_opcodes = $revision->opcodes;
         $rev_base_text = $revision->baseText;
@@ -46,7 +46,7 @@ class Revision_Mapper extends Abstract_Mapper
             $revision->createdAt = $now->format('Y-m-d H:i:s');
 
             $revisionID = (int) $this->pdo->lastInsertId();
-            $revision->setID($revisionID);
+            $revision->id = $revisionID;
             if ($revisionID === 0) {
                 throw new Exception('Revision not saved', 1);
             }

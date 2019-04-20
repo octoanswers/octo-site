@@ -16,7 +16,7 @@ class Mapper_Revisions_New_BaseTest extends Abstract_DB_TestCase
 
         $revision = (new Revision_Mapper('ru'))->save($revision);
 
-        $this->assertEquals(8, $revision->getID());
+        $this->assertEquals(8, $revision->id);
         $this->assertEquals(11, $revision->answerID);
         $this->assertEquals('abc', $revision->opcodes);
         $this->assertEquals('Answer written at 14:22', $revision->baseText);
@@ -35,7 +35,7 @@ class Mapper_Revisions_New_BaseTest extends Abstract_DB_TestCase
 
         $actualResponse = (new Revision_Mapper('ru'))->save($revision);
 
-        $this->assertEquals(8, $revision->getID());
+        $this->assertEquals(8, $revision->id);
         $this->assertEquals(11, $revision->answerID);
         $this->assertEquals('abc', $revision->opcodes);
         $this->assertEquals('Answer written at 14:25', $revision->baseText);
@@ -45,7 +45,7 @@ class Mapper_Revisions_New_BaseTest extends Abstract_DB_TestCase
     public function testUpdateRevisionWithFullParams()
     {
         $revision = new Revision_Model();
-        $revision->setID(5);
+        $revision->id = 5;
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 19:33';
@@ -55,7 +55,7 @@ class Mapper_Revisions_New_BaseTest extends Abstract_DB_TestCase
 
         $revision = (new Revision_Mapper('ru'))->save($revision);
 
-        $this->assertEquals(5, $revision->getID());
+        $this->assertEquals(5, $revision->id);
         $this->assertEquals(11, $revision->answerID);
         $this->assertEquals('abc', $revision->opcodes);
         $this->assertEquals('Answer written at 19:33', $revision->baseText);
@@ -67,7 +67,7 @@ class Mapper_Revisions_New_BaseTest extends Abstract_DB_TestCase
     public function testUpdateRevisionWithMinParams()
     {
         $revision = new Revision_Model();
-        $revision->setID(5);
+        $revision->id = 5;
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 14:25';
@@ -75,7 +75,7 @@ class Mapper_Revisions_New_BaseTest extends Abstract_DB_TestCase
 
         $actualResponse = (new Revision_Mapper('ru'))->save($revision);
 
-        $this->assertEquals(5, $revision->getID());
+        $this->assertEquals(5, $revision->id);
         $this->assertEquals(11, $revision->answerID);
         $this->assertEquals('abc', $revision->opcodes);
         $this->assertEquals('Answer written at 14:25', $revision->baseText);

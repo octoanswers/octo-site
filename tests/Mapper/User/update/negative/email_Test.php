@@ -5,7 +5,7 @@ class Mapper_User_save_negative_email_Test extends Abstract_DB_TestCase
     public function test_notSet()
     {
         $user = new User_Model();
-        $user->setID(37);
+        $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';
@@ -19,7 +19,7 @@ class Mapper_User_save_negative_email_Test extends Abstract_DB_TestCase
     public function test_incorrect()
     {
         $user = new User_Model();
-        $user->setID(37);
+        $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->email = 'steve_aw.org';

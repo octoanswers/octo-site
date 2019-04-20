@@ -5,7 +5,7 @@ class Validator_Answer_text_Test extends PHPUnit\Framework\TestCase
     public function test_empty()
     {
         $answer = new Answer_Model();
-        $answer->setID(4);
+        $answer->id = 4;
         $answer->text = '';
         $answer->updatedAt = '2016-03-19 06:47:41';
 

@@ -5,7 +5,7 @@ class Validator_User_negative_api_key_Test extends PHPUnit\Framework\TestCase
     public function test_APIKeyNotSet()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';
@@ -19,7 +19,7 @@ class Validator_User_negative_api_key_Test extends PHPUnit\Framework\TestCase
     public function test_APIKeyIsEmpty()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';
@@ -34,7 +34,7 @@ class Validator_User_negative_api_key_Test extends PHPUnit\Framework\TestCase
     public function test_APIKeyTooShort()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';
@@ -49,7 +49,7 @@ class Validator_User_negative_api_key_Test extends PHPUnit\Framework\TestCase
     public function test_APIKeyTooLong()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';

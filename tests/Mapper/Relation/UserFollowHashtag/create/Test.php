@@ -12,7 +12,7 @@ class UserFollowHashtag_Relation_Mapper__create__Test extends Abstract_DB_TestCa
 
         $relation = (new UserFollowHashtag_Relation_Mapper('ru'))->create($relation);
 
-        $this->assertEquals(12, $relation->getID());
+        $this->assertEquals(12, $relation->id);
         $this->assertEquals(3, $relation->userID);
         $this->assertEquals(19, $relation->hashtagID);
     }

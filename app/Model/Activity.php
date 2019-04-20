@@ -24,16 +24,4 @@ class Activity_Model extends Abstract_Model
     public $type; // string
     public $subject; // string
     public $data; // string
-
-    // Getters & setters ------------------------------------------------------
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
-    }
-
-    public function getID()
-    {
-        return $this->id;
-    }
 }

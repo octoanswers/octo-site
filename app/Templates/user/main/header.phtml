@@ -30,10 +30,10 @@
 
         <!-- actions -->
         <div class="mt-4">
-            <?php if ($this->authUser && $this->authUser->getID() != $this->user->getID()): ?>
+            <?php if ($this->authUser && $this->authUser->id != $this->user->id): ?>
                 <button
                     class="btn btn-block follow_user_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
-                    data-user-id="<?= $this->user->getID() ?>"
+                    data-user-id="<?= $this->user->id ?>"
                     data-follow-title="<?= _('Follow') ?>"
                     data-followed-title="<?= _('Followed') ?>"
                     data-unfollow-title="<?= _('Unfollow') ?>" type="button">
@@ -41,7 +41,7 @@
                     <span><?= $this->followed ? _('Followed') : _('Follow'); ?></span>
                 </button>
             <?php endif; ?>
-            <?php if ($this->authUser && ($this->authUser->getID() == $this->user->getID())): ?>
+            <?php if ($this->authUser && ($this->authUser->id == $this->user->id)): ?>
                 <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::getSettingsURL($this->lang) ?>">
                     <i class="fas fa-cog"></i>
                     <?= _('Settings') ?>

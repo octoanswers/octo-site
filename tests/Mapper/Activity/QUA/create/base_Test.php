@@ -12,7 +12,7 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
         $answer->text = 'Melody of my life.';
 
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';
 
@@ -34,7 +34,7 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
 
         $activity = (new QUpdateA_Activity_Mapper('ru'))->create($activity);
 
-        $this->assertEquals(13, $activity->getID());
+        $this->assertEquals(13, $activity->id);
         $this->assertEquals(Activity_Model::F_Q_UPDATE_A, $activity->type);
     }
 }

@@ -7,7 +7,7 @@ class Mapper_User_Update_id_Test extends Abstract_DB_TestCase
     public function test_UpdateUserWithNotExistsID_ThrowException()
     {
         $user = new User_Model();
-        $user->setID(1352);
+        $user->id = 1352;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->signature = 'Foo bar';
@@ -22,7 +22,7 @@ class Mapper_User_Update_id_Test extends Abstract_DB_TestCase
     public function test_UpdateUserWithIDEqualZero_ThrowException()
     {
         $user = new User_Model();
-        $user->setID(0);
+        $user->id = 0;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->signature = 'Foo bar';
@@ -38,7 +38,7 @@ class Mapper_User_Update_id_Test extends Abstract_DB_TestCase
     public function test_UpdateUserWithIDBelowZero_ThrowException()
     {
         $user = new User_Model();
-        $user->setID(-1);
+        $user->id = -1;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->signature = 'Foo bar';

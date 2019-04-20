@@ -6,7 +6,7 @@ class UserFollowHashtag_Relation_Model__initWithUserIDAndHashtagID__Test extends
     {
         $rel = UserFollowHashtag_Relation_Model::initWithUserIDAndHashtagID(3, 9);
 
-        $this->assertEquals(null, $rel->getID());
+        $this->assertEquals(null, $rel->id);
         $this->assertEquals(3, $rel->userID);
         $this->assertEquals(9, $rel->hashtagID);
         $this->assertEquals(null, $rel->createdAt);

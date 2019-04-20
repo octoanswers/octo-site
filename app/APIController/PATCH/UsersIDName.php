@@ -23,7 +23,7 @@ class UsersIDName_PATCH_APIController extends Abstract_APIController
             $user = (new User_Query())->userWithAPIKey($api_key);
             $oldName = $user->name;
 
-            if ($user->getID() != $userID) {
+            if ($user->id != $userID) {
                 throw new \Exception("Incorrect user id or API-key", 0);
             }
 
@@ -34,7 +34,7 @@ class UsersIDName_PATCH_APIController extends Abstract_APIController
 
             $output = [
                 'user' => [
-                    'id' => $user->getID(),
+                    'id' => $user->id,
                     'name' => $user->name,
                     'name_old' => $oldName,
                 ],

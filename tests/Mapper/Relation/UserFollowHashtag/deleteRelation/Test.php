@@ -8,7 +8,7 @@ class UserFollowHashtag_Relation_Mapper__deleteRelation__Test extends Abstract_D
     {
         // Relation must be in DB
         $relation = new UserFollowHashtag_Relation_Model();
-        $relation->setID(6);
+        $relation->id = 6;
         $relation->userID = 2;
         $relation->hashtagID = 16;
         $relation->createdAt = '2014-12-16 11:28:56';
@@ -22,7 +22,7 @@ class UserFollowHashtag_Relation_Mapper__deleteRelation__Test extends Abstract_D
     {
         // Not exists relation
         $relation = new UserFollowHashtag_Relation_Model();
-        $relation->setID(6);
+        $relation->id = 6;
         $relation->userID = 22;
         $relation->hashtagID = 61;
         $relation->createdAt = '2014-12-16 11:28:56';

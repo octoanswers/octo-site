@@ -4,7 +4,7 @@
 <?php if (count($this->questions)): ?>
     <?php foreach ($this->questions as $question): ?>
         <?php
-        if (isset($this->redirects[$question->getID()])) {
+        if (isset($this->redirects[$question->id])) {
             require TEMPLATE_PATH.'/sandbox/main/redirect.phtml';
             continue;
         } else {

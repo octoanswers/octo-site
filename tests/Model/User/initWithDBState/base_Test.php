@@ -16,7 +16,7 @@ class Model_User_initWithDBState_Test extends PHPUnit\Framework\TestCase
             'u_created_at' => '2016-03-19 06:47:41',
         ]);
 
-        $this->assertEquals(13, $user->getID());
+        $this->assertEquals(13, $user->id);
         $this->assertEquals('steve', $user->username);
         $this->assertEquals('Steve Bo', $user->name);
         $this->assertEquals('steve@aw.org', $user->email);
@@ -37,7 +37,7 @@ class Model_User_initWithDBState_Test extends PHPUnit\Framework\TestCase
             'u_created_at' => '2016-03-19 06:47:41',
         ]);
 
-        $this->assertEquals(13, $user->getID());
+        $this->assertEquals(13, $user->id);
         $this->assertEquals('steve', $user->username);
         $this->assertEquals('Steve Bo', $user->name);
         $this->assertEquals('steve@aw.org', $user->email);

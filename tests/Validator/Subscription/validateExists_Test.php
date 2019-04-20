@@ -5,7 +5,7 @@ class Validator_Subscription__validateExists__Test extends PHPUnit\Framework\Tes
     public function test__FullParams__OK()
     {
         $s = new Subscription_Model();
-        $s->setID(18);
+        $s->id = 18;
         $s->questionID = 9;
         $s->email = 'loz@ba.com';
         $s->createdAt = '2015-11-29 09:28:34';
@@ -16,7 +16,7 @@ class Validator_Subscription__validateExists__Test extends PHPUnit\Framework\Tes
     public function test__MinParams__OK()
     {
         $s = new Subscription_Model();
-        $s->setID(89);
+        $s->id = 89;
         $s->questionID = 9;
         $s->email = 'loz@ba.com';
 

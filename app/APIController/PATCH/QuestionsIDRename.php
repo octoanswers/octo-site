@@ -16,7 +16,7 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
             # Validate params
 
             $user = (new User_Query())->userWithAPIKey($api_key);
-            $userID = $user->getID();
+            $userID = $user->id;
 
             # change question title
 
@@ -31,12 +31,12 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
                     # create question record with OLD title & redirect flag
                     $oldQuestion = new Question_Model;
                     $oldQuestion->title = $old_title;
-                    $oldQuestion->setRedirect(true);
+                    $oldQuestion->isRedirect = true;
                     $oldQuestion = (new Question_Mapper($this->lang))->create($oldQuestion);
 
                     # create redirect record
                     $this->redirect = new Redirect_Model();
-                    $this->redirect->fromID = $oldQuestion->getID();
+                    $this->redirect->fromID = $oldQuestion->id;
                     $this->redirect->toTitle = $question->title;
                     $this->redirect = (new Redirect_Mapper($this->lang))->create($this->redirect);
                 }
@@ -60,22 +60,22 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
 
             $output = [
                 'question' => [
-                    'id' => $question->getID(),
+                    'id' => $question->id,
                     'old_title' => $old_title,
                     'new_title' => $question->title,
                     'url' => $question->getURL($this->lang),
                 ],
                 'user' => [
-                    'id' => $user->getID(),
+                    'id' => $user->id,
                     'name' => $user->name,
                 ],
                 'activities' => [
                     [
-                        'id' => $activity->getID(),
+                        'id' => $activity->id,
                         'type' => $activity->type,
                     ],
                     [
-                        'id' => $activity2->getID(),
+                        'id' => $activity2->id,
                         'type' => $activity2->type,
                     ],
                 ]

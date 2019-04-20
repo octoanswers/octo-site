@@ -5,7 +5,7 @@ class Validator__Relation__HashtagToQuestion__fail__id_Test extends PHPUnit\Fram
     public function test_IDEqualZero()
     {
         $rel = new HashtagsToQuestions_Relation_Model();
-        $rel->setID(0);
+        $rel->id = 0;
         $rel->hashtagID = 3;
         $rel->questionID = 9;
 
@@ -16,7 +16,7 @@ class Validator__Relation__HashtagToQuestion__fail__id_Test extends PHPUnit\Fram
     public function test__IDBelowZero()
     {
         $rel = new HashtagsToQuestions_Relation_Model();
-        $rel->setID(-1);
+        $rel->id = -1;
         $rel->hashtagID = 3;
         $rel->questionID = 9;
 

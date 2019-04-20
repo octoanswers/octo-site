@@ -11,7 +11,7 @@ class UserFollowUser_Relation_Validator
 
     public static function validateExists(UserFollowUser_Relation_Model $relation)
     {
-        self::validateID($relation->getID());
+        self::validateID($relation->id);
         self::validateNew($relation);
 
         return true;

@@ -19,8 +19,8 @@ class UserFollowHashtag_Relation_Mapper extends Abstract_Mapper
         }
 
         $relationID = (int) $this->pdo->lastInsertId();
-        $relation->setID($relationID);
-        if ($relation->getID() === 0) {
+        $relation->id = $relationID;
+        if ($relation->id === 0) {
             throw new Exception('UserFollowHashtag relation not saved', 1);
         }
 

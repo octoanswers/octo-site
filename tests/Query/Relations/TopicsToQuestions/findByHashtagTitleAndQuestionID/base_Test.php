@@ -8,7 +8,7 @@ class Query_ER_HashtagsQuestions__findByHashtagTitleAndQuestionID__Test extends 
     {
         $er = (new HashtagsToQuestions_Relations_Query('ru'))->findByHashtagTitleAndQuestionID('птицы', 22);
 
-        $this->assertEquals(21, $er->getID());
+        $this->assertEquals(21, $er->id);
         $this->assertEquals(13, $er->hashtagID);
         $this->assertEquals(22, $er->questionID);
     }

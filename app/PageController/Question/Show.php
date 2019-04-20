@@ -34,8 +34,8 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->_tempJobs();
 
-        if ($this->question->isRedirect()) {
-            $redirect = (new Redirects_Query($this->lang))->redirectForQuestionWithID($this->question->getID());
+        if ($this->question->isRedirect) {
+            $redirect = (new Redirects_Query($this->lang))->redirectForQuestionWithID($this->question->id);
             $this->questionRedirect = Question_Model::initWithTitle($redirect->toTitle);
 
             $showRedirectPage = $request->getParam('show_rd');
@@ -63,7 +63,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->_prepareFollowButton();
 
-        $this->contributors = (new Contributors_Query($this->lang))->findAnswerContributors($this->question->getID());
+        $this->contributors = (new Contributors_Query($this->lang))->findAnswerContributors($this->question->id);
 
         if (count($this->contributors) > 3) {
             $this->contributors_top = array_slice($this->contributors, 0, 3);
@@ -116,8 +116,8 @@ class Show_Question_PageController extends Abstract_PageController
     protected function _prepareFollowButton()
     {
         if ($this->authUser) {
-            $authUserID = $this->authUser->getID();
-            $question_id = $this->question->getID();
+            $authUserID = $this->authUser->id;
+            $question_id = $this->question->id;
 
             $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relationWithUserIDAndQuestionID($authUserID, $question_id);
 
@@ -127,7 +127,7 @@ class Show_Question_PageController extends Abstract_PageController
 
     protected function _relatedQuestions(): array
     {
-        $question_id = $this->question->getID();
+        $question_id = $this->question->id;
         $delta = strlen($this->question->title);
         $related_questions = [];
 

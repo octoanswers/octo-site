@@ -15,7 +15,7 @@ class Model_Revision_initWithDBState_Test extends PHPUnit\Framework\TestCase
             'rev_created_at' => '2015-12-16 13:28:56',
         ]);
 
-        $this->assertEquals(13, $revision->getID());
+        $this->assertEquals(13, $revision->id);
         $this->assertEquals(11, $revision->answerID);
         $this->assertEquals('opCodes', $revision->opcodes);
         $this->assertEquals('Ответ на вопрос про птиц.', $revision->baseText);
@@ -38,7 +38,7 @@ class Model_Revision_initWithDBState_Test extends PHPUnit\Framework\TestCase
             'rev_created_at' => '2015-12-16 13:28:56',
         ]);
 
-        $this->assertEquals(13, $revision->getID());
+        $this->assertEquals(13, $revision->id);
         $this->assertEquals(11, $revision->answerID);
         $this->assertEquals('opCodes', $revision->opcodes);
         $this->assertEquals('Ответ на вопрос про птиц.', $revision->baseText);

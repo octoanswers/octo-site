@@ -23,7 +23,7 @@ class UsersIDSite_PATCH_APIController extends Abstract_APIController
             $user = (new User_Query())->userWithAPIKey($api_key);
             $old_site = $user->site;
 
-            if ($user->getID() != $user_ID) {
+            if ($user->id != $user_ID) {
                 throw new \Exception("Incorrect user id or API-key", 0);
             }
 
@@ -34,7 +34,7 @@ class UsersIDSite_PATCH_APIController extends Abstract_APIController
 
             $output = [
                 'user' => [
-                    'id' => $user->getID(),
+                    'id' => $user->id,
                     'name' => $user->name,
                     'site_old' => $old_site,
                     'site_new' => $new_site,

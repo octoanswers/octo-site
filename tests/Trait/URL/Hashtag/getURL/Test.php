@@ -6,7 +6,7 @@ class Hashtag_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
     {
         $hashtag = new Hashtag_Model;
         $hashtag->title = 'foo';
-        $hashtag->setID(12);
+        $hashtag->id = 12;
 
         $this->assertEquals('https://answeropedia.org/en/hashtag/12/foo', $hashtag->getURL('en'));
     }
@@ -15,7 +15,7 @@ class Hashtag_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
     {
         $hashtag = new Hashtag_Model;
         $hashtag->title = 'дождь';
-        $hashtag->setID(34);
+        $hashtag->id = 34;
 
         $this->assertEquals('https://answeropedia.org/ru/hashtag/34/dozhd', $hashtag->getURL('ru'));
     }
@@ -24,7 +24,7 @@ class Hashtag_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
     {
         $hashtag = new Hashtag_Model;
         $hashtag->title = 'проливной_дождь';
-        $hashtag->setID(56);
+        $hashtag->id = 56;
 
         $this->assertEquals('https://answeropedia.org/ru/hashtag/56/prolivnoi-dozhd', $hashtag->getURL('ru'));
     }

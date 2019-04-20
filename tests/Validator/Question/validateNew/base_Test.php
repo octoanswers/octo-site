@@ -6,7 +6,7 @@ class Validator_Question_validateNew_BaseTest extends PHPUnit\Framework\TestCase
     {
         $question = new Question_Model();
         $question->title = 'How iPhone 8 are charged?';
-        $question->setRedirect(true);
+        $question->isRedirect = true;
 
         $this->assertEquals(true, Question_Validator::validateNew($question));
     }

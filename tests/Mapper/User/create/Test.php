@@ -18,7 +18,7 @@ class Mapper_User_Create__Test extends Abstract_DB_TestCase
 
         $user = (new User_Mapper())->create($user);
 
-        $this->assertEquals(16, $user->getID());
+        $this->assertEquals(16, $user->id);
         $this->assertEquals('steve', $user->username);
         $this->assertEquals('Steve Bo', $user->name);
         $this->assertEquals('steve@aw.org', $user->email);

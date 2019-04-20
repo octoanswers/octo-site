@@ -5,7 +5,7 @@ class UserFollowHashtag_Relation_Validator__validateExists__Test extends PHPUnit
     public function test__FullParams__OK()
     {
         $relation = new UserFollowHashtag_Relation_Model();
-        $relation->setID(13);
+        $relation->id = 13;
         $relation->userID = 3;
         $relation->hashtagID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
@@ -16,7 +16,7 @@ class UserFollowHashtag_Relation_Validator__validateExists__Test extends PHPUnit
     public function test__MinParams__OK()
     {
         $relation = new UserFollowHashtag_Relation_Model();
-        $relation->setID(13);
+        $relation->id = 13;
         $relation->userID = 3;
         $relation->hashtagID = 9;
 

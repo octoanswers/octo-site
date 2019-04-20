@@ -65,6 +65,6 @@ class HashtagsToQuestions_Relations_Query extends Abstract_Query
             return null;
         }
 
-        return (new HashtagsToQuestions_Relations_Query($this->lang))->findByHashtagIDAndQuestionID($hashtag->getID(), $question_id);
+        return (new HashtagsToQuestions_Relations_Query($this->lang))->findByHashtagIDAndQuestionID($hashtag->id, $question_id);
     }
 }

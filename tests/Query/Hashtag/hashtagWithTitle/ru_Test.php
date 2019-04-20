@@ -8,7 +8,7 @@ class Hashtag_Query__findWithTitle__ru__Test extends Abstract_DB_TestCase
     {
         $hashtag = (new Hashtag_Query('ru'))->findWithTitle('парфюмерия');
 
-        $this->assertEquals(8, $hashtag->getID());
+        $this->assertEquals(8, $hashtag->id);
         $this->assertEquals('парфюмерия', $hashtag->title);
     }
 

@@ -23,7 +23,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             $user = (new User_Query())->userWithAPIKey($api_key);
             $old_signature = $user->signature;
 
-            if ($user->getID() != $userID) {
+            if ($user->id != $userID) {
                 throw new \Exception("Incorrect user id or API-key", 0);
             }
 
@@ -42,7 +42,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
 
             $output = [
                 'user' => [
-                    'id' => $user->getID(),
+                    'id' => $user->id,
                     'name' => $user->name,
                     'signature_old' => $old_signature,
                     'signature_new' => $signature,

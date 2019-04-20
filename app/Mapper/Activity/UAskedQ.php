@@ -18,10 +18,10 @@ class UAskedQ_Activity_Mapper extends Abstract_Mapper
             throw new Exception('Incorrect activity "data" class type: '.get_class($question), 0);
         }
 
-        $userID = $user->getID();
+        $userID = $user->id;
         $data = json_encode([
             'user' => [
-                'id' => $user->getID(),
+                'id' => $user->id,
                 'name' => $user->name,
                 'profile_url' => $user->getURL($this->lang),
                 'avatar_xs_url' => $user->getAvatarSmallURL(),
@@ -42,8 +42,8 @@ class UAskedQ_Activity_Mapper extends Abstract_Mapper
             throw new Exception($error[2], $error[1]);
         }
 
-        $activity->setID((int) $this->pdo->lastInsertId());
-        if ($activity->getID() === 0) {
+        $activity->id = (int) $this->pdo->lastInsertId();
+        if ($activity->id === 0) {
             throw new Exception('Activity not saved', 1);
         }
 

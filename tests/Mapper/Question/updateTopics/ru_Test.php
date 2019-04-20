@@ -7,12 +7,12 @@ class Mapper_Question__updateHashtags__ru_Test extends Abstract_DB_TestCase
     public function test__Base()
     {
         $question = new Question_Model();
-        $question->setID(13);
+        $question->id = 13;
         $question->setHashtags(['iPhone 8', 'Apple']);
 
         $question = (new Question_Mapper('ru'))->updateHashtags($question);
 
-        $this->assertEquals(13, $question->getID());
+        $this->assertEquals(13, $question->id);
         $this->assertEquals('["iPhone 8","Apple"]', $question->getHashtagsJSON());
         $this->assertEquals(['iPhone 8', 'Apple'], $question->getHashtags());
     }
@@ -20,12 +20,12 @@ class Mapper_Question__updateHashtags__ru_Test extends Abstract_DB_TestCase
     public function test__EmptyArray()
     {
         $question = new Question_Model();
-        $question->setID(13);
+        $question->id = 13;
         $question->setHashtags([]);
 
         $question = (new Question_Mapper('ru'))->updateHashtags($question);
 
-        $this->assertEquals(13, $question->getID());
+        $this->assertEquals(13, $question->id);
         $this->assertEquals(null, $question->getHashtagsJSON());
         $this->assertEquals([], $question->getHashtags());
     }
@@ -33,11 +33,11 @@ class Mapper_Question__updateHashtags__ru_Test extends Abstract_DB_TestCase
     public function test__HashtagsNotSet()
     {
         $question = new Question_Model();
-        $question->setID(13);
+        $question->id = 13;
 
         $question = (new Question_Mapper('ru'))->updateHashtags($question);
 
-        $this->assertEquals(13, $question->getID());
+        $this->assertEquals(13, $question->id);
         $this->assertEquals(null, $question->getHashtagsJSON());
         $this->assertEquals([], $question->getHashtags());
     }

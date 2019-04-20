@@ -5,7 +5,7 @@ class UserFollowUser_Relation_Validator__id__Test extends PHPUnit\Framework\Test
     public function test_IDEqualZero()
     {
         $relation = new UserFollowUser_Relation_Model();
-        $relation->setID(0);
+        $relation->id = 0;
         $relation->userID = 3;
         $relation->followedUserID = 9;
 
@@ -16,7 +16,7 @@ class UserFollowUser_Relation_Validator__id__Test extends PHPUnit\Framework\Test
     public function test__IDBelowZero()
     {
         $relation = new UserFollowUser_Relation_Model();
-        $relation->setID(-1);
+        $relation->id = -1;
         $relation->userID = 3;
         $relation->followedUserID = 9;
 

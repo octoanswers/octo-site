@@ -43,8 +43,8 @@ class User_Mapper extends Abstract_Mapper
         $user->createdAt = $now->format('Y-m-d H:i:s');
 
         $userID = (int) $this->pdo->lastInsertId();
-        $user->setID($userID);
-        if ($user->getID() === 0) {
+        $user->id = $userID;
+        if ($user->id === 0) {
             throw new Exception('User not saved', 1);
         }
 
@@ -55,7 +55,7 @@ class User_Mapper extends Abstract_Mapper
     {
         User_Validator::validateExists($user);
 
-        $u_id = (int) $user->getID();
+        $u_id = (int) $user->id;
         $u_username = $user->username;
         $u_name = $user->name;
         $u_email = $user->email;

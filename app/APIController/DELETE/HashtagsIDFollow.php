@@ -18,13 +18,12 @@ class HashtagsIDFollow_DELETE_APIController extends Abstract_APIController
             #
 
             $user = (new User_Query())->userWithAPIKey($api_key);
-            $userID = $user->getID();
 
             $hashtag = (new Hashtag_Query($this->lang))->hashtagWithID($hashtagID);
 
-            $relation = (new UsersFollowHashtags_Relations_Query($this->lang))->relationWithUserIDAndHashtagID($userID, $hashtagID);
+            $relation = (new UsersFollowHashtags_Relations_Query($this->lang))->relationWithUserIDAndHashtagID($user->id, $hashtagID);
             if (!$relation) {
-                throw new Exception('User with ID "'.$userID.'" not followed hashtag with ID "'.$hashtagID.'"', 0);
+                throw new Exception('User with ID "'.$user->id.'" not followed hashtag with ID "'.$hashtagID.'"', 0);
             }
 
             #
@@ -34,10 +33,10 @@ class HashtagsIDFollow_DELETE_APIController extends Abstract_APIController
             (new UserFollowHashtag_Relation_Mapper($this->lang))->deleteRelation($relation);
 
             $output = [
-                'user_id' => $user->getID(),
+                'user_id' => $user->id,
                 'user_name' => $user->name,
                 'unfollowed_hashtag' => [
-                    'id' => $hashtag->getID(),
+                    'id' => $hashtag->id,
                     'title' => $hashtag->title,
                 ],
             ];

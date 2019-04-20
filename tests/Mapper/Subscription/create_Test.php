@@ -12,7 +12,7 @@ class Mapper_Subscription__create__Test extends Abstract_DB_TestCase
 
         $s = (new Subscription_Mapper('ru'))->create($s);
 
-        $this->assertEquals(5, $s->getID());
+        $this->assertEquals(5, $s->id);
         $this->assertEquals(9, $s->questionID);
         $this->assertEquals('losh@adka.ru', $s->email);
     }

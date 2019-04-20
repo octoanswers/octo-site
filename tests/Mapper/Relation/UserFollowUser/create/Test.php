@@ -12,7 +12,7 @@ class UserFollowUser_Relation_Mapper__create__Test extends Abstract_DB_TestCase
 
         $relation = (new UserFollowUser_Relation_Mapper('ru'))->create($relation);
 
-        $this->assertEquals(8, $relation->getID());
+        $this->assertEquals(8, $relation->id);
         $this->assertEquals(3, $relation->userID);
         $this->assertEquals(19, $relation->followedUserID);
     }

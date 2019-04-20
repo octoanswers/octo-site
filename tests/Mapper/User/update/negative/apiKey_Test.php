@@ -5,7 +5,7 @@ class Mapper_User_save_negative_apiKey_Test extends Abstract_DB_TestCase
     public function test_notSet()
     {
         $user = new User_Model();
-        $user->setID(37);
+        $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->signature = 'Foo bar';
@@ -20,7 +20,7 @@ class Mapper_User_save_negative_apiKey_Test extends Abstract_DB_TestCase
     public function test_tooShort()
     {
         $user = new User_Model();
-        $user->setID(37);
+        $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->signature = 'Foo bar';
@@ -36,7 +36,7 @@ class Mapper_User_save_negative_apiKey_Test extends Abstract_DB_TestCase
     public function test_tooLong()
     {
         $user = new User_Model();
-        $user->setID(37);
+        $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->signature = 'Foo bar';

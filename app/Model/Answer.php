@@ -20,18 +20,4 @@ class Answer_Model extends Abstract_Model
 
         return $answer;
     }
-
-    #
-    # Get & Set
-    #
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
-    }
-
-    public function getID()
-    {
-        return $this->id;
-    }
 }

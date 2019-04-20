@@ -10,7 +10,7 @@ class Query_Questions__findRecentlyUpdated__en__Test extends Abstract_DB_TestCas
 
         $this->assertEquals(9, count($questions));
 
-        $this->assertEquals(14, $questions[0]->getID());
+        $this->assertEquals(14, $questions[0]->id);
         $this->assertEquals('How are you?', $questions[0]->title);
         $this->assertEquals('I`m fine, bro!', $questions[0]->answer->text);
     }

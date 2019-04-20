@@ -15,7 +15,7 @@ class Revision_Validator
     public static function validate(Revision_Model $revision)
     {
         try {
-            v::optional(v::intType()->min(1, true))->assert($revision->getID());
+            v::optional(v::intType()->min(1, true))->assert($revision->id);
         } catch (NestedValidationException $exception) {
             throw new Exception('Revision id param '.$exception->getMessages()[0], 0);
         }

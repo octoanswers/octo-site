@@ -34,7 +34,7 @@ class Login_POST_APIController extends Abstract_APIController
 
             $output = [
                 'lang' => $this->lang,
-                'id' => $user->getID(),
+                'id' => $user->id,
                 'email' => $user->email,
                 'name' => $user->name,
                 'api_key' => $user->apiKey,

@@ -11,7 +11,7 @@ class Model_ER_HashtagsQuestions__initWithDBState__Test extends PHPUnit\Framewor
             'er_created_at' => '2015-11-29 09:28:34'
         ]);
 
-        $this->assertEquals(13, $rel->getID());
+        $this->assertEquals(13, $rel->id);
         $this->assertEquals(3, $rel->hashtagID);
         $this->assertEquals(9, $rel->questionID);
         $this->assertEquals('2015-11-29 09:28:34', $rel->createdAt);
@@ -26,7 +26,7 @@ class Model_ER_HashtagsQuestions__initWithDBState__Test extends PHPUnit\Framewor
             'er_created_at' => '2015-11-29 09:28:34'
         ]);
 
-        $this->assertEquals(13, $rel->getID());
+        $this->assertEquals(13, $rel->id);
         $this->assertEquals(3, $rel->hashtagID);
         $this->assertEquals(9, $rel->questionID);
         $this->assertEquals('2015-11-29 09:28:34', $rel->createdAt);

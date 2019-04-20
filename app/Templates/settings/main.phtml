@@ -31,7 +31,7 @@
 
 <hr class="my-4 my-md-5">
 <h2><?= _('Real name') ?></h2>
-<form id="form__update_name" data-user-id="<?= $this->authUser->getID() ?>">
+<form id="form__update_name" data-user-id="<?= $this->authUser->id ?>">
     <div class="form-group">
         <label for="form__update_name__name">
             <?= _('The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.') ?>.
@@ -47,7 +47,7 @@
 
 <hr class="my-4 my-md-5">
 <h2><?= _('Signature') ?></h2>
-<form id="form__update_signature" data-user-id="<?= $this->authUser->getID() ?>">
+<form id="form__update_signature" data-user-id="<?= $this->authUser->id ?>">
     <div class="form-group">
         <label for="form__update_signature__signature">
             <?= _('Enter a signature describing your professional skills and knowledge.') ?>
@@ -65,7 +65,7 @@
 <h2>
     <?= _('Site') ?>
 </h2>
-<form id="frm__update_site" data-user-id="<?= $this->authUser->getID() ?>">
+<form id="frm__update_site" data-user-id="<?= $this->authUser->id ?>">
     <div class="form-group">
         <label for="frm__update_site__site">
             <?= _('Enter the address of your website or page on the social network.') ?>

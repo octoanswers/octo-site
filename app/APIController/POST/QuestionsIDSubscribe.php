@@ -50,10 +50,10 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
 
             $output = [
                 'lang' => $this->lang,
-                'question_id' => $question->getID(),
+                'question_id' => $question->id,
                 'question_title' => $question->title,
                 'question_url' => $question->getURL($this->lang),
-                'subscription_id' => $subscription->getID(),
+                'subscription_id' => $subscription->id,
                 'subscription_email' => $subscription->email,
             ];
         } catch (Throwable $e) {

@@ -7,7 +7,7 @@ class Answer_Validator
 {
     public static function validate(Answer_Model $answer)
     {
-        self::validateID($answer->getID());
+        self::validateID($answer->id);
         self::validateText($answer->text);
 
         // @todo ->dateTime

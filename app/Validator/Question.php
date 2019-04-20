@@ -16,7 +16,7 @@ class Question_Validator
 
     public static function validateExists(Question_Model $question)
     {
-        self::validateID($question->getID());
+        self::validateID($question->id);
         self::validateNew($question);
 
         return true;
@@ -25,7 +25,7 @@ class Question_Validator
     public static function validateNew(Question_Model $question)
     {
         self::validateTitle($question->title);
-        self::validateRedirect($question->isRedirect());
+        self::validateRedirect($question->isRedirect);
         self::validateImageBaseName($question->imageBaseName);
 
         return true;
@@ -69,6 +69,10 @@ class Question_Validator
     {
         try {
             v::optional(v::boolVal())->assert($isRedirect);
+
+            if (isset($isRedirect) && !is_bool($isRedirect)) {
+                throw new NestedValidationException('not boolean', 0);
+            }
         } catch (NestedValidationException $exception) {
             throw new Exception('Question isRedirect param '.$exception->getMessages()[0], 0);
         }

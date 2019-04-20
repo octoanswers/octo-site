@@ -19,11 +19,11 @@ class Edit_Answer_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->answer = (new Answers_Query($this->lang))->answerWithID($this->question->getID());
+        $this->answer = (new Answers_Query($this->lang))->answerWithID($this->question->id);
 
         if ($this->answer == null) {
             $answer = new Answer_Model();
-            $answer->setID($this->question->getID());
+            $answer->id = $this->question->id;
             $answer->text = null;
 
             $this->answer = (new Answer_Mapper())->create($answer);

@@ -10,7 +10,7 @@ class Model_Hashtag__initWithDBState_Test extends PHPUnit\Framework\TestCase
             'h_words' => 'cpu',
         ]);
 
-        $this->assertEquals(13, $hashtag->getID());
+        $this->assertEquals(13, $hashtag->id);
         $this->assertEquals('virtual', $hashtag->title);
     }
 
@@ -22,7 +22,7 @@ class Model_Hashtag__initWithDBState_Test extends PHPUnit\Framework\TestCase
             'h_words' => 'таблетка',
         ]);
 
-        $this->assertEquals(231, $hashtag->getID());
+        $this->assertEquals(231, $hashtag->id);
         $this->assertEquals('медицинскиеуслуги', $hashtag->title);
     }
 }

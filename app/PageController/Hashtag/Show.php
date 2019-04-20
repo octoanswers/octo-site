@@ -42,7 +42,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $humanDateTimezone = new DateTimeZone('UTC');
         $dateHumanizer = new HumanDate($humanDateTimezone, $this->lang);
 
-        $hashtag_questions = (new HashtagsToQuestions_Relations_Query($this->lang))->findNewestForHashtagWithID($this->hashtag->getID());
+        $hashtag_questions = (new HashtagsToQuestions_Relations_Query($this->lang))->findNewestForHashtagWithID($this->hashtag->id);
         $this->hashtag_questions = [];
 
         foreach ($hashtag_questions as $hashtag_question_er) {
@@ -106,8 +106,8 @@ class Show_Hashtag_PageController extends Abstract_PageController
     protected function _prepareFollowButton()
     {
         if ($this->authUser) {
-            $authUserID = $this->authUser->getID();
-            $hashtagID = $this->hashtag->getID();
+            $authUserID = $this->authUser->id;
+            $hashtagID = $this->hashtag->id;
 
             $relation = (new UsersFollowHashtags_Relations_Query($this->lang))->relationWithUserIDAndHashtagID($authUserID, $hashtagID);
 

@@ -18,7 +18,7 @@ class Show_User_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->revisions = (new Revisions_Query($this->lang))->findRevisionsForUserWithID($this->user->getID());
+        $this->revisions = (new Revisions_Query($this->lang))->findRevisionsForUserWithID($this->user->id);
 
         $this->questions = [];
         foreach ($this->revisions as &$revision) {
@@ -35,7 +35,7 @@ class Show_User_PageController extends Abstract_PageController
         $this->openGraph = $this->_getOpenGraph();
 
         // prepare 'logout' button
-        if (($this->authUser != null) && ($this->authUser->getID() == $this->user->getID())) {
+        if (($this->authUser != null) && ($this->authUser->id == $this->user->id)) {
             $this->includeJS[] = 'user/logout';
             $this->includeJS[] = 'enable_tooltips';
 
@@ -50,9 +50,9 @@ class Show_User_PageController extends Abstract_PageController
 
     protected function _prepareFollowButton()
     {
-        if ($this->authUser && $this->authUser->getID() != $this->user->getID()) {
-            $authUserID = $this->authUser->getID();
-            $followedUserID = $this->user->getID();
+        if ($this->authUser && $this->authUser->id != $this->user->id) {
+            $authUserID = $this->authUser->id;
+            $followedUserID = $this->user->id;
 
             $relation = (new UsersFollowUsers_Relations_Query($this->lang))->relationWithUserIDAndFollowedUserID($authUserID, $followedUserID);
 

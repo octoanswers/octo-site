@@ -11,7 +11,7 @@ class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
 
         $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
 
-        $this->assertEquals(18, $hashtag->getID());
+        $this->assertEquals(18, $hashtag->id);
         $this->assertEquals('newhashtag', $hashtag->title);
     }
 
@@ -22,7 +22,7 @@ class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
 
         $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
 
-        $this->assertEquals(18, $hashtag->getID());
+        $this->assertEquals(18, $hashtag->id);
         $this->assertEquals('новаятема', $hashtag->title);
     }
 }

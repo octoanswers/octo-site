@@ -5,7 +5,7 @@ class Validator_User_negative_password_hash_Test extends PHPUnit\Framework\TestC
     public function test_passwordHashNotSet()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';
@@ -19,7 +19,7 @@ class Validator_User_negative_password_hash_Test extends PHPUnit\Framework\TestC
     public function test_passwordHashIsEmpty()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';
@@ -33,7 +33,7 @@ class Validator_User_negative_password_hash_Test extends PHPUnit\Framework\TestC
     public function test_passwordHashTooShort()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';
@@ -47,7 +47,7 @@ class Validator_User_negative_password_hash_Test extends PHPUnit\Framework\TestC
     public function test_passwordHashTooLong()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';

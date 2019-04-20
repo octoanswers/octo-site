@@ -8,7 +8,7 @@ class Query_Answers__answerWithID__en__Test extends Abstract_DB_TestCase
     {
         $answer = (new Answers_Query('en'))->answerWithID(6);
 
-        $this->assertEquals(6, $answer->getID());
+        $this->assertEquals(6, $answer->id);
         $this->assertEquals('Yes, birds are mark his territory.', $answer->text);
     }
 }

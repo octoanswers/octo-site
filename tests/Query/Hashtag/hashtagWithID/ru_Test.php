@@ -8,7 +8,7 @@ class Hashtag_Query__hashtagWithID__ru__Test extends Abstract_DB_TestCase
     {
         $hashtag = (new Hashtag_Query('ru'))->hashtagWithID(6);
 
-        $this->assertEquals(6, $hashtag->getID());
+        $this->assertEquals(6, $hashtag->id);
         $this->assertEquals('автоспорт', $hashtag->title);
     }
 }

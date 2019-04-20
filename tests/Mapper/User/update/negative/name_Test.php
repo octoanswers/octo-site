@@ -5,7 +5,7 @@ class Mapper_User_save_negative_name_Test extends Abstract_DB_TestCase
     public function test_empty()
     {
         $user = new User_Model();
-        $user->setID(37);
+        $user->id = 37;
         $user->username = 'steve';
         $user->name = '';
         $user->email = 'steve@aw.org';
@@ -20,7 +20,7 @@ class Mapper_User_save_negative_name_Test extends Abstract_DB_TestCase
     public function test_tooShort()
     {
         $user = new User_Model();
-        $user->setID(37);
+        $user->id = 37;
         $user->username = 'steve';
         $user->name = 'S';
         $user->email = 'steve@aw.org';
@@ -35,7 +35,7 @@ class Mapper_User_save_negative_name_Test extends Abstract_DB_TestCase
     public function test_tooLong()
     {
         $user = new User_Model();
-        $user->setID(37);
+        $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve...';
         $user->email = 'steve@aw.org';

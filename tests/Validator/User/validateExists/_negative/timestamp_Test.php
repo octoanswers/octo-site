@@ -5,7 +5,7 @@ class Validator_User_negative_timestamp_Test extends PHPUnit\Framework\TestCase
     public function test_timestampNotSet()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';
@@ -19,7 +19,7 @@ class Validator_User_negative_timestamp_Test extends PHPUnit\Framework\TestCase
     public function test_timestampIsEmpty()
     {
         $user = new User_Model();
-        $user->setID(13);
+        $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
         $user->signature = 'Foo bar';

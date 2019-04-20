@@ -24,10 +24,10 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
             #
 
             $user = (new User_Query())->userWithAPIKey($api_key);
-            $userID = $user->getID();
+            $userID = $user->id;
 
             $question = (new Question_Query($this->lang))->questionWithID($question_id);
-            $questionID = $question->getID();
+            $questionID = $question->id;
             $old_hashtags_array = $question->getHashtags();
 
             # Check hashtags-questions ER & creat new, if needed
@@ -47,11 +47,11 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                     $hashtag = (new Hashtag_Mapper($this->lang))->create($hashtag);
                 }
 
-                $er = (new HashtagsToQuestions_Relations_Query($this->lang))->findByHashtagIDAndQuestionID($hashtag->getID(), $question->getID());
+                $er = (new HashtagsToQuestions_Relations_Query($this->lang))->findByHashtagIDAndQuestionID($hashtag->id, $question->id);
                 if ($er === null) {
                     $er = new HashtagsToQuestions_Relation_Model();
-                    $er->hashtagID = $hashtag->getID();
-                    $er->questionID = $question->getID();
+                    $er->hashtagID = $hashtag->id;
+                    $er->questionID = $question->id;
                     $er = (new HashtagToQuestion_Relation_Mapper($this->lang))->create($er);
 
                     # create activity
@@ -87,11 +87,11 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
             $output = [
                 'lang' => $this->lang,
                 'question' => [
-                    'id' => $question->getID(),
+                    'id' => $question->id,
                     'title' => $question->title,
                     'url' => $question->getURL($this->lang),
                 ],
-                'user_id' => $user->getID(),
+                'user_id' => $user->id,
                 'user_name' => $user->name,
                 'old_hashtags' => $old_hashtags_array,
                 'new_hashtags' => $new_hashtags,

@@ -8,7 +8,7 @@ class UserFollowUser_Relation_Mapper__deleteRelation__Test extends Abstract_DB_T
     {
         // Relation must be in DB
         $relation = new UserFollowUser_Relation_Model();
-        $relation->setID(3);
+        $relation->id = 3;
         $relation->userID = 4;
         $relation->followedUserID = 5;
         $relation->createdAt = '2014-12-16 11:28:56';
@@ -22,7 +22,7 @@ class UserFollowUser_Relation_Mapper__deleteRelation__Test extends Abstract_DB_T
     {
         // Not exists relation
         $relation = new UserFollowUser_Relation_Model();
-        $relation->setID(6);
+        $relation->id = 6;
         $relation->userID = 22;
         $relation->followedUserID = 61;
         $relation->createdAt = '2014-12-16 11:28:56';

@@ -5,7 +5,7 @@ class UserFollowHashtag_Relation_Validator__id__Test extends PHPUnit\Framework\T
     public function test_IDEqualZero()
     {
         $relation = new UserFollowHashtag_Relation_Model();
-        $relation->setID(0);
+        $relation->id = 0;
         $relation->userID = 3;
         $relation->hashtagID = 9;
 
@@ -16,7 +16,7 @@ class UserFollowHashtag_Relation_Validator__id__Test extends PHPUnit\Framework\T
     public function test__IDBelowZero()
     {
         $relation = new UserFollowHashtag_Relation_Model();
-        $relation->setID(-1);
+        $relation->id = -1;
         $relation->userID = 3;
         $relation->hashtagID = 9;
 

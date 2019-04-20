@@ -19,8 +19,8 @@ class HashtagToQuestion_Relation_Mapper extends Abstract_Mapper
         }
 
         $er_id = (int) $this->pdo->lastInsertId();
-        $er->setID($er_id);
-        if ($er->getID() === 0) {
+        $er->id = $er_id;
+        if ($er->id === 0) {
             throw new Exception('HashtagsQuestions ER not saved', 1);
         }
 

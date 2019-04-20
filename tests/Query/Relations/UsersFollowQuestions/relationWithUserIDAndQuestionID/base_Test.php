@@ -8,7 +8,7 @@ class UsersFollowQuestions_Relations_Query__relationWithUserIDAndQuestionID__Tes
     {
         $relation = (new UsersFollowQuestions_Relations_Query('ru'))->relationWithUserIDAndQuestionID(7, 23);
 
-        $this->assertEquals(5, $relation->getID());
+        $this->assertEquals(5, $relation->id);
         $this->assertEquals(7, $relation->userID);
         $this->assertEquals(23, $relation->questionID);
         $this->assertEquals('2015-12-16 13:28:56', $relation->createdAt);

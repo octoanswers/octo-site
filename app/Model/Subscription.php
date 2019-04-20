@@ -19,16 +19,4 @@ class Subscription_Model extends Abstract_Model
 
         return $s;
     }
-
-    // Getters & setters ------------------------------------------------------
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
-    }
-
-    public function getID()
-    {
-        return $this->id;
-    }
 }

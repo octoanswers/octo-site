@@ -5,7 +5,7 @@ class UserFollowQuestion_Relation_Validator__id__Test extends PHPUnit\Framework\
     public function test_IDEqualZero()
     {
         $rel = new UserFollowQuestion_Relation_Model();
-        $rel->setID(0);
+        $rel->id = 0;
         $rel->userID = 3;
         $rel->questionID = 9;
 
@@ -16,7 +16,7 @@ class UserFollowQuestion_Relation_Validator__id__Test extends PHPUnit\Framework\
     public function test__IDBelowZero()
     {
         $rel = new UserFollowQuestion_Relation_Model();
-        $rel->setID(-1);
+        $rel->id = -1;
         $rel->userID = 3;
         $rel->questionID = 9;
 

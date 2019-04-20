@@ -5,7 +5,7 @@ class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
     public function test__ValidFullRevision()
     {
         $revision = new Revision_Model();
-        $revision->setID(13);
+        $revision->id = 13;
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Ответ на вопрос про птиц.';
@@ -27,7 +27,7 @@ class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
 
         $validator = new Revision_Validator();
 
-        $this->assertEquals(null, $revision->getID());
+        $this->assertEquals(null, $revision->id);
         $this->assertEquals(11, $revision->answerID);
         $this->assertEquals('xyz', $revision->opcodes);
         $this->assertEquals('Ответ на вопрос про птиц.', $revision->baseText);

@@ -5,7 +5,7 @@ class Validator_Answer_validate_ID_Test extends PHPUnit\Framework\TestCase
     public function test_IDEqualZero()
     {
         $answer = new Answer_Model();
-        $answer->setID(0);
+        $answer->id = 0;
         $answer->text = 'Answer written at 08:04';
         $answer->updatedAt = '2016-03-19 06:47:41';
 
@@ -16,7 +16,7 @@ class Validator_Answer_validate_ID_Test extends PHPUnit\Framework\TestCase
     public function test_IDBelowZero()
     {
         $answer = new Answer_Model();
-        $answer->setID(-1);
+        $answer->id = -1;
         $answer->text = 'Answer written at 08:04';
         $answer->updatedAt = '2016-03-19 06:47:41';
 

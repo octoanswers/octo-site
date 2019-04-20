@@ -18,7 +18,7 @@ class Newest_Hashtags_PageController extends Abstract_PageController
         $this->pageDescription = "Хештеги";
         $this->activeFilter = 'newest';
 
-        if ((isset($this->hashtags[9])) && ($this->hashtags[9]->getID() > 1)) {
+        if ((isset($this->hashtags[9])) && ($this->hashtags[9]->id > 1)) {
             $this->nextPageURL = Hashtags_URL_Helper::getNewestURL($this->lang, ($this->page + 1));
         }
 

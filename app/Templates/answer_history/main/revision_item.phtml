@@ -13,7 +13,7 @@
                 </a>
             </div>
             <span class="small color-gray-600">
-                <?= _('Change ID') ?> #<?= $this->revisions[$i]->getID() ?>
+                <?= _('Change ID') ?> #<?= $this->revisions[$i]->id ?>
                 <span class="color-gray-900 font_weight_800">&middot;</span>
                 <?php if ($this->revisions[$i]->comment): ?>
                     <?= _('Description of changes') ?>: <?= $this->revisions[$i]->comment ?>

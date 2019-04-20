@@ -31,7 +31,7 @@ class Question_Model extends Abstract_Model
         $question = new self();
         $question->id = (int) $state['q_id'];
         $question->title = (string) $state['q_title'];
-        $question->setRedirect((bool) $state['q_is_redirect']);
+        $question->isRedirect = (bool) $state['q_is_redirect'];
         $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
         if (isset($state['a_hashtags'])) {
             $question->setHashtagsJSON($state['a_hashtags']);
@@ -45,26 +45,6 @@ class Question_Model extends Abstract_Model
     #
     # Get & Set
     #
-
-    public function getID()
-    {
-        return $this->id;
-    }
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
-    }
-
-    public function isRedirect(): bool
-    {
-        return $this->isRedirect ? true : false;
-    }
-
-    public function setRedirect(bool $isRedirect)
-    {
-        $this->isRedirect = $isRedirect ? 1 : 0;
-    }
 
     public function getHashtags(): array
     {

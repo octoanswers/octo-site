@@ -17,7 +17,7 @@ class HashtagsIDFollow_POST_APIController extends Abstract_APIController
             #
 
             $user = (new User_Query())->userWithAPIKey($api_key);
-            $userID = $user->getID();
+            $userID = $user->id;
 
             $hashtag = (new Hashtag_Query($this->lang))->hashtagWithID($hashtagID);
 
@@ -46,10 +46,10 @@ class HashtagsIDFollow_POST_APIController extends Abstract_APIController
             $activity = (new UFollowH_Activity_Mapper($this->lang))->create($activity);
             $output = [
                 'lang' => $this->lang,
-                'relation_id' => $relation->getID(),
-                'user_id' => $user->getID(),
+                'relation_id' => $relation->id,
+                'user_id' => $user->id,
                 'user_name' => $user->name,
-                'followed_hashtag_id' => $hashtag->getID(),
+                'followed_hashtag_id' => $hashtag->id,
                 'followed_hashtag_title' => $hashtag->title,
             ];
         } catch (Throwable $e) {

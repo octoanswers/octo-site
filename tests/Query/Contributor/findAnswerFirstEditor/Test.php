@@ -8,7 +8,7 @@ class Contributor_Query__findAnswerFirstEditor__Test extends Abstract_DB_TestCas
     {
         $user = (new Contributor_Query('ru'))->findAnswerFirstEditor(4);
 
-        $this->assertEquals(7, $user->getID());
+        $this->assertEquals(7, $user->id);
     }
 
     public function test_ContributorNotExists()

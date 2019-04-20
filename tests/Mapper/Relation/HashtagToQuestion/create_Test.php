@@ -12,7 +12,7 @@ class Mapper_ER_HashtagsQuestions__create__Test extends Abstract_DB_TestCase
 
         $er = (new HashtagToQuestion_Relation_Mapper('ru'))->create($er);
 
-        $this->assertEquals(25, $er->getID());
+        $this->assertEquals(25, $er->id);
         $this->assertEquals(3, $er->hashtagID);
         $this->assertEquals(9, $er->questionID);
     }
@@ -25,7 +25,7 @@ class Mapper_ER_HashtagsQuestions__create__Test extends Abstract_DB_TestCase
 
         $er = (new HashtagToQuestion_Relation_Mapper('ru'))->create($er);
 
-        $this->assertEquals(25, $er->getID());
+        $this->assertEquals(25, $er->id);
         $this->assertEquals(3, $er->hashtagID);
         $this->assertEquals(9, $er->questionID);
     }

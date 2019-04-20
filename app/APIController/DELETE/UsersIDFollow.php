@@ -17,7 +17,7 @@ class UsersIDFollow_DELETE_APIController extends Abstract_APIController
             #
 
             $user = (new User_Query())->userWithAPIKey($api_key);
-            $userID = $user->getID();
+            $userID = $user->id;
 
             $followed_user = (new User_Query())->userWithID($followedUserID);
 
@@ -33,9 +33,9 @@ class UsersIDFollow_DELETE_APIController extends Abstract_APIController
             (new UserFollowUser_Relation_Mapper($this->lang))->deleteRelation($relation);
 
             $output = [
-                'user_id' => $user->getID(),
+                'user_id' => $user->id,
                 'user_name' => $user->name,
-                'followed_user_id' => $followed_user->getID(),
+                'followed_user_id' => $followed_user->id,
                 'followed_user_name' => $followed_user->name,
             ];
         } catch (Throwable $e) {

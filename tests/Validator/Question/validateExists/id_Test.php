@@ -5,9 +5,9 @@ class Question_Validator__validateExists__id__Test extends PHPUnit\Framework\Tes
     public function test_IDEqualZero()
     {
         $question = new Question_Model();
-        $question->setID(0);
+        $question->id = 0;
         $question->title = 'How iPhone 8 are charged?';
-        $question->setRedirect(true);
+        $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param 0 must be greater than or equal to 1');
         Question_Validator::validateExists($question);
@@ -16,9 +16,9 @@ class Question_Validator__validateExists__id__Test extends PHPUnit\Framework\Tes
     public function testIDBelowZero()
     {
         $question = new Question_Model();
-        $question->setID(-1);
+        $question->id = -1;
         $question->title = 'How iPhone 8 are charged?';
-        $question->setRedirect(true);
+        $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param -1 must be greater than or equal to 1');
         Question_Validator::validateExists($question);

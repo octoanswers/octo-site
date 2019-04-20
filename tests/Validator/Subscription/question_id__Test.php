@@ -5,7 +5,7 @@ class Validator_Subscription__question_id__Test extends PHPUnit\Framework\TestCa
     public function test__QiestionIDEqualZero()
     {
         $s = new Subscription_Model();
-        $s->setID(18);
+        $s->id = 18;
         $s->questionID = 0;
         $s->email = 'loz@ba.com';
 
@@ -16,7 +16,7 @@ class Validator_Subscription__question_id__Test extends PHPUnit\Framework\TestCa
     public function test__QiestionIDBelowZero()
     {
         $s = new Subscription_Model();
-        $s->setID(18);
+        $s->id = 18;
         $s->questionID = -1;
         $s->email = 'loz@ba.com';
 

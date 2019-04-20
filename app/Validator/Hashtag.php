@@ -25,7 +25,7 @@ class Hashtag_Validator
     protected static function validate(Hashtag_Model $hashtag, $isExists = true)
     {
         if ($isExists) {
-            self::validateID($hashtag->getID());
+            self::validateID($hashtag->id);
         }
         self::validateTitle($hashtag->title);
 

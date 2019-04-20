@@ -8,7 +8,7 @@ class Contributor_Query__findAnswerLastEditor__Test extends Abstract_DB_TestCase
     {
         $user = (new Contributor_Query('ru'))->findAnswerLastEditor(4);
 
-        $this->assertEquals(4, $user->getID());
+        $this->assertEquals(4, $user->id);
     }
 
     public function test_ContributorNotExists()

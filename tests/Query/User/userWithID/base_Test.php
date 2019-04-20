@@ -8,7 +8,7 @@ class Query_Users_userWithID_Test extends Abstract_DB_TestCase
     {
         $user = (new User_Query())->userWithID(4);
 
-        $this->assertEquals(4, $user->getID());
+        $this->assertEquals(4, $user->id);
         $this->assertEquals('sasha', $user->username);
         $this->assertEquals('Александр Пушкин', $user->name);
         $this->assertEquals('pushka@answeropedia.org', $user->email);

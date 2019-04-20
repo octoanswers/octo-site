@@ -4,7 +4,7 @@
 	<?php if ($this->authUser): ?>
 		<button
 			class="btn follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-secondary'; ?>"
-			data-question-id="<?= $this->question->getID() ?>"
+			data-question-id="<?= $this->question->id ?>"
 			data-follow-title="<?= _('Follow') ?>"
 			data-followed-title="<?= _('Followed') ?>"
 			data-unfollow-title="<?= _('Unfollow') ?>"

@@ -64,8 +64,8 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
 
             $output = [
                 'lang' => $this->lang,
-                'question_id' => $this->question->getID(),
-                'user_id' => $this->user->getID(),
+                'question_id' => $this->question->id,
+                'user_id' => $this->user->id,
                 'image_url_lg' => $this->question->getImageURLLarge($this->lang),
                 'image_url_md' => $this->question->getImageURLMedium($this->lang),
             ];
@@ -83,7 +83,7 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
 
     protected function _makeUserAvatarWithSize($imageFilename, $imageWidth)
     {
-        $uploadFolder = self::UPLOAD_FOLDER.'/'.$this->lang.'/'.$this->question->getID().'/';
+        $uploadFolder = self::UPLOAD_FOLDER.'/'.$this->lang.'/'.$this->question->id.'/';
 
         $this->verotUpload->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
         $this->verotUpload->image_convert = 'jpg';
@@ -107,6 +107,6 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
         $dateChunk = date("Ymj");
         $rand = mt_rand(1, 999);
 
-        return $this->user->getID().'_'.$dateChunk.'_'.$rand;
+        return $this->user->id.'_'.$dateChunk.'_'.$rand;
     }
 }

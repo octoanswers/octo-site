@@ -6,7 +6,7 @@ class Answer_Mapper extends Abstract_Mapper
     {
         Answer_Validator::validate($answer);
 
-        $q_id = $answer->getID();
+        $q_id = $answer->id;
         $a_text = $answer->text;
         $a_len = mb_strlen($answer->text);
         $a_updated_at = $answer->updatedAt;

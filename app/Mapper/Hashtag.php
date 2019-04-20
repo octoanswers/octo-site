@@ -16,9 +16,8 @@ class Hashtag_Mapper extends Abstract_Mapper
             throw new Exception($error[2], $error[1]);
         }
 
-        $hashtagID = (int) $this->pdo->lastInsertId();
-        $hashtag->setID($hashtagID);
-        if ($hashtag->getID() === 0) {
+        $hashtag->id = (int) $this->pdo->lastInsertId();
+        if ($hashtag->id === 0) {
             throw new Exception('Hashtag not saved', 1);
         }
 
@@ -29,7 +28,7 @@ class Hashtag_Mapper extends Abstract_Mapper
     {
         Hashtag_Validator::validateExists($hashtag);
 
-        $hashtagID = $hashtag->getID();
+        $hashtagID = $hashtag->id;
         $hashtagTitle = $hashtag->title;
 
         $sql = 'UPDATE hashtags SET h_title=:h_title WHERE h_id=:h_id';

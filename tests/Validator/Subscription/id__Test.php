@@ -5,7 +5,7 @@ class Validator_Subscription__id__Test extends PHPUnit\Framework\TestCase
     public function test_IDEqualZero()
     {
         $s = new Subscription_Model();
-        $s->setID(0);
+        $s->id = 0;
         $s->questionID = 10;
         $s->email = 'loz@ba.com';
 
@@ -16,7 +16,7 @@ class Validator_Subscription__id__Test extends PHPUnit\Framework\TestCase
     public function test__IDBelowZero()
     {
         $s = new Subscription_Model();
-        $s->setID(-1);
+        $s->id = -1;
         $s->questionID = 19;
         $s->email = 'loz@ba.com';
 

@@ -6,23 +6,21 @@ class Question_Mapper extends Abstract_Mapper
     {
         Question_Validator::validateNew($question);
 
-        $q_title = $question->title;
-        $q_is_redirect = $question->isRedirect() ? 1 : 0;
+        $q_is_redirect = $question->isRedirect ? true : false;
         $q_image_base_name = $question->imageBaseName;
 
         $sql = 'INSERT INTO questions (q_title, q_is_redirect, q_image_base_name) VALUES (:q_title, :q_is_redirect, :q_image_base_name)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':q_title', $q_title, PDO::PARAM_STR);
-        $stmt->bindParam(':q_is_redirect', $q_is_redirect, PDO::PARAM_INT);
+        $stmt->bindParam(':q_title', $question->title, PDO::PARAM_STR);
+        $stmt->bindParam(':q_is_redirect', $q_is_redirect, PDO::PARAM_BOOL);
         $stmt->bindParam(':q_image_base_name', $q_image_base_name, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
         }
 
-        $questionID = (int) $this->pdo->lastInsertId();
-        $question->setID($questionID);
-        if ($question->getID() === 0) {
+        $question->id = (int) $this->pdo->lastInsertId();
+        if ($question->id === 0) {
             throw new Exception('Question not saved', 1);
         }
 
@@ -33,15 +31,14 @@ class Question_Mapper extends Abstract_Mapper
     {
         Question_Validator::validateExists($question);
 
-        $q_id = $question->getID();
-        $q_title = $question->title;
-        $q_is_redirect = $question->isRedirect() ? 1 : 0;
+        $q_id = $question->id;
+        $q_is_redirect = $question->isRedirect ? 1 : 0;
         $q_image_base_name = $question->imageBaseName;
 
         $sql = 'UPDATE questions SET q_title=:q_title, q_is_redirect=:q_is_redirect, q_image_base_name=:q_image_base_name WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':q_id', $q_id, PDO::PARAM_INT);
-        $stmt->bindParam(':q_title', $q_title, PDO::PARAM_STR);
+        $stmt->bindParam(':q_title', $question->title, PDO::PARAM_STR);
         $stmt->bindParam(':q_is_redirect', $q_is_redirect, PDO::PARAM_INT);
         $stmt->bindParam(':q_image_base_name', $q_image_base_name, PDO::PARAM_STR);
         if (!$stmt->execute()) {
@@ -58,14 +55,14 @@ class Question_Mapper extends Abstract_Mapper
 
     public function updateHashtags(Question_Model $question): Question_Model
     {
-        Question_Validator::validateID($question->getID());
+        Question_Validator::validateID($question->id);
         Question_Validator::validateHashtags($question->getHashtags());
 
         if ($question->getHashtagsJSON() === null) {
             return $question;
         }
 
-        $q_id = $question->getID();
+        $q_id = $question->id;
         $hashtags_array = $question->getHashtags();
 
         $hashtags_json = json_encode($hashtags_array, JSON_UNESCAPED_UNICODE);

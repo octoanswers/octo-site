@@ -32,20 +32,6 @@ class Revision_Model extends Abstract_Model
     }
 
     #
-    # Get & Set
-    #
-
-    public function getID()
-    {
-        return $this->id;
-    }
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
-    }
-
-    #
     # Supplementary methods
     #
 

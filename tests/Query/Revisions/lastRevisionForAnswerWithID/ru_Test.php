@@ -8,7 +8,7 @@ class Mapper_Revisions_lastRevisionForAnswerWithID_Base_Test extends Abstract_DB
     {
         $revision = (new Revisions_Query('ru'))->lastRevisionForAnswerWithID(4);
 
-        $this->assertEquals(4, $revision->getID());
+        $this->assertEquals(4, $revision->id);
         $this->assertEquals(4, $revision->answerID);
         $this->assertEquals('c000d35i68', $revision->opcodes);
         $this->assertEquals('Last answer for question 4.', $revision->baseText);

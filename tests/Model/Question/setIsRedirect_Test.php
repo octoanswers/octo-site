@@ -1,12 +1,12 @@
 <?php
 
-class Model_Question_setRedirectTest extends PHPUnit\Framework\TestCase
+class Model_Question_RedirectTest extends PHPUnit\Framework\TestCase
 {
     public function testFullParams()
     {
         $question = new Question_Model();
-        $question->setRedirect(true);
+        $question->isRedirect = true;
 
-        $this->assertEquals(true, $question->isRedirect());
+        $this->assertEquals(true, $question->isRedirect);
     }
 }

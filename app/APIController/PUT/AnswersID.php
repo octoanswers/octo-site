@@ -34,7 +34,7 @@ class AnswersID_PUT_APIController extends Abstract_APIController
 
             $answerUpdatedAt = (new DateTime('NOW'))->format('Y-m-d H:i:s');
 
-            $answer->setID($answer_id);
+            $answer->id = $answer_id;
             $answer->text = $new_answer_text;
             $answer->updatedAt = $answerUpdatedAt;
 
@@ -49,13 +49,13 @@ class AnswersID_PUT_APIController extends Abstract_APIController
                 $revision->baseText = $old_answer_text;
             }
             $revision->comment = $revisionComment;
-            $revision->userID = $user->getID();
+            $revision->userID = $user->id;
 
             Revision_Validator::validateComment($revisionComment);
 
             $parentRevision = (new Revisions_Query($this->lang))->lastRevisionForAnswerWithID($answer_id);
             if ($parentRevision) {
-                $revision->parentID = $parentRevision->getID();
+                $revision->parentID = $parentRevision->id;
             }
 
             $revision = (new Revision_Mapper($this->lang))->save($revision);
@@ -82,12 +82,12 @@ class AnswersID_PUT_APIController extends Abstract_APIController
                 'question_title' => $question->title,
                 'question_url' => $question->getURL($this->lang),
                 'answer_text' => $new_answer_text,
-                'revision_id' => $revision->getID(),
+                'revision_id' => $revision->id,
                 'revision_opcodes' => $revision->opcodes,
                 'revision_base_text' => $revision->baseText,
                 'revision_comment' => $revision->comment,
                 'user' => [
-                    'id' => $user->getID(),
+                    'id' => $user->id,
                     'name' => $user->name,
                 ]
             ];

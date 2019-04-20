@@ -20,9 +20,9 @@ class All_Sandbox_PageController extends Abstract_PageController
         $this->questions = (new Questions_Query($this->lang))->findNewest($this->page);
 
         foreach ($this->questions as $question) {
-            if ($question->isRedirect()) {
-                $redirect = (new Redirects_Query($this->lang))->redirectForQuestionWithID($question->getID());
-                $this->redirects[$question->getID()] = $redirect;
+            if ($question->isRedirect) {
+                $redirect = (new Redirects_Query($this->lang))->redirectForQuestionWithID($question->id);
+                $this->redirects[$question->id] = $redirect;
             }
         }
 
@@ -30,7 +30,7 @@ class All_Sandbox_PageController extends Abstract_PageController
         $this->pageTitle = $this->_getPageTitle();
         $this->pageDescription = $this->_getPageDescription();
 
-        if ($this->questions[9]->getID() > 1) {
+        if ($this->questions[9]->id > 1) {
             $this->nextPageURL = Sandbox_URL_Helper::getAllURL($this->lang, ($this->page + 1));
         }
 

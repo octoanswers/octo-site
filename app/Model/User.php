@@ -34,18 +34,4 @@ class User_Model extends Abstract_Model
 
         return $user;
     }
-
-    #
-    # Get & Set
-    #
-
-    public function setID(int $id)
-    {
-        $this->id = $id;
-    }
-
-    public function getID()
-    {
-        return $this->id;
-    }
 }

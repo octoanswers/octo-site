@@ -7,7 +7,7 @@ class Mapper_User__update__site__Test extends Abstract_DB_TestCase
     public function test_SiteNotSet()
     {
         $user = new User_Model();
-        $user->setID(7);
+        $user->id = 7;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->email = 'steve@aw.org';
