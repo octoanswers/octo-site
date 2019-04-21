@@ -6,13 +6,10 @@ class Subscription_Mapper extends Abstract_Mapper
     {
         Subscription_Validator::validateNew($s);
 
-        $s_question_id = $s->questionID;
-        $s_email = $s->email;
-
         $sql = 'INSERT INTO questions_subscriptions (s_email, s_question_id) VALUES (:s_email, :s_question_id)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':s_question_id', $s_question_id, PDO::PARAM_INT);
-        $stmt->bindParam(':s_email', $s_email, PDO::PARAM_STR);
+        $stmt->bindParam(':s_question_id', $s->questionID, PDO::PARAM_INT);
+        $stmt->bindParam(':s_email', $s->email, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $sror = $stmt->errorInfo();
             throw new Exception($sror[2], $sror[1]);

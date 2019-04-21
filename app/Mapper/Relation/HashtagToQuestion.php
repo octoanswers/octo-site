@@ -6,20 +6,16 @@ class HashtagToQuestion_Relation_Mapper extends Abstract_Mapper
     {
         HashtagToQuestion_Relation_Validator::validateNew($er);
 
-        $er_hashtag_id = $er->hashtagID;
-        $er_question_id = $er->questionID;
-
         $sql = 'INSERT INTO er_hashtags_questions (er_hashtag_id, er_question_id) VALUES (:er_hashtag_id, :er_question_id)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':er_hashtag_id', $er_hashtag_id, PDO::PARAM_INT);
-        $stmt->bindParam(':er_question_id', $er_question_id, PDO::PARAM_INT);
+        $stmt->bindParam(':er_hashtag_id', $er->hashtagID, PDO::PARAM_INT);
+        $stmt->bindParam(':er_question_id', $er->questionID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
         }
 
-        $er_id = (int) $this->pdo->lastInsertId();
-        $er->id = $er_id;
+        $er->id = (int) $this->pdo->lastInsertId();
         if ($er->id === 0) {
             throw new Exception('HashtagsQuestions ER not saved', 1);
         }

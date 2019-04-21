@@ -7,7 +7,7 @@ class Question_Model extends Abstract_Model
 
     public $id; // int
     public $title; // string
-    public $isRedirect; // bool
+    public $isRedirect = false; // bool
     public $answer; // Answer_Model
     public $hashtags;
     public $imageBaseName;

@@ -6,20 +6,16 @@ class UserFollowQuestion_Relation_Mapper extends Abstract_Mapper
     {
         UserFollowQuestion_Relation_Validator::validateNew($relation);
 
-        $userID = $relation->userID;
-        $questionID = $relation->questionID;
-
         $sql = 'INSERT INTO er_users_follow_questions (user_id, question_id) VALUES (:user_id, :question_id)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':user_id', $userID, PDO::PARAM_INT);
-        $stmt->bindParam(':question_id', $questionID, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $relation->userID, PDO::PARAM_INT);
+        $stmt->bindParam(':question_id', $relation->questionID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
         }
 
-        $relationID = (int) $this->pdo->lastInsertId();
-        $relation->id = $relationID;
+        $relation->id = (int) $this->pdo->lastInsertId();
         if ($relation->id === 0) {
             throw new Exception('UserFollowQuestion relation not saved', 1);
         }
@@ -36,20 +32,16 @@ class UserFollowQuestion_Relation_Mapper extends Abstract_Mapper
     {
         UserFollowQuestion_Relation_Validator::validateExists($relation);
 
-        $userID = $relation->userID;
-        $questionID = $relation->questionID;
-
         $sql = 'DELETE FROM er_users_follow_questions WHERE question_id=:question_id AND user_id=:user_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':user_id', $userID, PDO::PARAM_INT);
-        $stmt->bindParam(':question_id', $questionID, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $relation->userID, PDO::PARAM_INT);
+        $stmt->bindParam(':question_id', $relation->questionID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
         }
 
-        $deleted_rows = $stmt->rowCount();
-        if ($deleted_rows == 0) {
+        if ($stmt->rowCount() == 0) {
             throw new Exception("UserFollowQuestion relation not deleted", 1);
         }
 

@@ -6,20 +6,16 @@ class UserFollowHashtag_Relation_Mapper extends Abstract_Mapper
     {
         UserFollowHashtag_Relation_Validator::validateNew($relation);
 
-        $userID = $relation->userID;
-        $hashtagID = $relation->hashtagID;
-
         $sql = 'INSERT INTO er_users_follow_hashtags (user_id, hashtag_id) VALUES (:user_id, :hashtag_id)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':user_id', $userID, PDO::PARAM_INT);
-        $stmt->bindParam(':hashtag_id', $hashtagID, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $relation->userID, PDO::PARAM_INT);
+        $stmt->bindParam(':hashtag_id', $relation->hashtagID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
         }
 
-        $relationID = (int) $this->pdo->lastInsertId();
-        $relation->id = $relationID;
+        $relation->id = (int) $this->pdo->lastInsertId();
         if ($relation->id === 0) {
             throw new Exception('UserFollowHashtag relation not saved', 1);
         }
@@ -36,13 +32,10 @@ class UserFollowHashtag_Relation_Mapper extends Abstract_Mapper
     {
         UserFollowHashtag_Relation_Validator::validateExists($relation);
 
-        $userID = $relation->userID;
-        $hashtagID = $relation->hashtagID;
-
         $sql = 'DELETE FROM er_users_follow_hashtags WHERE hashtag_id=:hashtag_id AND user_id=:user_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':user_id', $userID, PDO::PARAM_INT);
-        $stmt->bindParam(':hashtag_id', $hashtagID, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $relation->userID, PDO::PARAM_INT);
+        $stmt->bindParam(':hashtag_id', $relation->hashtagID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
