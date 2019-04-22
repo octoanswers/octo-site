@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-22 13:15+0500\n"
-"PO-Revision-Date: 2019-04-22 13:15+0500\n"
+"POT-Creation-Date: 2019-04-22 14:13+0500\n"
+"PO-Revision-Date: 2019-04-22 14:13+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -841,18 +841,6 @@ msgstr "Больше вопросов"
 msgid "It's like wikipedia, only for questions and answers."
 msgstr "Это как Википедия, только для вопросов и ответов."
 
-#: Templates/sandbox/main/nav.phtml:5
-msgid "Questions without answer"
-msgstr "Вопросы без ответа"
-
-#: Templates/sandbox/main/nav.phtml:10
-msgid "Without hashtags"
-msgstr "Без тем"
-
-#: Templates/sandbox/main/nav.phtml:15
-msgid "All"
-msgstr "Все"
-
 #: Templates/sandbox/right/about_sandbox.phtml:5
 msgid "What is a \"sandbox\"?"
 msgstr "Что такое «Песочница»?"
@@ -874,6 +862,26 @@ msgstr ""
 #: Templates/sandbox/right/about_sandbox.phtml:13
 msgid "Now in the sandbox:"
 msgstr "Сейчас в песочнице:"
+
+#: Templates/sandbox/right/about_sandbox.phtml:22
+msgid "or <a data-toggle=\"modal\" data-target=\"#modal_login\">log-in</a>"
+msgstr "или <a data-toggle=\"modal\" data-target=\"#modal_login\">войдите</a>"
+
+#: Templates/sandbox/right/nav.phtml:5
+msgid "Filters"
+msgstr "Фильтры"
+
+#: Templates/sandbox/right/nav.phtml:10
+msgid "Questions without answer"
+msgstr "Вопросы без ответа"
+
+#: Templates/sandbox/right/nav.phtml:15
+msgid "Without hashtags"
+msgstr "Без тем"
+
+#: Templates/sandbox/right/nav.phtml:20
+msgid "All questions"
+msgstr "Все вопросы"
 
 #: Templates/search_questions/block/div__no_hashtags.phtml:5
 msgid "No hashtags found"
@@ -986,6 +994,9 @@ msgid ""
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
+
+#~ msgid "All"
+#~ msgstr "Все"
 
 #~ msgid "SANDBOX__ABOUT__TITLE"
 #~ msgstr "Что такое «Песочница»"

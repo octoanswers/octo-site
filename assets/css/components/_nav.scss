@@ -1,0 +1,9 @@
+.nav {
+  .nav-link {
+    color: $color-secondary-darkest;
+    padding: 0.25rem 0;
+  }
+  .active {
+    color: $color-primary;
+  }
+}

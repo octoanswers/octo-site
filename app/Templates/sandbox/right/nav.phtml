@@ -1,0 +1,25 @@
+
+<!-- sandbox_nav -->
+<div class="bg-light p-0 p-md-3 mb-4 d-none d-lg-block">
+	<div class="border-bottom pb-2 mb-2 h6 font-weight-bold">
+		<?= _('Filters') ?>
+	</div>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="nav-link <?= ($this->list == 'without-answers') ? 'active' : '' ?>">
+                <?= _('Questions without answer') ?>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="<?= Sandbox_URL_Helper::getWithoutHashtagsURL($this->lang) ?>" class="nav-link <?= ($this->list == 'without_hashtags') ? 'active' : '' ?>">
+                <?= _('Without hashtags') ?>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="<?= Sandbox_URL_Helper::getAllURL($this->lang) ?>" class="nav-link <?= ($this->list == 'newest') ? 'active' : '' ?>">
+                <?= _('All questions') ?>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- / sandbox_nav -->

@@ -425,6 +425,15 @@ img.cover-height-16 {
      object-fit: cover;
 }
 
+.nav .nav-link {
+  color: #434343;
+  padding: 0.25rem 0;
+}
+
+.nav .active {
+  color: #00a6ff;
+}
+
 .nav-tabs {
   border-bottom: 1px solid #e0e0e0;
 }
