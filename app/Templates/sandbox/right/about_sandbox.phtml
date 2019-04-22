@@ -10,14 +10,17 @@
 
     <?php if (isset($this->humanizedQuestionsCount)): ?>
         <p class="text-secondary mb-2">
-        <?= _('Now in the sandbox:') ?> <?= $this->humanizedQuestionsCount ?>
+            <?= _('Now in the sandbox:') ?> <?= $this->humanizedQuestionsCount ?>
         </p>
     <?php endif; ?>
     
     <?php if (!$this->authUser): ?>
-        <button role="button" data-toggle="modal" data-target="#modal_signup" class="btn btn-danger btn-block mt-4">
+        <button role="button" data-toggle="modal" data-target="#modal_signup" class="btn btn-danger mt-3">
             <?= _('Join the community') ?>
         </button>
+        <div class="text-secondary sall mt-1">
+            <?= _('or <a data-toggle="modal" data-target="#modal_login">log-in</a>') ?>
+        </div>
     <?php endif; ?>
 </div>
 <!-- / about_sandbox -->
