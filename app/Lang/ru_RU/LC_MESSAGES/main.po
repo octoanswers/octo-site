@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-17 10:29+0500\n"
-"PO-Revision-Date: 2019-04-17 10:33+0500\n"
+"POT-Creation-Date: 2019-04-22 13:15+0500\n"
+"PO-Revision-Date: 2019-04-22 13:15+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -287,6 +287,10 @@ msgstr[0] "Хештег"
 msgstr[1] "Хештега"
 msgstr[2] "Хештегов"
 
+#: Templates/_common/activity/f_h_added_q.phtml:11
+msgid "activity__hashtag_added_question"
+msgstr "помечен вопрос"
+
 #: Templates/_common/activity/f_q_renamed_by_u.phtml:11
 msgid "activity__question_renamed"
 msgstr "переименовал вопрос"
@@ -295,17 +299,13 @@ msgstr "переименовал вопрос"
 msgid "activity__question_updated_answer"
 msgstr "обновил ответ"
 
-#: Templates/_common/activity/f_t_added_q.phtml:11
-msgid "activity__hashtag_added_question"
-msgstr "помечен вопрос"
+#: Templates/_common/activity/f_u_follow_h.phtml:12
+msgid "activity__follow_hashtag"
+msgstr "подписался на хештег"
 
 #: Templates/_common/activity/f_u_follow_q.phtml:14
 msgid "activity__follow_question"
 msgstr "подписался на вопрос"
-
-#: Templates/_common/activity/f_u_follow_t.phtml:12
-msgid "activity__follow_hashtag"
-msgstr "подписался на хештег"
 
 #: Templates/_common/activity/f_u_follow_u.phtml:14
 msgid "activity__follow_user"
@@ -473,6 +473,7 @@ msgid "About Answeropedia"
 msgstr "О Answeropedia"
 
 #: Templates/_common/right/about_answeropedia.phtml:11
+#: Templates/sandbox/right/about_sandbox.phtml:19
 msgid "Join the community"
 msgstr "Присоединиться к сообществу"
 
@@ -852,6 +853,28 @@ msgstr "Без тем"
 msgid "All"
 msgstr "Все"
 
+#: Templates/sandbox/right/about_sandbox.phtml:5
+msgid "What is a \"sandbox\"?"
+msgstr "Что такое «Песочница»?"
+
+#: Templates/sandbox/right/about_sandbox.phtml:8
+msgid ""
+"The sandbox is a place to get new questions that have not yet been answered."
+msgstr ""
+"Песочница — это место куда попадают новые, ещё не имеющие ответа вопросы."
+
+#: Templates/sandbox/right/about_sandbox.phtml:9
+msgid ""
+"As soon as the question has a comprehensive answer and several hashtags, it "
+"is transferred to the <a href=\"%url%\">main list</a>."
+msgstr ""
+"Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он "
+"переносится в <a href=\"%url%\">основной список</a>."
+
+#: Templates/sandbox/right/about_sandbox.phtml:13
+msgid "Now in the sandbox:"
+msgstr "Сейчас в песочнице:"
+
 #: Templates/search_questions/block/div__no_hashtags.phtml:5
 msgid "No hashtags found"
 msgstr "Темы не найды"
@@ -963,6 +986,9 @@ msgid ""
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
+
+#~ msgid "SANDBOX__ABOUT__TITLE"
+#~ msgstr "Что такое «Песочница»"
 
 #~ msgid "FEED.LURE.FOLLOW_3_USERS.TITLE"
 #~ msgstr "Найдите первых друзей"

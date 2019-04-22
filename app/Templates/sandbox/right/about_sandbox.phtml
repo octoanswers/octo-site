@@ -1,22 +1,23 @@
 
 <!-- about_sandbox -->
-<div class="mt-4 d-none d-md-block">
-    <div class="">
-        <a class="font-weight-bold color-gray-800" href="#">
-            Что такое «Песочница»?
-        </a>
-    </div>
-    <div class="small">
-        <p class="color-gray-700">
-            Песочница &mdash; это место куда попадают новые, ещё не имеющие ответа вопросы.
-        </p>
-        <p class="color-gray-700">
-            Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в <a href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">основной список</a>.
-        </p>
+<div class="bg-light p-0 p-md-3 mb-4 d-none d-lg-block">
+	<div class="border-bottom pb-2 mb-2 h6 font-weight-bold">
+		<?= _('What is a "sandbox"?') ?>
+	</div>
 
-        <?php if (isset($this->humanizedQuestionsCount)): ?>
-            <p class="color-gray-500 mb-2">Сейчас в песочнице: <?= $this->humanizedQuestionsCount ?></p>
-        <?php endif; ?>
-    </div>
+	<p><?= _('The sandbox is a place to get new questions that have not yet been answered.') ?></p>
+	<p><?= str_replace("%url%", Questions_URL_Helper::getNewestURL($this->lang), _('As soon as the question has a comprehensive answer and several hashtags, it is transferred to the <a href="%url%">main list</a>.')) ?></p>
+
+    <?php if (isset($this->humanizedQuestionsCount)): ?>
+        <p class="text-secondary mb-2">
+        <?= _('Now in the sandbox:') ?> <?= $this->humanizedQuestionsCount ?>
+        </p>
+    <?php endif; ?>
+    
+    <?php if (!$this->authUser): ?>
+        <button role="button" data-toggle="modal" data-target="#modal_signup" class="btn btn-danger btn-block mt-4">
+            <?= _('Join the community') ?>
+        </button>
+    <?php endif; ?>
 </div>
 <!-- / about_sandbox -->
