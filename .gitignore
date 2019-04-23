@@ -11,3 +11,6 @@ php-cs-fixer-v2.phar
 
 # VS Code Settings
 .vscode/
+
+# PHPUnit cache
+.phpunit.result.cache
