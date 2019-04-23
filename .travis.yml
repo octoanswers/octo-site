@@ -1,6 +1,10 @@
 # Project language
 language: php
 
+# Choosing PHP versions to test
+php:
+  - '7.2'
+
 # Start mysql service
 services:
   - mysql
