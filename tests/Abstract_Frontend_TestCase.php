@@ -5,14 +5,14 @@ abstract class Abstract_Frontend_TestCase extends Abstract_DB_TestCase
 {
     protected $app;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
         $this->app = (new AWApp())->getApp();
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 

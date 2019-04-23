@@ -4,13 +4,13 @@ class Model__Question__getHumanizedMinutesToRead__Test extends PHPUnit\Framework
 {
     protected $question;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->question = new Question_Model;
         $this->question->answer = new Answer_Model();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->question = null;
     }

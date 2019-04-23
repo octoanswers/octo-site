@@ -13,7 +13,7 @@ abstract class Abstract_DB_TestCase extends TestCase
     protected $complementaryActions;
     protected $cookieStorageStub;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         if (count($this->setUpDB)) {
             foreach ($this->setUpDB as $database => $databaseTables) {
@@ -37,7 +37,7 @@ abstract class Abstract_DB_TestCase extends TestCase
         $this->cookieStorageStub = $this->getMockBuilder('CookieStorage')->getMock();
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         if (count($this->setUpDB)) {
             foreach ($this->setUpDB as $database => $databaseTables) {

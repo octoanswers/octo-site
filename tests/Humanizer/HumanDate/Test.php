@@ -8,7 +8,7 @@ class HumanDate_Humanizer__Test extends PHPUnit\Framework\TestCase
     private $lang;
     private $humanDate;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->timezone = new DateTimeZone('UTC');
         $this->lang = 'en';

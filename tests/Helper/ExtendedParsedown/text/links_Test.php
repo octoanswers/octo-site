@@ -4,12 +4,12 @@ use PHPUnit\Framework\TestCase;
 
 class ExtendedParsedown__links__ru_Test extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->pd = new ExtendedParsedown('ru');
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->pd = null;
     }
@@ -69,5 +69,4 @@ class ExtendedParsedown__links__ru_Test extends TestCase
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
-
 }

@@ -16,7 +16,7 @@ class Show_Main_PageController__BaseTest extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Answeropedia', $responseBody);
+        $this->assertStringContainsString('Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

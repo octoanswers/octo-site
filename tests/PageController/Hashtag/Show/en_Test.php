@@ -16,7 +16,7 @@ class Show_Hashtag_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
         
-        $this->assertContains('<title>Questions and answers on the hashtag cashmere - Answeropedia</title>', $responseBody);
+        $this->assertStringContainsString('<title>Questions and answers on the hashtag cashmere - Answeropedia</title>', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

@@ -14,7 +14,7 @@ class Settings_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('You not logged', $responseBody);
+        $this->assertStringContainsString('You not logged', $responseBody);
         $this->assertSame(404, $response->getStatusCode());
     }
 
@@ -30,7 +30,7 @@ class Settings_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('You not logged', $responseBody);
+        $this->assertStringContainsString('You not logged', $responseBody);
         $this->assertSame(404, $response->getStatusCode());
     }
 }

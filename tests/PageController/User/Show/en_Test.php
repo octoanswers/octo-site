@@ -16,8 +16,8 @@ class Show_User_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Виталий Козлов Wiki-answers on Answeropedia', $responseBody);
-        //$this->assertContains('Alexander Gomzyakov', $responseBody);
+        $this->assertStringContainsString('Виталий Козлов Wiki-answers on Answeropedia', $responseBody);
+        //$this->assertStringContainsString('Alexander Gomzyakov', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

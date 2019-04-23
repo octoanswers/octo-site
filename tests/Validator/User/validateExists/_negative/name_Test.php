@@ -2,7 +2,7 @@
 
 class Validator_User__negative_name_Test extends PHPUnit\Framework\TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->user = new User_Model();
         $this->user->id = 13;
@@ -15,7 +15,7 @@ class Validator_User__negative_name_Test extends PHPUnit\Framework\TestCase
         $this->user->createdAt = '2016-03-19 06:47:41';
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->user = null;
     }

@@ -16,8 +16,8 @@ class All_Sandbox_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Песочница - Страница 1 - Answeropedia', $responseBody);
-        $this->assertContains('Птицы играют в игры?', $responseBody);
+        $this->assertStringContainsString('Песочница - Страница 1 - Answeropedia', $responseBody);
+        $this->assertStringContainsString('Птицы играют в игры?', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

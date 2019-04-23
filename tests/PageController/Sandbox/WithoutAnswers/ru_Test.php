@@ -16,8 +16,8 @@ class WithoutAnswers_Sandbox_PageController__ru__Test extends Abstract_Frontend_
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertContains('Вопросы без ответа - Страница 1 - Answeropedia', $responseBody);
-        $this->assertContains('Какая сейчас погода?', $responseBody);
+        $this->assertStringContainsString('Вопросы без ответа - Страница 1 - Answeropedia', $responseBody);
+        $this->assertStringContainsString('Какая сейчас погода?', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

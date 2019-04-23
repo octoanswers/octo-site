@@ -4,12 +4,12 @@ class Model__Question__getHumanizedHashtags__Test extends PHPUnit\Framework\Test
 {
     protected $question;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->question = new Question_Model;
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->question = null;
     }

@@ -2,7 +2,7 @@
 
 class Validator_User__negative_site__Test extends PHPUnit\Framework\TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->user = new User_Model();
         $this->user->id = 13;
@@ -13,7 +13,7 @@ class Validator_User__negative_site__Test extends PHPUnit\Framework\TestCase
         $this->user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->user = null;
     }

@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class CookieStorage_BaseTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $user = User_Model::initWithDBState([
             'u_id' => 13,
@@ -17,7 +17,7 @@ class CookieStorage_BaseTest extends TestCase
         $this->storage->saveUser($user);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->storage->clear();
         $this->storage = null;
