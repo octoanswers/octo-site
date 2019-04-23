@@ -1,3 +1,5 @@
+<img src="https://travis-ci.org/answeropedia/answeropedia.org.svg?branch=master" />
+
 # Answeropedia
 
 Answeropedia is a wiki-based Q&A (questions and answers) service, running on PHP/MySQL.
