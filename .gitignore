@@ -1,24 +1,13 @@
-# some system files
+# some Mac OS system files
 .DS_Store
 
 # file with settings
 local-settings.php
 
-# Code-coverage reports
-_coverage/*
-
-# dependency loaded by Composer
-vendor/*
-
-cache/*
-
 # local php-cs-fixer files
 php-cs-fixer.phar
 php-cs-fixer-v2.phar
 .php_cs.cache
-
-# Github Atom plugins
-.remote-sync.json
 
 # VS Code Settings
 .vscode/
