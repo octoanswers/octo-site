@@ -11,5 +11,4 @@ before-install:
 
 # Install composer dependencies,
 # Create database, schema and fixtures
-install:
-  - composer install
+# install:

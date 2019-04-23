@@ -1,9 +1,6 @@
 # File with settings
 local-settings.php
 
-# Dependency loaded by Composer
-vendor/
-
 # Some Mac OS system files
 .DS_Store
 
