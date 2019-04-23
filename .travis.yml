@@ -12,6 +12,9 @@ services:
 # Update composer
 before-install:
   - composer self-update
+  - mysql -e "CREATE DATABASE ap_en CHARACTER SET utf8 COLLATE utf8_general_ci;"
+  - mysql -e "CREATE DATABASE ap_ru CHARACTER SET utf8 COLLATE utf8_general_ci;"
+  - mysql -e "CREATE DATABASE ap_users CHARACTER SET utf8 COLLATE utf8_general_ci;"
 
 # Install composer dependencies,
 # Create database, schema and fixtures
