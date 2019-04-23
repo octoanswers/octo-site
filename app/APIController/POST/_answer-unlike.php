@@ -13,11 +13,11 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
     $currentUser = ParseUser::getCurrentUser();
 
     if (!$currentUser) {
-        $errors['other'] = _('API__ERROR__NEED_LOGIN_TO_DISLIKE_ANSWER');
+        $errors['other'] = _('API Error: Need login to dislike answer');
     }
 
     if (!$_POST['answer-id']) {
-        $errors['other'] = _('API__ERROR__ANSWER_LIKE_NOT_EXISTS');
+        $errors['other'] = _('API Error: Answer like not exists');
     }
 
     if (!empty($errors)) {
@@ -57,15 +57,15 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
             $parseAnswer->save(true);
 
             $response['success'] = true;
-            $response['message'] = _('API__OK__ANSWER_DISLIKED');
+            $response['message'] = _('API: Answer disliked');
         } catch (ParseException $ex) {
-            $errors['other'] = _('API__ERROR').': '.$ex->getCode().' '.$ex->getMessage();
+            $errors['other'] = _('API Error').': '.$ex->getCode().' '.$ex->getMessage();
             $response['success'] = false;
             $response['errors'] = $errors;
         }
     }
 } else {
-    $errors['other'] = _('API__ERROR__ONLY_AJAX');
+    $errors['other'] = _('API Error: Only AJAX requests');
     $response['success'] = false;
     $response['errors'] = $errors;
 }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-22 14:13+0500\n"
-"PO-Revision-Date: 2019-04-22 14:13+0500\n"
+"POT-Creation-Date: 2019-04-23 14:49+0500\n"
+"PO-Revision-Date: 2019-04-23 14:49+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -16,38 +16,38 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: APIController/POST/_answer-like.php:18
-msgid "API__ERROR__NEED_LOGIN_TO_LIKE_ANSWER"
-msgstr ""
+msgid "API Error: Need login to like answer"
+msgstr "Ошибка API: Необходимо войти, чтобы лайкнуть ответ"
 
 #: APIController/POST/_answer-like.php:22
-msgid "API__ERROR__ANSWER_ALREADY_LIKED"
-msgstr ""
+msgid "API Error: Answer already liked"
+msgstr "Ошибка API: Ответ уже залайкан"
 
 #: APIController/POST/_answer-like.php:66
-msgid "API__OK__ANSWER_LIKED"
-msgstr ""
+msgid "API: Answer liked"
+msgstr "API: Ответ лайкнут"
 
 #: APIController/POST/_answer-like.php:68
 #: APIController/POST/_answer-unlike.php:62
-msgid "API__ERROR"
-msgstr ""
+msgid "API Error"
+msgstr "Ошибка API"
 
 #: APIController/POST/_answer-like.php:74
 #: APIController/POST/_answer-unlike.php:68
-msgid "API__ERROR__ONLY_AJAX"
-msgstr ""
+msgid "API Error: Only AJAX requests"
+msgstr "Ошибка API: Только AJAX-запросы"
 
 #: APIController/POST/_answer-unlike.php:16
-msgid "API__ERROR__NEED_LOGIN_TO_DISLIKE_ANSWER"
-msgstr ""
+msgid "API Error: Need login to dislike answer"
+msgstr "Ошибка API: Необходимо войти, чтобы дазлайкнуть ответ"
 
 #: APIController/POST/_answer-unlike.php:20
-msgid "API__ERROR__ANSWER_LIKE_NOT_EXISTS"
-msgstr ""
+msgid "API Error: Answer like not exists"
+msgstr "Ошибка API: Ответ не имеет лайка"
 
 #: APIController/POST/_answer-unlike.php:60
-msgid "API__OK__ANSWER_DISLIKED"
-msgstr ""
+msgid "API: Answer disliked"
+msgstr "API: Ответ дизлайкнут"
 
 #: PageController/Answer/Edit.php:34 PageController/Answer/Edit.php:35
 #: Templates/answer_edit/main/header.phtml:3
@@ -247,9 +247,10 @@ msgstr "Хештеги"
 msgid "Contributors"
 msgstr "Авторы"
 
-#: PageController/Settings/Show.php:18
-msgid "SETTINGS__TITLE"
-msgstr ""
+#: PageController/Settings/Show.php:18 Templates/settings/main.phtml:3
+#: Templates/user/main/header.phtml:47
+msgid "Settings"
+msgstr "Настройки профиля"
 
 #: PageController/User/Show.php:31 PageController/User/Show.php:32
 #: PageController/User/Show.php:70
@@ -919,10 +920,6 @@ msgstr "По запросу «%query%» не удалось найти ни од
 msgid "View all users"
 msgstr "Посмотреть всех пользователей"
 
-#: Templates/settings/main.phtml:3 Templates/user/main/header.phtml:47
-msgid "Settings"
-msgstr "Настройки профиля"
-
 #: Templates/settings/main.phtml:6
 msgid "Back to profile"
 msgstr "Вернуться к профилю"
@@ -994,84 +991,3 @@ msgid ""
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
-
-#~ msgid "All"
-#~ msgstr "Все"
-
-#~ msgid "SANDBOX__ABOUT__TITLE"
-#~ msgstr "Что такое «Песочница»"
-
-#~ msgid "FEED.LURE.FOLLOW_3_USERS.TITLE"
-#~ msgstr "Найдите первых друзей"
-
-#~ msgid "FEED.LURE.FOLLOW_3_USERS.MSG"
-#~ msgstr ""
-#~ "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы "
-#~ "и прочие активности этих пользователей будут появляться у вас в ленте "
-#~ "новостей"
-
-#~ msgid "FEED.LURE.FOLLOW_3_USERS.LINK"
-#~ msgstr "Посмотреть пользователей"
-
-#~ msgid "Feed.Lure.Follow_three_users.TITLE"
-#~ msgstr "Найдите первых друзей"
-
-#~ msgid "Feed.Lure.Follow_three_users.MSG"
-#~ msgstr ""
-#~ "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы "
-#~ "и прочие активности этих пользователей будут появляться у вас в ленте "
-#~ "новостей"
-
-#~ msgid "Feed.Lure.Follow_three_users.LINK"
-#~ msgstr "Посмотреть пользователей"
-
-#~ msgid "Feed.Lure.Follow_three_questions.Title"
-#~ msgstr "Подпишитесь на несколько вопросов"
-
-#~ msgid "Feed.Lure.Follow_three_questions.Msg"
-#~ msgstr ""
-#~ "Подписываясь на интересные вопросы, вы сможете следить за их правками. "
-#~ "Найдите и подпишитесь на три или более вопроса"
-
-#~ msgid "Feed.Lure.Follow_three_questions.Link"
-#~ msgstr "Посмотреть вопросы"
-
-#~ msgid "Feed.Lure.Follow_three_hashtags.Title"
-#~ msgstr "Подпишитесь на несколько тем"
-
-#~ msgid "Feed.Lure.Follow_three_hashtags.Msg"
-#~ msgstr ""
-#~ "Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут "
-#~ "появляться у вас в ленте новостей"
-
-#~ msgid "Feed.Lure.Follow_three_hashtags.Link"
-#~ msgstr "Посмотреть популярные хештеги"
-
-#~ msgid "Feed.Lure.Follow_three_users.Title"
-#~ msgstr "Найдите первых друзей"
-
-#~ msgid "Feed.Lure.Write_answer.Title"
-#~ msgstr "Напишите первый ответ"
-
-#~ msgid "Feed.Lure.Write_answer.Msg"
-#~ msgstr ""
-#~ "Посмотрите вопросы на которые еще никто не написал ответа и станьте "
-#~ "первым автором"
-
-#~ msgid "Feed.Lure.Write_answer.Link"
-#~ msgstr "Посмотреть вопросы без ответов"
-
-#~ msgid "Actions"
-#~ msgstr "Действия"
-
-#~ msgid "Report"
-#~ msgstr "Пожаловаться"
-
-#~ msgid "Add a picture to the question"
-#~ msgstr "Добавить изображение к вопросу"
-
-#~ msgid "Hashtags"
-#~ msgstr "Темы"
-
-#~ msgid "Ask a Question"
-#~ msgstr "Задать вопрос"
