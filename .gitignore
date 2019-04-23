@@ -1,10 +1,13 @@
-# some Mac OS system files
-.DS_Store
-
-# file with settings
+# File with settings
 local-settings.php
 
-# local php-cs-fixer files
+# Dependency loaded by Composer
+vendor/
+
+# Some Mac OS system files
+.DS_Store
+
+# Local php-cs-fixer files
 php-cs-fixer.phar
 php-cs-fixer-v2.phar
 .php_cs.cache

@@ -1,1 +1,15 @@
+# Project language
 language: php
+
+# Start mysql service
+services:
+  - mysql
+
+# Update composer
+before-install:
+  - composer self-update
+
+# Install composer dependencies,
+# Create database, schema and fixtures
+install:
+  - composer install
