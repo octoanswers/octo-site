@@ -16,6 +16,6 @@ before-install:
 # Install composer dependencies,
 # Create database, schema and fixtures
 install:
-  - mysql -e "CREATE DATABASE ap_en CHARACTER SET utf8 COLLATE utf8_general_ci;"
-  - mysql -e "CREATE DATABASE ap_ru CHARACTER SET utf8 COLLATE utf8_general_ci;"
-  - mysql -e "CREATE DATABASE ap_users CHARACTER SET utf8 COLLATE utf8_general_ci;"
+  - mysql -e "CREATE DATABASE IF NOT EXISTS ap_en CHARACTER SET utf8 COLLATE utf8_general_ci;"
+  - mysql -e "CREATE DATABASE IF NOT EXISTS ap_ru CHARACTER SET utf8 COLLATE utf8_general_ci;"
+  - mysql -e "CREATE DATABASE IF NOT EXISTS ap_users CHARACTER SET utf8 COLLATE utf8_general_ci;"
