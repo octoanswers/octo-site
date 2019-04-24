@@ -87,8 +87,7 @@ class AWApp
             $this->get('/sandbox/all', 'All_Sandbox_PageController:handle');
             $this->get('/sandbox/without-answers', 'WithoutAnswers_Sandbox_PageController:handle');
             $this->get('/sandbox/without-hashtags', 'WithoutHashtags_Sandbox_PageController:handle');
-            $this->get('/search', 'Questions_Search_PageController:handle'); // @NOTE Dont used
-            $this->get('/search/hashtags', 'Hashtags_Search_PageController:handle');
+            $this->get('/search', 'Show_Search_PageController:handle');
             $this->get('/settings', 'Show_Settings_PageController:handle');
             $this->get('/sitemap.xml', 'Lang_SitemapXML_PageController:handle');
             $this->get('/user/{id}', 'ShortURL_User_PageController:handle');

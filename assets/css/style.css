@@ -425,27 +425,6 @@ img.cover-height-16 {
      object-fit: cover;
 }
 
-.nav .nav-link {
-  color: #434343;
-  padding: 0.25rem 0;
-}
-
-.nav .active {
-  color: #00a6ff;
-}
-
-.nav-tabs {
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.nav-tabs .nav-link.active {
-  border-top-color: #e0e0e0;
-  border-right-color: #e0e0e0;
-  border-bottom-color: #ffffff;
-  border-left-color: #e0e0e0;
-  font-weight: 600;
-}
-
 .navbar .nav-link {
   color: #9e9e9e;
 }

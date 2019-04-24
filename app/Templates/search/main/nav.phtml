@@ -1,0 +1,18 @@
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link <?= $this->list == 'questions' ? 'active' : '' ?>" href="<?= $this->searchQuestionsLink ?>">
+            <?= _('Questions'); ?>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link <?= $this->list == 'hashtags' ? 'active' : '' ?>" href="<?= $this->searchHashtagsLink ?>">
+            <?= _('Search.Filter.Hashtags'); ?>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link <?= $this->list == 'users' ? 'active' : '' ?>" href="<?= $this->searchUsersLink ?>">
+            <?= _('Users'); ?>
+        </a>
+    </li>
+</ul>

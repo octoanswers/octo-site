@@ -1,6 +1,6 @@
 <?php
 
-class Questions_Search_PageController extends Abstract_PageController
+class Show_Search_PageController extends Abstract_PageController
 {
     const LIST_QUESTIONS = 'questions';
     const LIST_HASHTAGS = 'hashtags';
@@ -23,14 +23,16 @@ class Questions_Search_PageController extends Abstract_PageController
 
         if ($this->query) {
             $this->questions = (new Search_Query($this->lang))->searchQuestions($this->query);
+        } else {
+            $this->questions = [];
         }
 
-        $this->template = 'search_questions';
-        $this->jumbortonBgStyle = 'red';
+        $this->template = 'search';
         $this->pageTitle = str_replace('%query%', $this->query, _('Search %query% - Answeropedia'));
 
-        $this->searchPlaceholder = $this->__getSearchPlaceholder($this->list);
-
+        $this->searchPlaceholder = $this->_getSearchPlaceholder($this->list);
+        $this->showFooter = false;
+        
         $searchLinkPostfix = $this->query ? '&q='.$this->query : '';
         $this->searchQuestionsLink = SITE_URL.'/search?list=questions'.$searchLinkPostfix;
         $this->searchHashtagsLink = SITE_URL.'/search?list=hashtags'.$searchLinkPostfix;
@@ -46,17 +48,17 @@ class Questions_Search_PageController extends Abstract_PageController
     # Helper methods
     #
 
-    public function __getSearchPlaceholder(string $list): string
+    public function _getSearchPlaceholder(string $list): string
     {
         switch ($list) {
             case self::LIST_QUESTIONS:
-                $placeholder = _('Questions');
+                $placeholder = _('Search by questions');
                 break;
             case self::LIST_HASHTAGS:
-                $placeholder = _('Search.Filter.Hashtags');
+                $placeholder = _('Search by hashtags');
                 break;
             case self::LIST_USERS:
-                $placeholder = _('Contributors');
+                $placeholder = _('Search by contributors');
                 break;
             default:
                 throw new Exception("Incorrect list param", 0);

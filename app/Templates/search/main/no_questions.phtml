@@ -1,5 +1,5 @@
 
-<?php if ((count($this->questions) == 0) && ($this->query != '')): ?>
+<?php if (count($this->questions) == 0 && strlen($this->query) == 0): ?>
     <div class="alert alert-secondary pb-5 mt-4">
         <div class="text-center">
             <p class="mb-2"><strong><?= _('No questions found') ?></strong></p>

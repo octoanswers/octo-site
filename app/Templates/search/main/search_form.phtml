@@ -1,0 +1,7 @@
+
+<form class="my-4" action="<?= SITE_URL.'/'.$this->lang.'/search' ?>" method="GET">
+    <input type="hidden" name="list" value="<?= $this->list ?>">
+    <div class="form-group">
+        <input name="q" class="form-control form-control-lg" type="text" placeholder="<?= $this->searchPlaceholder ?>" aria-label="Search" value="<?= $this->query ?>">
+    </div>
+</form>

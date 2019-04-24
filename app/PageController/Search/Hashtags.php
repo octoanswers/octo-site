@@ -1,9 +1,7 @@
 <?php
 
-class Hashtags_Search_PageController extends Abstract_PageController
+class Hashtags_Search_PageController extends Abstract_Search_PageController
 {
-    const QUESTIONS_PER_PAGE = 10;
-
     protected $list;
     protected $questions;
 
@@ -13,13 +11,11 @@ class Hashtags_Search_PageController extends Abstract_PageController
         $this->query = $request->getParam('q');
         $this->list = 'hashtags';
 
-        // @TODO check query
-
         if ($this->query) {
             $this->questions = (new Search_Query($this->lang))->searchHashtags($this->query);
         }
 
-        $this->template = 'search_hashtags';
+        $this->template = 'search';
         $this->jumbortonBgStyle = 'red';
         $this->pageTitle = str_replace('%query%', $this->query, _('Search')).' - '._('Answeropedia');
 
