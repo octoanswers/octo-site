@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-04-24 19:28+0500\n"
-"PO-Revision-Date: 2019-04-24 19:29+0500\n"
+"PO-Revision-Date: 2019-04-24 20:16+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -891,7 +891,7 @@ msgstr "Хештеги"
 
 #: Templates/search/main/no_hashtags.phtml:5
 msgid "No hashtags found"
-msgstr "Темы не найды"
+msgstr "Хештегов не найдено"
 
 #: Templates/search/main/no_hashtags.phtml:7
 msgid "No hashtag found for \"%query%\""
@@ -903,7 +903,7 @@ msgstr "Посмотреть все темы"
 
 #: Templates/search/main/no_questions.phtml:5
 msgid "No questions found"
-msgstr "Вопросы не найды"
+msgstr "Вопросов не найдено"
 
 #: Templates/search/main/no_questions.phtml:7
 msgid "On request \"%query%\" could not find any questions"
@@ -915,7 +915,7 @@ msgstr "Посмотреть все вопросы"
 
 #: Templates/search/main/no_users.phtml:5
 msgid "No users found"
-msgstr "Пользователи не найды"
+msgstr "Пользователей не найдено"
 
 #: Templates/search/main/no_users.phtml:7
 msgid "On request \"% query%\" could not find any users"

@@ -16,7 +16,7 @@ class Show_Search_PageController extends Abstract_PageController
         $this->lang = (string) $args['lang'];
         $this->query = (string) $request->getParam('q');
 
-        $this->list = $request->getParam('list');
+        $this->list = (string) $request->getParam('list');
         $this->list = $this->_normalizeList($this->list);
         
         $this->_getSearchResults();
@@ -44,7 +44,7 @@ class Show_Search_PageController extends Abstract_PageController
         }
     }
 
-    private function _normalizeList($list): string
+    private function _normalizeList(string $list): string
     {
         if ($list == self::LIST_HASHTAGS || $list == self::LIST_USERS) {
             return $list;

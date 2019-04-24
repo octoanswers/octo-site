@@ -2,32 +2,8 @@
 <?php require __DIR__.'/main/nav.phtml'; ?>
 <?php require __DIR__.'/main/search_form.phtml'; ?>
 
-<?php if ($this->list == 'questions'): ?>
-
-    <?php require_once __DIR__.'/main/no_questions.phtml' ?>
-
-    <?php if ($this->questions && count($this->questions)): ?>
-        <?php foreach ($this->questions as $question): ?>
-            <div class="mt-5">
-                <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
-                    <a class="link-inverted text-decoration-none lead" href="<?= $question->getURL($this->lang) ?>"><?= $question->title ?></a>
-                    <div>
-                    <?php if ($question->answer): ?>
-                        <span class="text-muted">
-                            <i class="fas fa-mail" style="color: #2BB462;"></i>
-                            <?= 'getHumanizedMinutesToRead' ?>
-                        </span>
-                    <?php endif; ?>
-                    </div>
-                </div>
-                <span class="text-muted float-right">
-                    <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
-                </span>
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
-
-<?php endif; ?>
+<?php require_once __DIR__.'/main/questions.phtml' ?>
+<?php require_once __DIR__.'/main/questions_not_found.phtml' ?>
 
 <?php if ($this->list == 'hashtags'): ?>
 
