@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-23 14:49+0500\n"
-"PO-Revision-Date: 2019-04-23 14:49+0500\n"
+"POT-Creation-Date: 2019-04-24 19:28+0500\n"
+"PO-Revision-Date: 2019-04-24 19:29+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -73,9 +73,9 @@ msgstr "Править ответ"
 #: PageController/Sandbox/WithoutAnswers.php:63
 #: PageController/Sandbox/WithoutHashtags.php:58
 #: PageController/Sandbox/WithoutHashtags.php:63
-#: PageController/Search/Hashtags.php:24 PageController/Settings/Show.php:18
-#: PageController/Users/Newest.php:45 Templates/_common/navbar.phtml:7
-#: Templates/_common/navbar.phtml:11 Templates/root/block/navbar.phtml:5
+#: PageController/Settings/Show.php:18 PageController/Users/Newest.php:45
+#: Templates/_common/navbar.phtml:7 Templates/_common/navbar.phtml:11
+#: Templates/root/block/navbar.phtml:5
 msgid "Answeropedia"
 msgstr "Answeropedia"
 
@@ -107,7 +107,7 @@ msgid "Feed"
 msgstr "Лента"
 
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: Templates/_common/footer.phtml:35 Templates/flow/main/header.phtml:4
+#: Templates/flow/main/header.phtml:4
 msgid "Flow"
 msgstr "Поток"
 
@@ -220,32 +220,21 @@ msgstr "Вопросы без ответа"
 msgid "Questions without hashtags"
 msgstr "Вопросы без тем"
 
-#: PageController/Search/Hashtags.php:24
-#: Templates/search_questions/main.phtml:8
-msgid "Search"
-msgstr "Поиск"
-
-#: PageController/Search/Hashtags.php:26 Templates/hashtags/main/header.phtml:9
-msgid "Search hashtags"
-msgstr "Поиск тем"
-
-#: PageController/Search/Questions.php:30
+#: PageController/Search/Show.php:25
 msgid "Search %query% - Answeropedia"
 msgstr "Поиск %query% - Answeropedia"
 
-#: PageController/Search/Questions.php:53 Templates/_common/footer.phtml:25
-#: Templates/search_questions/main.phtml:11
-msgid "Questions"
-msgstr "Вопросы"
+#: PageController/Search/Show.php:65
+msgid "Search by questions"
+msgstr "Поиск по вопросам"
 
-#: PageController/Search/Questions.php:56
-#: Templates/search_questions/main.phtml:14
-msgid "Search.Filter.Hashtags"
-msgstr "Хештеги"
+#: PageController/Search/Show.php:68
+msgid "Search by hashtags"
+msgstr "Поиск по хештегам"
 
-#: PageController/Search/Questions.php:59
-msgid "Contributors"
-msgstr "Авторы"
+#: PageController/Search/Show.php:71
+msgid "Search by contributors"
+msgstr "Поиск по пользователям"
 
 #: PageController/Settings/Show.php:18 Templates/settings/main.phtml:3
 #: Templates/user/main/header.phtml:47
@@ -336,9 +325,17 @@ msgstr "Правила"
 msgid "Support"
 msgstr "Поддержка"
 
-#: Templates/_common/footer.phtml:30 Templates/search_questions/main.phtml:17
+#: Templates/_common/footer.phtml:25 Templates/search/main/nav.phtml:5
+msgid "Questions"
+msgstr "Вопросы"
+
+#: Templates/_common/footer.phtml:30 Templates/search/main/nav.phtml:15
 msgid "Users"
 msgstr "Пользователи"
+
+#: Templates/_common/footer.phtml:35
+msgid "Search"
+msgstr "Поиск"
 
 #: Templates/_common/item/question_with_answer.phtml:31
 #: Templates/question/main/lure_be_first_contributor.phtml:20
@@ -692,6 +689,10 @@ msgstr "Отписаться"
 msgid "Cancel"
 msgstr "Отмена"
 
+#: Templates/hashtags/main/header.phtml:9
+msgid "Search hashtags"
+msgstr "Поиск тем"
+
 #: Templates/hashtags/main/nav.phtml:11 Templates/questions/main/nav.phtml:15
 #: Templates/users/main/nav.phtml:11
 msgid "Popular"
@@ -884,39 +885,43 @@ msgstr "Без тем"
 msgid "All questions"
 msgstr "Все вопросы"
 
-#: Templates/search_questions/block/div__no_hashtags.phtml:5
+#: Templates/search/main/nav.phtml:10
+msgid "Hashtags"
+msgstr "Хештеги"
+
+#: Templates/search/main/no_hashtags.phtml:5
 msgid "No hashtags found"
 msgstr "Темы не найды"
 
-#: Templates/search_questions/block/div__no_hashtags.phtml:7
+#: Templates/search/main/no_hashtags.phtml:7
 msgid "No hashtag found for \"%query%\""
 msgstr "Не удалось найти ни одной темы по запросу «%query%»"
 
-#: Templates/search_questions/block/div__no_hashtags.phtml:10
+#: Templates/search/main/no_hashtags.phtml:10
 msgid "View all hashtags"
 msgstr "Посмотреть все темы"
 
-#: Templates/search_questions/block/div__no_questions.phtml:5
+#: Templates/search/main/no_questions.phtml:5
 msgid "No questions found"
 msgstr "Вопросы не найды"
 
-#: Templates/search_questions/block/div__no_questions.phtml:7
+#: Templates/search/main/no_questions.phtml:7
 msgid "On request \"%query%\" could not find any questions"
 msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
 
-#: Templates/search_questions/block/div__no_questions.phtml:10
+#: Templates/search/main/no_questions.phtml:10
 msgid "View all questions"
 msgstr "Посмотреть все вопросы"
 
-#: Templates/search_questions/block/div__no_users.phtml:5
+#: Templates/search/main/no_users.phtml:5
 msgid "No users found"
 msgstr "Пользователи не найды"
 
-#: Templates/search_questions/block/div__no_users.phtml:7
+#: Templates/search/main/no_users.phtml:7
 msgid "On request \"% query%\" could not find any users"
 msgstr "По запросу «%query%» не удалось найти ни одного пользователя"
 
-#: Templates/search_questions/block/div__no_users.phtml:10
+#: Templates/search/main/no_users.phtml:10
 msgid "View all users"
 msgstr "Посмотреть всех пользователей"
 
@@ -991,3 +996,9 @@ msgid ""
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
+
+#~ msgid "Search.Filter.Hashtags"
+#~ msgstr "Хештеги"
+
+#~ msgid "Contributors"
+#~ msgstr "Авторы"

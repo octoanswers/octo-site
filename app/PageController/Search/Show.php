@@ -13,8 +13,8 @@ class Show_Search_PageController extends Abstract_PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
-        $this->query = $request->getParam('q');
+        $this->lang = (string) $args['lang'];
+        $this->query = (string) $request->getParam('q');
 
         $this->list = $request->getParam('list');
         $this->list = $this->_normalizeList($this->list);

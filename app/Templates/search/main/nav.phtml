@@ -1,17 +1,17 @@
 
 <ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link <?= $this->list == 'questions' ? 'active' : '' ?>" href="<?= $this->searchQuestionsLink ?>">
+        <a class="nav-link <?= $this->list == 'questions' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchQuestionsURL($this->lang, $this->query) ?>">
             <?= _('Questions'); ?>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link <?= $this->list == 'hashtags' ? 'active' : '' ?>" href="<?= $this->searchHashtagsLink ?>">
-            <?= _('Search.Filter.Hashtags'); ?>
+        <a class="nav-link <?= $this->list == 'hashtags' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchHashtagsURL($this->lang, $this->query) ?>">
+            <?= _('Hashtags'); ?>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link <?= $this->list == 'users' ? 'active' : '' ?>" href="<?= $this->searchUsersLink ?>">
+        <a class="nav-link <?= $this->list == 'users' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchUsersURL($this->lang, $this->query) ?>">
             <?= _('Users'); ?>
         </a>
     </li>
