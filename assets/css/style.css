@@ -324,6 +324,11 @@ a.link-external:after {
   vertical-align: middle;
 }
 
+h1,
+.h1 {
+  font-weight: 700;
+}
+
 del,
 ins {
   padding-left: 0.25rem;
