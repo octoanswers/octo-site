@@ -21,7 +21,7 @@ class Show_Main_PageController extends Abstract_PageController
         // foreach ($this->recent_questions as $question) {
         //     $hashtagsTitles = Hashtag_Extractor_Helper::extractHashtags($question->answer->text);
         //     foreach ($hashtagsTitles as $title) {
-        //         $hashtag = Hashtag_Model::initWithTitle($title);
+        //         $hashtag = Hashtag::initWithTitle($title);
         //         $this->hashtags[$question->id][] = $hashtag;
         //     }
         // }

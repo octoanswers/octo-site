@@ -4,7 +4,7 @@ class Hashtag_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
 {
     public function test_en()
     {
-        $hashtag = new Hashtag_Model;
+        $hashtag = new Hashtag;
         $hashtag->title = 'foo';
         $hashtag->id = 12;
 
@@ -13,7 +13,7 @@ class Hashtag_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
 
     public function test_ru()
     {
-        $hashtag = new Hashtag_Model;
+        $hashtag = new Hashtag;
         $hashtag->title = 'дождь';
         $hashtag->id = 34;
 
@@ -22,7 +22,7 @@ class Hashtag_URL_Trait__getURL__Test extends PHPUnit\Framework\TestCase
 
     public function test_ru_WithUnderline()
     {
-        $hashtag = new Hashtag_Model;
+        $hashtag = new Hashtag;
         $hashtag->title = 'проливной_дождь';
         $hashtag->id = 56;
 

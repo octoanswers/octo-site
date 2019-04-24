@@ -24,6 +24,10 @@ spl_autoload_register(function ($class_name) {
 
         'AWApp' => 'app/AWApp.php',
 
+        // Model
+
+        'Hashtag' => 'app/Model/Hashtag.php',
+
         # Helpers
 
         'FineDiff' => 'app/Helper/FineDiff/FineDiff.php',
@@ -42,24 +46,23 @@ spl_autoload_register(function ($class_name) {
 
     ];
 
-    // Auto-include classes as Show_Question_PageController
-    if (strpos($class_name, '_') !== false) {
-
-        $pieces = explode('_', $class_name);
-        $pathPieces = array_reverse($pieces);
-        $classPath = 'app/'.implode('/', $pathPieces).'.php';
-
-        if (file_exists($classPath)) {
-            require_once $classPath;
+    if (array_key_exists($class_name, $class_map)) {
+        if (file_exists($class_map[$class_name])) {
+            require_once $class_map[$class_name];
             if (class_exists($class_name)) {
                 return true;
             }
         }
     }
 
-    if (array_key_exists($class_name, $class_map)) {
-        if (file_exists($class_map[$class_name])) {
-            require_once $class_map[$class_name];
+    // Auto-include classes as Show_Question_PageController
+    if (strpos($class_name, '_') !== false) {
+        $pieces = explode('_', $class_name);
+        $pathPieces = array_reverse($pieces);
+        $classPath = 'app/'.implode('/', $pathPieces).'.php';
+
+        if (file_exists($classPath)) {
+            require_once $classPath;
             if (class_exists($class_name)) {
                 return true;
             }

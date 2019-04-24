@@ -2,7 +2,7 @@
 
 class Hashtag_Mapper extends Abstract_Mapper
 {
-    public function create(Hashtag_Model $hashtag): Hashtag_Model
+    public function create(Hashtag $hashtag): Hashtag
     {
         Hashtag_Validator::validateNew($hashtag);
 
@@ -24,7 +24,7 @@ class Hashtag_Mapper extends Abstract_Mapper
         return $hashtag;
     }
 
-    public function update(Hashtag_Model $hashtag): Hashtag_Model
+    public function update(Hashtag $hashtag): Hashtag
     {
         Hashtag_Validator::validateExists($hashtag);
 

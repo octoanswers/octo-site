@@ -4,7 +4,7 @@ class Validator_Hashtag_validateNew_title_Test extends PHPUnit\Framework\TestCas
 {
     public function test_titleNotSet()
     {
-        $hashtag = new Hashtag_Model();
+        $hashtag = new Hashtag();
 
         $this->expectExceptionMessage('Hashtag title param null must be a string');
         $this->assertEquals(true, Hashtag_Validator::validateNew($hashtag));
@@ -12,7 +12,7 @@ class Validator_Hashtag_validateNew_title_Test extends PHPUnit\Framework\TestCas
 
     public function test_titleIsEmpty()
     {
-        $hashtag = new Hashtag_Model();
+        $hashtag = new Hashtag();
         $hashtag->title = '';
 
         $this->expectExceptionMessage('Hashtag title param "" must have a length between 2 and 127');
@@ -21,7 +21,7 @@ class Validator_Hashtag_validateNew_title_Test extends PHPUnit\Framework\TestCas
 
     public function test_TitleTooLong()
     {
-        $hashtag = new Hashtag_Model();
+        $hashtag = new Hashtag();
         $hashtag->id = 13;
         $hashtag->title = 'title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title';
 

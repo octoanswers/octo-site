@@ -4,7 +4,7 @@ class Model_Hashtag__initWithDBState_Test extends PHPUnit\Framework\TestCase
 {
     public function test_initWithDBState_FullEnParams_ReturnObj()
     {
-        $hashtag = Hashtag_Model::initWithDBState([
+        $hashtag = Hashtag::initWithDBState([
             'h_id' => 13,
             'h_title' => 'virtual',
             'h_words' => 'cpu',
@@ -16,7 +16,7 @@ class Model_Hashtag__initWithDBState_Test extends PHPUnit\Framework\TestCase
 
     public function test_initWithDBState_FullRuParams_ReturnObj()
     {
-        $hashtag = Hashtag_Model::initWithDBState([
+        $hashtag = Hashtag::initWithDBState([
             'h_id' => 231,
             'h_title' => 'медицинскиеуслуги',
             'h_words' => 'таблетка',

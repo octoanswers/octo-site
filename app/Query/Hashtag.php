@@ -5,7 +5,7 @@ use Respect\Validation\Validator as v;
 
 class Hashtag_Query extends Abstract_Query
 {
-    public function hashtagWithID(int $hashtagID): Hashtag_Model
+    public function hashtagWithID(int $hashtagID): Hashtag
     {
         Hashtag_Validator::validateID($hashtagID);
 
@@ -21,7 +21,7 @@ class Hashtag_Query extends Abstract_Query
             throw new Exception('Hashtag with ID "'.$hashtagID.'" not exists', 1);
         }
 
-        return Hashtag_Model::initWithDBState($row);
+        return Hashtag::initWithDBState($row);
     }
 
     public function findWithTitle(string $title)
@@ -40,6 +40,6 @@ class Hashtag_Query extends Abstract_Query
             return null;
         }
 
-        return Hashtag_Model::initWithDBState($row);
+        return Hashtag::initWithDBState($row);
     }
 }

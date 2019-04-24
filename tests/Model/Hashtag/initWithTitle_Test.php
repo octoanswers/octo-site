@@ -4,7 +4,7 @@ class Model_Hashtag__initWithTitle__Test extends PHPUnit\Framework\TestCase
 {
     public function test_ENTitle_ReturnObj()
     {
-        $hashtag = Hashtag_Model::initWithTitle('common_questions');
+        $hashtag = Hashtag::initWithTitle('common_questions');
 
         $this->assertEquals('common_questions', $hashtag->title);
         $this->assertEquals(null, $hashtag->id);
@@ -12,7 +12,7 @@ class Model_Hashtag__initWithTitle__Test extends PHPUnit\Framework\TestCase
 
     public function test__RUTitle_ReturnObj()
     {
-        $hashtag = Hashtag_Model::initWithTitle('проливной_дождь');
+        $hashtag = Hashtag::initWithTitle('проливной_дождь');
 
         $this->assertEquals('проливной_дождь', $hashtag->title);
         $this->assertEquals(null, $hashtag->id);

@@ -4,7 +4,7 @@ class Validator_Hashtag_validate_id_Test extends PHPUnit\Framework\TestCase
 {
     public function test_IDEqualZero()
     {
-        $hashtag = new Hashtag_Model();
+        $hashtag = new Hashtag();
         $hashtag->id = 0;
         $hashtag->title = 'iphone8';
 
@@ -14,7 +14,7 @@ class Validator_Hashtag_validate_id_Test extends PHPUnit\Framework\TestCase
 
     public function testIDBelowZero()
     {
-        $hashtag = new Hashtag_Model();
+        $hashtag = new Hashtag();
         $hashtag->id = -1;
         $hashtag->title = 'iphone8';
 

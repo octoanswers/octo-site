@@ -1,6 +1,6 @@
 <?php
 
-class Hashtag_Model extends Abstract_Model
+class Hashtag extends Abstract_Model
 {
     use Hashtag_URL_Trait;
 
@@ -12,7 +12,7 @@ class Hashtag_Model extends Abstract_Model
     # Init methods
     #
 
-    public static function initWithTitle(string $title): Hashtag_Model
+    public static function initWithTitle(string $title): Hashtag
     {
         $hashtag = new self();
         $hashtag->title = $title;
@@ -20,7 +20,7 @@ class Hashtag_Model extends Abstract_Model
         return $hashtag;
     }
 
-    public static function initWithDBState(array $state): Hashtag_Model
+    public static function initWithDBState(array $state): Hashtag
     {
         $hashtag = new self();
         $hashtag->id = (int) $state['h_id'];

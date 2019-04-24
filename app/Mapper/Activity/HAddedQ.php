@@ -10,7 +10,7 @@ class HAddedQ_Activity_Mapper extends Abstract_Mapper
         if ($activity->type != Activity_Model::F_H_ADDED_Q) {
             throw new Exception("Incorrect activity type \"$activity->type\"", 0);
         }
-        if (!is_a($hashtag, Hashtag_Model::class)) {
+        if (!is_a($hashtag, Hashtag::class)) {
             throw new Exception('Incorrect activity "subject" class type: '.get_class($hashtag), 0);
         }
         if (!is_a($question, Question_Model::class)) {

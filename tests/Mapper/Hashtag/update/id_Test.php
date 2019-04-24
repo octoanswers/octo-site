@@ -6,7 +6,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithNotExistsID_ThrowException()
     {
-        $hashtag = new Hashtag_Model();
+        $hashtag = new Hashtag();
         $hashtag->id = 2215;
         $hashtag->title = 'impossible';
 
@@ -16,7 +16,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithIDEqualZero_ThrowException()
     {
-        $hashtag = new Hashtag_Model();
+        $hashtag = new Hashtag();
         $hashtag->id = 0;
         $hashtag->title = 'car';
 
@@ -26,7 +26,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithIDBelowZero_ThrowException()
     {
-        $hashtag = new Hashtag_Model();
+        $hashtag = new Hashtag();
         $hashtag->id = -1;
         $hashtag->title = 'guf';
 

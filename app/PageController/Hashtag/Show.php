@@ -181,7 +181,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $related_hashtags = [];
         if (count($related_titles)) {
             foreach ($related_titles as $title) {
-                $hashtag = Hashtag_Model::initWithTitle($title);
+                $hashtag = Hashtag::initWithTitle($title);
                 $related_hashtags[] = $hashtag;
             }
         } else {
