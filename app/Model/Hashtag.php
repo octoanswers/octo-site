@@ -22,6 +22,10 @@ class Hashtag extends Abstract_Model
 
     public static function initWithDBState(array $state): Hashtag
     {
+        if (!isset($state['h_id']) || !isset($state['h_title'])) {
+            throw new Exception("Hashtag init with empty state", 1);
+        }
+
         $hashtag = new self();
         $hashtag->id = (int) $state['h_id'];
         $hashtag->title = (string) $state['h_title'];
