@@ -86,7 +86,9 @@ class Search_Query extends Abstract_Query
 
         $sql = "SELECT * FROM users WHERE (u_name LIKE '%".$query."%') LIMIT :id_offset, :per_page";
 
+        $this->pdo = PDOFactory::getConnectionToUsersDB();
         $stmt = $this->pdo->prepare($sql);
+        
         $stmt->bindParam(':id_offset', $id_offset, PDO::PARAM_INT);
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {

@@ -17,26 +17,20 @@ class Show_Search_PageController extends Abstract_PageController
         $this->query = $request->getParam('q');
 
         $this->list = $request->getParam('list');
-        $this->list = ($this->list != self::LIST_QUESTIONS || $this->list != self::LIST_HASHTAGS || $this->list != self::LIST_USERS) ? self::LIST_QUESTIONS : $this->list ;
-
-        // @TODO check query
-
-        if ($this->query) {
-            $this->questions = (new Search_Query($this->lang))->searchQuestions($this->query);
-        } else {
-            $this->questions = [];
-        }
+        $this->list = $this->_normalizeList($this->list);
+        
+        $this->_getSearchResults();
 
         $this->template = 'search';
         $this->pageTitle = str_replace('%query%', $this->query, _('Search %query% - Answeropedia'));
 
         $this->searchPlaceholder = $this->_getSearchPlaceholder($this->list);
         $this->showFooter = false;
-        
+
         $searchLinkPostfix = $this->query ? '&q='.$this->query : '';
-        $this->searchQuestionsLink = SITE_URL.'/search?list=questions'.$searchLinkPostfix;
-        $this->searchHashtagsLink = SITE_URL.'/search?list=hashtags'.$searchLinkPostfix;
-        $this->searchUsersLink = SITE_URL.'/search?list=users'.$searchLinkPostfix;
+        $this->searchQuestionsLink = SITE_URL.'/'.$this->lang.'/search?list=questions'.$searchLinkPostfix;
+        $this->searchHashtagsLink = SITE_URL.'/'.$this->lang.'/search?list=hashtags'.$searchLinkPostfix;
+        $this->searchUsersLink = SITE_URL.'/'.$this->lang.'/search?list=users'.$searchLinkPostfix;
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
@@ -44,11 +38,27 @@ class Show_Search_PageController extends Abstract_PageController
         return $response;
     }
 
-    #
-    # Helper methods
-    #
+    private function _getSearchResults(): void
+    {
+        if ($this->list == self::LIST_HASHTAGS) {
+            $this->hashtags = $this->query ? (new Search_Query($this->lang))->searchHashtags($this->query) : [];
+        } elseif ($this->list == self::LIST_USERS) {
+            $this->users = $this->query ? (new Search_Query($this->lang))->searchUsers($this->query) : [];
+        } else {
+            $this->questions = $this->query ? (new Search_Query($this->lang))->searchQuestions($this->query) : [];
+        }
+    }
 
-    public function _getSearchPlaceholder(string $list): string
+    private function _normalizeList($list): string
+    {
+        if ($list == self::LIST_HASHTAGS || $list == self::LIST_USERS) {
+            return $list;
+        }
+
+        return self::LIST_QUESTIONS;
+    }
+
+    private function _getSearchPlaceholder(string $list): string
     {
         switch ($list) {
             case self::LIST_QUESTIONS:
