@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-24 19:28+0500\n"
-"PO-Revision-Date: 2019-04-24 20:16+0500\n"
+"POT-Creation-Date: 2019-04-24 20:27+0500\n"
+"PO-Revision-Date: 2019-04-24 20:27+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -224,15 +224,15 @@ msgstr "Вопросы без тем"
 msgid "Search %query% - Answeropedia"
 msgstr "Поиск %query% - Answeropedia"
 
-#: PageController/Search/Show.php:65
+#: PageController/Search/Show.php:60
 msgid "Search by questions"
 msgstr "Поиск по вопросам"
 
-#: PageController/Search/Show.php:68
+#: PageController/Search/Show.php:63
 msgid "Search by hashtags"
 msgstr "Поиск по хештегам"
 
-#: PageController/Search/Show.php:71
+#: PageController/Search/Show.php:66
 msgid "Search by contributors"
 msgstr "Поиск по пользователям"
 
@@ -885,45 +885,45 @@ msgstr "Без тем"
 msgid "All questions"
 msgstr "Все вопросы"
 
-#: Templates/search/main/nav.phtml:10
-msgid "Hashtags"
-msgstr "Хештеги"
-
-#: Templates/search/main/no_hashtags.phtml:5
+#: Templates/search/main/hashtags_not_found.phtml:5
 msgid "No hashtags found"
 msgstr "Хештегов не найдено"
 
-#: Templates/search/main/no_hashtags.phtml:7
+#: Templates/search/main/hashtags_not_found.phtml:7
 msgid "No hashtag found for \"%query%\""
-msgstr "Не удалось найти ни одной темы по запросу «%query%»"
+msgstr "Не удалось найти хештеги по запросу «%query%»"
 
-#: Templates/search/main/no_hashtags.phtml:10
+#: Templates/search/main/hashtags_not_found.phtml:11
 msgid "View all hashtags"
-msgstr "Посмотреть все темы"
+msgstr "Посмотреть все хештеги"
 
-#: Templates/search/main/no_questions.phtml:5
-msgid "No questions found"
-msgstr "Вопросов не найдено"
-
-#: Templates/search/main/no_questions.phtml:7
-msgid "On request \"%query%\" could not find any questions"
-msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
-
-#: Templates/search/main/no_questions.phtml:10
-msgid "View all questions"
-msgstr "Посмотреть все вопросы"
+#: Templates/search/main/nav.phtml:10
+msgid "Hashtags"
+msgstr "Хештеги"
 
 #: Templates/search/main/no_users.phtml:5
 msgid "No users found"
 msgstr "Пользователей не найдено"
 
 #: Templates/search/main/no_users.phtml:7
-msgid "On request \"% query%\" could not find any users"
+msgid "On request \"%query%\" could not find any users"
 msgstr "По запросу «%query%» не удалось найти ни одного пользователя"
 
 #: Templates/search/main/no_users.phtml:10
 msgid "View all users"
 msgstr "Посмотреть всех пользователей"
+
+#: Templates/search/main/questions_not_found.phtml:5
+msgid "No questions found"
+msgstr "Вопросов не найдено"
+
+#: Templates/search/main/questions_not_found.phtml:6
+msgid "On request \"%query%\" could not find any questions"
+msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
+
+#: Templates/search/main/questions_not_found.phtml:9
+msgid "View all questions"
+msgstr "Посмотреть все вопросы"
 
 #: Templates/settings/main.phtml:6
 msgid "Back to profile"

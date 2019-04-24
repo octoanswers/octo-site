@@ -1,0 +1,14 @@
+
+<?php if ($this->list == 'hashtags' && count($this->hashtags) == 0 && strlen($this->query) > 0): ?>
+    <div class="alert alert-secondary my-4">
+
+        <p class="font-weight-bold"><?= _('No hashtags found') ?></p>
+        <p>
+            <?= str_replace('%query%', $this->query, _('No hashtag found for "%query%"')); ?>
+        </p>
+
+        <a class="btn btn-primary mb-2" href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>" role="button">
+            <?= _('View all hashtags') ?>
+        </a>
+    </div>
+<?php endif; ?>

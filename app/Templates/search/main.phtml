@@ -5,29 +5,10 @@
 <?php require_once __DIR__.'/main/questions.phtml' ?>
 <?php require_once __DIR__.'/main/questions_not_found.phtml' ?>
 
-<?php if ($this->list == 'hashtags'): ?>
+<?php require_once __DIR__.'/main/hashtags.phtml' ?>
+<?php require_once __DIR__.'/main/hashtags_not_found.phtml' ?>
 
-    <?php require_once __DIR__.'/main/no_hashtags.phtml' ?>
 
-    <?php if (isset($this->hashtags)): ?>
-        <?php foreach ($this->hashtags as $hashtag): ?>
-            <div class="mt-5">
-                <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
-                    <a class="link-inverted text-decoration-none lead" href="<?= $hashtag->getURL($this->lang) ?>"><?= $hashtag->title ?></a>
-                    <div>
-                        <span class="text-muted">
-                            X вопросов
-                        </span>
-                    </div>
-                </div>
-                <span class="text-muted float-right">
-                        22 декабря 2016 <!-- $hashtag->answer->getHumanizedUpdatedAt() -->
-                </span>
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
-
-<?php endif; ?>
 
 <?php if ($this->list == 'users'): ?>
 
