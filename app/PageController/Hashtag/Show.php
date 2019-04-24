@@ -100,7 +100,8 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageTitle()
     {
-        return str_replace('%hashtag%', $this->hashtag->title, _('Questions and answers on the hashtag %hashtag% - Answeropedia'));
+        $pageTitle = _('Questions and answers on the hashtag %hashtag%').' - '._('Answeropedia');
+        return str_replace('%hashtag%', $this->hashtag->title, $pageTitle);
     }
 
     protected function _prepareFollowButton()

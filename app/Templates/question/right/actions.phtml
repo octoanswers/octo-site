@@ -4,7 +4,7 @@
 
 	<div class="mb-4">
 		<div class="h6 font-weight-bold border-bottom pb-2 mb-2">
-			<?= _('Question.Actions.Title') ?>
+			<?= _('Actions') ?>
 		</div>
 	</div>
 	<ul class="list-unstyled">
@@ -15,9 +15,9 @@
 				<a class="text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_upload_image">
 					<i class="fas fa-camera mr-1"></i>
 					<?php if ($this->question->imageBaseName): ?>
-						<?= _('Question.Actions.Update_picture') ?>
+						<?= _('Update picture') ?>
 					<?php else: ?>
-						<?= _('Question.Actions.Add_picture') ?>
+						<?= _('Add picture') ?>
 					<?php endif; ?>
 				</a>
 			</li>
@@ -28,7 +28,7 @@
 			<!-- rename question -->
 			<li class="my-1">
 				<a class="text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_rename">
-					<i class="fas fa-edit mr-1"></i>&nbsp;<?= _('Question.Actions.Rename_question') ?>	
+					<i class="fas fa-edit mr-1"></i>&nbsp;<?= _('Rename question') ?>	
 				</a>
 			</li>
 			<!-- / rename question -->
@@ -37,7 +37,7 @@
 		<li class="my-1">
 			<a class="text-muted text-decoration-none" href="#" rel="nofollow">
 				<i class="fas fa-flag mr-1"></i>
-				<?= _('Question.Actions.Report') ?>
+				<?= _('Report') ?>
 			</a>
 		</li>
 		

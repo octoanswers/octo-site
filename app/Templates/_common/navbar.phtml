@@ -18,26 +18,26 @@
 			<?php if (!$this->authUser): ?>
                 <li class="nav-item d-sm-none d-md-inline-block">
                     <a class="nav-link" href="#">
-                        <?= _('Navbar.About_site') ?>
+                        <?= _('About&nbsp;site') ?>
                     </a>
                 </li>
             <?php endif; ?>
 		
 			<li class="nav-item">
 				<a class="nav-link " href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= _('Navbar.Recent_changes') ?>
+					<?= _('Recent&nbsp;changes') ?>
 				</a>
 			</li>
 			
 			<li class="nav-item">
                 <a class="nav-link " href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Navbar.Hashtags') ?>
+                    <?= _('Hashtags') ?>
                 </a>
             </li>
 
 			<li class="nav-item">
                 <a class="nav-link <?= true ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-                    <i class="fas fa-dice d-none d-md-inline-block"></i>&nbsp;<?= _('Navbar.Sandbox') ?>
+                    <i class="fas fa-dice d-none d-md-inline-block"></i>&nbsp;<?= _('Sandbox') ?>
                 </a>
             </li>
 
@@ -82,7 +82,7 @@
 
 		<li class="nav-item">
 			<button class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
-        		<?= _('Navbar.Ask_a_question') ?>
+        		<?= _('Ask a question') ?>
 			</button>
 		</li>
 

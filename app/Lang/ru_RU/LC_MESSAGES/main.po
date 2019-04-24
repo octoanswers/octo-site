@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-24 20:27+0500\n"
-"PO-Revision-Date: 2019-04-24 20:27+0500\n"
+"POT-Creation-Date: 2019-04-24 22:39+0500\n"
+"PO-Revision-Date: 2019-04-24 22:39+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -60,10 +60,10 @@ msgstr "Править ответ"
 #: PageController/Error/PageNotFound.php:14
 #: PageController/Error/QuestionNotFound.php:21 PageController/Feed/Show.php:44
 #: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: PageController/Hashtags/Newest.php:37 PageController/Main/Show.php:39
-#: PageController/Main/Show.php:45 PageController/Main/Show.php:64
-#: PageController/Question/Show.php:49 PageController/Question/Show.php:77
-#: PageController/Questions/Newest.php:44
+#: PageController/Hashtag/Show.php:103 PageController/Hashtags/Newest.php:37
+#: PageController/Main/Show.php:39 PageController/Main/Show.php:45
+#: PageController/Main/Show.php:64 PageController/Question/Show.php:49
+#: PageController/Question/Show.php:77 PageController/Questions/Newest.php:44
 #: PageController/Questions/Newest.php:49
 #: PageController/Questions/RecentlyUpdated.php:43
 #: PageController/Questions/RecentlyUpdated.php:48
@@ -119,11 +119,7 @@ msgstr "Поток вопросов и ответов на Answeropedia."
 msgid "More hashtags"
 msgstr "Больше тем"
 
-#: PageController/Hashtag/Show.php:103
-msgid "Questions and answers on the hashtag %hashtag% - Answeropedia"
-msgstr "Вопросы и ответы на тему %hashtag% - Answeropedia"
-
-#: PageController/Hashtag/Show.php:133
+#: PageController/Hashtag/Show.php:103 PageController/Hashtag/Show.php:134
 msgid "Questions and answers on the hashtag %hashtag%"
 msgstr "Вопросы и ответы на тему %hashtag%"
 
@@ -193,6 +189,7 @@ msgid "Questions and Answers"
 msgstr "Вопросы и ответы"
 
 #: PageController/Sandbox/All.php:49 PageController/Sandbox/All.php:54
+#: Templates/_common/navbar.phtml:40
 msgid "Sandbox"
 msgstr "Песочница"
 
@@ -212,6 +209,7 @@ msgstr "Без ответов"
 
 #: PageController/Sandbox/WithoutAnswers.php:58
 #: PageController/Sandbox/WithoutAnswers.php:63
+#: Templates/sandbox/right/nav.phtml:10
 msgid "Questions without answers"
 msgstr "Вопросы без ответа"
 
@@ -278,40 +276,40 @@ msgstr[1] "Хештега"
 msgstr[2] "Хештегов"
 
 #: Templates/_common/activity/f_h_added_q.phtml:11
-msgid "activity__hashtag_added_question"
-msgstr "помечен вопрос"
+msgid "hashtag added question"
+msgstr "хештег вопрос"
 
 #: Templates/_common/activity/f_q_renamed_by_u.phtml:11
-msgid "activity__question_renamed"
-msgstr "переименовал вопрос"
+msgid "question renamed"
+msgstr "вопрос переименован"
 
 #: Templates/_common/activity/f_q_update_a.phtml:11
-msgid "activity__question_updated_answer"
-msgstr "обновил ответ"
+msgid "question updated answer"
+msgstr "обновлен ответ"
 
 #: Templates/_common/activity/f_u_follow_h.phtml:12
-msgid "activity__follow_hashtag"
+msgid "follow hashtag"
 msgstr "подписался на хештег"
 
 #: Templates/_common/activity/f_u_follow_q.phtml:14
-msgid "activity__follow_question"
+msgid "follow question"
 msgstr "подписался на вопрос"
 
 #: Templates/_common/activity/f_u_follow_u.phtml:14
-msgid "activity__follow_user"
+msgid "follow user"
 msgstr "подписался на пользователя"
 
 #: Templates/_common/activity/f_u_rename_q.phtml:12
-msgid "activity__renamed_question"
+msgid "renamed question"
 msgstr "переименовал вопрос"
 
 #: Templates/_common/activity/f_u_update_a.phtml:12
-msgid "activity__change_answer"
+msgid "change answer"
 msgstr "обновил ответ"
 
 #: Templates/_common/activity/f_u_update_signature.phtml:24
-msgid "activity__change_signature"
-msgstr "обновил подпись"
+msgid "change signature"
+msgstr "поменял подпись"
 
 #: Templates/_common/footer.phtml:10
 msgid "About"
@@ -396,7 +394,7 @@ msgstr ""
 msgid "What is your question?"
 msgstr "Какой у вас вопрос?"
 
-#: Templates/_common/modal/ask.phtml:25
+#: Templates/_common/modal/ask.phtml:25 Templates/_common/navbar.phtml:85
 #: Templates/error/question_not_found/main.phtml:12
 #: Templates/main/main/jumbotron.phtml:22
 msgid "Ask a question"
@@ -443,26 +441,18 @@ msgid ""
 msgstr ""
 "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами."
 
-# &nbsp; необходим для корректного отображения.
 #: Templates/_common/navbar.phtml:21
-msgid "Navbar.About_site"
+msgid "About&nbsp;site"
 msgstr "О&nbsp;проекте"
 
 #: Templates/_common/navbar.phtml:28
-msgid "Navbar.Recent_changes"
+msgid "Recent&nbsp;changes"
 msgstr "Свежие&nbsp;правки"
 
-#: Templates/_common/navbar.phtml:34
-msgid "Navbar.Hashtags"
-msgstr "Темы"
-
-#: Templates/_common/navbar.phtml:40
-msgid "Navbar.Sandbox"
-msgstr "Песочница"
-
-#: Templates/_common/navbar.phtml:85
-msgid "Navbar.Ask_a_question"
-msgstr "Задать&nbsp;вопрос"
+#: Templates/_common/navbar.phtml:34 Templates/question/main/hashtags.phtml:6
+#: Templates/search/main/nav.phtml:10
+msgid "Hashtags"
+msgstr "Хештеги"
 
 # 123xxx
 #: Templates/_common/right/about_answeropedia.phtml:5
@@ -508,6 +498,7 @@ msgstr "Зарегистрируйтесь или войдите и вы смо�
 #: Templates/_modal/question/rename.phtml:8
 #: Templates/_modal/question/rename.phtml:30
 #: Templates/question/left/sidebar.phtml:222
+#: Templates/question/right/actions.phtml:31
 msgid "Rename question"
 msgstr "Переименовать вопрос"
 
@@ -561,59 +552,67 @@ msgid "Go back"
 msgstr "Вернуться назад"
 
 #: Templates/feed/main/lure/follow_3_hashtags.phtml:10
-msgid "FEED__LURE__FOLLOW_3_HASHTAGS__TITLE"
+msgid "Subscribe to several hashtags"
 msgstr "Подпишитесь на несколько хештегов"
 
 #: Templates/feed/main/lure/follow_3_hashtags.phtml:13
-msgid "FEED__LURE__FOLLOW_3_HASHTAGS__MSG"
+msgid ""
+"Select and subscribe to three topics close to you. Questions on these topics "
+"will appear in your news feed."
 msgstr ""
 "Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут "
-"появляться у вас в ленте новостей"
+"появляться у вас в ленте новостей."
 
 #: Templates/feed/main/lure/follow_3_hashtags.phtml:16
-msgid "FEED__LURE__FOLLOW_3_HASHTAGS__LINK"
+msgid "View popular hashtags"
 msgstr "Посмотреть популярные хештеги"
 
 #: Templates/feed/main/lure/follow_3_questions.phtml:10
-msgid "FEED__LURE__FOLLOW_3_QUESTIONS__TITLE"
-msgstr "Подпишитесь на несколько вопросов"
+msgid "Follow some questions"
+msgstr "Следуйте за некоторыми вопросами"
 
 #: Templates/feed/main/lure/follow_3_questions.phtml:13
-msgid "FEED__LURE__FOLLOW_3_QUESTIONS__MSG"
+msgid ""
+"By subscribing to interesting questions, you can follow their edits. Find "
+"and subscribe to three or more questions."
 msgstr ""
 "Подписываясь на интересные вопросы, вы сможете следить за их правками. "
-"Найдите и подпишитесь на три или более вопроса"
+"Найдите и подпишитесь на три или более вопроса."
 
 #: Templates/feed/main/lure/follow_3_questions.phtml:16
-msgid "FEED__LURE__FOLLOW_3_QUESTIONS__LINK"
+msgid "Views a questions"
 msgstr "Посмотреть вопросы"
 
 #: Templates/feed/main/lure/follow_3_users.phtml:10
-msgid "FEED__LURE__FOLLOW_3_USERS__TITLE"
+msgid "Find your first friends"
 msgstr "Найдите первых друзей"
 
 #: Templates/feed/main/lure/follow_3_users.phtml:13
-msgid "FEED__LURE__FOLLOW_3_USERS__MSG"
+msgid ""
+"Find and subscribe to three interesting users. Questions, answers and other "
+"activities of these users will appear in your news feed."
 msgstr ""
 "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и "
-"прочие активности этих пользователей будут появляться у вас в ленте новостей"
+"прочие активности этих пользователей будут появляться у вас в ленте новостей."
 
 #: Templates/feed/main/lure/follow_3_users.phtml:16
-msgid "FEED__LURE__FOLLOW_3_USERS__LINK"
+msgid "View users"
 msgstr "Посмотреть пользователей"
 
 #: Templates/feed/main/lure/write_answer.phtml:10
-msgid "FEED__LURE__WRITE_ANSWER__TITLE"
-msgstr "Напишите первый ответ"
+msgid "Напишите первый ответ"
+msgstr "Write the first answer"
 
 #: Templates/feed/main/lure/write_answer.phtml:13
-msgid "FEED__LURE__WRITE_ANSWER__MSG"
+msgid ""
+"Look at the questions that no one else has written an answer and become the "
+"first author."
 msgstr ""
 "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым "
-"автором"
+"автором."
 
 #: Templates/feed/main/lure/write_answer.phtml:16
-msgid "FEED__LURE__WRITE_ANSWER__LINK"
+msgid "View questions in the sandbox"
 msgstr "Посмотреть вопросы в песочнице"
 
 #: Templates/feed/right/improve_feed.phtml:5
@@ -657,8 +656,8 @@ msgstr "Задайте первый вопрос"
 msgid "Answer a question"
 msgstr "Ответьте на вопрос"
 
-#: Templates/flow/right/filter.phtml:4
-msgid "Flow__Filter__Title"
+#: Templates/flow/right/filter.phtml:4 Templates/sandbox/right/nav.phtml:5
+msgid "Filters"
 msgstr "Фильтры"
 
 #: Templates/hashtag/main/actions.phtml:14
@@ -756,10 +755,6 @@ msgstr[2] "Авторов"
 msgid "Answer contributors"
 msgstr "Авторы ответа"
 
-#: Templates/question/main/hashtags.phtml:6
-msgid "Question.Hashtags.Title"
-msgstr "Хештеги"
-
 #: Templates/question/main/lure_be_first_contributor.phtml:14
 #: Templates/question/main/lure_be_first_contributor.phtml:39
 msgid "Be the first author"
@@ -804,23 +799,20 @@ msgid "Your email"
 msgstr "Ваш email"
 
 #: Templates/question/right/actions.phtml:7
-msgid "Question.Actions.Title"
+msgid "Actions"
 msgstr "Действия"
 
 #: Templates/question/right/actions.phtml:18
-msgid "Question.Actions.Update_picture"
+#: Templates/question/right/image.phtml:10
+msgid "Update picture"
 msgstr "Обновить картинку"
 
 #: Templates/question/right/actions.phtml:20
-msgid "Question.Actions.Add_picture"
-msgstr "Добавить изображение к вопросу"
-
-#: Templates/question/right/actions.phtml:31
-msgid "Question.Actions.Rename_question"
-msgstr "Переименовать вопрос"
+msgid "Add picture"
+msgstr "Добавить картинку"
 
 #: Templates/question/right/actions.phtml:40
-msgid "Question.Actions.Report"
+msgid "Report"
 msgstr "Пожаловаться"
 
 #: Templates/question/right/contributors_top.phtml:12
@@ -830,10 +822,6 @@ msgstr "Топ авторов"
 #: Templates/question/right/contributors_top.phtml:47
 msgid "All answer contributors"
 msgstr "Все авторы ответа"
-
-#: Templates/question/right/image.phtml:10
-msgid "Update picture"
-msgstr "Обновить картинку"
 
 #: Templates/questions/main.phtml:12
 msgid "More questions"
@@ -869,14 +857,6 @@ msgstr "Сейчас в песочнице:"
 msgid "or <a data-toggle=\"modal\" data-target=\"#modal_login\">log-in</a>"
 msgstr "или <a data-toggle=\"modal\" data-target=\"#modal_login\">войдите</a>"
 
-#: Templates/sandbox/right/nav.phtml:5
-msgid "Filters"
-msgstr "Фильтры"
-
-#: Templates/sandbox/right/nav.phtml:10
-msgid "Questions without answer"
-msgstr "Вопросы без ответа"
-
 #: Templates/sandbox/right/nav.phtml:15
 msgid "Without hashtags"
 msgstr "Без тем"
@@ -897,22 +877,6 @@ msgstr "Не удалось найти хештеги по запросу «%que
 msgid "View all hashtags"
 msgstr "Посмотреть все хештеги"
 
-#: Templates/search/main/nav.phtml:10
-msgid "Hashtags"
-msgstr "Хештеги"
-
-#: Templates/search/main/no_users.phtml:5
-msgid "No users found"
-msgstr "Пользователей не найдено"
-
-#: Templates/search/main/no_users.phtml:7
-msgid "On request \"%query%\" could not find any users"
-msgstr "По запросу «%query%» не удалось найти ни одного пользователя"
-
-#: Templates/search/main/no_users.phtml:10
-msgid "View all users"
-msgstr "Посмотреть всех пользователей"
-
 #: Templates/search/main/questions_not_found.phtml:5
 msgid "No questions found"
 msgstr "Вопросов не найдено"
@@ -924,6 +888,18 @@ msgstr "По запросу «%query%» не удалось найти ни од
 #: Templates/search/main/questions_not_found.phtml:9
 msgid "View all questions"
 msgstr "Посмотреть все вопросы"
+
+#: Templates/search/main/users_not_found.phtml:5
+msgid "No users found"
+msgstr "Пользователей не найдено"
+
+#: Templates/search/main/users_not_found.phtml:6
+msgid "On request \"%query%\" could not find any users"
+msgstr "По запросу «%query%» не удалось найти ни одного пользователя"
+
+#: Templates/search/main/users_not_found.phtml:9
+msgid "View all users"
+msgstr "Посмотреть всех пользователей"
 
 #: Templates/settings/main.phtml:6
 msgid "Back to profile"
@@ -997,8 +973,44 @@ msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
 
-#~ msgid "Search.Filter.Hashtags"
-#~ msgstr "Хештеги"
+#, fuzzy
+#~| msgid "Filters"
+#~ msgid "Filter"
+#~ msgstr "Фильтры"
 
-#~ msgid "Contributors"
-#~ msgstr "Авторы"
+#~ msgid "Flow__Filter__Title"
+#~ msgstr "Фильтры"
+
+#~ msgid "FEED__LURE__FOLLOW_3_QUESTIONS__TITLE"
+#~ msgstr "Подпишитесь на несколько вопросов"
+
+#~ msgid "FEED__LURE__FOLLOW_3_QUESTIONS__LINK"
+#~ msgstr "Посмотреть вопросы"
+
+#~ msgid "FEED__LURE__FOLLOW_3_QUESTIONS__MSG"
+#~ msgstr ""
+#~ "Подписываясь на интересные вопросы, вы сможете следить за их правками. "
+#~ "Найдите и подпишитесь на три или более вопроса"
+
+#~ msgid "FEED__LURE__FOLLOW_3_USERS__LINK"
+#~ msgstr "Посмотреть пользователей"
+
+#~ msgid "FEED__LURE__FOLLOW_3_USERS__TITLE"
+#~ msgstr "Найдите первых друзей"
+
+#~ msgid "FEED__LURE__FOLLOW_3_USERS__MSG"
+#~ msgstr ""
+#~ "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы "
+#~ "и прочие активности этих пользователей будут появляться у вас в ленте "
+#~ "новостей"
+
+#~ msgid "FEED__LURE__WRITE_ANSWER__TITLE"
+#~ msgstr "Напишите первый ответ"
+
+#~ msgid "FEED__LURE__WRITE_ANSWER__MSG"
+#~ msgstr ""
+#~ "Посмотрите вопросы на которые еще никто не написал ответа и станьте "
+#~ "первым автором"
+
+#~ msgid "FEED__LURE__WRITE_ANSWER__LINK"
+#~ msgstr "Посмотреть вопросы в песочнице"
