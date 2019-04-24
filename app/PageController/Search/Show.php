@@ -27,11 +27,6 @@ class Show_Search_PageController extends Abstract_PageController
         $this->searchPlaceholder = $this->_getSearchPlaceholder($this->list);
         $this->showFooter = false;
 
-        $searchLinkPostfix = $this->query ? '&q='.$this->query : '';
-        $this->searchQuestionsLink = SITE_URL.'/'.$this->lang.'/search?list=questions'.$searchLinkPostfix;
-        $this->searchHashtagsLink = SITE_URL.'/'.$this->lang.'/search?list=hashtags'.$searchLinkPostfix;
-        $this->searchUsersLink = SITE_URL.'/'.$this->lang.'/search?list=users'.$searchLinkPostfix;
-
         $output = $this->renderPage();
         $response->getBody()->write($output);
 
