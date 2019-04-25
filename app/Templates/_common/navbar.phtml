@@ -39,6 +39,12 @@
                 <a class="nav-link <?= true ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
                     <i class="fas fa-dice d-none d-md-inline-block"></i>&nbsp;<?= _('Sandbox') ?>
                 </a>
+			</li>
+			
+			<li class="nav-item">
+				<form class="form-inline" id="navbar_search_form">
+      				<input id="navbar_search_form_query" class="form-control" type="search" placeholder="Search" aria-label="Search">
+    		    </form>
             </li>
 
     	</ul>
