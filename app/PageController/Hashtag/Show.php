@@ -11,7 +11,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $hashtag_uri = $args['uri'];
 
         try {
-            $hashtag_title = Hashtag_URL_Helper::titleFromURI($hashtag_uri);
+            $hashtag_title = urldecode($hashtag_uri);
             $this->hashtag = (new Hashtag_Query($this->lang))->findWithTitle($hashtag_title);
             if ($this->hashtag === null) {
                 throw new \Exception("Hashtag not exists", 1);
