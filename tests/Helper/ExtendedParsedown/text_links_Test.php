@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class ExtendedParsedown__links__ru_Test extends TestCase
+class Helper_ExtendedParsedown_text_linksTest extends TestCase
 {
     protected function setUp(): void
     {
@@ -14,7 +14,7 @@ class ExtendedParsedown__links__ru_Test extends TestCase
         $this->pd = null;
     }
 
-    public function test__normal_link_to_answeropedia()
+    public function test_Direct_link_to_Answeropedia()
     {
         $stringMD = "Это текст о [каше](https://answeropedia.org/ru/123/chto-takoe-kasha) и молоке.";
         $stringHTML = "<p>Это текст о <a href=\"https://answeropedia.org/ru/123/chto-takoe-kasha\">каше</a> и молоке.</p>";
@@ -22,7 +22,7 @@ class ExtendedParsedown__links__ru_Test extends TestCase
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
 
-    public function test__external_link()
+    public function test_External_HTTP_link()
     {
         $stringMD = "Это текст о [каше](http://site.com/page) и молоке.";
         $stringHTML = "<p>Это текст о <a href=\"http://site.com/page\" class=\"link-external\" target=\"_blank\" rel=\"nofollow\">каше</a> и молоке.</p>";
@@ -30,7 +30,15 @@ class ExtendedParsedown__links__ru_Test extends TestCase
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
 
-    public function test__normal_and_external_links()
+    public function test_External_HTTPS_link()
+    {
+        $stringMD = "Это текст о [каше](https://site.com/page) и молоке.";
+        $stringHTML = "<p>Это текст о <a href=\"https://site.com/page\" class=\"link-external\" target=\"_blank\" rel=\"nofollow\">каше</a> и молоке.</p>";
+
+        $this->assertEquals($stringHTML, $this->pd->text($stringMD));
+    }
+
+    public function test_Direct_and_external_links_in_one_paragraph()
     {
         $stringMD = "Это текст о [каше](https://answeropedia.org/ru/123/chto-takoe-kasha) и [молоке](http://site.com/page).";
         $stringHTML = "<p>Это текст о <a href=\"https://answeropedia.org/ru/123/chto-takoe-kasha\">каше</a> и <a href=\"http://site.com/page\" class=\"link-external\" target=\"_blank\" rel=\"nofollow\">молоке</a>.</p>";
@@ -38,13 +46,6 @@ class ExtendedParsedown__links__ru_Test extends TestCase
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
 
-    public function test__external_https_link()
-    {
-        $stringMD = "Это текст о [каше](https://site.com/page) и молоке.";
-        $stringHTML = "<p>Это текст о <a href=\"https://site.com/page\" class=\"link-external\" target=\"_blank\" rel=\"nofollow\">каше</a> и молоке.</p>";
-
-        $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    }
 
     public function test__old_style_link()
     {
