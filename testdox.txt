@@ -1,0 +1,1312 @@
+HashtagsIDFollow_DELETE_APIController__ru__
+ [x] BaseUnfollow
+ [x] NotFollowed
+
+QuestionsIDFollow_DELETE_APIController__ru__
+ [x] BaseUnfollow
+ [x] NotFollowed
+
+QuestionsIDSubscribe_DELETE_APIController__email__
+ [x] IncorrectEmail
+
+QuestionsIDSubscribe_DELETE_APIController__question_id__
+ [x] QuestionIDEqualZero
+ [x] QuestionIDBelowZero
+
+QuestionsIDSubscribe_DELETE_APIController__ru__
+ [x] BaseSubscription
+
+UsersIDFollow_DELETE_APIController__ru__
+ [x] BaseUnfollow
+ [x] NotFollowed
+
+QuestionsIDRename_PATCH_APIController__rename_id_
+ [x] QuestionIDEqualZero Error
+ [x] QuestionIDBelowZero Error
+
+QuestionsIDRename_PATCH_APIController__new_title_
+ [x] NewTitleNotSet Error
+ [x] NewTitleTooShort Error
+
+QuestionsIDRename_PATCH_APIController__ru__
+ [x] RenameWithSaveRedirect Ok
+ [x] RenameWithoutSaveRedirect Ok
+ [x] ChangeCharCase  WithoutRedirect
+ [x] ChangeCharCase  WithRedirect
+
+UsersIDName_PATCH_APIController__id__
+ [x] UserIDEqualZero Error
+ [x] UserIDBelowZero Error
+
+UsersIDName_PATCH_APIController__signature__
+ [x] Signature not set
+ [x] Signature too short
+
+UsersIDName_PATCH_APIController__ru__
+ [x] RenameWithSaveRedirect Ok
+
+UsersIDSignature_PATCH_APIController__id__
+ [x] UserIDEqualZero Error
+ [x] UserIDBelowZero Error
+
+UsersIDSignature_PATCH_APIController__signature__
+ [x] Signature not set
+ [x] Signature too short
+
+UsersIDSignature_PATCH_APIController__ru__
+ [x] RenameWithSaveRedirect Ok
+
+UsersIDSite_PATCH_APIController__abnormal__site__
+ [x] URLWithoutProtocol
+ [x] URLWithWWW
+
+UsersIDSite_PATCH_APIController__id__
+ [x] UserIDEqualZero Error
+ [x] UserIDBelowZero Error
+
+UsersIDSite_PATCH_APIController__site__
+ [x] Incorrect u r l
+ [x] Site not set
+
+UsersIDSite_PATCH_APIController__ru__
+ [x] RenameWithSaveRedirect Ok
+
+HashtagsIDFollow_POST_APIController__ru__
+ [x] HashtagFollowed
+ [x] HashtagAlreadyFollowed
+
+Login_POST_APIController__NegativeEmail
+ [x] Incorrect email
+ [x] Email not exists
+
+Login_POST_APIController__NegativePassword
+ [x] Password too short
+ [x] Password is incorrect
+
+Login_POST_APIController__Base
+ [x] Correct login
+
+Logout_POST_APIController__Base
+ [x] Correct logout
+
+QuestionsIDFollow_POST_APIController__ru__
+ [x] QuestionFollowed
+ [x] QuestionAlreadyFollowed
+
+QuestionsIDSubscribe_POST_APIController__email__
+ [x] IncorrectEmail
+
+QuestionsIDSubscribe_POST_APIController__question_id__
+ [x] QuestionNotExists
+ [x] QuestionIDEqualZero
+ [x] QuestionIDBelowZero
+
+QuestionsIDSubscribe_POST_APIController__
+ [x] BaseSubscription
+ [x] AlreadySubscribed
+
+Signup_POST_APIController__email_
+ [x] Email is incorrect
+ [x] Email already registered
+
+Signup_POST_APIController__Password_
+ [x] Password too short
+
+Signup_POST_APIController__username_
+ [x] Username already exists
+ [x] Name too short
+
+Signup_POST_APIController__ru__
+ [x] Correct signup
+
+UsersIDFollow_POST_APIController__ru__
+ [x] BaseFollow
+ [x] AlreadyFollowed
+
+AnswersID_PUT_APIController__answerID_
+ [x] Question i d equal zero
+ [x] Question i d below zero
+
+AnswersID_PUT_APIController__ru__
+ [x] NewAnswerWithFullParams  Ok
+ [x] ReplaceAnswerWithFullParams  Ok
+ [x] New answer without revision comment
+
+Hashtags_ID_Questions_PUT_APIController__ru__
+ [x] QuestionFollowed
+ [x] HashtagsParamNotSet
+
+QuestionsID_PUT_APIController__id_
+ [x] Question i d equal zero
+ [x] Question i d below zero
+
+QuestionsID_PUT_APIController__ru__
+ [x] Full params
+
+ColorMixer_Helper__
+ [x] Half
+ [x] Light
+ [x] Dark
+
+Helper_Simplify_HTML_Helper_extractSignificantContentFromHTMLString_base_
+ [x] HTMLStringWithTwoDivs MainContentExtracted
+ [x] HTMLStringWithThreeDivs ReturnOneDiv
+ [x] HTMLStringWithThreeDivs ReturnTwoDivs
+ [x] EmptyHTMLString MainContentExtracted
+
+CookieStorage_Base
+ [x] class
+ [x] Const values
+
+ExtendedParsedown__links__ru_
+ [x] normal link to answeropedia
+ [x] external link
+ [x] normal and external links
+ [x] external https link
+ [x] old style link
+ [x] incorrect link without reference part
+ [x] incorrect link with empty reference part
+
+ExtendedParsedown__text__ru_
+ [x] DontLinkHashtags
+ [x] H2
+ [x] H3
+ [x] H4
+ [x] H5
+ [x] H6
+ [x] MoreThanH6
+
+Differ__
+ [x] 1 deletion
+ [x] 2 deletion
+ [x] 1 addition
+ [x] 2 addition
+ [x] 1 addition and 1 deletion
+
+FineDiff__renderDiffToHTMLFromOpcodes__
+ [x] 1 deletion
+ [x] 2 deletion
+ [x] 1 addition
+ [x] 2 addition
+ [x] 1 addition and 1 deletion
+
+FineDiff__renderToTextFromOpcodes__
+ [x] 1 deletion
+ [x] 2 deletion
+ [x] 1 addition
+ [x] 2 addition
+ [x] 1 addition and 1 deletion
+
+Contributors_Sort_Helper__sortByContributions__
+ [x] Revision exists
+ [x] EmptyParam
+
+Hashtag_URL_Helper__getURLFromTitle__
+ [x] En
+ [x] Ru
+ [x] Ru WithUnderline
+
+Hashtags_URL_Helper__getNewestURL__
+ [x] Without page
+ [x] Ru 1
+ [x] En 1
+ [x]  13
+
+Page_URL_Helper__getFlowURL__
+ [x] En
+ [x] Ru
+
+Page_URL_Helper__getMainURL__
+ [x] En
+ [x] Ru
+
+Questions_URL_Helper__getNewestURL__
+ [x] Without page
+ [x]  1
+ [x]  13
+
+Questions_URL_Helper__getRecentlyUpdatedURL__
+ [x] Without page
+ [x]  1
+ [x]  13
+
+Redirect_URL_Helper__getRedirectURLForTitle__
+ [x] Base u r i
+
+Redirect_URL_Helper__getURL__
+ [x] Base u r i
+
+Sandbox_URL_Helper__getAllURL__
+ [x] Without page
+ [x] Ru 1
+ [x] En 1
+ [x]  13
+
+Sandbox_URL_Helper__getWithoutAnswersURL__
+ [x] Without page
+ [x] Ru 1
+ [x] En 1
+ [x]  13
+
+Settings_URL_Helper__getAvatarURL__
+ [x] En
+ [x] Ru
+
+Settings_URL_Helper__getSignatureURL__
+ [x] En
+ [x] Ru
+
+Settings_URL_Helper__getSiteURL__
+ [x] En
+ [x] Ru
+
+Users_URL_Helper__getNewestURL__
+ [x] Without page
+ [x] Ru 1
+ [x] En 1
+ [x]  13
+
+DateTime_Humanizer__humanizeTimestamp__
+ [x] zero answer
+ [x] zero answer
+
+HumanDate_Humanizer__
+ [x] Without set now
+ [x] Without timezone and language
+ [x] Past time with data set #0
+ [x] Past time with data set #1
+ [x] Past time with data set #2
+ [x] Past time with data set #3
+ [x] Past time with data set #4
+ [x] Past time with data set #5
+ [x] Past time with data set #6
+ [x] Past time with data set #7
+ [x] Past time with data set #8
+ [x] Past time with data set #9
+ [x] Past time with data set #10
+ [x] Past time with data set #11
+ [x] Past time with data set #12
+ [x] Past time with data set #13
+ [x] Past time with data set #14
+ [x] Past time with data set #15
+ [x] Future time with data set #0
+ [x] Future time with data set #1
+ [x] Future time with data set #2
+ [x] Future time with data set #3
+ [x] Future time with data set #4
+ [x] Future time with data set #5
+ [x] Future time with data set #6
+ [x] Future time with data set #7
+ [x] Future time with data set #8
+ [x] Future time with data set #9
+ [x] Future time with data set #10
+ [x] Future time with data set #11
+ [x] Future time with data set #12
+ [x] Future time with data set #13
+ [x] Future time with data set #14
+ [x] Future time with data set #15
+
+Mapper_Activity_HAQ__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_Activity_QRenamedByU__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_Activity_QUA__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_Activity_UAQ__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_Activity_UFH__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_Activity_UFQ__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_Activities__createUFU__
+ [x] CreateWithFullParams Ok
+
+Mapper_Activity_URenameQ__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_Activity_UUA__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_Answer__update__
+ [x] Update exists
+
+Mapper_Answer_update_id_
+ [x] Update not exists i d
+ [x] Equal zero
+ [x] Below zero
+
+Mapper_Answer_update_text_
+ [x] TextNotSet Ok
+ [x] TextIsEmpty Ok
+
+HashtagMapper_create
+ [x] Create hashtag with EN title
+ [x] Create hashtag with RU title
+
+Mapper_Hashtag_create_title_
+ [x] CreateWithEmptyTitle throwException
+ [x] CreateWithTooShortTitle throwException
+ [x] CreateWithTooLongTitle throwException
+
+Mapper_Hashtag_update_id_
+ [x] UpdateWithNotExistsID ThrowException
+ [x] UpdateWithIDEqualZero ThrowException
+ [x] UpdateWithIDBelowZero ThrowException
+
+Mapper_Hashtag_update_title_
+ [x] UpdateWithEmptyTitle throwException
+ [x] TitleTooShort throwException
+ [x] UpdateWithTooLongTitle throwException
+
+Mapper_Question_create_isRedirect_
+ [x] CreateWithIsRedirectParam Ok
+
+Mapper_Question_create_base_
+ [x] CreateWithFullParams Ok
+ [x] CreateWithMinParams Ok
+
+Mapper_Question_create_title_
+ [x] CreateWithEmptyTitle throwException
+ [x] CreateWithTooShortTitle throwException
+ [x] CreateWithTooLongTitle throwException
+
+Mapper_Question_update_id_
+ [x] UpdateWithNotExistsID ThrowException
+ [x] UpdateWithIDEqualZero ThrowException
+ [x] UpdateWithIDBelowZero ThrowException
+
+Mapper_Question_update_isRedirect_
+ [x] UpdateWithIsRedirectParam Ok
+
+Mapper_Question_update_base_
+ [x] UpdateWithFullParams Ok
+ [x] UpdateWithMinParams Ok
+
+Mapper_Question_update_title_
+ [x] UpdateWithEmptyTitle throwException
+ [x] UpdateWithTooShortTitle throwException
+ [x] UpdateWithTooLongTitle throwException
+
+Mapper_Question__updateHashtags__ru_
+ [x] Base
+ [x] EmptyArray
+ [x] HashtagsNotSet
+
+Mapper_Redirect__create__
+ [x] CreateWithFullParams Ok
+
+Mapper_ER_HashtagsQuestions__create__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+UserFollowHashtag_Relation_Mapper__create__
+ [x] FullParams  OK
+
+UserFollowHashtag_Relation_Mapper__deleteRelation__
+ [x] FullParams  OK
+ [x] RelationNotExists
+
+UserFollowQuestion_Relation_Mapper__create__
+ [x] FullParams  OK
+
+UserFollowQuestion_Relation_Mapper__deleteRelation__
+ [x] FullParams  OK
+ [x] RelationNotExists
+
+UserFollowUser_Relation_Mapper__create__
+ [x] FullParams  OK
+
+UserFollowUser_Relation_Mapper__deleteRelation__
+ [x] FullParams  OK
+ [x] RelationNotExists
+
+Mapper_Revisions_save_NegativeAnswerID
+ [x] Answer i d equal zero
+ [x] Answer i d below zero
+
+Mapper_Revisions_New_Base
+ [x] Save new revision with full params
+ [x] Save new revision with min params
+ [x] Update revision with full params
+ [x] Update revision with min params
+
+Mapper_Revisions_save_NegativeComment
+ [x] Comment not string
+ [x] Comment is empty
+ [x] Comment too short
+
+Mapper_Revisions_save_NegativeID
+ [x] I d equal zero
+ [x] I d below zero
+
+Mapper_Revisions__save__opcodes__
+ [x] OpcodesNotSet
+ [x] OpcodesIsEmpty
+ [x] OpcodesTooShort
+
+Mapper_Revisions_New_NegativeParentID
+ [x] Parent i d equal zero
+ [x] Parent i d below zero
+
+Mapper_Subscription__create__
+ [x] FullParams  OK
+
+Mapper_User_Create__
+ [x] CreateUserWithFullParams Ok
+
+Mapper_User_create__site__
+ [x] Site not set
+
+Mapper_User_Update_Base_
+ [x] UpdateUserWithFullParams Ok
+
+Mapper_User__update__site__
+ [x] Site not set
+
+Mapper_User_save_negative_apiKey_
+ [x] Not set
+ [x] Too short
+ [x] Too long
+
+Mapper_User_save_negative_email_
+ [x] Not set
+ [x] Incorrect
+
+Mapper_User_Update_id_
+ [x] UpdateUserWithNotExistsID ThrowException
+ [x] UpdateUserWithIDEqualZero ThrowException
+ [x] UpdateUserWithIDBelowZero ThrowException
+
+Mapper_User_save_negative_name_
+ [x] Empty
+ [x] Too short
+ [x] Too long
+
+Mapper_User_save_negative_passwordHash_
+ [x] Not set
+ [x] Is empty
+ [x] Too short
+ [x] Too long
+
+Model_Answer_initWithDBState_
+ [x] Full params
+
+Hashtag_initWithDBState
+ [x] Init with database state
+ [x] Init with database state on russian
+ [x] Init with empty state
+
+Hashtag_initWithTitle
+ [x] Init with title
+ [x] Init with title on Russian
+
+Model_Question_initWithDBState_Base
+ [x] EnFullParams ReturnObject
+ [x] RuFullParams ReturnObject
+
+Model_Question__initWithTitle__
+ [x] Full params
+ [x] Ru title
+
+Question_Model__setHashtagsJSON__
+ [x] Base
+ [x] setHashtags  Empty
+ [x] Empty
+
+Model_Redirect_initWithDBState_
+ [x] Base params
+
+Model_ER_HashtagsQuestions__initWithDBState__
+ [x] EnFullParams ReturnObject
+ [x] RuFullParams ReturnObject
+
+Model_ER_HashtagsQuestions__initWithHashtagIDAndQuestionID__
+ [x] BaseParams
+
+UserFollowHashtag_Relation_Model__initWithDBState__
+ [x] EnFullParams ReturnObject
+ [x] RuFullParams ReturnObject
+
+UserFollowHashtag_Relation_Model__initWithUserIDAndHashtagID__
+ [x] BaseParams
+
+UserFollowQuestion_Relation_Model__initWithDBState__
+ [x] EnFullParams ReturnObject
+ [x] RuFullParams ReturnObject
+
+UserFollowQuestion_Relation_Model__initWithUserIDAndQuestionID__
+ [x] BaseParams
+
+UserFollowUser_Relation_Model__initWithDBState__
+ [x] EnFullParams ReturnObject
+ [x] RuFullParams ReturnObject
+
+UserFollowUser_Relation_Model__initWithUserIDAndFollowedUserID__
+ [x] BaseParams
+
+Model_Revision__getUserContribution__
+ [x] TwoInsertionAndOneDeletion
+ [x] OneInsertionAndOneDeletion
+ [x] EmptyOpcodes
+ [x] OpcodesNotSet
+
+Model_Revision_initWithDBState_
+ [x] Full params
+ [x] Min params
+
+Model_Subscription__initWithDBState__
+ [x] FullParams
+
+Model_User_initWithDBState_
+ [x] Full params
+ [x] Min params
+
+Edit_Answer_PageController__en__
+ [x] Base
+
+Edit_Answer_PageController__ru__
+ [x] Base
+
+History_Answer_PageController__en__
+ [x] Base
+
+History_Answer_PageController__ru__
+ [x] Base
+
+InternalServerError_Error_PageController__en__
+ [x] Base
+
+PageNotFound_Error_PageController__en__
+ [x] Base
+
+PageController_QuestionNotFound_base_
+ [x] Base
+
+UserNotFound_Error_PageController__
+ [x] Base
+
+Show_Flow_PageController__en__
+ [x] ShowENPage
+
+Show_Flow_PageController__ru__
+ [x] ShowRUPage
+
+Show_Hashtag_PageController__en__
+ [x] ShowPage
+
+Show_Hashtag_PageController__ru__
+ [x] ShowPage
+
+List_Hashtags_PageController__en__
+ [x] ShowENPage
+
+List_Hashtags_PageController__ru__
+ [x] ShowRUPage
+
+Unlogged_Main_PageController__en__
+ [x] Base
+
+Unlogged_Main_PageController__ru__
+ [x] Base
+
+Show_Question_PageController__en__
+ [x] ShowENPage
+
+Show_Question_PageController__ru__
+ [x] ShowENPage
+
+Newest_Questions_PageController__en__
+ [x] Base
+
+Newest_Questions_PageController__ru__
+ [x] Base
+
+Show_Main_PageController__Base
+ [x] Base
+
+All_Sandbox_PageController__en__
+ [x] Base
+
+All_Sandbox_PageController__ru__
+ [x] Base
+
+WithoutAnswers_Sandbox_PageController__en__
+ [x] Base
+
+WithoutAnswers_Sandbox_PageController__ru__
+ [x] Base
+
+Questions_Search_PageController__ru__
+ [x] BaseQueryString Ok
+ [x] Search QueryWithoutQuery EmptyPage
+
+Settings_PageController__en__
+ [x] ErrorForUnloggedUser
+ [x] ErrorForUnloggedUserOnSignature
+
+Index_SitemapXML_PageController__
+ [x] Base
+
+Lang_SitemapXML_PageController__en__
+ [x] EnPage
+
+Lang_SitemapXML_PageController__ru__
+ [x] RuPage
+
+ShortURL_User_PageController__en__
+ [x] EnPage
+
+ShortURL_User_PageController__
+ [x] RuPage
+
+Show_User_PageController__en__
+ [x] EnPage
+
+Show_User_PageController__
+ [x] RuPage
+
+Newest_Users_PageController__en__
+ [x] Base
+
+Newest_Users_PageController__ru__
+ [x] Base
+
+Query_Answers__answerWithID__en__
+ [x] Question with answer
+
+Query_Answers_answerWithID_answerID_
+ [x] Question i d equal zero
+ [x] Question i d negative
+
+Query_Answers_answerWithID_base_
+ [x] Question with answer
+
+Contributor_Query__findAnswerFirstEditor__
+ [x] Base
+ [x] Contributor not exists
+
+Contributor_Query__findAnswerLastEditor__
+ [x] Base
+ [x] Contributor not exists
+
+Query_Contributions__findAnswerContributors__abnormal__answerID__
+ [x] Question with this i d not exists
+
+Query_Contributions__findAnswerContributors__
+ [x] Revision exists
+ [x] Revision not exists
+
+Query_Contributions__findAnswerContributors__questionID__
+ [x] Question i d equal zero
+ [x] Question i d is negative
+
+Query_Feeds__findFeedsForUserWithID__
+ [x] firstPage
+
+Query_Flow__findFlow__
+ [x] firstPage
+
+Hashtag_Query__hashtagWithID__hashtagID__
+ [x] HashtagIDEqualZero ThrowsException
+ [x] HashtagIDNegative ThrowsException
+
+Hashtag_Query__hashtagWithID__ru__
+ [x] CorrectHashtagID ReturnHashtagObj
+
+Hashtag_Query__findWithTitle__questionTitle__
+ [x] HashtagURIIsEmpty ThrowsException
+ [x] HashtagURITooShort ThrowsException
+
+Hashtag_Query__findWithTitle__ru__
+ [x] HastagExists
+ [x] HashtagNotExists
+
+Hashtags_Query__findNewest__en__
+ [x] Without params
+
+Hashtags_Query__findNewest_page_
+ [x] Page equal zero
+ [x] Page below zero
+ [x] Page greater than 9999
+
+Hashtags_Query__findNewest_perPage_
+ [x] PerPageParamEqualZero ThrowException
+ [x] PerPageParamBelowZero ThrowException
+ [x] PerPageParamBelowMinValue ThrowException
+ [x] PerPageParamGreaterThan100 ThrowException
+
+Hashtags_Query__findNewest_base_
+ [x] Without params
+ [x] First page
+ [x] Second page
+ [x] FindFirst13Questions Ok
+
+Hashtags_Query__hashtagsLastID_base_
+ [x] Base
+
+Question_Query__questionWithID__en__
+ [x] Question with answer
+
+Question_Mapper_questionWithID_NegativeQuestionID_
+ [x] Question i d equal zero
+ [x] Question i d negative
+
+Question_Mapper__questionWithID_Base_
+ [x] QuestionWithFullProperties
+ [x] NoHashtags
+
+Mapper_Question_questionWithTitle_NegativeQuestionTitle_
+ [x] Question uri is empty
+ [x] Question uri too short
+
+Mapper_Question_questionWithTitle_Base_
+ [x] baseArgs
+ [x] Question without answer
+
+Query_Questions_findNewest_perPage_
+ [x] FindFirst13Questions Ok
+
+Query_Questions__findNewest__en__
+ [x] En
+
+Query_Questions_findNewest_negative_Page_
+ [x] Page equal zero
+ [x] Page below zero
+ [x] Page greater than 9999
+
+Query_Questions_findNewest__negative__perPage__
+ [x] PerPageParamEqualZero ThrowException
+ [x] PerPageParamBelowZero ThrowException
+ [x] PerPageParamBelowMinValue ThrowException
+ [x] PerPageParamGreaterThan100 ThrowException
+
+Query_Questions__findNewest__ru_
+ [x] Ru
+ [x] First page
+ [x] Second page
+
+Query_Questions_findNewestWithAnswer_
+ [x] Ru
+ [x] First page
+ [x] Second page
+
+Query_Questions_findNewestWithAnswer_negative_Page_
+ [x] Page equal zero
+ [x] Page below zero
+ [x] Page greater than 9999
+
+Query_Questions_findNewestWithAnswer_perPage_
+ [x] PerPageParamEqualZero ThrowException
+ [x] PerPageParamBelowZero ThrowException
+ [x] PerPageParamBelowMinValue ThrowException
+ [x] PerPageParamGreaterThan100 ThrowException
+
+Query_Questions__findQuestionsWithImage__en__
+ [x] En
+
+Query_Questions__findQuestionsWithImage__
+ [x] Ru
+ [x] First page
+ [x] Second page
+
+Query_Questions__findRecentlyUpdated__en__
+ [x] En
+
+Query_Questions__findRecentlyUpdated__
+ [x] Ru
+ [x] First page
+ [x] Second page
+
+Query_Questions_countQuestionsWithoutAnswers_base_
+ [x] NoParam ReturnCount
+
+Query_Questions_questionsLastID_base_
+ [x] Base
+
+Redirects_Query__redirectForQuestionWithID__en__
+ [x] Base
+ [x] Redirect not exists
+
+Redirects_Query__redirectForQuestionWithID__ru__
+ [x] Base
+ [x] Redirect not exists
+
+Query_ER_HashtagsQuestions__findByHashtagTitleAndQuestionID__
+ [x] RelationExists
+ [x] RelationNotExists
+
+Query_ER_HashtagsQuestions__findByHashtagTitleAndQuestionID__hashtag_title__
+ [x] HashtagIDEqualZero ThrowException
+ [x] HashtagIDBelowZero ThrowException
+
+Query_ER_HashtagsQuestions__findByHashtagTitleAndQuestionID__question_id__
+ [x] QuestionIDEqualZero  ThrowException
+ [x] QuestionIDBelowZero  ThrowException
+
+HashtagsToQuestions_Relations_Query__findNewestForhashtagWithID__
+ [x] Without params
+ [x] First page
+ [x] Second page
+ [x] Third page
+
+Query_ER_HashtagsQuestions__findNewestForhashtagWithID__page__
+ [x] PageEqualZero
+ [x] PageBelowZero
+ [x] PageGreaterThan9999
+
+Query_ER_HashtagsQuestions__findNewestForhashtagWithID__per_page__
+ [x] PerPageParamEqualZero ThrowException
+ [x] PerPageParamBelowZero ThrowException
+ [x] PerPageParamBelowMinValue ThrowException
+ [x] PerPageParamGreaterThan100 ThrowException
+
+HashtagsToQuestions_Relations_Query__findByHashtagIDAndQuestionID__
+ [x] RelationExists
+ [x] RelationNotExists
+
+Query_ER_HashtagsQuestions__findByHashtagIDAndQuestionID__hashtag_id__
+ [x] HashtagIDEqualZero ThrowException
+ [x] HashtagIDBelowZero ThrowException
+
+Query_ER_HashtagsQuestions__findByHashtagIDAndQuestionID__question_id__
+ [x] QuestionIDEqualZero  ThrowException
+ [x] QuestionIDBelowZero  ThrowException
+
+UsersFollowQuestions_Relations_Query__findQuestionsFollowedByUser__
+ [x] RelationsExists
+ [x] RelationNotExists
+
+UsersFollowQuestions_Relations_Query__relationWithUserIDAndQuestionID__
+ [x] RelationExists
+ [x] RelationNotExists
+
+UsersFollowQuestions_Relations_Query__findHashtagsFollowedByUser__
+ [x] RelationExists
+ [x] RelationNotExists
+
+UsersFollowHashtags_Relations_Query__relationWithUserIDAndHashtagID__
+ [x] RelationExists
+ [x] RelationNotExists
+
+UsersFollowQuestions_Relations_Query__findUsersFollowedByUser__
+ [x] RelationExists
+ [x] RelationNotExists
+
+UsersFollowUsers_Relations_Query__relationWithUserIDAndFollowedUserID__
+ [x] RelationExists
+ [x] RelationNotExists
+
+Mapper_Revisions_lastRevisionForAnswerWithID_Base_
+ [x] Revision exists
+ [x] Revision not exists
+
+Query_Revisions_revisionsForAnswerWithID_NegativeQuestionID
+ [x] Question with this i d not exists
+
+Query_Revisions__revisionsForAnswerWithID__negative__questionID__
+ [x] Question i d equal zero
+ [x] Question i d is negative
+
+Query_Revisions_revisionsForAnswerWithID_Base
+ [x] Question have some revisions
+ [x] Question dont have revisions
+
+Sandbox_Query__findNewestWithoutAnswer_
+ [x] Ru
+ [x] First page
+ [x] Second page
+
+Sandbox_Query__findNewestWithoutAnswer_negative_Page_
+ [x] Page equal zero
+ [x] Page below zero
+ [x] Page greater than 9999
+
+Sandbox_Query__findNewestWithoutAnswer_perPage_
+ [x] PerPageParamEqualZero ThrowException
+ [x] PerPageParamBelowZero ThrowException
+ [x] PerPageParamBelowMinValue ThrowException
+ [x] PerPageParamGreaterThan100 ThrowException
+
+Sandbox_Query__questionsWithoutHashtags__
+ [x] Ru
+ [x] First page
+ [x] Second page
+
+Query_Search_searchHashtags_base_
+ [x] SearchWithTwoResults Ok
+
+Query_Search_searchHashtags_Query_
+ [x] QueryRequestIsEmpty ThrowsException
+ [x] QueryRequestBelow3 ThrowsException
+ [x] QueryRequestGreaterThen64 ThrowsException
+
+Query_Search_searchQuestions_Base_
+ [x] Base
+
+Query_Search_searchQuestions_query_
+ [x] Query request is empty
+ [x] Query request below 3
+ [x] Query request greater then 64
+
+Query_Search_searchUsers_base_
+ [x] SearchWithTwoResults Ok
+
+Query_Search_searchUsers_query_
+ [x] QueryRequestIsEmpty ThrowsException
+ [x] QueryRequestBelow3 ThrowsException
+ [x] QueryRequestGreaterThen64 ThrowsException
+
+Subscription_findWithQuestionIDAndEmail__
+ [x] baseArgs
+ [x] SubscriptionNotFound
+
+Subscription_findWithQuestionIDAndEmail__question_id__
+ [x] QuestionIDEqualZero
+ [x] QuestionIDBelowZero
+
+Query_Users_userWithAPIKey_Base_
+ [x] Correct login
+
+Query_Users_userWithAPIKey_negative_APIKey_
+ [x] A p i key is empty
+ [x] A p i key is incorrect
+
+Query_Users__userWithEmail__abnormal__id__
+ [x] I d not exists
+
+Users_Query__userWithEmail__
+ [x] Base
+
+Query_Users_userWithID__abnormal__id__
+ [x] I d not exists
+
+Query_Users_userWithID_
+ [x] Base
+
+Query_Users_userWithID_negative_ID_
+ [x] I d equal zero
+ [x] I d below zero
+
+Query_Users__userWithUsername__abnormal__id__
+ [x] I d not exists
+
+Users_Query__userWithUsername__
+ [x] Base
+
+Query_Users_usersNewest_base_
+ [x] No params
+
+Query_Users_usersNewest_negative_page_
+ [x] Page below zero
+ [x] Page greater than 9999
+
+Query_Users_usersNewest_negative_perPage_
+ [x] Per page equal zero
+ [x] Per page below zero
+ [x] Per page greater than 100
+
+Model__Question__getHumanizedHashtags__
+ [x] zero answers
+ [x] 1 answer
+ [x] 2 answers
+
+Model__Question__getHumanizedMinutesToRead__
+ [x] zero answers
+ [x] 1 answer
+ [x] 2 answers
+
+Hashtag_URL_Trait__getURL__
+ [x] En
+ [x] Ru
+ [x] Ru WithUnderline
+
+Question_URL_Trait__getEditURL__
+ [x] En
+ [x] Ru
+
+Question_URL_Trait__getHistoryURL__
+ [x] En
+ [x] Ru
+
+Question_URL_Trait__getShortURL__
+ [x] FullParam Ok
+ [x] MinParam Ok
+
+Question_URL_Trait__getURL__
+ [x] Base u r i
+ [x] Ru title
+
+User_URL_Trait__getAvatarLargeURL__
+ [x] Full params
+
+User_URL_Trait__getAvatarMediumURL__
+ [x] Full params
+
+User_URL_Trait__getAvatarSmallURL__
+ [x] Full params
+
+User_URL_Trait__getShortURL__
+ [x] en
+ [x] ru
+
+User_URL_Trait__getURL__
+ [x] en
+ [x] ru
+
+Validator_Answer_validate_base_
+ [x] Full params
+ [x] Min params
+
+Validator_Answer_validate_ID_
+ [x] I d equal zero
+ [x] I d below zero
+
+Validator_Answer_timestamp_
+ [x] Timestamp not set
+ [x] Timestamp is empty
+
+Validator_Answer_text_
+ [x] Empty
+
+HashtagValidator_validateExists
+ [x] Validate exists hashtag
+ [x] Validate exists hashtag on Russian
+ [x] Validate hashtag with ID equal zero
+ [x] Validate hashtag with ID below zero
+ [x] Validate hashtag where title not set
+ [x] Validate hashtag where title is empty
+ [x] Validate hashtag with shortest title
+ [x] Validate hashtag with longest title
+
+HashtagValidator_validateNew
+ [x] Validate new hashtag
+ [x] Validate new hashtag with underscore
+ [x] Exception when title not set
+ [x] Exception when title is empty
+ [x] Exception when title too long
+ [x] Exception when title contains whitespace
+ [x] Exception when title contains dash
+ [x] Exception when title contains non word character
+
+Validator_Question__validateImageBaseName__
+ [x] NotSet
+ [x] Empty
+ [x] TooShort
+ [x] TooLong
+
+Validator_Question_Base
+ [x] ValidateExistsQuestionWithFullParams Ok
+ [x] ValidateExistsQuestionWithMinParams Ok
+
+Question_Validator__validateExists__id__
+ [x] I d equal zero
+ [x] I d below zero
+
+Validator_Question_negative_isRedirect_
+ [x] IsRedirect NotSet
+
+Validator_Question_negative_title_
+ [x] Title not set
+ [x] Title is empty
+ [x] Comment too short
+ [x] Comment too long
+
+Validator_Question_validateNew_Base
+ [x] ValidateNewQuestionWithFullParams Ok
+ [x] ValidateNewQuestionWithMinParams Ok
+
+Validator_Question_validateNew_isRedirect_
+ [x] IsRedirect NotSet
+
+Validator_Question_validateNew_title_
+ [x] Title not set
+ [x] Title is empty
+ [x] Comment too short
+ [x] Comment too long
+
+Validator_Question_validateTitle_
+ [x] RuTitle OK
+ [x] EnTitle OK
+ [x] TitleWithoutQuestionMark ThrowException
+ [x] Title begin plus sign
+
+Redirect_Validator__validateExists__
+ [x] ValidateExistsQuestionWithFullParams Ok
+
+Redirect_Validator__validate_id__
+ [x] I d equal zero
+ [x] From i d below zero
+
+Redirect_Validator_negative_toTitle_
+ [x] Title not set
+ [x] Title is empty
+ [x] Comment too short
+ [x] Comment too long
+
+Validator__Relation__HashtagToQuestion__fail__id_
+ [x] I d equal zero
+ [x] IDBelowZero
+
+Validator_ER_HashtagQuestions__id__
+ [x] I d equal zero
+ [x] IDBelowZero
+
+Validator_ER_HashtagsQuestions__validateNew__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+UserFollowHashtag_Relation_Validator__id__
+ [x] I d equal zero
+ [x] IDBelowZero
+
+UserFollowHashtag_Relation_Validator__validateExists__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+UserFollowHashtag_Relation_Validator__validateNew__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+UserFollowQuestion_Relation_Validator__id__
+ [x] I d equal zero
+ [x] IDBelowZero
+
+UserFollowQuestion_Relation_Validator__validateExists__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+UserFollowQuestion_Relation_Validator__validateNew__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+UserFollowUser_Relation_Validator__id__
+ [x] I d equal zero
+ [x] IDBelowZero
+
+UserFollowUser_Relation_Validator__validateExists__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+UserFollowUser_Relation_Validator__validateNew__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+Validator_Revision_NegativeAnswerID_
+ [x] Normal
+ [x] Answer i d equal zero
+ [x] I d below zero
+
+Validator_Revision__baseText_
+ [x] BaseTextEqualNull
+
+Validator_Revision_Base
+ [x] ValidFullRevision
+ [x] RevisionWithMinParams
+
+Validator_Revision_NegativeComment_
+ [x] Comment is empty
+ [x] Comment too short
+ [x] Comment too long
+
+Validator_Revision_validate_NegativeID_
+ [x] I d equal zero
+ [x] I d below zero
+
+Validator_Revision__opcodes__
+ [x] OpcodesEqualNull
+ [x] OpcodesIsEmpty
+ [x] OpcodesTooShort
+
+Validator_Revision_NegativeParentID_
+ [x] Parent i d equal zero
+ [x] Parent i d below zero
+
+Validator_Revision_NegativeTimestampID_
+ [x] Wrong type
+
+Validator_Revision__userID__
+ [x] UserIDEqualZero
+ [x] UserIDBelowZero
+
+Validator_Subscription__email__
+ [x] EmailNotSet
+ [x] IncorrectEmail
+
+Validator_Subscription__id__
+ [x] I d equal zero
+ [x] IDBelowZero
+
+Validator_Subscription__question_id__
+ [x] QiestionIDEqualZero
+ [x] QiestionIDBelowZero
+
+Validator_Subscription__validateExists__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+Validator_Subscription__validateNew__
+ [x] FullParams  OK
+ [x] MinParams  OK
+
+Validator_User_
+ [x] Validate with full params
+ [x] Validate with min params
+
+Validator_User_negative_api_key_
+ [x] A p i key not set
+ [x] A p i key is empty
+ [x] A p i key too short
+ [x] A p i key too long
+
+Validator_User_negative_email_
+ [x] Not set
+ [x] Incorrect email
+
+Validator_User_validate_id_
+ [x] Id not set
+ [x] I d equal zero
+ [x] I d below zero
+
+Validator_User__negative_name_
+ [x] Name not set
+ [x] Name is empty
+ [x] Name too short
+ [x] Name too long
+
+Validator_User_negative_password_hash_
+ [x] Password hash not set
+ [x] Password hash is empty
+ [x] Password hash too short
+ [x] Password hash too long
+
+Validator_User__negative_signature__
+ [x] Signature too short
+ [x] Signature too long
+
+Validator_User__negative_site__
+ [x] H t t p site
+ [x] H t t p s site
+ [x] Site with u r i
+ [x] Site without protocol
+ [x] Site with w w w
+ [x] Site is not u r l
+ [x] Site is incorrect
+
+Validator_User_negative_timestamp_
+ [x] Timestamp not set
+ [x] Timestamp is empty
+
+User_Validator__negative__username__
+ [x] Username not set
+ [x] Username contain whitespace
+ [x] Username include not allowed symbols
+ [x] Username is empty
+ [x] Username too short
+ [x] Username too long
+
