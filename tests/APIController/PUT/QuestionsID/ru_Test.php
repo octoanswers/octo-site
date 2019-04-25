@@ -17,7 +17,7 @@ class QuestionsID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
         $expectedResponse = [
             'id' => 12,
             'title' => 'Где мой новый ответ?',
-            'url' => 'https://answeropedia.org/ru/12/gde-moi-novyi-otvet',
+            'url' => 'https://answeropedia.org/ru/%D0%93%D0%B4%D0%B5_%D0%BC%D0%BE%D0%B9_%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BE%D1%82%D0%B2%D0%B5%D1%82',
             'is_redirect' => false,
         ];
 

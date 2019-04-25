@@ -19,7 +19,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
                 'id' => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
                 'new_title' => 'Как ты, мистер Гек?',
-                'url' => 'https://answeropedia.org/ru/12/kak-ty-mister-gek',
+                'url' => 'https://answeropedia.org/ru/%D0%9A%D0%B0%D0%BA_%D1%82%D1%8B%2C_%D0%BC%D0%B8%D1%81%D1%82%D0%B5%D1%80_%D0%93%D0%B5%D0%BA',
             ],
             'user' => [
                 'id' => 3,
@@ -60,7 +60,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
                 'id' => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
                 'new_title' => 'Как ты, мистер Гек?',
-                'url' => 'https://answeropedia.org/ru/12/kak-ty-mister-gek',
+                'url' => 'https://answeropedia.org/ru/%D0%9A%D0%B0%D0%BA_%D1%82%D1%8B%2C_%D0%BC%D0%B8%D1%81%D1%82%D0%B5%D1%80_%D0%93%D0%B5%D0%BA',
             ],
             'user' => [
                 'id' => 3,
@@ -97,7 +97,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
                 'id' => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
                 'new_title' => 'Огонь уничтожает КРОВЬ?',
-                'url' => 'https://answeropedia.org/ru/12/ogon-unichtozhaet-krov',
+                'url' => 'https://answeropedia.org/ru/%D0%9E%D0%B3%D0%BE%D0%BD%D1%8C_%D1%83%D0%BD%D0%B8%D1%87%D1%82%D0%BE%D0%B6%D0%B0%D0%B5%D1%82_%D0%9A%D0%A0%D0%9E%D0%92%D0%AC',
             ],
             'user' => [
                 'id' => 3,
@@ -134,7 +134,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
                 'id' => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
                 'new_title' => 'Огонь уничтожает КРОВЬ?',
-                'url' => 'https://answeropedia.org/ru/12/ogon-unichtozhaet-krov',
+                'url' => 'https://answeropedia.org/ru/%D0%9E%D0%B3%D0%BE%D0%BD%D1%8C_%D1%83%D0%BD%D0%B8%D1%87%D1%82%D0%BE%D0%B6%D0%B0%D0%B5%D1%82_%D0%9A%D0%A0%D0%9E%D0%92%D0%AC',
             ],
             'user' => [
                 'id' => 3,

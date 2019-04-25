@@ -1,10 +1,42 @@
 <?php
 
-class Show_Question_PageController__ru__Test extends Abstract_Frontend_TestCase
+class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'revisions', 'hashtags']];
+    protected $setUpDB = ['ru' => ['questions', 'revisions', 'hashtags'], 'users' => ['users']];
 
-    public function test__ShowENPage()
+    public function test_Get_RU_page()
+    {
+        $environment = \Slim\Http\Environment::mock([
+            'REQUEST_METHOD' => 'GET',
+            'REQUEST_URI' => '/ru/%D0%9A%D0%B0%D0%BA_%D0%B4%D0%B5%D0%BB%D0%B0',
+        ]);
+        $request = \Slim\Http\Request::createFromEnvironment($environment);
+        $this->app->getContainer()['request'] = $request;
+        
+        $response = $this->app->run(true);
+        $responseBody = (string) $response->getBody();
+
+        $this->assertStringContainsString('Как дела? - Answeropedia', $responseBody);
+        $this->assertSame(200, $response->getStatusCode());
+    }
+
+    // public function test_Get_RU_page_with_double_underscore()
+    // {
+    //     $environment = \Slim\Http\Environment::mock([
+    //         'REQUEST_METHOD' => 'GET',
+    //         'REQUEST_URI' => '/ru/kak-otrastit-borodu',
+    //     ]);
+    //     $request = \Slim\Http\Request::createFromEnvironment($environment);
+    //     $this->app->getContainer()['request'] = $request;
+
+    //     $response = $this->app->run(true);
+    //     $responseBody = (string) $response->getBody();
+
+    //     $this->assertStringContainsString('Как отрастить бороду? - Answeropedia', $responseBody);
+    //     $this->assertSame(200, $response->getStatusCode());
+    // }
+
+    public function test_Get_page_by_old_URL()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
@@ -16,7 +48,7 @@ class Show_Question_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Как отрастить бороду? - Answeropedia', $responseBody);
-        $this->assertSame(200, $response->getStatusCode());
+        //$this->assertStringContainsString('Как отрастить бороду? - Answeropedia', $responseBody);
+        $this->assertSame(301, $response->getStatusCode());
     }
 }

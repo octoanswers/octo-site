@@ -93,8 +93,8 @@ class AWApp
             $this->get('/user/{id}', 'ShortURL_User_PageController:handle');
             $this->get('/users/newest', 'Newest_Users_PageController:handle');
             $this->get('/+{username}', 'Show_User_PageController:handle');
-            $this->get('/{id:[0-9]+}[/{uri_slug}]', 'Show_Question_PageController:handle');
-            $this->get('/{question_uri}', 'Show_Question_PageController:handleByURI'); // @TODO Deprecated
+            $this->get('/{question_uri}', 'Show_Question_PageController:handle');
+            $this->get('/{id:[0-9]+}[/{uri_slug}]', 'Show_Question_PageController:handleByID'); // @TODO Deprecated
         })->add(new Gettext_Middleware());
 
         # Language-agnostic URLs

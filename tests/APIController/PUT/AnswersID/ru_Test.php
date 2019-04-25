@@ -17,7 +17,7 @@ class AnswersID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
         $expectedResponse = [
             'question_id' => 15,
             'question_title' => 'Где я родился?',
-            'question_url' => 'https://answeropedia.org/ru/15/gde-ya-rodilsya',
+            'question_url' => 'https://answeropedia.org/ru/%D0%93%D0%B4%D0%B5_%D1%8F_%D1%80%D0%BE%D0%B4%D0%B8%D0%BB%D1%81%D1%8F',
             'answer_text' => 'В Екатеринбурге.',
             'revision_id' => 8,
             'revision_opcodes' => 'd6i30:В Екатеринбурге.',
@@ -46,7 +46,7 @@ class AnswersID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
         $expectedResponse = [
             'question_id' => 21,
             'question_title' => 'Как птицы делают видеоигры?',
-            'question_url' => 'https://answeropedia.org/ru/21/kak-pticy-delayut-videoigry',
+            'question_url' => 'https://answeropedia.org/ru/%D0%9A%D0%B0%D0%BA_%D0%BF%D1%82%D0%B8%D1%86%D1%8B_%D0%B4%D0%B5%D0%BB%D0%B0%D1%8E%D1%82_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D0%B8%D0%B3%D1%80%D1%8B',
             'answer_text' => 'Нет, птицы не делают игры.',
             'revision_id' => 8,
             'revision_opcodes' => 'd34i8:Нет, c11i5:не c22',
@@ -75,7 +75,7 @@ class AnswersID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
         $expectedResponse = [
             'question_id' => 15,
             'question_title' => 'Где я родился?',
-            'question_url' => 'https://answeropedia.org/ru/15/gde-ya-rodilsya',
+            'question_url' => 'https://answeropedia.org/ru/%D0%93%D0%B4%D0%B5_%D1%8F_%D1%80%D0%BE%D0%B4%D0%B8%D0%BB%D1%81%D1%8F',
             'answer_text' => 'В Краснодаре.',
             'revision_id' => 8,
             'revision_opcodes' => 'd6i24:В Краснодаре.',

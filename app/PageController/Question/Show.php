@@ -5,16 +5,15 @@ class Show_Question_PageController extends Abstract_PageController
     public $followed;
 
     // @TODO Deprecated
-    public function handleByURI($request, $response, $args)
+    public function handleByID($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $questionURI = $args['question_uri'];
+        $questionID = $args['id'];
 
         try {
-            $questionTitle = $this->_titleFromURI($questionURI);
-            $question = (new Question_Query($this->lang))->questionWithTitle($questionTitle);
+            $question = (new Question_Query($this->lang))->questionWithID($questionID);
         } catch (Throwable $e) {
-            return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new PageNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         return $response->withRedirect($question->getURL($this->lang), 301);
@@ -23,11 +22,13 @@ class Show_Question_PageController extends Abstract_PageController
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $question_id = $args['id'];
-        $question_uri_slug = isset($args['uri_slug']) ? $args['uri_slug'] : null;
+        $questionURI = $args['question_uri'];
 
         try {
-            $this->question = (new Question_Query($this->lang))->questionWithID($question_id);
+            $questionTitle = $this->_titleFromURI($questionURI);
+            $this->question = (new Question_Query($this->lang))->questionWithTitle($questionTitle);
+            // var_dump($question);
+            // exit;
         } catch (Throwable $e) {
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
