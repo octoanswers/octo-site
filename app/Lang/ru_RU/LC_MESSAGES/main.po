@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-04-24 22:39+0500\n"
-"PO-Revision-Date: 2019-04-24 22:39+0500\n"
+"PO-Revision-Date: 2019-04-25 20:24+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -972,45 +972,3 @@ msgid ""
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
-
-#, fuzzy
-#~| msgid "Filters"
-#~ msgid "Filter"
-#~ msgstr "Фильтры"
-
-#~ msgid "Flow__Filter__Title"
-#~ msgstr "Фильтры"
-
-#~ msgid "FEED__LURE__FOLLOW_3_QUESTIONS__TITLE"
-#~ msgstr "Подпишитесь на несколько вопросов"
-
-#~ msgid "FEED__LURE__FOLLOW_3_QUESTIONS__LINK"
-#~ msgstr "Посмотреть вопросы"
-
-#~ msgid "FEED__LURE__FOLLOW_3_QUESTIONS__MSG"
-#~ msgstr ""
-#~ "Подписываясь на интересные вопросы, вы сможете следить за их правками. "
-#~ "Найдите и подпишитесь на три или более вопроса"
-
-#~ msgid "FEED__LURE__FOLLOW_3_USERS__LINK"
-#~ msgstr "Посмотреть пользователей"
-
-#~ msgid "FEED__LURE__FOLLOW_3_USERS__TITLE"
-#~ msgstr "Найдите первых друзей"
-
-#~ msgid "FEED__LURE__FOLLOW_3_USERS__MSG"
-#~ msgstr ""
-#~ "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы "
-#~ "и прочие активности этих пользователей будут появляться у вас в ленте "
-#~ "новостей"
-
-#~ msgid "FEED__LURE__WRITE_ANSWER__TITLE"
-#~ msgstr "Напишите первый ответ"
-
-#~ msgid "FEED__LURE__WRITE_ANSWER__MSG"
-#~ msgstr ""
-#~ "Посмотрите вопросы на которые еще никто не написал ответа и станьте "
-#~ "первым автором"
-
-#~ msgid "FEED__LURE__WRITE_ANSWER__LINK"
-#~ msgstr "Посмотреть вопросы в песочнице"
