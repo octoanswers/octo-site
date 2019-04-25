@@ -1,23 +1,7 @@
 <?php
 
-class HashtagValidator_validateNewTest extends PHPUnit\Framework\TestCase
+class Validator_Hashtag_validateNew_negativeTest extends PHPUnit\Framework\TestCase
 {
-    public function testValidateNewHashtag()
-    {
-        $hashtag = new Hashtag();
-        $hashtag->title = 'iPhone8';
-
-        $this->assertEquals(true, Hashtag_Validator::validateNew($hashtag));
-    }
-
-    public function testValidateNewHashtagWithUnderscore()
-    {
-        $hashtag = new Hashtag();
-        $hashtag->title = 'my_hashtag';
-
-        $this->assertEquals(true, Hashtag_Validator::validateNew($hashtag));
-    }
-
     public function test_Exception_when_title_not_set()
     {
         $hashtag = new Hashtag();
