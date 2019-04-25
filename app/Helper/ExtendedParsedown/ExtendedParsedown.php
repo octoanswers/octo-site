@@ -20,14 +20,17 @@ class ExtendedParsedown extends Parsedown
     protected function inlineTopicMention($Excerpt)
     {
         if (preg_match(self::HASHTAG_PATTERN, $Excerpt['context'], $matches)) {
-            $topic_URL = Hashtag_URL_Helper::getURLFromTitle($this->lang, mb_strtolower($matches[1]));
+            $hashtag = new Hashtag();
+            $hashtag->title = mb_strtolower($matches[1]);
+            $hashtagURL = $hashtag->getURL($this->lang);
+            
             return [
                 'extent' => strlen($matches[0]),
                 'element' => [
                     'name' => 'a',
                     'text' => $matches[0],
                     'attributes' => [
-                        'href' => $topic_URL,
+                        'href' => $hashtagURL,
                         'class' => 'topic',
                     ],
                 ],
