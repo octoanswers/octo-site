@@ -3,18 +3,6 @@
 // @TODO Deprecated
 class Abstract_URL_Helper
 {
-    public static function titleFromURI(string $uri): string
-    {
-        $uri = str_replace('__', 'DOUBLEUNDERLINE', $uri);
-        $uri = str_replace('_', ' ', $uri);
-        $uri = str_replace('DOUBLEUNDERLINE', '_', $uri);
-
-        $uri = $uri.'?';
-
-        $title = self::_decodeURI($uri);
-        return $title;
-    }
-
     public static function URIFromTitle(string $title): string
     {
         $uri = str_replace('_', 'DOUBLEUNDERLINE', $title);

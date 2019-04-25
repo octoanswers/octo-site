@@ -11,7 +11,7 @@ class Show_Question_PageController extends Abstract_PageController
         $questionURI = $args['question_uri'];
 
         try {
-            $questionTitle = Question_URL_Helper::titleFromURI($questionURI);
+            $questionTitle = $this->_titleFromURI($questionURI);
             $question = (new Question_Query($this->lang))->questionWithTitle($questionTitle);
         } catch (Throwable $e) {
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
@@ -94,6 +94,17 @@ class Show_Question_PageController extends Abstract_PageController
         $response->getBody()->write($output);
         
         return $response;
+    }
+
+    private function _titleFromURI(string $uri): string
+    {
+        $uri = str_replace('__', 'DOUBLEUNDERLINE', $uri);
+        $uri = str_replace('_', ' ', $uri);
+        $uri = str_replace('DOUBLEUNDERLINE', '_', $uri);
+
+        $title = $uri.'?';
+
+        return $title;
     }
 
     protected function _prepareAdditionalJavascript()
