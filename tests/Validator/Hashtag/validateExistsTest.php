@@ -1,6 +1,6 @@
 <?php
 
-class Validator_Hashtag__validateExists__BaseTest extends PHPUnit\Framework\TestCase
+class HashtagValidator_validateExistsTest extends PHPUnit\Framework\TestCase
 {
     public function test_EN_Ok()
     {

@@ -40,7 +40,7 @@ class HashtagTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(null, $hashtag->id);
     }
 
-    public function testInitWithTitleOnRussuan()
+    public function test_Init_with_title_on_Russian()
     {
         $hashtag = Hashtag::initWithTitle('проливной_дождь');
 
