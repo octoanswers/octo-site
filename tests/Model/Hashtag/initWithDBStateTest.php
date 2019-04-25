@@ -1,6 +1,6 @@
 <?php
 
-class HashtagTest extends PHPUnit\Framework\TestCase
+class Hashtag_initWithDBStateTest extends PHPUnit\Framework\TestCase
 {
     public function testInitWithDatabaseState()
     {
@@ -30,21 +30,5 @@ class HashtagTest extends PHPUnit\Framework\TestCase
     {
         $this->expectExceptionMessage('Hashtag init with empty state');
         $hashtag = Hashtag::initWithDBState([]);
-    }
-
-    public function testInitWithTitle()
-    {
-        $hashtag = Hashtag::initWithTitle('common_questions');
-
-        $this->assertEquals('common_questions', $hashtag->title);
-        $this->assertEquals(null, $hashtag->id);
-    }
-
-    public function test_Init_with_title_on_Russian()
-    {
-        $hashtag = Hashtag::initWithTitle('проливной_дождь');
-
-        $this->assertEquals('проливной_дождь', $hashtag->title);
-        $this->assertEquals(null, $hashtag->id);
     }
 }
