@@ -49,7 +49,7 @@ class HashtagValidator_validateNewTest extends PHPUnit\Framework\TestCase
     {
         $hashtag = Hashtag::initWithTitle('проливной дождь');
 
-        $this->expectExceptionMessage('Hashtag title contains non-word-character');
+        $this->expectExceptionMessage('Hashtag title "проливной дождь" contains non-word-character');
         $this->assertEquals(true, Hashtag_Validator::validateNew($hashtag));
     }
 
@@ -57,7 +57,7 @@ class HashtagValidator_validateNewTest extends PHPUnit\Framework\TestCase
     {
         $hashtag = Hashtag::initWithTitle('foo-bar');
 
-        $this->expectExceptionMessage('Hashtag title contains non-word-character');
+        $this->expectExceptionMessage('Hashtag title "foo-bar" contains non-word-character');
         $this->assertEquals(true, Hashtag_Validator::validateNew($hashtag));
     }
 
@@ -65,7 +65,7 @@ class HashtagValidator_validateNewTest extends PHPUnit\Framework\TestCase
     {
         $hashtag = Hashtag::initWithTitle('hash%');
 
-        $this->expectExceptionMessage('Hashtag title contains non-word-character');
+        $this->expectExceptionMessage('Hashtag title "hash%" contains non-word-character');
         $this->assertEquals(true, Hashtag_Validator::validateNew($hashtag));
     }
 }

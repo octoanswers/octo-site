@@ -1,10 +1,10 @@
 <?php
 
-class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
+class Mapper_Hashtag_createTest extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['hashtags']];
 
-    public function test_CreateWithEnTitle_Ok()
+    public function test_Create_hashtag_with_EN_title()
     {
         $hashtag = new Hashtag();
         $hashtag->title = 'newhashtag';
@@ -15,7 +15,7 @@ class Mapper_Hashtag_create_base_Test extends Abstract_DB_TestCase
         $this->assertEquals('newhashtag', $hashtag->title);
     }
 
-    public function test_CreateWithRuTitle_Ok()
+    public function test_Create_hashtag_with_RU_title()
     {
         $hashtag = new Hashtag();
         $hashtag->title = 'новаятема';

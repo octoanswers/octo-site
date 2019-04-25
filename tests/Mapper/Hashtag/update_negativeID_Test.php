@@ -1,10 +1,10 @@
 <?php
 
-class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
+class Mapper_Hashtag_update_negativeIDTest extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['hashtags']];
 
-    public function test_UpdateWithNotExistsID_ThrowException()
+    public function test_Exception_when_hashtag_ID_not_exists()
     {
         $hashtag = new Hashtag();
         $hashtag->id = 2215;
@@ -14,7 +14,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
         $hashtag = (new Hashtag_Mapper('ru'))->update($hashtag);
     }
 
-    public function test_UpdateWithIDEqualZero_ThrowException()
+    public function test_Exception_when_hashtag_ID_equal_zero()
     {
         $hashtag = new Hashtag();
         $hashtag->id = 0;
@@ -24,7 +24,7 @@ class Mapper_Hashtag_update_id_Test extends Abstract_DB_TestCase
         $hashtag = (new Hashtag_Mapper('ru'))->update($hashtag);
     }
 
-    public function test_UpdateWithIDBelowZero_ThrowException()
+    public function test_Exception_when_hashtag_ID_below_zero()
     {
         $hashtag = new Hashtag();
         $hashtag->id = -1;

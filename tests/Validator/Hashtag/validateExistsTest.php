@@ -41,7 +41,16 @@ class HashtagValidator_validateExistsTest extends PHPUnit\Framework\TestCase
         Hashtag_Validator::validateExists($hashtag);
     }
 
-    public function test_Validate_hashtag_where_title_not_set()
+    public function test_Validate_hashtag_with_shortest_title()
+    {
+        $hashtag = new Hashtag();
+        $hashtag->id = 13;
+        $hashtag->title = 'xy';
+
+        $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
+    }
+
+    public function test_Exception_when_hashtag_title_not_set()
     {
         $hashtag = new Hashtag();
         $hashtag->id = 13;
@@ -57,15 +66,6 @@ class HashtagValidator_validateExistsTest extends PHPUnit\Framework\TestCase
         $hashtag->title = '';
 
         $this->expectExceptionMessage('Hashtag title param "" must have a length between 2 and 127');
-        $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
-    }
-
-    public function test_Validate_hashtag_with_shortest_title()
-    {
-        $hashtag = new Hashtag();
-        $hashtag->id = 13;
-        $hashtag->title = 'xy';
-
         $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 
