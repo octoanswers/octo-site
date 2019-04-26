@@ -39,116 +39,109 @@ class ExtendedParsedown extends Parsedown
         }
     }
 
-    // Redefine Parsedown method
-    protected function element(array $Element)
-    {
-        $Element = $this->additionalProcessElement($Element);
-        $Element = parent::element($Element);
-
-        return $Element;
-    }
-
     /**
-     * @param array $Element
-     * @return array
+     * Overwrite methods from Parsedown
+     * Transform to link^
+     * - [foo](foo) - Mark as link
+     * - [foo] => [foo](foo)
+     * - [foo]() => [foo](foo)
      */
-    protected function additionalProcessElement($Element)
-    {
-        if ($Element['name'] != 'a') {
-            return $Element;
-        }
-
-        if ($this->_isDirectLinkToAnsweropedia($Element['attributes']['href'])) {
-            return $Element;
-        }
-
-        if ($this->_isExternalUrl($Element['attributes']['href'])) {
-            $Element['attributes']['class'] = 'link-external';
-            $Element['attributes']['target'] = '_blank';
-            $Element['attributes']['rel'] = 'nofollow';
-        } else {
-            // Broken URL by default
-            $Element['attributes']['class'] = 'link-broken';
-            $Element['attributes']['target'] = '_blank';
-            $Element['attributes']['rel'] = 'nofollow';
-            $Element['attributes']['title'] = '222';
-        }
-
-        return $Element;
-    }
-
     protected function inlineLink($excerpt)
     {
-        $element = [
-            'name' => 'a',
-            'handler' => 'line',
-            'text' => null,
-            'attributes' => [
-                'href' => null,
-                'title' => null,
-            ],
-        ];
-        $offset = 0;
-        $remainder = $excerpt['text'];
-        // search body part of link [BODY](ref)
-        if (preg_match('/\[((?:[^][]++|(?R))*+)\]/', $remainder, $matches)) {
-            $element['text'] = $matches[1];
-            $offset += strlen($matches[0]);
-            $remainder = substr($remainder, $offset);
-        } else {
-            return;
-        }
-        // search reference part of link [body](REF)
-        if (preg_match('/\((.*?)\)/', $remainder, $matches)) {
-            if (filter_var($matches[1], FILTER_VALIDATE_URL)) {
-                // if URL is canonical => external URL
-                // attach some attributes to external link
-                $element['attributes']['class'] = 'external-link';
-                $element['attributes']['target'] = '_blank';
-                $element['attributes']['rel'] = 'nofollow';
-                //$element['attributes']['title'] = '333';
-                $element['attributes']['href'] = $matches[1];
-            } else {
-                if ($matches[1] == '') {
-                    // URL empty => make internal link from body part
-                    $question = Question_Model::initWithTitle($element['text']);
-                    $matches[1] = $question->getURL($this->lang);
-                } else {
-                    // URL not canonical => internal wiki-link
-                    $question = Question_Model::initWithTitle($matches[1]);
-                    $matches[1] = $question->getURL($this->lang);
-                }
-                $element['attributes']['href'] = $matches[1];
-                $element['attributes']['title'] = $question->title;
-            }
-            
-            if (isset($matches[2])) {
-                $element['attributes']['title'] = substr($matches[2], 1, -1);
-            }
-            $offset += strlen($matches[0]);
-        } else {
-            // reference part of link not found => local URI
-            $question = Question_Model::initWithTitle($element['text']);
-            $linkFromText = $question->getURL($this->lang);
-            $element['attributes']['href'] = $linkFromText;
-            $element['attributes']['title'] = null;
-        }
-        $element['attributes']['href'] = str_replace(array('&', '<'), array('&amp;', '&lt;'), $element['attributes']['href']);
-        return array(
-            'extent' => $offset,
-            'element' => $element,
-        );
-    }
+        
 
-    protected function _isDirectLinkToAnsweropedia($url)
+        //     $remainder = $excerpt['text'];
+        //     // search body part of link [BODY](ref)
+        //     if (preg_match('/\[((?:[^][]++|(?R))*+)\]/', $remainder, $matches)) {
+        //          $element['text'] = $matches[1];
+        //          $offset += strlen($matches[0]);
+        // //         $remainder = substr($remainder, $offset);
+        //     } else {
+        //         return;
+        //     }
+        //
+
+        //var_dump($excerpt);
+
+        if (preg_match('/\[(.+)\]\((.+)\)/uU', $excerpt['text'], $matches)) {
+            // Get body and reference part of link [body](REF)
+            $bodyPart = $matches[1];
+            $referencePart = $matches[2];
+
+            $offset = strlen($matches[0]);
+            
+            $question = Question_Model::initWithTitle($referencePart);
+
+            $element = [
+                'name' => 'a',
+                'handler' => 'line',
+                'text' => $bodyPart,
+                'attributes' => [
+                    'href' => $question->getURL($this->lang),
+                    'title' => $referencePart,
+                ],
+            ];
+
+            if (filter_var($referencePart, FILTER_VALIDATE_URL)) {
+                $element['attributes']['href'] = $referencePart;
+                $element['attributes']['title'] = null;
+                if (!$this->_isAnsweropediaURL($referencePart)) {
+                    // External link
+                    $element['attributes']['class'] = 'link-external';
+                    $element['attributes']['target'] = '_blank';
+                    $element['attributes']['rel'] = 'nofollow';
+                }
+            }
+
+
+            //var_dump($element);
+
+            return ['extent' => $offset, 'element' => $element];
+        //         if (filter_var($matches[1], FILTER_VALIDATE_URL)) {
+    //             // if URL is canonical => external URL
+    //             // attach some attributes to external link
+    //             $element['attributes']['class'] = 'external-link';
+    //             $element['attributes']['target'] = '_blank';
+    //             $element['attributes']['rel'] = 'nofollow';
+    //             //$element['attributes']['title'] = '333';
+    //             $element['attributes']['href'] = $matches[1];
+    //         } else {
+    //             if ($matches[1] == '') {
+    //                 // URL empty => make internal link from body part
+    //                 $question = Question_Model::initWithTitle($element['text']);
+    //                 $matches[1] = $question->getURL($this->lang);
+    //             } else {
+    //                 // URL not canonical => internal wiki-link
+    //                 $question = Question_Model::initWithTitle($matches[1]);
+    //                 $matches[1] = $question->getURL($this->lang);
+    //             }
+    //             $element['attributes']['href'] = $matches[1];
+    //             $element['attributes']['title'] = $question->title;
+    //         }
+            
+    //         if (isset($matches[2])) {
+    //             $element['attributes']['title'] = substr($matches[2], 1, -1);
+    //         }
+    //         $offset += strlen($matches[0]);
+        } else {
+            //         // reference part of link not found => local URI
+    //         $question = Question_Model::initWithTitle($element['text']);
+    //         $linkFromText = $question->getURL($this->lang);
+    //         $element['attributes']['href'] = $linkFromText;
+    //         $element['attributes']['title'] = null;
+        }
+        //     $element['attributes']['href'] = str_replace(array('&', '<'), array('&amp;', '&lt;'), $element['attributes']['href']);
+
+        return;
+    }
+    
+
+    protected function _isAnsweropediaURL($url)
     {
         return preg_match('/^https:\/\/'.SITE_URL_NAME.'\.org/', $url);
     }
 
-    protected function _isExternalUrl($url)
-    {
-        return preg_match('/^(http|https):\/\//', $url);
-    }
+    
 
     /**
      * Only H2-H6 header tags in Q-article body.

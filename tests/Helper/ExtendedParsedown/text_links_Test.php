@@ -16,28 +16,35 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
 
     public function test_Markdown_style_link()
     {
-        $stringMD = "Это текст о [каше](Что такое каша?) и молоке.";
-        $stringHTML = "<p>Это текст о [каше](Что такое каша?) и молоке.</p>";
-//        $stringHTML = '<p>Это текст о <a href="https://answeropedia.org/ru/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B0%D1%88%D0%B0" title="Что такое каша?">каше</a> и молоке.</p>';
+        $stringMD = "I eat [crisp](What is crisp?) every day.";
+        $stringHTML = '<p>I eat <a href="https://answeropedia.org/ru/What_is_crisp" title="What is crisp?">crisp</a> every day.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
 
-    public function test_Link_without_reference_part()
+    public function test_Double_Markdown_style_link()
     {
-        $stringMD = "Это текст о [каше] и молоке.";
-        $stringHTML = "<p>Это текст о [каше] и молоке.</p>";
+        $stringMD = "[Steve](Steve Jobs) and [iPhone 8](iPhone 8) together.";
+        $stringHTML = '<p><a href="https://answeropedia.org/ru/Steve_Jobs" title="Steve Jobs">Steve</a> and <a href="https://answeropedia.org/ru/iPhone_8" title="iPhone 8">iPhone 8</a> together.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
 
-    public function test_Link_with_empty_reference_part()
-    {
-        $stringMD = "Это текст о [каше]() и молоке.";
-        $stringHTML = '<p>Это текст о <a href="https://answeropedia.org/ru/%D0%BA%D0%B0%D1%88%D0%B5" title="каше">каше</a> и молоке.</p>';
+    // public function test_Link_without_reference_part()
+    // {
+    //     $stringMD = "Это текст о [каше] и молоке.";
+    //     $stringHTML = '<p>Это текст о <a href="https://answeropedia.org/ru/%D0%BA%D0%B0%D1%88%D0%B5" title="XXXкаше">каше</a> и молоке.</p>';
 
-        $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    }
+    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
+    // }
+
+    // public function test_Link_with_empty_reference_part()
+    // {
+    //     $stringMD = "Это текст о [каше]() и молоке.";
+    //     $stringHTML = '<p>Это текст о <a href="https://answeropedia.org/ru/%D0%BA%D0%B0%D1%88%D0%B5" title="XXXкаше">каше</a> и молоке.</p>';
+
+    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
+    // }
     
     public function test_Direct_link_to_Answeropedia()
     {
@@ -57,8 +64,8 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
 
     public function test_External_HTTPS_link()
     {
-        $stringMD = "Это текст о [каше](https://site.com/page) и молоке.";
-        $stringHTML = "<p>Это текст о <a href=\"https://site.com/page\" class=\"link-external\" target=\"_blank\" rel=\"nofollow\">каше</a> и молоке.</p>";
+        $stringMD = "Это текст о [каше](https://site.com/foo-page) и молоке.";
+        $stringHTML = '<p>Это текст о <a href="https://site.com/foo-page" class="link-external" target="_blank" rel="nofollow">каше</a> и молоке.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
