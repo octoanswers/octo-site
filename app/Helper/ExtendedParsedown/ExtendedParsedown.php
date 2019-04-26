@@ -31,8 +31,8 @@ class ExtendedParsedown extends Parsedown
                     'text' => $matches[0],
                     'attributes' => [
                         'href' => $hashtagURL,
-                        'title' => $hashtag->title,
-                        'class' => 'topic',
+                        'title' => '#'.$hashtag->title,
+                        'class' => 'inline-hashtag',
                     ],
                 ],
             ];

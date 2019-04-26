@@ -16,57 +16,9 @@ class Helper_ExtendedParsedown_text_hashtagsTest extends TestCase
 
     public function test_Link_to_hashtag()
     {
-        $stringMD = "text #tag text";
-        $stringHTML = '<p>text <a href="xxx">#tag</a> text</p>';
+        $stringMD = "Any #birds may #fly.";
+        $stringHTML = '<p>Any <a href="https://answeropedia.org/ru/tag/birds" title="#birds" class="inline-hashtag">#birds</a> may <a href="https://answeropedia.org/ru/tag/fly" title="#fly" class="inline-hashtag">#fly</a>.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
-
-    // public function test__H2()
-    // {
-    //     $stringMD = "# Head\ntext";
-    //     $stringHTML = "<h2>Head</h2>\n<p>text</p>";
-
-    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    // }
-
-    // public function test__H3()
-    // {
-    //     $stringMD = "## Head\ntext";
-    //     $stringHTML = "<h3>Head</h3>\n<p>text</p>";
-
-    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    // }
-
-    // public function test__H4()
-    // {
-    //     $stringMD = "### Head\ntext";
-    //     $stringHTML = "<h4>Head</h4>\n<p>text</p>";
-
-    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    // }
-
-    // public function test__H5()
-    // {
-    //     $stringMD = "#### Head\ntext";
-    //     $stringHTML = "<h5>Head</h5>\n<p>text</p>";
-
-    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    // }
-
-    // public function test__H6()
-    // {
-    //     $stringMD = "##### Head\ntext";
-    //     $stringHTML = "<h6>Head</h6>\n<p>text</p>";
-
-    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    // }
-
-    // public function test__MoreThanH6()
-    // {
-    //     $stringMD = "###### Head\ntext";
-    //     $stringHTML = "<p>###### Head\ntext</p>";
-
-    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    // }
 }
