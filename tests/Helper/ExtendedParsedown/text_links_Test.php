@@ -30,21 +30,21 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
 
-    // public function test_Link_without_reference_part()
-    // {
-    //     $stringMD = "Это текст о [каше] и молоке.";
-    //     $stringHTML = '<p>Это текст о <a href="https://answeropedia.org/ru/%D0%BA%D0%B0%D1%88%D0%B5" title="XXXкаше">каше</a> и молоке.</p>';
+    public function test_Link_without_reference_part()
+    {
+        $stringMD = "Some [girls] are beautiful.";
+        $stringHTML = '<p>Some <a href="https://answeropedia.org/ru/girls" title="girls">girls</a> are beautiful.</p>';
 
-    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    // }
+        $this->assertEquals($stringHTML, $this->pd->text($stringMD));
+    }
 
-    // public function test_Link_with_empty_reference_part()
-    // {
-    //     $stringMD = "Это текст о [каше]() и молоке.";
-    //     $stringHTML = '<p>Это текст о <a href="https://answeropedia.org/ru/%D0%BA%D0%B0%D1%88%D0%B5" title="XXXкаше">каше</a> и молоке.</p>';
+    public function test_Link_with_empty_reference_part()
+    {
+        $stringMD = "Some [peoples]() are strange.";
+        $stringHTML = '<p>Some <a href="https://answeropedia.org/ru/peoples" title="peoples">peoples</a> are strange.</p>';
 
-    //     $this->assertEquals($stringHTML, $this->pd->text($stringMD));
-    // }
+        $this->assertEquals($stringHTML, $this->pd->text($stringMD));
+    }
     
     public function test_Direct_link_to_Answeropedia()
     {

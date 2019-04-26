@@ -41,34 +41,39 @@ class ExtendedParsedown extends Parsedown
 
     /**
      * Overwrite methods from Parsedown
-     * Transform to link^
-     * - [foo](foo) - Mark as link
-     * - [foo] => [foo](foo)
-     * - [foo]() => [foo](foo)
      */
     protected function inlineLink($excerpt)
     {
-        
+        $offset = 0;
+        $offsetAdjustment = 0;
 
-        //     $remainder = $excerpt['text'];
-        //     // search body part of link [BODY](ref)
-        //     if (preg_match('/\[((?:[^][]++|(?R))*+)\]/', $remainder, $matches)) {
-        //          $element['text'] = $matches[1];
-        //          $offset += strlen($matches[0]);
-        // //         $remainder = substr($remainder, $offset);
-        //     } else {
-        //         return;
-        //     }
-        //
+        // Transform not complete links [foo] to [foo](foo)
+        $shortLinkPattern = '/\[(.+)\]([^\(])/uU';
+        $replacement = '[$1]($1)$2';
+        if (preg_match($shortLinkPattern, $excerpt['text'], $matches)) {
+            $excerpt['text'] = preg_replace($shortLinkPattern, $replacement, $excerpt['text']);
+            $excerpt['context'] = preg_replace($shortLinkPattern, $replacement, $excerpt['context']);
+            // @NOTE Учитывая, что мы изменяем длинну строк, необходимо будет скорректировать отступ.
+            $offsetAdjustment = strlen($matches[0]) - 1;
+        }
 
-        //var_dump($excerpt);
+        // Transform not complete links [foo]() to [foo](foo)
+        $shortLinkPattern = '/\[(.+)\](\(\))/uU';
+        $replacement = '[$1]($1)';
+        if (preg_match($shortLinkPattern, $excerpt['text'], $matches)) {
+            $excerpt['text'] = preg_replace($shortLinkPattern, $replacement, $excerpt['text']);
+            $excerpt['context'] = preg_replace($shortLinkPattern, $replacement, $excerpt['context']);
+            // @NOTE Учитывая, что мы изменяем длинну строк, необходимо будет скорректировать отступ.
+            $offsetAdjustment = strlen($matches[0]) - 4;
+        }
 
+        // Proced default links like a [foo](What is foo?)
         if (preg_match('/\[(.+)\]\((.+)\)/uU', $excerpt['text'], $matches)) {
             // Get body and reference part of link [body](REF)
             $bodyPart = $matches[1];
             $referencePart = $matches[2];
 
-            $offset = strlen($matches[0]);
+            $offset = strlen($matches[0]) - $offsetAdjustment;
             
             $question = Question_Model::initWithTitle($referencePart);
 
@@ -82,6 +87,7 @@ class ExtendedParsedown extends Parsedown
                 ],
             ];
 
+            // Reference part started with HTTP/HTTPS
             if (filter_var($referencePart, FILTER_VALIDATE_URL)) {
                 $element['attributes']['href'] = $referencePart;
                 $element['attributes']['title'] = null;
@@ -93,55 +99,12 @@ class ExtendedParsedown extends Parsedown
                 }
             }
 
-
-            //var_dump($element);
-
             return ['extent' => $offset, 'element' => $element];
-        //         if (filter_var($matches[1], FILTER_VALIDATE_URL)) {
-    //             // if URL is canonical => external URL
-    //             // attach some attributes to external link
-    //             $element['attributes']['class'] = 'external-link';
-    //             $element['attributes']['target'] = '_blank';
-    //             $element['attributes']['rel'] = 'nofollow';
-    //             //$element['attributes']['title'] = '333';
-    //             $element['attributes']['href'] = $matches[1];
-    //         } else {
-    //             if ($matches[1] == '') {
-    //                 // URL empty => make internal link from body part
-    //                 $question = Question_Model::initWithTitle($element['text']);
-    //                 $matches[1] = $question->getURL($this->lang);
-    //             } else {
-    //                 // URL not canonical => internal wiki-link
-    //                 $question = Question_Model::initWithTitle($matches[1]);
-    //                 $matches[1] = $question->getURL($this->lang);
-    //             }
-    //             $element['attributes']['href'] = $matches[1];
-    //             $element['attributes']['title'] = $question->title;
-    //         }
-            
-    //         if (isset($matches[2])) {
-    //             $element['attributes']['title'] = substr($matches[2], 1, -1);
-    //         }
-    //         $offset += strlen($matches[0]);
-        } else {
-            //         // reference part of link not found => local URI
-    //         $question = Question_Model::initWithTitle($element['text']);
-    //         $linkFromText = $question->getURL($this->lang);
-    //         $element['attributes']['href'] = $linkFromText;
-    //         $element['attributes']['title'] = null;
         }
-        //     $element['attributes']['href'] = str_replace(array('&', '<'), array('&amp;', '&lt;'), $element['attributes']['href']);
 
         return;
     }
-    
-
-    protected function _isAnsweropediaURL($url)
-    {
-        return preg_match('/^https:\/\/'.SITE_URL_NAME.'\.org/', $url);
-    }
-
-    
+        
 
     /**
      * Only H2-H6 header tags in Q-article body.
@@ -180,5 +143,10 @@ class ExtendedParsedown extends Parsedown
 
             return $Block;
         }
+    }
+
+    protected function _isAnsweropediaURL($url)
+    {
+        return preg_match('/^https:\/\/'.SITE_URL_NAME.'\.org/', $url);
     }
 }
