@@ -31,6 +31,7 @@ class ExtendedParsedown extends Parsedown
                     'text' => $matches[0],
                     'attributes' => [
                         'href' => $hashtagURL,
+                        'title' => $hashtag->title,
                         'class' => 'topic',
                     ],
                 ],
@@ -57,11 +58,11 @@ class ExtendedParsedown extends Parsedown
             return $Element;
         }
 
-        if ($this->isAnsweropediaURL($Element['attributes']['href'])) {
+        if ($this->_isDirectLinkToAnsweropedia($Element['attributes']['href'])) {
             return $Element;
         }
 
-        if ($this->isExternalUrl($Element['attributes']['href'])) {
+        if ($this->_isExternalUrl($Element['attributes']['href'])) {
             $Element['attributes']['class'] = 'link-external';
             $Element['attributes']['target'] = '_blank';
             $Element['attributes']['rel'] = 'nofollow';
@@ -70,6 +71,7 @@ class ExtendedParsedown extends Parsedown
             $Element['attributes']['class'] = 'link-broken';
             $Element['attributes']['target'] = '_blank';
             $Element['attributes']['rel'] = 'nofollow';
+            $Element['attributes']['title'] = '222';
         }
 
         return $Element;
@@ -104,6 +106,8 @@ class ExtendedParsedown extends Parsedown
                 $element['attributes']['class'] = 'external-link';
                 $element['attributes']['target'] = '_blank';
                 $element['attributes']['rel'] = 'nofollow';
+                //$element['attributes']['title'] = '333';
+                $element['attributes']['href'] = $matches[1];
             } else {
                 if ($matches[1] == '') {
                     // URL empty => make internal link from body part
@@ -114,8 +118,10 @@ class ExtendedParsedown extends Parsedown
                     $question = Question_Model::initWithTitle($matches[1]);
                     $matches[1] = $question->getURL($this->lang);
                 }
+                $element['attributes']['href'] = $matches[1];
+                $element['attributes']['title'] = $question->title;
             }
-            $element['attributes']['href'] = $matches[1];
+            
             if (isset($matches[2])) {
                 $element['attributes']['title'] = substr($matches[2], 1, -1);
             }
@@ -134,12 +140,12 @@ class ExtendedParsedown extends Parsedown
         );
     }
 
-    protected function isAnsweropediaURL($url)
+    protected function _isDirectLinkToAnsweropedia($url)
     {
         return preg_match('/^https:\/\/'.SITE_URL_NAME.'\.org/', $url);
     }
 
-    protected function isExternalUrl($url)
+    protected function _isExternalUrl($url)
     {
         return preg_match('/^(http|https):\/\//', $url);
     }
