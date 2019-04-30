@@ -13,7 +13,7 @@ $pdo->query(
     (9, 'Where lives answers?', 0, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),
     (10, 'Beardy is cool?', 0, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),
     (11, 'How ofted birds are cry?', 1, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),
-    (12, 'Fire is destroy blood?', 0, NULL, 'В одной документалке сказали, что нет #огонь #улики', NULL, 51, '2015-11-29 09:28:34'),
+    (12, 'FILE_NAME is correct?', 0, NULL, 'В одной документалке сказали, что нет #огонь #улики', NULL, 51, '2015-11-29 09:28:34'),
     (13, 'What is you dream?', 0, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),
     (14, 'How are you?', 0, NULL, 'I`m fine, bro!', NULL, 14, '2017-11-29 09:28:34'),
     (15, 'Where i am born?', 0, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),
