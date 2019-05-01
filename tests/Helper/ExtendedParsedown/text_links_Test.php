@@ -30,10 +30,10 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
 
-    public function test_Link_without_reference_part()
+    public function test_Link_with_empty_reference_part_on_RU_lang()
     {
-        $stringMD = "Some [girls] are beautiful.";
-        $stringHTML = '<p>Some <a href="https://answeropedia.org/ru/girls" title="girls">girls</a> are beautiful.</p>';
+        $stringMD = "Это наш [дом]().";
+        $stringHTML = '<p>Это наш <a href="https://answeropedia.org/ru/%D0%B4%D0%BE%D0%BC" title="дом">дом</a>.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
@@ -42,6 +42,22 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
     {
         $stringMD = "Some [peoples]() are strange.";
         $stringHTML = '<p>Some <a href="https://answeropedia.org/ru/peoples" title="peoples">peoples</a> are strange.</p>';
+
+        $this->assertEquals($stringHTML, $this->pd->text($stringMD));
+    }
+
+    public function test_Uncompleted_link_without_reference_part()
+    {
+        $stringMD = "Some [girls] are beautiful.";
+        $stringHTML = '<p>Some [girls] are beautiful.</p>';
+
+        $this->assertEquals($stringHTML, $this->pd->text($stringMD));
+    }
+
+    public function test_Uncompleted_newline_link()
+    {
+        $stringMD = "[chicken]";
+        $stringHTML = '<p>[chicken]</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }

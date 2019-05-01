@@ -47,17 +47,7 @@ class ExtendedParsedown extends Parsedown
         $offset = 0;
         $offsetAdjustment = 0;
 
-        // Transform not complete links [foo] to [foo](foo)
-        $shortLinkPattern = '/\[(.+)\]([^\(])/uU';
-        $replacement = '[$1]($1)$2';
-        if (preg_match($shortLinkPattern, $excerpt['text'], $matches)) {
-            $excerpt['text'] = preg_replace($shortLinkPattern, $replacement, $excerpt['text']);
-            $excerpt['context'] = preg_replace($shortLinkPattern, $replacement, $excerpt['context']);
-            // @NOTE Учитывая, что мы изменяем длинну строк, необходимо будет скорректировать отступ.
-            $offsetAdjustment = strlen($matches[0]) - 1;
-        }
-
-        // Transform not complete links [foo]() to [foo](foo)
+        // Transform empty links [foo]() to [foo](foo)
         $shortLinkPattern = '/\[(.+)\](\(\))/uU';
         $replacement = '[$1]($1)';
         if (preg_match($shortLinkPattern, $excerpt['text'], $matches)) {
