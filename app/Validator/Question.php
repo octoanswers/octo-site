@@ -99,13 +99,4 @@ class Question_Validator
             throw new Exception('Question property "hashtagsJSON" '.$exception->getMessages()[0], 0);
         }
     }
-
-    public static function validateHashtags($hashtagsArray)
-    {
-        try {
-            v::optional(v::arrayType())->assert($hashtagsArray);
-        } catch (NestedValidationException $exception) {
-            throw new Exception('Question property "hashtags" '.$exception->getMessages()[0], 0);
-        }
-    }
 }

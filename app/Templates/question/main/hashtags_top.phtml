@@ -4,8 +4,8 @@
 	<?php if (count($this->question->getHashtags())): ?>
 
 		<?php foreach ($this->question->getFirstTwoHashtags() as $hashtag): ?>
-			<a class="font-weight-bold text-decoration-none mb-2 mr-2" href="#">
-				#<?= $hashtag ?>
+			<a class="font-weight-bold text-decoration-none mb-2 mr-2" href="<?= $hashtag->getURL($this->lang) ?>">
+				#<?= $hashtag->title ?>
 			</a>
 		<?php endforeach; ?>
 

@@ -8,7 +8,7 @@ class Show_Hashtag_PageController__en__Test extends Abstract_Frontend_TestCase
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/en/hashtag/12/cashmere',
+            'REQUEST_URI' => '/en/tag/cashmere',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

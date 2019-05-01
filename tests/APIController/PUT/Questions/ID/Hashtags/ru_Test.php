@@ -41,8 +41,7 @@ class Hashtags_ID_Questions_PUT_APIController__ru__Test extends Abstract_Fronten
         $question = (new Question_Query('ru'))->questionWithID(4);
 
         $this->assertEquals(4, $question->id);
-        $this->assertEquals(["Медицина","Гинекология"], $question->getHashtags());
-        $this->assertEquals('["Медицина","Гинекология"]', $question->getHashtagsJSON());
+        $this->assertEquals(2, count($question->getHashtags()));
     }
 
     public function test__HashtagsParamNotSet()

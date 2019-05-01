@@ -9,7 +9,7 @@ class Question_Model extends Abstract_Model
     public $title; // string
     public $isRedirect = false; // bool
     public $answer; // Answer_Model
-    public $hashtags;
+    public $hashtagsJSON; // string
     public $imageBaseName;
 
     #
@@ -34,7 +34,7 @@ class Question_Model extends Abstract_Model
         $question->isRedirect = (bool) $state['q_is_redirect'];
         $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
         if (isset($state['a_hashtags'])) {
-            $question->setHashtagsJSON($state['a_hashtags']);
+            $question->hashtagsJSON = $state['a_hashtags'];
         }
 
         $question->answer = Answer_Model::initWithDBState($state);
@@ -48,29 +48,41 @@ class Question_Model extends Abstract_Model
 
     public function getHashtags(): array
     {
-        return is_array($this->hashtags) ? $this->hashtags : [];
+        $hashtags = [];
+
+        if ($this->hashtagsJSON === null || strlen($this->hashtagsJSON) == 0) {
+            return $hashtags;
+        }
+
+        $hashtagsArray = json_decode($this->hashtagsJSON, JSON_UNESCAPED_UNICODE);
+        
+        foreach ($hashtagsArray as $title) {
+            $hashtag = new Hashtag;
+            $hashtag->title = $title;
+            $hashtags[] = $hashtag;
+        }
+
+        return $hashtags;
     }
 
     public function setHashtags(array $hashtags)
     {
-        $this->hashtags = $hashtags;
-    }
+        $hashtagsArray = [];
 
-    public function getHashtagsJSON()
-    {
-        if ($this->hashtags === null || count($this->hashtags) == 0) {
-            return null;
+        // if (count($hashtags) == 0) {
+        //     $this->hashtagsJSON = null;
+        //     return;
+        // }
+
+        foreach ($hashtags as $hashtag) {
+            if (!is_subclass_of($hashtag, Hashtag::class)) {
+                throw new Exception("Hashtag must be subclass of Hashtag model", 1);
+            }
+            $hashtagsArray[] = $hashtag->title;
         }
-
-        return json_encode($this->hashtags, JSON_UNESCAPED_UNICODE);
-    }
-
-    public function setHashtagsJSON(string $hashtagsJSON)
-    {
-        if (strlen($hashtagsJSON) == 0) {
-            throw new Exception("Hashtags JSON must be longer than 0 char", 1);
-        }
-
-        $this->hashtags = json_decode($hashtagsJSON, true);
+        
+    
+        // $this->hashtags = ;
+        $this->hashtagsJSON = json_encode($hashtagsArray, true);
     }
 }

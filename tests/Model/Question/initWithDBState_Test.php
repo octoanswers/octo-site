@@ -20,8 +20,7 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('This is question?', $question->title);
         $this->assertEquals(true, $question->isRedirect);
         $this->assertEquals('Yes, it is!', $question->answer->text);
-        $this->assertEquals('["ICQ","Web"]', $question->getHashtagsJSON());
-        $this->assertEquals(["ICQ","Web"], $question->getHashtags());
+        $this->assertEquals(2, count($question->getHashtags()));
         $this->assertEquals('2015-11-29 09:28:34', $question->answer->updatedAt);
     }
 
@@ -41,8 +40,7 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Это вопрос?', $question->title);
         $this->assertEquals(true, $question->isRedirect);
         $this->assertEquals('Да, это вопрос!', $question->answer->text);
-        $this->assertEquals(null, $question->getHashtagsJSON());
-        $this->assertEquals([], $question->getHashtags());
+        $this->assertEquals(0, count($question->getHashtags()));
         $this->assertEquals('2015-11-29 09:28:34', $question->answer->updatedAt);
     }
 }
