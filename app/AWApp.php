@@ -76,8 +76,7 @@ class AWApp
             $this->get('/answer/{id}/history', 'History_Answer_PageController:handle');
             $this->get('/feed', 'Show_Feed_PageController:handle');
             $this->get('/flow', 'Show_Flow_PageController:handle');
-            $this->get('/hashtag/{id:[0-9]+}[/{uri_slug}]', 'Show_Hashtag_PageController:handle');
-            $this->get('/hashtag/{uri}', 'Show_Hashtag_PageController:handleByURI'); // @TODO Deprecated
+            $this->get('/tag/{uri}', 'Show_Hashtag_PageController:handle');
             $this->get('/hashtags/newest', 'Newest_Hashtags_PageController:handle');
             // @NOTE To realize $this->get('/hashtags/popular', 'List_Hashtags_PageController:handle');
             $this->get('/question/{id}/hashtags', 'UpdateHashtags_Question_PageController:handle');

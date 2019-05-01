@@ -4,34 +4,14 @@ class Show_Hashtag_PageController extends Abstract_PageController
 {
     protected $hashtag_questions;
 
-    // @TODO Deprecated
-    public function handleByURI($request, $response, $args)
-    {
-        $this->lang = $args['lang'];
-        $hashtag_uri = $args['uri'];
-
-        try {
-            $hashtag_title = urldecode($hashtag_uri);
-            $this->hashtag = (new Hashtag_Query($this->lang))->findWithTitle($hashtag_title);
-            if ($this->hashtag === null) {
-                throw new \Exception("Hashtag not exists", 1);
-            }
-        } catch (\Exception $e) {
-            //return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
-            return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
-        }
-
-        return $response->withRedirect($this->hashtag->getURL($this->lang), 301);
-    }
-
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $hashtagID = $args['id'];
-        $hashtag_uri_slug = $args['uri_slug'];
+        $hashtagURI = $args['uri'];
 
         try {
-            $this->hashtag = (new Hashtag_Query($this->lang))->hashtagWithID($hashtagID);
+            $hashtagTitle = urldecode($hashtagURI);
+            $this->hashtag = (new Hashtag_Query($this->lang))->findWithTitle($hashtagTitle);
         } catch (\Exception $e) {
             //return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
