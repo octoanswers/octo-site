@@ -9,9 +9,9 @@
 			</a>
 		<?php endforeach; ?>
 
-		<?php if (count($this->question->getHashtags()) > count($this->question->getFirstTwoHashtags())): ?>
+		<?php if ($this->question->getMoreHashtagsCount()): ?>
 			<a class="text-secondary text-decoration-none mb-2 mr-2" data-scroll href="#question_hashtags_list">
-				+<?= $this->question->getHumanizedMoreHashtags() ?>
+				+<?= $this->question->getMoreHashtagsCount() ?>
 			</a>
 		<?php endif; ?>
 

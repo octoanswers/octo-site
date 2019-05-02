@@ -30,14 +30,14 @@ trait Question_Trait
         return $minites_to_read;
     }
     
-    public function getHumanizedMoreHashtags(int $trimmedHashtagsCount = 2): string
+    public function getMoreHashtagsCount(int $trimmedHashtagsCount = 2): int
     {
         $hashtagsCount = count($this->getHashtags());
         
         if ($hashtagsCount - $trimmedHashtagsCount <= 0) {
-            return '';
+            return 0;
         }
 
-        return $hashtagsCount - $trimmedHashtagsCount . ' ' . mb_strtolower(ngettext("Hashtag", "Hashtags", $hashtagsCount));
+        return $hashtagsCount - $trimmedHashtagsCount;
     }
 }
