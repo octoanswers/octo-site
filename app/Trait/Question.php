@@ -29,17 +29,6 @@ trait Question_Trait
         $minites_to_read = ceil($answer_len/1000);
         return $minites_to_read;
     }
-
-    public function getHumanizedHashtags()
-    {
-        $hashtagsCount = count($this->getHashtags());
-        
-        if ($hashtagsCount == 0) {
-            return _('No hashtags');
-        }
-
-        return $hashtagsCount . ' ' . mb_strtolower(ngettext("Hashtag", "Hashtags", $hashtagsCount));
-    }
     
     public function getHumanizedMoreHashtags(int $trimmedHashtagsCount = 2): string
     {
