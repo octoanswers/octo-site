@@ -7,8 +7,8 @@
 		</div>
 
 		<?php foreach ($this->question->getHashtags() as $hashtag): ?>
-			<a class="text-decoration-none mb-2 mr-2" href="#">
-				#<?= $hashtag ?>
+			<a class="text-decoration-none mb-2 mr-2" href="<?= $hashtag->getURL($this->lang) ?>">
+				#<?= $hashtag->title ?>
 			</a>
 		<?php endforeach; ?>
 

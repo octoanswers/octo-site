@@ -13,10 +13,10 @@ trait Question_Trait
 
     public function getFirstTwoHashtags()
     {
-        if (count($this->hashtags) >= 2) {
-            $hashtags_slice = array_slice($this->hashtags, 0, 2);
+        if (count($this->getHashtags()) >= 2) {
+            $hashtags_slice = array_slice($this->getHashtags(), 0, 2);
         } else {
-            $hashtags_slice = $this->hashtags;
+            $hashtags_slice = $this->getHashtags();
         }
 
         return $hashtags_slice;
