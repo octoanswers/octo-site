@@ -22,16 +22,12 @@ trait Question_Trait
         return $hashtags_slice;
     }
 
-    public function getHumanizedMinutesToRead()
+    public function getMinutesToRead():int
     {
         $answer_len = mb_strlen($this->answer->text);
-        if ($answer_len) {
-            $minites_to_read = ceil($answer_len/1000);
-            $humanized_minutes_to_read = $minites_to_read.' '.mb_strtolower(ngettext("Minute to read", "Minutes to read", $minites_to_read));
-            return $humanized_minutes_to_read;
-        }
-
-        return _('Empty answer');
+        
+        $minites_to_read = ceil($answer_len/1000);
+        return $minites_to_read;
     }
 
     public function getHumanizedHashtags()
