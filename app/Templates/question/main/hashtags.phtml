@@ -13,8 +13,8 @@
 		<?php endforeach; ?>
 
 		<?php if ($this->authUser): ?>
-			<a class="text-secondary mb-2 ml-3" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>">
-				<i class="far fa-edit"></i> Изменить
+			<a class="btn btn-outline-secondary btn-sm ml-2" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>" rel="nofollow">
+				<?= _('Change') ?>
 			</a>
 		<?php endif; ?>
 
