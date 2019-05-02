@@ -55,10 +55,10 @@ class Show_Hashtag_PageController extends Abstract_PageController
         //$data['most_viewed_writers'] = $this->_getMostViewedWriters();
 
         if (is_array($this->hashtag_questions)) {
-            $this->related_hashtags = $this->_getRelatedHashtags($this->hashtag_questions);
+            //    $this->related_hashtags = $this->_getRelatedHashtags($this->hashtag_questions);
         }
         //} else {
-        //  $this->related_hashtags = [];
+        $this->related_hashtags = [];
         //}
 
         $this->_prepareFollowButton();
@@ -141,6 +141,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
         $related_titles = [];
 
         foreach ($questions as $question) {
+            // @TODO Now getHashtags return Objects
             $hashtags_titles = $question->getHashtags();
             if (is_array($hashtags_titles) && count($hashtags_titles)) {
                 foreach ($hashtags_titles as $title) {
@@ -150,7 +151,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
             }
         }
 
-        $related_titles = array_unique($related_titles);
+        //$related_titles = array_unique($related_titles);
         $related_titles = array_reverse($related_titles);
 
         $del_val = $this->hashtag->title;
