@@ -69,20 +69,13 @@ class Question_Model extends Abstract_Model
     {
         $hashtagsArray = [];
 
-        // if (count($hashtags) == 0) {
-        //     $this->hashtagsJSON = null;
-        //     return;
-        // }
-
         foreach ($hashtags as $hashtag) {
-            if (!is_subclass_of($hashtag, Hashtag::class)) {
+            if (!is_a($hashtag, Hashtag::class)) {
                 throw new Exception("Hashtag must be subclass of Hashtag model", 1);
             }
             $hashtagsArray[] = $hashtag->title;
         }
-        
-    
-        // $this->hashtags = ;
+
         $this->hashtagsJSON = json_encode($hashtagsArray, true);
     }
 }

@@ -28,24 +28,33 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
 
             $question = (new Question_Query($this->lang))->questionWithID($question_id);
             $questionID = $question->id;
+            
             $old_hashtags_array = $question->getHashtags();
+            $oldHashtagsTitles = [];
+            foreach ($old_hashtags_array as $hashtag) {
+                $oldHashtagsTitles[] = $hashtag->title;
+            }
 
             # Check hashtags-questions ER & creat new, if needed
 
-            $hashtags_titles = explode(',', $new_hashtags_string);
-            $new_hashtags = [];
-            foreach ($hashtags_titles as $hashtag_title) {
-                $new_hashtags[] = trim($hashtag_title);
+            $newHashtagsTitles = explode(' ', $new_hashtags_string);
+
+            foreach ($newHashtagsTitles as &$hashtagTitle) {
+                $hashtagTitle = trim($hashtagTitle);
+                $hashtagTitle = ltrim($hashtagTitle, '#');
             }
 
-            foreach ($new_hashtags as $hashtag_title) {
+            $newHashtags = [];
+            foreach ($newHashtagsTitles as $hashtag_title) {
                 $hashtag = (new Hashtag_Query($this->lang))->findWithTitle($hashtag_title);
                 if ($hashtag === null) {
                     $hashtag = new Hashtag();
                     $hashtag->title = $hashtag_title;
-
+                    
                     $hashtag = (new Hashtag_Mapper($this->lang))->create($hashtag);
                 }
+
+                $newHashtags[] = $hashtag;
 
                 $er = (new HashtagsToQuestions_Relations_Query($this->lang))->findByHashtagIDAndQuestionID($hashtag->id, $question->id);
                 if ($er === null) {
@@ -67,7 +76,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
             # Update question
             #
 
-            $question->setHashtags($new_hashtags);
+            $question->setHashtags($newHashtags);
             $question = (new Question_Mapper($this->lang))->updateHashtags($question);
 
             # Save activity
@@ -93,8 +102,8 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
                 ],
                 'user_id' => $user->id,
                 'user_name' => $user->name,
-                'old_hashtags' => $old_hashtags_array,
-                'new_hashtags' => $new_hashtags,
+                'old_hashtags' => $oldHashtagsTitles,
+                'new_hashtags' => $newHashtagsTitles,
             ];
         } catch (Throwable $e) {
             $output = [
