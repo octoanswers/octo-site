@@ -7,7 +7,7 @@ class Show_Feed_PageController extends Abstract_PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
 
         if (!$this->authUser) {
             exit('Not logged!');

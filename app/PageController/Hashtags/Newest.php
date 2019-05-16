@@ -6,7 +6,8 @@ class Newest_Hashtags_PageController extends Abstract_PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
+
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $hashtagsCount = (new Hashtags_Query($this->lang))->hashtagsLastID();

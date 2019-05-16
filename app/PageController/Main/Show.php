@@ -14,7 +14,7 @@ class Show_Main_PageController extends Abstract_PageController
 
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
 
         $this->recent_questions = (new Questions_Query($this->lang))->findNewestWithAnswer(1, 5);
 

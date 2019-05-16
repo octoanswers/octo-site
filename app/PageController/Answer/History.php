@@ -11,7 +11,8 @@ class History_Answer_PageController extends Abstract_PageController
 
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
+
         $answerID = $args['id'];
 
         try {

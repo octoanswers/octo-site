@@ -7,7 +7,8 @@ class Show_Question_PageController extends Abstract_PageController
     // @TODO Deprecated
     public function handleByID($request, $response, $args)
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
+
         $questionID = $args['id'];
 
         try {
@@ -21,9 +22,8 @@ class Show_Question_PageController extends Abstract_PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
-        $this->translator = new Translator($this->lang, ROOT_PATH."/resources/lang");
-
+        parent::handleRequest($request, $response, $args);
+        
         $questionURI = $args['question_uri'];
 
         try {
@@ -75,7 +75,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->template = 'question';
         $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
-        $this->pageTitle = $this->question->title.' - '.$this->__('common', 'answeropedia');
+        $this->pageTitle = $this->question->title.' - '.$this->translator->get('answeropedia');
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->getURL($this->lang);
 

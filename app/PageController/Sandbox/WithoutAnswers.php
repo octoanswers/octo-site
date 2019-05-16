@@ -10,7 +10,7 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 

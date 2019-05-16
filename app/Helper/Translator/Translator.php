@@ -74,6 +74,18 @@ class Translator
     }
 
     /**
+     * Alternative form for "get" method.
+     *
+     * @param string $key
+     */
+    public function __(...$key)
+    {
+        $this->lastFullKey = $key;
+
+        return $this->_elementExists($key, $this->messages);
+    }
+
+    /**
      * Recursive iterator for finding translation.
      */
     private function _elementExists($key, $array)

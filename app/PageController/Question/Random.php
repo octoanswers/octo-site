@@ -7,7 +7,7 @@ class Random_Question_PageController extends Abstract_PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
         
         $questionsCount = (new QuestionsCount_Query($this->lang))->questionsLastID();
 

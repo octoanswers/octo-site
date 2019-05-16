@@ -10,7 +10,7 @@ class All_Sandbox_PageController extends Abstract_PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
 
         $this->list = 'newest';
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
@@ -46,12 +46,12 @@ class All_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Sandbox').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
+        return $this->translator->get('sandbox', 'title').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
     }
 
     public function _getPageDescription(): string
     {
-        $description = _('Sandbox').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
+        $description = $this->translator->get('sandbox', 'title').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
 
         return $description;
     }

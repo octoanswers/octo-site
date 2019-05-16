@@ -6,7 +6,8 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
+
         $hashtagURI = $args['uri'];
 
         try {

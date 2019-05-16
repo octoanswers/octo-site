@@ -10,7 +10,8 @@ class Show_User_PageController extends Abstract_PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
+
         $this->username = $args['username'];
 
         $this->user = (new User_Query())->userWithUsername($this->username);

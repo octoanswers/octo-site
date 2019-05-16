@@ -64,16 +64,4 @@ abstract class Abstract_PageController
 
         return $output;
     }
-
-    //if (! function_exists('__')) {
-    /**
-     * Translate the given message.
-     *
-     * @param string $key
-     */
-    public function __(string $file, string $key): string
-    {
-        return $this->translator->get($file, $key);
-    }
-//}
 }

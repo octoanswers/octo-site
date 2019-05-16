@@ -9,7 +9,8 @@ class UpdateHashtags_Question_PageController extends Abstract_PageController
 
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
+
         $questionID = $args['id'];
 
         try {

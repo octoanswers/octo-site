@@ -12,7 +12,7 @@ class Show_Flow_PageController extends Abstract_PageController
 
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
 
         $this->activities = (new Flow_Query($this->lang))->findFlow();
 

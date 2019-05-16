@@ -12,7 +12,7 @@ class Show_Settings_PageController extends Abstract_PageController
             return $response->withJson($data, 404);
         }
 
-        $this->lang = $args['lang'];
+        parent::handleRequest($request, $response, $args);
         
         $this->template = 'settings';
         $this->pageTitle = _('Settings').' - '._('Answeropedia');

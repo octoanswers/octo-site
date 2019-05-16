@@ -7,7 +7,7 @@ class InternalServerError_Error_PageController extends Abstract_PageController
 {
     public function handle(string $lang, Request $request, Response $response, $args): Response
     {
-        $this->lang = $lang;
+        parent::handleRequest($request, $response, $args);
 
         $this->template = 'error/500';
         $this->pageTitle = _('Error 500').' - '._('Answeropedia');

@@ -7,7 +7,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
 {
     public function handle(string $lang, Request $request, Response $response, $args): Response
     {
-        $this->lang = $lang;
+        parent::handleRequest($request, $response, $args);
 
         $questionURI = $args['question_uri'];
 

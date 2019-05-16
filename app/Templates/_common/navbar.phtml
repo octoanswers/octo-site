@@ -37,7 +37,7 @@
 
 			<li class="nav-item mr-4">
                 <a class="nav-link <?= true ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-                    <?= _('Sandbox') ?>
+                    <?= $this->translator->get('navbar', 'sandbox') ?>
                 </a>
 			</li>
 			
