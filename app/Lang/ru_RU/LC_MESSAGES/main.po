@@ -1,88 +1,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-24 22:39+0500\n"
-"PO-Revision-Date: 2019-04-25 20:24+0500\n"
+"POT-Creation-Date: 2019-05-17 00:27+0500\n"
+"PO-Revision-Date: 2019-05-17 00:27+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.2\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: APIController/POST/_answer-like.php:18
-msgid "API Error: Need login to like answer"
-msgstr "Ошибка API: Необходимо войти, чтобы лайкнуть ответ"
-
-#: APIController/POST/_answer-like.php:22
-msgid "API Error: Answer already liked"
-msgstr "Ошибка API: Ответ уже залайкан"
-
 #: APIController/POST/_answer-like.php:66
 msgid "API: Answer liked"
 msgstr "API: Ответ лайкнут"
 
-#: APIController/POST/_answer-like.php:68
-#: APIController/POST/_answer-unlike.php:62
-msgid "API Error"
-msgstr "Ошибка API"
-
-#: APIController/POST/_answer-like.php:74
-#: APIController/POST/_answer-unlike.php:68
-msgid "API Error: Only AJAX requests"
-msgstr "Ошибка API: Только AJAX-запросы"
-
-#: APIController/POST/_answer-unlike.php:16
-msgid "API Error: Need login to dislike answer"
-msgstr "Ошибка API: Необходимо войти, чтобы дазлайкнуть ответ"
-
-#: APIController/POST/_answer-unlike.php:20
-msgid "API Error: Answer like not exists"
-msgstr "Ошибка API: Ответ не имеет лайка"
-
 #: APIController/POST/_answer-unlike.php:60
 msgid "API: Answer disliked"
 msgstr "API: Ответ дизлайкнут"
-
-#: PageController/Answer/Edit.php:34 PageController/Answer/Edit.php:35
-#: Templates/answer_edit/main/header.phtml:3
-#: Templates/question/main/actions_top.phtml:15
-msgid "Edit answer"
-msgstr "Править ответ"
-
-#: PageController/Answer/Edit.php:34 PageController/Answer/History.php:31
-#: PageController/Error/InternalServerError.php:13
-#: PageController/Error/PageNotFound.php:14
-#: PageController/Error/QuestionNotFound.php:21 PageController/Feed/Show.php:44
-#: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: PageController/Hashtag/Show.php:103 PageController/Hashtags/Newest.php:37
-#: PageController/Main/Show.php:39 PageController/Main/Show.php:45
-#: PageController/Main/Show.php:64 PageController/Question/Show.php:49
-#: PageController/Question/Show.php:77 PageController/Questions/Newest.php:44
-#: PageController/Questions/Newest.php:49
-#: PageController/Questions/RecentlyUpdated.php:43
-#: PageController/Questions/RecentlyUpdated.php:48
-#: PageController/Root/Show.php:25 PageController/Sandbox/All.php:49
-#: PageController/Sandbox/All.php:54
-#: PageController/Sandbox/WithoutAnswers.php:58
-#: PageController/Sandbox/WithoutAnswers.php:63
-#: PageController/Sandbox/WithoutHashtags.php:58
-#: PageController/Sandbox/WithoutHashtags.php:63
-#: PageController/Settings/Show.php:18 PageController/Users/Newest.php:45
-#: Templates/_common/navbar.phtml:7 Templates/_common/navbar.phtml:11
-#: Templates/root/block/navbar.phtml:5
-msgid "Answeropedia"
-msgstr "Answeropedia"
-
-#: PageController/Answer/History.php:31 PageController/Answer/History.php:32
-#: Templates/answer_history/main/jumbotron.phtml:6
-msgid "Answer history"
-msgstr "История изменений ответа"
 
 #: PageController/Error/InternalServerError.php:13
 #: PageController/Error/InternalServerError.php:14
@@ -91,8 +30,8 @@ msgstr "История изменений ответа"
 msgid "Error 500"
 msgstr "Ошибка 500"
 
-#: PageController/Error/PageNotFound.php:14
 #: PageController/Error/PageNotFound.php:15
+#: PageController/Error/PageNotFound.php:16
 msgid "Error 404"
 msgstr "Ошибка 404"
 
@@ -115,30 +54,17 @@ msgstr "Поток"
 msgid "Questions and answers flow on Answeropedia."
 msgstr "Поток вопросов и ответов на Answeropedia."
 
-#: PageController/Hashtag/Show.php:68
+#: PageController/Hashtag/Show.php:49
 msgid "More hashtags"
 msgstr "Больше тем"
 
-#: PageController/Hashtag/Show.php:103 PageController/Hashtag/Show.php:134
+#: PageController/Hashtag/Show.php:84 PageController/Hashtag/Show.php:115
 msgid "Questions and answers on the hashtag %hashtag%"
 msgstr "Вопросы и ответы на тему %hashtag%"
 
-#: PageController/Hashtags/Newest.php:37
+#: PageController/Hashtags/Newest.php:38
 msgid "New hashtags"
 msgstr "Новые темы"
-
-#: PageController/Hashtags/Newest.php:37 PageController/Questions/Newest.php:44
-#: PageController/Questions/Newest.php:49
-#: PageController/Questions/RecentlyUpdated.php:43
-#: PageController/Questions/RecentlyUpdated.php:48
-#: PageController/Sandbox/All.php:49 PageController/Sandbox/All.php:54
-#: PageController/Sandbox/WithoutAnswers.php:58
-#: PageController/Sandbox/WithoutAnswers.php:63
-#: PageController/Sandbox/WithoutHashtags.php:58
-#: PageController/Sandbox/WithoutHashtags.php:63
-#: PageController/Users/Newest.php:45
-msgid "Page"
-msgstr "Страница"
 
 #: PageController/Main/Show.php:39 PageController/Main/Show.php:45
 #: PageController/Main/Show.php:64 Templates/main/main/jumbotron.phtml:8
@@ -157,24 +83,24 @@ msgstr ""
 "Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
 "ответы."
 
-#: PageController/Question/Show.php:86
+#: PageController/Question/Show.php:87
 msgid "Wiki-answers to your questions on Answeropedia"
 msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
 
-#: PageController/Question/Show.php:184
+#: PageController/Question/Show.php:196
 msgid "Wiki-answer on question: %question%"
 msgstr "Вики-ответ на вопрос: %question%"
 
-#: PageController/Question/UpdateHashtags.php:24
+#: PageController/Question/UpdateHashtags.php:25
 msgid "Update hashtags for question \"%question%\" - Answeropedia"
 msgstr "Обновление тем вопроса «%question%» - Answeropedia"
 
-#: PageController/Question/UpdateHashtags.php:25
+#: PageController/Question/UpdateHashtags.php:26
 msgid "Update hashtags for question \"%question%\""
 msgstr "Обновление тем вопроса «%question%»"
 
-#: PageController/Questions/Newest.php:44
-#: PageController/Questions/Newest.php:49
+#: PageController/Questions/Newest.php:45
+#: PageController/Questions/Newest.php:50
 msgid "Newest questions"
 msgstr "Новые вопросы"
 
@@ -184,14 +110,9 @@ msgstr "Новые вопросы"
 msgid "Recently updated"
 msgstr "Недавно обновленные"
 
-#: PageController/Root/Show.php:26
+#: PageController/Root/Show.php:27
 msgid "Questions and Answers"
 msgstr "Вопросы и ответы"
-
-#: PageController/Sandbox/All.php:49 PageController/Sandbox/All.php:54
-#: Templates/_common/navbar.phtml:40
-msgid "Sandbox"
-msgstr "Песочница"
 
 #: PageController/Sandbox/WithoutAnswers.php:18
 #: PageController/Sandbox/WithoutHashtags.php:18
@@ -218,19 +139,15 @@ msgstr "Вопросы без ответа"
 msgid "Questions without hashtags"
 msgstr "Вопросы без тем"
 
-#: PageController/Search/Show.php:25
-msgid "Search %query% - Answeropedia"
-msgstr "Поиск %query% - Answeropedia"
-
-#: PageController/Search/Show.php:60
+#: PageController/Search/Show.php:61
 msgid "Search by questions"
 msgstr "Поиск по вопросам"
 
-#: PageController/Search/Show.php:63
+#: PageController/Search/Show.php:64
 msgid "Search by hashtags"
 msgstr "Поиск по хештегам"
 
-#: PageController/Search/Show.php:66
+#: PageController/Search/Show.php:67
 msgid "Search by contributors"
 msgstr "Поиск по пользователям"
 
@@ -239,41 +156,19 @@ msgstr "Поиск по пользователям"
 msgid "Settings"
 msgstr "Настройки профиля"
 
-#: PageController/User/Show.php:31 PageController/User/Show.php:32
-#: PageController/User/Show.php:70
+#: PageController/User/Show.php:32 PageController/User/Show.php:33
+#: PageController/User/Show.php:71
 msgid "Wiki-answers on Answeropedia"
 msgstr "Вики-ответы на Answeropedia"
 
-#: PageController/Users/Newest.php:38 Templates/hashtags/main/nav.phtml:6
+#: PageController/Users/Newest.php:39 Templates/hashtags/main/nav.phtml:6
 #: Templates/questions/main/nav.phtml:5 Templates/users/main/nav.phtml:6
 msgid "Newest"
 msgstr "Новые"
 
-#: PageController/Users/Newest.php:45
+#: PageController/Users/Newest.php:46
 msgid "New users from around the world"
 msgstr "Новые пользователи со всего мира"
-
-#: Trait/Question.php:30
-msgid "Minute to read"
-msgid_plural "Minutes to read"
-msgstr[0] "Минута на чтение"
-msgstr[1] "Минуты на чтение"
-msgstr[2] "Мминут на чтение"
-
-#: Trait/Question.php:34
-msgid "Empty answer"
-msgstr "Пустой ответ"
-
-#: Trait/Question.php:42
-msgid "No hashtags"
-msgstr "Нет хештегов"
-
-#: Trait/Question.php:45 Trait/Question.php:56
-msgid "Hashtag"
-msgid_plural "Hashtags"
-msgstr[0] "Хештег"
-msgstr[1] "Хештега"
-msgstr[2] "Хештегов"
 
 #: Templates/_common/activity/f_h_added_q.phtml:11
 msgid "hashtag added question"
@@ -394,13 +289,13 @@ msgstr ""
 msgid "What is your question?"
 msgstr "Какой у вас вопрос?"
 
-#: Templates/_common/modal/ask.phtml:25 Templates/_common/navbar.phtml:85
-#: Templates/error/question_not_found/main.phtml:12
+#: Templates/_common/modal/ask.phtml:25 Templates/_common/navbar.phtml:91
+#: Templates/error/question_not_found/main.phtml:13
 #: Templates/main/main/jumbotron.phtml:22
 msgid "Ask a question"
 msgstr "Задать вопрос"
 
-#: Templates/_common/modal/login.phtml:8 Templates/_common/navbar.phtml:65
+#: Templates/_common/modal/login.phtml:8 Templates/_common/navbar.phtml:71
 #: Templates/users/right/login_or_signup.phtml:9
 msgid "Login"
 msgstr "Вход"
@@ -420,7 +315,7 @@ msgid "Log in"
 msgstr "Войти"
 
 #: Templates/_common/modal/signup.phtml:8
-#: Templates/_common/modal/signup.phtml:36 Templates/_common/navbar.phtml:70
+#: Templates/_common/modal/signup.phtml:36 Templates/_common/navbar.phtml:76
 #: Templates/_modal/question/_lure/edit_answer.phtml:17
 #: Templates/_modal/question/_lure/first_answer_signup.phtml:17
 #: Templates/_modal/question/_lure/follow_question.phtml:17
@@ -530,6 +425,10 @@ msgstr "Описание изменений"
 msgid "Save"
 msgstr "Сохранить"
 
+#: Templates/answer_edit/main/header.phtml:3
+msgid "Edit answer"
+msgstr "Править ответ"
+
 #: Templates/answer_edit/main/header.phtml:11
 #: Templates/answer_history/main/jumbotron.phtml:13
 msgid "Back to question"
@@ -547,7 +446,7 @@ msgstr "Правка"
 msgid "No description of changes"
 msgstr "Нет описания изменений"
 
-#: Templates/error/question_not_found/main.phtml:15
+#: Templates/error/question_not_found/main.phtml:16
 msgid "Go back"
 msgstr "Вернуться назад"
 
@@ -754,6 +653,12 @@ msgstr[2] "Авторов"
 #: Templates/question/main/contributors_full.phtml:10
 msgid "Answer contributors"
 msgstr "Авторы ответа"
+
+#: Templates/question/main/hashtags.phtml:17
+#, fuzzy
+#| msgid "Change ID"
+msgid "Change"
+msgstr "Правка"
 
 #: Templates/question/main/lure_be_first_contributor.phtml:14
 #: Templates/question/main/lure_be_first_contributor.phtml:39
@@ -972,3 +877,54 @@ msgid ""
 msgstr ""
 "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
 "задавать вопросы, отвечать на них и дополнять чужие ответы."
+
+#~ msgid "API Error: Need login to like answer"
+#~ msgstr "Ошибка API: Необходимо войти, чтобы лайкнуть ответ"
+
+#~ msgid "API Error: Answer already liked"
+#~ msgstr "Ошибка API: Ответ уже залайкан"
+
+#~ msgid "API Error"
+#~ msgstr "Ошибка API"
+
+#~ msgid "API Error: Only AJAX requests"
+#~ msgstr "Ошибка API: Только AJAX-запросы"
+
+#~ msgid "API Error: Need login to dislike answer"
+#~ msgstr "Ошибка API: Необходимо войти, чтобы дазлайкнуть ответ"
+
+#~ msgid "API Error: Answer like not exists"
+#~ msgstr "Ошибка API: Ответ не имеет лайка"
+
+#~ msgid "Answer history"
+#~ msgstr "История изменений ответа"
+
+#~ msgid "Page"
+#~ msgstr "Страница"
+
+#~ msgid "Answeropedia"
+#~ msgstr "Answeropedia"
+
+#~ msgid "Search %query% - Answeropedia"
+#~ msgstr "Поиск %query% - Answeropedia"
+
+#~ msgid "Sandbox"
+#~ msgstr "Песочница"
+
+#~ msgid "Minute to read"
+#~ msgid_plural "Minutes to read"
+#~ msgstr[0] "Минута на чтение"
+#~ msgstr[1] "Минуты на чтение"
+#~ msgstr[2] "Мминут на чтение"
+
+#~ msgid "Empty answer"
+#~ msgstr "Пустой ответ"
+
+#~ msgid "No hashtags"
+#~ msgstr "Нет хештегов"
+
+#~ msgid "Hashtag"
+#~ msgid_plural "Hashtags"
+#~ msgstr[0] "Хештег"
+#~ msgstr[1] "Хештега"
+#~ msgstr[2] "Хештегов"

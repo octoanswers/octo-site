@@ -18,8 +18,8 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
 
         $this->template = 'error/question_not_found';
         $this->showFooter = false;
-        $this->pageTitle = _('Question not found').' '.$this->questionTitle.' - '.$this->translator->get('answeropedia');
-        $this->pageDescription = _('Question not found');
+        $this->pageTitle = _("question_not_found", "title").' '.$this->questionTitle.' - '.$this->translator->get('answeropedia');
+        $this->pageDescription = _("question_not_found", "title");
 
         $this->questionURI = $questionURI;
         $this->includeJS[] = 'goal/question_not_found';

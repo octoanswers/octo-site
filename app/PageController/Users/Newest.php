@@ -43,7 +43,7 @@ class Newest_Users_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('New users from around the world').' - '._('Page').' '.$this->page.' - '.$this->translator->get('answeropedia');
+        return _('New users from around the world').' - '.$this->translator->get('page').' '.$this->page.' - '.$this->translator->get('answeropedia');
     }
 
     public function _nextPageURL()

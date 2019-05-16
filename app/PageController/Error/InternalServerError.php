@@ -10,11 +10,11 @@ class InternalServerError_Error_PageController extends Abstract_PageController
         parent::handleRequest($request, $response, $args);
 
         $this->template = 'error/500';
-        $this->pageTitle = _('Error 500').' - '.$this->translator->get('answeropedia');
-        $this->pageDescription = _('Error 500');
+        $this->pageTitle = _("internal_server_error", "page_title").' - '.$this->translator->get('answeropedia');
+        $this->pageDescription = _("internal_server_error", "page_title");
 
-        $this->errorTitle = _('Error 500');
-        $this->errorDescription = _('Error 500');
+        $this->errorTitle = _("internal_server_error", "page_title");
+        $this->errorDescription = _("internal_server_error", "page_title");
         $this->includeJS[] = 'goal/error_404';
 
         $output = $this->renderPage();

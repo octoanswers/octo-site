@@ -12,7 +12,7 @@
 		<?php if ($this->authUser): ?>
 			<li class="nav-item">
 				<a class="nav-link" href="<?= $this->question->getEditURL($this->lang) ?>">
-					<?= _('Edit answer') ?>
+					<?= $this->translator->get("question", "actions_top", "edit_answer") ?>
 				</a>
 			</li>
 		<?php else: ?>

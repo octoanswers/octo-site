@@ -12,7 +12,11 @@
             "title": "Login"
         }
     },
+    "page": "Page",
     "sandbox": {
         "title": "Sandbox"
+    },
+    "search": {
+        "page_title": "Search"
     }
 }

@@ -55,12 +55,12 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Questions without answers').' - '._('Page').' '.$this->page.' - '.$this->translator->get('answeropedia');
+        return _('Questions without answers').' - '.$this->translator->get('page').' '.$this->page.' - '.$this->translator->get('answeropedia');
     }
 
     public function _getPageDescription(): string
     {
-        $description = _('Questions without answers').' - '._('Page').' '.$this->page.' - '.$this->translator->get('answeropedia');
+        $description = _('Questions without answers').' - '.$this->translator->get('page').' '.$this->page.' - '.$this->translator->get('answeropedia');
 
         return $description;
     }

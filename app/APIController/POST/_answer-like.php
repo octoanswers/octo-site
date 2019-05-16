@@ -15,11 +15,11 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
     $currentUser = ParseUser::getCurrentUser();
 
     if (!$currentUser) {
-        $errors['other'] = _('API Error: Need login to like answer');
+        $errors['other'] = 'API Error: Need login to like answer';
     }
 
     if (!$_POST['answer-id']) {
-        $errors['other'] = _('API Error: Answer already liked');
+        $errors['other'] = 'API Error: Answer already liked';
     }
 
     if (!empty($errors)) {
@@ -65,13 +65,13 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
             $response['success'] = true;
             $response['message'] = _('API: Answer liked');
         } catch (ParseException $ex) {
-            $errors['other'] = _('API Error').': '.$ex->getCode().' '.$ex->getMessage();
+            $errors['other'] = 'API Error'.': '.$ex->getCode().' '.$ex->getMessage();
             $response['success'] = false;
             $response['errors'] = $errors;
         }
     }
 } else {
-    $errors['other'] = _('API Error: Only AJAX requests');
+    $errors['other'] = 'API Error: Only AJAX requests';
     $response['success'] = false;
     $response['errors'] = $errors;
 }
