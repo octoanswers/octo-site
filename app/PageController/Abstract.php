@@ -43,7 +43,7 @@ abstract class Abstract_PageController
     public function handleRequest($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $this->translator = new Translator($this->lang, ROOT_PATH."/resources/lang");
+        $this->translator = new Translator($this->lang, ROOT_PATH."/app/Lang");
     }
 
     protected function renderPage()

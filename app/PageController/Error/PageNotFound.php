@@ -9,7 +9,7 @@ class PageNotFound_Error_PageController extends Abstract_PageController
     {
         // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new Translator($this->lang, ROOT_PATH."/resources/lang");
+        $this->translator = new Translator($this->lang, ROOT_PATH."/app/Lang");
 
         $this->template = 'error/404';
         $this->pageTitle = _('Error 404').' — '._('Answeropedia');
