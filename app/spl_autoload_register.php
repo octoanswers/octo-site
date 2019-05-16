@@ -24,8 +24,6 @@ spl_autoload_register(function ($class_name) {
 
         'AWApp' => 'app/AWApp.php',
         
-        'Localizer' => 'app/Lang/Localizer.php',
-        
         // Model
 
         'Hashtag' => 'app/Model/Hashtag.php',
