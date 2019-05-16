@@ -20,7 +20,7 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Как дела? - Answeropedia', $responseBody);
+        $this->assertStringContainsString('Как дела? - Ансверопедия', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -28,7 +28,7 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/en/FILE__NAME_is_correct',
+            'REQUEST_URI' => '/ru/Что_означает_FILE__NAME',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
@@ -36,7 +36,7 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('FILE_NAME is correct? - Answeropedia', $responseBody);
+        $this->assertStringContainsString('Что означает FILE_NAME? - Ансверопедия', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 

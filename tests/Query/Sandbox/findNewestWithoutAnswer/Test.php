@@ -14,8 +14,8 @@ class Sandbox_Query__findNewestWithoutAnswer_Test extends Abstract_DB_TestCase
         $this->assertEquals('Какая сейчас погода?', $questions[0]->title);
         $this->assertEquals(null, $questions[0]->answer->text);
 
-        $this->assertEquals(18, $questions[9]->id);
-        $this->assertEquals('Кто лучший драматический актер?', $questions[9]->title);
+        $this->assertEquals(19, $questions[9]->id);
+        $this->assertEquals('Огонь уничтожает ДНК?', $questions[9]->title);
         $this->assertEquals(null, $questions[9]->answer->text);
     }
 
@@ -29,8 +29,8 @@ class Sandbox_Query__findNewestWithoutAnswer_Test extends Abstract_DB_TestCase
         $this->assertEquals('Какая сейчас погода?', $questions[0]->title);
         $this->assertEquals(null, $questions[0]->answer->text);
 
-        $this->assertEquals(18, $questions[9]->id);
-        $this->assertEquals('Кто лучший драматический актер?', $questions[9]->title);
+        $this->assertEquals(19, $questions[9]->id);
+        $this->assertEquals('Огонь уничтожает ДНК?', $questions[9]->title);
         $this->assertEquals(null, $questions[9]->answer->text);
     }
 
@@ -40,7 +40,7 @@ class Sandbox_Query__findNewestWithoutAnswer_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(10, count($questions));
 
-        $this->assertEquals(17, $questions[0]->id);
-        $this->assertEquals(2, $questions[9]->id);
+        $this->assertEquals(18, $questions[0]->id);
+        $this->assertEquals(3, $questions[9]->id);
     }
 }

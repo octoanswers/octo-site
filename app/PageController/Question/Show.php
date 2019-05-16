@@ -29,8 +29,6 @@ class Show_Question_PageController extends Abstract_PageController
         try {
             $questionTitle = $this->_titleFromURI($questionURI);
             $this->question = (new Question_Query($this->lang))->questionWithTitle($questionTitle);
-            // var_dump($question);
-            // exit;
         } catch (Throwable $e) {
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -77,7 +75,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->template = 'question';
         $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
-        $this->pageTitle = $this->question->title.' - '._('Answeropedia');
+        $this->pageTitle = $this->question->title.' - '.$this->translator->get('common', 'answeropedia');
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->getURL($this->lang);
 

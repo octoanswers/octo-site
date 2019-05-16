@@ -7,6 +7,6 @@ class Query_Questions_countQuestionsWithoutAnswers_base_Test extends Abstract_DB
     public function test_NoParam_ReturnCount()
     {
         $count = (new QuestionsCount_Query('ru'))->countQuestionsWithoutAnswers();
-        $this->assertEquals(18, $count);
+        $this->assertEquals(19, $count);
     }
 }

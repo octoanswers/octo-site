@@ -40,6 +40,12 @@ abstract class Abstract_PageController
         }
     }
 
+    public function handleRequest($request, $response, $args)
+    {
+        $this->lang = $args['lang'];
+        $this->translator = new Translator($this->lang, ROOT_PATH."/resources/lang");
+    }
+
     protected function renderPage()
     {
         if (!$this->template) {
@@ -58,4 +64,16 @@ abstract class Abstract_PageController
 
         return $output;
     }
+
+    //if (! function_exists('__')) {
+    /**
+     * Translate the given message.
+     *
+     * @param string $key
+     */
+    public function foo(...$keys): string
+    {
+        return $this->translator->get($keys);
+    }
+//}
 }
