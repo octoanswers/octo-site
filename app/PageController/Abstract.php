@@ -71,9 +71,9 @@ abstract class Abstract_PageController
      *
      * @param string $key
      */
-    public function foo(...$keys): string
+    public function __(string $file, string $key): string
     {
-        return $this->translator->get($keys);
+        return $this->translator->get($file, $key);
     }
 //}
 }
