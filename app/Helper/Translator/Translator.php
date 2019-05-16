@@ -8,14 +8,9 @@ class Translator
     const TRANSLATED_FILE_EXTENSION = 'json';
 
     /**
-     * @var string Default language code.
-     */
-    private $lang = 'en';
-
-    /**
      * @var array[string] Array with translated messages.
      */
-    private $messages;
+    public $messages;
 
     /**
      * Returns instance of this class.
@@ -42,19 +37,16 @@ class Translator
             }
             
             $fileWithMessages = $messagesDirectory.'/'.$filename;
-
-            if (!file_exists($fileWithMessages)) {
-                throw new Exception('Messages file "'.$fileWithMessages.'" not exists', 1);
-            }
-    
+ 
             $string = file_get_contents($fileWithMessages);
             $messages = json_decode($string, true);
     
             if ($messages == null) {
                 die("Error in $filename");
             }
-    
-            $this->messages[$this->lang][rtrim($filename, '.'.self::TRANSLATED_FILE_EXTENSION)] = $messages;
+            
+            $filename = preg_replace("/\.json/iu", "", $filename);
+            $this->messages[$this->lang][$filename] = $messages;
         }
 
         return $this;
