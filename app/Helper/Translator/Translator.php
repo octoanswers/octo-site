@@ -54,7 +54,7 @@ class Translator
                 die("Error in $filename");
             }
     
-            $this->messages[rtrim($filename, '.'.self::TRANSLATED_FILE_EXTENSION)] = $messages;
+            $this->messages[$this->lang][rtrim($filename, '.'.self::TRANSLATED_FILE_EXTENSION)] = $messages;
         }
 
         return $this;
@@ -73,29 +73,16 @@ class Translator
     /**
      * Return translated message OR message key (if message not found).
      *
-     * @var string $fullKey
+     * @var string $file
+     * @var string $key
      */
-    public function get(...$keys): string
+    public function get(string $file, string $key): string
     {
-        if (count($keys) == 2) {
-            $key = $keys[0];
-            $subkey = $keys[1];
-
-            if (isset($this->messages[$key]) && isset($this->messages[$key][$subkey])) {
-                return $this->messages[$key][$subkey];
-            }
-
-            return 'MSG_'.$key.'_'.$subkey;
-        } else {
-            $key = $keys[0];
-            if (isset($this->messages[$this->lang][$key])) {
-                return $this->messages[$this->lang][$key];
-            }
-
-            return 'MSG_'.$this->lang.'_'.$key;
+        if (isset($this->messages[$this->lang][$file]) && isset($this->messages[$this->lang][$file][$key])) {
+            return $this->messages[$this->lang][$file][$key];
         }
 
-        return 'MSG_'.$keys[0];
+        return 'MSG__'.$this->lang.'__'.$file.'__'.$key;
     }
 
     /**
