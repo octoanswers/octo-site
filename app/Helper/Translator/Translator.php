@@ -1,54 +1,53 @@
 <?php
 
 /**
- * Simple translator for Answeropedia.
+ * Simple translator without dependency.
  */
 class Translator
 {
     const TRANSLATED_FILE_EXTENSION = 'json';
 
     /**
+     * @var string Language code.
+     */
+    private $lang;
+
+    /**
      * @var array[string] Array with translated messages.
      */
-    public $messages;
+    private $messages;
+
+    /**
+     * @var array Save last full key (need for return correct message, if key not found).
+     */
+    private $lastFullKey;
 
     /**
      * Returns instance of this class.
      *
-     * @var $lang string Language code.
-     * @var $messagesDirectory string Directory with translated JSON-files.
+     * @var string $lang Language code.
+     * @var string $messagesDirectory Directory with translated JSON-files.
      */
     public function __construct(string $lang, string $messagesDirectory)
     {
         $this->lang = $lang;
 
-        $messagesDirectory = $messagesDirectory.'/'.$lang;
+        $fileWithMessages = $messagesDirectory.'/'.$lang.'.json';
 
-        if (!is_dir($messagesDirectory)) {
-            throw new Exception('Directory "'.$messagesDirectory.'" not exists', 1);
+        if (!file_exists($fileWithMessages)) {
+            throw new Exception('File with translated messages "'.$this->lang.'.json" not exists', 1);
         }
 
-        $filesInDirectory = array_diff(scandir($messagesDirectory), array('..', '.'));
+        $string = file_get_contents($fileWithMessages);
+        $messages = json_decode($string, true);
 
-        foreach ($filesInDirectory as $filename) {
-
-            if (!$this->_isJSONFilename($filename)) {
-                continue;
-            }
-            
-            $fileWithMessages = $messagesDirectory.'/'.$filename;
- 
-            $string = file_get_contents($fileWithMessages);
-            $messages = json_decode($string, true);
-    
-            if ($messages == null) {
-                die("Error in $filename");
-            }
-            
-            $filename = preg_replace("/\.json/iu", "", $filename);
-            $this->messages[$this->lang][$filename] = $messages;
+        if ($messages == null) {
+            die("Error in $fileWithMessages");
         }
-
+        
+        //$this->messages[$this->lang] = $messages;
+        $this->messages = $messages;
+       
         return $this;
     }
 
@@ -57,7 +56,7 @@ class Translator
      *
      * @var string
      */
-    public function getLang(): string
+    public function getLang()
     {
         return $this->lang;
     }
@@ -65,23 +64,40 @@ class Translator
     /**
      * Return translated message OR message key (if message not found).
      *
-     * @var string $file
-     * @var string $key
+     * @var string
      */
-    public function get(string $file, string $key): string
+    public function get(...$key)
     {
-        if (isset($this->messages[$this->lang][$file]) && isset($this->messages[$this->lang][$file][$key])) {
-            return $this->messages[$this->lang][$file][$key];
-        }
+        $this->lastFullKey = $key;
 
-        return 'MSG__'.$this->lang.'__'.$file.'__'.$key;
+        return $this->_elementExists($key, $this->messages);
     }
 
     /**
-     * Check, is filename like a *.json
+     * Recursive iterator for finding translation.
      */
-    private function _isJSONFilename(string $filename): bool
+    private function _elementExists($key, $array)
     {
-        return (bool) preg_match('/.'.self::TRANSLATED_FILE_EXTENSION.'$/', $filename);
+        $fullKey = $key;
+
+        if (is_array($key)) {
+            $curArray = $array;
+            $lastKey = array_pop($key);
+            foreach($key as $oneKey) {
+                if (!$this->_elementExists($oneKey, $curArray)) return false;
+                $curArray = @$curArray[$oneKey];
+            }
+            if (is_array($curArray) && $this->_elementExists($lastKey, $curArray)) {
+                return $this->_elementExists($lastKey, $curArray);
+            }
+        } else {
+            if (is_array($array)) {
+                if (isset($array[$key]) || array_key_exists($key, $array)) {
+                    return $array[$key];
+                }
+            }
+        }
+
+        return 'MSG__'.$this->lang.'__'.implode('__', $this->lastFullKey);
     }
 }
