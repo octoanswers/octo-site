@@ -66,7 +66,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
         $this->template = 'hashtag';
         $this->pageTitle = $this->_getPageTitle();
-        //str_replace('%hashtag%', , _('Hashtag - Page title')).' • '._('Answeropedia');
+        //str_replace('%hashtag%', , _('Hashtag - Page title')).' • '.$this->translator->get('answeropedia');
         $this->pageDescription = $this->_getPageDescription();
         $this->nextPageURL = null;
 
@@ -81,7 +81,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageTitle()
     {
-        $pageTitle = _('Questions and answers on the hashtag %hashtag%').' - '._('Answeropedia');
+        $pageTitle = _('Questions and answers on the hashtag %hashtag%').' - '.$this->translator->get('answeropedia');
         return str_replace('%hashtag%', $this->hashtag->title, $pageTitle);
     }
 

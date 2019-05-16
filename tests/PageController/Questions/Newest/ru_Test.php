@@ -16,7 +16,7 @@ class Newest_Questions_PageController__ru__Test extends Abstract_Frontend_TestCa
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Новые вопросы - Страница 1 - Answeropedia', $responseBody);
+        $this->assertStringContainsString('Новые вопросы - Страница 1 - Ансверопедия', $responseBody);
         $this->assertStringContainsString('Птицы играют в игры?', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }

@@ -4,11 +4,11 @@
 
     <?php if ($this->authUser): ?>
         <a class="navbar-brand mr-0 mr-md-4 ml-md-2" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
-            <?= _('Answeropedia') ?>
+            <?= $this->translator->get('answeropedia') ?>
         </a>
     <?php else: ?>
         <a class="navbar-brand mr-0 mr-md-2" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
-            <?= _('Answeropedia') ?>
+            <?= $this->translator->get('answeropedia') ?>
         </a>
     <?php endif; ?>
   

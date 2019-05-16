@@ -14,5 +14,8 @@
     },
     "sandbox": {
         "title": "Песочница"
+    },
+    "search": {
+        "page_title": "Поиск"
     }
 }

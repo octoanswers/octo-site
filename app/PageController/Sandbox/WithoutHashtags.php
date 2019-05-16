@@ -55,12 +55,12 @@ class WithoutHashtags_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Questions without hashtags').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
+        return _('Questions without hashtags').' - '._('Page').' '.$this->page.' - '.$this->translator->get('answeropedia');
     }
 
     public function _getPageDescription(): string
     {
-        $description = _('Questions without hashtags').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
+        $description = _('Questions without hashtags').' - '._('Page').' '.$this->page.' - '.$this->translator->get('answeropedia');
 
         return $description;
     }

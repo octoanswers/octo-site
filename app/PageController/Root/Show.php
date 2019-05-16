@@ -11,6 +11,7 @@ class Show_Root_PageController extends Abstract_PageController
         $default_language = Lang::getDefaultLang();
 
         $this->lang = $default_language;
+        $this->translator = new Translator($this->lang, ROOT_PATH."/app/Lang");
 
         if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
             $this->lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
@@ -22,7 +23,7 @@ class Show_Root_PageController extends Abstract_PageController
 
         $this->template = 'root/show';
         $this->showFooter = false;
-        $this->pageTitle = _('Answeropedia');
+        $this->pageTitle = $this->translator->get('answeropedia');
         $this->pageDescription = _('Questions and Answers');
         $this->canonicalURL = SITE_URL;
 

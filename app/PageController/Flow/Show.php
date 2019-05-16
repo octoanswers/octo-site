@@ -29,7 +29,7 @@ class Show_Flow_PageController extends Abstract_PageController
         };
 
         $this->template = 'flow';
-        $this->pageTitle = _('Flow').' — '._('Answeropedia');
+        $this->pageTitle = _('Flow').' — '.$this->translator->get('answeropedia');
         $this->pageDescription = _('Questions and answers flow on Answeropedia.');
         $this->canonicalURL = Page_URL_Helper::getFlowURL($this->lang);
 
@@ -44,7 +44,7 @@ class Show_Flow_PageController extends Abstract_PageController
         $og = [
             'url' => SITE_URL,
             'type' => "website",
-            'title' => _('Flow').' - '._('Answeropedia'),
+            'title' => _('Flow').' - '.$this->translator->get('answeropedia'),
             'description' => _('Questions and answers flow on Answeropedia.'),
             'locale' => $this->lang,
             'image' => IMAGE_URL.'/og-image.png'

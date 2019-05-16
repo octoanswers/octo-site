@@ -47,7 +47,7 @@ class Show_Question_PageController extends Abstract_PageController
             }
 
             $this->template = 'question/redirect';
-            $this->pageTitle = 'Redirect page: '.$this->question->title.' - '._('Answeropedia');
+            $this->pageTitle = 'Redirect page: '.$this->question->title.' - '.$this->translator->get('answeropedia');
 
             $output = $this->renderPage();
             $response->getBody()->write($output);

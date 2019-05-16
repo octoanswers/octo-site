@@ -42,12 +42,12 @@ class Newest_Questions_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Newest questions').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
+        return _('Newest questions').' - '._('Page').' '.$this->page.' - '.$this->translator->get('answeropedia');
     }
 
     public function _getPageDescription(): string
     {
-        $description = _('Newest questions').' - '._('Page').' '.$this->page.' - '._('Answeropedia');
+        $description = _('Newest questions').' - '._('Page').' '.$this->page.' - '.$this->translator->get('answeropedia');
 
         return $description;
     }

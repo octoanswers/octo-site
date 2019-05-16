@@ -23,7 +23,7 @@ class Show_Search_PageController extends Abstract_PageController
         $this->_getSearchResults();
 
         $this->template = 'search';
-        $this->pageTitle = str_replace('%query%', $this->query, _('Search %query% - Answeropedia'));
+        $this->pageTitle = $this->translator->get('search', 'page_title').': '.$this->query.' - '.$this->translator->get('answeropedia');
 
         $this->searchPlaceholder = $this->_getSearchPlaceholder($this->list);
         $this->showFooter = false;

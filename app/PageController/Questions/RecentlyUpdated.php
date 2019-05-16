@@ -40,12 +40,12 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('Recently updated').' &middot; '._('Page').' '.$this->page.' &middot; '._('Answeropedia');
+        return _('Recently updated').' &middot; '._('Page').' '.$this->page.' &middot; '.$this->translator->get('answeropedia');
     }
 
     public function _getPageDescription(): string
     {
-        $description = _('Recently updated').' &middot; '._('Page').' '.$this->page.' &middot; '._('Answeropedia');
+        $description = _('Recently updated').' &middot; '._('Page').' '.$this->page.' &middot; '.$this->translator->get('answeropedia');
 
         return $description;
     }

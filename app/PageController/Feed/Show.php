@@ -41,7 +41,7 @@ class Show_Feed_PageController extends Abstract_PageController
 
         $this->template = 'feed';
         $this->showFooter = false;
-        $this->pageTitle = _('Feed').' - '._('Answeropedia');
+        $this->pageTitle = _('Feed').' - '.$this->translator->get('answeropedia');
         $this->canonicalURL = SITE_URL;
 
         $output = $this->renderPage();
