@@ -52,7 +52,7 @@ class Localizer
 
     private static function __getTranslatedMessages($lang)
     {
-        $fileWithMessages = __DIR__."/lang/$lang.json";
+        $fileWithMessages = __DIR__."/$lang.json";
 
         if (!file_exists($fileWithMessages)) {
             throw new Exception('Common messages file "'.$fileWithMessages.'" not exists', 1);

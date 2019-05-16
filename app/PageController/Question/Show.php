@@ -22,6 +22,8 @@ class Show_Question_PageController extends Abstract_PageController
     public function handle($request, $response, $args)
     {
         $this->lang = $args['lang'];
+        $this->translator = new Translator($this->lang, ROOT_PATH."/resources/lang");
+
         $questionURI = $args['question_uri'];
 
         try {

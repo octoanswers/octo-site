@@ -40,6 +40,7 @@ spl_autoload_register(function ($class_name) {
         'ExtendedParsedown' => 'app/Helper/ExtendedParsedown/ExtendedParsedown.php',
         'Html2Text\Html2Text' => 'app/Helper/Html2Text.php',
         'HumanDate' => 'app/Humanizer/HumanDate/HumanDate.php',
+        'Translator' => 'app/Helper/Translator/Translator.php',
 
         # Mailer`s
 
