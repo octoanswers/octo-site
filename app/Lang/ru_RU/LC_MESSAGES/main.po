@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-05-17 15:08+0500\n"
-"PO-Revision-Date: 2019-05-17 15:08+0500\n"
+"POT-Creation-Date: 2019-05-17 21:34+0500\n"
+"PO-Revision-Date: 2019-05-17 21:34+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -15,22 +15,17 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: PageController/Sandbox/WithoutAnswers.php:18
-#: PageController/Sandbox/WithoutHashtags.php:18
-msgid "Question"
-msgid_plural "Questions"
-msgstr[0] "Вопрос"
-msgstr[1] "Вопроса"
-msgstr[2] "Вопросов"
+#~ msgid "Question"
+#~ msgid_plural "Questions"
+#~ msgstr[0] "Вопрос"
+#~ msgstr[1] "Вопроса"
+#~ msgstr[2] "Вопросов"
 
-#: Templates/question/main/contributors_full.phtml:7
-#: Templates/question/right/contributors_top.phtml:9
-#: Templates/question/right/info_about_question.phtml:9
-msgid "Contributor"
-msgid_plural "Contributors"
-msgstr[0] "Автор"
-msgstr[1] "Автора"
-msgstr[2] "Авторов"
+#~ msgid "Contributor"
+#~ msgid_plural "Contributors"
+#~ msgstr[0] "Автор"
+#~ msgstr[1] "Автора"
+#~ msgstr[2] "Авторов"
 
 #~ msgid "API: Answer liked"
 #~ msgstr "API: Ответ лайкнут"

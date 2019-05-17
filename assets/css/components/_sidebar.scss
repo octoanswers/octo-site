@@ -4,7 +4,7 @@
 // Right side table of contents
 //
 
-.bd-toc {
+.right-sidebar {
   @supports (position: sticky) {
     position: sticky;
     top: 4rem;
@@ -14,7 +14,6 @@
   order: 2;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  font-size: 0.875rem;
 }
 
 .section-nav {
