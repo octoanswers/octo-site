@@ -16,7 +16,7 @@ class Unlogged_Main_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Ансверопедия - Задайте вопрос и получите один исчерпывающий ответ', $responseBody);
+        $this->assertStringContainsString('Answeropedia - Задайте вопрос и получите один исчерпывающий ответ', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

@@ -14,7 +14,7 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Simple_key()
     {
-        $this->assertEquals('Ансверопедия', $this->translator->get('answeropedia'));
+        $this->assertEquals('Answeropedia', $this->translator->get('answeropedia'));
     }
 
     public function test_Simple_key_not_exists_return_as_key()
@@ -24,7 +24,7 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Double_key()
     {
-        $this->assertEquals('Свежие правки', $this->translator->get('navbar', 'flow'));
+        $this->assertEquals('Свежие&nbsp;правки', $this->translator->get('navbar', 'flow'));
     }
 
     public function test_Double_Key_not_exists()
