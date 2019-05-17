@@ -18,20 +18,20 @@
 			<?php if (!$this->authUser): ?>
                 <li class="nav-item d-sm-none d-md-inline-block">
                     <a class="nav-link" href="#">
-                        <?= $this->translator->get('About&nbsp;site') ?>
+                        <?= $this->translator->get('navbar', 'about_answeropedia') ?>
                     </a>
                 </li>
             <?php endif; ?>
 		
 			<li class="nav-item">
 				<a class="nav-link " href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= $this->translator->get('Recent&nbsp;changes') ?>
+					<?= $this->translator->get('navbar', 'recent_changes') ?>
 				</a>
 			</li>
 			
 			<li class="nav-item">
                 <a class="nav-link " href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= $this->translator->get('Hashtags') ?>
+                    <?= $this->translator->get('navbar', 'hashtags') ?>
                 </a>
             </li>
 
@@ -43,7 +43,7 @@
 			
 			<li class="nav-item">
 				<form class="form-inline" id="navbar_search_form">
-      				<input id="navbar_search_form_query" class="form-control" type="search" placeholder="Search" aria-label="Search">
+      				<input id="navbar_search_form_query" class="form-control" type="search" placeholder="<?= $this->translator->get('navbar', 'saarch_placeholder') ?>" aria-label="Search">
     		    </form>
             </li>
 
@@ -88,7 +88,7 @@
 
 		<li class="nav-item">
 			<button class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
-        		<?= $this->translator->get('Ask a question') ?>
+        		<?= $this->translator->get('navbar', 'btn_ask') ?>
 			</button>
 		</li>
 

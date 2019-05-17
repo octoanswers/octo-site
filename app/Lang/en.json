@@ -15,9 +15,13 @@
         }
     },
     "navbar": {
-        "change": "Изменить",
+        "about_answeropedia": "About&nbsp;project",
+        "btn_ask": "Ask a question",
         "flow": "Flow",
-        "questions": "Вопросы",
+        "hashtags": "Hashtags",
+        "questions": "Questions",
+        "recent_changes": "Recent&nbsp;changes",
+        "saarch_placeholder": "Search",
         "sandbox": "Sandbox"
     },
     "page": "Page",

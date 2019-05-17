@@ -97,7 +97,7 @@
         "Answer history": "История изменений ответа",
         "page_title": "История изменений ответа"
     },
-    "answeropedia": "Ансверопедия",
+    "answeropedia": "Answeropedia",
     "feed": {
         "Feed": "Лента"
     },
@@ -171,10 +171,13 @@
         "Upload question image": "Загрузка картинки вопроса"
     },
     "navbar": {
-        "About Answeropedia": "О Answeropedia",
-        "About&nbsp;site": "О&nbsp;проекте",
-        "Recent&nbsp;changes": "Свежие&nbsp;правки",
-        "flow": "Свежие правки"
+        "about_answeropedia": "О&nbsp;проекте",
+        "flow": "Свежие&nbsp;правки",
+        "hashtags": "Хештеги",
+        "recent_changes": "Свежие&nbsp;правки",
+        "sandbox": "Песочница",
+        "saarch_placeholder": "Поиск",
+        "btn_ask": "Задать вопрос"
     },
     "page": "Страница",
     "page_not_found": {
