@@ -90,8 +90,6 @@ class Translator
      */
     private function _elementExists($key, $array)
     {
-        $fullKey = $key;
-
         if (is_array($key)) {
             $curArray = $array;
             $lastKey = array_pop($key);
@@ -110,6 +108,7 @@ class Translator
             }
         }
 
-        return 'MSG__'.$this->lang.'__'.implode('__', $this->lastFullKey);
+        return $key;
+        //return 'MSG__'.$this->lang.'__'.implode('__', $this->lastFullKey);
     }
 }

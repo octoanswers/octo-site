@@ -19,7 +19,7 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Simple_Key_not_exists()
     {
-        $this->assertEquals('MSG__ru__key_not_exists', $this->translator->get('key_not_exists'));
+        $this->assertEquals('Key not exists', $this->translator->get('Key not exists'));
     }
 
     public function test_Double_key()
@@ -29,7 +29,7 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Double_Key_not_exists()
     {
-        $this->assertEquals('MSG__ru__navbar__key_not_exists', $this->translator->get('navbar', 'key_not_exists'));
+        $this->assertEquals('key_not_exists', $this->translator->get('navbar', 'key_not_exists'));
     }
 
     public function test_Triple_key()
@@ -39,6 +39,6 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Triple_key_not_exists()
     {
-        $this->assertEquals('MSG__ru__modal__login__key_not_exists', $this->translator->get('modal', 'login', 'key_not_exists'));
+        $this->assertEquals('key_not_exists', $this->translator->get('modal', 'login', 'key_not_exists'));
     }
 }
