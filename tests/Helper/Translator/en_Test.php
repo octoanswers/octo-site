@@ -17,9 +17,9 @@ class Translator_EN_langTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Answeropedia', $this->translator->get('answeropedia'));
     }
 
-    public function test_Simple_Key_not_exists()
+    public function test_Simple_key_not_exists_return_as_key()
     {
-        $this->assertEquals('key_not_exists', $this->translator->get('key_not_exists'));
+        $this->assertEquals('Key not exists', $this->translator->get('Key not exists'));
     }
 
     public function test_Double_key()
@@ -27,18 +27,8 @@ class Translator_EN_langTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Flow', $this->translator->get('navbar', 'flow'));
     }
 
-    public function test_Double_Key_not_exists()
+    public function test_Double_key_not_exists()
     {
-        $this->assertEquals('key_not_exists', $this->translator->get('navbar', 'key_not_exists'));
-    }
-
-    public function test_Triple_key()
-    {
-        $this->assertEquals('Login', $this->translator->get('modal', 'login', 'title'));
-    }
-
-    public function test_Triple_key_not_exists()
-    {
-        $this->assertEquals('key_not_exists', $this->translator->get('modal', 'login', 'key_not_exists'));
-    }
+        $this->assertEquals('NEED TRANSLATE: language "en" key "navbar" subkey "key_not_exists"', $this->translator->get('navbar', 'key_not_exists'));
+    }   
 }

@@ -18,11 +18,6 @@ class Translator
     private $messages;
 
     /**
-     * @var array Save last full key (need for return correct message, if key not found).
-     */
-    private $lastFullKey;
-
-    /**
      * Returns instance of this class.
      *
      * @var string $lang Language code.
@@ -64,41 +59,29 @@ class Translator
     /**
      * Return translated message OR message key (if message not found).
      *
-     * @var string
+     * @var string $key
+     * @var string $subkey
      */
-    public function get(...$key): string
+    public function get(string $key, string $subkey = null): string
     {
-        $this->lastFullKey = $key;
-
-        $message = $this->_elementExists($key, $this->messages);
-
-        return is_array($message) ? 'INCORRECT_KEY' : $message;
-    }
-
-    /**
-     * Recursive iterator for finding translation.
-     */
-    private function _elementExists($key, $array)
-    {
-        if (is_array($key)) {
-            $curArray = $array;
-            $lastKey = array_pop($key);
-            foreach($key as $oneKey) {
-                if (!$this->_elementExists($oneKey, $curArray)) return false;
-                $curArray = @$curArray[$oneKey];
-            }
-            if (is_array($curArray) && $this->_elementExists($lastKey, $curArray)) {
-                return $this->_elementExists($lastKey, $curArray);
+        if (!$subkey) {
+            if (isset($this->messages[$key])) {
+                if (is_array($this->messages[$key])) {
+                    return 'KEY_IS_ARRAY: language "'.$this->lang.'" key "'.$key.'"';
+                }
+                return $this->messages[$key];
             }
         } else {
-            if (is_array($array)) {
-                if (isset($array[$key]) || array_key_exists($key, $array)) {
-                    return $array[$key];
+            if (isset($this->messages[$key]) && isset($this->messages[$key][$subkey])) {
+                if (is_array($this->messages[$key][$subkey])) {
+                    return 'KEY_IS_ARRAY: language "'.$this->lang.'" key "'.$key.'" subkey "'.$subkey.'"';
                 }
+                return $this->messages[$key][$subkey];
             }
+
+            return 'NEED TRANSLATE: language "'.$this->lang.'" key "'.$key.'" subkey "'.$subkey.'"';
         }
 
         return $key;
-        //return 'MSG__'.$this->lang.'__'.implode('__', $this->lastFullKey);
     }
 }

@@ -17,7 +17,7 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Ансверопедия', $this->translator->get('answeropedia'));
     }
 
-    public function test_Simple_Key_not_exists()
+    public function test_Simple_key_not_exists_return_as_key()
     {
         $this->assertEquals('Key not exists', $this->translator->get('Key not exists'));
     }
@@ -29,16 +29,6 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Double_Key_not_exists()
     {
-        $this->assertEquals('key_not_exists', $this->translator->get('navbar', 'key_not_exists'));
-    }
-
-    public function test_Triple_key()
-    {
-        $this->assertEquals('Вход', $this->translator->get('modal', 'login', 'title'));
-    }
-
-    public function test_Triple_key_not_exists()
-    {
-        $this->assertEquals('key_not_exists', $this->translator->get('modal', 'login', 'key_not_exists'));
+        $this->assertEquals('NEED TRANSLATE: language "ru" key "navbar" subkey "key_not_exists"', $this->translator->get('navbar', 'key_not_exists'));
     }
 }
