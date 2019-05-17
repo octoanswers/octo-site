@@ -1,22 +1,244 @@
 {
-    "title": "Перевод заголовка",
-    "answeropedia": "Ансверопедия",
-    "navbar": {
-        "change": "Изменить",
-        "questions": "Вопросы",
-        "flow": "Свежие правки",
-        "sandbox": "Песочница"
+    "Actions": "Действия",
+    "Add picture": "Добавить картинку",
+    "All answer contributors": "Все авторы ответа",
+    "All questions": "Все вопросы",
+    "Answer a question": "Ответьте на вопрос",
+    "Answer contributors": "Авторы ответа",
+    "Answer updated": "Ответ обновлен",
+    "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+    "Ask your first question": "Задайте первый вопрос",
+    "Back to question": "Вернуться к вопросу",
+    "By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.": "Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три или более вопроса.",
+    "Cancel": "Отмена",
+    "Change": "Правка",
+    "Change ID": "Правка",
+    "Change history": "История изменений",
+    "Close": "Закрыть",
+    "Description of changes": "Описание изменений",
+    "Edit": "Править",
+    "Enter your email address to get notified about the answer as soon as it appears": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
+    "Filters": "Фильтры",
+    "Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.": "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и прочие активности этих пользователей будут появляться у вас в ленте новостей.",
+    "Find your first friends": "Найдите первых друзей",
+    "Find your friends": "Найдите друзей",
+    "Follow": "Подписаться",
+    "Follow 3 more hashtags": "Подпишитесь на три темы",
+    "Follow some questions": "Следуйте за некоторыми вопросами",
+    "Follow your first question": "Подпишитесь на первый вопрос",
+    "Followed": "Подписан",
+    "Go back": "Вернуться назад",
+    "History": "История",
+    "Improve your feed": "Улучшите вашу ленту",
+    "It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
+    "Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
+    "More questions": "Больше вопросов",
+    "No description of changes": "Нет описания изменений",
+    "No hashtag found for \"%query%\"": "Не удалось найти хештеги по запросу «%query%»",
+    "No hashtags found": "Хештегов не найдено",
+    "No questions found": "Вопросов не найдено",
+    "No users found": "Пользователей не найдено",
+    "Now in the sandbox:": "Сейчас в песочнице:",
+    "On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
+    "On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
+    "Popular": "Популярные",
+    "Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
+    "Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
+    "Related questions": "Похожие вопросы",
+    "Report": "Пожаловаться",
+    "Save": "Сохранить",
+    "Search hashtags": "Поиск тем",
+    "Search in DuckDuckGo": "Поискать в DuckDuckGo",
+    "Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.": "Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут появляться у вас в ленте новостей.",
+    "Set real name": "Введите реальное имя",
+    "Set signature": "Придумайте подпись",
+    "Share link": "Поделиться ссылкой",
+    "Subscribe to several hashtags": "Подпишитесь на несколько хештегов",
+    "Subscription to the question": "Подписка на вопрос",
+    "Thanks for the feedback!": "Спасибо за отзыв!",
+    "Tools": "Инструменты",
+    "Top contributors": "Топ авторов",
+    "Unfollow": "Отписаться",
+    "Update picture": "Обновить картинку",
+    "View all hashtags": "Посмотреть все хештеги",
+    "View all questions": "Посмотреть все вопросы",
+    "View all users": "Посмотреть всех пользователей",
+    "View popular hashtags": "Посмотреть популярные хештеги",
+    "View questions in the sandbox": "Посмотреть вопросы в песочнице",
+    "View users": "Посмотреть пользователей",
+    "Views a questions": "Посмотреть вопросы",
+    "Visit your feed": "Посетите ленту",
+    "Without hashtags": "Без тем",
+    "Write first answer": "Написать первый ответ",
+    "Write the first answer": "Напишите первый ответ",
+    "Your email": "Ваш email",
+    "activity": {
+        "change answer": "обновил ответ",
+        "change signature": "поменял подпись",
+        "follow hashtag": "подписался на хештег",
+        "follow question": "подписался на вопрос",
+        "follow user": "подписался на пользователя",
+        "hashtag added question": "хештег вопрос",
+        "question renamed": "вопрос переименован",
+        "question updated answer": "обновлен ответ",
+        "renamed question": "переименовал вопрос"
     },
-    "modal": {
-        "login": {
-            "title": "Вход"
+    "answer_edit": {
+        "Edit answer": "Править ответ"
+    },
+    "answer_history": {
+        "Answer history": "История изменений ответа"
+    },
+    "answeropedia": "Ансверопедия",
+    "feed": {
+        "Feed": "Лента"
+    },
+    "flow": {
+        "Flow": "Поток",
+        "Questions and answers flow on Answeropedia. ": " Поток вопросов и ответов на Answeropedia."
+    },
+    "footer": {
+        "About": "О сайте",
+        "Questions": "Вопросы",
+        "Rules": "Правила",
+        "Search": "Поиск",
+        "Support": "Поддержка",
+        "Users": "Пользователи"
+    },
+    "hashtag": {
+        "More hashtags": "Больше тем",
+        "Questions and answers on the hashtag %hashtag%": "Вопросы и ответы на тему %hashtag%"
+    },
+    "hashtags": {
+        "New hashtags": "Новые темы"
+    },
+    "internal_server_error": {
+        "Error 500": "Ошибка 500"
+    },
+    "left_nav": {
+        "main": {
+            "About site": "О сайте",
+            "Main page": "Главная страница",
+            "Popular hashtags": "Популярные хештеги",
+            "Random question": "Случайный вопрос",
+            "Recent changes": "Свежие правки"
+        },
+        "other_languages": {
+            "All languages": "Все языки",
+            "English": "Английский",
+            "In other languages": "На других языках",
+            "Russian": "Русский"
         }
     },
+    "main": {
+        "What do you mean complete?": "Что значит исчерпывающий?",
+        "You can help the Answeropedia project by simply sharing your link with your friends.": "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями ссылкой на него.",
+        "how_it_works": {
+            "How it works?": "Как это работает?",
+            "We find a specialist who can give a competent answer": "Мы находим специалистов, которые могут дать компетентный ответ",
+            "You ask a question about any hashtag of interest to you": "Вы задаете вопрос на любую интересующую вас тему",
+            "You receive an answer to the email": "Вы получаете исчерпывающий ответ на email"
+        }
+    },
+    "modal": {
+        "ask": {
+            "Ask questions in a form understandable to real people - they will answer, not search robots.": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
+            "New question": "Новый вопрос",
+            "What is your question?": "Какой у вас вопрос?"
+        },
+        "login": {
+            "title": "Вход",
+            "Log in": "Войти"
+        },
+        "signup": {
+            "By signing up, you agree to our terms of use, privacy policy, and cookie policy.": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
+            "Email": "Email",
+            "Password": "Пароль",
+            "Username": "Логин"
+        }
+    },
+    "modal/question/upload_image": {
+        "Upload image": "Загрузить картинку",
+        "Upload question image": "Загрузка картинки вопроса"
+    },
+    "navbar": {
+        "About Answeropedia": "О Answeropedia",
+        "About&nbsp;site": "О&nbsp;проекте",
+        "flow": "Свежие правки",
+        "Recent&nbsp;changes": "Свежие&nbsp;правки"
+    },
     "page": "Страница",
+    "page_not_found": {
+        "Error 404": "Ошибка 404"
+    },
+    "question": {
+        "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
+        "Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
+        "Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
+        "actions_top": {
+            "Edit answer": "Править ответ",
+            "Rename question": "Переименовать вопрос"
+        },
+        "lure_be_first_contributor": {
+            "Be the first author": "Станьте первым автором",
+            "Still no one tried to write an answer to this question. Be the first if the hashtag of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
+        }
+    },
+    "question_not_found": {
+        "Question not found": "Вопрос не найден"
+    },
+    "question_rename": {
+        "Before you rename a question, please read the basic rules for renaming": "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными правилами переименования",
+        "Leave redirect": "Оставить редирект"
+    },
+    "questions": {
+        "Newest questions": "Новые вопросы",
+        "Recently updated": "Недавно обновленные",
+        "nav": {
+            "Newest": "Новые"
+        }
+    },
+    "root": {
+        "Questions and Answers": "Вопросы и ответы"
+    },
     "sandbox": {
-        "title": "Песочница"
+        "about_sandbox": {
+            "As soon as the question has a comprehensive answer and several hashtags, it is transferred to the main list.": "Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в основной список.",
+            "The sandbox is a place to get new questions that have not yet been answered.": "Песочница — это место куда попадают новые, ещё не имеющие ответа вопросы.",
+            "What is a \"sandbox\"?": "Что такое «Песочница»?"
+        }
     },
     "search": {
-        "page_title": "Поиск"
+        "nav": {
+            "Hashtags": "Хештеги"
+        }
+    },
+    "settings": {
+        "Back to profile": "Вернуться к профилю",
+        "Enter a signature describing your professional skills and knowledge.": "Введите подпись, описывающую ваши профессиональные навыки и знания.",
+        "Enter the address of your website or page on the social network.": "Введите адрес вашего сайта или страницы в социальной сети.",
+        "For example: Professor of Psychology, entrepreneur, novice poet": "Например: Профессор психологии, предприниматель, начинающий поэт",
+        "It is advisable to use your real photo as an avatar - this causes more confidence among users.": "Желательно использовать в качестве аватарки ваше реальное фото — это вызывает больше доверия у пользователей.",
+        "Real name": "Реальное имя",
+        "Signature": "Подпись",
+        "Site": "Сайт",
+        "The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.": "Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.",
+        "Upload avatar": "Загрузить аватар"
+    },
+    "title": "Перевод заголовка",
+    "update_hashtags": {
+        "Update hashtags for question \"%question%\"": "Обновление тем вопроса «%question%»",
+        "Update hashtags for question \"%question%\" - Answeropedia": "Обновление тем вопроса «%question%» - Answeropedia"
+    },
+    "user": {
+        "Knows about": "Знает о",
+        "Logout": "Выйти",
+        "no_answers": {
+            "No answers": "Нет ответов",
+            "User has not written any answers yet": "Пользователь пока не написал ни одного ответа"
+        }
+    },
+    "users": {
+        "Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы."
     }
 }
