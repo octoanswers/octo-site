@@ -24,7 +24,7 @@ class Show_Root_PageController extends Abstract_PageController
         $this->template = 'root/show';
         $this->showFooter = false;
         $this->pageTitle = $this->translator->get('answeropedia');
-        $this->pageDescription = _('Questions and Answers');
+        $this->pageDescription = $this->translator->get('Questions and Answers');
         $this->canonicalURL = SITE_URL;
 
         $output = $this->renderPage();

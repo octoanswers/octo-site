@@ -4,7 +4,7 @@
 	<ul class="nav nav-tabs">
 		<li class="nav-item">
 			<a class="nav-link active" href="<?= $this->question->getURL($this->lang) ?>">
-				<?= _('Question') ?>
+				<?= $this->translator->get('Question') ?>
 			</a>
 		</li>
 
@@ -18,7 +18,7 @@
 		<?php else: ?>
 			<li class="nav-item">
 				<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
-					<?= _('Edit') ?>
+					<?= $this->translator->get('Edit') ?>
 				</a>
 				<?php require_once TEMPLATE_PATH.'/_modal/question/_lure/edit_answer.phtml' ?>
 			</li>
@@ -29,12 +29,12 @@
 		<?php if (mb_strlen($this->question->answer->text) > 0): ?>
 			<li class="nav-item">
 				<a class="nav-link" href="<?= $this->question->getHistoryURL($this->lang) ?>">
-					<?= _('History') ?>
+					<?= $this->translator->get('History') ?>
 				</a>
 			</li>		
 		<?php else: ?>
 			<li class="nav-item">
-				<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><?= _('History') ?></a>
+				<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><?= $this->translator->get('History') ?></a>
 			</li>
 		<?php endif; ?>
 		<!-- tab_history -->

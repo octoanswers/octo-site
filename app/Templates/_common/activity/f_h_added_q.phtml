@@ -8,7 +8,7 @@
     </div>
     <div class="width-full">
         <div class="color-gray-700">
-            <?= _('hashtag added question') ?>:
+            <?= $this->translator->get('hashtag added question') ?>:
             
             <?php if (isset($data['hashtag'])): ?>
                 <a class="color-gray-900 font-weight-bold" href="<?= $data['hashtag']['url'] ?>"><?= $data['hashtag']['title'] ?></a>

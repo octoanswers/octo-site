@@ -28,7 +28,7 @@
 
         <?php if (strlen($question->answer->text) == 0): ?>
             <a class="badge badge-primary mr-3" href="<?= $question->getEditURL($this->lang) ?>" rel="nofollow">
-                <?= _('Write first answer') ?>
+                <?= $this->translator->get('Write first answer') ?>
             </a>
         <?php endif; ?>
 

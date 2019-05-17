@@ -7,13 +7,13 @@
         </div>
         <div class="width-full">
             <div class="color-gray-900 font-weight-bold mb-2">
-                <?= _('Subscribe to several hashtags') ?>
+                <?= $this->translator->get('Subscribe to several hashtags') ?>
             </div>
             <div class="small color-gray-700 mb-3">
-                <?= _('Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.') ?>
+                <?= $this->translator->get('Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.') ?>
             </div>
             <a  class="btn btn-sm btn-outline-primary" href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-                <?= _('View popular hashtags') ?>
+                <?= $this->translator->get('View popular hashtags') ?>
             </a>
         </div>
     </div>

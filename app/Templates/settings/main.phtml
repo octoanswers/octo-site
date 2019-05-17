@@ -1,25 +1,25 @@
 
 <h1 class="mt-2 mt-md-5">
-    <?= _('Settings') ?>
+    <?= $this->translator->get('Settings') ?>
 </h1>
 <a href="<?= $this->authUser->getURL($this->lang) ?>" class="btn btn-sm btn-outline-secondary">
-    <?= _('Back to profile') ?>
+    <?= $this->translator->get('Back to profile') ?>
 </a>
 
 <hr class="my-4 my-md-5">
-<h2><?= _('Upload avatar') ?></h2>
+<h2><?= $this->translator->get('Upload avatar') ?></h2>
 <div class="">
     <div class=" pr-4 pr-xl-5">
         <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data" class="mt-4">
             <div class="form-group">
                 <label for="form__update_name__name">
-                    <?= _('It is advisable to use your real photo as an avatar - this causes more confidence among users.') ?>
+                    <?= $this->translator->get('It is advisable to use your real photo as an avatar - this causes more confidence among users.') ?>
                 </label>
                 <input type="file" name="new_avatar_file" class="form-control-file w-100">
             </div>
             <div class="form-group">
                 <button type="submit" id="form__upload_avatar__submit_btn" class="btn btn-primary submit_button">
-                    <?= _('Upload avatar') ?>
+                    <?= $this->translator->get('Upload avatar') ?>
                 </button>
             </div>
         </form>
@@ -30,51 +30,51 @@
 </div>
 
 <hr class="my-4 my-md-5">
-<h2><?= _('Real name') ?></h2>
+<h2><?= $this->translator->get('Real name') ?></h2>
 <form id="form__update_name" data-user-id="<?= $this->authUser->id ?>">
     <div class="form-group">
         <label for="form__update_name__name">
-            <?= _('The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.') ?>.
+            <?= $this->translator->get('The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.') ?>.
         </label>
         <input id="form__update_name__name" type="text" class="form-control" value="<?= @$this->authUser->name ?>">
     </div>
     <div class="form-group">
         <button type="submit" id="form__update_name__submit" class="btn btn-primary">
-            <?= _('Save') ?>
+            <?= $this->translator->get('Save') ?>
         </button>
     </div>
 </form>
 
 <hr class="my-4 my-md-5">
-<h2><?= _('Signature') ?></h2>
+<h2><?= $this->translator->get('Signature') ?></h2>
 <form id="form__update_signature" data-user-id="<?= $this->authUser->id ?>">
     <div class="form-group">
         <label for="form__update_signature__signature">
-            <?= _('Enter a signature describing your professional skills and knowledge.') ?>
+            <?= $this->translator->get('Enter a signature describing your professional skills and knowledge.') ?>
         </label>
-        <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->signature ?>" placeholder="<?= _('For example: Professor of Psychology, entrepreneur, novice poet') ?>">
+        <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->signature ?>" placeholder="<?= $this->translator->get('For example: Professor of Psychology, entrepreneur, novice poet') ?>">
     </div>
     <div class="form-group mt-3">
         <button type="submit" id="form__update_signature__submit" class="btn btn-primary">
-            <?= _('Save') ?>
+            <?= $this->translator->get('Save') ?>
         </button>
     </div>
 </form>
 
 <hr class="my-4 my-md-5">
 <h2>
-    <?= _('Site') ?>
+    <?= $this->translator->get('Site') ?>
 </h2>
 <form id="frm__update_site" data-user-id="<?= $this->authUser->id ?>">
     <div class="form-group">
         <label for="frm__update_site__site">
-            <?= _('Enter the address of your website or page on the social network.') ?>
+            <?= $this->translator->get('Enter the address of your website or page on the social network.') ?>
         </label>
         <input id="frm__update_site__site" type="text" class="form-control" value="<?= @$this->authUser->site ?>">
     </div>
     <div class="form-group">
         <button type="submit" id="frm__update_site__submit" class="btn btn-primary">
-            <?= _('Save') ?>
+            <?= $this->translator->get('Save') ?>
         </button>
     </div>
 </form>

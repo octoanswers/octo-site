@@ -2,11 +2,11 @@
 <?php if ($this->list == 'users' && count($this->users) == 0 && strlen($this->query) > 0): ?>
     <div class="alert alert-secondary my-4">
 
-        <p class="font-weight-bold"><?= _('No users found') ?></p>
-        <p><?= str_replace('%query%', $this->query, _('On request "%query%" could not find any users')); ?></p>
+        <p class="font-weight-bold"><?= $this->translator->get('No users found') ?></p>
+        <p><?= str_replace('%query%', $this->query, $this->translator->get('On request "%query%" could not find any users')); ?></p>
 
         <a class="btn btn-primary mb-2" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>" role="button">
-            <?= _('View all users') ?>
+            <?= $this->translator->get('View all users') ?>
         </a>
     </div>
 <?php endif; ?>

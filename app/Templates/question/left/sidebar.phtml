@@ -209,17 +209,17 @@
 	
 	<div class="bd-toc-item active">
 		<a class="bd-toc-link" href="#">
-			<?= _('Tools') ?>
+			<?= $this->translator->get('Tools') ?>
 		</a>
 		<ul class="nav bd-sidenav">
 			<li>
 				<a href="<?= $this->question->getHistoryURL($this->lang) ?>">
-					<?= _('Change history') ?>
+					<?= $this->translator->get('Change history') ?>
 				</a>
 			</li>
 			<li>
 				<a href="#" data-toggle="modal" data-target="#modal_rename">
-					<?= _('Rename question') ?>
+					<?= $this->translator->get('Rename question') ?>
 				</a>
 			</li>
 			<li>

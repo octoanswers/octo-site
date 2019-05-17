@@ -5,7 +5,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= _('New question') ?>
+                    <?= $this->translator->get('New question') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -15,14 +15,14 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>
-                            <?= _('Ask questions in a form understandable to real people - they will answer, not search robots.') ?>.
+                            <?= $this->translator->get('Ask questions in a form understandable to real people - they will answer, not search robots.') ?>.
                         </label>
-                        <textarea class="form-control" id="question_title" rows="6" placeholder="<?= _('What is your question?') ?>?"></textarea>
+                        <textarea class="form-control" id="question_title" rows="6" placeholder="<?= $this->translator->get('What is your question?') ?>?"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="form__question_create__submit" class="btn btn-block btn-primary">
-                        <?= _('Ask a question') ?>
+                        <?= $this->translator->get('Ask a question') ?>
                     </button>
                 </div>
             </form>

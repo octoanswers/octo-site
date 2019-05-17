@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-05-17 00:27+0500\n"
-"PO-Revision-Date: 2019-05-17 00:27+0500\n"
+"POT-Creation-Date: 2019-05-17 15:08+0500\n"
+"PO-Revision-Date: 2019-05-17 15:08+0500\n"
 "Last-Translator: Alexander Gomzyakov <alexander.gomzyakov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -15,631 +15,13 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: APIController/POST/_answer-like.php:66
-msgid "API: Answer liked"
-msgstr "API: Ответ лайкнут"
-
-#: APIController/POST/_answer-unlike.php:60
-msgid "API: Answer disliked"
-msgstr "API: Ответ дизлайкнут"
-
-#: PageController/Error/InternalServerError.php:13
-#: PageController/Error/InternalServerError.php:14
-#: PageController/Error/InternalServerError.php:16
-#: PageController/Error/InternalServerError.php:17
-msgid "Error 500"
-msgstr "Ошибка 500"
-
-#: PageController/Error/PageNotFound.php:15
-#: PageController/Error/PageNotFound.php:16
-msgid "Error 404"
-msgstr "Ошибка 404"
-
-#: PageController/Error/QuestionNotFound.php:21
-#: PageController/Error/QuestionNotFound.php:22
-#: Templates/error/question_not_found/main.phtml:8
-msgid "Question not found"
-msgstr "Вопрос не найден"
-
-#: PageController/Feed/Show.php:44
-msgid "Feed"
-msgstr "Лента"
-
-#: PageController/Flow/Show.php:32 PageController/Flow/Show.php:47
-#: Templates/flow/main/header.phtml:4
-msgid "Flow"
-msgstr "Поток"
-
-#: PageController/Flow/Show.php:33 PageController/Flow/Show.php:48
-msgid "Questions and answers flow on Answeropedia."
-msgstr "Поток вопросов и ответов на Answeropedia."
-
-#: PageController/Hashtag/Show.php:49
-msgid "More hashtags"
-msgstr "Больше тем"
-
-#: PageController/Hashtag/Show.php:84 PageController/Hashtag/Show.php:115
-msgid "Questions and answers on the hashtag %hashtag%"
-msgstr "Вопросы и ответы на тему %hashtag%"
-
-#: PageController/Hashtags/Newest.php:38
-msgid "New hashtags"
-msgstr "Новые темы"
-
-#: PageController/Main/Show.php:39 PageController/Main/Show.php:45
-#: PageController/Main/Show.php:64 Templates/main/main/jumbotron.phtml:8
-msgid "Ask a question and get one complete answer"
-msgstr "Задайте вопрос и получите один исчерпывающий ответ"
-
-#: PageController/Main/Show.php:40 PageController/Main/Show.php:46
-#: PageController/Main/Show.php:65
-#: Templates/_common/right/about_answeropedia.phtml:8
-msgid ""
-"Answeropedia is like Wikipedia, only for questions and answers. You ask a "
-"question and get one complete, comprehensive and competent answer from the "
-"community."
-msgstr ""
-"Answeropedia — это как Википедия, только для вопросов и ответов. "
-"Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
-"ответы."
-
-#: PageController/Question/Show.php:87
-msgid "Wiki-answers to your questions on Answeropedia"
-msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
-
-#: PageController/Question/Show.php:196
-msgid "Wiki-answer on question: %question%"
-msgstr "Вики-ответ на вопрос: %question%"
-
-#: PageController/Question/UpdateHashtags.php:25
-msgid "Update hashtags for question \"%question%\" - Answeropedia"
-msgstr "Обновление тем вопроса «%question%» - Answeropedia"
-
-#: PageController/Question/UpdateHashtags.php:26
-msgid "Update hashtags for question \"%question%\""
-msgstr "Обновление тем вопроса «%question%»"
-
-#: PageController/Questions/Newest.php:45
-#: PageController/Questions/Newest.php:50
-msgid "Newest questions"
-msgstr "Новые вопросы"
-
-#: PageController/Questions/RecentlyUpdated.php:43
-#: PageController/Questions/RecentlyUpdated.php:48
-#: Templates/questions/main/nav.phtml:10
-msgid "Recently updated"
-msgstr "Недавно обновленные"
-
-#: PageController/Root/Show.php:27
-msgid "Questions and Answers"
-msgstr "Вопросы и ответы"
-
 #: PageController/Sandbox/WithoutAnswers.php:18
 #: PageController/Sandbox/WithoutHashtags.php:18
-#: Templates/question/main/actions_top.phtml:7
 msgid "Question"
 msgid_plural "Questions"
 msgstr[0] "Вопрос"
 msgstr[1] "Вопроса"
 msgstr[2] "Вопросов"
-
-#: PageController/Sandbox/WithoutAnswers.php:38
-#: PageController/Sandbox/WithoutHashtags.php:38
-msgid "Without answers"
-msgstr "Без ответов"
-
-#: PageController/Sandbox/WithoutAnswers.php:58
-#: PageController/Sandbox/WithoutAnswers.php:63
-#: Templates/sandbox/right/nav.phtml:10
-msgid "Questions without answers"
-msgstr "Вопросы без ответа"
-
-#: PageController/Sandbox/WithoutHashtags.php:58
-#: PageController/Sandbox/WithoutHashtags.php:63
-msgid "Questions without hashtags"
-msgstr "Вопросы без тем"
-
-#: PageController/Search/Show.php:61
-msgid "Search by questions"
-msgstr "Поиск по вопросам"
-
-#: PageController/Search/Show.php:64
-msgid "Search by hashtags"
-msgstr "Поиск по хештегам"
-
-#: PageController/Search/Show.php:67
-msgid "Search by contributors"
-msgstr "Поиск по пользователям"
-
-#: PageController/Settings/Show.php:18 Templates/settings/main.phtml:3
-#: Templates/user/main/header.phtml:47
-msgid "Settings"
-msgstr "Настройки профиля"
-
-#: PageController/User/Show.php:32 PageController/User/Show.php:33
-#: PageController/User/Show.php:71
-msgid "Wiki-answers on Answeropedia"
-msgstr "Вики-ответы на Answeropedia"
-
-#: PageController/Users/Newest.php:39 Templates/hashtags/main/nav.phtml:6
-#: Templates/questions/main/nav.phtml:5 Templates/users/main/nav.phtml:6
-msgid "Newest"
-msgstr "Новые"
-
-#: PageController/Users/Newest.php:46
-msgid "New users from around the world"
-msgstr "Новые пользователи со всего мира"
-
-#: Templates/_common/activity/f_h_added_q.phtml:11
-msgid "hashtag added question"
-msgstr "хештег вопрос"
-
-#: Templates/_common/activity/f_q_renamed_by_u.phtml:11
-msgid "question renamed"
-msgstr "вопрос переименован"
-
-#: Templates/_common/activity/f_q_update_a.phtml:11
-msgid "question updated answer"
-msgstr "обновлен ответ"
-
-#: Templates/_common/activity/f_u_follow_h.phtml:12
-msgid "follow hashtag"
-msgstr "подписался на хештег"
-
-#: Templates/_common/activity/f_u_follow_q.phtml:14
-msgid "follow question"
-msgstr "подписался на вопрос"
-
-#: Templates/_common/activity/f_u_follow_u.phtml:14
-msgid "follow user"
-msgstr "подписался на пользователя"
-
-#: Templates/_common/activity/f_u_rename_q.phtml:12
-msgid "renamed question"
-msgstr "переименовал вопрос"
-
-#: Templates/_common/activity/f_u_update_a.phtml:12
-msgid "change answer"
-msgstr "обновил ответ"
-
-#: Templates/_common/activity/f_u_update_signature.phtml:24
-msgid "change signature"
-msgstr "поменял подпись"
-
-#: Templates/_common/footer.phtml:10
-msgid "About"
-msgstr "О сайте"
-
-#: Templates/_common/footer.phtml:15
-msgid "Rules"
-msgstr "Правила"
-
-#: Templates/_common/footer.phtml:20
-msgid "Support"
-msgstr "Поддержка"
-
-#: Templates/_common/footer.phtml:25 Templates/search/main/nav.phtml:5
-msgid "Questions"
-msgstr "Вопросы"
-
-#: Templates/_common/footer.phtml:30 Templates/search/main/nav.phtml:15
-msgid "Users"
-msgstr "Пользователи"
-
-#: Templates/_common/footer.phtml:35
-msgid "Search"
-msgstr "Поиск"
-
-#: Templates/_common/item/question_with_answer.phtml:31
-#: Templates/question/main/lure_be_first_contributor.phtml:20
-#: Templates/question/main/lure_be_first_contributor.phtml:45
-#: Templates/question/main/related_questions.phtml:25
-msgid "Write first answer"
-msgstr "Написать первый ответ"
-
-#: Templates/_common/left/nav_main.phtml:7
-msgid "Main page"
-msgstr "Главная страница"
-
-#: Templates/_common/left/nav_main.phtml:12
-msgid "About site"
-msgstr "О сайте"
-
-#: Templates/_common/left/nav_main.phtml:17
-msgid "Recent changes"
-msgstr "Свежие правки"
-
-#: Templates/_common/left/nav_main.phtml:22
-msgid "Popular hashtags"
-msgstr "Популярные хештеги"
-
-#: Templates/_common/left/nav_main.phtml:27
-msgid "Random question"
-msgstr "Случайный вопрос"
-
-#: Templates/_common/left/nav_other_languages.phtml:5
-msgid "In other languages"
-msgstr "На других языках"
-
-#: Templates/_common/left/nav_other_languages.phtml:10
-msgid "English"
-msgstr "Английский"
-
-#: Templates/_common/left/nav_other_languages.phtml:15
-msgid "Russian"
-msgstr "Русский"
-
-#: Templates/_common/left/nav_other_languages.phtml:20
-msgid "All languages"
-msgstr "Все языки"
-
-#: Templates/_common/modal/ask.phtml:8
-msgid "New question"
-msgstr "Новый вопрос"
-
-#: Templates/_common/modal/ask.phtml:18
-msgid ""
-"Ask questions in a form understandable to real people - they will answer, "
-"not search robots."
-msgstr ""
-"Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не "
-"поисковые роботы."
-
-#: Templates/_common/modal/ask.phtml:20 Templates/main/main/jumbotron.phtml:19
-msgid "What is your question?"
-msgstr "Какой у вас вопрос?"
-
-#: Templates/_common/modal/ask.phtml:25 Templates/_common/navbar.phtml:91
-#: Templates/error/question_not_found/main.phtml:13
-#: Templates/main/main/jumbotron.phtml:22
-msgid "Ask a question"
-msgstr "Задать вопрос"
-
-#: Templates/_common/modal/login.phtml:8 Templates/_common/navbar.phtml:71
-#: Templates/users/right/login_or_signup.phtml:9
-msgid "Login"
-msgstr "Вход"
-
-#: Templates/_common/modal/login.phtml:17
-#: Templates/_common/modal/signup.phtml:21
-msgid "Email"
-msgstr "Email"
-
-#: Templates/_common/modal/login.phtml:21
-#: Templates/_common/modal/signup.phtml:25
-msgid "Password"
-msgstr "Пароль"
-
-#: Templates/_common/modal/login.phtml:27
-msgid "Log in"
-msgstr "Войти"
-
-#: Templates/_common/modal/signup.phtml:8
-#: Templates/_common/modal/signup.phtml:36 Templates/_common/navbar.phtml:76
-#: Templates/_modal/question/_lure/edit_answer.phtml:17
-#: Templates/_modal/question/_lure/first_answer_signup.phtml:17
-#: Templates/_modal/question/_lure/follow_question.phtml:17
-#: Templates/hashtag/main/actions.phtml:47
-#: Templates/users/right/login_or_signup.phtml:4
-#: Templates/users/right/login_or_signup.phtml:12
-msgid "Signup"
-msgstr "Зарегистрироваться"
-
-#: Templates/_common/modal/signup.phtml:17
-msgid "Username"
-msgstr "Логин"
-
-#: Templates/_common/modal/signup.phtml:30
-msgid ""
-"By signing up, you agree to our terms of use, privacy policy, and cookie "
-"policy."
-msgstr ""
-"Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами."
-
-#: Templates/_common/navbar.phtml:21
-msgid "About&nbsp;site"
-msgstr "О&nbsp;проекте"
-
-#: Templates/_common/navbar.phtml:28
-msgid "Recent&nbsp;changes"
-msgstr "Свежие&nbsp;правки"
-
-#: Templates/_common/navbar.phtml:34 Templates/question/main/hashtags.phtml:6
-#: Templates/search/main/nav.phtml:10
-msgid "Hashtags"
-msgstr "Хештеги"
-
-# 123xxx
-#: Templates/_common/right/about_answeropedia.phtml:5
-#: Templates/root/block/navbar.phtml:18
-msgid "About Answeropedia"
-msgstr "О Answeropedia"
-
-#: Templates/_common/right/about_answeropedia.phtml:11
-#: Templates/sandbox/right/about_sandbox.phtml:19
-msgid "Join the community"
-msgstr "Присоединиться к сообществу"
-
-#: Templates/_modal/question/_lure/edit_answer.phtml:13
-msgid "Register or log in and you can edit or supplement this question."
-msgstr ""
-"Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить "
-"этот вопрос."
-
-#: Templates/_modal/question/_lure/edit_answer.phtml:20
-#: Templates/_modal/question/_lure/feedback_thanks.phtml:17
-#: Templates/_modal/question/_lure/first_answer_signup.phtml:20
-#: Templates/_modal/question/_lure/follow_question.phtml:20
-msgid "Close"
-msgstr "Закрыть"
-
-#: Templates/_modal/question/_lure/feedback_thanks.phtml:13
-msgid "Thanks for the feedback!"
-msgstr "Спасибо за отзыв!"
-
-#: Templates/_modal/question/_lure/first_answer_signup.phtml:13
-msgid ""
-"Register or log in and you will be the first to write the answer to this "
-"question."
-msgstr ""
-"Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
-"вопрос."
-
-#: Templates/_modal/question/_lure/follow_question.phtml:13
-#: Templates/hashtag/main/actions.phtml:36
-msgid "Register or sign in and you can subscribe to this question."
-msgstr "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
-
-#: Templates/_modal/question/rename.phtml:8
-#: Templates/_modal/question/rename.phtml:30
-#: Templates/question/left/sidebar.phtml:222
-#: Templates/question/right/actions.phtml:31
-msgid "Rename question"
-msgstr "Переименовать вопрос"
-
-#: Templates/_modal/question/rename.phtml:18
-msgid "Before you rename a question, please read the basic rules for renaming"
-msgstr ""
-"Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с "
-"основными правилами переименования"
-
-#: Templates/_modal/question/rename.phtml:24
-msgid "Leave redirect"
-msgstr "Оставить редирект"
-
-#: Templates/_modal/question/upload_image.phtml:7
-msgid "Upload question image"
-msgstr "Загрузка картинки вопроса"
-
-#: Templates/_modal/question/upload_image.phtml:21
-msgid "Upload image"
-msgstr "Загрузить картинку"
-
-#: Templates/answer_edit/main.phtml:7
-#: Templates/answer_history/main/revision_item.phtml:19
-msgid "Description of changes"
-msgstr "Описание изменений"
-
-#: Templates/answer_edit/main.phtml:12 Templates/settings/main.phtml:43
-#: Templates/settings/main.phtml:59 Templates/settings/main.phtml:77
-msgid "Save"
-msgstr "Сохранить"
-
-#: Templates/answer_edit/main/header.phtml:3
-msgid "Edit answer"
-msgstr "Править ответ"
-
-#: Templates/answer_edit/main/header.phtml:11
-#: Templates/answer_history/main/jumbotron.phtml:13
-msgid "Back to question"
-msgstr "Вернуться к вопросу"
-
-#: Templates/answer_edit/main/header.phtml:14
-msgid "Search in DuckDuckGo"
-msgstr "Поискать в DuckDuckGo"
-
-#: Templates/answer_history/main/revision_item.phtml:16
-msgid "Change ID"
-msgstr "Правка"
-
-#: Templates/answer_history/main/revision_item.phtml:21
-msgid "No description of changes"
-msgstr "Нет описания изменений"
-
-#: Templates/error/question_not_found/main.phtml:16
-msgid "Go back"
-msgstr "Вернуться назад"
-
-#: Templates/feed/main/lure/follow_3_hashtags.phtml:10
-msgid "Subscribe to several hashtags"
-msgstr "Подпишитесь на несколько хештегов"
-
-#: Templates/feed/main/lure/follow_3_hashtags.phtml:13
-msgid ""
-"Select and subscribe to three topics close to you. Questions on these topics "
-"will appear in your news feed."
-msgstr ""
-"Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут "
-"появляться у вас в ленте новостей."
-
-#: Templates/feed/main/lure/follow_3_hashtags.phtml:16
-msgid "View popular hashtags"
-msgstr "Посмотреть популярные хештеги"
-
-#: Templates/feed/main/lure/follow_3_questions.phtml:10
-msgid "Follow some questions"
-msgstr "Следуйте за некоторыми вопросами"
-
-#: Templates/feed/main/lure/follow_3_questions.phtml:13
-msgid ""
-"By subscribing to interesting questions, you can follow their edits. Find "
-"and subscribe to three or more questions."
-msgstr ""
-"Подписываясь на интересные вопросы, вы сможете следить за их правками. "
-"Найдите и подпишитесь на три или более вопроса."
-
-#: Templates/feed/main/lure/follow_3_questions.phtml:16
-msgid "Views a questions"
-msgstr "Посмотреть вопросы"
-
-#: Templates/feed/main/lure/follow_3_users.phtml:10
-msgid "Find your first friends"
-msgstr "Найдите первых друзей"
-
-#: Templates/feed/main/lure/follow_3_users.phtml:13
-msgid ""
-"Find and subscribe to three interesting users. Questions, answers and other "
-"activities of these users will appear in your news feed."
-msgstr ""
-"Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и "
-"прочие активности этих пользователей будут появляться у вас в ленте новостей."
-
-#: Templates/feed/main/lure/follow_3_users.phtml:16
-msgid "View users"
-msgstr "Посмотреть пользователей"
-
-#: Templates/feed/main/lure/write_answer.phtml:10
-msgid "Напишите первый ответ"
-msgstr "Write the first answer"
-
-#: Templates/feed/main/lure/write_answer.phtml:13
-msgid ""
-"Look at the questions that no one else has written an answer and become the "
-"first author."
-msgstr ""
-"Посмотрите вопросы на которые еще никто не написал ответа и станьте первым "
-"автором."
-
-#: Templates/feed/main/lure/write_answer.phtml:16
-msgid "View questions in the sandbox"
-msgstr "Посмотреть вопросы в песочнице"
-
-#: Templates/feed/right/improve_feed.phtml:5
-msgid "Improve your feed"
-msgstr "Улучшите вашу ленту"
-
-#: Templates/feed/right/improve_feed.phtml:13
-msgid "Visit your feed"
-msgstr "Посетите ленту"
-
-#: Templates/feed/right/improve_feed.phtml:21
-#: Templates/feed/right/improve_feed.phtml:27
-msgid "Set real name"
-msgstr "Введите реальное имя"
-
-#: Templates/feed/right/improve_feed.phtml:36
-#: Templates/feed/right/improve_feed.phtml:42
-msgid "Set signature"
-msgstr "Придумайте подпись"
-
-#: Templates/feed/right/improve_feed.phtml:51
-#: Templates/feed/right/improve_feed.phtml:57
-msgid "Follow 3 more hashtags"
-msgstr "Подпишитесь на три темы"
-
-#: Templates/feed/right/improve_feed.phtml:66
-#: Templates/feed/right/improve_feed.phtml:72
-msgid "Follow your first question"
-msgstr "Подпишитесь на первый вопрос"
-
-#: Templates/feed/right/improve_feed.phtml:81
-#: Templates/feed/right/improve_feed.phtml:87
-msgid "Find your friends"
-msgstr "Найдите друзей"
-
-#: Templates/feed/right/improve_feed.phtml:97
-msgid "Ask your first question"
-msgstr "Задайте первый вопрос"
-
-#: Templates/feed/right/improve_feed.phtml:106
-msgid "Answer a question"
-msgstr "Ответьте на вопрос"
-
-#: Templates/flow/right/filter.phtml:4 Templates/sandbox/right/nav.phtml:5
-msgid "Filters"
-msgstr "Фильтры"
-
-#: Templates/hashtag/main/actions.phtml:14
-#: Templates/hashtag/main/actions.phtml:20
-#: Templates/hashtag/main/actions.phtml:28
-#: Templates/question/main/actions_follow.phtml:8
-#: Templates/question/main/actions_follow.phtml:12
-#: Templates/question/main/actions_follow.phtml:16
-#: Templates/user/main/header.phtml:37 Templates/user/main/header.phtml:41
-msgid "Follow"
-msgstr "Подписаться"
-
-#: Templates/hashtag/main/actions.phtml:15
-#: Templates/hashtag/main/actions.phtml:20
-#: Templates/question/main/actions_follow.phtml:9
-#: Templates/question/main/actions_follow.phtml:12
-#: Templates/user/main/header.phtml:38 Templates/user/main/header.phtml:41
-msgid "Followed"
-msgstr "Подписан"
-
-#: Templates/hashtag/main/actions.phtml:16
-#: Templates/question/main/actions_follow.phtml:10
-#: Templates/user/main/header.phtml:39
-msgid "Unfollow"
-msgstr "Отписаться"
-
-#: Templates/hashtag/main/actions.phtml:46
-msgid "Cancel"
-msgstr "Отмена"
-
-#: Templates/hashtags/main/header.phtml:9
-msgid "Search hashtags"
-msgstr "Поиск тем"
-
-#: Templates/hashtags/main/nav.phtml:11 Templates/questions/main/nav.phtml:15
-#: Templates/users/main/nav.phtml:11
-msgid "Popular"
-msgstr "Популярные"
-
-#: Templates/main/main/how_it_works.phtml:8
-msgid "How it works?"
-msgstr "Как это работает?"
-
-#: Templates/main/main/how_it_works.phtml:20
-msgid "You ask a question about any hashtag of interest to you"
-msgstr "Вы задаете вопрос на любую интересующую вас тему"
-
-#: Templates/main/main/how_it_works.phtml:31
-msgid "We find a specialist who can give a competent answer"
-msgstr "Мы находим специалистов, которые могут дать компетентный ответ"
-
-#: Templates/main/main/how_it_works.phtml:42
-msgid "You receive an answer to the email"
-msgstr "Вы получаете исчерпывающий ответ на email"
-
-#: Templates/main/main/jumbotron.phtml:11
-msgid "What do you mean complete?"
-msgstr "Что значит исчерпывающий?"
-
-#: Templates/main/main/share.phtml:3
-msgid ""
-"You can help the Answeropedia project by simply sharing your link with your "
-"friends."
-msgstr ""
-"Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями "
-"ссылкой на него."
-
-#: Templates/question/left/sidebar.phtml:212
-msgid "Tools"
-msgstr "Инструменты"
-
-#: Templates/question/left/sidebar.phtml:217
-msgid "Change history"
-msgstr "История изменений"
-
-#: Templates/question/main/actions_top.phtml:21
-msgid "Edit"
-msgstr "Править"
-
-#: Templates/question/main/actions_top.phtml:32
-#: Templates/question/main/actions_top.phtml:37
-msgid "History"
-msgstr "История"
 
 #: Templates/question/main/contributors_full.phtml:7
 #: Templates/question/right/contributors_top.phtml:9
@@ -650,233 +32,609 @@ msgstr[0] "Автор"
 msgstr[1] "Автора"
 msgstr[2] "Авторов"
 
-#: Templates/question/main/contributors_full.phtml:10
-msgid "Answer contributors"
-msgstr "Авторы ответа"
+#~ msgid "API: Answer liked"
+#~ msgstr "API: Ответ лайкнут"
 
-#: Templates/question/main/hashtags.phtml:17
+#~ msgid "API: Answer disliked"
+#~ msgstr "API: Ответ дизлайкнут"
+
+#~ msgid "Error 500"
+#~ msgstr "Ошибка 500"
+
+#~ msgid "Error 404"
+#~ msgstr "Ошибка 404"
+
+#~ msgid "Question not found"
+#~ msgstr "Вопрос не найден"
+
+#~ msgid "Feed"
+#~ msgstr "Лента"
+
+#~ msgid "Flow"
+#~ msgstr "Поток"
+
+#~ msgid "Questions and answers flow on Answeropedia."
+#~ msgstr "Поток вопросов и ответов на Answeropedia."
+
+#~ msgid "More hashtags"
+#~ msgstr "Больше тем"
+
+#~ msgid "Questions and answers on the hashtag %hashtag%"
+#~ msgstr "Вопросы и ответы на тему %hashtag%"
+
+#~ msgid "New hashtags"
+#~ msgstr "Новые темы"
+
+#~ msgid "Ask a question and get one complete answer"
+#~ msgstr "Задайте вопрос и получите один исчерпывающий ответ"
+
+#~ msgid ""
+#~ "Answeropedia is like Wikipedia, only for questions and answers. You ask a "
+#~ "question and get one complete, comprehensive and competent answer from "
+#~ "the community."
+#~ msgstr ""
+#~ "Answeropedia — это как Википедия, только для вопросов и ответов. "
+#~ "Пользователи могут задавать вопросы, отвечать на них и дополнять чужие "
+#~ "ответы."
+
+#~ msgid "Wiki-answers to your questions on Answeropedia"
+#~ msgstr "Вики-ответы на Ваши вопросы на answeropedia.org"
+
+#~ msgid "Wiki-answer on question: %question%"
+#~ msgstr "Вики-ответ на вопрос: %question%"
+
+#~ msgid "Update hashtags for question \"%question%\" - Answeropedia"
+#~ msgstr "Обновление тем вопроса «%question%» - Answeropedia"
+
+#~ msgid "Update hashtags for question \"%question%\""
+#~ msgstr "Обновление тем вопроса «%question%»"
+
+#~ msgid "Newest questions"
+#~ msgstr "Новые вопросы"
+
+#~ msgid "Recently updated"
+#~ msgstr "Недавно обновленные"
+
+#~ msgid "Questions and Answers"
+#~ msgstr "Вопросы и ответы"
+
+#~ msgid "Without answers"
+#~ msgstr "Без ответов"
+
+#~ msgid "Questions without answers"
+#~ msgstr "Вопросы без ответа"
+
+#~ msgid "Questions without hashtags"
+#~ msgstr "Вопросы без тем"
+
+#~ msgid "Search by questions"
+#~ msgstr "Поиск по вопросам"
+
+#~ msgid "Search by hashtags"
+#~ msgstr "Поиск по хештегам"
+
+#~ msgid "Search by contributors"
+#~ msgstr "Поиск по пользователям"
+
+#~ msgid "Settings"
+#~ msgstr "Настройки профиля"
+
+#~ msgid "Wiki-answers on Answeropedia"
+#~ msgstr "Вики-ответы на Answeropedia"
+
+#~ msgid "Newest"
+#~ msgstr "Новые"
+
+#~ msgid "New users from around the world"
+#~ msgstr "Новые пользователи со всего мира"
+
+#~ msgid "hashtag added question"
+#~ msgstr "хештег вопрос"
+
+#~ msgid "question renamed"
+#~ msgstr "вопрос переименован"
+
+#~ msgid "question updated answer"
+#~ msgstr "обновлен ответ"
+
+#~ msgid "follow hashtag"
+#~ msgstr "подписался на хештег"
+
+#~ msgid "follow question"
+#~ msgstr "подписался на вопрос"
+
+#~ msgid "follow user"
+#~ msgstr "подписался на пользователя"
+
+#~ msgid "renamed question"
+#~ msgstr "переименовал вопрос"
+
+#~ msgid "change answer"
+#~ msgstr "обновил ответ"
+
+#~ msgid "change signature"
+#~ msgstr "поменял подпись"
+
+#~ msgid "About"
+#~ msgstr "О сайте"
+
+#~ msgid "Rules"
+#~ msgstr "Правила"
+
+#~ msgid "Support"
+#~ msgstr "Поддержка"
+
+#~ msgid "Questions"
+#~ msgstr "Вопросы"
+
+#~ msgid "Users"
+#~ msgstr "Пользователи"
+
+#~ msgid "Search"
+#~ msgstr "Поиск"
+
+#~ msgid "Write first answer"
+#~ msgstr "Написать первый ответ"
+
+#~ msgid "Main page"
+#~ msgstr "Главная страница"
+
+#~ msgid "About site"
+#~ msgstr "О сайте"
+
+#~ msgid "Recent changes"
+#~ msgstr "Свежие правки"
+
+#~ msgid "Popular hashtags"
+#~ msgstr "Популярные хештеги"
+
+#~ msgid "Random question"
+#~ msgstr "Случайный вопрос"
+
+#~ msgid "In other languages"
+#~ msgstr "На других языках"
+
+#~ msgid "English"
+#~ msgstr "Английский"
+
+#~ msgid "Russian"
+#~ msgstr "Русский"
+
+#~ msgid "All languages"
+#~ msgstr "Все языки"
+
+#~ msgid "New question"
+#~ msgstr "Новый вопрос"
+
+#~ msgid ""
+#~ "Ask questions in a form understandable to real people - they will answer, "
+#~ "not search robots."
+#~ msgstr ""
+#~ "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а "
+#~ "не поисковые роботы."
+
+#~ msgid "What is your question?"
+#~ msgstr "Какой у вас вопрос?"
+
+#~ msgid "Ask a question"
+#~ msgstr "Задать вопрос"
+
+#~ msgid "Login"
+#~ msgstr "Вход"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Password"
+#~ msgstr "Пароль"
+
+#~ msgid "Log in"
+#~ msgstr "Войти"
+
+#~ msgid "Signup"
+#~ msgstr "Зарегистрироваться"
+
+#~ msgid "Username"
+#~ msgstr "Логин"
+
+#~ msgid ""
+#~ "By signing up, you agree to our terms of use, privacy policy, and cookie "
+#~ "policy."
+#~ msgstr ""
+#~ "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими "
+#~ "правилами."
+
+#~ msgid "About&nbsp;site"
+#~ msgstr "О&nbsp;проекте"
+
+#~ msgid "Recent&nbsp;changes"
+#~ msgstr "Свежие&nbsp;правки"
+
+#~ msgid "Hashtags"
+#~ msgstr "Хештеги"
+
+# 123xxx
+#~ msgid "About Answeropedia"
+#~ msgstr "О Answeropedia"
+
+#~ msgid "Join the community"
+#~ msgstr "Присоединиться к сообществу"
+
+#~ msgid "Register or log in and you can edit or supplement this question."
+#~ msgstr ""
+#~ "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить "
+#~ "этот вопрос."
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
+
+#~ msgid "Thanks for the feedback!"
+#~ msgstr "Спасибо за отзыв!"
+
+#~ msgid ""
+#~ "Register or log in and you will be the first to write the answer to this "
+#~ "question."
+#~ msgstr ""
+#~ "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот "
+#~ "вопрос."
+
+#~ msgid "Register or sign in and you can subscribe to this question."
+#~ msgstr ""
+#~ "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос."
+
+#~ msgid "Rename question"
+#~ msgstr "Переименовать вопрос"
+
+#~ msgid ""
+#~ "Before you rename a question, please read the basic rules for renaming"
+#~ msgstr ""
+#~ "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь "
+#~ "с основными правилами переименования"
+
+#~ msgid "Leave redirect"
+#~ msgstr "Оставить редирект"
+
+#~ msgid "Upload question image"
+#~ msgstr "Загрузка картинки вопроса"
+
+#~ msgid "Upload image"
+#~ msgstr "Загрузить картинку"
+
+#~ msgid "Description of changes"
+#~ msgstr "Описание изменений"
+
+#~ msgid "Save"
+#~ msgstr "Сохранить"
+
+#~ msgid "Edit answer"
+#~ msgstr "Править ответ"
+
+#~ msgid "Back to question"
+#~ msgstr "Вернуться к вопросу"
+
+#~ msgid "Search in DuckDuckGo"
+#~ msgstr "Поискать в DuckDuckGo"
+
+#~ msgid "Change ID"
+#~ msgstr "Правка"
+
+#~ msgid "No description of changes"
+#~ msgstr "Нет описания изменений"
+
+#~ msgid "Go back"
+#~ msgstr "Вернуться назад"
+
+#~ msgid "Subscribe to several hashtags"
+#~ msgstr "Подпишитесь на несколько хештегов"
+
+#~ msgid ""
+#~ "Select and subscribe to three topics close to you. Questions on these "
+#~ "topics will appear in your news feed."
+#~ msgstr ""
+#~ "Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут "
+#~ "появляться у вас в ленте новостей."
+
+#~ msgid "View popular hashtags"
+#~ msgstr "Посмотреть популярные хештеги"
+
+#~ msgid "Follow some questions"
+#~ msgstr "Следуйте за некоторыми вопросами"
+
+#~ msgid ""
+#~ "By subscribing to interesting questions, you can follow their edits. Find "
+#~ "and subscribe to three or more questions."
+#~ msgstr ""
+#~ "Подписываясь на интересные вопросы, вы сможете следить за их правками. "
+#~ "Найдите и подпишитесь на три или более вопроса."
+
+#~ msgid "Views a questions"
+#~ msgstr "Посмотреть вопросы"
+
+#~ msgid "Find your first friends"
+#~ msgstr "Найдите первых друзей"
+
+#~ msgid ""
+#~ "Find and subscribe to three interesting users. Questions, answers and "
+#~ "other activities of these users will appear in your news feed."
+#~ msgstr ""
+#~ "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы "
+#~ "и прочие активности этих пользователей будут появляться у вас в ленте "
+#~ "новостей."
+
+#~ msgid "View users"
+#~ msgstr "Посмотреть пользователей"
+
+#~ msgid "Напишите первый ответ"
+#~ msgstr "Write the first answer"
+
+#~ msgid ""
+#~ "Look at the questions that no one else has written an answer and become "
+#~ "the first author."
+#~ msgstr ""
+#~ "Посмотрите вопросы на которые еще никто не написал ответа и станьте "
+#~ "первым автором."
+
+#~ msgid "View questions in the sandbox"
+#~ msgstr "Посмотреть вопросы в песочнице"
+
+#~ msgid "Improve your feed"
+#~ msgstr "Улучшите вашу ленту"
+
+#~ msgid "Visit your feed"
+#~ msgstr "Посетите ленту"
+
+#~ msgid "Set real name"
+#~ msgstr "Введите реальное имя"
+
+#~ msgid "Set signature"
+#~ msgstr "Придумайте подпись"
+
+#~ msgid "Follow 3 more hashtags"
+#~ msgstr "Подпишитесь на три темы"
+
+#~ msgid "Follow your first question"
+#~ msgstr "Подпишитесь на первый вопрос"
+
+#~ msgid "Find your friends"
+#~ msgstr "Найдите друзей"
+
+#~ msgid "Ask your first question"
+#~ msgstr "Задайте первый вопрос"
+
+#~ msgid "Answer a question"
+#~ msgstr "Ответьте на вопрос"
+
+#~ msgid "Filters"
+#~ msgstr "Фильтры"
+
+#~ msgid "Follow"
+#~ msgstr "Подписаться"
+
+#~ msgid "Followed"
+#~ msgstr "Подписан"
+
+#~ msgid "Unfollow"
+#~ msgstr "Отписаться"
+
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
+
+#~ msgid "Search hashtags"
+#~ msgstr "Поиск тем"
+
+#~ msgid "Popular"
+#~ msgstr "Популярные"
+
+#~ msgid "How it works?"
+#~ msgstr "Как это работает?"
+
+#~ msgid "You ask a question about any hashtag of interest to you"
+#~ msgstr "Вы задаете вопрос на любую интересующую вас тему"
+
+#~ msgid "We find a specialist who can give a competent answer"
+#~ msgstr "Мы находим специалистов, которые могут дать компетентный ответ"
+
+#~ msgid "You receive an answer to the email"
+#~ msgstr "Вы получаете исчерпывающий ответ на email"
+
+#~ msgid "What do you mean complete?"
+#~ msgstr "Что значит исчерпывающий?"
+
+#~ msgid ""
+#~ "You can help the Answeropedia project by simply sharing your link with "
+#~ "your friends."
+#~ msgstr ""
+#~ "Вы можете помочь проекту Answeropedia, просто поделившись со своими "
+#~ "друзьями ссылкой на него."
+
+#~ msgid "Tools"
+#~ msgstr "Инструменты"
+
+#~ msgid "Change history"
+#~ msgstr "История изменений"
+
+#~ msgid "Edit"
+#~ msgstr "Править"
+
+#~ msgid "History"
+#~ msgstr "История"
+
+#~ msgid "Answer contributors"
+#~ msgstr "Авторы ответа"
+
 #, fuzzy
-#| msgid "Change ID"
-msgid "Change"
-msgstr "Правка"
+#~| msgid "Change ID"
+#~ msgid "Change"
+#~ msgstr "Правка"
 
-#: Templates/question/main/lure_be_first_contributor.phtml:14
-#: Templates/question/main/lure_be_first_contributor.phtml:39
-msgid "Be the first author"
-msgstr "Станьте первым автором"
+#~ msgid "Be the first author"
+#~ msgstr "Станьте первым автором"
 
-#: Templates/question/main/lure_be_first_contributor.phtml:17
-#: Templates/question/main/lure_be_first_contributor.phtml:42
-msgid ""
-"Still no one tried to write an answer to this question. Be the first if the "
-"hashtag of the question is close to you!"
-msgstr ""
-"Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
-"тема вопроса вам близка!"
+#~ msgid ""
+#~ "Still no one tried to write an answer to this question. Be the first if "
+#~ "the hashtag of the question is close to you!"
+#~ msgstr ""
+#~ "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если "
+#~ "тема вопроса вам близка!"
 
-#: Templates/question/main/related_questions.phtml:6
-msgid "Related questions"
-msgstr "Похожие вопросы"
+#~ msgid "Related questions"
+#~ msgstr "Похожие вопросы"
 
-#: Templates/question/main/related_questions.phtml:20
-#: Templates/question/right/info_about_question.phtml:24
-msgid "Answer updated"
-msgstr "Ответ обновлен"
+#~ msgid "Answer updated"
+#~ msgstr "Ответ обновлен"
 
-#: Templates/question/main/share.phtml:5
-msgid "Share link"
-msgstr "Поделиться ссылкой"
+#~ msgid "Share link"
+#~ msgstr "Поделиться ссылкой"
 
-#: Templates/question/main/subscribe.phtml:13
-msgid "Subscription to the question"
-msgstr "Подписка на вопрос"
+#~ msgid "Subscription to the question"
+#~ msgstr "Подписка на вопрос"
 
-#: Templates/question/main/subscribe.phtml:16
-msgid ""
-"Enter your email address to get notified about the answer as soon as it "
-"appears"
-msgstr ""
-"Укажите адрес электронной почты и мы сообщим об ответе, как только он "
-"появится"
+#~ msgid ""
+#~ "Enter your email address to get notified about the answer as soon as it "
+#~ "appears"
+#~ msgstr ""
+#~ "Укажите адрес электронной почты и мы сообщим об ответе, как только он "
+#~ "появится"
 
-#: Templates/question/main/subscribe.phtml:25
-msgid "Your email"
-msgstr "Ваш email"
+#~ msgid "Your email"
+#~ msgstr "Ваш email"
 
-#: Templates/question/right/actions.phtml:7
-msgid "Actions"
-msgstr "Действия"
+#~ msgid "Actions"
+#~ msgstr "Действия"
 
-#: Templates/question/right/actions.phtml:18
-#: Templates/question/right/image.phtml:10
-msgid "Update picture"
-msgstr "Обновить картинку"
+#~ msgid "Update picture"
+#~ msgstr "Обновить картинку"
 
-#: Templates/question/right/actions.phtml:20
-msgid "Add picture"
-msgstr "Добавить картинку"
+#~ msgid "Add picture"
+#~ msgstr "Добавить картинку"
 
-#: Templates/question/right/actions.phtml:40
-msgid "Report"
-msgstr "Пожаловаться"
+#~ msgid "Report"
+#~ msgstr "Пожаловаться"
 
-#: Templates/question/right/contributors_top.phtml:12
-msgid "Top contributors"
-msgstr "Топ авторов"
+#~ msgid "Top contributors"
+#~ msgstr "Топ авторов"
 
-#: Templates/question/right/contributors_top.phtml:47
-msgid "All answer contributors"
-msgstr "Все авторы ответа"
+#~ msgid "All answer contributors"
+#~ msgstr "Все авторы ответа"
 
-#: Templates/questions/main.phtml:12
-msgid "More questions"
-msgstr "Больше вопросов"
+#~ msgid "More questions"
+#~ msgstr "Больше вопросов"
 
-#: Templates/root/block/navbar.phtml:13
-msgid "It's like wikipedia, only for questions and answers."
-msgstr "Это как Википедия, только для вопросов и ответов."
+#~ msgid "It's like wikipedia, only for questions and answers."
+#~ msgstr "Это как Википедия, только для вопросов и ответов."
 
-#: Templates/sandbox/right/about_sandbox.phtml:5
-msgid "What is a \"sandbox\"?"
-msgstr "Что такое «Песочница»?"
+#~ msgid "What is a \"sandbox\"?"
+#~ msgstr "Что такое «Песочница»?"
 
-#: Templates/sandbox/right/about_sandbox.phtml:8
-msgid ""
-"The sandbox is a place to get new questions that have not yet been answered."
-msgstr ""
-"Песочница — это место куда попадают новые, ещё не имеющие ответа вопросы."
+#~ msgid ""
+#~ "The sandbox is a place to get new questions that have not yet been "
+#~ "answered."
+#~ msgstr ""
+#~ "Песочница — это место куда попадают новые, ещё не имеющие ответа вопросы."
 
-#: Templates/sandbox/right/about_sandbox.phtml:9
-msgid ""
-"As soon as the question has a comprehensive answer and several hashtags, it "
-"is transferred to the <a href=\"%url%\">main list</a>."
-msgstr ""
-"Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он "
-"переносится в <a href=\"%url%\">основной список</a>."
+#~ msgid ""
+#~ "As soon as the question has a comprehensive answer and several hashtags, "
+#~ "it is transferred to the <a href=\"%url%\">main list</a>."
+#~ msgstr ""
+#~ "Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, "
+#~ "он переносится в <a href=\"%url%\">основной список</a>."
 
-#: Templates/sandbox/right/about_sandbox.phtml:13
-msgid "Now in the sandbox:"
-msgstr "Сейчас в песочнице:"
+#~ msgid "Now in the sandbox:"
+#~ msgstr "Сейчас в песочнице:"
 
-#: Templates/sandbox/right/about_sandbox.phtml:22
-msgid "or <a data-toggle=\"modal\" data-target=\"#modal_login\">log-in</a>"
-msgstr "или <a data-toggle=\"modal\" data-target=\"#modal_login\">войдите</a>"
+#~ msgid "or <a data-toggle=\"modal\" data-target=\"#modal_login\">log-in</a>"
+#~ msgstr ""
+#~ "или <a data-toggle=\"modal\" data-target=\"#modal_login\">войдите</a>"
 
-#: Templates/sandbox/right/nav.phtml:15
-msgid "Without hashtags"
-msgstr "Без тем"
+#~ msgid "Without hashtags"
+#~ msgstr "Без тем"
 
-#: Templates/sandbox/right/nav.phtml:20
-msgid "All questions"
-msgstr "Все вопросы"
+#~ msgid "All questions"
+#~ msgstr "Все вопросы"
 
-#: Templates/search/main/hashtags_not_found.phtml:5
-msgid "No hashtags found"
-msgstr "Хештегов не найдено"
+#~ msgid "No hashtags found"
+#~ msgstr "Хештегов не найдено"
 
-#: Templates/search/main/hashtags_not_found.phtml:7
-msgid "No hashtag found for \"%query%\""
-msgstr "Не удалось найти хештеги по запросу «%query%»"
+#~ msgid "No hashtag found for \"%query%\""
+#~ msgstr "Не удалось найти хештеги по запросу «%query%»"
 
-#: Templates/search/main/hashtags_not_found.phtml:11
-msgid "View all hashtags"
-msgstr "Посмотреть все хештеги"
+#~ msgid "View all hashtags"
+#~ msgstr "Посмотреть все хештеги"
 
-#: Templates/search/main/questions_not_found.phtml:5
-msgid "No questions found"
-msgstr "Вопросов не найдено"
+#~ msgid "No questions found"
+#~ msgstr "Вопросов не найдено"
 
-#: Templates/search/main/questions_not_found.phtml:6
-msgid "On request \"%query%\" could not find any questions"
-msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
+#~ msgid "On request \"%query%\" could not find any questions"
+#~ msgstr "По запросу «%query%» не удалось найти ни одного вопроса"
 
-#: Templates/search/main/questions_not_found.phtml:9
-msgid "View all questions"
-msgstr "Посмотреть все вопросы"
+#~ msgid "View all questions"
+#~ msgstr "Посмотреть все вопросы"
 
-#: Templates/search/main/users_not_found.phtml:5
-msgid "No users found"
-msgstr "Пользователей не найдено"
+#~ msgid "No users found"
+#~ msgstr "Пользователей не найдено"
 
-#: Templates/search/main/users_not_found.phtml:6
-msgid "On request \"%query%\" could not find any users"
-msgstr "По запросу «%query%» не удалось найти ни одного пользователя"
+#~ msgid "On request \"%query%\" could not find any users"
+#~ msgstr "По запросу «%query%» не удалось найти ни одного пользователя"
 
-#: Templates/search/main/users_not_found.phtml:9
-msgid "View all users"
-msgstr "Посмотреть всех пользователей"
+#~ msgid "View all users"
+#~ msgstr "Посмотреть всех пользователей"
 
-#: Templates/settings/main.phtml:6
-msgid "Back to profile"
-msgstr "Вернуться к профилю"
+#~ msgid "Back to profile"
+#~ msgstr "Вернуться к профилю"
 
-#: Templates/settings/main.phtml:10 Templates/settings/main.phtml:22
-msgid "Upload avatar"
-msgstr "Загрузить аватар"
+#~ msgid "Upload avatar"
+#~ msgstr "Загрузить аватар"
 
-#: Templates/settings/main.phtml:16
-msgid ""
-"It is advisable to use your real photo as an avatar - this causes more "
-"confidence among users."
-msgstr ""
-"Желательно использовать в качестве аватарки ваше реальное фото — это "
-"вызывает больше доверия у пользователей."
+#~ msgid ""
+#~ "It is advisable to use your real photo as an avatar - this causes more "
+#~ "confidence among users."
+#~ msgstr ""
+#~ "Желательно использовать в качестве аватарки ваше реальное фото — это "
+#~ "вызывает больше доверия у пользователей."
 
-#: Templates/settings/main.phtml:33
-msgid "Real name"
-msgstr "Реальное имя"
+#~ msgid "Real name"
+#~ msgstr "Реальное имя"
 
-#: Templates/settings/main.phtml:37
-msgid ""
-"The real name causes more trust than @username. It will be shown next to "
-"your edits and in the Top authors."
-msgstr ""
-"Реальное имя вызывает больше доверия, чем @username. Оно будет показываться "
-"рядом с вашими правками и в ТОПе авторов."
+#~ msgid ""
+#~ "The real name causes more trust than @username. It will be shown next to "
+#~ "your edits and in the Top authors."
+#~ msgstr ""
+#~ "Реальное имя вызывает больше доверия, чем @username. Оно будет "
+#~ "показываться рядом с вашими правками и в ТОПе авторов."
 
-#: Templates/settings/main.phtml:49
-msgid "Signature"
-msgstr "Подпись"
+#~ msgid "Signature"
+#~ msgstr "Подпись"
 
-#: Templates/settings/main.phtml:53
-msgid "Enter a signature describing your professional skills and knowledge."
-msgstr "Введите подпись, описывающую ваши профессиональные навыки и знания."
+#~ msgid "Enter a signature describing your professional skills and knowledge."
+#~ msgstr "Введите подпись, описывающую ваши профессиональные навыки и знания."
 
-#: Templates/settings/main.phtml:55
-msgid "For example: Professor of Psychology, entrepreneur, novice poet"
-msgstr "Например: Профессор психологии, предприниматель, начинающий поэт"
+#~ msgid "For example: Professor of Psychology, entrepreneur, novice poet"
+#~ msgstr "Например: Профессор психологии, предприниматель, начинающий поэт"
 
-#: Templates/settings/main.phtml:66
-msgid "Site"
-msgstr "Сайт"
+#~ msgid "Site"
+#~ msgstr "Сайт"
 
-#: Templates/settings/main.phtml:71
-msgid "Enter the address of your website or page on the social network."
-msgstr "Введите адрес вашего сайта или страницы в социальной сети."
+#~ msgid "Enter the address of your website or page on the social network."
+#~ msgstr "Введите адрес вашего сайта или страницы в социальной сети."
 
-#: Templates/user/main/div__no_answers.phtml:4
-msgid "No answers"
-msgstr "Нет ответов"
+#~ msgid "No answers"
+#~ msgstr "Нет ответов"
 
-#: Templates/user/main/div__no_answers.phtml:5
-msgid "User has not written any answers yet"
-msgstr "Пользователь пока не написал ни одного ответа"
+#~ msgid "User has not written any answers yet"
+#~ msgstr "Пользователь пока не написал ни одного ответа"
 
-#: Templates/user/main/header.phtml:51
-msgid "Logout"
-msgstr "Выйти"
+#~ msgid "Logout"
+#~ msgstr "Выйти"
 
-#: Templates/user/main/knows_about.phtml:4
-msgid "Knows about"
-msgstr "Знает о"
+#~ msgid "Knows about"
+#~ msgstr "Знает о"
 
-#: Templates/users/right/login_or_signup.phtml:5
-msgid ""
-"Answeropedia is a wiki-based site where users can ask questions, respond to "
-"them and supplement other people’s answers."
-msgstr ""
-"Answeropedia — это основанный на вики-принципах сайт, где пользователи могут "
-"задавать вопросы, отвечать на них и дополнять чужие ответы."
+#~ msgid ""
+#~ "Answeropedia is a wiki-based site where users can ask questions, respond "
+#~ "to them and supplement other people’s answers."
+#~ msgstr ""
+#~ "Answeropedia — это основанный на вики-принципах сайт, где пользователи "
+#~ "могут задавать вопросы, отвечать на них и дополнять чужие ответы."
 
 #~ msgid "API Error: Need login to like answer"
 #~ msgstr "Ошибка API: Необходимо войти, чтобы лайкнуть ответ"

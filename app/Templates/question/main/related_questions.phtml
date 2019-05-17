@@ -3,7 +3,7 @@
 <div class="my-4">
 	<!-- related questions -->
 	<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
-		<?= _('Related questions') ?>
+		<?= $this->translator->get('Related questions') ?>
 	</div>
 
 	<?php foreach ($this->related_questions as $question): ?>
@@ -17,12 +17,12 @@
 					<span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
 				<?php endif; ?>
 
-				<?= _('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
+				<?= $this->translator->get('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
 
 				<?php if (strlen($question->answer->text) == 0): ?>
 					<span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
 					<a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
-						<?= _('Write first answer') ?>
+						<?= $this->translator->get('Write first answer') ?>
 					</a>
 				<?php endif; ?>
 			</div>

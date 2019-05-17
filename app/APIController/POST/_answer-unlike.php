@@ -57,7 +57,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
             $parseAnswer->save(true);
 
             $response['success'] = true;
-            $response['message'] = _('API: Answer disliked');
+            $response['message'] = 'API: Answer disliked';
         } catch (ParseException $ex) {
             $errors['other'] = 'API Error'.': '.$ex->getCode().' '.$ex->getMessage();
             $response['success'] = false;

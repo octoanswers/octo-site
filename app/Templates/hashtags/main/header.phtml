@@ -6,7 +6,7 @@
 
     <form class="form-inline float-sm-right" action="<?= SITE_URL.'/'.$this->lang.'/search/hashtags' ?>" method="GET">
         <div class="form-group mb-2">
-            <input name="q" class="form-control form-control-sm" type="text" placeholder="<?= _('Search hashtags') ?>" aria-label="Search">
+            <input name="q" class="form-control form-control-sm" type="text" placeholder="<?= $this->translator->get('Search hashtags') ?>" aria-label="Search">
         </div>
         <input type="hidden" name="list" value="hashtags">
     </form>

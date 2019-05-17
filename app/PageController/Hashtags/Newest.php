@@ -35,6 +35,6 @@ class Newest_Hashtags_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return _('New hashtags').' - '.$this->translator->get('page').' '.$this->page.' - '.$this->translator->get('answeropedia');
+        return $this->translator->get('New hashtags').' - '.$this->translator->get('page').' '.$this->page.' - '.$this->translator->get('answeropedia');
     }
 }

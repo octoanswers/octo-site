@@ -2,24 +2,24 @@
 <!-- about_sandbox -->
 <div class="bg-light p-0 p-md-3 mb-4 d-none d-lg-block">
 	<div class="border-bottom pb-2 mb-2 h6 font-weight-bold">
-		<?= _('What is a "sandbox"?') ?>
+		<?= $this->translator->get('What is a "sandbox"?') ?>
 	</div>
 
-	<p><?= _('The sandbox is a place to get new questions that have not yet been answered.') ?></p>
-	<p><?= str_replace("%url%", Questions_URL_Helper::getNewestURL($this->lang), _('As soon as the question has a comprehensive answer and several hashtags, it is transferred to the <a href="%url%">main list</a>.')) ?></p>
+	<p><?= $this->translator->get('The sandbox is a place to get new questions that have not yet been answered.') ?></p>
+	<p><?= str_replace("%url%", Questions_URL_Helper::getNewestURL($this->lang), $this->translator->get('As soon as the question has a comprehensive answer and several hashtags, it is transferred to the <a href="%url%">main list</a>.')) ?></p>
 
     <?php if (isset($this->humanizedQuestionsCount)): ?>
         <p class="text-secondary mb-2">
-            <?= _('Now in the sandbox:') ?> <?= $this->humanizedQuestionsCount ?>
+            <?= $this->translator->get('Now in the sandbox:') ?> <?= $this->humanizedQuestionsCount ?>
         </p>
     <?php endif; ?>
     
     <?php if (!$this->authUser): ?>
         <button role="button" data-toggle="modal" data-target="#modal_signup" class="btn btn-danger mt-3">
-            <?= _('Join the community') ?>
+            <?= $this->translator->get('Join the community') ?>
         </button>
         <div class="text-secondary sall mt-1">
-            <?= _('or <a data-toggle="modal" data-target="#modal_login">log-in</a>') ?>
+            <?= $this->translator->get('or <a data-toggle="modal" data-target="#modal_login">log-in</a>') ?>
         </div>
     <?php endif; ?>
 </div>

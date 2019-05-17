@@ -4,27 +4,27 @@
 		<ul class="nav bd-sidenav">
 			<li>
 				<a href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
-					<?= _('Main page') ?>
+					<?= $this->translator->get('Main page') ?>
 				</a>
 			</li>
 			<li>
 				<a href="<?= SITE_URL.'/'.$this->lang.'/1' ?>">
-					<?= _('About site') ?>
+					<?= $this->translator->get('About site') ?>
 				</a>
 			</li>
 			<li>
 				<a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= _('Recent changes') ?>
+					<?= $this->translator->get('Recent changes') ?>
 				</a>
 			</li>
 			<li>
 				<a href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-					<?= _('Popular hashtags') ?>
+					<?= $this->translator->get('Popular hashtags') ?>
 				</a>
 			</li>
 			<li>
 				<a href="<?= SITE_URL.'/'.$this->lang.'/random-question' ?>">
-					<?= _('Random question') ?>
+					<?= $this->translator->get('Random question') ?>
 				</a>
 			</li>
 

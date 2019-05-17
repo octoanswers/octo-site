@@ -46,7 +46,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
         if (is_array($this->hashtag_questions) && count($this->hashtag_questions) == 10) {
             $data['next_page_button'] = [
-                'title' => _('More hashtags'),
+                'title' => $this->translator->get('More hashtags'),
                 'url' => '#',
             ];
         }
@@ -66,7 +66,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
         $this->template = 'hashtag';
         $this->pageTitle = $this->_getPageTitle();
-        //str_replace('%hashtag%', , _('Hashtag - Page title')).' • '.$this->translator->get('answeropedia');
+        //str_replace('%hashtag%', , $this->translator->get('Hashtag - Page title')).' • '.$this->translator->get('answeropedia');
         $this->pageDescription = $this->_getPageDescription();
         $this->nextPageURL = null;
 
@@ -81,8 +81,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageTitle()
     {
-        $pageTitle = _('Questions and answers on the hashtag %hashtag%').' - '.$this->translator->get('answeropedia');
-        return str_replace('%hashtag%', $this->hashtag->title, $pageTitle);
+        return $this->translator->get('Questions with hashtag').' #'.$this->hashtag->title.' - '.$this->translator->get('answeropedia');
     }
 
     protected function _prepareFollowButton()
@@ -112,7 +111,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageDescription()
     {
-        return str_replace('%hashtag%', $this->hashtag->title, _('Questions and answers on the hashtag %hashtag%'));
+        return $this->translator->get('Questions with hashtag').' #'.$this->hashtag->title.' - '.$this->translator->get('answeropedia');
     }
 
     /**

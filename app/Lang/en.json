@@ -1,16 +1,24 @@
 {
-    "title": "Перевод заголовка",
+    "answer_history": {
+        "page_title": "Answer history"
+    },
     "answeropedia": "Answeropedia",
-    "navbar": {
-        "change": "Изменить",
-        "questions": "Вопросы",
-        "flow": "Flow",
-        "sandbox": "Sandbox"
+    "flow": {
+        "page_title": "Flow"
+    },
+    "internal_server_error": {
+        "page_title": "Error 500"
     },
     "modal": {
         "login": {
             "title": "Login"
         }
+    },
+    "navbar": {
+        "change": "Изменить",
+        "flow": "Flow",
+        "questions": "Вопросы",
+        "sandbox": "Sandbox"
     },
     "page": "Page",
     "sandbox": {
@@ -18,5 +26,6 @@
     },
     "search": {
         "page_title": "Search"
-    }
+    },
+    "title": "Перевод заголовка"
 }

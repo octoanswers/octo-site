@@ -12,8 +12,8 @@ class PageNotFound_Error_PageController extends Abstract_PageController
         $this->translator = new Translator($this->lang, ROOT_PATH."/app/Lang");
 
         $this->template = 'error/404';
-        $this->pageTitle = _("page_not_found", "page_title").' — '.$this->translator->get('answeropedia');
-        $this->pageDescription = _("page_not_found", "page_title");
+        $this->pageTitle = $this->translator->get("page_not_found", "page_title").' — '.$this->translator->get('answeropedia');
+        $this->pageDescription = $this->translator->get("page_not_found", "page_title");
         $this->includeJS[] = 'goal/page_not_found';
 
         $output = $this->renderPage();

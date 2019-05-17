@@ -7,32 +7,32 @@
 			<ul class="list-inline small mb-3">
 				<li class="list-inline-item">
 					<a class="text-black-50 text-decoration-none" href="<?= SITE_URL.'/'.$this->lang.'/1' ?>">
-						<?= _('About') ?>
+						<?= $this->translator->get('About') ?>
 					</a>
 				</li>
 				<li class="list-inline-item">
 					<a class="text-black-50 text-decoration-none" href="<?= SITE_URL.'/'.$this->lang.'/2' ?>">
-						<?= _('Rules') ?>
+						<?= $this->translator->get('Rules') ?>
 					</a>
 				</li>
 				<li class="list-inline-item">
 					<a class="text-black-50 text-decoration-none" rel="nofollow" target="_blank" href="https://vk.com/alexandergomzyakov">
-						<?= _('Support') ?>
+						<?= $this->translator->get('Support') ?>
 					</a>
 				</li>
 				<li class="list-inline-item">
 					<a class="text-black-50 text-decoration-none" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
-						<?= _('Questions') ?>
+						<?= $this->translator->get('Questions') ?>
 					</a>
 				</li>
 				<li class="list-inline-item">
 					<a class="text-black-50 text-decoration-none" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
-						<?= _('Users') ?>
+						<?= $this->translator->get('Users') ?>
 					</a>
 				</li>
 				<li class="list-inline-item">
 					<a class="text-black-50 text-decoration-none" href="<?= Search_URL_Helper::getSearchQuestionsURL($this->lang) ?>">
-						<?= _('Search') ?>
+						<?= $this->translator->get('Search') ?>
 					</a>
 				</li>
 			</ul>

@@ -18,20 +18,20 @@
 			<?php if (!$this->authUser): ?>
                 <li class="nav-item d-sm-none d-md-inline-block">
                     <a class="nav-link" href="#">
-                        <?= _('About&nbsp;site') ?>
+                        <?= $this->translator->get('About&nbsp;site') ?>
                     </a>
                 </li>
             <?php endif; ?>
 		
 			<li class="nav-item">
 				<a class="nav-link " href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= _('Recent&nbsp;changes') ?>
+					<?= $this->translator->get('Recent&nbsp;changes') ?>
 				</a>
 			</li>
 			
 			<li class="nav-item">
                 <a class="nav-link " href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Hashtags') ?>
+                    <?= $this->translator->get('Hashtags') ?>
                 </a>
             </li>
 
@@ -68,12 +68,12 @@
 		<?php if (!$this->authUser): ?>
 			<li class="nav-item">
 				<button class="btn btn-warning d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_login">
-					<?= _('Login') ?>
+					<?= $this->translator->get('Login') ?>
 				</button>
 			</li>
 			<!-- <li class="nav-item">
 				<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
-					<?= _('Signup') ?>
+					<?= $this->translator->get('Signup') ?>
 				</a>
 			</li> -->
 		<?php endif; ?>
@@ -88,7 +88,7 @@
 
 		<li class="nav-item">
 			<button class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
-        		<?= _('Ask a question') ?>
+        		<?= $this->translator->get('Ask a question') ?>
 			</button>
 		</li>
 

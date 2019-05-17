@@ -3,7 +3,7 @@
 	<!-- hashtags -->
 	<div class="my-5" id="question_hashtags_list">
 		<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
-			<?= _('Hashtags') ?>
+			<?= $this->translator->get('Hashtags') ?>
 		</div>
 
 		<?php foreach ($this->question->getHashtags() as $hashtag): ?>
@@ -14,7 +14,7 @@
 
 		<?php if ($this->authUser): ?>
 			<a class="btn btn-outline-secondary btn-sm ml-2" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>" rel="nofollow">
-				<?= _('Change') ?>
+				<?= $this->translator->get('Change') ?>
 			</a>
 		<?php endif; ?>
 

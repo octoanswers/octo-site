@@ -5,7 +5,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= _('Rename question') ?>
+                    <?= $this->translator->get('Rename question') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -15,19 +15,19 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>
-                            <?= _('Before you rename a question, please read the basic rules for renaming') ?></label>
+                            <?= $this->translator->get('Before you rename a question, please read the basic rules for renaming') ?></label>
                         <textarea class="form-control" id="new_title" rows="6"><?= $this->question->title ?></textarea>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label mt-1">
                             <input id="save_redirect" type="checkbox" class="form-check-input" checked>
-                            <?= _('Leave redirect') ?>
+                            <?= $this->translator->get('Leave redirect') ?>
                         </label>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="form__rename_question__submit" class="btn btn-primary">
-                        <?= _('Rename question') ?>
+                        <?= $this->translator->get('Rename question') ?>
                     </button>
                 </div>
             </form>

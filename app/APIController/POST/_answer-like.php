@@ -63,7 +63,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
             $parseAnswer->save(true);
 
             $response['success'] = true;
-            $response['message'] = _('API: Answer liked');
+            $response['message'] = 'API: Answer liked';
         } catch (ParseException $ex) {
             $errors['other'] = 'API Error'.': '.$ex->getCode().' '.$ex->getMessage();
             $response['success'] = false;

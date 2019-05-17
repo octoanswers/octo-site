@@ -1,7 +1,7 @@
 
 <?php if (isset($data['hashtags']) && count($data['hashtags']) > 0): ?>
 
-    <h3 class="mb-4 size_16 gray_54"><?= _('Knows about') ?></h3>
+    <h3 class="mb-4 size_16 gray_54"><?= $this->translator->get('Knows about') ?></h3>
 
     <?php foreach ($data['hashtags'] as $hashtag): ?>
         <a class="btn btn-outline-primary btn-sm mb-1" href="<?= $hashtag['url'] ?>"><?= $hashtag['name'] ?></a>

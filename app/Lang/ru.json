@@ -7,6 +7,7 @@
     "Answer contributors": "Авторы ответа",
     "Answer updated": "Ответ обновлен",
     "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+    "Ask a question and get one complete answer": "Задайте вопрос и получите один исчерпывающий ответ",
     "Ask your first question": "Задайте первый вопрос",
     "Back to question": "Вернуться к вопросу",
     "By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.": "Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три или более вопроса.",
@@ -17,6 +18,7 @@
     "Close": "Закрыть",
     "Description of changes": "Описание изменений",
     "Edit": "Править",
+    "Edit answer": "Править ответ",
     "Enter your email address to get notified about the answer as soon as it appears": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
     "Filters": "Фильтры",
     "Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.": "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и прочие активности этих пользователей будут появляться у вас в ленте новостей.",
@@ -33,6 +35,9 @@
     "It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
     "Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
     "More questions": "Больше вопросов",
+    "New hashtags": "Новые хештеги",
+    "New users from around the world": "Новые пользователи со всего мира",
+    "Newest questions": "Новые вопросы",
     "No description of changes": "Нет описания изменений",
     "No hashtag found for \"%query%\"": "Не удалось найти хештеги по запросу «%query%»",
     "No hashtags found": "Хештегов не найдено",
@@ -42,6 +47,8 @@
     "On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
     "On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
     "Popular": "Популярные",
+    "Questions with hashtag": "Вопросы c хештегом",
+    "Questions without answers": "Вопросы без ответа",
     "Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
     "Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
     "Related questions": "Похожие вопросы",
@@ -68,6 +75,7 @@
     "View users": "Посмотреть пользователей",
     "Views a questions": "Посмотреть вопросы",
     "Visit your feed": "Посетите ленту",
+    "Wiki-answers on Answeropedia": "Вики-ответы на Answeropedia",
     "Without hashtags": "Без тем",
     "Write first answer": "Написать первый ответ",
     "Write the first answer": "Напишите первый ответ",
@@ -87,7 +95,8 @@
         "Edit answer": "Править ответ"
     },
     "answer_history": {
-        "Answer history": "История изменений ответа"
+        "Answer history": "История изменений ответа",
+        "page_title": "История изменений ответа"
     },
     "answeropedia": "Ансверопедия",
     "feed": {
@@ -95,7 +104,8 @@
     },
     "flow": {
         "Flow": "Поток",
-        "Questions and answers flow on Answeropedia. ": " Поток вопросов и ответов на Answeropedia."
+        "Questions and answers flow on Answeropedia. ": " Поток вопросов и ответов на Answeropedia.",
+        "page_title": "Поток"
     },
     "footer": {
         "About": "О сайте",
@@ -106,14 +116,14 @@
         "Users": "Пользователи"
     },
     "hashtag": {
-        "More hashtags": "Больше тем",
-        "Questions and answers on the hashtag %hashtag%": "Вопросы и ответы на тему %hashtag%"
+        "More hashtags": "Больше тем"
     },
     "hashtags": {
         "New hashtags": "Новые темы"
     },
     "internal_server_error": {
-        "Error 500": "Ошибка 500"
+        "Error 500": "Ошибка 500",
+        "page_title": "Ошибка 500"
     },
     "left_nav": {
         "main": {
@@ -147,8 +157,8 @@
             "What is your question?": "Какой у вас вопрос?"
         },
         "login": {
-            "title": "Вход",
-            "Log in": "Войти"
+            "Log in": "Войти",
+            "title": "Вход"
         },
         "signup": {
             "By signing up, you agree to our terms of use, privacy policy, and cookie policy.": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
@@ -164,12 +174,13 @@
     "navbar": {
         "About Answeropedia": "О Answeropedia",
         "About&nbsp;site": "О&nbsp;проекте",
-        "flow": "Свежие правки",
-        "Recent&nbsp;changes": "Свежие&nbsp;правки"
+        "Recent&nbsp;changes": "Свежие&nbsp;правки",
+        "flow": "Свежие правки"
     },
     "page": "Страница",
     "page_not_found": {
-        "Error 404": "Ошибка 404"
+        "Error 404": "Ошибка 404",
+        "page_title": "Ошибка 404"
     },
     "question": {
         "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
@@ -185,7 +196,9 @@
         }
     },
     "question_not_found": {
-        "Question not found": "Вопрос не найден"
+        "Question not found": "Вопрос не найден",
+        "page_title": "Вопрос не найден",
+        "title": "Вопрос не найден"
     },
     "question_rename": {
         "Before you rename a question, please read the basic rules for renaming": "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными правилами переименования",
@@ -206,12 +219,14 @@
             "As soon as the question has a comprehensive answer and several hashtags, it is transferred to the main list.": "Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в основной список.",
             "The sandbox is a place to get new questions that have not yet been answered.": "Песочница — это место куда попадают новые, ещё не имеющие ответа вопросы.",
             "What is a \"sandbox\"?": "Что такое «Песочница»?"
-        }
+        },
+        "title": "Песочница"
     },
     "search": {
         "nav": {
             "Hashtags": "Хештеги"
-        }
+        },
+        "page_title": "Поиск"
     },
     "settings": {
         "Back to profile": "Вернуться к профилю",
@@ -224,6 +239,11 @@
         "Site": "Сайт",
         "The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.": "Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.",
         "Upload avatar": "Загрузить аватар"
+    },
+    "test_key": {
+        "subkey_as_array": {
+            "foo": "bar"
+        }
     },
     "title": "Перевод заголовка",
     "update_hashtags": {

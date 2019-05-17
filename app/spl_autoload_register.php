@@ -1,21 +1,5 @@
 <?php
 
-// Hack for PHPUnit on OS X
-
-if (!function_exists('_')) {
-    function _($value)
-    {
-        return $value;
-    }
-}
-
-if (!function_exists('ngettext')) {
-    function ngettext($value_one, $value_many, $num)
-    {
-        return $num.' '.$value_many;
-    }
-}
-
 /**
  * @return bool
  */

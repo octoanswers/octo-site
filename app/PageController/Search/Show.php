@@ -58,13 +58,13 @@ class Show_Search_PageController extends Abstract_PageController
     {
         switch ($list) {
             case self::LIST_QUESTIONS:
-                $placeholder = _('Search by questions');
+                $placeholder = $this->translator->get('Search by questions');
                 break;
             case self::LIST_HASHTAGS:
-                $placeholder = _('Search by hashtags');
+                $placeholder = $this->translator->get('Search by hashtags');
                 break;
             case self::LIST_USERS:
-                $placeholder = _('Search by contributors');
+                $placeholder = $this->translator->get('Search by contributors');
                 break;
             default:
                 throw new Exception("Incorrect list param", 0);

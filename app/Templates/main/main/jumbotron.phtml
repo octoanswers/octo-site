@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-12 col-md-10 mx-auto text-center">
                 <h1>
-                    <?= _('Ask a question and get one complete answer') ?>
+                    <?= $this->translator->get('Ask a question and get one complete answer') ?>
                 </h1>
                 <p class="color-gray-600 mt-3">
-                    <?= _('What do you mean complete?') ?>
+                    <?= $this->translator->get('What do you mean complete?') ?>
                 </p>
             </div>
         </div>
@@ -16,10 +16,10 @@
             <div class="col-12 col-md-10 mx-auto">
                 <form id="form__question_create_from_main">
                     <div class="form-group">
-                        <textarea class="form-control form-control-lg" id="form__question_create_from_main__title" rows="6" placeholder="<?= _('What is your question?') ?>?"></textarea>
+                        <textarea class="form-control form-control-lg" id="form__question_create_from_main__title" rows="6" placeholder="<?= $this->translator->get('What is your question?') ?>?"></textarea>
                     </div>
                     <button type="submit" id="form__question_create_from_main__submit" class="btn btn-lg btn-block btn-primary">
-                        <?= _('Ask a question') ?>
+                        <?= $this->translator->get('Ask a question') ?>
                     </button>
                     <!-- <div class="color-gray-700 mt-4">
                         или

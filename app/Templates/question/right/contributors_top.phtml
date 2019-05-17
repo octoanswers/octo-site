@@ -9,7 +9,7 @@
 			<?= count($this->contributors).'&nbsp;'.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
 		</a>
 		<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
-			<?= _('Top contributors') ?>
+			<?= $this->translator->get('Top contributors') ?>
 		</div>
 	</div>
 		
@@ -44,7 +44,7 @@
 	<?php if (count($this->contributors) > count($this->contributors_top)): ?>
 		<div class="box-footer">
 			<a class="ml-5 small" data-scroll href="#contributors_full_list">
-				<?= _('All answer contributors') ?>
+				<?= $this->translator->get('All answer contributors') ?>
 			</a>
 		</div>
 	<?php endif; ?>

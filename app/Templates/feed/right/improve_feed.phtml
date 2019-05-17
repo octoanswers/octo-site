@@ -2,7 +2,7 @@
 <!-- improve_feed -->
 <div class="d-none d-md-block">
     <div class="font-weight-bold color-gray-800">
-        <?= _('Improve your feed') ?>
+        <?= $this->translator->get('Improve your feed') ?>
     </div>
     <div class="pt-0 pb-0 small">
 
@@ -10,7 +10,7 @@
             <i class="fas fa-check color-success"></i>
             <span class="color-gray-600">
                 <s>
-                    <?= _('Visit your feed') ?>
+                    <?= $this->translator->get('Visit your feed') ?>
                 </s>
             </span>
         </div>
@@ -18,13 +18,13 @@
         <div class="my-3">
             <?php if ($this->authUser->username == $this->authUser->name): ?>
                 <a class="color-gray-800 text-decoration-none" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
-                    <?= _('Set real name') ?>
+                    <?= $this->translator->get('Set real name') ?>
                 </a>
             <?php else: ?>
                 <i class="fas fa-check color-success"></i>
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Set real name') ?>
+                        <?= $this->translator->get('Set real name') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -33,13 +33,13 @@
         <div class="my-3">
             <?php if (strlen($this->authUser->signature) == 0): ?>
                 <a class="color-gray-800 text-decoration-none" href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>">
-                    <?= _('Set signature') ?>
+                    <?= $this->translator->get('Set signature') ?>
                 </a>
             <?php else: ?>
                 <i class="fas fa-check color-success"></i>
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Set signature') ?>
+                        <?= $this->translator->get('Set signature') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -48,13 +48,13 @@
         <div class="my-3">
             <?php if ($this->isShowHashtagsFollowLure): ?>
                 <a class="color-gray-800 text-decoration-none" href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Follow 3 more hashtags') ?>
+                    <?= $this->translator->get('Follow 3 more hashtags') ?>
                 </a>
             <?php else: ?>
                 <i class="fas fa-check color-success"></i>
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Follow 3 more hashtags') ?>
+                        <?= $this->translator->get('Follow 3 more hashtags') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -63,13 +63,13 @@
         <div class="my-3">
             <?php if ($this->isShowQuestionsFollowLure): ?>
                 <a class="color-gray-800 text-decoration-none" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Follow your first question') ?>
+                    <?= $this->translator->get('Follow your first question') ?>
                 </a>
             <?php else: ?>
             <i class="fas fa-check color-success"></i>
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Follow your first question') ?>
+                        <?= $this->translator->get('Follow your first question') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -78,13 +78,13 @@
         <div class="my-3">
             <?php if ($this->isShowUsersFollowLure): ?>
                 <a class="color-gray-800 text-decoration-none" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= _('Find your friends') ?>
+                    <?= $this->translator->get('Find your friends') ?>
                 </a>
             <?php else: ?>
                 <i class="fas fa-check color-success"></i>
                 <span class="color-gray-600">
                     <s>
-                        <?= _('Find your friends') ?>
+                        <?= $this->translator->get('Find your friends') ?>
                     </s>
                 </span>
             <?php endif; ?>
@@ -94,7 +94,7 @@
             <i class="fas fa-check color-success"></i>
             <span class="color-gray-600">
                 <s>
-                    <?= _('Ask your first question') ?>
+                    <?= $this->translator->get('Ask your first question') ?>
                 </s>
             </span>
         </div>
@@ -103,7 +103,7 @@
             <i class="fas fa-check color-success"></i>
             <span class="color-gray-600">
                 <s>
-                    <?= _('Answer a question') ?>
+                    <?= $this->translator->get('Answer a question') ?>
                 </s>
             </span>
         </div> -->
