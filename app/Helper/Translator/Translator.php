@@ -66,23 +66,13 @@ class Translator
      *
      * @var string
      */
-    public function get(...$key)
+    public function get(...$key): string
     {
         $this->lastFullKey = $key;
 
-        return $this->_elementExists($key, $this->messages);
-    }
+        $message = $this->_elementExists($key, $this->messages);
 
-    /**
-     * Alternative form for "get" method.
-     *
-     * @param string $key
-     */
-    public function __(...$key)
-    {
-        $this->lastFullKey = $key;
-
-        return $this->_elementExists($key, $this->messages);
+        return is_array($message) ? 'INCORRECT_KEY' : $message;
     }
 
     /**
