@@ -43,7 +43,6 @@
     "No hashtags found": "Хештегов не найдено",
     "No questions found": "Вопросов не найдено",
     "No users found": "Пользователей не найдено",
-    "Now in the sandbox:": "Сейчас в песочнице:",
     "On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
     "On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
     "Popular": "Популярные",
@@ -215,11 +214,10 @@
         "Questions and Answers": "Вопросы и ответы"
     },
     "sandbox": {
-        "about_sandbox": {
-            "As soon as the question has a comprehensive answer and several hashtags, it is transferred to the main list.": "Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в основной список.",
-            "The sandbox is a place to get new questions that have not yet been answered.": "Песочница — это место куда попадают новые, ещё не имеющие ответа вопросы.",
-            "What is a \"sandbox\"?": "Что такое «Песочница»?"
-        },
+        "about_block__msg_1": "Песочница — это место куда попадают новые, ещё не имеющие ответа вопросы.",
+        "about_block__msg_2": "Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в основной список.",
+        "about_block__now_in_the_sandbox": "сейчас в песочнице",
+        "about_block__title": "Что такое «Песочница»?",
         "title": "Песочница"
     },
     "search": {

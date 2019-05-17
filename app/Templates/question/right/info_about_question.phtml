@@ -2,15 +2,6 @@
 <!-- info_about_question -->
 <div class="my-4">
 	<ul class="section-nav">
-
-		<?php if (count($this->contributors)): ?>
-			<li class="toc-entry toc-h2">
-				<a href="#contributors_full_list">
-					<?= count($this->contributors).' '.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
-				</a>
-			</li>
-		<?php endif; ?>
-
 		<?php if ($this->question->answer->text): ?>
 			<li class="toc-entry toc-h2">
 				<span>

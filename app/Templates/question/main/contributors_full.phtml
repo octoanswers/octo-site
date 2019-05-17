@@ -3,9 +3,9 @@
 	<!-- contributors_full -->
 	<div class="my-5">
 		<div class="mb-3">
-			<a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
-				<?= count($this->contributors).'&nbsp;'.mb_strtolower(ngettext("Contributor", "Contributors", count($this->contributors))) ?>
-			</a>
+			<span class="float-right text-black-50">
+				<span class="font-weight-bold"><?= count($this->contributors) ?></span>&nbsp;<i class="far fa-user"></i>
+			</span>
 			<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
 				<?= $this->translator->get('Answer contributors') ?>
 			</div>

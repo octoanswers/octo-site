@@ -22,6 +22,10 @@
     },
     "page": "Page",
     "sandbox": {
+        "about_block__msg_1": "The sandbox is a place to get new questions that have not yet been answered.",
+        "about_block__msg_2": "As soon as the question has a comprehensive answer and several hashtags, it is transferred to the main list.",
+        "about_block__now_in_the_sandbox": "now in the sandbox",
+        "about_block__title": "What is a «sandbox»?",
         "title": "Sandbox"
     },
     "search": {

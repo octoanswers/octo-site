@@ -14,9 +14,6 @@ class WithoutHashtags_Sandbox_PageController extends Abstract_PageController
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $questionsCount = (new QuestionsCount_Query($this->lang))->countQuestionsWithoutAnswers();
-        $this->humanizedQuestionsCount = $questionsCount.' '.mb_strtolower(ngettext("Question", "Questions", $questionsCount));
-
         try {
             $this->questions = (new Sandbox_Query($this->lang))->questionsWithoutHashtags($this->page);
         } catch (\Exception $e) {

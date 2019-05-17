@@ -2,15 +2,16 @@
 <!-- about_sandbox -->
 <div class="bg-light p-0 p-md-3 mb-4 d-none d-lg-block">
 	<div class="border-bottom pb-2 mb-2 h6 font-weight-bold">
-		<?= $this->translator->get('What is a "sandbox"?') ?>
+		<?= $this->translator->get('sandbox', 'about_block__title') ?>
 	</div>
 
-	<p><?= $this->translator->get('The sandbox is a place to get new questions that have not yet been answered.') ?></p>
-	<p><?= str_replace("%url%", Questions_URL_Helper::getNewestURL($this->lang), $this->translator->get('As soon as the question has a comprehensive answer and several hashtags, it is transferred to the <a href="%url%">main list</a>.')) ?></p>
+	<p><?= $this->translator->get('sandbox', 'about_block__msg_1') ?></p>
+	<p><?= $this->translator->get('sandbox', 'about_block__msg_2') ?></p>
 
-    <?php if (isset($this->humanizedQuestionsCount)): ?>
+    <?php if (isset($this->questionsCount)): ?>
+        <p class="h1 mb-0"><?= $this->questionsCount ?></p>
         <p class="text-secondary mb-2">
-            <?= $this->translator->get('Now in the sandbox:') ?> <?= $this->humanizedQuestionsCount ?>
+            <?= $this->translator->get('sandbox', 'about_block__now_in_the_sandbox') ?> 
         </p>
     <?php endif; ?>
     
