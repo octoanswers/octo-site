@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-160.png"
+        sizes="160x160">
+    <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-196.png"
+        sizes="196x196">
+    <link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-120.png">
+    <link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-152.png"
+        sizes="152x152">
+    <link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-180.png"
+        sizes="180x180">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700">
+    <title>XXX</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web/dist/material-components-web.min.css">
+
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+        }
+
+        .mdc-drawer-app-content {
+            flex: auto;
+            overflow: auto;
+            position: relative;
+        }
+
+        .main-content {
+            overflow: auto;
+            height: 100%;
+        }
+
+        .app-bar {
+            position: fixed;
+        }
+
+
+        .mdc-top-app-bar {
+            z-index: 7;
+            /* only apply this style if below top app bar*/
+        }
+
+        .mdc-drawer--modal {
+            z-index: 9;
+        }
+
+        .mdc-drawer-scrim {
+            z-index: 8;
+        }
+    </style>
+</head>
+
+<body class="mdc-typography"><noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <aside id="mdc-modal-drawer" class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Inbox</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Inbox</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Inbox</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Inbox</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Inbox</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="mdc-drawer-scrim"></div>
+
+    <header id="app-bar" class="mdc-top-app-bar app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+                <span class="mdc-top-app-bar__title">Modal Drawer</span>
+            </section>
+        </div>
+    </header>
+
+    <div id="mdc-permanent-drawer" class="mdc-drawer mdc-top-app-bar--fixed-adjust">
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Inbox</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-list-item__text">Outgoing</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-list-item__text">Drafts</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
+
+
+        <main class="main-content">
+
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-8">
+
+                        <h1>
+                            Как настроить отображение Material Components for the Web?
+                        </h1>
+                        <p>
+                            Он идет к своей цели с уверенностью и достоинством. This simple website template uses
+                            Material Components to implement a permanent navigation
+                            drawer for
+                            screen widths larger
+                            than 900px, and a modal drawer for screen widths smaller than 900px. Check it out by
+                            resizing the
+                            width of your browser window!
+                        </p>
+                        <button class="mdc-button">
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+                            <span class="mdc-button__label">Button</span>
+                        </button>
+                        <h2>Подзаголовок H2</h2>
+                        <p>Read more about the Material Design <a
+                                href="https://material.io/design/layout/responsive-layout-grid.html">responsive layout
+                                grid</a>.
+                        </p>
+
+                        <button class="mdc-button">
+                            <span class="mdc-button__label">Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--outlined">
+                            <span class="mdc-button__label">Подписаться</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--raised mdc-theme--background mdc-ripple-upgraded">
+                            Raised
+                        </button>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-4">
+                        <p>Test</p>
+                        <!-- Render textfield component -->
+                        <div class="mdc-text-field">
+                            <input type="text" id="my-text-field" class="mdc-text-field__input">
+                            <label class="mdc-floating-label" for="my-text-field">Hint text</label>
+                            <div class="mdc-line-ripple"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/material-components-web/dist/material-components-web.min.js"></script>
+
+    <script>
+        // const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+        // const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('#app-bar'));
+
+        // topAppBar.listen('MDCTopAppBar:nav', () => {
+        //     drawer.open = !drawer.open;
+        // });
+
+        // Select DOM elements
+        const elementTopAppBar = document.querySelector('.mdc-top-app-bar');
+        const elementModalDrawer = document.querySelector('#mdc-modal-drawer');
+        const elementModalDrawerList = document.querySelector('#mdc-modal-drawer .mdc-list');
+        const elementMainContent = document.querySelector('.main-content');
+
+        // Initialize top app bar
+
+        const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(elementTopAppBar);
+
+        // Initialize drawer
+
+        const initModalDrawer = () => {
+            //elementModalDrawer.classList.add("mdc-drawer--modal");
+
+            const drawer = mdc.drawer.MDCDrawer.attachTo(elementModalDrawer);
+
+            drawer.open = false;
+            //topAppBar.setScrollTarget(elementMainContent);
+            topAppBar.listen('MDCTopAppBar:nav', () => {
+                drawer.open = !drawer.open;
+            });
+
+            elementModalDrawerList.addEventListener('click', (event) => {
+                drawer.open = false;
+            });
+        }
+
+        // Init ModalDrawer`s when page loaded
+
+        initModalDrawer();
+
+        // Init PermanentDrawer`s and show/hide Sandwitch-button
+
+        if (window.matchMedia("(max-width: 900px)").matches) {
+            console.log('max-width <900');
+
+
+        } else {
+            console.log('max-width >900');
+
+            // using the automatic instantiation method. Dont`t work: const list = new MDCList(elementModalDrawerList);
+            //const list = mdc.list.MDCList.attachTo(elementModalDrawerList);
+
+            //list.wrapFocus = true;
+        }
+
+        // Toggle between permanent drawer and modal drawer at breakpoint 900px
+
+        const resizeHandler = () => {
+            if (window.matchMedia("(max-width: 900px)").matches) {
+                //initModalDrawer();
+                console.log('hide permanent mdc-drawer');
+            } else {
+
+                //elementModalDrawer.classList.remove("mdc-drawer--modal");
+                console.log('show permanent mdc-drawer');
+
+            }
+        }
+        window.addEventListener('resize', resizeHandler);
+
+    </script>
+
+    <!-- Instantiate single textfield component rendered in the document -->
+    <script>
+        mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+    </script>
+
+    <div></div>
+</body>
+
+</html>
