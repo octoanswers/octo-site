@@ -274,6 +274,7 @@
         // });
 
         // Select DOM elements
+
         const elementTopAppBar = document.querySelector('.mdc-top-app-bar');
         const elementModalDrawer = document.querySelector('#mdc-modal-drawer');
         const elementModalDrawerList = document.querySelector('#mdc-modal-drawer .mdc-list');
@@ -282,26 +283,23 @@
         // Initialize top app bar
 
         const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(elementTopAppBar);
-
-        // Initialize drawer
-
-        const initModalDrawer = () => {
-            //elementModalDrawer.classList.add("mdc-drawer--modal");
-
-            const drawer = mdc.drawer.MDCDrawer.attachTo(elementModalDrawer);
-
-            drawer.open = false;
-            //topAppBar.setScrollTarget(elementMainContent);
-            topAppBar.listen('MDCTopAppBar:nav', () => {
-                drawer.open = !drawer.open;
-            });
-
-            elementModalDrawerList.addEventListener('click', (event) => {
-                drawer.open = false;
-            });
-        }
+        const modalDrawer = mdc.drawer.MDCDrawer.attachTo(elementModalDrawer);
 
         // Init ModalDrawer`s when page loaded
+
+        const initModalDrawer = () => {
+
+            modalDrawer.open = false;
+            
+            topAppBar.listen('MDCTopAppBar:nav', () => {
+                modalDrawer.open = !modalDrawer.open;
+            });
+
+            // Close ModalDrawer when clicked on menu item
+            elementModalDrawerList.addEventListener('click', (event) => {
+                modalDrawer.open = false;
+            });
+        }
 
         initModalDrawer();
 
