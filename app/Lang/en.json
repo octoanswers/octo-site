@@ -3,6 +3,24 @@
         "page_title": "Answer history"
     },
     "answeropedia": "Answeropedia",
+    "app_bar": {
+        "text": "Community answers to your questions"
+    },
+    "drawer__main_nav": {
+        "about_site": "About site",
+        "feed": "Feed",
+        "main_page": "Main page",
+        "popular_hashtags": "Popular hashtags",
+        "random_question": "Random question",
+        "recent_changes": "Recent changes",
+        "sandbox": "Sandbox"
+    },
+    "drawer__other_languages": {
+        "all_languages": "All languages",
+        "english": "English",
+        "russian": "Russian",
+        "title": "In other languages"
+    },
     "flow": {
         "page_title": "Flow"
     },
@@ -13,19 +31,6 @@
         "login": {
             "title": "Login"
         }
-    },
-    "drawer__main_nav": {
-        "about_site": "About site",
-        "main_page": "Main page",
-        "popular_hashtags": "Popular hashtags",
-        "random_question": "Random question",
-        "recent_changes": "Recent changes"
-    },
-    "drawer__other_languages": {
-        "all_languages": "All languages",
-        "english": "English",
-        "russian": "Russian",
-        "title": "In other languages"
     },
     "navbar": {
         "about_answeropedia": "About&nbsp;project",

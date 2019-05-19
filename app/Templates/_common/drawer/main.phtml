@@ -1,23 +1,39 @@
 <!-- drawer main -->
 
-<a class="mdc-list-item mdc-list-item--activated" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
-	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
-	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'main_page') ?></span>
+<?php if ($this->authUser): ?>
+	<a class="mdc-list-item mdc-list-item--activated" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
+		<i class="material-icons mdc-list-item__graphic" aria-hidden="true">format_align_justify</i>
+		<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'feed') ?></span>
+	</a>
+<?php else: ?>
+	<a class="mdc-list-item mdc-list-item--activated" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
+		<i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+		<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'main_page') ?></span>
+	</a>
+<?php endif; ?>
+
+<a class="mdc-list-item" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">fiber_new</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'sandbox') ?></span>
 </a>
+
 <a class="mdc-list-item" href="<?= SITE_URL.'/'.$this->lang.'/1' ?>">
-	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">new_releases</i>
 	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'about_site') ?></span>
 </a>
+
 <a class="mdc-list-item" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
 	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">whatshot</i>
 	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'recent_changes') ?></span>
 </a>
+
 <a class="mdc-list-item" href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
 	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
 	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'popular_hashtags') ?></span>
 </a>
+
 <a class="mdc-list-item" href="<?= SITE_URL.'/'.$this->lang.'/random-question' ?>">
-	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">local_bar</i>
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">shuffle</i>
 	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'random_question') ?></span>
 </a>
 

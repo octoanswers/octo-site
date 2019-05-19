@@ -98,12 +98,17 @@
         "page_title": "История изменений ответа"
     },
     "answeropedia": "Answeropedia",
+    "app_bar": {
+        "text": "Компетентные ответы на ваши вопросы"
+    },
     "drawer__main_nav": {
         "about_site": "О сайте",
+        "feed": "Подписки",
         "main_page": "Главная страница",
         "popular_hashtags": "Популярные хештеги",
         "random_question": "Случайный вопрос",
-        "recent_changes": "Свежие правки"
+        "recent_changes": "Свежие правки",
+        "sandbox": "Песочница"
     },
     "drawer__other_languages": {
         "all_languages": "Все языки",
