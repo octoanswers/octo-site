@@ -1,0 +1,65 @@
+.mdc-drawer--modal {
+  z-index: 9;
+}
+
+.mdc-drawer-scrim {
+  z-index: 8;
+}
+
+/* mdc-permanent-drawer */
+@media (max-width: 1024px) {
+  #mdc-permanent-drawer {
+    display: none;
+  }
+}
+
+.mdc-drawer-app-content {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.mdc-list-item__graphic {
+  margin-right: 24px;
+}
+
+.mdc-top-app-bar {
+  z-index: 7;
+  /* only apply this style if below top app bar*/
+}
+
+.mdc-top-app-bar__title {
+  padding-left: 16px;
+}
+
+@media (min-width: 1025px) {
+  .mdc-top-app-bar__navigation-icon {
+    display: none;
+  }
+  .mdc-top-app-bar__title {
+    padding-left: 8px;
+  }
+}
+
+.app-bar {
+  position: fixed;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+h1 {
+  margin-top: 0;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,20 @@
+@import "variables";
+
+@import "components/_mdc-drawer";
+@import "components/_mdc-list-item";
+@import "components/_mdc-top-app-bar";
+
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.main-content {
+    overflow: auto;
+    height: 100%;
+}
+
+h1 {
+    margin-top: 0;
+}
