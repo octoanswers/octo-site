@@ -98,6 +98,19 @@
         "page_title": "История изменений ответа"
     },
     "answeropedia": "Answeropedia",
+    "drawer__main_nav": {
+        "about_site": "О сайте",
+        "main_page": "Главная страница",
+        "popular_hashtags": "Популярные хештеги",
+        "random_question": "Случайный вопрос",
+        "recent_changes": "Свежие правки"
+    },
+    "drawer__other_languages": {
+        "all_languages": "Все языки",
+        "english": "Английский",
+        "russian": "Русский",
+        "title": "На других языках"
+    },
     "feed": {
         "Feed": "Лента"
     },
@@ -123,21 +136,6 @@
     "internal_server_error": {
         "Error 500": "Ошибка 500",
         "page_title": "Ошибка 500"
-    },
-    "left_nav": {
-        "main": {
-            "About site": "О сайте",
-            "Main page": "Главная страница",
-            "Popular hashtags": "Популярные хештеги",
-            "Random question": "Случайный вопрос",
-            "Recent changes": "Свежие правки"
-        },
-        "other_languages": {
-            "All languages": "Все языки",
-            "English": "Английский",
-            "In other languages": "На других языках",
-            "Russian": "Русский"
-        }
     },
     "main": {
         "What do you mean complete?": "Что значит исчерпывающий?",
@@ -172,12 +170,12 @@
     },
     "navbar": {
         "about_answeropedia": "О&nbsp;проекте",
+        "btn_ask": "Задать вопрос",
         "flow": "Свежие&nbsp;правки",
         "hashtags": "Хештеги",
         "recent_changes": "Свежие&nbsp;правки",
-        "sandbox": "Песочница",
         "saarch_placeholder": "Поиск",
-        "btn_ask": "Задать вопрос"
+        "sandbox": "Песочница"
     },
     "page": "Страница",
     "page_not_found": {

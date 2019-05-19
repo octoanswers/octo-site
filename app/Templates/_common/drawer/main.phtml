@@ -1,34 +1,24 @@
-<!-- nav_main -->
-<nav class="collapse bd-links" id="main-nav">
-	<div class="bd-toc-item active">
-		<ul class="nav bd-sidenav">
-			<li>
-				<a href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
-					<?= $this->translator->get('Main page') ?>
-				</a>
-			</li>
-			<li>
-				<a href="<?= SITE_URL.'/'.$this->lang.'/1' ?>">
-					<?= $this->translator->get('About site') ?>
-				</a>
-			</li>
-			<li>
-				<a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= $this->translator->get('Recent changes') ?>
-				</a>
-			</li>
-			<li>
-				<a href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-					<?= $this->translator->get('Popular hashtags') ?>
-				</a>
-			</li>
-			<li>
-				<a href="<?= SITE_URL.'/'.$this->lang.'/random-question' ?>">
-					<?= $this->translator->get('Random question') ?>
-				</a>
-			</li>
+<!-- drawer main -->
 
-		</ul>
-	</div>
-</nav>
-<!-- / nav_main -->
+<a class="mdc-list-item" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'main_page') ?></span>
+</a>
+<a class="mdc-list-item" href="<?= SITE_URL.'/'.$this->lang.'/1' ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'about_site') ?></span>
+</a>
+<a class="mdc-list-item" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">whatshot</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'recent_changes') ?></span>
+</a>
+<a class="mdc-list-item" href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'popular_hashtags') ?></span>
+</a>
+<a class="mdc-list-item" href="<?= SITE_URL.'/'.$this->lang.'/random-question' ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">local_bar</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__main_nav', 'random_question') ?></span>
+</a>
+
+<!-- / drawer main -->

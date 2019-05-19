@@ -1,26 +1,19 @@
-<!-- nav_other_languages -->
-<nav class="collapse bd-links" id="nav-other-languages">
-<div class="bd-toc-item active">
-		<a class="bd-toc-link" href="#">
-			<?= $this->translator->get('In other languages') ?>
-		</a>
-		<ul class="nav bd-sidenav">
-			<li>
-				<a data-lang="ru" href="<?= Page_URL_Helper::getMainURL('en') ?>">
-					<?= $this->translator->get('English') ?>
-				</a>
-			</li>
-			<li>
-				<a data-lang="ru" href="<?= Page_URL_Helper::getMainURL('ru') ?>">
-					<?= $this->translator->get('Russian') ?>
-				</a>
-			</li>
-			<li>
-				<a data-lang="en" href="<?= SITE_URL ?>">
-				<i class="fas fa-globe-americas"></i>&nbsp;<?= $this->translator->get('All languages') ?>
-				</a>
-			</li>
-		</ul>
-	</div>
-</nav>
-<!-- / nav_other_languages -->
+<!-- drawer other_languages -->
+
+<hr class="mdc-list-divider">
+<h6 class="mdc-list-group__subheader"><?= $this->translator->get('drawer__other_languages', 'title') ?></h6>
+
+<a class="mdc-list-item" href="<?= Page_URL_Helper::getMainURL('en') ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">language</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__other_languages', 'english') ?></span>
+</a>
+<a class="mdc-list-item" href="<?= Page_URL_Helper::getMainURL('ru') ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">language</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__other_languages', 'russian') ?></span>
+</a>
+<a class="mdc-list-item" href="<?= SITE_URL ?>">
+	<i class="material-icons mdc-list-item__graphic" aria-hidden="true">g_translate</i>
+	<span class="mdc-list-item__text"><?= $this->translator->get('drawer__other_languages', 'all_languages') ?></span>
+</a>
+
+<!-- / drawer  other_languages -->

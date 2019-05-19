@@ -14,6 +14,19 @@
             "title": "Login"
         }
     },
+    "drawer__main_nav": {
+        "about_site": "About site",
+        "main_page": "Main page",
+        "popular_hashtags": "Popular hashtags",
+        "random_question": "Random question",
+        "recent_changes": "Recent changes"
+    },
+    "drawer__other_languages": {
+        "all_languages": "All languages",
+        "english": "English",
+        "russian": "Russian",
+        "title": "In other languages"
+    },
     "navbar": {
         "about_answeropedia": "About&nbsp;project",
         "btn_ask": "Ask a question",
