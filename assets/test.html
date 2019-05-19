@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web/dist/material-components-web.min.css">
-    <link rel="stylesheet" href="https://answeropedia.org/assets/css-md/style.css">
+    <link rel="stylesheet" href="css-md/style.css">
 
 </head>
 
@@ -111,65 +111,67 @@
         </div>
     </header>
 
+
+
+    <!-- permanent-drawer -->
+
     <div id="mdc-permanent-drawer" class="mdc-drawer mdc-top-app-bar--fixed-adjust">
+        <div class="mdc-drawer__header">
+            <h3 class="mdc-drawer__title">Mail</h3>
+            <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+        </div>
         <div class="mdc-drawer__content">
             <nav class="mdc-list">
-                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-                    <span class="mdc-list-item__text">Inbox</span>
+
+                <!-- drawer main -->
+
+                <a class="mdc-list-item mdc-list-item--activated" href="https://answeropedia.org/ru">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                    <span class="mdc-list-item__text">Главная страница</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                    <span class="mdc-list-item__text">Outgoing</span>
+                <a class="mdc-list-item" href="https://answeropedia.org/ru/1">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
+                    <span class="mdc-list-item__text">О сайте</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                    <span class="mdc-list-item__text">Drafts</span>
+                <a class="mdc-list-item" href="https://answeropedia.org/ru/flow">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">whatshot</i>
+                    <span class="mdc-list-item__text">Свежие правки</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                    <span class="mdc-list-item__text">Outgoing</span>
+                <a class="mdc-list-item" href="https://answeropedia.org/ru/hashtags/newest">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
+                    <span class="mdc-list-item__text">Популярные хештеги</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                    <span class="mdc-list-item__text">Drafts</span>
+                <a class="mdc-list-item" href="https://answeropedia.org/ru/random-question">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">local_bar</i>
+                    <span class="mdc-list-item__text">Случайный вопрос</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                    <span class="mdc-list-item__text">Outgoing</span>
+
+                <!-- / drawer main -->
+                <!-- drawer other_languages -->
+
+                <hr class="mdc-list-divider">
+                <h6 class="mdc-list-group__subheader">На других языках</h6>
+
+                <a class="mdc-list-item" href="https://answeropedia.org/en">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">language</i>
+                    <span class="mdc-list-item__text">Английский</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                    <span class="mdc-list-item__text">Drafts</span>
+                <a class="mdc-list-item" href="https://answeropedia.org/ru">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">language</i>
+                    <span class="mdc-list-item__text">Русский</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                    <span class="mdc-list-item__text">Outgoing</span>
+                <a class="mdc-list-item" href="https://answeropedia.org">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">g_translate</i>
+                    <span class="mdc-list-item__text">Все языки</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                    <span class="mdc-list-item__text">Drafts</span>
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                    <span class="mdc-list-item__text">Outgoing</span>
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                    <span class="mdc-list-item__text">Drafts</span>
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                    <span class="mdc-list-item__text">Outgoing</span>
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                    <span class="mdc-list-item__text">Drafts</span>
-                </a>
+
+                <!-- / drawer  other_languages -->
+
             </nav>
         </div>
     </div>
 
+    <!-- / permanent-drawer -->
     <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
 
 
