@@ -1,5 +1,17 @@
 
-<!-- navbar -->
+<!-- app-bar -->
+<header id="app-bar" class="mdc-top-app-bar app-bar">
+	<div class="mdc-top-app-bar__row">
+		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+			<a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+			<span class="mdc-top-app-bar__title">Modal Drawer</span>
+		</section>
+	</div>
+</header>
+<!-- / app-bar -->
+
+
+<!--
 <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
 
     <?php if ($this->authUser): ?>
@@ -71,11 +83,11 @@
 					<?= $this->translator->get('Login') ?>
 				</button>
 			</li>
-			<!-- <li class="nav-item">
+			<li class="nav-item">
 				<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
 					<?= $this->translator->get('Signup') ?>
 				</a>
-			</li> -->
+			</li>
 		<?php endif; ?>
 
         <?php if ($this->authUser): ?>
@@ -95,11 +107,11 @@
 	</ul>
 	
 </header>
-<!-- / navbar -->
+ -->
 
-<?php require_once TEMPLATE_PATH.'/_common/modal/ask.phtml'; ?>
+<?php //require_once TEMPLATE_PATH.'/_common/modal/ask.phtml'; ?>
 
 <?php if (!$this->authUser): ?>
-    <?php require_once TEMPLATE_PATH.'/_common/modal/login.phtml'; ?>
-    <?php require_once TEMPLATE_PATH.'/_common/modal/signup.phtml'; ?>
+    <?php //require_once TEMPLATE_PATH.'/_common/modal/login.phtml'; ?>
+    <?php //require_once TEMPLATE_PATH.'/_common/modal/signup.phtml'; ?>
 <?php endif; ?>

@@ -1,8 +1,75 @@
 
-<!-- Bootstrap core JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/material-components-web/dist/material-components-web.min.js"></script>
+
+<script>
+    // Select DOM elements
+
+    const elementTopAppBar = document.querySelector('.mdc-top-app-bar');
+    const elementModalDrawer = document.querySelector('#mdc-modal-drawer');
+    const elementModalDrawerList = document.querySelector('#mdc-modal-drawer .mdc-list');
+    const elementMainContent = document.querySelector('.main-content');
+
+    // Initialize top app bar
+    // using the automatic instantiation method. Dont`t work: const list = new MDCList(elementModalDrawerList);
+
+    const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(elementTopAppBar);
+    const modalDrawer = mdc.drawer.MDCDrawer.attachTo(elementModalDrawer);
+
+    // Init ModalDrawer`s when page loaded
+
+    const initModalDrawer = () => {
+
+        modalDrawer.open = false;
+
+        topAppBar.listen('MDCTopAppBar:nav', () => {
+            modalDrawer.open = !modalDrawer.open;
+        });
+
+        // Close ModalDrawer when clicked on menu item
+        elementModalDrawerList.addEventListener('click', (event) => {
+            modalDrawer.open = false;
+        });
+    }
+
+    initModalDrawer();
+
+    // Init PermanentDrawer`s and show/hide Sandwitch-button
+
+    if (window.matchMedia("(max-width: 900px)").matches) {
+        console.log('max-width <900');
+
+
+    } else {
+        console.log('max-width >900');
+
+        //const list = mdc.list.MDCList.attachTo(elementModalDrawerList);
+
+        //list.wrapFocus = true;
+    }
+
+    // Toggle between permanent drawer and modal drawer at breakpoint 900px
+
+    const resizeHandler = () => {
+        if (window.matchMedia("(max-width: 900px)").matches) {
+            //initModalDrawer();
+            console.log('hide permanent mdc-drawer');
+        } else {
+
+            //elementModalDrawer.classList.remove("mdc-drawer--modal");
+            console.log('show permanent mdc-drawer');
+
+        }
+    }
+    window.addEventListener('resize', resizeHandler);
+
+</script>
+
+<!-- Instantiate single textfield component rendered in the document -->
+<script>
+    mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+</script>
+
+<!-- OLD -->
 
 <!-- JS Helpers -->
 
