@@ -14,7 +14,7 @@
 
     const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(elementTopAppBar);
     const modalDrawer = mdc.drawer.MDCDrawer.attachTo(elementModalDrawer);
-
+    
     // Init ModalDrawer`s when page loaded
 
     const initModalDrawer = () => {
@@ -37,13 +37,9 @@
 
     if (window.matchMedia("(max-width: 900px)").matches) {
         console.log('max-width <900');
-
-
     } else {
         console.log('max-width >900');
-
         //const list = mdc.list.MDCList.attachTo(elementModalDrawerList);
-
         //list.wrapFocus = true;
     }
 
@@ -54,37 +50,31 @@
             //initModalDrawer();
             console.log('hide permanent mdc-drawer');
         } else {
-
             //elementModalDrawer.classList.remove("mdc-drawer--modal");
             console.log('show permanent mdc-drawer');
-
         }
     }
-    window.addEventListener('resize', resizeHandler);
+    //window.addEventListener('resize', resizeHandler);
 
 </script>
 
 <!-- Instantiate single textfield component rendered in the document -->
 <script>
-    mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+    //mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
 </script>
 
 <!-- OLD -->
 
 <!-- JS Helpers -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.0/smooth-scroll.min.js" integrity="sha256-/k5n1rmutzb2PSqvtV77T+xHa9plhfEjb/mpn1RpMzA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.0/smooth-scroll.min.js" integrity="sha256-/k5n1rmutzb2PSqvtV77T+xHa9plhfEjb/mpn1RpMzA=" crossorigin="anonymous"></script> -->
 
-<!-- init smooth-scroll -->
-<script>
-	var scroll = new SmoothScroll('a[href*="#"]');
-</script>
 
 <?php if (isset($this->includeJS) && count($this->includeJS)): ?>
     <?php foreach ($this->includeJS as $filename): ?>
-        <script src="<?= JS_URL.'/'.$filename.'.js' ?>" type="text/javascript"></script>
+        <!-- <script src="<?= JS_URL.'/'.$filename.'.js' ?>" type="text/javascript"></script> -->
     <?php endforeach; ?>
 <?php endif; ?>
 
