@@ -1,10 +1,11 @@
 
 <!-- modal windows -->
+
 <?php if (isset($this->includeModals) && count($this->includeModals)): ?>
     <?php foreach ($this->includeModals as $modalFilename): ?>
-        <?php //require_once TEMPLATE_PATH.'/_modal/'.$modalFilename.'.phtml' ?>
+        <?php require_once TEMPLATE_PATH.'/_modal/'.$modalFilename.'.phtml' ?>
     <?php endforeach; ?>
-
 <?php endif; ?>
+
 <!-- / modal windows -->
 

@@ -1,0 +1,105 @@
+
+<!-- navbar -->
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+ 
+	<?php if ($this->authUser): ?>
+        <a class="navbar-brand mr-0 mr-md-4 ml-md-2" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
+            <?= $this->translator->get('answeropedia') ?>
+        </a>
+    <?php else: ?>
+        <a class="navbar-brand mr-0 mr-md-2" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
+            <?= $this->translator->get('answeropedia') ?>
+        </a>
+    <?php endif; ?>
+	<div class="navbar-nav-scroll">
+		<ul class="navbar-nav bd-navbar-nav flex-row">
+			
+		<?php if (!$this->authUser): ?>
+                <li class="nav-item d-sm-none d-md-inline-block">
+                    <a class="nav-link" href="#">
+                        <?= $this->translator->get('navbar', 'about_answeropedia') ?>
+                    </a>
+                </li>
+            <?php endif; ?>
+		
+			<li class="nav-item">
+				<a class="nav-link " href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+					<?= $this->translator->get('navbar', 'recent_changes') ?>
+				</a>
+			</li>
+			
+			<li class="nav-item">
+                <a class="nav-link " href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
+                    <?= $this->translator->get('navbar', 'hashtags') ?>
+                </a>
+            </li>
+			<li class="nav-item mr-4">
+                <a class="nav-link <?= true ? 'active' : '' ?>" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
+                    <?= $this->translator->get('navbar', 'sandbox') ?>
+                </a>
+			</li>
+
+			<li class="nav-item">
+				<form class="form-inline" id="navbar_search_form">
+      				<input id="navbar_search_form_query" class="form-control" type="search" placeholder="<?= $this->translator->get('navbar', 'saarch_placeholder') ?>" aria-label="Search">
+    		    </form>
+            </li>
+
+    	</ul>
+	</div>
+
+	<ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+
+		<?php if (!$this->authUser): ?>
+			<li class="nav-item">
+				<a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="VK">
+					<i class="fab fa-vk"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Facebook">
+					<i class="fab fa-facebook"></i> 
+				</a>
+			</li>
+		<?php endif; ?>
+
+		<?php if (!$this->authUser): ?>
+			<li class="nav-item">
+				<button class="btn btn-warning d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_login">
+					<?= $this->translator->get('Login') ?>
+				</button>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
+					<?= $this->translator->get('Signup') ?>
+				</a>
+			</li>
+		<?php endif; ?>
+
+        <?php if ($this->authUser): ?>
+            <li class="nav-item">
+                <a class="user-avatar d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->getURL($this->lang) ?>">
+                    <img src="<?= $this->authUser->getAvatarSmallURL() ?>" alt="<?= $this->authUser->name ?>">
+                </a>
+            </li>
+		<?php endif; ?>
+
+		<li class="nav-item">
+			<button class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
+        		<?= $this->translator->get('navbar', 'btn_ask') ?>
+			</button>
+		</li>
+
+	</ul>
+	
+</header>
+
+<!-- / navbar -->
+
+<?php require_once TEMPLATE_PATH.'/_common/modal/ask.phtml'; ?>
+
+<?php if (!$this->authUser): ?>
+    <?php require_once TEMPLATE_PATH.'/_common/modal/login.phtml'; ?>
+    <?php require_once TEMPLATE_PATH.'/_common/modal/signup.phtml'; ?>
+<?php endif; ?>

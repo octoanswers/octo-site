@@ -4,49 +4,43 @@
 	<?php require TEMPLATE_PATH.'/_common/head.phtml'; ?>
 </head>
 
-<body class="mdc-typography" <?= isset($this->bodyAttr) ? ' '.$this->bodyAttr : '' ?>>
+<body <?= isset($this->bodyAttr) ? ' '.$this->bodyAttr : '' ?>>
 
-	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<?php require TEMPLATE_PATH.'/_common/navbar.phtml'; ?>
 
-	<?php require TEMPLATE_PATH.'/_common/drawer_modal.phtml'; ?>
-    
-	<?php require TEMPLATE_PATH.'/_common/app_bar.phtml'; ?>
+	<div class="container-fluid">
+		<div class="row flex-xl-nowrap">
 
-	<?php require TEMPLATE_PATH.'/_common/drawer_permanent.phtml'; ?>
+			<!-- left_sidebar -->
+			<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+				<?php if (file_exists(TEMPLATE_PATH.'/'.$this->template.'/left.phtml')): ?>
+					<?php require TEMPLATE_PATH.'/'.$this->template.'/left.phtml'; ?>
+				<?php else: ?>
+					<?php require TEMPLATE_PATH.'/_common/left.phtml'; ?>
+				<?php endif; ?>
+			</div>
+			<!-- / left_sidebar -->
 
-    <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
-        <main id="main-content" class="main-content">
-            <div class="mdc-layout-grid">
-                <div class="mdc-layout-grid__inner">
-                    <div class="mdc-layout-grid__cell--span-8">
-						
-						<?php require TEMPLATE_PATH.'/'.$this->template.'/main.phtml'; ?>
-                        
-                    </div>
-                    <div class="mdc-layout-grid__cell--span-4">
-						
-						<?php if (file_exists(TEMPLATE_PATH.'/'.$this->template.'/right.phtml')): ?>
-							<?php require TEMPLATE_PATH.'/'.$this->template.'/right.phtml'; ?>
-						<?php endif; ?>
-						
-						<!-- Render textfield component -->
-                        <!-- <div class="mdc-text-field">
-                            <input type="text" id="my-text-field" class="mdc-text-field__input">
-                            <label class="mdc-floating-label" for="my-text-field">Hint text</label>
-                            <div class="mdc-line-ripple"></div>
-                        </div> -->
+			<!-- right_sidebar -->
+			<div class="d-none d-xl-block col-xl-3 right-sidebar">
+				<?php if (file_exists(TEMPLATE_PATH.'/'.$this->template.'/right.phtml')): ?>
+					<?php require TEMPLATE_PATH.'/'.$this->template.'/right.phtml'; ?>
+				<?php endif; ?>
+			</div>
+			<!-- / right_sidebar -->
 
-                    </div>
-                </div>
-            </div>
+			<!-- main_column -->
+			<main class="col-12 col-md-9 col-xl-7 py-md-3 pl-md-5 bd-content">
+				<?php require TEMPLATE_PATH.'/'.$this->template.'/main.phtml'; ?>
+				<?php require TEMPLATE_PATH.'/_common/footer.phtml'; ?>
+			</main>
+			<!-- / main_column -->
 
-        </main>
-    </div>
+		</div>
+	</div>
 
-	<?php //require TEMPLATE_PATH.'/_common/modals.phtml'; ?>
+	<?php require TEMPLATE_PATH.'/_common/modals.phtml'; ?>
 	<?php require TEMPLATE_PATH.'/_common/js.phtml'; ?>
 
-    <div></div>
 </body>
-
 </html>
