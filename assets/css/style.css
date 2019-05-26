@@ -324,10 +324,6 @@ a.link-external:after {
   vertical-align: middle;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
 h1,
 .h1 {
   font-weight: 700;
@@ -429,10 +425,6 @@ img.cover-height-16 {
   border: 0;
 }
 
-.navbar .nav-link {
-  color: #9e9e9e;
-}
-
 .navbar a.user-avatar {
   display: inline-block;
   width: 38px;
@@ -449,6 +441,10 @@ img.cover-height-16 {
 
 .navbar a.user-avatar img:hover {
   opacity: 0.8;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #666;
 }
 
 .right-sidebar {

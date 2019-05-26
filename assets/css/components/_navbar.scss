@@ -9,10 +9,6 @@
         border: 0;
     }
 
-    .nav-link {
-        color: $color-gray-500;
-    }
-
     a.user-avatar {
         $user-avatar-size: 38px;
         display: inline-block;
@@ -29,6 +25,15 @@
             &:hover {
                 opacity: 0.8;
             }
+        }
+    }
+}
+
+.navbar-light {
+    .navbar-nav {
+
+        .nav-link {
+            color: #666;
         }
     }
 }

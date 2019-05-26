@@ -1,59 +1,55 @@
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
 h1,
 .h1 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 del,
 ins {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 del {
-  background-color: #ffdce0;
-  text-decoration: none;
+    background-color: #ffdce0;
+    text-decoration: none;
 }
 
 ins {
-  background-color: #cdffd8;
-  text-decoration: none;
+    background-color: #cdffd8;
+    text-decoration: none;
 }
 
 ul {
-  padding-left: 1.25rem;
-  margin-bottom: 1.5rem;
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 pre {
-  padding: 1rem;
-  background-color: $color-gray-200;
-  white-space: pre-wrap;
-  /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
+    padding: 1rem;
+    background-color: $color-gray-200;
+    white-space: pre-wrap;
+    /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
 }
 
 blockquote,
 .blockquote {
-  background-color: $color-white;
-  border-left: 4px solid $color-gray-400;
-  padding-left: 1rem;
-  color: $color-gray-700;
-  margin-bottom: 0 !important;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+    background-color: $color-white;
+    border-left: 4px solid $color-gray-400;
+    padding-left: 1rem;
+    color: $color-gray-700;
+    margin-bottom: 0 !important;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 
-  p:last-child {
-    margin-bottom: 0;
-  }
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
