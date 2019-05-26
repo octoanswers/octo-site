@@ -26,11 +26,6 @@ Currently, Answeropedia is launched only in [Russian](https://answeropedia.org/r
 + Log in via Facebook or others (using plugins);
 + Safe from XSS, CSRF and SQL injection attacks;
 
-## Maybe later
-
-+ Beat spam with captchas, rate-limiting, moderation and/or flagging;
-+ User access levels (groups);
-
 ## Test Environment 
 
 + Apache/Nginx
