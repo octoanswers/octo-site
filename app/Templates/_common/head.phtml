@@ -1,14 +1,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title><?= $this->pageTitle ?></title>
+<title><?= $this->pageTitle ?>
+</title>
 
 <?php if ($this->pageDescription): ?>
-    <meta name="description" content="<?= $this->pageDescription ?>">
+<meta name="description" content="<?= $this->pageDescription ?>">
 <?php endif; ?>
 
 <?php if (isset($this->canonicalURL)): ?>
-    <link rel="canonical" href="<?= $this->canonicalURL ?>" />
+<link rel="canonical" href="<?= $this->canonicalURL ?>" />
 <?php endif; ?>
 
 <!-- Favicons -->
@@ -18,41 +19,51 @@
 <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-160.png" sizes="160x160">
 <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-196.png" sizes="196x196">
 <link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-120.png">
-<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-152.png" sizes="152x152">
-<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-180.png" sizes="180x180">
+<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-152.png"
+    sizes="152x152">
+<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-180.png"
+    sizes="180x180">
 
 <!-- stylesheet -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+    rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet">
-<link href="https://answeropedia.org/assets/css/style.css?v=1" rel="stylesheet">
+<link href="https://answeropedia.org/assets/css/style.css?v=2" rel="stylesheet">
 
 <?php if (isset($this->includeCSS) && count($this->includeCSS)): ?>
-    <!-- additional CSS -->
-    <?php foreach ($this->includeCSS as $linkToCSS): ?>
-        <link rel="stylesheet" href="<?= $linkToCSS ?>">
-    <?php endforeach; ?>
+<!-- additional CSS -->
+<?php foreach ($this->includeCSS as $linkToCSS): ?>
+<link rel="stylesheet" href="<?= $linkToCSS ?>">
+<?php endforeach; ?>
 <?php endif; ?>
 
 <!-- Open Graph tags -->
 <?php if (isset($this->openGraph['url'])): ?>
-    <meta property="og:url" content="<?= $this->openGraph['url'] ?>" />
+<meta property="og:url"
+    content="<?= $this->openGraph['url'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['type'])): ?>
-    <meta property="og:type" content="<?= $this->openGraph['type'] ?>" />
+<meta property="og:type"
+    content="<?= $this->openGraph['type'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['title'])): ?>
-    <meta property="og:title" content="<?= $this->openGraph['title'] ?>" />
+<meta property="og:title"
+    content="<?= $this->openGraph['title'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['description'])): ?>
-    <meta property="og:description" content="<?= $this->openGraph['description'] ?>" />
+<meta property="og:description"
+    content="<?= $this->openGraph['description'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['image'])): ?>
-    <meta property="og:image" content="<?= $this->openGraph['image'] ?>" />
+<meta property="og:image"
+    content="<?= $this->openGraph['image'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['locale'])): ?>
-    <meta property="og:locale" content="<?= $this->openGraph['locale'] ?>" />
-<?php endif; ?>
+<meta property="og:locale"
+    content="<?= $this->openGraph['locale'] ?>" />
+<?php endif;
