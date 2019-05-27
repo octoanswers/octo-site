@@ -25,23 +25,27 @@
 
 			<!-- Mobile links -->
 
-			<li class="nav-item">
+			<li class="nav-item d-lg-none">
 				<a class="nav-link"
 					href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
 					<?= $this->translator->get('navbar', 'recent_changes') ?>
 				</a>
 			</li>
 
-			<li class="nav-item">
+			<li class="nav-item d-lg-none">
 				<a class="nav-link"
 					href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
 					<?= $this->translator->get('navbar', 'hashtags') ?>
 				</a>
 			</li>
 
-			<li class="nav-item">
-				<a class="nav-link" href="#">
-					<?= $this->translator->get('navbar', 'login_or_signup') ?>
+			<li class="nav-item d-lg-none">
+				<a class="nav-link d-inline-block" href="#" data-toggle="modal" data-target="#modal_login">
+					<?= $this->translator->get('navbar', 'login') ?>
+				</a>
+				&middot;
+				<a class="nav-link d-inline-block" href="#" data-toggle="modal" data-target="#modal_signup">
+					<?= $this->translator->get('navbar', 'signup') ?>
 				</a>
 			</li>
 
@@ -54,18 +58,12 @@
 
 			<!-- Desktop links -->
 
-			<li class="nav-item d-none">
-				<a class="nav-link"
-					href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-					<?= $this->translator->get('navbar', 'sandbox') ?>
-				</a>
-			</li>
-
-			<li class="nav-item d-none">
-				<a class="nav-link"
-					href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-					<?= $this->translator->get('navbar', 'hashtags') ?>
-				</a>
+			<li class="nav-item ml-4 d-none d-lg-block">
+				<form class="form-inline" id="navbar_search_form">
+					<input id="navbar_search_form_query" class="form-control" type="search"
+						placeholder="<?= $this->translator->get('navbar', 'saarch_placeholder') ?>..."
+						aria-label="Search">
+				</form>
 			</li>
 
 		</ul>
@@ -74,12 +72,12 @@
 			<?php if (!$this->authUser): ?>
 			<li class="nav-item">
 				<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_login">
-					<?= $this->translator->get('Login') ?>
+					<?= $this->translator->get('navbar', 'login') ?>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
-					<?= $this->translator->get('Signup') ?>
+					<?= $this->translator->get('navbar', 'signup') ?>
 				</a>
 			</li>
 			<?php endif; ?>
