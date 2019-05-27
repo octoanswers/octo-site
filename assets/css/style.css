@@ -431,6 +431,12 @@ img.cover-height-16 {
   font-weight: 700;
 }
 
+@media (min-width: 992px) {
+  .navbar .navbar-brand {
+    margin-left: .5rem;
+  }
+}
+
 .navbar .navbar-toggler {
   border: 0;
 }
@@ -532,7 +538,6 @@ img.cover-height-16 {
 }
 
 .bd-links {
-  margin-top: 1rem;
   margin-bottom: 1rem;
   margin-right: -15px;
   margin-left: -15px;
