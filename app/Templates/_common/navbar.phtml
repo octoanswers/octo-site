@@ -61,7 +61,7 @@
 			<li class="nav-item ml-4 d-none d-lg-block">
 				<form class="form-inline" id="navbar_search_form">
 					<input id="navbar_search_form_query" class="form-control" type="search"
-						placeholder="<?= $this->translator->get('navbar', 'saarch_placeholder') ?>..."
+						placeholder="<?= $this->translator->get('navbar', 'saarch_placeholder') ?>"
 						aria-label="Search">
 				</form>
 			</li>
@@ -105,9 +105,9 @@
 
 <!-- / navbar -->
 
-<?php require_once TEMPLATE_PATH.'/_common/modal/ask.phtml'; ?>
+<?php require_once TEMPLATE_PATH.'/_modal/_common/ask.phtml'; ?>
 
 <?php if (!$this->authUser): ?>
-<?php require_once TEMPLATE_PATH.'/_common/modal/login.phtml'; ?>
-<?php require_once TEMPLATE_PATH.'/_common/modal/signup.phtml'; ?>
+<?php require_once TEMPLATE_PATH.'/_modal/_common/login.phtml'; ?>
+<?php require_once TEMPLATE_PATH.'/_modal/_common/signup.phtml'; ?>
 <?php endif;

@@ -152,26 +152,29 @@
             "You receive an answer to the email": "Вы получаете исчерпывающий ответ на email"
         }
     },
-    "modal": {
-        "ask": {
-            "Ask questions in a form understandable to real people - they will answer, not search robots.": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
-            "New question": "Новый вопрос",
-            "What is your question?": "Какой у вас вопрос?"
-        },
-        "login": {
-            "Log in": "Войти",
-            "title": "Вход"
-        },
-        "signup": {
-            "By signing up, you agree to our terms of use, privacy policy, and cookie policy.": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
-            "Email": "Email",
-            "Password": "Пароль",
-            "Username": "Логин"
-        }
-    },
     "modal/question/upload_image": {
         "Upload image": "Загрузить картинку",
         "Upload question image": "Загрузка картинки вопроса"
+    },
+    "modal_ask": {
+        "btn_ask": "Задать вопрос",
+        "input_placeholder": "Какой у вас вопрос?",
+        "note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
+        "title": "Новый вопрос"
+    },
+    "modal_login": {
+        "btn_login": "Войти",
+        "email": "Электронная почта",
+        "password": "Пароль",
+        "title": "Вход"
+    },
+    "modal_signup": {
+        "btn_signup": "Зарегистрироваться",
+        "email": "Электронная почта",
+        "note": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
+        "password": "Пароль",
+        "title": "Регистрация",
+        "username": "Логин"
     },
     "navbar": {
         "about_answeropedia": "О&nbsp;проекте",
@@ -180,7 +183,7 @@
         "hashtags": "Хештеги",
         "login": "Вход",
         "recent_changes": "Последние&nbsp;правки",
-        "saarch_placeholder": "Поиск вопросов",
+        "saarch_placeholder": "Какой у вас вопрос?",
         "sandbox": "Песочница",
         "signup": "Регистрация"
     },

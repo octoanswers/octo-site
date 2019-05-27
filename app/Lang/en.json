@@ -32,17 +32,37 @@
             "title": "Login"
         }
     },
+    "modal_ask": {
+        "btn_ask": "Ask a question",
+        "input_placeholder": "What is your question?",
+        "note": "Ask questions in a form understandable to real people - they will answer, not search robots.",
+        "title": "New question"
+    },
+    "modal_login": {
+        "btn_login": "Log in",
+        "email": "Email",
+        "password": "Password",
+        "title": "Login"
+    },
+    "modal_signup": {
+        "btn_signup": "Signup",
+        "email": "Email",
+        "note": "By signing up, you agree to our terms of use, privacy policy, and cookie policy.",
+        "password": "Password",
+        "title": "Sign up",
+        "username": "Username"
+    },
     "navbar": {
         "about_answeropedia": "About&nbsp;project",
         "btn_ask": "Ask a question",
         "flow": "Flow",
         "hashtags": "Hashtags",
-        "login": "Вход",
+        "login": "Login",
         "questions": "Questions",
         "recent_changes": "Recent&nbsp;changes",
-        "saarch_placeholder": "Search",
+        "saarch_placeholder": "What is your question?",
         "sandbox": "Sandbox",
-        "signup": "Регистрация"
+        "signup": "Signup"
     },
     "page": "Page",
     "sandbox": {
