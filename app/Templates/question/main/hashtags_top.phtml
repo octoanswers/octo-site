@@ -9,10 +9,10 @@
 			</a>
 		<?php endforeach; ?>
 
-		<?php if ($this->question->getMoreHashtagsCount()): ?>
-			<a class="text-secondary text-decoration-none mb-2 mr-2" data-scroll href="#question_hashtags_list">
-				+<?= $this->question->getMoreHashtagsCount() ?>
-			</a>
+        <?php if ($this->question->getMoreHashtagsCount()): ?>
+            <a class="btn btn-outline-secondary btn-sm" data-scroll href="#question_hashtags_list">
+                +<?= $this->question->getMoreHashtagsCount() ?> #
+            </a>
 		<?php endif; ?>
 
 	<?php endif; ?>
