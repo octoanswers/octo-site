@@ -3,19 +3,23 @@
 //
 
 .color-primary-lightest {
-  color: $color-primary-lightest;
+    color: $color-primary-lightest;
 }
+
 .color-primary-light {
-  color: $color-primary-light;
+    color: $color-primary-light;
 }
+
 .color-primary {
-  color: $color-primary !important;
+    color: $color-primary !important;
 }
+
 .color-primary-dark {
-  color: $color-primary-dark;
+    color: $color-primary-dark;
 }
+
 .color-primary-darkest {
-  color: $color-primary-darkest;
+    color: $color-primary-darkest;
 }
 
 //
@@ -23,25 +27,29 @@
 //
 
 .color-secondary-lightest {
-  color: $color-secondary-lightest;
+    color: $color-secondary-lightest;
 }
+
 .color-secondary-light {
-  color: $color-secondary-light;
+    color: $color-secondary-light;
 }
+
 .color-secondary {
-  color: $color-secondary;
+    color: $color-secondary;
 }
+
 .color-secondary-dark {
-  color: $color-secondary-dark;
+    color: $color-secondary-dark;
 }
+
 .color-secondary-darkest {
-  color: $color-secondary-darkest;
+    color: $color-secondary-darkest;
 }
 
 // Success colors
 
 .color-success {
-  color: $color-success;
+    color: $color-success;
 }
 
 //
@@ -49,7 +57,7 @@
 //
 
 .color-warning {
-  color: $color-warning;
+    color: $color-warning;
 }
 
 //
@@ -57,14 +65,59 @@
 //
 
 .color-text-white {
-  color: $color-white;
+    color: $color-white;
 }
+
 .color-text-lighter {
-  color: $color-gray-600;
+    color: $color-gray-600;
 }
+
 .color-text-light {
-  color: $color-gray-700;
+    color: $color-gray-700;
 }
+
 .color-text-normal {
-  color: $color-gray-900;
+    color: $color-gray-900;
+}
+
+// Gray gradient
+
+.color-white {
+    color: $color-white;
+}
+
+.color-gray-100 {
+    color: $color-gray-100;
+}
+
+.color-gray-200 {
+    color: $color-gray-200;
+}
+
+.color-gray-300 {
+    color: $color-gray-300;
+}
+
+.color-gray-400 {
+    color: $color-gray-400;
+}
+
+.color-gray-500 {
+    color: $color-gray-500;
+}
+
+.color-gray-600 {
+    color: $color-gray-600;
+}
+
+.color-gray-700 {
+    color: $color-gray-700;
+}
+
+.color-gray-800 {
+    color: $color-gray-800;
+}
+
+.color-gray-900 {
+    color: $color-gray-900;
 }

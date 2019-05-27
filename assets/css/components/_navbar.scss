@@ -1,5 +1,5 @@
 .navbar {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $color-secondary-lightest;
 
     .navbar-brand {
         font-weight: 700;
@@ -14,7 +14,7 @@
         display: inline-block;
         width: $user-avatar-size;
         height: $user-avatar-size;
-        border: 1px solid $color-gray-300;
+        border: 1px solid $color-secondary-lightest;
         border-radius: 50%;
 
         img {

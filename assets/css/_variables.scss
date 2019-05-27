@@ -6,49 +6,49 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
-// Navbar color (https://convertingcolors.com/rgb-color-52_61_72.html)
+// Brand color, https://convertingcolors.com/hex-color-FD0028.html
 
-$color-navbar: #343d48;
+$color-brand: #FD0028;
 
-// Primary color (triad blue from https://convertingcolors.com/rgb-color-0_176_56.html)
+// Primary color (triad blue for barand color, https://convertingcolors.com/hex-color-0088FF.html)
 
-$color-primary-lightest: #70ddff;
-$color-primary-light: #4ac1ff;
-$color-primary: #00a6ff;
-$color-primary-dark: #008ce2;
-$color-primary-darkest: #005aaa;
+$color-primary-lightest: #99CFFF;
+$color-primary-light: #4DACFF;
+$color-primary: #0088FF;
+$color-primary-dark: #006FE2;
+$color-primary-darkest: #005aaa; // need-replace
 
 // Secondary colors (sweetspot gray)
 
-$color-secondary-lightest: #dedede;
-$color-secondary-light: #a7a7a7;
-$color-secondary: #737373;
-$color-secondary-dark: #5a5a5a;
-$color-secondary-darkest: #434343;
+$color-secondary-lightest: #D0D0D0;
+$color-secondary-light: #B5B5B5;
+$color-secondary: #808080;
+$color-secondary-dark: #676767;
+$color-secondary-darkest: #4F4F4F;
 
-// Success colors (triad green)
+// $color-success -- triad green for barand color (https://convertingcolors.com/hex-color-0088FF.html)
 
-$color-success-lightest: #bbffbe;
-$color-success-light: #3ccc52;
-$color-success: #00b038;
-$color-success-dark: #00941c;
-$color-success-darkest: #007a00;
+$color-success-lightest: #E8FFEF; // sweetspot for $color-success-light
+$color-success-light: #8DC99E; // sweetspot for $color-success
+$color-success: #009B2B;
+$color-success-dark: #00800C;
+$color-success-darkest: #006600;
 
 // Warning color (square orange)
 
-$color-warning-lightest: #ffde8f;
-$color-warning-light: #ffa65a;
-$color-warning: #f86f25;
-$color-warning-dark: #d85403;
-$color-warning-darkest: #b83900;
+$color-warning-lightest: #ffde8f; // need-replace
+$color-warning-light: #ffa65a; // need-replace
+$color-warning: #fdc946;
+$color-warning-dark: #d85403; // need-replace
+$color-warning-darkest: #b83900; // need-replace
 
-// Danger color (triad pink-red)
+// Danger color (like a brand color)
 
-$color-danger-lightest: #ffc4d1;
-$color-danger-light: #ff899b;
-$color-danger: #ff4e68;
-$color-danger-dark: #df2c50;
-$color-danger-darkest: #a00024;
+$color-danger-lightest: #FDB1BD;
+$color-danger-light: #FD4C68;
+$color-danger: $color-brand;
+$color-danger-dark: #db0011;
+$color-danger-darkest: #BA0000;
 
 // Info color (square orange)
 

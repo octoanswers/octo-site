@@ -1,83 +1,93 @@
 // Filled buttons
 
 .btn-primary {
-  border-color: $color-primary;
-  background-color: $color-primary;
+    border-color: $color-primary;
+    background-color: $color-primary;
 
-  &:hover {
-    background-color: $color-primary-dark;
-    border-color: $color-primary-dark;
-  }
+    &:hover {
+        background-color: $color-primary-dark;
+        border-color: $color-primary-dark;
+    }
 }
 
 .btn-secondary {
-  border-color: $color-secondary;
-  background-color: $color-secondary;
+    border-color: $color-secondary;
+    background-color: $color-secondary;
 
-  &:hover {
-    background-color: $color-secondary-dark;
-    border-color: $color-secondary-dark;
-  }
+    &:hover {
+        background-color: $color-secondary-dark;
+        border-color: $color-secondary-dark;
+    }
 }
 
 .btn-success {
-  border-color: $color-success-light;
-  background-color: $color-success-light;
+    border-color: $color-success-light;
+    background-color: $color-success-light;
 
-  &:hover {
-    background-color: $color-success-dark;
-    border-color: $color-success-dark;
-  }
+    &:hover {
+        background-color: $color-success-dark;
+        border-color: $color-success-dark;
+    }
 }
 
 .btn-warning {
-  background-color: $color-warning;
-  border-color: $color-warning;
-
-  &:hover {
     background-color: $color-warning;
     border-color: $color-warning;
-  }
+
+    &:hover {
+        background-color: $color-warning;
+        border-color: $color-warning;
+    }
+}
+
+.btn-danger {
+    background-color: $color-danger;
+    border-color: $color-danger;
+
+    &:hover {
+        background-color: $color-danger-dark;
+        border-color: $color-danger-dark;
+    }
 }
 
 // Outline Buttons
 
 .btn-outline-primary {
-  color: $color-primary;
-  border-color: $color-primary;
-
-  &:hover {
-    background-color: $color-primary;
+    color: $color-primary;
     border-color: $color-primary;
-  }
+
+    &:hover {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
 }
 
 .btn-outline-secondary {
-  color: $color-secondary;
-  border-color: $color-secondary-light;
+    color: $color-secondary;
+    border-color: $color-secondary-light;
 
-  &:hover {
-    background-color: $color-secondary;
-    border-color: $color-secondary;
-  }
+    &:hover {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+    }
 }
 
 .btn-outline-success {
-  color: $color-success;
-  border-color: $color-success;
-
-  &:hover {
-    background-color: $color-success;
+    color: $color-success;
     border-color: $color-success;
-  }
+
+    &:hover {
+        background-color: $color-success;
+        border-color: $color-success;
+    }
 }
 
 .btn-outline-warning {
-  color: $color-warning;
-  border-color: $color-warning;
-
-  &:hover {
-    background-color: $color-warning;
+    color: $color-warning;
     border-color: $color-warning;
-  }
+
+    &:hover {
+        background-color: $color-warning;
+        border-color: $color-warning;
+    }
 }
