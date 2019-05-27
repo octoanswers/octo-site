@@ -26,22 +26,6 @@
     }
 }
 
-.toc-entry {
-    display: block;
-
-    a,
-    span {
-        display: block;
-        padding: 0.125rem 1.5rem;
-        color: #77757a;
-
-        &:hover {
-            color: $color-primary;
-            text-decoration: none;
-        }
-    }
-}
-
 //
 // Left side navigation
 //

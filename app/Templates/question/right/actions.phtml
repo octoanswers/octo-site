@@ -1,9 +1,9 @@
 
 <!-- right_actions -->
-<div class="mb-4">
+<div class="my-5">
 
-	<div class="mb-4">
-		<div class="h6 font-weight-bold border-bottom pb-2 mb-2">
+	<div class="mb-3">
+		<div class="font-weight-bold border-bottom pb-2 mb-2">
 			<?= $this->translator->get('Actions') ?>
 		</div>
 	</div>
@@ -35,9 +35,8 @@
 		<?php endif; ?>
 			
 		<li class="my-1">
-			<a class="text-muted text-decoration-none" href="#" rel="nofollow">
-				<i class="fas fa-flag mr-1"></i>
-				<?= $this->translator->get('Report') ?>
+			<a class="small text-muted text-decoration-none" href="#" rel="nofollow">
+				<s><?= $this->translator->get('Report') ?></s>
 			</a>
 		</li>
 		

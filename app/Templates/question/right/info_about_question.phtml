@@ -1,17 +1,15 @@
 
 <!-- info_about_question -->
-<div class="my-4">
-	<ul class="section-nav">
-		<?php if ($this->question->answer->text): ?>
-			<li class="toc-entry toc-h2">
-				<span>
-				<?= $this->question->getMinutesToRead() ?>
-				</span>
-			</li>
-		<?php endif; ?>
-		
-		<li class="toc-entry toc-h2">
-			<span>
+<div class="my-5">
+    <div class="mb-3">
+		<div class="font-weight-bold border-bottom pb-2 mb-2">
+            <!-- <?= $this->translator->get('Actions') ?> -->
+            Информация
+		</div>
+	</div>
+	<ul class="list-unstyled">
+		<li>
+			<span class="small">
 				<?= $this->translator->get('Answer updated').': '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->question->answer->updatedAt) ?>
 			</span>
 		</li>

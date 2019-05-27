@@ -436,23 +436,6 @@ img.cover-height-16 {
   padding-left: 1rem;
 }
 
-.toc-entry {
-  display: block;
-}
-
-.toc-entry a,
-.toc-entry span {
-  display: block;
-  padding: 0.125rem 1.5rem;
-  color: #77757a;
-}
-
-.toc-entry a:hover,
-.toc-entry span:hover {
-  color: #3d95e9;
-  text-decoration: none;
-}
-
 .bd-sidebar {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
