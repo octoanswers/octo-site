@@ -101,7 +101,7 @@
     "app_bar": {
         "text": "Компетентные ответы на ваши вопросы"
     },
-    "drawer__main_nav": {
+    "sidebar__main_nav": {
         "about_site": "О сайте",
         "feed": "Подписки",
         "main_page": "Главная страница",
