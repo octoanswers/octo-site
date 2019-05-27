@@ -3,25 +3,24 @@
 	<!-- hashtags -->
 	<div class="my-5" id="question_hashtags_list">
 		<div class="h6 font-weight-bold border-bottom pb-2 mb-3">
-			<?= $this->translator->get('Hashtags') ?>
+			<?= $this->translator->get('question', 'hashtags') ?>
 		</div>
 
-		<?php foreach ($this->question->getHashtags() as $hashtag): ?>
-			<a class="text-decoration-none mb-2 mr-2" href="<?= $hashtag->getURL($this->lang) ?>">
+        <?php foreach ($this->question->getHashtags() as $hashtag): ?>
+            <a class="btn btn-outline-primary mb-2 mr-2" href="<?= $hashtag->getURL($this->lang) ?>">
 				#<?= $hashtag->title ?>
 			</a>
 		<?php endforeach; ?>
 
 		<?php if ($this->authUser): ?>
 			<a class="btn btn-outline-secondary btn-sm ml-2" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>" rel="nofollow">
-				<?= $this->translator->get('Change') ?>
+				<?= $this->translator->get('question', 'hashtags_change') ?>
 			</a>
 		<?php endif; ?>
 
 	</div>
-		
 
-	<!-- / hashtags -->
+    <!-- / hashtags -->
 
 <?php else: ?>
 
@@ -29,7 +28,7 @@
 		<div class="mt-5">
 			<a class="badge badge-primary mr-2 mb-3" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>">
 				<i class="far fa-plus-square"></i>
-				Задать темы вопроса
+                <?= $this->translator->get('question', 'set_first_hashtag') ?>
 			</a>
 		</div>
 	<?php endif; ?>

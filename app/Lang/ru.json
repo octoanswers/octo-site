@@ -193,6 +193,7 @@
         "page_title": "Ошибка 404"
     },
     "question": {
+        "hashtags": "Хештеги",
         "user_contribution": "Вклад пользователя",
         "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
         "Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
