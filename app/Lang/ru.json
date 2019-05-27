@@ -178,12 +178,11 @@
         "btn_ask": "Задать вопрос",
         "flow": "Свежие&nbsp;правки",
         "hashtags": "Хештеги",
+        "login": "Вход",
         "recent_changes": "Последние&nbsp;правки",
         "saarch_placeholder": "Поиск вопросов",
-        "login": "Вход",
-        "signup": "Регистрация",
-        "login_or_signup": "Войти или зарегистрироваться",
-        "sandbox": "Песочница"
+        "sandbox": "Песочница",
+        "signup": "Регистрация"
     },
     "page": "Страница",
     "page_not_found": {

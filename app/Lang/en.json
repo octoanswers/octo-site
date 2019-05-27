@@ -9,8 +9,8 @@
     "drawer__main_nav": {
         "about_site": "About site",
         "feed": "Feed",
-        "main_page": "Main page",
         "hashtags": "Popular hashtags",
+        "main_page": "Main page",
         "random_question": "Random question",
         "recent_changes": "Recent changes",
         "sandbox": "Sandbox"
@@ -37,11 +37,12 @@
         "btn_ask": "Ask a question",
         "flow": "Flow",
         "hashtags": "Hashtags",
+        "login": "Вход",
         "questions": "Questions",
         "recent_changes": "Recent&nbsp;changes",
         "saarch_placeholder": "Search",
         "sandbox": "Sandbox",
-        "login_or_signup": "Login or signup"
+        "signup": "Регистрация"
     },
     "page": "Page",
     "sandbox": {
