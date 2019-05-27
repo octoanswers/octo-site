@@ -268,8 +268,6 @@ a.link-external:after {
   vertical-align: middle;
 }
 
-h1,
-.h1,
 h2,
 .h2,
 h3,
@@ -281,6 +279,18 @@ h5,
 h6,
 .h6 {
   font-weight: 600;
+}
+
+h1,
+.h1 {
+  font-weight: 600;
+}
+
+@media (max-width: 575px) {
+  h1,
+  .h1 {
+    font-size: 2rem;
+  }
 }
 
 del,

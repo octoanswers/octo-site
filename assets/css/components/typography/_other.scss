@@ -1,5 +1,3 @@
-h1,
-.h1,
 h2,
 .h2,
 h3,
@@ -12,6 +10,16 @@ h6,
 .h6 {
     font-weight: 600;
 }
+
+h1,
+.h1 {
+    font-weight: 600;
+
+    @include sm-and-down {
+        font-size: 2rem;
+    }
+}
+
 
 del,
 ins {

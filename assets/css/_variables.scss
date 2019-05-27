@@ -6,6 +6,18 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
+@mixin sm-and-down {
+    @media (max-width: $breakpoint-sm - 1) {
+        @content;
+    }
+}
+
+@mixin sm-and-up {
+    @media (min-width: $breakpoint-sm) {
+        @content;
+    }
+}
+
 // Brand color, https://convertingcolors.com/hex-color-FD0028.html
 
 $color-brand: #FD0028;
