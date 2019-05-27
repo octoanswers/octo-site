@@ -4,76 +4,34 @@
   border-color: #E8FFEF;
 }
 
-a.badge-primary,
-a.badge-secondary,
-a.badge-success,
-a.badge-warning,
-a.badge-danger,
-a.badge-info,
-a.badge-light,
-a.badge-dark {
-  cursor: pointer;
-}
-
-.badge,
-span.badge-primary,
-a.badge-primary {
+.badge-primary {
   border-color: #0088FF;
   background-color: #0088FF;
 }
 
-a.badge-primary:hover {
-  border-color: #006FE2 !important;
-  background-color: #006FE2 !important;
-}
-
-span.badge-secondary,
-a.badge-secondary {
+.badge-secondary {
   border-color: #808080;
   background-color: #808080;
 }
 
-span.badge-secondary:hover,
-a.badge-secondary:hover {
-  border-color: #676767 !important;
-  background-color: #676767 !important;
-}
-
-span.badge-success,
-a.badge-success {
+.badge-success {
   border-color: #009B2B;
   background-color: #009B2B;
 }
 
-a.badge-success:hover {
-  border-color: #00800C !important;
-  background-color: #00800C !important;
-}
-
-span.badge-warning,
-a.badge-warning {
+.badge-warning {
   border-color: #fdc946;
   background-color: #fdc946;
 }
 
-a.badge-warning:hover {
-  border-color: #d85403 !important;
-  background-color: #d85403 !important;
-}
-
-span.badge-danger {
+.badge-danger {
   border-color: #FD0028;
   background-color: #FD0028;
 }
 
-a.badge-danger {
-  border-color: #FD0028;
-  background-color: #FD0028;
-}
-
-a.badge-danger:hover {
-  border-color: #db0011 !important;
-  background-color: #db0011 !important;
+.badge-light {
+  border-color: #EDEDED;
+  background-color: #EDEDED;
 }
 
 .border-top {
@@ -154,7 +112,7 @@ a.badge-danger:hover {
 
 .btn-outline-secondary {
   color: #808080;
-  border-color: #B5B5B5;
+  border-color: #9A9A9A;
 }
 
 .btn-outline-secondary:hover {
@@ -231,7 +189,7 @@ a.badge-danger:hover {
 }
 
 .color-secondary-light {
-  color: #B5B5B5;
+  color: #9A9A9A;
 }
 
 .color-secondary {
@@ -243,7 +201,7 @@ a.badge-danger:hover {
 }
 
 .color-secondary-darkest {
-  color: #4F4F4F;
+  color: #383838;
 }
 
 .color-success {
@@ -362,7 +320,7 @@ ul {
 
 pre {
   padding: 1rem;
-  background-color: #B5B5B5;
+  background-color: #EDEDED;
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;
@@ -378,7 +336,7 @@ pre {
 blockquote,
 .blockquote {
   background-color: #ffffff;
-  border-left: 4px solid #B5B5B5;
+  border-left: 4px solid #D0D0D0;
   padding-left: 1rem;
   color: #808080;
   margin-bottom: 0 !important;
@@ -389,6 +347,14 @@ blockquote,
 blockquote p:last-child,
 .blockquote p:last-child {
   margin-bottom: 0;
+}
+
+.small {
+  font-size: .8rem;
+}
+
+.semi-small {
+  font-size: .9rem;
 }
 
 img.cover-h8 {

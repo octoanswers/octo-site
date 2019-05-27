@@ -15,8 +15,8 @@
     background-color: $color-secondary;
 
     &:hover {
-        background-color: $color-secondary-dark;
-        border-color: $color-secondary-dark;
+        background-color: $color-secondary-dark-1;
+        border-color: $color-secondary-dark-1;
     }
 }
 
@@ -64,7 +64,7 @@
 
 .btn-outline-secondary {
     color: $color-secondary;
-    border-color: $color-secondary-light;
+    border-color: $color-secondary-light-1;
 
     &:hover {
         background-color: $color-secondary;

@@ -1,82 +1,29 @@
-// Force cursor style for links
-
-a.badge-primary,
-a.badge-secondary,
-a.badge-success,
-a.badge-warning,
-a.badge-danger,
-a.badge-info,
-a.badge-light,
-a.badge-dark {
-  cursor: pointer;
+.badge-primary {
+    border-color: $color-primary;
+    background-color: $color-primary;
 }
 
-// Primary (default) badge
-
-.badge,
-span.badge-primary,
-a.badge-primary {
-  border-color: $color-primary;
-  background-color: $color-primary;
+.badge-secondary {
+    border-color: $color-secondary;
+    background-color: $color-secondary;
 }
 
-a.badge-primary:hover {
-  border-color: $color-primary-dark !important;
-  background-color: $color-primary-dark !important;
+.badge-success {
+    border-color: $color-success;
+    background-color: $color-success;
 }
 
-// Secondary badge
-
-span.badge-secondary,
-a.badge-secondary {
-  border-color: $color-secondary;
-  background-color: $color-secondary;
-
-  &:hover {
-    border-color: $color-secondary-dark !important;
-    background-color: $color-secondary-dark !important;
-  }
+.badge-warning {
+    border-color: $color-warning;
+    background-color: $color-warning;
 }
 
-// Success badge
-
-span.badge-success,
-a.badge-success {
-  border-color: $color-success;
-  background-color: $color-success;
+.badge-danger {
+    border-color: $color-danger;
+    background-color: $color-danger;
 }
 
-a.badge-success:hover {
-  border-color: $color-success-dark !important;
-  background-color: $color-success-dark !important;
-}
-
-// Warning badge
-
-span.badge-warning,
-a.badge-warning {
-  border-color: $color-warning;
-  background-color: $color-warning;
-}
-
-a.badge-warning:hover {
-  border-color: $color-warning-dark !important;
-  background-color: $color-warning-dark !important;
-}
-
-// Danger badge
-
-span.badge-danger {
-  border-color: $color-danger;
-  background-color: $color-danger;
-}
-
-a.badge-danger {
-  border-color: $color-danger;
-  background-color: $color-danger;
-
-  &:hover {
-    border-color: $color-danger-dark !important;
-    background-color: $color-danger-dark !important;
-  }
+.badge-light {
+    border-color: $color-secondary-light-4;
+    background-color: $color-secondary-light-4;
 }

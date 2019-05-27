@@ -20,15 +20,15 @@
     		<img src="<?= $contributor->getAvatarMediumURL() ?>" class="wh-3 rounded-circle" alt="<?= $contributor->name ?>">
         </a>
 		<div class="media-body">
-			<a class="h6 mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
+			<a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
 				<?= $contributor->name ?>
 			</a>
 
-			<span class="small text-muted font-weight-normal">
-                <i class="fas fa-battery-three-quarters"></i>&nbsp;<?= Contribution_Humanizer::humanizeCount($contributor->contribution) ?>
+            <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
+                <?= Contribution_Humanizer::humanizeCount($contributor->contribution) ?>
 			</span>
 
-			<p class="text-secondary mb-0">
+			<p class="semi-small text-secondary mt-1 mb-0">
 				<?= $contributor->signature ? $contributor->signature : $contributor->username ?>
 				<?php if ($contributor->site): ?>
 					<a href="<?= $contributor->site ?>">

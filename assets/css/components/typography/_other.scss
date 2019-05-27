@@ -26,7 +26,7 @@ ul {
 
 pre {
     padding: 1rem;
-    background-color: $color-secondary-light;
+    background-color: $color-secondary-light-4;
     white-space: pre-wrap;
     /* Since CSS 2.1 */
     white-space: -moz-pre-wrap;
@@ -42,7 +42,7 @@ pre {
 blockquote,
 .blockquote {
     background-color: $color-white;
-    border-left: 4px solid $color-secondary-light;
+    border-left: 4px solid $color-secondary-light-3;
     padding-left: 1rem;
     color: $color-secondary;
     margin-bottom: 0 !important;
@@ -52,4 +52,12 @@ blockquote,
     p:last-child {
         margin-bottom: 0;
     }
+}
+
+.small {
+    font-size: .8rem;
+}
+
+.semi-small {
+    font-size: .9rem;
 }
