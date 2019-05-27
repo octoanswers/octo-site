@@ -15,7 +15,7 @@
         "recent_changes": "Recent changes",
         "sandbox": "Sandbox"
     },
-    "drawer__other_languages": {
+    "sidebar__other_languages": {
         "all_languages": "All languages",
         "english": "English",
         "russian": "Russian",

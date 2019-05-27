@@ -110,7 +110,7 @@
         "recent_changes": "Свежие правки",
         "sandbox": "Песочница"
     },
-    "drawer__other_languages": {
+    "sidebar__other_languages": {
         "all_languages": "Все языки",
         "english": "Английский",
         "russian": "Русский",
