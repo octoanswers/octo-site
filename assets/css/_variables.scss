@@ -12,13 +12,17 @@ $color-brand: #FD0028;
 
 // Primary color (triad blue for barand color, https://convertingcolors.com/hex-color-0088FF.html)
 
-$color-primary-lightest: #99CFFF;
-$color-primary-light: #4DACFF;
-$color-primary: #0088FF;
-$color-primary-dark: #006FE2;
-$color-primary-darkest: #005aaa; // need-replace
-
-// Secondary colors (sweetspot gray)
+$color-primary-light-6: #C9D9E9;
+$color-primary-light-5: #B2CEE9;
+$color-primary-light-4: #9AC3E9;
+$color-primary-light-3: #83B7E9;
+$color-primary-light-2: #6CACE9;
+$color-primary-light-1: #54A0E9;
+$color-primary: #3d95e9;
+$color-primary-dark-1: #007BCD;
+$color-primary-dark-2: #0063B1;
+$color-primary-dark-3: #004B96;
+$color-primary-dark-4: #00357B;
 
 $color-secondary-light-4: #EDEDED;
 $color-secondary-light-3: #D0D0D0;
@@ -47,12 +51,16 @@ $color-warning-dark: #d85403; // need-replace
 $color-warning-darkest: #b83900; // need-replace
 
 // Danger color (like a brand color)
-
-$color-danger-lightest: #FDB1BD;
-$color-danger-light: #FD4C68;
-$color-danger: $color-brand;
-$color-danger-dark: #db0011;
-$color-danger-darkest: #BA0000;
+$color-danger-light-5: #FFCFDF;
+$color-danger-light-4: #FFB2C3;
+$color-danger-light-3: #FF94A8;
+$color-danger-light-2: #FF778E;
+$color-danger-light-1: #FF5A74;
+$color-danger: #eb3a5c;
+$color-danger-dark-1: #CB0D45;
+$color-danger-dark-2: #AC002F;
+$color-danger-dark-3: #8D001B;
+$color-danger-dark-4: #6F0000;
 
 // Info color (square orange)
 

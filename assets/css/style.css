@@ -5,8 +5,8 @@
 }
 
 .badge-primary {
-  border-color: #0088FF;
-  background-color: #0088FF;
+  border-color: #3d95e9;
+  background-color: #3d95e9;
 }
 
 .badge-secondary {
@@ -25,8 +25,8 @@
 }
 
 .badge-danger {
-  border-color: #FD0028;
-  background-color: #FD0028;
+  border-color: #eb3a5c;
+  background-color: #eb3a5c;
 }
 
 .badge-light {
@@ -51,13 +51,13 @@
 }
 
 .btn-primary {
-  border-color: #0088FF;
-  background-color: #0088FF;
+  border-color: #3d95e9;
+  background-color: #3d95e9;
 }
 
 .btn-primary:hover {
-  background-color: #006FE2;
-  border-color: #006FE2;
+  background-color: #007BCD;
+  border-color: #007BCD;
 }
 
 .btn-secondary {
@@ -91,23 +91,23 @@
 }
 
 .btn-danger {
-  background-color: #FD0028;
-  border-color: #FD0028;
+  background-color: #eb3a5c;
+  border-color: #eb3a5c;
 }
 
 .btn-danger:hover {
-  background-color: #db0011;
-  border-color: #db0011;
+  background-color: #CB0D45;
+  border-color: #CB0D45;
 }
 
 .btn-outline-primary {
-  color: #0088FF;
-  border-color: #0088FF;
+  color: #3d95e9;
+  border-color: #3d95e9;
 }
 
 .btn-outline-primary:hover {
-  background-color: #0088FF;
-  border-color: #0088FF;
+  background-color: #3d95e9;
+  border-color: #3d95e9;
 }
 
 .btn-outline-secondary {
@@ -164,26 +164,6 @@
   background-color: #e0e0e0;
 }
 
-.color-primary-lightest {
-  color: #99CFFF;
-}
-
-.color-primary-light {
-  color: #4DACFF;
-}
-
-.color-primary {
-  color: #0088FF !important;
-}
-
-.color-primary-dark {
-  color: #006FE2;
-}
-
-.color-primary-darkest {
-  color: #005aaa;
-}
-
 .color-secondary-lightest {
   color: #D0D0D0;
 }
@@ -206,10 +186,6 @@
 
 .color-success {
   color: #009B2B;
-}
-
-.color-warning {
-  color: #fdc946;
 }
 
 .color-text-white {
@@ -269,15 +245,15 @@
 }
 
 a {
-  color: #0088FF;
+  color: #3d95e9;
 }
 
 a:hover {
-  color: #006FE2;
+  color: #007BCD;
 }
 
 a.link-broken {
-  color: #FD0028;
+  color: #eb3a5c;
 }
 
 a.link-broken:after {
@@ -473,7 +449,7 @@ img.cover-height-16 {
 
 .toc-entry a:hover,
 .toc-entry span:hover {
-  color: #0088FF;
+  color: #3d95e9;
   text-decoration: none;
 }
 
