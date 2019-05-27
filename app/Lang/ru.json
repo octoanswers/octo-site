@@ -6,7 +6,6 @@
     "Answer a question": "Ответьте на вопрос",
     "Answer contributors": "Авторы ответа",
     "Answer updated": "Ответ обновлен",
-    "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
     "Ask a question and get one complete answer": "Задайте вопрос и получите один исчерпывающий ответ",
     "Ask your first question": "Задайте первый вопрос",
     "Back to question": "Вернуться к вопросу",
@@ -101,20 +100,10 @@
     "app_bar": {
         "text": "Компетентные ответы на ваши вопросы"
     },
-    "sidebar__main_nav": {
-        "about_site": "О сайте",
-        "feed": "Подписки",
-        "main_page": "Главная страница",
-        "popular_hashtags": "Популярные хештеги",
-        "random_question": "Случайный вопрос",
-        "recent_changes": "Свежие правки",
-        "sandbox": "Песочница"
-    },
-    "sidebar__other_languages": {
-        "all_languages": "Все языки",
-        "english": "Английский",
-        "russian": "Русский",
-        "title": "На других языках"
+    "block__about_answeropedia": {
+        "btn_action": "Присоединиться к сообществу",
+        "text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+        "title": "Что такое Answeropedia?"
     },
     "feed": {
         "Feed": "Лента"
@@ -193,8 +182,6 @@
         "page_title": "Ошибка 404"
     },
     "question": {
-        "hashtags": "Хештеги",
-        "user_contribution": "Вклад пользователя",
         "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
         "Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
         "Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
@@ -202,10 +189,12 @@
             "Edit answer": "Править ответ",
             "Rename question": "Переименовать вопрос"
         },
+        "hashtags": "Хештеги",
         "lure_be_first_contributor": {
             "Be the first author": "Станьте первым автором",
             "Still no one tried to write an answer to this question. Be the first if the hashtag of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
-        }
+        },
+        "user_contribution": "Вклад пользователя"
     },
     "question_not_found": {
         "Question not found": "Вопрос не найден",
@@ -250,6 +239,21 @@
         "Site": "Сайт",
         "The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.": "Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.",
         "Upload avatar": "Загрузить аватар"
+    },
+    "sidebar__main_nav": {
+        "about_site": "О сайте",
+        "feed": "Подписки",
+        "main_page": "Главная страница",
+        "popular_hashtags": "Популярные хештеги",
+        "random_question": "Случайный вопрос",
+        "recent_changes": "Свежие правки",
+        "sandbox": "Песочница"
+    },
+    "sidebar__other_languages": {
+        "all_languages": "Все языки",
+        "english": "Английский",
+        "russian": "Русский",
+        "title": "На других языках"
     },
     "test_key": {
         "subkey_as_array": {

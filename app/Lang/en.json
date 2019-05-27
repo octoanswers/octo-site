@@ -6,20 +6,10 @@
     "app_bar": {
         "text": "Community answers to your questions"
     },
-    "sidebar__main_nav": {
-        "about_site": "About site",
-        "feed": "Feed",
-        "hashtags": "Popular hashtags",
-        "main_page": "Main page",
-        "random_question": "Random question",
-        "recent_changes": "Recent changes",
-        "sandbox": "Sandbox"
-    },
-    "sidebar__other_languages": {
-        "all_languages": "All languages",
-        "english": "English",
-        "russian": "Russian",
-        "title": "In other languages"
+    "block__about_answeropedia": {
+        "btn_action": "Join the community",
+        "text": "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.",
+        "title": "About Answeropedia"
     },
     "flow": {
         "page_title": "Flow"
@@ -74,6 +64,21 @@
     },
     "search": {
         "page_title": "Search"
+    },
+    "sidebar__main_nav": {
+        "about_site": "About site",
+        "feed": "Feed",
+        "hashtags": "Popular hashtags",
+        "main_page": "Main page",
+        "random_question": "Random question",
+        "recent_changes": "Recent changes",
+        "sandbox": "Sandbox"
+    },
+    "sidebar__other_languages": {
+        "all_languages": "All languages",
+        "english": "English",
+        "russian": "Russian",
+        "title": "In other languages"
     },
     "title": "Перевод заголовка"
 }
