@@ -12,11 +12,6 @@
 				<?= $question->title ?>
 			</a>
 			<div class="small color-gray-500">
-				<?php if (strlen($question->answer->text)): ?>
-					<?= $question->getMinutesToRead() ?>
-					<span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
-				<?php endif; ?>
-
 				<?= $this->translator->get('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
 
 				<?php if (strlen($question->answer->text) == 0): ?>
