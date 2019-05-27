@@ -1,50 +1,48 @@
 
 <!-- actions_top -->
 
-<div class="mt-3 mb-3">
-	<ul class="nav nav-tabs">
-		<li class="nav-item">
-			<a class="nav-link active" href="<?= $this->question->getURL($this->lang) ?>">
-				<?= $this->translator->get('Question') ?>
-			</a>
-		</li>
+<div class="mt-3 mb-4">
+		
+	<?php if ($this->authUser): ?>
+		<button
+			class="btn follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>"
+			data-question-id="<?= $this->question->id ?>"
+			data-follow-title="<?= $this->translator->get('Follow') ?>"
+			data-followed-title="<?= $this->translator->get('Followed') ?>"
+			data-unfollow-title="<?= $this->translator->get('Unfollow') ?>"
+			type="button">
+			<?= $this->followed ? $this->translator->get('Followed') : $this->translator->get('Follow'); ?>
+		</button>
+	<?php else: ?>
+		<button type="button" class="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
+			<?= $this->translator->get('Follow'); ?>
+		</button>
+		<?php require_once TEMPLATE_PATH.'/_modal/question/_lure/follow_question.phtml' ?>
+	<?php endif; ?>
 
-		<!-- edit answer -->
-		<?php if ($this->authUser): ?>
-			<li class="nav-item">
-				<a class="nav-link" href="<?= $this->question->getEditURL($this->lang) ?>">
-					<?= $this->translator->get("question", "actions_top", "edit_answer") ?>
-				</a>
-			</li>
-		<?php else: ?>
-			<li class="nav-item">
-				<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
-					<?= $this->translator->get('Edit') ?>
-				</a>
-				<?php require_once TEMPLATE_PATH.'/_modal/question/_lure/edit_answer.phtml' ?>
-			</li>
-		<?php endif; ?>
-		<!-- / edit answer -->
+    <!-- edit answer -->
+    <?php if ($this->authUser): ?>
+        <a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->getEditURL($this->lang) ?>">
+            <?= $this->translator->get("question", "actions_top", "edit_answer") ?>
+        </a>
+    <?php else: ?>
+        <a class="btn btn-outline-primary mb-2 mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
+            <?= $this->translator->get('Edit') ?>
+        </a>
+        <?php require_once TEMPLATE_PATH.'/_modal/question/_lure/edit_answer.phtml' ?>
+    <?php endif; ?>
+    <!-- / edit answer -->
 
-		<!-- tab_history -->
-		<?php if (mb_strlen($this->question->answer->text) > 0): ?>
-			<li class="nav-item">
-				<a class="nav-link" href="<?= $this->question->getHistoryURL($this->lang) ?>">
-					<?= $this->translator->get('History') ?>
-				</a>
-			</li>		
-		<?php else: ?>
-			<li class="nav-item">
-				<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><?= $this->translator->get('History') ?></a>
-			</li>
-		<?php endif; ?>
-		<!-- tab_history -->
-
-		<li class="nav-item">
-			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Обсуждение</a>
-		</li>
-
-	</ul>
+    <!-- tab_history -->
+    <?php if (mb_strlen($this->question->answer->text) > 0): ?>
+        <a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->getHistoryURL($this->lang) ?>">
+            <?= $this->translator->get('History') ?>
+        </a>
+    <?php endif; ?>
+    <!-- tab_history -->
+    
+    <a class="btn btn-outline-secondary mb-2 mr-2" href="#" tabindex="-1" aria-disabled="true">Обсуждение</a>
+		
 </div>
 
 <!-- / actions_top -->
