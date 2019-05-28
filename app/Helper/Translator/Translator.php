@@ -62,26 +62,52 @@ class Translator
      * @var string $key
      * @var string $subkey
      */
-    public function get(string $key, string $subkey = null): string
+    public function get(...$keys): string
     {
-        if (!$subkey) {
-            if (isset($this->messages[$key])) {
-                if (is_array($this->messages[$key])) {
-                    return 'KEY_IS_ARRAY: language "'.$this->lang.'" key "'.$key.'"';
-                }
-                return $this->messages[$key];
-            }
-        } else {
-            if (isset($this->messages[$key]) && isset($this->messages[$key][$subkey])) {
-                if (is_array($this->messages[$key][$subkey])) {
-                    return 'KEY_IS_ARRAY: language "'.$this->lang.'" key "'.$key.'" subkey "'.$subkey.'"';
-                }
-                return $this->messages[$key][$subkey];
-            }
-
-            return 'NEED TRANSLATE: language "'.$this->lang.'" key "'.$key.'" subkey "'.$subkey.'"';
+        if (count($keys) > 3) {
+            return 'TOO_MACH_KEYS ('.$this->lang.') '.implode(" - ", $keys);
         }
 
-        return $key;
+        switch (count($keys)) {
+            case 3:
+                # Keys like a 'key - key -key'
+                $message = @$this->messages[$keys[0]][$keys[1]][$keys[2]];
+                
+                if ($message) {
+                    if (is_array($message)) {
+                        return 'KEY_IS_ARRAY ('.$this->lang.') '.implode(" - ", $keys);
+                    }
+                    return $message;
+                }
+    
+                return 'NEED TRANSLATE ('.$this->lang.') '.implode(" - ", $keys);
+                
+            case 2:
+                # Keys like a 'key - key'
+                $message = @$this->messages[$keys[0]][$keys[1]];
+
+                if ($message) {
+                    if (is_array($message)) {
+                        return 'KEY_IS_ARRAY ('.$this->lang.') '.implode(" - ", $keys);
+                    }
+                    return $message;
+                }
+    
+                return 'NEED TRANSLATE ('.$this->lang.') '.implode(" - ", $keys);
+            
+            default:
+                # Keys like a 'key'
+                $message = @$this->messages[$keys[0]];
+            
+                if (isset($message)) {
+                    if (is_array($message)) {
+                        return 'KEY_IS_ARRAY ('.$this->lang.') '.$keys[0];
+                    }
+
+                    return $message;
+                }
+        }
+
+        return $keys[0];
     }
 }
