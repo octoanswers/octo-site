@@ -54,9 +54,6 @@
         "sandbox": "Sandbox",
         "signup": "Signup"
     },
-    "service_id": {
-        "about_answeropedia": "1"
-    },
     "page": "Page",
     "question__actions_top": {
         "edit_answer": "Edit answer",
@@ -71,14 +68,20 @@
         "title": "Hashtags"
     },
     "sandbox": {
-        "about_block__msg_1": "The sandbox is a place to get new questions that have not yet been answered.",
-        "about_block__msg_2": "As soon as the question has a comprehensive answer and several hashtags, it is transferred to the main list.",
-        "about_block__now_in_the_sandbox": "now in the sandbox",
-        "about_block__title": "What is a «sandbox»?",
+        "about": {
+            "btn_action": "Join the community",
+            "msg_1": "The sandbox is a place to get new questions that have not yet been answered.",
+            "msg_2": "As soon as the question has a comprehensive answer and several hashtags, it is transferred to the main list.",
+            "now_in_the_sandbox": "now in the sandbox",
+            "title": "What is a «sandbox»?"
+        },
         "title": "Sandbox"
     },
     "search": {
         "page_title": "Search"
+    },
+    "service_id": {
+        "about_answeropedia": "1"
     },
     "sidebar__main_nav": {
         "about_site": "About site",
