@@ -220,6 +220,9 @@
             "Newest": "Новые"
         }
     },
+    "service_id": {
+        "about_answeropedia": "1"
+    },
     "root": {
         "Questions and Answers": "Вопросы и ответы"
     },

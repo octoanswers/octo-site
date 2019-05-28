@@ -54,6 +54,9 @@
         "sandbox": "Sandbox",
         "signup": "Signup"
     },
+    "service_id": {
+        "about_answeropedia": "1"
+    },
     "page": "Page",
     "question__actions_top": {
         "edit_answer": "Edit answer",
