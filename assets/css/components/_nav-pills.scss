@@ -1,0 +1,18 @@
+.nav-pills {
+    .nav-item {
+        margin-right: .75rem;
+    }
+
+    .nav-link {
+        color: $color-secondary-dark-1;
+        border: 1px solid $color-secondary-light-3;
+        line-height: 1;
+        padding-top: .8rem;
+        padding-bottom: .75rem;
+    }
+
+    .nav-link.active {
+        border: 1px solid $color-primary;
+
+    }
+}

@@ -220,9 +220,6 @@
             "Newest": "Новые"
         }
     },
-    "service_id": {
-        "about_answeropedia": "1"
-    },
     "root": {
         "Questions and Answers": "Вопросы и ответы"
     },
@@ -234,10 +231,15 @@
         "title": "Песочница"
     },
     "search": {
-        "nav": {
-            "Hashtags": "Хештеги"
-        },
         "page_title": "Поиск"
+    },
+    "search__filter": {
+        "hashtags": "Хештеги",
+        "questions": "Вопросы",
+        "users": "Пользователи"
+    },
+    "service_id": {
+        "about_answeropedia": "1"
     },
     "settings": {
         "Back to profile": "Вернуться к профилю",

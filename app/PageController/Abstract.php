@@ -31,7 +31,6 @@ abstract class Abstract_PageController
         $this->includeModals = [];
         
         // JS for all pages
-        $this->includeJS[] = 'navbar_search_form';
         $this->includeJS[] = 'question/create';
 
         if (!$this->authUser) {

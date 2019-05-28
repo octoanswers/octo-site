@@ -1,18 +1,18 @@
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-pills">
     <li class="nav-item">
         <a class="nav-link <?= $this->list == 'questions' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchQuestionsURL($this->lang, $this->query) ?>">
-            <?= $this->translator->get('Questions'); ?>
+            <?= $this->translator->get('search__filter', 'questions'); ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link <?= $this->list == 'hashtags' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchHashtagsURL($this->lang, $this->query) ?>">
-            <?= $this->translator->get('Hashtags'); ?>
+            <?= $this->translator->get('search__filter', 'hashtags'); ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link <?= $this->list == 'users' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchUsersURL($this->lang, $this->query) ?>">
-            <?= $this->translator->get('Users'); ?>
+            <?= $this->translator->get('search__filter', 'users'); ?>
         </a>
     </li>
 </ul>
