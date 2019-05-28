@@ -12,7 +12,7 @@
 		<!-- add or update image -->
 		<?php if ($this->authUser): ?>
 			<li class="my-1">
-				<a class="text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_upload_image">
+				<a class="semi-small text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_upload_image">
 					<i class="fas fa-camera mr-1"></i>
 					<?php if ($this->question->imageBaseName): ?>
 						<?= $this->translator->get('Update picture') ?>
@@ -27,7 +27,7 @@
 		<?php if ($this->authUser): ?>
 			<!-- rename question -->
 			<li class="my-1">
-				<a class="text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_rename">
+				<a class="semi-small text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_rename">
 					<i class="fas fa-edit mr-1"></i>&nbsp;<?= $this->translator->get('Rename question') ?>	
 				</a>
 			</li>
@@ -35,8 +35,8 @@
 		<?php endif; ?>
 			
 		<li class="my-1">
-			<a class="small text-muted text-decoration-none" href="#" rel="nofollow">
-				<s><?= $this->translator->get('Report') ?></s>
+			<a class="semi-small text-muted text-decoration-none" href="#" rel="nofollow">
+                <i class="fas fa-flag mr-1"></i>&nbsp;<s><?= $this->translator->get('Report') ?></s>
 			</a>
 		</li>
 		

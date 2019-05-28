@@ -29,7 +29,6 @@
     "Follow your first question": "Подпишитесь на первый вопрос",
     "Followed": "Подписан",
     "Go back": "Вернуться назад",
-    "History": "История",
     "Improve your feed": "Улучшите вашу ленту",
     "It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
     "Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
@@ -50,6 +49,7 @@
     "Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
     "Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
     "Related questions": "Похожие вопросы",
+    "Rename question": "Переименовать вопрос",
     "Report": "Пожаловаться",
     "Save": "Сохранить",
     "Search hashtags": "Поиск тем",
@@ -185,16 +185,24 @@
         "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
         "Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
         "Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
-        "actions_top": {
-            "Edit answer": "Править ответ",
-            "Rename question": "Переименовать вопрос"
-        },
         "hashtags": "Хештеги",
         "lure_be_first_contributor": {
             "Be the first author": "Станьте первым автором",
             "Still no one tried to write an answer to this question. Be the first if the hashtag of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
         },
         "user_contribution": "Вклад пользователя"
+    },
+    "question__actions_top": {
+        "edit_answer": "Править ответ",
+        "history": "История",
+        "rename_question": "Переименовать вопрос",
+        "talk": "Обсуждение",
+        "talk_tooltip": "Обсуждение ответа"
+    },
+    "question__hashtags_block": {
+        "hashtags_add": "Добавить хештеги",
+        "hashtags_change": "Изменить",
+        "title": "Хештеги"
     },
     "question_not_found": {
         "Question not found": "Вопрос не найден",

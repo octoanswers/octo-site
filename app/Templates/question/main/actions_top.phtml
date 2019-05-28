@@ -23,11 +23,11 @@
     <!-- edit answer -->
     <?php if ($this->authUser): ?>
         <a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->getEditURL($this->lang) ?>">
-            <?= $this->translator->get("question", "actions_top", "edit_answer") ?>
+            <?= $this->translator->get('question__actions_top', 'edit_answer') ?>
         </a>
     <?php else: ?>
         <a class="btn btn-outline-primary mb-2 mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
-            <?= $this->translator->get('Edit') ?>
+            <?= $this->translator->get('question__actions_top', 'edit_answer') ?>
         </a>
         <?php require_once TEMPLATE_PATH.'/_modal/question/_lure/edit_answer.phtml' ?>
     <?php endif; ?>
@@ -36,12 +36,14 @@
     <!-- tab_history -->
     <?php if (mb_strlen($this->question->answer->text) > 0): ?>
         <a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->getHistoryURL($this->lang) ?>">
-            <?= $this->translator->get('History') ?>
+            <?= $this->translator->get('question__actions_top', 'history') ?>
         </a>
     <?php endif; ?>
     <!-- tab_history -->
     
-    <a class="btn btn-outline-secondary disabled mb-2 mr-2" href="#" tabindex="-1" aria-disabled="true">Обсуждение</a>
+    <a class="btn btn-outline-secondary disabled mb-2 mr-2" href="#" tabindex="-1" aria-disabled="true" title="<?= $this->translator->get('question__actions_top', 'talk_tooltip') ?>">
+        <?= $this->translator->get('question__actions_top', 'talk') ?>
+    </a>
 		
 </div>
 

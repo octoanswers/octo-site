@@ -55,6 +55,18 @@
         "signup": "Signup"
     },
     "page": "Page",
+    "question__actions_top": {
+        "edit_answer": "Edit answer",
+        "history": "History",
+        "rename_question": "Rename question",
+        "talk": "Talk",
+        "talk_tooltip": "Discussion about the answer"
+    },
+    "question__hashtags_block": {
+        "hashtags_add": "Add hashtags",
+        "hashtags_change": "Change",
+        "title": "Hashtags"
+    },
     "sandbox": {
         "about_block__msg_1": "The sandbox is a place to get new questions that have not yet been answered.",
         "about_block__msg_2": "As soon as the question has a comprehensive answer and several hashtags, it is transferred to the main list.",
