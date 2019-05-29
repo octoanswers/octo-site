@@ -1,0 +1,19 @@
+ul.list-links {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        padding: 0.25rem 0;
+        font-size: 0.9rem;
+        color: $color-secondary;
+
+        a {
+            color: $color-secondary-dark-1;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-secondary-dark-3;
+            }
+        }
+    }
+}

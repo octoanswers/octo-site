@@ -6,6 +6,8 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
+$navbar-height: 57px;
+
 @mixin sm-and-down {
     @media (max-width: $breakpoint-sm - 1) {
         @content;
@@ -17,10 +19,6 @@ $breakpoint-xl: 1200px;
         @content;
     }
 }
-
-// Brand color, https://convertingcolors.com/hex-color-FD0028.html
-
-$color-brand: #FD0028;
 
 // Primary color (triad blue for barand color, https://convertingcolors.com/hex-color-0088FF.html)
 
@@ -36,15 +34,15 @@ $color-primary-dark-2: #0063B1;
 $color-primary-dark-3: #004B96;
 $color-primary-dark-4: #00357B;
 
-$color-secondary-light-4: #EDEDED;
-$color-secondary-light-3: #D0D0D0;
-$color-secondary-light-2: #B5B5B5;
-$color-secondary-light-1: #9A9A9A;
-$color-secondary: #808080;
-$color-secondary-dark-1: #676767;
-$color-secondary-dark-2: #4F4F4F;
-$color-secondary-dark-3: #383838;
-$color-secondary-dark-4: #232323;
+$color-secondary-light-4: #F1F1F1;
+$color-secondary-light-3: #D5D5D5;
+$color-secondary-light-2: #B9B9B9;
+$color-secondary-light-1: #9E9E9E;
+$color-secondary: #848484;
+$color-secondary-dark-1: #6B6B6B;
+$color-secondary-dark-2: #535353;
+$color-secondary-dark-3: #3C3C3C;
+$color-secondary-dark-4: #262626;
 
 // $color-success -- triad green for barand color (https://convertingcolors.com/hex-color-0088FF.html)
 

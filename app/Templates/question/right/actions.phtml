@@ -1,18 +1,16 @@
 
 <!-- right_actions -->
-<div class="my-5">
 
-	<div class="mb-3">
-		<div class="font-weight-bold border-bottom pb-2 mb-2">
-			<?= $this->translator->get('Actions') ?>
-		</div>
+<nav class="my-4">
+	<div class="h5">
+        <?= $this->translator->get('Actions') ?>
 	</div>
-	<ul class="list-unstyled">
-		
-		<!-- add or update image -->
+	<ul class="list-links">
+        
+        <!-- add or update image -->
 		<?php if ($this->authUser): ?>
-			<li class="my-1">
-				<a class="semi-small text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_upload_image">
+			<li>
+				<a href="#" data-toggle="modal" data-target="#modal_upload_image">
 					<i class="fas fa-camera mr-1"></i>
 					<?php if ($this->question->imageBaseName): ?>
 						<?= $this->translator->get('Update picture') ?>
@@ -26,27 +24,28 @@
 
 		<?php if ($this->authUser): ?>
 			<!-- rename question -->
-			<li class="my-1">
-				<a class="semi-small text-muted text-decoration-none" href="#" data-toggle="modal" data-target="#modal_rename">
+			<li>
+				<a href="#" data-toggle="modal" data-target="#modal_rename">
 					<i class="fas fa-edit mr-1"></i>&nbsp;<?= $this->translator->get('Rename question') ?>	
 				</a>
 			</li>
 			<!-- / rename question -->
 		<?php endif; ?>
 			
-		<li class="my-1">
-			<a class="semi-small text-muted text-decoration-none" href="#" rel="nofollow">
+		<li>
+			<a href="#" rel="nofollow">
                 <i class="fas fa-flag mr-1"></i>&nbsp;<s><?= $this->translator->get('Report') ?></s>
 			</a>
         </li>
         
-        <li class="my-1">
-            <a rel="nofollow" target="_blank" class="semi-small text-muted text-decoration-none" href="<?= DDG_URL_Helper::getSearchURL($this->question->title) ?>">
+        <li>
+            <a rel="nofollow" target="_blank" href="<?= DDG_URL_Helper::getSearchURL($this->question->title) ?>">
             <i class="fas fa-search mr-1"></i>&nbsp;<?= $this->translator->get('Search in DuckDuckGo') ?>
             </a>
         </li>
 
 	</ul>
-</div>
+</nav>
+
 <!-- / right_actions -->
 

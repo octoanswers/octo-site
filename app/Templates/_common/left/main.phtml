@@ -1,49 +1,47 @@
 <!-- sidebar main -->
 
-<nav class="collapse bd-links" id="main-nav">
-	<div class="bd-toc-item active">
-		<ul class="nav bd-sidenav">
-			<li>
-				<a href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
-					<?= $this->translator->get('sidebar__main_nav', 'main_page') ?>
-				</a>
-            </li>
-            
-            <?php if ($this->authUser): ?>
-                <li>
-            	<a href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
-		            <?= $this->translator->get('sidebar__main_nav', 'feed') ?>
-                </a>
-                </li>
-            <?php endif; ?>
-            
-			<li>
-				<a href="<?= SITE_URL.'/'.$this->lang.'/'.$this->translator->get('service_id', 'about_answeropedia') ?>">
-					<?= $this->translator->get('sidebar__main_nav', 'about_site') ?>
-				</a>
-			</li>
-			<li>
-				<a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= $this->translator->get('sidebar__main_nav', 'recent_changes') ?>
-				</a>
-			</li>
-			<li>
-				<a href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-					<?= $this->translator->get('sidebar__main_nav', 'popular_hashtags') ?>
-				</a>
-            </li>
+<nav class="ml-2" id="main-nav">
+    <ul class="list-links">
+        <li>
+            <a href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
+                <?= $this->translator->get('sidebar__main_nav', 'main_page') ?>
+            </a>
+        </li>
+        
+        <?php if ($this->authUser): ?>
             <li>
-				<a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-					<?= $this->translator->get('sidebar__main_nav', 'sandbox') ?>
-				</a>
-			</li>
-			<li>
-				<a href="<?= SITE_URL.'/'.$this->lang.'/random-question' ?>">
-					<?= $this->translator->get('sidebar__main_nav', 'random_question') ?>
-				</a>
-			</li>
-			</ul>
-	</div>
+            <a href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
+                <?= $this->translator->get('sidebar__main_nav', 'feed') ?>
+            </a>
+            </li>
+        <?php endif; ?>
+        
+        <li>
+            <a href="<?= SITE_URL.'/'.$this->lang.'/'.$this->translator->get('service_id', 'about_answeropedia') ?>">
+                <?= $this->translator->get('sidebar__main_nav', 'about_site') ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+                <?= $this->translator->get('sidebar__main_nav', 'recent_changes') ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
+                <?= $this->translator->get('sidebar__main_nav', 'popular_hashtags') ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
+                <?= $this->translator->get('sidebar__main_nav', 'sandbox') ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?= SITE_URL.'/'.$this->lang.'/random-question' ?>">
+                <?= $this->translator->get('sidebar__main_nav', 'random_question') ?>
+            </a>
+        </li>
+    </ul>
 </nav>
 
 <!-- / sidebar main -->

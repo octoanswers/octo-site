@@ -1,18 +1,26 @@
 
 <!-- info_about_question -->
-<div class="my-5">
-    <div class="mb-3">
-		<div class="font-weight-bold border-bottom pb-2 mb-2">
-            <!-- <?= $this->translator->get('Actions') ?> -->
-            Информация
-		</div>
+
+<nav class="my-4">
+	<div class="h5">
+		<!-- <?= $this->translator->get('Actions') ?> -->
+        Информация
 	</div>
-	<ul class="list-unstyled">
+	<ul class="list-links">
 		<li>
-			<span class="semi-small text-muted">
-				<?= $this->translator->get('Answer updated').': '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->question->answer->updatedAt) ?>
-			</span>
+            <?= $this->translator->get('Answer updated').': '.DateTime_Humanizer::humanizeTimestamp($this->lang, $this->question->answer->updatedAt) ?>
 		</li>
+		<!-- <li>
+			<a data-lang="ru" href="<?= Page_URL_Helper::getMainURL('ru') ?>">
+				<?= $this->translator->get('sidebar__other_languages', 'russian') ?>
+			</a>
+		</li>
+		<li>
+			<a href="<?= SITE_URL ?>">
+				<?= $this->translator->get('sidebar__other_languages', 'all_languages') ?>
+			</a>
+		</li> -->
 	</ul>
-</div>
+</nav>
+
 <!-- / info_about_question -->
