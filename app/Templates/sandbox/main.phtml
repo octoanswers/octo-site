@@ -3,7 +3,7 @@
     <?php foreach ($this->questions as $question): ?>
         <?php
         if (isset($this->redirects[$question->id])) {
-            require __DIR__.'/main/redirect.phtml';
+            require __DIR__.'/main/item__redirect.phtml';
             continue;
         } else {
             require __DIR__.'/main/item__question_without_answer.phtml';

@@ -1,0 +1,21 @@
+
+<?php $redirect = $this->redirects[$question->id]; ?>
+
+<div class="my-4">
+    <a class="h3 color-gray-800 text-decoration-none" href="<?= Redirect_URL_Helper::getURL($this->lang, $redirect) ?>">
+        <span class="badge badge-warning mr-1">Redirect</span>
+        <?= $redirect->toTitle ?>
+    </a>
+    <div class="small pt-1 color-gray-500">
+
+        Было:
+        <a rel="nofollow" class="color-gray-600" href="<?= $question->getURL($this->lang) ?>">
+            <?= $question->title ?>
+        </a>
+
+        <span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
+        <?= $this->translator->get('Обновлено:') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
+
+    </div>
+</div>
+
