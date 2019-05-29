@@ -24,6 +24,14 @@
     "flow": {
         "page_title": "Flow"
     },
+    "footer": {
+        "about": "About",
+        "questions": "Questions",
+        "rules": "Rules",
+        "search": "Search",
+        "support": "Support",
+        "users": "Users"
+    },
     "internal_server_error": {
         "page_title": "Error 500"
     },
@@ -65,13 +73,6 @@
         "signup": "Signup"
     },
     "page": "Page",
-    "question__actions_top": {
-        "edit_answer": "Edit answer",
-        "history": "History",
-        "rename_question": "Rename question",
-        "talk": "Talk",
-        "talk_tooltip": "Discussion about the answer"
-    },
     "question": {
         "block__hashtags": {
             "hashtags_add": "Add hashtags",
@@ -81,6 +82,13 @@
         "block__related_questions": {
             "title": "Related questions"
         }
+    },
+    "question__actions_top": {
+        "edit_answer": "Edit answer",
+        "history": "History",
+        "rename_question": "Rename question",
+        "talk": "Talk",
+        "talk_tooltip": "Discussion about the answer"
     },
     "sandbox": {
         "about": {

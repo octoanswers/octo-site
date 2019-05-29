@@ -120,12 +120,12 @@
         "page_title": "Поток"
     },
     "footer": {
-        "About": "О сайте",
-        "Questions": "Вопросы",
-        "Rules": "Правила",
-        "Search": "Поиск",
-        "Support": "Поддержка",
-        "Users": "Пользователи"
+        "about": "О сайте",
+        "questions": "Вопросы",
+        "rules": "Правила",
+        "search": "Поиск",
+        "support": "Поддержка",
+        "users": "Пользователи"
     },
     "hashtag": {
         "More hashtags": "Больше тем"
@@ -191,13 +191,13 @@
         "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
         "Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
         "Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
+        "block__related_questions": {
+            "title": "Похожие вопросы"
+        },
         "hashtags": "Хештеги",
         "lure_be_first_contributor": {
             "Be the first author": "Станьте первым автором",
             "Still no one tried to write an answer to this question. Be the first if the hashtag of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
-        },
-        "block__related_questions": {
-            "title": "Похожие вопросы"
         },
         "user_contribution": "Вклад пользователя"
     },
