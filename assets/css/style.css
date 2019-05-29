@@ -441,6 +441,11 @@ ul.list-links li a:hover {
   color: #3C3C3C;
 }
 
+ul.list-links li a.active {
+  font-weight: 600;
+  color: #535353;
+}
+
 .nav-pills .nav-item {
   margin-right: .75rem;
 }

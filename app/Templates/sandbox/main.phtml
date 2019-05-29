@@ -3,10 +3,10 @@
     <?php foreach ($this->questions as $question): ?>
         <?php
         if (isset($this->redirects[$question->id])) {
-            require TEMPLATE_PATH.'/sandbox/main/redirect.phtml';
+            require __DIR__.'/main/redirect.phtml';
             continue;
         } else {
-            require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml';
+            require __DIR__.'/main/item__question_without_answer.phtml';
             continue;
         }
         ?>
@@ -15,6 +15,6 @@
 
 <?php if (isset($this->nextPageURL)): ?>
     <div class="my-5">
-        <a class="btn btn-block btn-primary" href="<?= $this->nextPageURL ?>">Еще вопросы</a>
+        <a class="btn btn-primary" href="<?= $this->nextPageURL ?>">Еще вопросы</a>
     </div>
 <?php endif; ?>

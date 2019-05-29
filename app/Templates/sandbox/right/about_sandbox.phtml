@@ -1,16 +1,16 @@
 
 <!-- about_sandbox -->
 <div class="bg-light p-0 p-md-3 mb-4 d-none d-lg-block">
-	<div class="border-bottom pb-2 mb-2 h6 font-weight-bold">
+	<p class="h5 mb-3">
 		<?= $this->translator->get('sandbox', 'about_block', 'title') ?>
-	</div>
+    </p>
 
-	<p><?= $this->translator->get('sandbox', 'about_block', 'msg_1') ?></p>
-	<p><?= $this->translator->get('sandbox', 'about_block', 'msg_2') ?></p>
+	<p class="semi-small"><?= $this->translator->get('sandbox', 'about_block', 'msg_1') ?></p>
+	<p class="semi-small"><?= $this->translator->get('sandbox', 'about_block', 'msg_2') ?></p>
 
     <?php if (isset($this->questionsCount)): ?>
         <p class="h1 mb-0"><?= $this->questionsCount ?></p>
-        <p class="text-secondary mb-2">
+        <p class="text-secondary semi-small mb-2">
             <?= $this->translator->get('sandbox', 'about_block', 'now_in_the_sandbox') ?> 
         </p>
     <?php endif; ?>

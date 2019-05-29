@@ -1,25 +1,27 @@
 
 <!-- sandbox_nav -->
-<div class="d-none d-lg-block my-5">
-	<div class="h5 mb-3">
-		<?= $this->translator->get('Filters') ?>
+
+<nav class="ml-2 my-4">
+	<div class="h5 color-secondary-dark-2">
+        <?= $this->translator->get('Filters') ?>
 	</div>
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="nav-link <?= ($this->list == 'without-answers') ? 'active' : '' ?>">
+	<ul class="list-links">
+		<li>
+            <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="<?= ($this->list == 'without-answers') ? 'active' : '' ?>">
                 <?= $this->translator->get('Questions without answers') ?>
             </a>
         </li>
-        <li class="nav-item">
-            <a href="<?= Sandbox_URL_Helper::getWithoutHashtagsURL($this->lang) ?>" class="nav-link <?= ($this->list == 'without_hashtags') ? 'active' : '' ?>">
+        <li>
+            <a href="<?= Sandbox_URL_Helper::getWithoutHashtagsURL($this->lang) ?>" class="<?= ($this->list == 'without_hashtags') ? 'active' : '' ?>">
                 <?= $this->translator->get('Without hashtags') ?>
             </a>
         </li>
-        <li class="nav-item">
-            <a href="<?= Sandbox_URL_Helper::getAllURL($this->lang) ?>" class="nav-link <?= ($this->list == 'newest') ? 'active' : '' ?>">
+        <li>
+            <a href="<?= Sandbox_URL_Helper::getAllURL($this->lang) ?>" class="<?= ($this->list == 'newest') ? 'active' : '' ?>">
                 <?= $this->translator->get('All questions') ?>
             </a>
         </li>
-    </ul>
-</div>
+	</ul>
+</nav>
+
 <!-- / sandbox_nav -->

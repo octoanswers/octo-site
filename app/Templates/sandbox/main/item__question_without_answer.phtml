@@ -1,0 +1,29 @@
+
+<!-- question item -->
+
+<div class="my-4">
+    <a class="h3 color-gray-800 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
+        <?= $question->title ?>
+    </a>
+    <div class="small color-gray-500">
+
+        <?php if (strlen($question->answer->text) == 0): ?>
+            <a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
+                <?= $this->translator->get('Write first answer') ?>
+            </a>
+            <span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
+        <?php endif; ?>
+
+        <?php if (count($question->getHashtags()) == 0): ?>
+            <a rel="nofollow" href="<?= $question->getUpdateHashtagsURL($this->lang) ?>" rel="nofollow">
+                Проставить темы
+            </a>
+            <span class="mx-1 color-gray-900 font-weight-bold">&middot;</span>
+        <?php endif; ?>
+
+        <?= $this->translator->get('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
+
+    </div>
+</div>
+
+<!-- / question item -->
