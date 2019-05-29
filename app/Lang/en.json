@@ -72,10 +72,15 @@
         "talk": "Talk",
         "talk_tooltip": "Discussion about the answer"
     },
-    "question__hashtags_block": {
-        "hashtags_add": "Add hashtags",
-        "hashtags_change": "Change",
-        "title": "Hashtags"
+    "question": {
+        "block__hashtags": {
+            "hashtags_add": "Add hashtags",
+            "hashtags_change": "Change",
+            "title": "Hashtags"
+        },
+        "block__related_questions": {
+            "title": "Related questions"
+        }
     },
     "sandbox": {
         "about": {

@@ -48,7 +48,6 @@
     "Questions without answers": "Вопросы без ответа",
     "Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
     "Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
-    "Related questions": "Похожие вопросы",
     "Rename question": "Переименовать вопрос",
     "Report": "Пожаловаться",
     "Save": "Сохранить",
@@ -197,6 +196,9 @@
             "Be the first author": "Станьте первым автором",
             "Still no one tried to write an answer to this question. Be the first if the hashtag of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
         },
+        "block__related_questions": {
+            "title": "Похожие вопросы"
+        },
         "user_contribution": "Вклад пользователя"
     },
     "question__actions_top": {
@@ -207,7 +209,7 @@
         "talk_tooltip": "Обсуждение ответа"
     },
     "question__hashtags_block": {
-        "hashtags_add": "Добавить хештеги",
+        "hashtags_add": "Добавить хештег",
         "hashtags_change": "Изменить",
         "title": "Хештеги"
     },

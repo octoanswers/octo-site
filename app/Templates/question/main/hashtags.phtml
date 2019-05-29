@@ -2,7 +2,7 @@
 <?php if (count($this->question->getHashtags())): ?>
 	<!-- hashtags -->
 	<div class="my-5" id="question_hashtags_list">
-		<div class="font-weight-bold border-bottom pb-1 mb-3">
+		<div class="h4 mb-3">
 			<?= $this->translator->get('question__hashtags_block', 'title') ?>
 		</div>
 
@@ -26,7 +26,7 @@
 
 	<?php if ($this->authUser): ?>
         <div class="my-5" id="question_hashtags_list">
-            <div class="font-weight-bold border-bottom pb-1 mb-3">
+    		<div class="h4 mb-3">
                 <?= $this->translator->get('question__hashtags_block', 'title') ?>
             </div>
 		
