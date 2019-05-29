@@ -268,29 +268,69 @@ a.link-external:after {
   vertical-align: middle;
 }
 
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  font-weight: 600;
-}
-
 h1,
 .h1 {
   font-weight: 600;
+  font-size: 2.1rem;
 }
 
 @media (max-width: 575px) {
   h1,
   .h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
+}
+
+h2,
+.h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 575px) {
+  h2,
+  .h2 {
+    font-size: 1.6rem;
+  }
+}
+
+h3,
+.h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 575px) {
+  h3,
+  .h3 {
+    font-size: 1.4rem;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 575px) {
+  h4,
+  .h4 {
+    font-size: 1.2rem;
+  }
+}
+
+h5,
+.h5 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+h6,
+.h6 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #676767;
 }
 
 del,
