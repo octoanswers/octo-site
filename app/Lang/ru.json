@@ -90,7 +90,14 @@
         "renamed question": "переименовал вопрос"
     },
     "answer_edit": {
-        "Edit answer": "Править ответ"
+        "block__how_to_edit": {
+            "item_1": "Не допускайте грамматические или орфографические ошибки",
+            "item_2": "Добавляйте ссылки на связанные ответы и сайты",
+            "item_3": "Всегда уважайте труд предыдущих авторов",
+            "more_about_editing": "Подробнее о редактировании:",
+            "title": "Памятка автору"
+        },
+        "title": "Править ответ"
     },
     "answer_history": {
         "Answer history": "История изменений ответа",
@@ -242,7 +249,8 @@
         "users": "Пользователи"
     },
     "service_id": {
-        "about_answeropedia": "1"
+        "about_answeropedia": "1",
+        "how_to_edit": "2"
     },
     "settings": {
         "Back to profile": "Вернуться к профилю",

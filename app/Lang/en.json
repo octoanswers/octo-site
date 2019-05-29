@@ -1,4 +1,14 @@
 {
+    "answer_edit": {
+        "block__how_to_edit": {
+            "item_1": "Fix grammatical or spelling errors",
+            "item_2": "Add related resources or links",
+            "item_3": "Always respect the original author",
+            "more_about_editing": "More about editing:",
+            "title": "How to Edit"
+        },
+        "title": "Edit answer"
+    },
     "answer_history": {
         "page_title": "Answer history"
     },
@@ -81,7 +91,8 @@
         "page_title": "Search"
     },
     "service_id": {
-        "about_answeropedia": "1"
+        "about_answeropedia": "1",
+        "how_to_edit": "2"
     },
     "sidebar__main_nav": {
         "about_site": "About site",

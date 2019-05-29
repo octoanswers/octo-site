@@ -1,0 +1,18 @@
+<div class="card">
+    <h5 class="card-header"><?= $this->translator->get('answer_edit', 'block__how_to_edit', 'title') ?></h5>
+    <div class="card-body">
+		<ul class="list">
+			<li class="my-1"><?= $this->translator->get('answer_edit', 'block__how_to_edit', 'item_1') ?></li>
+			<li class="my-1"><?= $this->translator->get('answer_edit', 'block__how_to_edit', 'item_2') ?></li>
+			<li class="my-1"><?= $this->translator->get('answer_edit', 'block__how_to_edit', 'item_3') ?></li>
+		</ul>
+		<?php if ($this->howToEditQuestion): ?>
+			<p class="card-text small text-secondary">
+				<?= $this->translator->get('answer_edit', 'block__how_to_edit', 'more_about_editing') ?> 
+				<a class="text-secondary" href="<?= $this->howToEditQuestion->getURL($this->lang) ?>">
+					<?= $this->howToEditQuestion->title ?>
+				</a>
+			</p>
+		<?php endif; ?>
+	</div>
+</div>

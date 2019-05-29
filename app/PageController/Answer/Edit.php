@@ -30,6 +30,8 @@ class Edit_Answer_PageController extends Abstract_PageController
             $this->answer = (new Answer_Mapper())->create($answer);
         }
 
+        $this->howToEditQuestion = $this->_getHowToEditQuestion();
+
         $this->template = 'answer_edit';
         $this->showFooter = false;
         $this->pageTitle = $this->question->title.' - '.$this->translator->get("Edit answer").' - '.$this->translator->get('answeropedia');
@@ -42,5 +44,17 @@ class Edit_Answer_PageController extends Abstract_PageController
         $response->getBody()->write($output);
 
         return $response;
+    }
+
+    private function _getHowToEditQuestion()
+    {
+        try {
+            $howToEditQuestionID = $this->translator->get('service_id', 'how_to_edit');
+            $howToEditQuestion = (new Question_Query($this->lang))->questionWithID($howToEditQuestionID);
+        } catch (Throwable $e) {
+            $howToEditQuestion = null;
+        }
+
+        return $howToEditQuestion;
     }
 }

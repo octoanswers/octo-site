@@ -1,14 +1,10 @@
-// stylelint-disable declaration-no-important
-
-//
 // Right side table of contents
-//
 
 .right-sidebar {
     @supports (position: sticky) {
         position: sticky;
-        top: 4rem;
-        height: calc(100vh - 4rem);
+        top: 57px;
+        height: calc(100vh - 57px);
         overflow-y: auto;
     }
 
@@ -26,29 +22,22 @@
     }
 }
 
-//
 // Left side navigation
-//
 
 .bd-sidebar {
     order: 0;
     // background-color: #f5f2f9;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-    @media (min-width: $breakpoint-md) {
-        @supports (position: sticky) {
-            position: sticky;
-            top: 4rem;
-            z-index: 1000;
-            height: calc(100vh - 4rem);
-        }
-
-        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    @supports (position: sticky) {
+        position: sticky;
+        top: 57px;
+        z-index: 1000;
+        height: calc(100vh - 57px);
     }
 
-    @media (min-width: $breakpoint-xl) {
-        flex: 0 1 320px;
-    }
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 .bd-links {
