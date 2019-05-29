@@ -1,64 +1,33 @@
 
 <?php if (count($this->users)): ?>
-    <!-- users_table -->
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="w-6" scope="col"></th>
-                <th scope="col">Автор</th>
-                <th scope="col">
-                    <i class="fas fa-edit" style="color: #1e88e5;"></i>
-                </th>
-                <th class="d-none d-sm-table-cell" scope="col">
-                    <i class="far fa-question-circle" style="color: #e51e24;"></i>
-                </th>
-                <th class="d-none d-sm-table-cell" scope="col">
-                    <i class="fas fa-user-friends" style="color: #444444;"></i>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($this->users as $user): ?>
-                <tr>
-                    <td class="w-6">
-                        <a class="wh-3" href="<?= $user->getURL($this->lang) ?>">
-                            <img class="wh-3 rounded" src="<?= $user->getAvatarSmallURL() ?>">
-                        </a>
-                    </td>
-                    <td>
-                        <div class="font-weight-bold">
-                            <a class="color-gray-900 text-decoration-none" href="<?= $user->getURL($this->lang) ?>">
-                                <?= $user->name ?>
-                            </a>
-                        </div>
-                        <div class="small color-gray-600">
-                            <?php if ($user->signature): ?>
-                                <?= $user->signature ?>
-                            <?php endif; ?>
+   
+    <?php foreach ($this->users as $user): ?>
+	<div class="media">
+		<a class="d-block wh-4 mr-3 mb-3" href="<?= $user->getURL($this->lang) ?>">
+            <img class="wh-4 mr-3 rounded" src="<?= $user->getAvatarSmallURL() ?>">
+        </a>
+  		<div class="media-body">
+			<a class="h5 color-gray-900 text-decoration-none" href="<?= $user->getURL($this->lang) ?>">
+				<?= $user->name ?>
+			</a>
+            
+			<div class="semi-small color-gray-600">
+				<?php if ($user->signature): ?>
+					<?= $user->signature ?>
+				<?php endif; ?>
 
-                            <?php if ($user->signature && $user->site): ?>
-                                <span class="font-weight-bold mx-1 color-gray-800">&middot;</span>
-                            <?php endif; ?>
+				<?php if ($user->signature && $user->site): ?>
+					<span class="font-weight-bold mx-1 color-gray-800">&middot;</span>
+				<?php endif; ?>
 
-                            <?php if ($user->site): ?>
-                                <a href="<?= $user->site ?>">
-                                    <?= parse_url($user->site, PHP_URL_HOST) ?>
-                                </a>
-                            <?php endif; ?>
-                        </div>
-                    </td>
-                    <td>
-                        2.0K
-                    </td>
-                    <td class="d-none d-sm-table-cell">
-                        26
-                    </td>
-                    <td class="d-none d-sm-table-cell">
-                        16
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <!-- / users_table -->
+				<?php if ($user->site): ?>
+					<a href="<?= $user->site ?>">
+						<?= parse_url($user->site, PHP_URL_HOST) ?>
+					</a>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+    <?php endforeach; ?>
+    
 <?php endif; ?>

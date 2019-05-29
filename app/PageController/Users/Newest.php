@@ -51,8 +51,8 @@ class Newest_Users_PageController extends Abstract_PageController
         $nextPageURL = null;
 
         if (count($this->users) == self::USERS_PER_PAGE) {
-            $postfix = '&page='.($this->page + 1);
-            $nextPageURL = SITE_URL."/user?list=".$this->list.$postfix;
+            $postfix = '?page='.($this->page + 1);
+            $nextPageURL = SITE_URL.'/'.$this->lang.'/users/'.$this->list.$postfix;
         }
 
         return $nextPageURL;
