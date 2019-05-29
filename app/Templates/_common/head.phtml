@@ -1,8 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title><?= $this->pageTitle ?>
-</title>
+<title><?= $this->pageTitle ?></title>
 
 <?php if ($this->pageDescription): ?>
 <meta name="description" content="<?= $this->pageDescription ?>">
@@ -41,26 +40,22 @@
 
 <!-- Open Graph tags -->
 <?php if (isset($this->openGraph['url'])): ?>
-<meta property="og:url"
-    content="<?= $this->openGraph['url'] ?>" />
+    <meta property="og:url" content="<?= $this->openGraph['url'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['type'])): ?>
-<meta property="og:type"
-    content="<?= $this->openGraph['type'] ?>" />
+    <meta property="og:type" content="<?= $this->openGraph['type'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['title'])): ?>
-<meta property="og:title"
-    content="<?= $this->openGraph['title'] ?>" />
+    <meta property="og:title" content="<?= $this->openGraph['title'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['description'])): ?>
-<meta property="og:description"
-    content="<?= $this->openGraph['description'] ?>" />
+    <meta property="og:description" content="<?= $this->openGraph['description'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['image'])): ?>
-<meta property="og:image"
-    content="<?= $this->openGraph['image'] ?>" />
+    <meta property="og:image" content="<?= $this->openGraph['image'] ?>" />
 <?php endif; ?>
 <?php if (isset($this->openGraph['locale'])): ?>
-<meta property="og:locale"
-    content="<?= $this->openGraph['locale'] ?>" />
-<?php endif;
+    <meta property="og:locale" content="<?= $this->openGraph['locale'] ?>" />
+<?php endif; ?>
+
+<?php require_once __DIR__.'/counter/google_analytics.html' ?>
