@@ -1,7 +1,7 @@
 .alert-success {
-  color: #006600;
-  background-color: #E8FFEF;
-  border-color: #E8FFEF;
+  color: #004D00;
+  background-color: #77F079;
+  border-color: #77F079;
 }
 
 .badge-primary {
@@ -71,8 +71,8 @@
 }
 
 .btn-success {
-  border-color: #8DC99E;
-  background-color: #8DC99E;
+  border-color: #009B2B;
+  background-color: #009B2B;
 }
 
 .btn-success:hover {

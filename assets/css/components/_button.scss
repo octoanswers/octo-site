@@ -21,12 +21,12 @@
 }
 
 .btn-success {
-    border-color: $color-success-light;
-    background-color: $color-success-light;
+    border-color: $color-success;
+    background-color: $color-success;
 
     &:hover {
-        background-color: $color-success-dark;
-        border-color: $color-success-dark;
+        background-color: $color-success-dark-1;
+        border-color: $color-success-dark-1;
     }
 }
 
