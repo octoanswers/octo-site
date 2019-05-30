@@ -624,6 +624,36 @@ ul.list-links li a.active {
   width: 6rem;
 }
 
+.max-width-40px {
+  width: 100%;
+  max-width: 40px;
+}
+
+.max-width-80px {
+  width: 100%;
+  max-width: 80px;
+}
+
+.max-width-120px {
+  width: 100%;
+  max-width: 120px;
+}
+
+.max-width-160px {
+  width: 100%;
+  max-width: 160px;
+}
+
+.max-width-200px {
+  width: 100%;
+  max-width: 200px;
+}
+
+.max-width-240px {
+  width: 100%;
+  max-width: 240px;
+}
+
 @media (min-width: 576px) {
   .size-sm-8 {
     width: 4rem !important;

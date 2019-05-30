@@ -2,11 +2,6 @@
 <!-- actions -->
 <div class="mt-4">
 
-    <a class="btn btn-success mr-2 mb-3" rel="nofollow" href="#">
-        <i class="fas fa-plus mr-2"></i>
-        Задать вопрос на эту тему
-    </a>
-
     <?php if ($this->authUser): ?>
         <button
             class="btn follow_hashtag_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"

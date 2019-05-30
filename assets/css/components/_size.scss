@@ -1,32 +1,41 @@
 // Width-height sizes
 
 @for $i from 1 through 6 {
-  .wh-#{$i} {
-    width: $i + rem;
-    height: $i + rem;
-  }
+    .wh-#{$i} {
+        width: $i + rem;
+        height: $i + rem;
+    }
 }
 
 // Width
 
 @for $i from 1 through 6 {
-  .w-#{$i} {
-    width: $i + rem;
-  }
+    .w-#{$i} {
+        width: $i + rem;
+    }
+}
+
+// Max Width
+
+@for $i from 1 through 6 {
+    .max-width-#{$i * 40 + px} {
+        width: 100%;
+        max-width: $i * 40 + px;
+    }
 }
 
 // Relative sizes
 
 .size-sm-8 {
-  @media (min-width: $breakpoint_sm) {
-    width: 4rem !important;
-    height: 4rem !important;
-  }
+    @media (min-width: $breakpoint_sm) {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
 }
 
 .width-md-100 {
-  @media (min-width: $breakpoint_md) {
-    width: 100% !important;
-    height: auto !important;
-  }
+    @media (min-width: $breakpoint_md) {
+        width: 100% !important;
+        height: auto !important;
+    }
 }

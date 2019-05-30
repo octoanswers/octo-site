@@ -1,15 +1,9 @@
 
-<?php require_once TEMPLATE_PATH.'/hashtag/main/header.phtml' ?>
-<?php require_once TEMPLATE_PATH.'/hashtag/main/actions.phtml' ?>
-
-<?php require_once TEMPLATE_PATH.'/hashtag/main/nav.phtml' ?>
+<?php require_once __DIR__.'/main/header.phtml' ?>
+<?php require_once __DIR__.'/main/actions.phtml' ?>
 
 <?php if (count($this->hashtag_questions)): ?>
     <?php foreach ($this->hashtag_questions as $question): ?>
-        <?php require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml'; ?>
+        <?php require __DIR__.'/main/item_question.phtml'; ?>
     <?php endforeach; ?>
 <?php endif; ?>
-
-<div class="p-4 mb-5">
-    Есть вопрос на тему &laquo;<?= $this->hashtag->title ?>&raquo;?
-</div>
