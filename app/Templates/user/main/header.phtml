@@ -1,59 +1,26 @@
 
-<!-- header -->
-<div class="row mt-4">
-    <div class="col-auto col-md-12">
-        <img class="wh-4 rounded-circle mb-4" src="<?= $this->user->getAvatarMediumURL() ?>" alt="<?= $this->user->name ?>">
+<div class="mb-4">
+    
+    <img class="wh-6 rounded mb-4" src="<?= $this->user->getAvatarMediumURL() ?>" alt="<?= $this->user->name ?>">
+    
+    <h1 class="mb-1"><?= $this->user->name ?></h1>
+    <div class="mb-3 color-secondary-light-1 small">
+        +<?= $this->user->username ?>
     </div>
-    <div class="col-auto col-md-12">
-        <h1 class="h2 mb-1"><?= $this->user->name ?></h1>
-        <div class="mb-3 color-secondary-light-1 small">
-            +<?= $this->user->username ?>
+
+    <?php if ($this->user->signature): ?>
+        <div class="color-secondary-dark-2">
+            <?= $this->user->signature ?>
         </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12">
-        <?php if ($this->user->signature): ?>
-            <div class="color-secondary-dark-2">
-                <?= $this->user->signature ?>
-            </div>
-        <?php endif; ?>
+    <?php endif; ?>
 
-        <?php if ($this->user->site): ?>
-            <div class="mt-2">
-                <i class="fas fa-globe" style="color: #757575;"></i>
-                <a href="<?= $this->user->site ?>">
-                    <?= parse_url($this->user->site, PHP_URL_HOST) ?>
-                </a>
-            </div>
-        <?php endif; ?>
-
-        <!-- actions -->
-        <div class="mt-4">
-            <?php if ($this->authUser && $this->authUser->id != $this->user->id): ?>
-                <button
-                    class="btn btn-block follow_user_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
-                    data-user-id="<?= $this->user->id ?>"
-                    data-follow-title="<?= $this->translator->get('Follow') ?>"
-                    data-followed-title="<?= $this->translator->get('Followed') ?>"
-                    data-unfollow-title="<?= $this->translator->get('Unfollow') ?>" type="button">
-                    <i class="far fa-bookmark"></i>
-                    <span><?= $this->followed ? $this->translator->get('Followed') : $this->translator->get('Follow'); ?></span>
-                </button>
-            <?php endif; ?>
-            <?php if ($this->authUser && ($this->authUser->id == $this->user->id)): ?>
-                <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::getSettingsURL($this->lang) ?>">
-                    <i class="fas fa-cog"></i>
-                    <?= $this->translator->get('Settings') ?>
-                </a>
-                <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="#" data-toggle="modal" data-target="#modal__logout">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <?= $this->translator->get('Logout') ?>
-                </a>
-            <?php endif; ?>
+    <?php if ($this->user->site): ?>
+        <div class="mt-2">
+            <i class="fas fa-globe" style="color: #757575;"></i>
+            <a href="<?= $this->user->site ?>">
+                <?= parse_url($this->user->site, PHP_URL_HOST) ?>
+            </a>
         </div>
-        <!-- / actions -->
+    <?php endif; ?>
 
-    </div>
 </div>
-<!-- / header -->

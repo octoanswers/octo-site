@@ -1,0 +1,28 @@
+<!-- actions -->
+<div class="my-3">
+    
+    <?php if ($this->authUser && $this->authUser->id != $this->user->id): ?>
+        <button
+            class="btn follow_user_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>"
+            data-user-id="<?= $this->user->id ?>"
+            data-follow-title="<?= $this->translator->get('Follow') ?>"
+            data-followed-title="<?= $this->translator->get('Followed') ?>"
+            data-unfollow-title="<?= $this->translator->get('Unfollow') ?>" type="button">
+            <i class="fas fa-bookmark mr-2"></i>
+            <span><?= $this->followed ? $this->translator->get('Followed') : $this->translator->get('Follow'); ?></span>
+        </button>
+    <?php endif; ?>
+
+    <?php if ($this->authUser && ($this->authUser->id == $this->user->id)): ?>
+        <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::getSettingsURL($this->lang) ?>">
+            <i class="fas fa-cog"></i>
+            <?= $this->translator->get('Settings') ?>
+        </a>
+        <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="#" data-toggle="modal" data-target="#modal__logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <?= $this->translator->get('Logout') ?>
+        </a>
+    <?php endif; ?>
+
+</div>
+<!-- / actions -->

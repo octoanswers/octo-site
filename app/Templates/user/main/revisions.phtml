@@ -1,12 +1,12 @@
 
 <?php if (count($this->revisions)): ?>
     <?php for ($i=0; $i < count($this->revisions); $i++): ?>
-        <div class="my-5">
+        <div class="my-4">
             <div class="mb-3">
                 <a class="h5 color-secondary-dark-4 text-decoration-none" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
                     <?= $this->questions[$i]->title ?>
                 </a>
-                <div class="small color-secondary-dark-1 mt-2">
+                <div class="small color-secondary-dark-1">
                     Правка #<?= $this->revisions[$i]->id ?>
                     <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
                     <?php if ($this->revisions[$i]->comment): ?>
