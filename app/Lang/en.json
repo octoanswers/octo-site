@@ -32,6 +32,10 @@
         "support": "Support",
         "users": "Users"
     },
+    "hashtags": {
+        "title": "Hashtags",
+        "search_placeholder": "Search hashtags"
+    },
     "internal_server_error": {
         "page_title": "Error 500"
     },

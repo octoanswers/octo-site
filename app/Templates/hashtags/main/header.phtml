@@ -1,15 +1,13 @@
 
 <!-- header -->
-<div class="my-4 border-bottom clearfix">
+<div class="mb-4">
+    <h1 class="h2"><?= $this->translator->get('hashtags', 'title') ?></h1>
 
-    <h1 class="h5 mt-1 mb-3 float-sm-left">Темы вопросов</h1>
-
-    <form class="form-inline float-sm-right" action="<?= SITE_URL.'/'.$this->lang.'/search/hashtags' ?>" method="GET">
-        <div class="form-group mb-2">
-            <input name="q" class="form-control form-control-sm" type="text" placeholder="<?= $this->translator->get('Search hashtags') ?>" aria-label="Search">
-        </div>
+    <form class="my-4" action="<?= SITE_URL.'/'.$this->lang.'/search' ?>" method="GET">
         <input type="hidden" name="list" value="hashtags">
+        <div class="form-group">
+            <input name="q" class="form-control form-control-lg" type="text" placeholder="<?= $this->translator->get('hashtags', 'search_placeholder') ?>" aria-label="Search">
+        </div>
     </form>
-
 </div>
 <!-- / header -->

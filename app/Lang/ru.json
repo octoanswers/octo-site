@@ -131,7 +131,8 @@
         "More hashtags": "Больше тем"
     },
     "hashtags": {
-        "New hashtags": "Новые темы"
+        "title": "Хештеги",
+        "search_placeholder": "Поиск хештегов"
     },
     "internal_server_error": {
         "Error 500": "Ошибка 500",
