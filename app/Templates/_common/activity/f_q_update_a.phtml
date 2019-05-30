@@ -7,20 +7,20 @@
         </a>
     </div>
     <div class="width-full">
-        <div class="color-gray-700 mb-3">
+        <div class="color-secondary-dark-2 mb-3">
             <?= $this->translator->get('question updated answer') ?>:
-            <a class="color-gray-900 font-weight-bold" href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
+            <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
         </div>
         <pre><?= $data['revision']['diff_text'] ?></pre>
-        <div class="small color-gray-500">
-            <a class="color-gray-700" href="<?= $data['user']['profile_url'] ?>">
+        <div class="small color-secondary-light-1">
+            <a class="color-secondary-dark-2" href="<?= $data['user']['profile_url'] ?>">
                 <?= $data['user']['name'] ?>
             </a>
             <?php if (strlen($data['revision']['comment'])): ?>
-                <span class="mx-1 color-gray-700 font-weight-bold">&middot;</span>
+                <span class="mx-1 color-secondary-dark-2 font-weight-bold">&middot;</span>
                 <?= $data['revision']['comment'] ?>
             <?php endif; ?>
-            <span class="mx-1 color-gray-700 font-weight-bold">&middot;</span>
+            <span class="mx-1 color-secondary-dark-2 font-weight-bold">&middot;</span>
             <?= $activity['created_at__humanized'] ?>
         </div>
     </div>

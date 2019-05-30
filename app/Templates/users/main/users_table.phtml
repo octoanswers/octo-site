@@ -7,17 +7,17 @@
             <img class="wh-4 mr-3 rounded" src="<?= $user->getAvatarSmallURL() ?>">
         </a>
   		<div class="media-body">
-			<a class="h5 color-gray-900 text-decoration-none" href="<?= $user->getURL($this->lang) ?>">
+			<a class="h5 color-secondary-dark-4 text-decoration-none" href="<?= $user->getURL($this->lang) ?>">
 				<?= $user->name ?>
 			</a>
             
-			<div class="semi-small color-gray-600">
+			<div class="semi-small color-secondary-dark-1">
 				<?php if ($user->signature): ?>
 					<?= $user->signature ?>
 				<?php endif; ?>
 
 				<?php if ($user->signature && $user->site): ?>
-					<span class="font-weight-bold mx-1 color-gray-800">&middot;</span>
+					<span class="font-weight-bold mx-1 color-secondary-dark-3">&middot;</span>
 				<?php endif; ?>
 
 				<?php if ($user->site): ?>

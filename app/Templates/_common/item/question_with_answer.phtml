@@ -2,11 +2,11 @@
 <!-- question item -->
 <div class="my-4 pb-4 border-bottom">
     <div class="mb-3">
-        <a class="lead color-gray-900 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
+        <a class="lead color-secondary-dark-4 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
             <?= $question->title ?>
         </a>
     </div>
-    <div class="color-gray-700 my-3">
+    <div class="color-secondary-dark-2 my-3">
         <?= $question->getShortAnswer(); ?>
         <?php if ($question->getShortAnswer()): ?>
             <a href="<?= $question->getURL($this->lang) ?>">
@@ -21,7 +21,7 @@
         </a>
     <?php endif; ?>
 
-    <div class="mt-3 small color-gray-500">
+    <div class="mt-3 small color-secondary-light-1">
         <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60*60*24)): ?>
             <span class="badge badge-primary mr-3">Новый</span>
         <?php endif; ?>
@@ -40,10 +40,10 @@
 
         <?php if (strlen($question->answer->text)): ?>
             2 автора
-            <span class="mx-1 color-gray-700 font_weight_800">&middot;</span>
+            <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
             <i class="far fa-clock"></i>
             <span title=""><?= $question->getMinutesToRead() ?></span>
-            <span class="mx-1 color-gray-700 font_weight_800">&middot;</span>
+            <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
         <?php endif; ?>
 
         <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>

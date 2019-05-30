@@ -7,17 +7,17 @@
         </a>
     </div>
     <div class="width-full">
-        <div class="color-gray-700">
-            <a class="color-gray-900 font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
+        <div class="color-secondary-dark-2">
+            <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
             <?= $this->translator->get('renamed question') ?> 
-            <span class="color-gray-900 font-weight-bold"><?= $data['question']['title_old'] ?></span>
+            <span class="color-secondary-dark-4 font-weight-bold"><?= $data['question']['title_old'] ?></span>
         </div>
         <div class="my-1">
-            <a class="h3 color-gray-900 text-decoration-none" href="<?= $data['question']['url'] ?>">
+            <a class="h3 color-secondary-dark-4 text-decoration-none" href="<?= $data['question']['url'] ?>">
                 <?= $data['question']['title_new'] ?>
             </a>
         </div>
-        <div class="small color-gray-500">
+        <div class="small color-secondary-light-1">
             <?= $activity['created_at__humanized'] ?>
         </div>
     </div>

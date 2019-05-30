@@ -7,21 +7,21 @@
         </a>
     </div>
     <div class="width-full">
-        <div class="color-gray-700">
+        <div class="color-secondary-dark-2">
             <?= $this->translator->get('hashtag added question') ?>:
             
             <?php if (isset($data['hashtag'])): ?>
-                <a class="color-gray-900 font-weight-bold" href="<?= $data['hashtag']['url'] ?>"><?= $data['hashtag']['title'] ?></a>
+                <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['hashtag']['url'] ?>"><?= $data['hashtag']['title'] ?></a>
             <?php elseif (isset($data['topic'])): ?>
-                <a class="color-gray-900 font-weight-bold" href="<?= $data['topic']['url'] ?>"><?= $data['topic']['title'] ?></a>
+                <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['topic']['url'] ?>"><?= $data['topic']['title'] ?></a>
             <?php endif; ?>
         </div>
         <div class="my-1">
-            <a class="h3 color-gray-900 text-decoration-none" href="<?= $data['question']['url'] ?>">
+            <a class="h3 color-secondary-dark-4 text-decoration-none" href="<?= $data['question']['url'] ?>">
                 <?= $data['question']['title'] ?>
             </a>
         </div>
-        <div class="small color-gray-500">
+        <div class="small color-secondary-light-1">
             <?= $activity['created_at__humanized'] ?>
         </div>
     </div>

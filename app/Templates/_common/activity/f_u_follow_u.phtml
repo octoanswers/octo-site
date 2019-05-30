@@ -7,12 +7,12 @@
         </a>
     </div>
     <div class="width-full">
-        <div class="color-gray-700">
-            <a class="color-gray-900 font-weight-bold" href="<?= $data['user']['profile_url'] ?>">
+        <div class="color-secondary-dark-2">
+            <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['user']['profile_url'] ?>">
                 <?= $data['user']['name'] ?>
             </a>
             <?= $this->translator->get('follow user') ?>
-            <a class="color-gray-900 font-weight-bold" href="<?= $data['followed_user']['profile_url'] ?>">
+            <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['followed_user']['profile_url'] ?>">
                 <?= $data['followed_user']['name'] ?>
             </a>
         </div>
@@ -21,7 +21,7 @@
                 <img class="size-10 rounded" src="<?= $data['followed_user']['avatar_xs_url'] ?>">
             </a>
         </div>
-        <span class="small color-gray-500">
+        <span class="small color-secondary-light-1">
             <?= $activity['created_at__humanized'] ?>
         </span>
     </div>

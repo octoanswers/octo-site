@@ -8,18 +8,18 @@
             <img class="wh-3 mr-3 rounded" src="<?= ($this->users[$i])->getAvatarSmallURL() ?>">
         </a>
   		<div class="media-body">
-			<a class="h5 color-gray-900 text-decoration-none" href="<?= ($this->users[$i])->getURL($this->lang) ?>">
+			<a class="h5 color-secondary-dark-4 text-decoration-none" href="<?= ($this->users[$i])->getURL($this->lang) ?>">
                 <?= $this->users[$i]->name ?>
 			</a>
-            <div class="small color-gray-600">
+            <div class="small color-secondary-dark-1">
                 <?= $this->translator->get('Change ID') ?> #<?= $this->revisions[$i]->id ?>
-                <span class="color-gray-900 font_weight_800">&middot;</span>
+                <span class="color-secondary-dark-4 font_weight_800">&middot;</span>
                 <?php if ($this->revisions[$i]->comment): ?>
                     <?= $this->translator->get('Description of changes') ?>: <?= $this->revisions[$i]->comment ?>
                 <?php else: ?>
                     <?= $this->translator->get('No description of changes') ?>
                 <?php endif; ?>
-                <span class="color-gray-900 font_weight_800">&middot;</span>
+                <span class="color-secondary-dark-4 font_weight_800">&middot;</span>
                 <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->createdAt) ?>
             </div>
 
