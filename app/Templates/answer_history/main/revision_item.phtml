@@ -1,18 +1,17 @@
 
+<?php $user = $this->users[$i]; ?>
+
 <div class="my-5">
-    <div class="mb-3">
-        <div class="pt-1 float-left">
-            <a class="wh-3" href="<?= ($this->users[$i])->getURL($this->lang) ?>">
-                <img class="wh-3 rounded-circle" src="<?= ($this->users[$i])->getAvatarSmallURL() ?>">
-            </a>
-        </div>
-        <div class="ml-8">
-            <div class="">
-                <a class="font_weight_600 small mr-1" href="<?= ($this->users[$i])->getURL($this->lang) ?>">
-                    <?= $this->users[$i]->name ?>
-                </a>
-            </div>
-            <span class="small color-gray-600">
+
+    <div class="media">
+		<a class="d-block wh-3 mr-3 mb-3" href="<?= ($this->users[$i])->getURL($this->lang) ?>">
+            <img class="wh-3 mr-3 rounded" src="<?= ($this->users[$i])->getAvatarSmallURL() ?>">
+        </a>
+  		<div class="media-body">
+			<a class="h5 color-gray-900 text-decoration-none" href="<?= ($this->users[$i])->getURL($this->lang) ?>">
+                <?= $this->users[$i]->name ?>
+			</a>
+            <div class="small color-gray-600">
                 <?= $this->translator->get('Change ID') ?> #<?= $this->revisions[$i]->id ?>
                 <span class="color-gray-900 font_weight_800">&middot;</span>
                 <?php if ($this->revisions[$i]->comment): ?>
@@ -22,8 +21,10 @@
                 <?php endif; ?>
                 <span class="color-gray-900 font_weight_800">&middot;</span>
                 <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->createdAt) ?>
-            </span>
-        </div>
+            </div>
+
+		</div>
     </div>
+    
     <pre><?= FineDiff::renderDiffToHTMLFromOpcodes($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
 </div>

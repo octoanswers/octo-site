@@ -1,9 +1,9 @@
 
-<?php require_once TEMPLATE_PATH.'/answer_history/main/jumbotron.phtml'; ?>
+<?php require_once __DIR__.'/main/header.phtml'; ?>
 
 <?php if (count($this->revisions)): ?>
     <?php for ($i=0; $i < count($this->revisions); $i++): ?>
-        <?php require TEMPLATE_PATH.'/answer_history/main/revision_item.phtml'; ?>
+        <?php require __DIR__.'/main/revision_item.phtml'; ?>
     <?php endfor; ?>
 <?php else: ?>
     <div class="alert alert-info mt-5" role="alert">
