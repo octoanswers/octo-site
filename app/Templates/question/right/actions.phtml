@@ -11,7 +11,7 @@
 		<?php if ($this->authUser): ?>
 			<li>
 				<a href="#" data-toggle="modal" data-target="#modal_upload_image">
-					<i class="fas fa-camera mr-1"></i>
+					<i class="fas fa-camera w-24px"></i>
 					<?php if ($this->question->imageBaseName): ?>
 						<?= $this->translator->get('Update picture') ?>
 					<?php else: ?>
@@ -26,7 +26,7 @@
 			<!-- rename question -->
 			<li>
 				<a href="#" data-toggle="modal" data-target="#modal_rename">
-					<i class="fas fa-edit mr-1"></i>&nbsp;<?= $this->translator->get('Rename question') ?>	
+					<i class="fas fa-edit w-24px"></i>&nbsp;<?= $this->translator->get('Rename question') ?>	
 				</a>
 			</li>
 			<!-- / rename question -->
@@ -34,13 +34,13 @@
 			
 		<li>
 			<a href="#" rel="nofollow">
-                <i class="fas fa-flag mr-1"></i>&nbsp;<s><?= $this->translator->get('Report') ?></s>
+                <i class="fas fa-flag w-24px"></i>&nbsp;<s><?= $this->translator->get('Report') ?></s>
 			</a>
         </li>
         
         <li>
             <a rel="nofollow" target="_blank" href="<?= DDG_URL_Helper::getSearchURL($this->question->title) ?>">
-            <i class="fas fa-search mr-1"></i>&nbsp;<?= $this->translator->get('Search in DuckDuckGo') ?>
+            <i class="fas fa-search w-24px"></i>&nbsp;<?= $this->translator->get('Search in DuckDuckGo') ?>
             </a>
         </li>
 
