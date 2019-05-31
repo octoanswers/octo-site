@@ -60,6 +60,12 @@
 
 			<!-- Desktop links -->
 
+            <li class="nav-item d-none d-lg-block">
+				<a class="nav-link" href="<?= SITE_URL.'/'.$this->lang.'/'.$this->translator->get('service_id', 'about_answeropedia') ?>">
+                    <?= $this->translator->get('sidebar__main_nav', 'about_site') ?>
+				</a>
+			</li>
+
 			<li class="nav-item ml-4 d-none d-lg-block">
                 <form class="form-inline" action="<?= SITE_URL.'/'.$this->lang.'/search' ?>" method="GET">
                     <input name="q" class="form-control" type="search" placeholder="<?= $this->translator->get('navbar', 'saarch_placeholder') ?>" aria-label="Search">

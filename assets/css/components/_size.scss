@@ -15,6 +15,12 @@
     }
 }
 
+@for $i from 1 through 5 {
+    .w-#{$i * 8 + px} {
+        width: $i * 8 + px;
+    }
+}
+
 // Max Width
 
 @for $i from 1 through 6 {
