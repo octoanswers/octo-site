@@ -1,15 +1,14 @@
 
-<div class="container">
-    <div class="row mt-5 mb-5">
-        <div class="col-sm-12 col-md-6 col-lg-6 ml-auto mr-auto">
-
-            <p>Redirect from <strong><?= $this->question->title ?></strong> to:</p>
-            <p>
-                <a href="<?= Redirect_URL_Helper::getURL($this->lang, $this->questionRedirect) ?>" style="font-size: 2rem;">
-                    <?= $this->questionRedirect->title ?>
-                </a>
-            </p>
-
-        </div>
-    </div>
+<div class="mb-5">
+    <p class="lead text-muted mb-1">
+        <strong><?= $this->question->title ?></strong> 
+        <?= $this->translator->get('question_redirect', 'redirect_to') ?>
+    </p>
+    <h1 class="mt-0">
+        <a class="text-decoration-none" href="<?= $this->questionRedirect->getURL($this->lang) ?>">
+            <?= $this->questionRedirect->title ?>
+        </a>
+    </h1>
 </div>
+
+

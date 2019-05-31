@@ -39,14 +39,14 @@ class Show_Question_PageController extends Abstract_PageController
             $redirect = (new Redirects_Query($this->lang))->redirectForQuestionWithID($this->question->id);
             $this->questionRedirect = Question_Model::initWithTitle($redirect->toTitle);
 
-            $showRedirectPage = $request->getParam('show_rd');
-            if (!$showRedirectPage) {
+            $needStopRedirect = $request->getParam('no_redirect');
+            if (!$needStopRedirect) {
                 $redirectTitle = $this->questionRedirect->title;
-                $redirectURL = Redirect_URL_Helper::getRedirectURLForTitle($this->lang, $redirectTitle);
+                $redirectURL = Redirect_URL_Helper::getRedirectURLForTitle($this->lang, $redirectTitle).'?redirect_from_id='.$this->question->id;
                 return $response->withRedirect($redirectURL, 301);
             }
 
-            $this->template = 'question/redirect';
+            $this->template = 'question_redirect';
             $this->pageTitle = 'Redirect page: '.$this->question->title.' - '.$this->translator->get('answeropedia');
 
             $output = $this->renderPage();
@@ -58,8 +58,6 @@ class Show_Question_PageController extends Abstract_PageController
         $redirectedQuestionID = $request->getParam('redirect_from_id') ? (int) $request->getParam('redirect_from_id') : null;
         if ($redirectedQuestionID) {
             $this->redirectedQuestion = (new Question_Query($this->lang))->questionWithID($redirectedQuestionID);
-
-            //.'?redirect_from_id='.$questionID
         }
 
         if (isset($this->question->answer) && strlen($this->question->answer->text)) {

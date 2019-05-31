@@ -14,6 +14,11 @@
         </a>
 
         <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
+        <a rel="nofollow" class="color-secondary-light-1" href="<?= $question->getURL($this->lang) ?>?no_redirect=1">
+            Redirect page
+        </a>
+
+        <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
         <?= $this->translator->get('Обновлено:') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
 
     </div>

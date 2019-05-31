@@ -202,6 +202,9 @@
         },
         "user_contribution": "Вклад пользователя"
     },
+    "question_redirect": {
+        "redirect_to": " — перенаправлено на:"
+    },
     "question__actions_top": {
         "edit_answer": "Править ответ",
         "history": "История",
