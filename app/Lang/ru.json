@@ -43,7 +43,6 @@
     "No users found": "Пользователей не найдено",
     "On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
     "On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
-    "Popular": "Популярные",
     "Questions with hashtag": "Вопросы c хештегом",
     "Questions without answers": "Вопросы без ответа",
     "Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
@@ -131,8 +130,8 @@
         "More hashtags": "Больше тем"
     },
     "hashtags": {
-        "title": "Хештеги",
-        "search_placeholder": "Поиск хештегов"
+        "search_placeholder": "Поиск хештегов",
+        "title": "Хештеги"
     },
     "internal_server_error": {
         "Error 500": "Ошибка 500",
@@ -224,10 +223,10 @@
         "Leave redirect": "Оставить редирект"
     },
     "questions": {
-        "Newest questions": "Новые вопросы",
-        "Recently updated": "Недавно обновленные",
         "nav": {
-            "Newest": "Новые"
+            "newest": "Новые вопросы",
+            "popular": "Популярные",
+            "recently_updated": "Недавно обновленные"
         }
     },
     "root": {

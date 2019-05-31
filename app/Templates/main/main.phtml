@@ -8,7 +8,7 @@
 <!-- interesting questions -->
 <?php if (isset($this->recent_questions)): ?>
     <?php foreach ($this->recent_questions as $question): ?>
-        <?php require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml'; ?>
+        <?php require __DIR__.'/main/question_with_answer.phtml'; ?>
     <?php endforeach; ?>
 <?php endif; ?>
 <!-- /interesting questions -->

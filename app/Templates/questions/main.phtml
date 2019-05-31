@@ -3,12 +3,14 @@
 
 <?php if (count($this->questions)): ?>
 	<?php foreach ($this->questions as $question): ?>
-		<?php require TEMPLATE_PATH.'/_common/item/question_with_answer.phtml'; ?>
+		<?php require __DIR__.'/main/item_question.phtml'; ?>
 	<?php endforeach; ?>
 <?php endif; ?>
 
 <?php if (isset($this->nextPageURL)): ?>
 	<div class="my-5">
-		<a class="btn btn-primary btn-block" href="<?= $this->nextPageURL ?>"><?= $this->translator->get('More questions') ?></a>
+		<a class="btn btn-primary" href="<?= $this->nextPageURL ?>">
+        <?= $this->translator->get('More questions') ?>&nbsp;<i class="fas fa-chevron-right pl-2"></i>
+        </a>
 	</div>
 <?php endif; ?>
