@@ -55,6 +55,13 @@ class Show_Question_PageController extends Abstract_PageController
             return $response;
         }
 
+        $redirectedQuestionID = $request->getParam('redirect_from_id') ? (int) $request->getParam('redirect_from_id') : null;
+        if ($redirectedQuestionID) {
+            $this->redirectedQuestion = (new Question_Query($this->lang))->questionWithID($redirectedQuestionID);
+
+            //.'?redirect_from_id='.$questionID
+        }
+
         if (isset($this->question->answer) && strlen($this->question->answer->text)) {
             // trim first paragraph of answer
             $answer_other_text = preg_replace("/^.+\n/iu", "", $this->question->answer->text);
