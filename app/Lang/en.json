@@ -33,8 +33,8 @@
         "users": "Users"
     },
     "hashtags": {
-        "title": "Hashtags",
-        "search_placeholder": "Search hashtags"
+        "search_placeholder": "Search hashtags",
+        "title": "Hashtags"
     },
     "internal_server_error": {
         "page_title": "Error 500"
@@ -110,6 +110,20 @@
     "service_id": {
         "about_answeropedia": "1",
         "how_to_edit": "2"
+    },
+    "settings": {
+        "avatar__btn_upload": "Upload avatar",
+        "avatar__note": "It is advisable to use your real photo as an avatar - this causes more confidence among users.",
+        "avatar__title": "Avatar",
+        "real_name_note": "The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.",
+        "real_name_title": "Real name",
+        "save": "Save",
+        "signature_note": "Enter a signature describing your professional skills and knowledge.",
+        "signature_placeholder": "For example: Professor of Psychology, entrepreneur, novice poet",
+        "signature_title": "Signature",
+        "site_note": "Enter the address of your website or page on the social network.",
+        "site_title": "Site",
+        "title": "Settings"
     },
     "sidebar__main_nav": {
         "about_site": "About site",

@@ -1,81 +1,78 @@
 
-<h1 class="mt-2 mt-md-5">
-    <?= $this->translator->get('Settings') ?>
-</h1>
-<a href="<?= $this->authUser->getURL($this->lang) ?>" class="btn btn-sm btn-outline-secondary">
-    <?= $this->translator->get('Back to profile') ?>
-</a>
-
-<hr class="my-4 my-md-5">
-<h2><?= $this->translator->get('Upload avatar') ?></h2>
-<div class="">
-    <div class=" pr-4 pr-xl-5">
-        <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data" class="mt-4">
-            <div class="form-group">
-                <label for="form__update_name__name">
-                    <?= $this->translator->get('It is advisable to use your real photo as an avatar - this causes more confidence among users.') ?>
-                </label>
-                <input type="file" name="new_avatar_file" class="form-control-file w-100">
-            </div>
-            <div class="form-group">
-                <button type="submit" id="form__upload_avatar__submit_btn" class="btn btn-primary submit_button">
-                    <?= $this->translator->get('Upload avatar') ?>
-                </button>
-            </div>
-        </form>
-    </div>
-    <div class="">
-        <img class="rounded-circle wh-4 my-4" id="settings_pg__user_avatar" src="<?= $this->authUser->getAvatarMediumURL() ?>"/>
-    </div>
+<div class="mb-5">
+    <p class="lead text-muted mb-1"><?= $this->translator->get('settings', 'title') ?></p>
+    <h1 class="mt-0">
+        <a class="color-black text-decoration-none" href="<?= $this->authUser->getURL($this->lang) ?>">
+            <?= $this->authUser->name ? $this->authUser->name : $this->authUser->username; ?>
+        </a>
+    </h1>
 </div>
 
-<hr class="my-4 my-md-5">
-<h2><?= $this->translator->get('Real name') ?></h2>
-<form id="form__update_name" data-user-id="<?= $this->authUser->id ?>">
-    <div class="form-group">
-        <label for="form__update_name__name">
-            <?= $this->translator->get('The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.') ?>.
-        </label>
-        <input id="form__update_name__name" type="text" class="form-control" value="<?= @$this->authUser->name ?>">
-    </div>
-    <div class="form-group">
-        <button type="submit" id="form__update_name__submit" class="btn btn-primary">
-            <?= $this->translator->get('Save') ?>
-        </button>
-    </div>
-</form>
+<div class="border-top my-5 pt-4">
+    <h4><?= $this->translator->get('settings', 'avatar__title') ?></h4>
+    <img class="rounded wh-6 mt-3 mb-4" id="settings_pg__user_avatar" src="<?= $this->authUser->getAvatarMediumURL() ?>"/>
+    <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="form__update_name__name">
+                <?= $this->translator->get('settings', 'avatar__note') ?>
+            </label>
+            <input type="file" name="new_avatar_file" class="form-control-file w-100">
+        </div>
+        <div class="form-group">
+            <button type="submit" id="form__upload_avatar__submit_btn" class="btn btn-primary submit_button">
+                <?= $this->translator->get('settings', 'avatar__btn_upload') ?>
+            </button>
+        </div>
+    </form>
+</div>
 
-<hr class="my-4 my-md-5">
-<h2><?= $this->translator->get('Signature') ?></h2>
-<form id="form__update_signature" data-user-id="<?= $this->authUser->id ?>">
-    <div class="form-group">
-        <label for="form__update_signature__signature">
-            <?= $this->translator->get('Enter a signature describing your professional skills and knowledge.') ?>
-        </label>
-        <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->signature ?>" placeholder="<?= $this->translator->get('For example: Professor of Psychology, entrepreneur, novice poet') ?>">
-    </div>
-    <div class="form-group mt-3">
-        <button type="submit" id="form__update_signature__submit" class="btn btn-primary">
-            <?= $this->translator->get('Save') ?>
-        </button>
-    </div>
-</form>
+<div class="border-top my-5 pt-4">
+    <h4><?= $this->translator->get('settings', 'real_name_title') ?></h4>
+    <form id="form__update_name" data-user-id="<?= $this->authUser->id ?>">
+        <div class="form-group">
+            <label for="form__update_name__name">
+                <?= $this->translator->get('settings', 'real_name_note') ?>.
+            </label>
+            <input id="form__update_name__name" type="text" class="form-control" value="<?= @$this->authUser->name ?>">
+        </div>
+        <div class="form-group">
+            <button type="submit" id="form__update_name__submit" class="btn btn-primary">
+                <?= $this->translator->get('settings', 'save') ?>
+            </button>
+        </div>
+    </form>
+</div>
 
-<hr class="my-4 my-md-5">
-<h2>
-    <?= $this->translator->get('Site') ?>
-</h2>
-<form id="frm__update_site" data-user-id="<?= $this->authUser->id ?>">
-    <div class="form-group">
-        <label for="frm__update_site__site">
-            <?= $this->translator->get('Enter the address of your website or page on the social network.') ?>
-        </label>
-        <input id="frm__update_site__site" type="text" class="form-control" value="<?= @$this->authUser->site ?>">
-    </div>
-    <div class="form-group">
-        <button type="submit" id="frm__update_site__submit" class="btn btn-primary">
-            <?= $this->translator->get('Save') ?>
-        </button>
-    </div>
-</form>
+<div class="border-top my-5 pt-4">
+    <h4><?= $this->translator->get('settings', 'signature_title') ?></h4>
+    <form id="form__update_signature" data-user-id="<?= $this->authUser->id ?>">
+        <div class="form-group">
+            <label for="form__update_signature__signature">
+                <?= $this->translator->get('settings', 'signature_note') ?>
+            </label>
+            <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->signature ?>" placeholder="<?= $this->translator->get('settings', 'signature_placeholder') ?>">
+        </div>
+        <div class="form-group mt-3">
+            <button type="submit" id="form__update_signature__submit" class="btn btn-primary">
+                <?= $this->translator->get('settings', 'save') ?>
+            </button>
+        </div>
+    </form>
+</div>
 
+<div class="border-top my-5 pt-4">
+    <h4><?= $this->translator->get('settings', 'site_title') ?></h4>
+    <form id="frm__update_site" data-user-id="<?= $this->authUser->id ?>">
+        <div class="form-group">
+            <label for="frm__update_site__site">
+                <?= $this->translator->get('settings', 'site_note') ?>
+            </label>
+            <input id="frm__update_site__site" type="text" class="form-control" value="<?= @$this->authUser->site ?>">
+        </div>
+        <div class="form-group">
+            <button type="submit" id="frm__update_site__submit" class="btn btn-primary">
+                <?= $this->translator->get('settings', 'save') ?>
+            </button>
+        </div>
+    </form>
+</div>

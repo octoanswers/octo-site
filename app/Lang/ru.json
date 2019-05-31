@@ -188,7 +188,6 @@
         "page_title": "Ошибка 404"
     },
     "question": {
-        "redirected_from": "Перенаправлено с вопроса: ",
         "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
         "Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
         "Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
@@ -200,10 +199,8 @@
             "Be the first author": "Станьте первым автором",
             "Still no one tried to write an answer to this question. Be the first if the hashtag of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
         },
+        "redirected_from": "Перенаправлено с вопроса: ",
         "user_contribution": "Вклад пользователя"
-    },
-    "question_redirect": {
-        "redirect_to": " — перенаправлено на:"
     },
     "question__actions_top": {
         "edit_answer": "Править ответ",
@@ -221,6 +218,9 @@
         "Question not found": "Вопрос не найден",
         "page_title": "Вопрос не найден",
         "title": "Вопрос не найден"
+    },
+    "question_redirect": {
+        "redirect_to": " — перенаправлено на:"
     },
     "question_rename": {
         "Before you rename a question, please read the basic rules for renaming": "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными правилами переименования",
@@ -259,16 +259,18 @@
         "how_to_edit": "2"
     },
     "settings": {
-        "Back to profile": "Вернуться к профилю",
-        "Enter a signature describing your professional skills and knowledge.": "Введите подпись, описывающую ваши профессиональные навыки и знания.",
-        "Enter the address of your website or page on the social network.": "Введите адрес вашего сайта или страницы в социальной сети.",
-        "For example: Professor of Psychology, entrepreneur, novice poet": "Например: Профессор психологии, предприниматель, начинающий поэт",
-        "It is advisable to use your real photo as an avatar - this causes more confidence among users.": "Желательно использовать в качестве аватарки ваше реальное фото — это вызывает больше доверия у пользователей.",
-        "Real name": "Реальное имя",
-        "Signature": "Подпись",
-        "Site": "Сайт",
-        "The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.": "Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.",
-        "Upload avatar": "Загрузить аватар"
+        "avatar__btn_upload": "Загрузить аватар",
+        "avatar__note": "Желательно использовать в качестве аватарки ваше реальное фото — это вызывает больше доверия у пользователей.",
+        "avatar__title": "Аватар",
+        "real_name_note": "Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.",
+        "real_name_title": "Реальное имя",
+        "save": "Сохранить",
+        "signature_note": "Введите подпись, описывающую ваши профессиональные навыки и знания.",
+        "signature_placeholder": "Например: Профессор психологии, предприниматель, начинающий поэт",
+        "signature_title": "Подпись",
+        "site_note": "Введите адрес вашего сайта или страницы в социальной сети.",
+        "site_title": "Сайт",
+        "title": "Настройки"
     },
     "sidebar__main_nav": {
         "about_site": "О сайте",
@@ -304,8 +306,8 @@
         }
     },
     "users": {
-        "title": "Авторы ответов",
+        "Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
         "search_placeholder": "Поиск авторов",
-        "Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы."
+        "title": "Авторы ответов"
     }
 }
