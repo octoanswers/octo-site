@@ -1,6 +1,13 @@
 
 <!-- header -->
-<div class="h2 mb-4">
-    Авторы ответов
+<div class="mb-4">
+    <h1 class="h2"><?= $this->translator->get('users', 'title') ?></h1>
+
+    <form class="my-4" action="<?= SITE_URL.'/'.$this->lang.'/search' ?>" method="GET">
+        <input type="hidden" name="list" value="users">
+        <div class="form-group">
+            <input name="q" class="form-control form-control-lg" type="text" placeholder="<?= $this->translator->get('users', 'search_placeholder') ?>" aria-label="Search">
+        </div>
+    </form>
 </div>
 <!-- / header -->

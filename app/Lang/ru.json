@@ -304,6 +304,8 @@
         }
     },
     "users": {
+        "title": "Авторы ответов",
+        "search_placeholder": "Поиск авторов",
         "Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы."
     }
 }
