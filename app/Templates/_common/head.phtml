@@ -23,19 +23,24 @@
 <link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-180.png"
     sizes="180x180">
 
-<!-- stylesheet -->
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700">
+
+<!-- Stylesheet -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
     rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<link rel="stylesheet" href="https://answeropedia.org/assets/css/style.css?v=5">
+<link rel="stylesheet" href="https://answeropedia.org/assets/css/style.css?v=6">
 
 <?php if (isset($this->includeCSS) && count($this->includeCSS)): ?>
-<!-- additional CSS -->
-<?php foreach ($this->includeCSS as $linkToCSS): ?>
-<link rel="stylesheet" href="<?= $linkToCSS ?>">
-<?php endforeach; ?>
+    <!-- Additional CSS -->
+    <?php foreach ($this->includeCSS as $linkToCSS): ?>
+        <link rel="stylesheet" href="<?= $linkToCSS ?>">
+    <?php endforeach; ?>
+    <!-- / Additional CSS -->
 <?php endif; ?>
 
 <!-- Open Graph tags -->
