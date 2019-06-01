@@ -138,13 +138,21 @@
         "page_title": "Ошибка 500"
     },
     "main": {
-        "What do you mean complete?": "Что значит исчерпывающий?",
-        "You can help the Answeropedia project by simply sharing your link with your friends.": "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями ссылкой на него.",
         "how_it_works": {
-            "How it works?": "Как это работает?",
-            "We find a specialist who can give a competent answer": "Мы находим специалистов, которые могут дать компетентный ответ",
-            "You ask a question about any hashtag of interest to you": "Вы задаете вопрос на любую интересующую вас тему",
-            "You receive an answer to the email": "Вы получаете исчерпывающий ответ на email"
+            "title": "Как это работает?",
+            "step_1_title": "Вы задаете вопрос",
+            "step_1_msg": "Вы задаете вопрос на любую интересующую вас тему.",
+            "step_2_title": "Система находит специалистов",
+            "step_2_msg": "Авсверопедия показывает ваш вопрос специалистам, которые могут дать компетентный ответ.",
+            "step_3_title": "Вы получаете ответ",
+            "step_3_msg": "После того как ответ утвердили минимум три специалиста, вы получаете ответ."
+        },
+        "recent_questions": {
+            "title": "Последние вопросы"
+        },
+        "share_link": {
+            "note": "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями ссылкой на него.",
+            "title": "Поделиться ссылкой"
         }
     },
     "modal/question/upload_image": {

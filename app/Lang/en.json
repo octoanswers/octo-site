@@ -39,6 +39,21 @@
     "internal_server_error": {
         "page_title": "Error 500"
     },
+    "main": {
+        "how_it_works": {
+            "step_1": "You ask a question about any hashtag of interest to you",
+            "step_2": "We find a specialist who can give a competent answer",
+            "step_3": "You receive an answer to the email",
+            "title": "How it works?"
+        },
+        "recent_questions": {
+            "title": "Последние вопросы"
+        },
+        "share_link": {
+            "note": "You can help the Answeropedia project by simply sharing your link with your friends.",
+            "title": "Share link"
+        }
+    },
     "modal": {
         "login": {
             "title": "Login"

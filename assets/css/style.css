@@ -164,16 +164,16 @@
   color: #9E9E9E;
 }
 
-.color-secondary-light-1 {
-  color: #9E9E9E;
+.color-secondary-light-2 {
+  color: #B9B9B9;
 }
 
-.color-secondary-light-1 {
-  color: #9E9E9E;
+.color-secondary-light-3 {
+  color: #D5D5D5;
 }
 
-.color-secondary-light-1 {
-  color: #9E9E9E;
+.color-secondary-light-4 {
+  color: #F1F1F1;
 }
 
 .color-secondary-dark-1 {
@@ -190,6 +190,22 @@
 
 .color-secondary-dark-4 {
   color: #262626;
+}
+
+.bg-color-secondary-light-1 {
+  background-color: #9E9E9E;
+}
+
+.bg-color-secondary-light-2 {
+  background-color: #B9B9B9;
+}
+
+.bg-color-secondary-light-3 {
+  background-color: #D5D5D5;
+}
+
+.bg-color-secondary-light-4 {
+  background-color: #F1F1F1;
 }
 
 a {

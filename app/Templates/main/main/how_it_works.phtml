@@ -1,48 +1,39 @@
 
 <!-- how_it_works -->
-<div class="border-bottom my-5 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="mb-4">
-                    <?= $this->translator->get('How it works?') ?>
-                </h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 col-sm-1 text-center">
-                <p class="h1 text-center" style="color: #3498db;">
-                    <i class="far fa-question-circle"></i>
-                </p>
-            </div>
-            <div class="col-10 col-sm-3">
-                <p class="color-secondary-dark-1">
-                    <?= $this->translator->get('You ask a question about any hashtag of interest to you') ?>?
-                </p>
-            </div>
 
-            <div class="col-2 col-sm-1 text-center">
-                <p class="h1 text-center" style="color: #7458E1;">
-                    <i class="fas fa-users"></i>
-                </p>
-            </div>
-            <div class="col-10 col-sm-3">
-                <p class="color-secondary-dark-1">
-                    <?= $this->translator->get('We find a specialist who can give a competent answer') ?>?
-                </p>
-            </div>
+<h3 class="mb-4 mt-5">
+    <?= $this->translator->get('main', 'how_it_works', 'title') ?>
+</h3>
 
-            <div class="col-2 col-sm-1 text-center">
-                <p class="h1 text-center" style="color: #228C4C;">
-                    <i class="far fa-paper-plane"></i>
-                </p>
-            </div>
-            <div class="col-10 col-sm-3">
-                <p class="color-secondary-dark-1">
-                    <?= $this->translator->get('You receive an answer to the email') ?>?
-                </p>
-            </div>
-        </div>
-    </div>
+<div class="card-deck">
+	<div class="card">
+		<img src="https://answeropedia.org/assets/img/step_1.jpg" class="card-img-top" alt="...">
+    	<div class="card-body">
+    		<h5 class="card-title"><?= $this->translator->get('main', 'how_it_works', 'step_1_title') ?></h5>
+    		<p class="card-text">
+				<?= $this->translator->get('main', 'how_it_works', 'step_1_msg') ?>
+			</p>
+    		<p class="card-text"><small class="text-muted">Подробнее</small></p>
+    	</div>
+	</div>
+	<div class="card">
+		<img src="https://answeropedia.org/assets/img/step_2.jpg" class="card-img-top" alt="...">
+    	<div class="card-body">
+    		<h5 class="card-title"><?= $this->translator->get('main', 'how_it_works', 'step_2_title') ?></h5>
+    		<p class="card-text"><?= $this->translator->get('main', 'how_it_works', 'step_2_msg') ?></p>
+    		<p class="card-text"><small class="text-muted">Подробнее</small></p>
+    	</div>
+	</div>
+	<div class="card">
+		<img src="https://answeropedia.org/assets/img/step_3.jpg" class="card-img-top" alt="...">
+    	<div class="card-body">
+    		<h5 class="card-title"><?= $this->translator->get('main', 'how_it_works', 'step_3_title') ?></h5>
+    		<p class="card-text">
+				<?= $this->translator->get('main', 'how_it_works', 'step_3_msg') ?>
+			</p>
+    		<p class="card-text"><small class="text-muted">Подробнее</small></p>
+    	</div>
+	</div>
 </div>
+
 <!-- / how_it_works -->
