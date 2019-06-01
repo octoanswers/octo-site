@@ -24,7 +24,6 @@ Currently, Answeropedia is launched only in [Russian](https://answeropedia.org/r
 + Supports translation :globe_with_meridians: into any language
 + User points & reputation :trophy:
 + Log in via Facebook or others (using plugins);
-+ Safe from XSS, CSRF and SQL injection attacks;
 
 ## Test Environment 
 
