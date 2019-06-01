@@ -12,7 +12,7 @@
 		<div class="row flex-xl-nowrap">
 
 			<!-- left_sidebar -->
-			<div class="col-12 col-md-3 col-xl-2 py-md-3 sidebar-left">
+			<div class="d-none d-xl-block col-xl-2 sidebar-left">
 				<?php if (file_exists(TEMPLATE_PATH.'/'.$this->template.'/left.phtml')): ?>
 					<?php require TEMPLATE_PATH.'/'.$this->template.'/left.phtml'; ?>
 				<?php else: ?>
@@ -30,7 +30,7 @@
 			<!-- / right_sidebar -->
 
 			<!-- main_column -->
-			<main class="col-12 col-md-9 col-xl-7 py-md-3 pl-md-5">
+			<main class="col-12 col-xl-7 py-md-3 pl-md-5">
 				<?php require TEMPLATE_PATH.'/'.$this->template.'/main.phtml'; ?>
 			</main>
 			<!-- / main_column -->
