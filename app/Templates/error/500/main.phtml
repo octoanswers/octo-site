@@ -1,14 +1,12 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-3 col-lg-2">
-        </div>
 
-        <div class="col-sm-12 col-md-9 col-lg-7 mt-5 text-center">
-            <p class="h1 text-muted">500</p>
-            <h1 class="h2"><?= $this->errorTitle ?></h1>
-            <p class="lead"><?= $this->errorDescription ?></p>
+<div class="mb-5">
+    
+    <p class="lead text-muted mb-1">500</p>
+    <h1 class="mt-0">
+        <?= $this->errorTitle ?>
+    </h1>
+    <p class="lead"><?= $this->errorDescription ?></p>
 
-            <p class="h5 mt-5">Перейти <a href="<?= SITE_URL ?>">на главную</a></p>
-        </div>
-    </div>
+    <p class="mt-5">Go to <a href="<?= SITE_URL ?>">main page</a></p>
+    
 </div>
