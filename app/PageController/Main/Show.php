@@ -48,7 +48,6 @@ class Show_Main_PageController extends Abstract_PageController
         $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
 
         $this->includeJS[] = 'question/create';
-        $this->includeJS[] = 'question/create_from_main';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
