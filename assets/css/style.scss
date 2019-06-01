@@ -1,22 +1,21 @@
 @import "variables";
 
-@import "components/_alert";
-@import "components/_badge";
-@import "components/_border";
-@import "components/_button";
-@import "components/_card";
-@import "components/_color/_main";
+@import "_components/_alert";
+@import "_components/_badge";
+@import "_components/_border";
+@import "_components/_button";
+@import "_components/_card";
+@import "_components/_color/_main";
+@import "_components/_image";
+@import "_components/_list-links";
+@import "_components/_nav-pills";
+@import "_components/_nav-tabs";
+@import "_components/_navbar";
+@import "_components/_sidebar";
+@import "_components/_simplemde";
+@import "_components/_size";
+@import "_components/_table";
 
-@import "components/typography/_links";
-@import "components/typography/_other";
-
-@import "components/_image";
-@import "components/_list-links";
-@import "components/_nav-pills";
-@import "components/_nav-tabs";
-@import "components/_navbar";
-@import "components/_sidebar";
-@import "components/_simplemde";
-@import "components/_size";
-
-@import "components/_table";
+@import "_typography/_font-weight";
+@import "_typography/_links";
+@import "_typography/_other";

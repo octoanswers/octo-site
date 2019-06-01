@@ -208,153 +208,20 @@
   background-color: #F1F1F1;
 }
 
-a {
-  color: #3d95e9;
+.bg-color-secondary-light-5 {
+  background-color: #F8F8F8;
 }
 
-a:hover {
-  color: #007BCD;
+.bg-color-primary-light-5 {
+  background-color: #C7E4FF;
 }
 
-a.link-broken {
-  color: #eb3a5c;
+.bg-color-primary-light-6 {
+  background-color: #E1F0FF;
 }
 
-a.link-broken:after {
-  content: url("http://images.answeropedia.org/images/unavailable.png");
-  margin: 0 0 0 5px;
-  vertical-align: middle;
-}
-
-a.link-external:after {
-  content: url("http://images.answeropedia.org/images/external-link.png");
-  margin: 0 0 0 5px;
-  vertical-align: middle;
-}
-
-h1,
-.h1 {
-  font-weight: 600;
-  font-size: 2.1rem;
-}
-
-@media (max-width: 575px) {
-  h1,
-  .h1 {
-    font-size: 1.9rem;
-  }
-}
-
-h2,
-.h2 {
-  font-weight: 600;
-  font-size: 1.6rem;
-}
-
-@media (max-width: 575px) {
-  h2,
-  .h2 {
-    font-size: 1.6rem;
-  }
-}
-
-h3,
-.h3 {
-  font-weight: 600;
-  font-size: 1.4rem;
-}
-
-@media (max-width: 575px) {
-  h3,
-  .h3 {
-    font-size: 1.4rem;
-  }
-}
-
-h4,
-.h4 {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-@media (max-width: 575px) {
-  h4,
-  .h4 {
-    font-size: 1.2rem;
-  }
-}
-
-h5,
-.h5 {
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-h6,
-.h6 {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #6B6B6B;
-}
-
-del,
-ins {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-del {
-  background-color: #ffdce0;
-  text-decoration: none;
-}
-
-ins {
-  background-color: #cdffd8;
-  text-decoration: none;
-}
-
-ul {
-  padding-left: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-pre {
-  padding: 1rem;
-  background-color: #F1F1F1;
-  white-space: pre-wrap;
-  /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
-}
-
-blockquote,
-.blockquote {
-  background-color: #ffffff;
-  border-left: 4px solid #D5D5D5;
-  padding-left: 1rem;
-  color: #848484;
-  margin-bottom: 0 !important;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-blockquote p:last-child,
-.blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-.small {
-  font-size: .8rem;
-}
-
-.semi-small {
-  font-size: .9rem;
+.bg-color-primary-light-7 {
+  background-color: #FAFDFF;
 }
 
 img.cover-h8 {
@@ -667,5 +534,174 @@ table:not([class]) td {
   border-width: 1px;
   border-color: #dcdcdc;
   padding: 0.5rem 1rem;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+a {
+  color: #3d95e9;
+}
+
+a:hover {
+  color: #007BCD;
+}
+
+a.link-broken {
+  color: #eb3a5c;
+}
+
+a.link-broken:after {
+  content: url("http://images.answeropedia.org/images/unavailable.png");
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+
+a.link-external:after {
+  content: url("http://images.answeropedia.org/images/external-link.png");
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+
+h1,
+.h1 {
+  font-weight: 600;
+  font-size: 2.1rem;
+}
+
+@media (max-width: 575px) {
+  h1,
+  .h1 {
+    font-size: 1.9rem;
+  }
+}
+
+h2,
+.h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 575px) {
+  h2,
+  .h2 {
+    font-size: 1.6rem;
+  }
+}
+
+h3,
+.h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 575px) {
+  h3,
+  .h3 {
+    font-size: 1.4rem;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 575px) {
+  h4,
+  .h4 {
+    font-size: 1.2rem;
+  }
+}
+
+h5,
+.h5 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+h6,
+.h6 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #6B6B6B;
+}
+
+del,
+ins {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+del {
+  background-color: #ffdce0;
+  text-decoration: none;
+}
+
+ins {
+  background-color: #cdffd8;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  padding: 1rem;
+  background-color: #F1F1F1;
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+blockquote,
+.blockquote {
+  background-color: #ffffff;
+  border-left: 4px solid #D5D5D5;
+  padding-left: 1rem;
+  color: #848484;
+  margin-bottom: 0 !important;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+blockquote p:last-child,
+.blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.small {
+  font-size: .8rem;
+}
+
+.semi-small {
+  font-size: .9rem;
 }
 /*# sourceMappingURL=style.css.map */
