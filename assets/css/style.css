@@ -144,6 +144,14 @@
   border: 1px solid #D5D5D5;
 }
 
+.color-primary {
+  color: #3d95e9;
+}
+
+.color-primary-dark-1 {
+  color: #007BCD;
+}
+
 .color-success {
   color: #009B2B;
 }

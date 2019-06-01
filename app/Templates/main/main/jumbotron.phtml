@@ -1,11 +1,17 @@
 
 <!-- jumbotron -->
-<div class="bg-color-primary-light-6 rounded p-3 pt-4">
+<div class="mb-5 pb-5 border-bottom">
     
-    <h1>
+    <h1 class="display-4 font-weight-700 color-primary my-4">
+        <?= $this->translator->get('answeropedia') ?>
+        <sup class="color-secondary-light-3">β</sup>
+    </h1>
+
+    <h2 class="h1 my-4">
         <span class="font-weight-300"><?= $this->translator->get('main', 'jumbotron', 'header_1') ?></span><br>
         <?= $this->translator->get('main', 'jumbotron', 'header_2') ?>
-    </h1>
+    </h2>
+
     <p class="lead color-secondary-dark-4 mt-3">
         <?= $this->translator->get('main', 'jumbotron', 'text') ?>
     </p>
