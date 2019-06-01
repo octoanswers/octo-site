@@ -16,7 +16,7 @@ class List_Hashtags_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('New hashtags - Page 1 - Answeropedia', $responseBody);
+        $this->assertStringContainsString('New hashtags · Page 1 · Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

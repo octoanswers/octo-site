@@ -12,7 +12,7 @@ class InternalServerError_Error_PageController extends Abstract_PageController
         $this->translator = new Translator('en', ROOT_PATH."/app/Lang");
 
         $this->template = 'error/500';
-        $this->pageTitle = $this->translator->get('internal_server_error', 'page_title').' - '.$this->translator->get('answeropedia');
+        $this->pageTitle = $this->translator->get('internal_server_error', 'page_title').' · '.$this->translator->get('answeropedia');
         $this->pageDescription = $this->translator->get("internal_server_error", "page_title");
 
         $this->errorTitle = $this->translator->get("internal_server_error", "page_title");

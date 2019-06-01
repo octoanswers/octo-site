@@ -16,7 +16,7 @@ class Show_Flow_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Flow — Answeropedia', $responseBody);
+        $this->assertStringContainsString('Flow · Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

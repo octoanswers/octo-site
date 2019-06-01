@@ -81,7 +81,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageTitle()
     {
-        return $this->translator->get('Questions with hashtag').' #'.$this->hashtag->title.' - '.$this->translator->get('answeropedia');
+        return $this->translator->get('Questions with hashtag').' #'.$this->hashtag->title.' · '.$this->translator->get('answeropedia');
     }
 
     protected function _prepareFollowButton()
@@ -111,7 +111,7 @@ class Show_Hashtag_PageController extends Abstract_PageController
 
     protected function _getPageDescription()
     {
-        return $this->translator->get('Questions with hashtag').' #'.$this->hashtag->title.' - '.$this->translator->get('answeropedia');
+        return $this->translator->get('Questions with hashtag').' #'.$this->hashtag->title.' · '.$this->translator->get('answeropedia');
     }
 
     /**

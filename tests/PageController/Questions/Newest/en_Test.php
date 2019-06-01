@@ -16,7 +16,7 @@ class Newest_Questions_PageController__en__Test extends Abstract_Frontend_TestCa
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Newest questions - Page 1 - Answeropedia', $responseBody);
+        $this->assertStringContainsString('Newest questions · Page 1 · Answeropedia', $responseBody);
         $this->assertStringContainsString('What is main president daily function?', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
