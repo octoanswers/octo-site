@@ -5,12 +5,6 @@
         font-weight: 700;
     }
 
-    @media (min-width: $breakpoint-lg) {
-        .navbar-brand {
-            margin-left: .5rem;
-        }
-    }
-
     .navbar-toggler {
         border: 0;
     }

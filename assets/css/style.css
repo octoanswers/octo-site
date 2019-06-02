@@ -313,12 +313,6 @@ ul.list-links li a.active {
   font-weight: 700;
 }
 
-@media (min-width: 992px) {
-  .navbar .navbar-brand {
-    margin-left: .5rem;
-  }
-}
-
 .navbar .navbar-toggler {
   border: 0;
 }
