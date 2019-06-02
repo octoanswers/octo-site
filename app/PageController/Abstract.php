@@ -15,6 +15,7 @@ abstract class Abstract_PageController
     protected $v = [];
     protected $authUser = null;
 
+    protected $includeCSS = [];
     protected $includeModals = [];
     protected $includeJS = [];
 
@@ -28,8 +29,6 @@ abstract class Abstract_PageController
 
         $cookieStorage = new CookieStorage(); // @TODO Вынести бы
         $this->authUser = $cookieStorage->getAuthUser();
-
-        $this->includeCSS = [];
 
         $this->_initCommonModals();
         $this->_initCommonJS();

@@ -35,7 +35,7 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="https://answeropedia.org/assets/css/style.css?v=6">
 
-<?php if (isset($this->includeCSS) && count($this->includeCSS)): ?>
+<?php if (count($this->includeCSS)): ?>
     <!-- Additional CSS -->
     <?php foreach ($this->includeCSS as $linkToCSS): ?>
         <link rel="stylesheet" href="<?= $linkToCSS ?>">
