@@ -14,6 +14,8 @@ abstract class Abstract_PageController
 
     protected $v = [];
     protected $authUser = null;
+
+    protected $includeModals = [];
     protected $includeJS = [];
 
     public $container;
@@ -28,15 +30,9 @@ abstract class Abstract_PageController
         $this->authUser = $cookieStorage->getAuthUser();
 
         $this->includeCSS = [];
-        $this->includeModals = [];
-        
-        // JS for all pages
-        $this->includeJS[] = 'question/create';
 
-        if (!$this->authUser) {
-            $this->includeJS[] = 'user/login';
-            $this->includeJS[] = 'user/signup';
-        }
+        $this->_initCommonModals();
+        $this->_initCommonJS();
     }
 
     public function handleRequest($request, $response, $args)
@@ -62,5 +58,29 @@ abstract class Abstract_PageController
         $output = ob_get_clean();
 
         return $output;
+    }
+
+    #
+    # Private Methods
+    #
+
+    private function _initCommonModals()
+    {
+        $this->includeModals[] = '_common/ask';
+
+        if (!$this->authUser) {
+            $this->includeModals[] = '_common/login';
+            $this->includeModals[] = '_common/signup';
+        }
+    }
+
+    private function _initCommonJS()
+    {
+        $this->includeJS[] = 'question/create';
+
+        if (!$this->authUser) {
+            $this->includeJS[] = 'user/login';
+            $this->includeJS[] = 'user/signup';
+        }
     }
 }
