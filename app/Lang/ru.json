@@ -127,7 +127,8 @@
         "users": "Пользователи"
     },
     "hashtag": {
-        "More hashtags": "Больше тем"
+        "More hashtags": "Больше тем",
+        "page_title": "Вопросы с хэштегом"
     },
     "hashtags": {
         "search_placeholder": "Поиск хештегов",

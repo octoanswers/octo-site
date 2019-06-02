@@ -32,6 +32,9 @@
         "support": "Support",
         "users": "Users"
     },
+    "hashtag": {
+        "page_title": "Questions with hashtag"
+    },
     "hashtags": {
         "search_placeholder": "Search hashtags",
         "title": "Hashtags"
