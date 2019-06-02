@@ -220,6 +220,10 @@
         "redirected_from": "Перенаправлено с вопроса: ",
         "user_contribution": "Вклад пользователя"
     },
+    "question_update_hashtags": {
+        "page_title": "",
+        "title": "Редактирование хештегов"
+    },
     "question__actions_top": {
         "edit_answer": "Править ответ",
         "history": "История",
