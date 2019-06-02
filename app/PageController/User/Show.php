@@ -40,7 +40,7 @@ class Show_User_PageController extends Abstract_PageController
             $this->includeJS[] = 'user/logout';
             $this->includeJS[] = 'enable_tooltips';
 
-            $this->includeModals[] = 'user/modal/logout';
+            $this->includeModals[] = 'user/logout';
         }
 
         $output = $this->renderPage();
