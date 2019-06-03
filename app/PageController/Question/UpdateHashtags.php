@@ -33,8 +33,10 @@ class UpdateHashtags_Question_PageController extends Abstract_PageController
         $this->includeCSS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.css';
 
         $this->includeJS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.js';
+        $this->includeJS[] = SITE_URL.'/assets/_vendor/twitter/typeahead.js/bloodhound.js';
+        $this->includeJS[] = SITE_URL.'/assets/_vendor/twitter/typeahead.js/typeahead.bundle.min.js';
         $this->includeJS[] = 'question/tagsinput';
-        $this->includeJS[] = 'question/update_hashtags';
+        $this->includeJS[] = 'question/update_topics';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
