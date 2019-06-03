@@ -38,6 +38,9 @@ class AWApp
 
         $app->group('/api/v1'.URL_PART_LANG, function () {
 
+            // GET
+            $this->get('/search/categories.json', 'SearchCategories_GET_APIController:handle');
+            
             // DELETE
             $this->delete('/hashtags/{id}/follow.json', 'HashtagsIDFollow_DELETE_APIController:handle');
             $this->delete('/questions/{id}/follow.json', 'QuestionsIDFollow_DELETE_APIController:handle');

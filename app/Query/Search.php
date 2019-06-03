@@ -42,7 +42,7 @@ class Search_Query extends Abstract_Query
     public function searchHashtags(string $query, int $page = 1, int $perPage = 10): array
     {
         try {
-            v::stringType()->length(2, 32, true)->assert($query);
+            v::stringType()->length(1, 32, true)->assert($query);
         } catch (NestedValidationException $e) {
             throw new Exception('Search query param '.$e->getMessages()[0], 0);
         }
