@@ -14,20 +14,15 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
         
-        $expectedResponse = [
-            0 => 'русскаялитература',
-            1 => 'отделочныематериалы',
-            2 => 'автомобили',
-            3 => 'москва',
-            4 => 'автоспорт',
-            5 => 'косметика',
-            6 => 'парфюмерия',
-            7 => 'каша',
-            8 => 'кашемир',
-            9 => 'живаяприрода'
+        $expectedResponseZeroItem = [
+            "year" => "1967",
+            'value' => 'русскаялитература',
+            'name' => 'русскаялитература'
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $actualResponse = json_decode($responseBody, true);
+
+        $this->assertEquals($expectedResponseZeroItem, $actualResponse[0]);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -42,8 +37,16 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
         $responseBody = (string) $response->getBody();
         
         $expectedResponse = [
-            'автомобили',
-            'автоспорт'
+            [
+                'year' => '1967',
+                'value' => 'автомобили',
+                'name' => 'автомобили'
+            ],
+            [
+                'year' => '1967',
+                'value' => 'автоспорт',
+                'name' => 'автоспорт'
+            ]
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

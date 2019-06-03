@@ -37,7 +37,7 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
 
             # Check hashtags-questions ER & creat new, if needed
 
-            $newHashtagsTitles = explode(' ', $new_hashtags_string);
+            $newHashtagsTitles = explode(',', $new_hashtags_string);
 
             foreach ($newHashtagsTitles as &$hashtagTitle) {
                 $hashtagTitle = trim($hashtagTitle);

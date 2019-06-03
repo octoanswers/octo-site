@@ -49,10 +49,6 @@ class Hashtag_Validator
     {
         try {
             v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, true)->assert($title);
-
-            if (preg_match("/(\W+)/u", $title)) {
-                throw new Exception('Hashtag title "'.$title.'" contains non-word-character', 1);
-            }
         } catch (NestedValidationException $exception) {
             throw new Exception('Hashtag title param '.$exception->getMessages()[0], 0);
         }

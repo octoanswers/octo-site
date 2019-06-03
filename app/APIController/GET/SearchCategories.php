@@ -18,7 +18,11 @@ class SearchCategories_GET_APIController extends Abstract_APIController
                 $categories = (new Search_Query($this->lang))->searchHashtags($this->query);
                 
                 foreach ($categories as $category) {
-                    $output[] = $category->title;
+                    $output[] = [
+                        "year" => "1967",
+                        "value" => $category->title,
+                        "name" => $category->title
+                    ];
                 }
             }
         } catch (Throwable $e) {
