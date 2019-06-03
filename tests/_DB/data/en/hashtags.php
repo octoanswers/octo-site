@@ -2,7 +2,7 @@
 
 $pdo->exec(
     "INSERT INTO hashtags (h_id, h_title, h_words) VALUES
-    (1, 'русскаялитература', 'лермонтов пушкин'),
+    (1, 'English literature', 'лермонтов пушкин'),
     (2, 'test', NULL),
     (3, 'отделочныематериалы', NULL),
     (4, 'автомобили', NULL),

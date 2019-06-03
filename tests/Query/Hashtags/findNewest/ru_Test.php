@@ -40,7 +40,7 @@ class Hashtags_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals('религия', $hashtags[0]->title);
 
         $this->assertEquals(1, $hashtags[9]->id);
-        $this->assertEquals('русскаялитература', $hashtags[9]->title);
+        $this->assertEquals('Русская литература', $hashtags[9]->title);
     }
 
     public function test_FindFirst13Questions_Ok()

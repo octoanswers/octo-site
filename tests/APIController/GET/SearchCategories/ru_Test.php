@@ -16,8 +16,8 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
         
         $expectedResponseZeroItem = [
             "year" => "1967",
-            'value' => 'русскаялитература',
-            'name' => 'русскаялитература'
+            'value' => 'Русская литература',
+            'name' => 'Русская литература'
         ];
 
         $actualResponse = json_decode($responseBody, true);

@@ -16,4 +16,14 @@ class Query_Search_searchHashtags_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(17, $hashtags[1]->id);
         $this->assertEquals('фотосинтез', $hashtags[1]->title);
     }
+
+    public function test_One_letter_search()
+    {
+        $hashtags = (new Search_Query('ru'))->searchHashtags('а');
+
+        $this->assertEquals(10, count($hashtags));
+
+        $this->assertEquals(1, $hashtags[0]->id);
+        $this->assertEquals('Русская литература', $hashtags[0]->title);
+    }
 }
