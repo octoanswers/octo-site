@@ -2,21 +2,21 @@
 
 $pdo->exec(
     "INSERT INTO hashtags (h_id, h_title, h_words) VALUES
-    (1, 'English literature', 'лермонтов пушкин'),
-    (2, 'test', NULL),
-    (3, 'отделочныематериалы', NULL),
-    (4, 'автомобили', NULL),
-    (5, 'moscow', NULL),
-    (6, 'автоспорт', 'формула_1 михаэль_шумахер'),
-    (7, 'косметика', NULL),
-    (8, 'parfum', 'рив_гош духи духами помада'),
-    (9, 'почвоведение', 'почва'),
-    (10, 'религия', 'секуляризация'),
-    (11, 'каша', NULL),
-    (12, 'cashmere', NULL),
-    (13, 'птицы', 'голубь птицы птица'),
-    (14, 'живаяприрода', 'живой_природы'),
-    (15, 'bmwi7', 'bmw_i7'),
-    (16, 'фотография', 'фото объектив'),
-    (17, 'photosynthez', 'фотосинтез');"
+    (1, 'English literature', 'Lermontov Pushkin'),
+    (2, 'Test', NULL),
+    (3, 'Decoration Materials', NULL),
+    (4, 'Cars', NULL),
+    (5, 'Moscow', NULL),
+    (6, 'Motor sport', 'формула_1 михаэль_шумахер'),
+    (7, 'Cosmetics', NULL),
+    (8, 'Parfum', 'рив_гош духи духами помада'),
+    (9, 'Soil science', 'soil'),
+    (10, 'Religion', 'секуляризация'),
+    (11, 'Porridge', NULL),
+    (12, 'Cashmere', NULL),
+    (13, 'Birds', 'голубь птицы птица'),
+    (14, 'Nature', 'живой_природы'),
+    (15, 'BMW i7', 'bmw_i7'),
+    (16, 'Photography', 'фото объектив'),
+    (17, 'Photosynthez', 'фотосинтез');"
 );
