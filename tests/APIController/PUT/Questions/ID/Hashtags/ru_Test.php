@@ -6,7 +6,7 @@ class Hashtags_ID_Questions_PUT_APIController__ru__Test extends Abstract_Fronten
 
     public function test_Add_one_hashtag()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_hashtags='.urlencode('#медицина #гинекология');
+        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_hashtags='.urlencode('Медицина,Гинекология');
         $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/4/hashtags.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -27,7 +27,7 @@ class Hashtags_ID_Questions_PUT_APIController__ru__Test extends Abstract_Fronten
                 'медицина'
             ],
             'new_hashtags' => [
-                'медицина', 'гинекология'
+                'Медицина', 'Гинекология'
             ]
         ];
 

@@ -41,7 +41,6 @@ class Hashtags_ID_Questions_PUT_APIController extends Abstract_APIController
 
             foreach ($newHashtagsTitles as &$hashtagTitle) {
                 $hashtagTitle = trim($hashtagTitle);
-                $hashtagTitle = ltrim($hashtagTitle, '#');
             }
 
             $newHashtags = [];

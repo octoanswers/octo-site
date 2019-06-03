@@ -18,12 +18,12 @@ class Hashtag_initWithDBStateTest extends PHPUnit\Framework\TestCase
     {
         $hashtag = Hashtag::initWithDBState([
             'h_id' => 231,
-            'h_title' => 'медицинскиеуслуги',
+            'h_title' => 'Медицинские услуги',
             'h_words' => 'таблетка',
         ]);
 
         $this->assertEquals(231, $hashtag->id);
-        $this->assertEquals('медицинскиеуслуги', $hashtag->title);
+        $this->assertEquals('Медицинские услуги', $hashtag->title);
     }
 
     public function testInitWithEmptyState()

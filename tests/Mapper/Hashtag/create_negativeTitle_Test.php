@@ -30,13 +30,4 @@ class Mapper_Hashtag_create_negativeTitleTest extends Abstract_DB_TestCase
         $this->expectExceptionMessage('Hashtag title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
         $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
     }
-
-    public function test_Exception_when_title_contains_whitespace()
-    {
-        $hashtag = new Hashtag();
-        $hashtag->title = 'foo bar';
-
-        $this->expectExceptionMessage('Hashtag title "foo bar" contains non-word-character');
-        $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
-    }
 }

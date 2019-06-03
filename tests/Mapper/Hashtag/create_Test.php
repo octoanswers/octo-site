@@ -4,25 +4,36 @@ class Mapper_Hashtag_createTest extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['hashtags']];
 
-    public function test_Create_hashtag_with_EN_title()
+    public function test_Create_category_with_one_word_name()
     {
         $hashtag = new Hashtag();
-        $hashtag->title = 'newhashtag';
+        $hashtag->title = 'New';
 
         $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
 
         $this->assertEquals(18, $hashtag->id);
-        $this->assertEquals('newhashtag', $hashtag->title);
+        $this->assertEquals('New', $hashtag->title);
     }
 
-    public function test_Create_hashtag_with_RU_title()
+    public function test_Create_category_with_two_word_name()
     {
         $hashtag = new Hashtag();
-        $hashtag->title = 'новаятема';
+        $hashtag->title = 'Foo Bar';
 
         $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
 
         $this->assertEquals(18, $hashtag->id);
-        $this->assertEquals('новаятема', $hashtag->title);
+        $this->assertEquals('Foo Bar', $hashtag->title);
+    }
+
+    public function test_Create_category_with_RU_title()
+    {
+        $hashtag = new Hashtag();
+        $hashtag->title = 'тема';
+
+        $hashtag = (new Hashtag_Mapper('ru'))->create($hashtag);
+
+        $this->assertEquals(18, $hashtag->id);
+        $this->assertEquals('тема', $hashtag->title);
     }
 }

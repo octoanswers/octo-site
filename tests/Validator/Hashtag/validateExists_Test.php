@@ -2,25 +2,25 @@
 
 class Validator_Hashtag_validateExistsTest extends PHPUnit\Framework\TestCase
 {
-    public function test_Validate_hashtag_with_EN_title()
+    public function test_One_word_category()
     {
         $hashtag = new Hashtag();
         $hashtag->id = 13;
-        $hashtag->title = 'apple';
+        $hashtag->title = 'Apple';
 
         $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 
-    public function test_Validate_hashtag_with_RU_title()
+    public function test_RU_word()
     {
         $hashtag = new Hashtag();
         $hashtag->id = 13;
-        $hashtag->title = 'яблоко';
+        $hashtag->title = 'Яблоко';
 
         $this->assertEquals(true, Hashtag_Validator::validateExists($hashtag));
     }
 
-    public function test_Validate_hashtag_with_shortest_title()
+    public function test_Shortest_title()
     {
         $hashtag = new Hashtag();
         $hashtag->id = 13;
