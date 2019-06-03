@@ -3,7 +3,7 @@
 	<!-- hashtags -->
 	<div class="my-5" id="question_hashtags_list">
 		<div class="h4 mb-3">
-			<?= $this->translator->get('question__hashtags_block', 'title') ?>
+			<?= $this->translator->get('question', 'hashtags_block', 'title') ?>
 		</div>
 
         <?php foreach ($this->question->getHashtags() as $hashtag): ?>
@@ -13,8 +13,8 @@
 		<?php endforeach; ?>
 
 		<?php if ($this->authUser): ?>
-			<a class="btn btn-outline-secondary btn-sm ml-2" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>" rel="nofollow">
-				<?= $this->translator->get('question__hashtags_block', 'hashtags_change') ?>
+			<a class="btn btn-outline-secondary mb-2" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>" rel="nofollow">
+                <i class="fas fa-pen mr-1"></i></i>&nbsp;<?= $this->translator->get('question', 'hashtags_block', 'hashtags_change') ?>
 			</a>
 		<?php endif; ?>
 
@@ -27,12 +27,12 @@
 	<?php if ($this->authUser): ?>
         <div class="my-5" id="question_hashtags_list">
     		<div class="h4 mb-3">
-                <?= $this->translator->get('question__hashtags_block', 'title') ?>
+                <?= $this->translator->get('question', 'hashtags_block', 'title') ?>
             </div>
 		
 			<a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->getUpdateHashtagsURL($this->lang) ?>">
                 <i class="fas fa-plus mr-1"></i>
-                <?= $this->translator->get('question__hashtags_block', 'hashtags_add') ?>
+                <?= $this->translator->get('question', 'hashtags_block', 'hashtags_add') ?>
 			</a>
 		</div>
 	<?php endif; ?>

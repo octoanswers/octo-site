@@ -213,6 +213,11 @@
             "title": "Похожие вопросы"
         },
         "hashtags": "Хештеги",
+        "hashtags_block": {
+            "hashtags_add": "Добавить хештег",
+            "hashtags_change": "Изменить",
+            "title": "Хештеги"
+        },
         "lure_be_first_contributor": {
             "Be the first author": "Станьте первым автором",
             "Still no one tried to write an answer to this question. Be the first if the hashtag of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
@@ -230,11 +235,6 @@
         "rename_question": "Переименовать вопрос",
         "talk": "Обсуждение",
         "talk_tooltip": "Обсуждение ответа"
-    },
-    "question__hashtags_block": {
-        "hashtags_add": "Добавить хештег",
-        "hashtags_change": "Изменить",
-        "title": "Хештеги"
     },
     "question_not_found": {
         "Question not found": "Вопрос не найден",
