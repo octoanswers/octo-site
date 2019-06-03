@@ -32,4 +32,18 @@ if (count($this->includeJS)) {
 ?>
 <!-- / Additional JS -->
 
+<?php if ($this->template == 'question_update_hashtags'): ?>
+<script>
+    var tagsInputField = $('#new_hashtags');
+
+    var commaKeyCode = 44;
+    var enterKeyCode = 13;
+    var spaceKeyCode = 32;
+
+    tagsInputField.tagsinput({
+        confirmKeys: [spaceKeyCode, enterKeyCode, commaKeyCode]
+    });
+</script>
+<?php endif; ?>
+
 <?php require_once __DIR__.'/counter/yandex_metrika.html' ?>

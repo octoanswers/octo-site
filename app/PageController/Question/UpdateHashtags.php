@@ -19,7 +19,12 @@ class UpdateHashtags_Question_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->hashtags_string = $this->question->getHashtags() ? implode(", ", $this->question->getHashtags()) : '';
+        $titlesArray = [];
+        foreach ($this->question->getHashtags() as $hashtag) {
+            $titlesArray[] = $hashtag->title;
+        }
+        
+        $this->hashtags_string = $this->question->getHashtags() ? implode(", ", $titlesArray) : '';
 
         $this->template = 'question_update_hashtags';
         $this->pageTitle = str_replace("%question%", $this->question->title, $this->translator->get('Update hashtags for question "%question%" - Answeropedia'));
