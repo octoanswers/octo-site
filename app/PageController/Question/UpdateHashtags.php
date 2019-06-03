@@ -33,6 +33,7 @@ class UpdateHashtags_Question_PageController extends Abstract_PageController
         $this->includeCSS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.css';
 
         $this->includeJS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.js';
+        $this->includeJS[] = 'question/tagsinput';
         $this->includeJS[] = 'question/update_hashtags';
 
         $output = $this->renderPage();
