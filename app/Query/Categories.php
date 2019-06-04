@@ -1,0 +1,50 @@
+<?php
+
+use Respect\Validation\Exceptions\NestedValidationException;
+use Respect\Validation\Validator as v;
+
+class Categories_Query extends Abstract_Query
+{
+    public function categoriesLastID(): int
+    {
+        $stmt = $this->pdo->prepare('SELECT MAX(h_id) FROM categories');
+        if (!$stmt->execute()) {
+            $error = $stmt->errorInfo();
+            throw new Exception($error[2], $error[1]);
+        }
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (!$result) {
+            throw new Exception('Error', 1);
+        }
+
+        return (int) $result['MAX(h_id)'];
+    }
+
+    public function findNewest($page = 1, $perPage = 10): array
+    {
+        List_Validator::validatePage($page);
+        List_Validator::validatePerPage($perPage);
+
+        $categoriesLastID = (new Categories_Query($this->lang))->categoriesLastID();
+
+        $offset = $categoriesLastID - ($perPage * $page);
+
+        $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE `h_id` > :id_offset LIMIT :per_page');
+        $stmt->bindParam(':id_offset', $offset, PDO::PARAM_INT);
+        $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
+        if (!$stmt->execute()) {
+            $error = $stmt->errorInfo();
+            throw new Exception($error[2], $error[1]);
+        }
+
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $categories = [];
+        foreach ($rows as $row) {
+            $categories[] = Category::initWithDBState($row);
+        }
+
+        return array_reverse($categories);
+    }
+}

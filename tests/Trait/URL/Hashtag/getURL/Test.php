@@ -1,28 +1,28 @@
 <?php
 
-class Trait_URL_Hashtag_getURLTest extends PHPUnit\Framework\TestCase
+class Trait_URL_Category_getURLTest extends PHPUnit\Framework\TestCase
 {
-    public function test_URL_for_simple_hashtag()
+    public function test_URL_for_simple_category()
     {
-        $hashtag = new Hashtag;
-        $hashtag->title = 'footag';
+        $category = new Category;
+        $category->title = 'footag';
 
-        $this->assertEquals('https://answeropedia.org/en/tag/footag', $hashtag->getURL('en'));
+        $this->assertEquals('https://answeropedia.org/en/tag/footag', $category->getURL('en'));
     }
 
-    public function test_URL_for_hashtag_with_underscore()
+    public function test_URL_for_category_with_underscore()
     {
-        $hashtag = new Hashtag;
-        $hashtag->title = 'my_day';
+        $category = new Category;
+        $category->title = 'my_day';
 
-        $this->assertEquals('https://answeropedia.org/en/tag/my_day', $hashtag->getURL('en'));
+        $this->assertEquals('https://answeropedia.org/en/tag/my_day', $category->getURL('en'));
     }
 
-    public function test_URL_for_RU_hashtag()
+    public function test_URL_for_RU_category()
     {
-        $hashtag = new Hashtag;
-        $hashtag->title = 'дождь';
+        $category = new Category;
+        $category->title = 'дождь';
 
-        $this->assertEquals('https://answeropedia.org/ru/tag/%D0%B4%D0%BE%D0%B6%D0%B4%D1%8C', $hashtag->getURL('ru'));
+        $this->assertEquals('https://answeropedia.org/ru/tag/%D0%B4%D0%BE%D0%B6%D0%B4%D1%8C', $category->getURL('ru'));
     }
 }

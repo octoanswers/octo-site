@@ -1,21 +1,21 @@
 <?php
 
-class Hashtag_Query__findWithTitle__ru__Test extends Abstract_DB_TestCase
+class Category_Query__findWithTitle__ru__Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['hashtags']];
+    protected $setUpDB = ['ru' => ['categories']];
 
     public function test__HastagExists()
     {
-        $hashtag = (new Hashtag_Query('ru'))->findWithTitle('парфюмерия');
+        $category = (new Category_Query('ru'))->findWithTitle('парфюмерия');
 
-        $this->assertEquals(8, $hashtag->id);
-        $this->assertEquals('парфюмерия', $hashtag->title);
+        $this->assertEquals(8, $category->id);
+        $this->assertEquals('парфюмерия', $category->title);
     }
 
-    public function test__HashtagNotExists()
+    public function test__CategoryNotExists()
     {
-        $hashtag = (new Hashtag_Query('ru'))->findWithTitle('notexists');
+        $category = (new Category_Query('ru'))->findWithTitle('notexists');
 
-        $this->assertEquals(null, $hashtag);
+        $this->assertEquals(null, $category);
     }
 }

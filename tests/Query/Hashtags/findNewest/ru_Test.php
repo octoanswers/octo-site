@@ -1,58 +1,58 @@
 <?php
 
-class Hashtags_Query__findNewest_base_Test extends Abstract_DB_TestCase
+class Categories_Query__findNewest_base_Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['hashtags']];
+    protected $setUpDB = ['ru' => ['categories']];
 
     public function test_withoutParams()
     {
-        $hashtags = (new Hashtags_Query('ru'))->findNewest();
+        $categories = (new Categories_Query('ru'))->findNewest();
 
-        $this->assertEquals(10, count($hashtags));
+        $this->assertEquals(10, count($categories));
 
-        $this->assertEquals(17, $hashtags[0]->id);
-        $this->assertEquals('фотосинтез', $hashtags[0]->title);
+        $this->assertEquals(17, $categories[0]->id);
+        $this->assertEquals('фотосинтез', $categories[0]->title);
 
-        $this->assertEquals(8, $hashtags[9]->id);
-        $this->assertEquals('парфюмерия', $hashtags[9]->title);
+        $this->assertEquals(8, $categories[9]->id);
+        $this->assertEquals('парфюмерия', $categories[9]->title);
     }
 
     public function test_firstPage()
     {
-        $hashtags = (new Hashtags_Query('ru'))->findNewest(1);
+        $categories = (new Categories_Query('ru'))->findNewest(1);
 
-        $this->assertEquals(10, count($hashtags));
+        $this->assertEquals(10, count($categories));
 
-        $this->assertEquals(17, $hashtags[0]->id);
-        $this->assertEquals('фотосинтез', $hashtags[0]->title);
+        $this->assertEquals(17, $categories[0]->id);
+        $this->assertEquals('фотосинтез', $categories[0]->title);
 
-        $this->assertEquals(8, $hashtags[9]->id);
-        $this->assertEquals('парфюмерия', $hashtags[9]->title);
+        $this->assertEquals(8, $categories[9]->id);
+        $this->assertEquals('парфюмерия', $categories[9]->title);
     }
 
     public function test_secondPage()
     {
-        $hashtags = (new Hashtags_Query('ru'))->findNewest(2);
+        $categories = (new Categories_Query('ru'))->findNewest(2);
 
-        $this->assertEquals(10, count($hashtags));
+        $this->assertEquals(10, count($categories));
 
-        $this->assertEquals(10, $hashtags[0]->id);
-        $this->assertEquals('религия', $hashtags[0]->title);
+        $this->assertEquals(10, $categories[0]->id);
+        $this->assertEquals('религия', $categories[0]->title);
 
-        $this->assertEquals(1, $hashtags[9]->id);
-        $this->assertEquals('Русская литература', $hashtags[9]->title);
+        $this->assertEquals(1, $categories[9]->id);
+        $this->assertEquals('Русская литература', $categories[9]->title);
     }
 
     public function test_FindFirst13Questions_Ok()
     {
-        $hashtags = (new Hashtags_Query('ru'))->findNewest(1, 13);
+        $categories = (new Categories_Query('ru'))->findNewest(1, 13);
 
-        $this->assertEquals(13, count($hashtags));
+        $this->assertEquals(13, count($categories));
 
-        $this->assertEquals(17, $hashtags[0]->id);
-        $this->assertEquals('фотосинтез', $hashtags[0]->title);
+        $this->assertEquals(17, $categories[0]->id);
+        $this->assertEquals('фотосинтез', $categories[0]->title);
 
-        $this->assertEquals(5, $hashtags[12]->id);
-        $this->assertEquals('москва', $hashtags[12]->title);
+        $this->assertEquals(5, $categories[12]->id);
+        $this->assertEquals('москва', $categories[12]->title);
     }
 }

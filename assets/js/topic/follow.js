@@ -1,5 +1,5 @@
 
-$("button.follow_hashtag_button").click(function (e) {
+$("button.follow_category_button").click(function (e) {
 
     e.preventDefault();
     $button = $(this);
@@ -13,9 +13,9 @@ $("button.follow_hashtag_button").click(function (e) {
     };
 
     var lang = $('html').attr('lang');
-    var hashtagID = $(this).data("hashtag-id");
+    var categoryID = $(this).data("category-id");
     var request_type = ($button.hasClass('followed') ? "DELETE" : "POST");
-    var request_url = '/api/v1/' + lang + '/hashtags/' + hashtagID + '/follow.json';
+    var request_url = '/api/v1/' + lang + '/categories/' + categoryID + '/follow.json';
 
     console.log("request_type: " + request_type + "\n");
     console.log("request_url: " + request_url + "\n");
@@ -56,7 +56,7 @@ $("button.follow_hashtag_button").click(function (e) {
         });
 });
 
-$("button.follow_hashtag_button")
+$("button.follow_category_button")
     .mouseenter(function () {
         $button = $(this);
         if ($button.hasClass('followed')) {

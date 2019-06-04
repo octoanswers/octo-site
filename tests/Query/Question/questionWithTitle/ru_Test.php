@@ -10,7 +10,7 @@ class Mapper_Question_questionWithTitle_Base_Test extends Abstract_DB_TestCase
 
         $this->assertEquals(6, $question->id);
         $this->assertEquals('Как птицы помечают свою территорию?', $question->title);
-        $this->assertEquals(2, count($question->getHashtags()));
+        $this->assertEquals(2, count($question->getCategories()));
         $this->assertEquals('4_2013_05_09_123', $question->imageBaseName);
     }
 

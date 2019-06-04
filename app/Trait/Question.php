@@ -11,15 +11,15 @@ trait Question_Trait
         return null;
     }
 
-    public function getFirstTwoHashtags()
+    public function getFirstTwoCategories()
     {
-        if (count($this->getHashtags()) >= 2) {
-            $hashtags_slice = array_slice($this->getHashtags(), 0, 2);
+        if (count($this->getCategories()) >= 2) {
+            $categories_slice = array_slice($this->getCategories(), 0, 2);
         } else {
-            $hashtags_slice = $this->getHashtags();
+            $categories_slice = $this->getCategories();
         }
 
-        return $hashtags_slice;
+        return $categories_slice;
     }
 
     public function getMinutesToRead():int
@@ -30,14 +30,14 @@ trait Question_Trait
         return $minites_to_read;
     }
     
-    public function getMoreHashtagsCount(int $trimmedHashtagsCount = 2): int
+    public function getMoreCategoriesCount(int $trimmedCategoriesCount = 2): int
     {
-        $hashtagsCount = count($this->getHashtags());
+        $categoriesCount = count($this->getCategories());
         
-        if ($hashtagsCount - $trimmedHashtagsCount <= 0) {
+        if ($categoriesCount - $trimmedCategoriesCount <= 0) {
             return 0;
         }
 
-        return $hashtagsCount - $trimmedHashtagsCount;
+        return $categoriesCount - $trimmedCategoriesCount;
     }
 }

@@ -2,7 +2,7 @@
 
 class Unlogged_Main_PageController__ru__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'revisions', 'hashtags'], 'users' => ['users']];
+    protected $setUpDB = ['ru' => ['questions', 'revisions', 'categories'], 'users' => ['users']];
 
     public function test_base()
     {

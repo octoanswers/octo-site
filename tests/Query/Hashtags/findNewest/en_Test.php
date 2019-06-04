@@ -1,19 +1,19 @@
 <?php
 
-class Hashtags_Query__findNewest__en__Test extends Abstract_DB_TestCase
+class Categories_Query__findNewest__en__Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['en' => ['hashtags']];
+    protected $setUpDB = ['en' => ['categories']];
 
     public function test_withoutParams()
     {
-        $hashtags = (new Hashtags_Query('en'))->findNewest();
+        $categories = (new Categories_Query('en'))->findNewest();
 
-        $this->assertEquals(10, count($hashtags));
+        $this->assertEquals(10, count($categories));
 
-        $this->assertEquals(17, $hashtags[0]->id);
-        $this->assertEquals('Photosynthez', $hashtags[0]->title);
+        $this->assertEquals(17, $categories[0]->id);
+        $this->assertEquals('Photosynthez', $categories[0]->title);
 
-        $this->assertEquals(8, $hashtags[9]->id);
-        $this->assertEquals('Parfum', $hashtags[9]->title);
+        $this->assertEquals(8, $categories[9]->id);
+        $this->assertEquals('Parfum', $categories[9]->title);
     }
 }

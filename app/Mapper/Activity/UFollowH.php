@@ -5,7 +5,7 @@ class UFollowH_Activity_Mapper extends Abstract_Mapper
     public function create(Activity_Model $activity): Activity_Model
     {
         $user = $activity->subject;
-        $hashtag = $activity->data;
+        $category = $activity->data;
 
         if ($activity->type != Activity_Model::F_U_FOLLOW_H) {
             throw new Exception("Incorrect activity type", 0);
@@ -13,8 +13,8 @@ class UFollowH_Activity_Mapper extends Abstract_Mapper
         if (!is_a($user, User_Model::class)) {
             throw new Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
-        if (!is_a($hashtag, Hashtag::class)) {
-            throw new Exception('Incorrect activity "data" class type: '.get_class($hashtag), 0);
+        if (!is_a($category, Category::class)) {
+            throw new Exception('Incorrect activity "data" class type: '.get_class($category), 0);
         }
 
         $userID = $user->id;
@@ -26,9 +26,9 @@ class UFollowH_Activity_Mapper extends Abstract_Mapper
                 'profile_url' => $user->getURL($this->lang),
                 'avatar_xs_url' => $user->getAvatarSmallURL(),
             ],
-            'hashtag' => [
-                'title' => $hashtag->title,
-                'url' => $hashtag->getURL($this->lang),
+            'category' => [
+                'title' => $category->title,
+                'url' => $category->getURL($this->lang),
             ]
         ], JSON_UNESCAPED_UNICODE);
 

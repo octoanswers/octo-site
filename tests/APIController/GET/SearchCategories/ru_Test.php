@@ -2,7 +2,7 @@
 
 class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['hashtags']];
+    protected $setUpDB = ['ru' => ['categories']];
 
     public function test_One_char_query()
     {

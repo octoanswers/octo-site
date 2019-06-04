@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Helper_ExtendedParsedown_text_hashtagsTest extends TestCase
+class Helper_ExtendedParsedown_text_categoriesTest extends TestCase
 {
     protected function setUp(): void
     {
@@ -14,10 +14,10 @@ class Helper_ExtendedParsedown_text_hashtagsTest extends TestCase
         $this->pd = null;
     }
 
-    public function test_Link_to_hashtag()
+    public function test_Link_to_category()
     {
         $stringMD = "Any #birds may #fly.";
-        $stringHTML = '<p>Any <a href="https://answeropedia.org/ru/tag/birds" title="#birds" class="inline-hashtag">#birds</a> may <a href="https://answeropedia.org/ru/tag/fly" title="#fly" class="inline-hashtag">#fly</a>.</p>';
+        $stringHTML = '<p>Any <a href="https://answeropedia.org/ru/tag/birds" title="#birds" class="inline-category">#birds</a> may <a href="https://answeropedia.org/ru/tag/fly" title="#fly" class="inline-category">#fly</a>.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }

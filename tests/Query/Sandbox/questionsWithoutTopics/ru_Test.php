@@ -1,12 +1,12 @@
 <?php
 
-class Sandbox_Query__questionsWithoutHashtags__Test extends Abstract_DB_TestCase
+class Sandbox_Query__questionsWithoutCategories__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions'], 'en' => ['questions']];
 
     public function test_Ru()
     {
-        $questions = (new Sandbox_Query('ru'))->questionsWithoutHashtags();
+        $questions = (new Sandbox_Query('ru'))->questionsWithoutCategories();
 
         $this->assertEquals(10, count($questions));
 
@@ -19,7 +19,7 @@ class Sandbox_Query__questionsWithoutHashtags__Test extends Abstract_DB_TestCase
 
     public function test_firstPage()
     {
-        $questions = (new Sandbox_Query('ru'))->questionsWithoutHashtags(1);
+        $questions = (new Sandbox_Query('ru'))->questionsWithoutCategories(1);
 
         $this->assertEquals(10, count($questions));
 
@@ -32,7 +32,7 @@ class Sandbox_Query__questionsWithoutHashtags__Test extends Abstract_DB_TestCase
 
     public function test_secondPage()
     {
-        $questions = (new Sandbox_Query('ru'))->questionsWithoutHashtags(2);
+        $questions = (new Sandbox_Query('ru'))->questionsWithoutCategories(2);
 
         $this->assertEquals(10, count($questions));
 

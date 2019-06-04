@@ -1,0 +1,9 @@
+
+<?php require_once __DIR__.'/main/header.phtml' ?>
+<?php require_once __DIR__.'/main/actions.phtml' ?>
+
+<?php if (count($this->category_questions)): ?>
+    <?php foreach ($this->category_questions as $question): ?>
+        <?php require __DIR__.'/main/item_question.phtml'; ?>
+    <?php endforeach; ?>
+<?php endif; ?>

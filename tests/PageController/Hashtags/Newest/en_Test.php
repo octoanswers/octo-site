@@ -1,14 +1,14 @@
 <?php
 
-class List_Hashtags_PageController__en__Test extends Abstract_Frontend_TestCase
+class List_Categories_PageController__en__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['en' => ['hashtags']];
+    protected $setUpDB = ['en' => ['categories']];
 
     public function test__ShowENPage()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/en/hashtags/newest',
+            'REQUEST_URI' => '/en/categories/newest',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
@@ -16,7 +16,7 @@ class List_Hashtags_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('New hashtags · Page 1 · Answeropedia', $responseBody);
+        $this->assertStringContainsString('New categories · Page 1 · Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

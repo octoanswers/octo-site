@@ -1,34 +1,34 @@
 <?php
 
-class Question_Model_getHashtagsTest extends PHPUnit\Framework\TestCase
+class Question_Model_getCategoriesTest extends PHPUnit\Framework\TestCase
 {
-    public function test_Get_hashtags()
+    public function test_Get_categories()
     {
         $question = new Question_Model();
-        $question->hashtagsJSON = '["iPhone8","Apple"]';
+        $question->categoriesJSON = '["iPhone8","Apple"]';
 
-        $hashtags = $question->getHashtags();
+        $categories = $question->getCategories();
 
-        $this->assertEquals(2, count($hashtags));
-        $this->assertEquals("iPhone8", $hashtags[0]->title);
+        $this->assertEquals(2, count($categories));
+        $this->assertEquals("iPhone8", $categories[0]->title);
     }
 
-    public function test_Get_hashtags_from_empty_hashtagsJSON()
+    public function test_Get_categories_from_empty_categoriesJSON()
     {
         $question = new Question_Model();
-        $question->hashtagsJSON = '';
+        $question->categoriesJSON = '';
 
-        $hashtags = $question->getHashtags();
+        $categories = $question->getCategories();
 
-        $this->assertEquals(0, count($hashtags));
+        $this->assertEquals(0, count($categories));
     }
     
-    public function test_Get_hashtags_from_NULL_hashtagsJSON()
+    public function test_Get_categories_from_NULL_categoriesJSON()
     {
         $question = new Question_Model();
 
-        $hashtags = $question->getHashtags();
+        $categories = $question->getCategories();
 
-        $this->assertEquals(0, count($hashtags));
+        $this->assertEquals(0, count($categories));
     }
 }

@@ -9,8 +9,8 @@
     <div class="width-full">
         <div class="color-secondary-dark-2">
             <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
-            <?= $this->translator->get('follow hashtag') ?>
-            <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['hashtag']['url'] ?>">#<?= $data['hashtag']['title'] ?></a>
+            <?= $this->translator->get('follow category') ?>
+            <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['category']['url'] ?>">#<?= $data['category']['title'] ?></a>
         </div>
         <span class="small color-secondary-light-1">
             <?= $activity['created_at__humanized'] ?>

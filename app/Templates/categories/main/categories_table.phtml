@@ -1,0 +1,23 @@
+
+<?php if (count($this->categories)): ?>
+    <!-- categories_table -->
+    <?php foreach ($this->categories as $category): ?>
+        <div class="my-4">
+            <a class="h3 color-secondary-dark-3 text-decoration-none" href="<?= $category->getURL($this->lang) ?>">
+                #<?= $category->title ?>
+            </a>
+            <div class="small mt-1 color-secondary-light-1">
+
+                <a rel="nofollow" href="#">
+                    Подписаться
+                </a>
+                <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
+                1 вопрос
+                <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
+                2 подписчика
+
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <!-- / categories_table -->
+<?php endif; ?>

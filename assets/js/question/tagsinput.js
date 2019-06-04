@@ -14,7 +14,7 @@ var commaKeyCode = 44;
 var enterKeyCode = 13;
 var spaceKeyCode = 32;
 
-$('#new_hashtags').tagsinput({
+$('#new_categories').tagsinput({
     trimValue: true,
     // itemValue: 'value',
     // itemText: 'text',
@@ -34,7 +34,7 @@ $('#new_hashtags').tagsinput({
 // var enterKeyCode = 13;
 // var spaceKeyCode = 32;
 
-// $('#new_hashtags').tagsinput({
+// $('#new_categories').tagsinput({
 //     trimValue: true,
 //     confirmKeys: [enterKeyCode, commaKeyCode]
 // });

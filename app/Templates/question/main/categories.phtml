@@ -1,0 +1,40 @@
+
+<?php if (count($this->question->getCategories())): ?>
+	<!-- categories -->
+	<div class="my-5" id="question_categories_list">
+		<div class="h4 mb-3">
+			<?= $this->translator->get('question', 'categories_block', 'title') ?>
+		</div>
+
+        <?php foreach ($this->question->getCategories() as $category): ?>
+            <a class="btn btn-outline-primary mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
+				#<?= $category->title ?>
+			</a>
+		<?php endforeach; ?>
+
+		<?php if ($this->authUser): ?>
+			<a class="btn btn-outline-secondary mb-2" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
+                <i class="fas fa-pen mr-1"></i></i>&nbsp;<?= $this->translator->get('question', 'categories_block', 'categories_change') ?>
+			</a>
+		<?php endif; ?>
+
+	</div>
+
+    <!-- / categories -->
+
+<?php else: ?>
+
+	<?php if ($this->authUser): ?>
+        <div class="my-5" id="question_categories_list">
+    		<div class="h4 mb-3">
+                <?= $this->translator->get('question', 'categories_block', 'title') ?>
+            </div>
+		
+			<a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>">
+                <i class="fas fa-plus mr-1"></i>
+                <?= $this->translator->get('question', 'categories_block', 'categories_add') ?>
+			</a>
+		</div>
+	<?php endif; ?>
+
+<?php endif; ?>

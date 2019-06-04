@@ -1,8 +1,8 @@
 <?php
 
-class Show_Hashtag_PageController__en__Test extends Abstract_Frontend_TestCase
+class Show_Category_PageController__en__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['en' => ['questions', 'hashtags', 'er_hashtags_questions', 'er_users_follow_hashtags']];
+    protected $setUpDB = ['en' => ['questions', 'categories', 'er_categories_questions', 'er_users_follow_categories']];
 
     public function test__ShowPage()
     {
@@ -16,7 +16,7 @@ class Show_Hashtag_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
         
-        $this->assertStringContainsString('Questions with hashtag #cashmere · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Questions with category #cashmere · Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

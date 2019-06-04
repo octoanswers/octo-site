@@ -9,7 +9,7 @@ class Question_Model extends Abstract_Model
     public $title; // string
     public $isRedirect = false; // bool
     public $answer; // Answer_Model
-    public $hashtagsJSON; // string
+    public $categoriesJSON; // string
     public $imageBaseName;
 
     #
@@ -33,8 +33,8 @@ class Question_Model extends Abstract_Model
         $question->title = (string) $state['q_title'];
         $question->isRedirect = (bool) $state['q_is_redirect'];
         $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
-        if (isset($state['a_hashtags'])) {
-            $question->hashtagsJSON = $state['a_hashtags'];
+        if (isset($state['a_categories'])) {
+            $question->categoriesJSON = $state['a_categories'];
         }
 
         $question->answer = Answer_Model::initWithDBState($state);
@@ -46,36 +46,36 @@ class Question_Model extends Abstract_Model
     # Get & Set
     #
 
-    public function getHashtags(): array
+    public function getCategories(): array
     {
-        $hashtags = [];
+        $categories = [];
 
-        if ($this->hashtagsJSON === null || strlen($this->hashtagsJSON) == 0) {
-            return $hashtags;
+        if ($this->categoriesJSON === null || strlen($this->categoriesJSON) == 0) {
+            return $categories;
         }
 
-        $hashtagsArray = json_decode($this->hashtagsJSON, JSON_UNESCAPED_UNICODE);
+        $categoriesArray = json_decode($this->categoriesJSON, JSON_UNESCAPED_UNICODE);
         
-        foreach ($hashtagsArray as $title) {
-            $hashtag = new Hashtag;
-            $hashtag->title = $title;
-            $hashtags[] = $hashtag;
+        foreach ($categoriesArray as $title) {
+            $category = new Category;
+            $category->title = $title;
+            $categories[] = $category;
         }
 
-        return $hashtags;
+        return $categories;
     }
 
-    public function setHashtags(array $hashtags)
+    public function setCategories(array $categories)
     {
-        $hashtagsArray = [];
+        $categoriesArray = [];
 
-        foreach ($hashtags as $hashtag) {
-            if (!is_a($hashtag, Hashtag::class)) {
-                throw new Exception("Hashtag must be subclass of Hashtag model", 1);
+        foreach ($categories as $category) {
+            if (!is_a($category, Category::class)) {
+                throw new Exception("Category must be subclass of Category model", 1);
             }
-            $hashtagsArray[] = $hashtag->title;
+            $categoriesArray[] = $category->title;
         }
 
-        $this->hashtagsJSON = json_encode($hashtagsArray, true);
+        $this->categoriesJSON = json_encode($categoriesArray, true);
     }
 }

@@ -10,15 +10,15 @@ class Feeds_Query extends Abstract_Query
         $user = (new User_Query())->userWithID($userID);
 
         $follows_users = (new UsersFollowUsers_Relations_Query($this->lang))->findUsersFollowedByUser($userID);
-        $follows_hashtags = (new UsersFollowHashtags_Relations_Query($this->lang))->findHashtagsFollowedByUser($userID);
+        $follows_categories = (new UsersFollowCategories_Relations_Query($this->lang))->findCategoriesFollowedByUser($userID);
         $follows_questions = (new UsersFollowQuestions_Relations_Query($this->lang))->findQuestionsFollowedByUser($userID);
 
         $where = [];
         if (count($follows_users)) {
             $where[] = '(u_id IN ('.implode(',', $follows_users).'))';
         }
-        if (count($follows_hashtags)) {
-            $where[] = '(h_id IN ('.implode(',', $follows_hashtags).'))';
+        if (count($follows_categories)) {
+            $where[] = '(h_id IN ('.implode(',', $follows_categories).'))';
         }
         if (count($follows_questions)) {
             $where[] = '(q_id IN ('.implode(',', $follows_questions).'))';

@@ -8,10 +8,10 @@
     </div>
     <div class="width-full">
         <div class="color-secondary-dark-2">
-            <?= $this->translator->get('hashtag added question') ?>:
+            <?= $this->translator->get('category added question') ?>:
             
-            <?php if (isset($data['hashtag'])): ?>
-                <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['hashtag']['url'] ?>"><?= $data['hashtag']['title'] ?></a>
+            <?php if (isset($data['category'])): ?>
+                <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['category']['url'] ?>"><?= $data['category']['title'] ?></a>
             <?php elseif (isset($data['topic'])): ?>
                 <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['topic']['url'] ?>"><?= $data['topic']['title'] ?></a>
             <?php endif; ?>

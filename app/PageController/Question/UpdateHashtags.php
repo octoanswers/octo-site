@@ -3,7 +3,7 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-class UpdateHashtags_Question_PageController extends Abstract_PageController
+class UpdateCategories_Question_PageController extends Abstract_PageController
 {
     protected $question;
 
@@ -20,15 +20,15 @@ class UpdateHashtags_Question_PageController extends Abstract_PageController
         }
 
         $titlesArray = [];
-        foreach ($this->question->getHashtags() as $hashtag) {
-            $titlesArray[] = $hashtag->title;
+        foreach ($this->question->getCategories() as $category) {
+            $titlesArray[] = $category->title;
         }
         
-        $this->hashtags_string = $this->question->getHashtags() ? implode(", ", $titlesArray) : '';
+        $this->categories_string = $this->question->getCategories() ? implode(", ", $titlesArray) : '';
 
-        $this->template = 'question_update_hashtags';
-        $this->pageTitle = str_replace("%question%", $this->question->title, $this->translator->get('Update hashtags for question "%question%" - Answeropedia'));
-        $this->pageDescription = str_replace("%question%", $this->question->title, $this->translator->get('Update hashtags for question "%question%"'));
+        $this->template = 'question_update_categories';
+        $this->pageTitle = str_replace("%question%", $this->question->title, $this->translator->get('Update categories for question "%question%" - Answeropedia'));
+        $this->pageDescription = str_replace("%question%", $this->question->title, $this->translator->get('Update categories for question "%question%"'));
 
         $this->includeCSS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.css';
 

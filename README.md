@@ -10,8 +10,8 @@ Currently, Answeropedia is launched only in [Russian](https://answeropedia.org/r
 
 + Asking and answering questions (wow!)
 + Community edited :pencil2: wiki-answers (Markdown syntax) 
-+ Categorization by hashtags :ledger:
-+ User, hashtag and question subscriptions :love_letter:
++ Categorization by categories :ledger:
++ User, category and question subscriptions :love_letter:
 + Email notifications and personal news feeds :herb:
 + Anonymous :sunglasses: questions 
 + SEO friendly (neat URLs) :tada:

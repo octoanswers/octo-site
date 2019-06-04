@@ -2,29 +2,29 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Query_ER_HashtagsQuestions__findNewestForhashtagWithID__per_page__Test extends TestCase
+class Query_ER_CategoriesQuestions__findNewestForcategoryWithID__per_page__Test extends TestCase
 {
     public function test_PerPageParamEqualZero_ThrowException()
     {
         $this->expectExceptionMessage('Questions list perPage param 0 must be greater than or equal to 5');
-        $ERs = (new HashtagsToQuestions_Relations_Query('ru'))->findNewestForhashtagWithID(13, 1, 0);
+        $ERs = (new CategoriesToQuestions_Relations_Query('ru'))->findNewestForcategoryWithID(13, 1, 0);
     }
 
     public function test_PerPageParamBelowZero_ThrowException()
     {
         $this->expectExceptionMessage('Questions list perPage param -1 must be greater than or equal to 5');
-        $ERs = (new HashtagsToQuestions_Relations_Query('ru'))->findNewestForhashtagWithID(13, 1, -1);
+        $ERs = (new CategoriesToQuestions_Relations_Query('ru'))->findNewestForcategoryWithID(13, 1, -1);
     }
 
     public function test_PerPageParamBelowMinValue_ThrowException()
     {
         $this->expectExceptionMessage('Questions list perPage param 4 must be greater than or equal to 5');
-        $ERs = (new HashtagsToQuestions_Relations_Query('ru'))->findNewestForhashtagWithID(13, 1, 4);
+        $ERs = (new CategoriesToQuestions_Relations_Query('ru'))->findNewestForcategoryWithID(13, 1, 4);
     }
 
     public function test_PerPageParamGreaterThan100_ThrowException()
     {
         $this->expectExceptionMessage('Questions list perPage param 101 must be less than or equal to 100');
-        $ERs = (new HashtagsToQuestions_Relations_Query('ru'))->findNewestForhashtagWithID(13, 1, 101);
+        $ERs = (new CategoriesToQuestions_Relations_Query('ru'))->findNewestForcategoryWithID(13, 1, 101);
     }
 }

@@ -1,23 +1,23 @@
 <?php
 
-class UserFollowHashtag_Relation_Validator__validateNew__Test extends PHPUnit\Framework\TestCase
+class UserFollowCategory_Relation_Validator__validateNew__Test extends PHPUnit\Framework\TestCase
 {
     public function test__FullParams__OK()
     {
-        $relation = new UserFollowHashtag_Relation_Model();
+        $relation = new UserFollowCategory_Relation_Model();
         $relation->userID = 3;
-        $relation->hashtagID = 9;
+        $relation->categoryID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, UserFollowHashtag_Relation_Validator::validateNew($relation));
+        $this->assertEquals(true, UserFollowCategory_Relation_Validator::validateNew($relation));
     }
 
     public function test__MinParams__OK()
     {
-        $relation = new UserFollowHashtag_Relation_Model();
+        $relation = new UserFollowCategory_Relation_Model();
         $relation->userID = 3;
-        $relation->hashtagID = 9;
+        $relation->categoryID = 9;
 
-        $this->assertEquals(true, UserFollowHashtag_Relation_Validator::validateNew($relation));
+        $this->assertEquals(true, UserFollowCategory_Relation_Validator::validateNew($relation));
     }
 }

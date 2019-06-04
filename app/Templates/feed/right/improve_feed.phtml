@@ -46,15 +46,15 @@
         </div>
 
         <div class="my-3">
-            <?php if ($this->isShowHashtagsFollowLure): ?>
-                <a class="color-secondary-dark-3 text-decoration-none" href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-                    <?= $this->translator->get('Follow 3 more hashtags') ?>
+            <?php if ($this->isShowCategoriesFollowLure): ?>
+                <a class="color-secondary-dark-3 text-decoration-none" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>">
+                    <?= $this->translator->get('Follow 3 more categories') ?>
                 </a>
             <?php else: ?>
                 <i class="fas fa-check color-success"></i>
                 <span class="color-secondary-dark-1">
                     <s>
-                        <?= $this->translator->get('Follow 3 more hashtags') ?>
+                        <?= $this->translator->get('Follow 3 more categories') ?>
                     </s>
                 </span>
             <?php endif; ?>

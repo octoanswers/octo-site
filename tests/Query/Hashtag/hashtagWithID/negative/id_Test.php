@@ -2,17 +2,17 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Hashtag_Query__hashtagWithID__hashtagID__Test extends TestCase
+class Category_Query__categoryWithID__categoryID__Test extends TestCase
 {
-    public function test_HashtagIDEqualZero_ThrowsException()
+    public function test_CategoryIDEqualZero_ThrowsException()
     {
-        $this->expectExceptionMessage('Hashtag id param 0 must be greater than or equal to 1');
-        $question = (new Hashtag_Query('ru'))->hashtagWithID(0);
+        $this->expectExceptionMessage('Category id param 0 must be greater than or equal to 1');
+        $question = (new Category_Query('ru'))->categoryWithID(0);
     }
 
-    public function test_HashtagIDNegative_ThrowsException()
+    public function test_CategoryIDNegative_ThrowsException()
     {
-        $this->expectExceptionMessage('Hashtag id param -1 must be greater than or equal to 1');
-        $question = (new Hashtag_Query('ru'))->hashtagWithID(-1);
+        $this->expectExceptionMessage('Category id param -1 must be greater than or equal to 1');
+        $question = (new Category_Query('ru'))->categoryWithID(-1);
     }
 }

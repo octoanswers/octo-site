@@ -1,8 +1,8 @@
 <?php
 
-class Show_Hashtag_PageController__ru__Test extends Abstract_Frontend_TestCase
+class Show_Category_PageController__ru__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'hashtags', 'er_hashtags_questions', 'er_users_follow_hashtags']];
+    protected $setUpDB = ['ru' => ['questions', 'categories', 'er_categories_questions', 'er_users_follow_categories']];
 
     public function test__ShowPage()
     {

@@ -1,0 +1,17 @@
+<?php if ($this->list == 'categories'&& count($this->categories)): ?>
+    <?php foreach ($this->categories as $category): ?>
+        <div class="mt-5">
+            <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
+                <a class="link-inverted text-decoration-none lead" href="<?= $category->getURL($this->lang) ?>"><?= $category->title ?></a>
+                <div>
+                    <span class="text-muted">
+                        X вопросов
+                    </span>
+                </div>
+            </div>
+            <span class="text-muted float-right">
+                    22 декабря 2016 <!-- $category->answer->getHumanizedUpdatedAt() -->
+            </span>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>

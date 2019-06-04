@@ -30,9 +30,9 @@ trait Question_URL_Trait
 
     // Some actions
 
-    public function getUpdateHashtagsURL(string $lang): string
+    public function getUpdateCategoriesURL(string $lang): string
     {
-        return SITE_URL.'/'.$lang.'/question/'.$this->id.'/hashtags';
+        return SITE_URL.'/'.$lang.'/question/'.$this->id.'/categories';
     }
 
     public function getHistoryURL(string $lang): string

@@ -3,8 +3,8 @@
 class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
-        'en' => ['questions', 'revisions', 'hashtags'],
-        'ru' => ['questions', 'revisions', 'hashtags'],
+        'en' => ['questions', 'revisions', 'categories'],
+        'ru' => ['questions', 'revisions', 'categories'],
         'users' => ['users']
     ];
 

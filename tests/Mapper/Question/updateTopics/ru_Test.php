@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Question__updateHashtags__ru_Test extends Abstract_DB_TestCase
+class Mapper_Question__updateCategories__ru_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 
@@ -8,34 +8,34 @@ class Mapper_Question__updateHashtags__ru_Test extends Abstract_DB_TestCase
     {
         $question = new Question_Model();
         $question->id = 13;
-        $question->hashtagsJSON = '["iPhone8", "Apple"]';
+        $question->categoriesJSON = '["iPhone8", "Apple"]';
 
-        $question = (new Question_Mapper('ru'))->updateHashtags($question);
+        $question = (new Question_Mapper('ru'))->updateCategories($question);
 
         $this->assertEquals(13, $question->id);
-        $this->assertEquals(2, count($question->getHashtags()));
+        $this->assertEquals(2, count($question->getCategories()));
     }
 
     public function test__EmptyArray()
     {
         $question = new Question_Model();
         $question->id = 13;
-        $question->setHashtags([]);
+        $question->setCategories([]);
 
-        $question = (new Question_Mapper('ru'))->updateHashtags($question);
+        $question = (new Question_Mapper('ru'))->updateCategories($question);
 
         $this->assertEquals(13, $question->id);
-        $this->assertEquals(0, count($question->getHashtags()));
+        $this->assertEquals(0, count($question->getCategories()));
     }
 
-    public function test__HashtagsNotSet()
+    public function test__CategoriesNotSet()
     {
         $question = new Question_Model();
         $question->id = 13;
 
-        $question = (new Question_Mapper('ru'))->updateHashtags($question);
+        $question = (new Question_Mapper('ru'))->updateCategories($question);
 
         $this->assertEquals(13, $question->id);
-        $this->assertEquals(0, count($question->getHashtags()));
+        $this->assertEquals(0, count($question->getCategories()));
     }
 }

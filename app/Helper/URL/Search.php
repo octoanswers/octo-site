@@ -9,11 +9,11 @@ class Search_URL_Helper
         return SITE_URL.'/'.$lang.'/search?list=questions'.$postfix;
     }
 
-    public static function getSearchHashtagsURL(string $lang, string $query = ''): string
+    public static function getSearchCategoriesURL(string $lang, string $query = ''): string
     {
         $postfix = $query != '' ? '&q='.$query : '';
 
-        return SITE_URL.'/'.$lang.'/search?list=hashtags'.$postfix;
+        return SITE_URL.'/'.$lang.'/search?list=categories'.$postfix;
     }
 
     public static function getSearchUsersURL(string $lang, string $query = ''): string

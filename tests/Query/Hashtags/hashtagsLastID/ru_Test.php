@@ -1,12 +1,12 @@
 <?php
 
-class Hashtags_Query__hashtagsLastID_base_Test extends Abstract_DB_TestCase
+class Categories_Query__categoriesLastID_base_Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['hashtags']];
+    protected $setUpDB = ['ru' => ['categories']];
 
     public function test_base()
     {
-        $actualResponse = (new Hashtags_Query('ru'))->hashtagsLastID();
+        $actualResponse = (new Categories_Query('ru'))->categoriesLastID();
         $this->assertEquals(17, $actualResponse);
     }
 }

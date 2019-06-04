@@ -1,29 +1,29 @@
 <?php
 
-class Query_Search_searchHashtags_base_Test extends Abstract_DB_TestCase
+class Query_Search_searchCategories_base_Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['hashtags']];
+    protected $setUpDB = ['ru' => ['categories']];
 
     public function test_SearchWithTwoResults_Ok()
     {
-        $hashtags = (new Search_Query('ru'))->searchHashtags('фото');
+        $categories = (new Search_Query('ru'))->searchCategories('фото');
 
-        $this->assertEquals(2, count($hashtags));
+        $this->assertEquals(2, count($categories));
 
-        $this->assertEquals(16, $hashtags[0]->id);
-        $this->assertEquals('фотография', $hashtags[0]->title);
+        $this->assertEquals(16, $categories[0]->id);
+        $this->assertEquals('фотография', $categories[0]->title);
 
-        $this->assertEquals(17, $hashtags[1]->id);
-        $this->assertEquals('фотосинтез', $hashtags[1]->title);
+        $this->assertEquals(17, $categories[1]->id);
+        $this->assertEquals('фотосинтез', $categories[1]->title);
     }
 
     public function test_One_letter_search()
     {
-        $hashtags = (new Search_Query('ru'))->searchHashtags('а');
+        $categories = (new Search_Query('ru'))->searchCategories('а');
 
-        $this->assertEquals(10, count($hashtags));
+        $this->assertEquals(10, count($categories));
 
-        $this->assertEquals(1, $hashtags[0]->id);
-        $this->assertEquals('Русская литература', $hashtags[0]->title);
+        $this->assertEquals(1, $categories[0]->id);
+        $this->assertEquals('Русская литература', $categories[0]->title);
     }
 }

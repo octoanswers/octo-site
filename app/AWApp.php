@@ -42,7 +42,7 @@ class AWApp
             $this->get('/search/categories.json', 'SearchCategories_GET_APIController:handle');
             
             // DELETE
-            $this->delete('/hashtags/{id}/follow.json', 'HashtagsIDFollow_DELETE_APIController:handle');
+            $this->delete('/categories/{id}/follow.json', 'CategoriesIDFollow_DELETE_APIController:handle');
             $this->delete('/questions/{id}/follow.json', 'QuestionsIDFollow_DELETE_APIController:handle');
             $this->delete('/questions/{id}/subscribe.json', 'QuestionsIDSubscribe_DELETE_APIController:handle');
             $this->delete('/users/{id}/follow.json', 'UsersIDFollow_DELETE_APIController:handle');
@@ -55,7 +55,7 @@ class AWApp
 
             // POST
             $this->post('/avatar.json', 'Avatar_POST_APIController:handle');
-            $this->post('/hashtags/{id}/follow.json', 'HashtagsIDFollow_POST_APIController:handle');
+            $this->post('/categories/{id}/follow.json', 'CategoriesIDFollow_POST_APIController:handle');
             $this->post('/login.json', 'Login_POST_APIController:handle');
             $this->post('/logout.json', 'Logout_POST_APIController:handle');
             $this->post('/questions.json', 'Questions_POST_APIController:handle');
@@ -68,7 +68,7 @@ class AWApp
             //PUT
             $this->put('/answers/{id}.json', 'AnswersID_PUT_APIController:handle');
             $this->put('/questions/{id}.json', 'QuestionsID_PUT_APIController:handle');
-            $this->put('/questions/{id}/hashtags.json', 'Hashtags_ID_Questions_PUT_APIController:handle');
+            $this->put('/questions/{id}/categories.json', 'Categories_ID_Questions_PUT_APIController:handle');
         });
 
         # Publuc URI`s
@@ -79,16 +79,16 @@ class AWApp
             $this->get('/answer/{id}/history', 'History_Answer_PageController:handle');
             $this->get('/feed', 'Show_Feed_PageController:handle');
             $this->get('/flow', 'Show_Flow_PageController:handle');
-            $this->get('/tag/{uri}', 'Show_Hashtag_PageController:handle');
-            $this->get('/hashtags/newest', 'Newest_Hashtags_PageController:handle');
-            // @NOTE To realize $this->get('/hashtags/popular', 'List_Hashtags_PageController:handle');
-            $this->get('/question/{id}/hashtags', 'UpdateHashtags_Question_PageController:handle');
+            $this->get('/tag/{uri}', 'Show_Category_PageController:handle');
+            $this->get('/categories/newest', 'Newest_Categories_PageController:handle');
+            // @NOTE To realize $this->get('/categories/popular', 'List_Categories_PageController:handle');
+            $this->get('/question/{id}/categories', 'UpdateCategories_Question_PageController:handle');
             $this->get('/questions/newest', 'Newest_Questions_PageController:handle');
             $this->get('/questions/recently-updated', 'RecentlyUpdated_Questions_PageController:handle');
             $this->get('/random-question', 'Random_Question_PageController:handle');
             $this->get('/sandbox/all', 'All_Sandbox_PageController:handle');
             $this->get('/sandbox/without-answers', 'WithoutAnswers_Sandbox_PageController:handle');
-            $this->get('/sandbox/without-hashtags', 'WithoutHashtags_Sandbox_PageController:handle');
+            $this->get('/sandbox/without-categories', 'WithoutCategories_Sandbox_PageController:handle');
             $this->get('/search', 'Show_Search_PageController:handle');
             $this->get('/settings', 'Show_Settings_PageController:handle');
             $this->get('/sitemap.xml', 'Lang_SitemapXML_PageController:handle');

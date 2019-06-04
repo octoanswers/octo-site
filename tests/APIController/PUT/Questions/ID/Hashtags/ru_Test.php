@@ -1,13 +1,13 @@
 <?php
 
-class Hashtags_ID_Questions_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
+class Categories_ID_Questions_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'hashtags', 'activities', 'er_hashtags_questions'], 'users' => ['users']];
+    protected $setUpDB = ['ru' => ['questions', 'categories', 'activities', 'er_categories_questions'], 'users' => ['users']];
 
-    public function test_Add_one_hashtag()
+    public function test_Add_one_category()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_hashtags='.urlencode('Медицина,Гинекология');
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/4/hashtags.json', $query_string, true);
+        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_categories='.urlencode('Медицина,Гинекология');
+        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/4/categories.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -23,10 +23,10 @@ class Hashtags_ID_Questions_PUT_APIController__ru__Test extends Abstract_Fronten
                 'title' => 'Чем занимается гинеколог?',
                 'url' => 'https://answeropedia.org/ru/%D0%A7%D0%B5%D0%BC_%D0%B7%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D1%82%D1%81%D1%8F_%D0%B3%D0%B8%D0%BD%D0%B5%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3'
             ],
-            'old_hashtags' => [
+            'old_categories' => [
                 'медицина'
             ],
-            'new_hashtags' => [
+            'new_categories' => [
                 'Медицина', 'Гинекология'
             ]
         ];
@@ -41,13 +41,13 @@ class Hashtags_ID_Questions_PUT_APIController__ru__Test extends Abstract_Fronten
         $question = (new Question_Query('ru'))->questionWithID(4);
 
         $this->assertEquals(4, $question->id);
-        $this->assertEquals(2, count($question->getHashtags()));
+        $this->assertEquals(2, count($question->getCategories()));
     }
 
-    public function test__HashtagsParamNotSet()
+    public function test__CategoriesParamNotSet()
     {
         $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/7/hashtags.json', $query_string, true);
+        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/7/categories.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -56,7 +56,7 @@ class Hashtags_ID_Questions_PUT_APIController__ru__Test extends Abstract_Fronten
 
         $expectedResponse = [
             'error_code' => 0,
-            'error_message' => 'Hashtags param not set'
+            'error_message' => 'Categories param not set'
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

@@ -1,7 +1,7 @@
 <?php
 
 $pdo->query(
-    "INSERT INTO questions (q_id, q_title, q_is_redirect, q_image_base_name, a_text, a_hashtags, a_len, a_updated_at) VALUES
+    "INSERT INTO questions (q_id, q_title, q_is_redirect, q_image_base_name, a_text, a_categories, a_len, a_updated_at) VALUES
     (1, 'Night rain is cold?', 0, NULL, 'Yes, colder than day rain.', NULL, 23, '2015-11-29 09:28:34'),
     (2, 'How to sell francise?', 0, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),
     (3, 'What is a best pizza?', 0, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),

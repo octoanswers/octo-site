@@ -32,19 +32,19 @@
         "support": "Support",
         "users": "Users"
     },
-    "hashtag": {
-        "page_title": "Questions with hashtag"
+    "category": {
+        "page_title": "Questions with category"
     },
-    "hashtags": {
-        "search_placeholder": "Search hashtags",
-        "title": "Hashtags"
+    "categories": {
+        "search_placeholder": "Search categories",
+        "title": "Categories"
     },
     "internal_server_error": {
         "page_title": "Error 500"
     },
     "main": {
         "how_it_works": {
-            "step_1": "You ask a question about any hashtag of interest to you",
+            "step_1": "You ask a question about any category of interest to you",
             "step_2": "We find a specialist who can give a competent answer",
             "step_3": "You receive an answer to the email",
             "title": "How it works?"
@@ -86,7 +86,7 @@
         "about_answeropedia": "About&nbsp;project",
         "btn_ask": "Ask a question",
         "flow": "Flow",
-        "hashtags": "Hashtags",
+        "categories": "Categories",
         "login": "Login",
         "questions": "Questions",
         "recent_changes": "Recent&nbsp;changes",
@@ -96,10 +96,10 @@
     },
     "page": "Page",
     "question": {
-        "block__hashtags": {
-            "hashtags_add": "Add hashtags",
-            "hashtags_change": "Change",
-            "title": "Hashtags"
+        "block__categories": {
+            "categories_add": "Add categories",
+            "categories_change": "Change",
+            "title": "Categories"
         },
         "block__related_questions": {
             "title": "Related questions"
@@ -116,7 +116,7 @@
         "about": {
             "btn_action": "Join the community",
             "msg_1": "The sandbox is a place to get new questions that have not yet been answered.",
-            "msg_2": "As soon as the question has a comprehensive answer and several hashtags, it is transferred to the main list.",
+            "msg_2": "As soon as the question has a comprehensive answer and several categories, it is transferred to the main list.",
             "now_in_the_sandbox": "now in the sandbox",
             "title": "What is a «sandbox»?"
         },
@@ -146,7 +146,7 @@
     "sidebar__main_nav": {
         "about_site": "About site",
         "feed": "Feed",
-        "hashtags": "Popular hashtags",
+        "categories": "Popular categories",
         "main_page": "Main page",
         "random_question": "Random question",
         "recent_changes": "Recent changes",

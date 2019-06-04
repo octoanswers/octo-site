@@ -24,7 +24,7 @@
     "Find your first friends": "Найдите первых друзей",
     "Find your friends": "Найдите друзей",
     "Follow": "Подписаться",
-    "Follow 3 more hashtags": "Подпишитесь на три темы",
+    "Follow 3 more categories": "Подпишитесь на три темы",
     "Follow some questions": "Следуйте за некоторыми вопросами",
     "Follow your first question": "Подпишитесь на первый вопрос",
     "Followed": "Подписан",
@@ -33,56 +33,56 @@
     "It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
     "Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
     "More questions": "Больше вопросов",
-    "New hashtags": "Новые хештеги",
+    "New categories": "Новые хештеги",
     "New users from around the world": "Новые пользователи со всего мира",
     "Newest questions": "Новые вопросы",
     "No description of changes": "Нет описания изменений",
-    "No hashtag found for \"%query%\"": "Не удалось найти хештеги по запросу «%query%»",
-    "No hashtags found": "Хештегов не найдено",
+    "No category found for \"%query%\"": "Не удалось найти хештеги по запросу «%query%»",
+    "No categories found": "Хештегов не найдено",
     "No questions found": "Вопросов не найдено",
     "No users found": "Пользователей не найдено",
     "On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
     "On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
-    "Questions with hashtag": "Вопросы c хештегом",
+    "Questions with category": "Вопросы c хештегом",
     "Questions without answers": "Вопросы без ответа",
     "Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
     "Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
     "Rename question": "Переименовать вопрос",
     "Report": "Пожаловаться",
     "Save": "Сохранить",
-    "Search hashtags": "Поиск тем",
+    "Search categories": "Поиск тем",
     "Search in DuckDuckGo": "Поискать в DuckDuckGo",
     "Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.": "Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут появляться у вас в ленте новостей.",
     "Set real name": "Введите реальное имя",
     "Set signature": "Придумайте подпись",
     "Share link": "Поделиться ссылкой",
-    "Subscribe to several hashtags": "Подпишитесь на несколько хештегов",
+    "Subscribe to several categories": "Подпишитесь на несколько хештегов",
     "Subscription to the question": "Подписка на вопрос",
     "Thanks for the feedback!": "Спасибо за отзыв!",
     "Tools": "Инструменты",
     "Top contributors": "Топ авторов",
     "Unfollow": "Отписаться",
     "Update picture": "Обновить картинку",
-    "View all hashtags": "Посмотреть все хештеги",
+    "View all categories": "Посмотреть все хештеги",
     "View all questions": "Посмотреть все вопросы",
     "View all users": "Посмотреть всех пользователей",
-    "View popular hashtags": "Посмотреть популярные хештеги",
+    "View popular categories": "Посмотреть популярные хештеги",
     "View questions in the sandbox": "Посмотреть вопросы в песочнице",
     "View users": "Посмотреть пользователей",
     "Views a questions": "Посмотреть вопросы",
     "Visit your feed": "Посетите ленту",
     "Wiki-answers on Answeropedia": "Вики-ответы на Answeropedia",
-    "Without hashtags": "Без тем",
+    "Without categories": "Без тем",
     "Write first answer": "Написать первый ответ",
     "Write the first answer": "Напишите первый ответ",
     "Your email": "Ваш email",
     "activity": {
         "change answer": "обновил ответ",
         "change signature": "поменял подпись",
-        "follow hashtag": "подписался на хештег",
+        "follow category": "подписался на хештег",
         "follow question": "подписался на вопрос",
         "follow user": "подписался на пользователя",
-        "hashtag added question": "хештег вопрос",
+        "category added question": "хештег вопрос",
         "question renamed": "вопрос переименован",
         "question updated answer": "обновлен ответ",
         "renamed question": "переименовал вопрос"
@@ -126,11 +126,11 @@
         "support": "Поддержка",
         "users": "Пользователи"
     },
-    "hashtag": {
-        "More hashtags": "Больше тем",
+    "category": {
+        "More categories": "Больше тем",
         "page_title": "Вопросы с хэштегом"
     },
-    "hashtags": {
+    "categories": {
         "search_placeholder": "Поиск хештегов",
         "title": "Хештеги"
     },
@@ -193,7 +193,7 @@
         "about_answeropedia": "О&nbsp;проекте",
         "btn_ask": "Задать вопрос",
         "flow": "Свежие&nbsp;правки",
-        "hashtags": "Хештеги",
+        "categories": "Хештеги",
         "login": "Вход",
         "recent_changes": "Последние&nbsp;правки",
         "saarch_placeholder": "Какой у вас вопрос?",
@@ -212,20 +212,20 @@
         "block__related_questions": {
             "title": "Похожие вопросы"
         },
-        "hashtags": "Хештеги",
-        "hashtags_block": {
-            "hashtags_add": "Добавить хештег",
-            "hashtags_change": "Изменить",
+        "categories": "Хештеги",
+        "categories_block": {
+            "categories_add": "Добавить хештег",
+            "categories_change": "Изменить",
             "title": "Хештеги"
         },
         "lure_be_first_contributor": {
             "Be the first author": "Станьте первым автором",
-            "Still no one tried to write an answer to this question. Be the first if the hashtag of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
+            "Still no one tried to write an answer to this question. Be the first if the category of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
         },
         "redirected_from": "Перенаправлено с вопроса: ",
         "user_contribution": "Вклад пользователя"
     },
-    "question_update_hashtags": {
+    "question_update_categories": {
         "page_title": "",
         "title": "Редактирование хештегов"
     },
@@ -272,7 +272,7 @@
         "page_title": "Поиск"
     },
     "search__filter": {
-        "hashtags": "Хештеги",
+        "categories": "Хештеги",
         "questions": "Вопросы",
         "users": "Пользователи"
     },
@@ -298,7 +298,7 @@
         "about_site": "О сайте",
         "feed": "Подписки",
         "main_page": "Главная страница",
-        "popular_hashtags": "Хештеги",
+        "popular_categories": "Хештеги",
         "random_question": "Случайный вопрос",
         "recent_changes": "Свежие правки",
         "sandbox": "Песочница"
@@ -315,9 +315,9 @@
         }
     },
     "title": "Перевод заголовка",
-    "update_hashtags": {
-        "Update hashtags for question \"%question%\"": "Обновление тем вопроса «%question%»",
-        "Update hashtags for question \"%question%\" - Answeropedia": "Обновление тем вопроса «%question%» - Answeropedia"
+    "update_categories": {
+        "Update categories for question \"%question%\"": "Обновление тем вопроса «%question%»",
+        "Update categories for question \"%question%\" - Answeropedia": "Обновление тем вопроса «%question%» - Answeropedia"
     },
     "user": {
         "Knows about": "Знает о",

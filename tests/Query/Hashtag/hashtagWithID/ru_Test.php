@@ -1,14 +1,14 @@
 <?php
 
-class Hashtag_Query__hashtagWithID__ru__Test extends Abstract_DB_TestCase
+class Category_Query__categoryWithID__ru__Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['hashtags']];
+    protected $setUpDB = ['ru' => ['categories']];
 
-    public function test_CorrectHashtagID_ReturnHashtagObj()
+    public function test_CorrectCategoryID_ReturnCategoryObj()
     {
-        $hashtag = (new Hashtag_Query('ru'))->hashtagWithID(6);
+        $category = (new Category_Query('ru'))->categoryWithID(6);
 
-        $this->assertEquals(6, $hashtag->id);
-        $this->assertEquals('автоспорт', $hashtag->title);
+        $this->assertEquals(6, $category->id);
+        $this->assertEquals('автоспорт', $category->title);
     }
 }

@@ -1,21 +1,21 @@
 
-<?php if ($this->isShowHashtagsFollowLure): ?>
-    <!-- lure follow_3_hashtags -->
+<?php if ($this->isShowCategoriesFollowLure): ?>
+    <!-- lure follow_3_categories -->
     <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
         <div class="mr-3 d-none d-sm-block">
             <i class="fas fa-check"></i>
         </div>
         <div class="width-full">
             <div class="color-secondary-dark-4 font-weight-bold mb-2">
-                <?= $this->translator->get('Subscribe to several hashtags') ?>
+                <?= $this->translator->get('Subscribe to several categories') ?>
             </div>
             <div class="small color-secondary-dark-2 mb-3">
                 <?= $this->translator->get('Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.') ?>
             </div>
-            <a  class="btn btn-sm btn-outline-primary" href="<?= Hashtags_URL_Helper::getNewestURL($this->lang) ?>">
-                <?= $this->translator->get('View popular hashtags') ?>
+            <a  class="btn btn-sm btn-outline-primary" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>">
+                <?= $this->translator->get('View popular categories') ?>
             </a>
         </div>
     </div>
-    <!-- / lure follow_3_hashtags -->
+    <!-- / lure follow_3_categories -->
 <?php endif; ?>

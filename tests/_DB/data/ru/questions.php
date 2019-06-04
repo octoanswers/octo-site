@@ -1,7 +1,7 @@
 <?php
 
 $pdo->query(
-    "INSERT INTO questions (q_id, q_title, q_is_redirect, q_image_base_name, a_text, a_hashtags, a_len, a_updated_at) VALUES
+    "INSERT INTO questions (q_id, q_title, q_is_redirect, q_image_base_name, a_text, a_categories, a_len, a_updated_at) VALUES
     (1, 'Какой бывает дождь?', 0, NULL, 'Он бывает разных типов.', NULL, 23, '2015-11-29 09:28:34'),
     (2, 'Как продать франшизу?', 0, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),
     (3, 'Какие купить духи?', 0, NULL, NULL, NULL, 0, '2015-11-29 09:28:34'),

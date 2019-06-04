@@ -2,17 +2,17 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Hashtag_Query__findWithTitle__questionTitle__Test extends TestCase
+class Category_Query__findWithTitle__questionTitle__Test extends TestCase
 {
-    public function test_HashtagURIIsEmpty_ThrowsException()
+    public function test_CategoryURIIsEmpty_ThrowsException()
     {
-        $this->expectExceptionMessage('Hashtag title param "" must have a length between 2 and 127');
-        $question = (new Hashtag_Query('ru'))->findWithTitle('');
+        $this->expectExceptionMessage('Category title param "" must have a length between 2 and 127');
+        $question = (new Category_Query('ru'))->findWithTitle('');
     }
 
-    public function test_HashtagURITooShort_ThrowsException()
+    public function test_CategoryURITooShort_ThrowsException()
     {
-        $this->expectExceptionMessage('Hashtag title param "x" must have a length between 2 and 127');
-        $question = (new Hashtag_Query('ru'))->findWithTitle('x');
+        $this->expectExceptionMessage('Category title param "x" must have a length between 2 and 127');
+        $question = (new Category_Query('ru'))->findWithTitle('x');
     }
 }

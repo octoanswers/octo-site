@@ -1,0 +1,20 @@
+
+<!-- categories_top -->
+<div>
+	<?php if (count($this->question->getCategories())): ?>
+
+		<?php foreach ($this->question->getFirstTwoCategories() as $category): ?>
+			<a class="text-decoration-none mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
+				#<?= $category->title ?>
+			</a>
+		<?php endforeach; ?>
+
+        <?php if ($this->question->getMoreCategoriesCount()): ?>
+            <a class="btn btn-outline-secondary btn-sm" data-scroll href="#question_categories_list">
+                +<?= $this->question->getMoreCategoriesCount() ?> #
+            </a>
+		<?php endif; ?>
+
+	<?php endif; ?>
+</div>
+<!-- / categories_top -->

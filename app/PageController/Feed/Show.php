@@ -33,8 +33,8 @@ class Show_Feed_PageController extends Abstract_PageController
         $follows_users = (new UsersFollowUsers_Relations_Query($this->lang))->findUsersFollowedByUser($userID);
         $this->isShowUsersFollowLure = (count($follows_users) < 3);
 
-        $follows_hashtags = (new UsersFollowHashtags_Relations_Query($this->lang))->findHashtagsFollowedByUser($userID);
-        $this->isShowHashtagsFollowLure = (count($follows_hashtags) < 3);
+        $follows_categories = (new UsersFollowCategories_Relations_Query($this->lang))->findCategoriesFollowedByUser($userID);
+        $this->isShowCategoriesFollowLure = (count($follows_categories) < 3);
 
         $follows_questions = (new UsersFollowQuestions_Relations_Query($this->lang))->findQuestionsFollowedByUser($userID);
         $this->isShowQuestionsFollowLure = (count($follows_questions) < 3);

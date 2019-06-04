@@ -10,12 +10,12 @@ class Mapper_Activity_UFH__create__Test extends Abstract_DB_TestCase
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $hashtag = Hashtag::initWithTitle('tag10');
+        $category = Category::initWithTitle('tag10');
 
         $activity = new Activity_Model();
         $activity->type = Activity_Model::F_U_FOLLOW_H;
         $activity->subject = $user;
-        $activity->data = $hashtag;
+        $activity->data = $category;
 
         $activity = (new UFollowH_Activity_Mapper('ru'))->create($activity);
 

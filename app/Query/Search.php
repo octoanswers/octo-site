@@ -39,7 +39,7 @@ class Search_Query extends Abstract_Query
         return $questions;
     }
 
-    public function searchHashtags(string $query, int $page = 1, int $perPage = 10): array
+    public function searchCategories(string $query, int $page = 1, int $perPage = 10): array
     {
         try {
             v::stringType()->length(1, 32, true)->assert($query);
@@ -52,7 +52,7 @@ class Search_Query extends Abstract_Query
 
         $id_offset = 0;
 
-        $sql = "SELECT * FROM hashtags WHERE (h_title LIKE '%".$query."%') LIMIT :id_offset, :per_page";
+        $sql = "SELECT * FROM categories WHERE (h_title LIKE '%".$query."%') LIMIT :id_offset, :per_page";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id_offset', $id_offset, PDO::PARAM_INT);
@@ -63,12 +63,12 @@ class Search_Query extends Abstract_Query
         }
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $hashtags = [];
+        $categories = [];
         foreach ($rows as $row) {
-            $hashtags[] = Hashtag::initWithDBState($row);
+            $categories[] = Category::initWithDBState($row);
         }
 
-        return $hashtags;
+        return $categories;
     }
 
     public function searchUsers(string $query, int $page = 1, int $perPage = 10): array

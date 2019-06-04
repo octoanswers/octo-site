@@ -3,7 +3,7 @@
 class Show_Search_PageController extends Abstract_PageController
 {
     const LIST_QUESTIONS = 'questions';
-    const LIST_HASHTAGS = 'hashtags';
+    const LIST_CATEGORIES = 'categories';
     const LIST_USERS = 'users';
 
     const QUESTIONS_PER_PAGE = 10;
@@ -36,8 +36,8 @@ class Show_Search_PageController extends Abstract_PageController
 
     private function _getSearchResults(): void
     {
-        if ($this->list == self::LIST_HASHTAGS) {
-            $this->hashtags = $this->query ? (new Search_Query($this->lang))->searchHashtags($this->query) : [];
+        if ($this->list == self::LIST_CATEGORIES) {
+            $this->categories = $this->query ? (new Search_Query($this->lang))->searchCategories($this->query) : [];
         } elseif ($this->list == self::LIST_USERS) {
             $this->users = $this->query ? (new Search_Query($this->lang))->searchUsers($this->query) : [];
         } else {
@@ -47,7 +47,7 @@ class Show_Search_PageController extends Abstract_PageController
 
     private function _normalizeList(string $list): string
     {
-        if ($list == self::LIST_HASHTAGS || $list == self::LIST_USERS) {
+        if ($list == self::LIST_CATEGORIES || $list == self::LIST_USERS) {
             return $list;
         }
 
@@ -60,8 +60,8 @@ class Show_Search_PageController extends Abstract_PageController
             case self::LIST_QUESTIONS:
                 $placeholder = $this->translator->get('Search by questions');
                 break;
-            case self::LIST_HASHTAGS:
-                $placeholder = $this->translator->get('Search by hashtags');
+            case self::LIST_CATEGORIES:
+                $placeholder = $this->translator->get('Search by categories');
                 break;
             case self::LIST_USERS:
                 $placeholder = $this->translator->get('Search by contributors');

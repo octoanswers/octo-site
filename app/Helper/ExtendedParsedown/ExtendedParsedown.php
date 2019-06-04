@@ -2,7 +2,7 @@
 
 class ExtendedParsedown extends Parsedown
 {
-    const HASHTAG_PATTERN = '/#([^\s\W]+)/u';
+    const CATEGORY_PATTERN = '/#([^\s\W]+)/u';
 
     protected $lang;
 
@@ -19,10 +19,10 @@ class ExtendedParsedown extends Parsedown
 
     protected function inlineTopicMention($Excerpt)
     {
-        if (preg_match(self::HASHTAG_PATTERN, $Excerpt['context'], $matches)) {
-            $hashtag = new Hashtag();
-            $hashtag->title = mb_strtolower($matches[1]);
-            $hashtagURL = $hashtag->getURL($this->lang);
+        if (preg_match(self::CATEGORY_PATTERN, $Excerpt['context'], $matches)) {
+            $category = new Category();
+            $category->title = mb_strtolower($matches[1]);
+            $categoryURL = $category->getURL($this->lang);
             
             return [
                 'extent' => strlen($matches[0]),
@@ -30,9 +30,9 @@ class ExtendedParsedown extends Parsedown
                     'name' => 'a',
                     'text' => $matches[0],
                     'attributes' => [
-                        'href' => $hashtagURL,
-                        'title' => '#'.$hashtag->title,
-                        'class' => 'inline-hashtag',
+                        'href' => $categoryURL,
+                        'title' => '#'.$category->title,
+                        'class' => 'inline-category',
                     ],
                 ],
             ];
@@ -102,7 +102,7 @@ class ExtendedParsedown extends Parsedown
     protected function blockHeader($Line)
     {
         // maybe #topic, not header?
-        if (preg_match(self::HASHTAG_PATTERN, $Line['text'], $matches)) {
+        if (preg_match(self::CATEGORY_PATTERN, $Line['text'], $matches)) {
             return;
         }
 

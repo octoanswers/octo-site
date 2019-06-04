@@ -91,12 +91,12 @@ class Question_Validator
         }
     }
 
-    public static function validateHashtagsJSON($hashtagsJSON)
+    public static function validateCategoriesJSON($categoriesJSON)
     {
         try {
-            v::stringType()->json()->assert($hashtagsJSON);
+            v::stringType()->json()->assert($categoriesJSON);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Question property "hashtagsJSON" '.$exception->getMessages()[0], 0);
+            throw new Exception('Question property "categoriesJSON" '.$exception->getMessages()[0], 0);
         }
     }
 }

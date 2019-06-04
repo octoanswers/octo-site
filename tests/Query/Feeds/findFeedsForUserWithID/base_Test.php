@@ -2,7 +2,7 @@
 
 class Query_Feeds__findFeedsForUserWithID__Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['ru' => ['activities', 'questions', 'er_users_follow_users', 'er_users_follow_hashtags', 'er_users_follow_questions'], 'users' => ['users']];
+    protected $setUpDB = ['ru' => ['activities', 'questions', 'er_users_follow_users', 'er_users_follow_categories', 'er_users_follow_questions'], 'users' => ['users']];
 
     public function test__firstPage()
     {

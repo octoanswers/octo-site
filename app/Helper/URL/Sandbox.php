@@ -7,9 +7,9 @@ class Sandbox_URL_Helper extends Abstract_URL_Helper
         return SITE_URL.'/'.$lang.'/sandbox/without-answers'.(($page > 1) ? '?page='.$page : '');
     }
 
-    public static function getWithoutHashtagsURL(string $lang, int $page = 1): string
+    public static function getWithoutCategoriesURL(string $lang, int $page = 1): string
     {
-        return SITE_URL.'/'.$lang.'/sandbox/without-hashtags'.(($page > 1) ? '?page='.$page : '');
+        return SITE_URL.'/'.$lang.'/sandbox/without-categories'.(($page > 1) ? '?page='.$page : '');
     }
 
     public static function getAllURL(string $lang, int $page = 1): string

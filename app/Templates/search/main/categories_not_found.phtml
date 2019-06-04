@@ -1,0 +1,14 @@
+
+<?php if ($this->list == 'categories' && count($this->categories) == 0 && strlen($this->query) > 0): ?>
+    <div class="alert alert-secondary my-4">
+
+        <p class="font-weight-bold"><?= $this->translator->get('No categories found') ?></p>
+        <p>
+            <?= str_replace('%query%', $this->query, $this->translator->get('No category found for "%query%"')); ?>
+        </p>
+
+        <a class="btn btn-primary mb-2" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>" role="button">
+            <?= $this->translator->get('View all categories') ?>
+        </a>
+    </div>
+<?php endif; ?>

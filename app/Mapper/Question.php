@@ -46,19 +46,19 @@ class Question_Mapper extends Abstract_Mapper
         return $question;
     }
 
-    public function updateHashtags(Question_Model $question): Question_Model
+    public function updateCategories(Question_Model $question): Question_Model
     {
-        if ($question->hashtagsJSON === null) {
+        if ($question->categoriesJSON === null) {
             return $question;
         }
         
         Question_Validator::validateID($question->id);
-        Question_Validator::validateHashtagsJSON($question->hashtagsJSON);
+        Question_Validator::validateCategoriesJSON($question->categoriesJSON);
 
-        $sql = 'UPDATE questions SET a_hashtags=:a_hashtags WHERE q_id=:q_id';
+        $sql = 'UPDATE questions SET a_categories=:a_categories WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':q_id', $question->id, PDO::PARAM_INT);
-        $stmt->bindParam(':a_hashtags', $question->hashtagsJSON, PDO::PARAM_STR);
+        $stmt->bindParam(':a_categories', $question->categoriesJSON, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);

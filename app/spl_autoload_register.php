@@ -10,7 +10,7 @@ spl_autoload_register(function ($class_name) {
         
         // Model
 
-        'Hashtag' => 'app/Model/Hashtag.php',
+        'Category' => 'app/Model/Category.php',
 
         # Helpers
 

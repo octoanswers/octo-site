@@ -1,6 +1,6 @@
 <?php
 
-class WithoutHashtags_Sandbox_PageController extends Abstract_PageController
+class WithoutCategories_Sandbox_PageController extends Abstract_PageController
 {
     const LIST_NEWEST = 'newest';
     const LIST_WITH_ANSWERS = 'with-answers';
@@ -15,7 +15,7 @@ class WithoutHashtags_Sandbox_PageController extends Abstract_PageController
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         try {
-            $this->questions = (new Sandbox_Query($this->lang))->questionsWithoutHashtags($this->page);
+            $this->questions = (new Sandbox_Query($this->lang))->questionsWithoutCategories($this->page);
         } catch (\Exception $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -38,7 +38,7 @@ class WithoutHashtags_Sandbox_PageController extends Abstract_PageController
             $this->nextPageURL = Sandbox_URL_Helper::getWithoutAnswersURL($this->lang, ($this->page + 1));
         }
 
-        $this->list = 'without_hashtags';
+        $this->list = 'without_categories';
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
@@ -52,12 +52,12 @@ class WithoutHashtags_Sandbox_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->translator->get('Questions without hashtags').' · '.$this->translator->get('page').' '.$this->page.' · '.$this->translator->get('answeropedia');
+        return $this->translator->get('Questions without categories').' · '.$this->translator->get('page').' '.$this->page.' · '.$this->translator->get('answeropedia');
     }
 
     public function _getPageDescription(): string
     {
-        $description = $this->translator->get('Questions without hashtags').' · '.$this->translator->get('page').' '.$this->page.' · '.$this->translator->get('answeropedia');
+        $description = $this->translator->get('Questions without categories').' · '.$this->translator->get('page').' '.$this->page.' · '.$this->translator->get('answeropedia');
 
         return $description;
     }
