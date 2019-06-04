@@ -19,12 +19,13 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $titlesArray = [];
-        foreach ($this->question->getCategories() as $category) {
-            $titlesArray[] = $category->title;
+        $this->categories = (new Categories_Query($this->lang))->categoriesForQuestionWithID($questionID);
+
+        $this->categoryNames = [];
+        foreach ($this->categories as $categor) {
+            $this->categoryNames[] = $category->title;
         }
-        
-        $this->categories_string = $this->question->getCategories() ? implode(", ", $titlesArray) : '';
+        $this->categories_string = count($this->categoryNames) ? implode(",", $this->categoryNames) : '';
 
         $this->template = 'question_update_categories';
         $this->pageTitle = str_replace("%question%", $this->question->title, $this->translator->get('Update categories for question "%question%" - Answeropedia'));

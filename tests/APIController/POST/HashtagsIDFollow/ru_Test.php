@@ -20,7 +20,7 @@ class CategoriesIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_
             'user_id' => 3,
             'user_name' => 'Иван Коршунов',
             'followed_category_id' => 4,
-            'followed_category_title' => 'автомобили',
+            'followed_category_title' => 'автомобили', // @TODO
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

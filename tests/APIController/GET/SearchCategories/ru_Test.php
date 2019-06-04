@@ -39,13 +39,13 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
         $expectedResponse = [
             [
                 'year' => '1967',
-                'value' => 'автомобили',
-                'name' => 'автомобили'
+                'value' => 'Автомобили',
+                'name' => 'Автомобили'
             ],
             [
                 'year' => '1967',
-                'value' => 'автоспорт',
-                'name' => 'автоспорт'
+                'value' => 'Автоспорт',
+                'name' => 'Автоспорт'
             ]
         ];
 

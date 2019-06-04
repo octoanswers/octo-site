@@ -9,8 +9,8 @@ class Question_Model extends Abstract_Model
     public $title; // string
     public $isRedirect = false; // bool
     public $answer; // Answer_Model
-    public $categoriesJSON; // string
     public $imageBaseName;
+    public $categoriesCount; // int
 
     #
     # Init methods
@@ -33,49 +33,10 @@ class Question_Model extends Abstract_Model
         $question->title = (string) $state['q_title'];
         $question->isRedirect = (bool) $state['q_is_redirect'];
         $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
-        if (isset($state['a_categories'])) {
-            $question->categoriesJSON = $state['a_categories'];
-        }
+        $question->categoriesCount = (int) $state['count_categories'];
 
         $question->answer = Answer_Model::initWithDBState($state);
         
         return $question;
-    }
-
-    #
-    # Get & Set
-    #
-
-    public function getCategories(): array
-    {
-        $categories = [];
-
-        if ($this->categoriesJSON === null || strlen($this->categoriesJSON) == 0) {
-            return $categories;
-        }
-
-        $categoriesArray = json_decode($this->categoriesJSON, JSON_UNESCAPED_UNICODE);
-        
-        foreach ($categoriesArray as $title) {
-            $category = new Category;
-            $category->title = $title;
-            $categories[] = $category;
-        }
-
-        return $categories;
-    }
-
-    public function setCategories(array $categories)
-    {
-        $categoriesArray = [];
-
-        foreach ($categories as $category) {
-            if (!is_a($category, Category::class)) {
-                throw new Exception("Category must be subclass of Category model", 1);
-            }
-            $categoriesArray[] = $category->title;
-        }
-
-        $this->categoriesJSON = json_encode($categoriesArray, true);
     }
 }

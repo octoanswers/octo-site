@@ -141,8 +141,8 @@ class Show_Category_PageController extends Abstract_PageController
         $related_titles = [];
 
         foreach ($questions as $question) {
-            // @TODO Now getCategories return Objects
-            $categories_titles = $question->getCategories();
+            // @TODO Now this code incorrect
+            $categories_titles = []; //$question->getCategories();
             if (is_array($categories_titles) && count($categories_titles)) {
                 foreach ($categories_titles as $title) {
                     //@TODO need a query

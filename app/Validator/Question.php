@@ -91,12 +91,12 @@ class Question_Validator
         }
     }
 
-    public static function validateCategoriesJSON($categoriesJSON)
+    public static function validateCategoriesCount($categoriesCount)
     {
         try {
-            v::stringType()->json()->assert($categoriesJSON);
+            v::intType()->min(0, true)->assert($categoriesCount);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Question property "categoriesJSON" '.$exception->getMessages()[0], 0);
+            throw new Exception('Question property "categoriesCount" '.$exception->getMessages()[0], 0);
         }
     }
 }

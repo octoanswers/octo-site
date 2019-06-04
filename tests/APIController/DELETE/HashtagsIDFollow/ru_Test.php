@@ -19,7 +19,7 @@ class CategoriesIDFollow_DELETE_APIController__ru__Test extends Abstract_Fronten
             'user_name' => 'Иван Коршунов',
             'unfollowed_category' => [
                 'id' => 7,
-                'title' => 'косметика',
+                'title' => 'Косметика',
             ],
         ];
 

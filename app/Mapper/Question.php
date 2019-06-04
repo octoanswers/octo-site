@@ -46,26 +46,23 @@ class Question_Mapper extends Abstract_Mapper
         return $question;
     }
 
-    public function updateCategories(Question_Model $question): Question_Model
+    public function updateCategoriesCount(Question_Model $question): Question_Model
     {
-        if ($question->categoriesJSON === null) {
-            return $question;
+        if ($question->categoriesCount == null) {
+            $question->categoriesCount = 0;
         }
-        
-        Question_Validator::validateID($question->id);
-        Question_Validator::validateCategoriesJSON($question->categoriesJSON);
 
-        $sql = 'UPDATE questions SET a_categories=:a_categories WHERE q_id=:q_id';
+        Question_Validator::validateID($question->id);
+        Question_Validator::validateCategoriesCount($question->categoriesCount);
+
+        $sql = 'UPDATE questions SET count_categories=:count_categories WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':q_id', $question->id, PDO::PARAM_INT);
-        $stmt->bindParam(':a_categories', $question->categoriesJSON, PDO::PARAM_STR);
+        $stmt->bindParam(':count_categories', $question->categoriesCount, PDO::PARAM_STR);
+        
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
-        }
-        $count = $stmt->rowCount();
-        if ($count == 0) {
-            throw new Exception('Question with ID '.$question->id.' not saved', 0);
         }
 
         return $question;

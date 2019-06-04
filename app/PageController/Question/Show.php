@@ -3,6 +3,7 @@
 class Show_Question_PageController extends Abstract_PageController
 {
     public $followed;
+    public $firstTwoCategories = [];
 
     // @TODO Deprecated
     public function handleByID($request, $response, $args)
@@ -75,6 +76,16 @@ class Show_Question_PageController extends Abstract_PageController
             $this->contributors_top = array_slice($this->contributors, 0, 3);
         } else {
             $this->contributors_top = $this->contributors;
+        }
+
+        $this->categories = (new Categories_Query($this->lang))->categoriesForQuestionWithID($this->question->id);
+
+        if (count($this->categories)) {
+            if (count($this->categories) > 2) {
+                $this->firstTwoCategories = array_slice($this->categories, 0, 2);
+            } else {
+                $this->firstTwoCategories = $this->categories;
+            }
         }
 
         $this->template = 'question';

@@ -13,8 +13,8 @@ class Sandbox_Query__questionsWithoutCategories__Test extends Abstract_DB_TestCa
         $this->assertEquals(33, $questions[0]->id);
         $this->assertEquals('Птицы играют в игры?', $questions[0]->title);
 
-        $this->assertEquals(10, $questions[9]->id);
-        $this->assertEquals('Как отрастить бороду?', $questions[9]->title);
+        $this->assertEquals(8, $questions[9]->id);
+        $this->assertEquals('Как дела?', $questions[9]->title);
     }
 
     public function test_firstPage()
@@ -26,8 +26,8 @@ class Sandbox_Query__questionsWithoutCategories__Test extends Abstract_DB_TestCa
         $this->assertEquals(33, $questions[0]->id);
         $this->assertEquals('Птицы играют в игры?', $questions[0]->title);
 
-        $this->assertEquals(10, $questions[9]->id);
-        $this->assertEquals('Как отрастить бороду?', $questions[9]->title);
+        $this->assertEquals(8, $questions[9]->id);
+        $this->assertEquals('Как дела?', $questions[9]->title);
     }
 
     public function test_secondPage()
@@ -36,7 +36,7 @@ class Sandbox_Query__questionsWithoutCategories__Test extends Abstract_DB_TestCa
 
         $this->assertEquals(10, count($questions));
 
-        $this->assertEquals(12, $questions[0]->id);
-        $this->assertEquals(22, $questions[9]->id);
+        $this->assertEquals(9, $questions[0]->id);
+        $this->assertEquals(19, $questions[9]->id);
     }
 }

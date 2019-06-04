@@ -30,7 +30,7 @@
             </a>
         <?php endif; ?>
 
-        <?php if (count($question->getCategories()) == 0): ?>
+        <?php if ($question->categoriesCount == 0): ?>
             <a class="badge badge-success mr-3" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
                 Проставить темы
             </a>

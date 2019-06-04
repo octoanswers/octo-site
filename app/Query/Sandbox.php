@@ -43,7 +43,7 @@ class Sandbox_Query extends Abstract_Query
 
         $offset = $perPage * ($page - 1);
 
-        $query = 'SELECT * FROM `questions` WHERE (a_categories IS NULL) AND q_is_redirect = 0 ORDER BY `questions`.`a_updated_at` DESC LIMIT :offset, :per_page';
+        $query = 'SELECT * FROM `questions` WHERE count_categories = 0 AND q_is_redirect = 0 ORDER BY `questions`.`a_updated_at` DESC LIMIT :offset, :per_page';
 
         $stmt = $this->pdo->prepare($query);
         $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);

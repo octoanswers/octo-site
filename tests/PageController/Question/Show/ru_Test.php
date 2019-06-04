@@ -3,8 +3,8 @@
 class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
-        'en' => ['questions', 'revisions', 'categories'],
-        'ru' => ['questions', 'revisions', 'categories'],
+        'en' => ['questions', 'revisions', 'categories', 'er_categories_questions'],
+        'ru' => ['questions', 'revisions', 'categories', 'er_categories_questions'],
         'users' => ['users']
     ];
 
@@ -19,6 +19,8 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
+        //var_dump($responseBody);
+
 
         $this->assertStringContainsString('Как дела? · Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());

@@ -2,7 +2,7 @@
 
 class Show_Question_PageController__en__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['en' => ['questions', 'revisions', 'categories']];
+    protected $setUpDB = ['en' => ['questions', 'revisions', 'categories', 'er_categories_questions']];
 
     public function test__ShowENPage()
     {

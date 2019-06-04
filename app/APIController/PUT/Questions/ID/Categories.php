@@ -13,7 +13,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             $api_key = (string) $request->getParam('api_key');
             $question_id = (int) $args['id'];
 
-            $new_categories_string = (string) $request->getParam('new_categories');
+            $new_categories_string = urldecode((string) $request->getParam('new_categories'));
 
             if (strlen($new_categories_string) == 0) {
                 throw new \Exception("Categories param not set", 0);
@@ -29,7 +29,8 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             $question = (new Question_Query($this->lang))->questionWithID($question_id);
             $questionID = $question->id;
             
-            $old_categories_array = $question->getCategories();
+            $old_categories_array = (new Categories_Query($this->lang))->categoriesForQuestionWithID($question->id);
+
             $oldCategoriesTitles = [];
             foreach ($old_categories_array as $category) {
                 $oldCategoriesTitles[] = $category->title;
@@ -74,9 +75,9 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             #
             # Update question
             #
-
-            $question->setCategories($newCategories);
-            $question = (new Question_Mapper($this->lang))->updateCategories($question);
+            
+            $question->categoriesCount = count($newCategories);
+            $question = (new Question_Mapper($this->lang))->updateCategoriesCount($question);
 
             # Save activity
 

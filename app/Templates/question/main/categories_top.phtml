@@ -1,17 +1,17 @@
 
 <!-- categories_top -->
 <div>
-	<?php if (count($this->question->getCategories())): ?>
+	<?php if (count($this->firstTwoCategories)): ?>
 
-		<?php foreach ($this->question->getFirstTwoCategories() as $category): ?>
+		<?php foreach ($this->firstTwoCategories as $category): ?>
 			<a class="text-decoration-none mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
 				#<?= $category->title ?>
 			</a>
 		<?php endforeach; ?>
 
-        <?php if ($this->question->getMoreCategoriesCount()): ?>
+        <?php if (count($this->categories) > count($this->firstTwoCategories)): ?>
             <a class="btn btn-outline-secondary btn-sm" data-scroll href="#question_categories_list">
-                +<?= $this->question->getMoreCategoriesCount() ?> #
+                more
             </a>
 		<?php endif; ?>
 

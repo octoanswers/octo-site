@@ -9,7 +9,7 @@ class Category_Query__findWithTitle__ru__Test extends Abstract_DB_TestCase
         $category = (new Category_Query('ru'))->findWithTitle('парфюмерия');
 
         $this->assertEquals(8, $category->id);
-        $this->assertEquals('парфюмерия', $category->title);
+        $this->assertEquals('Парфюмерия', $category->title);
     }
 
     public function test__CategoryNotExists()

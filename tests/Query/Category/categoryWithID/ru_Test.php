@@ -9,6 +9,6 @@ class Category_Query__categoryWithID__ru__Test extends Abstract_DB_TestCase
         $category = (new Category_Query('ru'))->categoryWithID(6);
 
         $this->assertEquals(6, $category->id);
-        $this->assertEquals('автоспорт', $category->title);
+        $this->assertEquals('Автоспорт', $category->title);
     }
 }

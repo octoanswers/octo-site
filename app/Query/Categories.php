@@ -47,4 +47,25 @@ class Categories_Query extends Abstract_Query
 
         return array_reverse($categories);
     }
+
+    public function categoriesForQuestionWithID(int $questionID): array
+    {
+        Question_Validator::validateID($questionID);
+        
+        $stmt = $this->pdo->prepare('SELECT * FROM er_categories_questions WHERE er_question_id=:er_question_id');
+        $stmt->bindParam(':er_question_id', $questionID, PDO::PARAM_INT);
+        if (!$stmt->execute()) {
+            $error = $stmt->errorInfo();
+            throw new Exception($error[2], $error[1]);
+        }
+
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $categories = [];
+        foreach ($rows as $row) {
+            $categories[] = (new Category_Query('ru'))->categoryWithID($row['er_category_id']);
+        }
+
+        return $categories;
+    }
 }

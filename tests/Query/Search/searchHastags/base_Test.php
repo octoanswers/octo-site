@@ -11,10 +11,10 @@ class Query_Search_searchCategories_base_Test extends Abstract_DB_TestCase
         $this->assertEquals(2, count($categories));
 
         $this->assertEquals(16, $categories[0]->id);
-        $this->assertEquals('фотография', $categories[0]->title);
+        $this->assertEquals('Фотография', $categories[0]->title);
 
         $this->assertEquals(17, $categories[1]->id);
-        $this->assertEquals('фотосинтез', $categories[1]->title);
+        $this->assertEquals('Фотосинтез', $categories[1]->title);
     }
 
     public function test_One_letter_search()

@@ -13,22 +13,23 @@ class CategoriesToQuestions_Relation_Model extends Abstract_Model
 
     public static function initWithCategoryIDAndQuestionID(int $categoryID, int $questionID): CategoriesToQuestions_Relation_Model
     {
-        $er = new self();
-        $er->categoryID = $categoryID;
-        $er->questionID = $questionID;
+        $relation = new self();
+        
+        $relation->categoryID = $categoryID;
+        $relation->questionID = $questionID;
 
-        return $er;
+        return $relation;
     }
 
     public static function initWithDBState(array $state): CategoriesToQuestions_Relation_Model
     {
-        $er = new self();
+        $relation = new self();
 
-        $er->id = $state['er_id'];
-        $er->categoryID = $state['er_category_id'];
-        $er->questionID = $state['er_question_id'];
-        $er->createdAt = $state['er_created_at'];
+        $relation->id = (int) $state['er_id'];
+        $relation->categoryID = (int) $state['er_category_id'];
+        $relation->questionID = (int) $state['er_question_id'];
+        $relation->createdAt = $state['er_created_at'];
 
-        return $er;
+        return $relation;
     }
 }

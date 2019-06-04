@@ -16,7 +16,8 @@ class Mapper_Activity_UUA__create__Test extends Abstract_DB_TestCase
             'q_is_redirect' => 1,
             'a_text' => 'Yes, it is!',
             'a_len' => 11,
-            'a_updated_at' => '2015-11-29 09:28:34'
+            'a_updated_at' => '2015-11-29 09:28:34',
+            'count_categories' => 0
         ]);
 
         $revision = Revision_Model::initWithDBState([

@@ -7,9 +7,9 @@ $pdo->query(
         `q_is_redirect` tinyint(1) NOT NULL DEFAULT '0',
         `q_image_base_name` varchar(64) DEFAULT NULL,
         `a_text` MEDIUMTEXT DEFAULT NULL,
-        `a_categories` TEXT DEFAULT NULL,
         `a_len` int(10) unsigned NOT NULL DEFAULT '0',
         `a_updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        `count_categories` tinyint(4) NOT NULL DEFAULT '0',
         PRIMARY KEY (`q_id`)
     ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;"
 );
