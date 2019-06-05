@@ -21,7 +21,7 @@ class ExtendedParsedown extends Parsedown
     {
         if (preg_match(self::CATEGORY_PATTERN, $Excerpt['context'], $matches)) {
             $category = new Category();
-            $category->title = mb_strtolower($matches[1]);
+            $category->title = $matches[1];
             $categoryURL = $category->getURL($this->lang);
             
             return [

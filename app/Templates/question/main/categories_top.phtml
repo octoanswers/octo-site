@@ -4,7 +4,7 @@
 	<?php if (count($this->firstTwoCategories)): ?>
 
 		<?php foreach ($this->firstTwoCategories as $category): ?>
-			<a class="text-decoration-none mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
+            <a class="text-decoration-none mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
 				<?= $category->title ?>
 			</a>
 		<?php endforeach; ?>
