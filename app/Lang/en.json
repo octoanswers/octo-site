@@ -33,7 +33,7 @@
         "users": "Users"
     },
     "category": {
-        "page_title": "Questions with category"
+        "page_title": "Category: "
     },
     "categories": {
         "search_placeholder": "Search categories",

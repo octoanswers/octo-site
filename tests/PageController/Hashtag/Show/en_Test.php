@@ -16,7 +16,7 @@ class Show_Category_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
         
-        $this->assertStringContainsString('Questions with category #cashmere · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Category: Cashmere – Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

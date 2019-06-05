@@ -81,7 +81,7 @@ class Show_Category_PageController extends Abstract_PageController
 
     protected function _getPageTitle()
     {
-        return $this->translator->get('category', 'page_title').' #'.$this->category->title.' · '.$this->translator->get('answeropedia');
+        return $this->translator->get('category', 'page_title').$this->category->title.' – '.$this->translator->get('answeropedia');
     }
 
     protected function _prepareFollowButton()

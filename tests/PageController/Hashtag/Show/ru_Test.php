@@ -16,7 +16,7 @@ class Show_Category_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Вопросы c хештегом #птицы · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Категория: Птицы – Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }
