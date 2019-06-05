@@ -103,6 +103,9 @@
         },
         "block__related_questions": {
             "title": "Related questions"
+        },
+        "block__categories_top": {
+            "more_btn": "more…"
         }
     },
     "question__actions_top": {

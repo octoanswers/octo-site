@@ -5,13 +5,13 @@
 
 		<?php foreach ($this->firstTwoCategories as $category): ?>
 			<a class="text-decoration-none mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
-				#<?= $category->title ?>
+				<?= $category->title ?>
 			</a>
 		<?php endforeach; ?>
 
         <?php if (count($this->categories) > count($this->firstTwoCategories)): ?>
-            <a class="btn btn-outline-secondary btn-sm" data-scroll href="#question_categories_list">
-                more
+            <a class="color-secondary-dark-1 text-decoration-none" data-scroll href="#question_categories_list">
+                <?= $this->translator->get('question', 'block__categories_top', 'more_btn') ?>
             </a>
 		<?php endif; ?>
 

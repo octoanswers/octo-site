@@ -222,6 +222,9 @@
             "Be the first author": "Станьте первым автором",
             "Still no one tried to write an answer to this question. Be the first if the category of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
         },
+        "block__categories_top": {
+            "more_btn": "ещё…"
+        },
         "redirected_from": "Перенаправлено с вопроса: ",
         "user_contribution": "Вклад пользователя"
     },
