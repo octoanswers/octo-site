@@ -8,10 +8,10 @@ class Show_Category_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $categoryURI = $args['uri'];
+        $categoryURI = $args['category_uri'];
 
         try {
-            $categoryTitle = urldecode($categoryURI);
+            $categoryTitle = $this->_titleFromURI($categoryURI);
             $this->category = (new Category_Query($this->lang))->findWithTitle($categoryTitle);
         } catch (\Exception $e) {
             //return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
@@ -112,6 +112,15 @@ class Show_Category_PageController extends Abstract_PageController
     protected function _getPageDescription()
     {
         return $this->translator->get('Questions with category').' #'.$this->category->title.' · '.$this->translator->get('answeropedia');
+    }
+
+    private function _titleFromURI(string $uri): string
+    {
+        $uri = str_replace('__', 'DOUBLEUNDERLINE', $uri);
+        $uri = str_replace('_', ' ', $uri);
+        $title = str_replace('DOUBLEUNDERLINE', '_', $uri);
+
+        return $title;
     }
 
     /**

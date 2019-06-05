@@ -79,7 +79,7 @@ class AWApp
             $this->get('/answer/{id}/history', 'History_Answer_PageController:handle');
             $this->get('/feed', 'Show_Feed_PageController:handle');
             $this->get('/flow', 'Show_Flow_PageController:handle');
-            $this->get('/tag/{uri}', 'Show_Category_PageController:handle');
+            $this->get('/category/{category_uri}', 'Show_Category_PageController:handle');
             $this->get('/categories/newest', 'Newest_Categories_PageController:handle');
             // @NOTE To realize $this->get('/categories/popular', 'List_Categories_PageController:handle');
             $this->get('/question/{id}/categories', 'UpdateCategories_Question_PageController:handle');
