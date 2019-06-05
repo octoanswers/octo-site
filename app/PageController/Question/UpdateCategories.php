@@ -22,7 +22,7 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
         $this->categories = (new Categories_Query($this->lang))->categoriesForQuestionWithID($questionID);
 
         $this->categoryNames = [];
-        foreach ($this->categories as $categor) {
+        foreach ($this->categories as $category) {
             $this->categoryNames[] = $category->title;
         }
         $this->categories_string = count($this->categoryNames) ? implode(",", $this->categoryNames) : '';
