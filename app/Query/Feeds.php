@@ -18,7 +18,7 @@ class Feeds_Query extends Abstract_Query
             $where[] = '(u_id IN ('.implode(',', $follows_users).'))';
         }
         if (count($follows_categories)) {
-            $where[] = '(h_id IN ('.implode(',', $follows_categories).'))';
+            $where[] = '(c_id IN ('.implode(',', $follows_categories).'))';
         }
         if (count($follows_questions)) {
             $where[] = '(q_id IN ('.implode(',', $follows_questions).'))';
@@ -45,7 +45,7 @@ class Feeds_Query extends Abstract_Query
         //$follows_questions = [];
         foreach ($activities as &$activity) {
             unset($activity['u_id']);
-            unset($activity['h_id']);
+            unset($activity['c_id']);
             unset($activity['q_id']);
         }
 

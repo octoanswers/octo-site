@@ -9,8 +9,8 @@ class Category_Query extends Abstract_Query
     {
         Category_Validator::validateID($categoryID);
 
-        $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE h_id=:h_id LIMIT 1');
-        $stmt->bindParam(':h_id', $categoryID, PDO::PARAM_INT);
+        $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_id=:c_id LIMIT 1');
+        $stmt->bindParam(':c_id', $categoryID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);
@@ -28,8 +28,8 @@ class Category_Query extends Abstract_Query
     {
         Category_Validator::validateTitle($title);
 
-        $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE h_title=:h_title LIMIT 1');
-        $stmt->bindParam(':h_title', $title, PDO::PARAM_STR);
+        $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_title=:c_title LIMIT 1');
+        $stmt->bindParam(':c_title', $title, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
             throw new Exception($error[2], $error[1]);

@@ -6,9 +6,9 @@ class Category_Mapper extends Abstract_Mapper
     {
         Category_Validator::validateNew($category);
 
-        $sql = 'INSERT INTO categories (h_title) VALUES (:h_title)';
+        $sql = 'INSERT INTO categories (c_title) VALUES (:c_title)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':h_title', $category->title, PDO::PARAM_STR);
+        $stmt->bindParam(':c_title', $category->title, PDO::PARAM_STR);
 
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
@@ -27,10 +27,10 @@ class Category_Mapper extends Abstract_Mapper
     {
         Category_Validator::validateExists($category);
 
-        $sql = 'UPDATE categories SET h_title=:h_title WHERE h_id=:h_id';
+        $sql = 'UPDATE categories SET c_title=:c_title WHERE c_id=:c_id';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':h_id', $category->id, PDO::PARAM_INT);
-        $stmt->bindParam(':h_title', $category->title, PDO::PARAM_STR);
+        $stmt->bindParam(':c_id', $category->id, PDO::PARAM_INT);
+        $stmt->bindParam(':c_title', $category->title, PDO::PARAM_STR);
 
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();

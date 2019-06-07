@@ -9,7 +9,7 @@ class Query_Feeds__findFeedsForUserWithID__Test extends Abstract_DB_TestCase
         $res = (new Feeds_Query('ru'))->findFeedsForUserWithID(4);
 
         $this->assertEquals(4, $res['user_id']);
-        $this->assertEquals('SELECT * FROM activities WHERE (u_id IN (1,5,7)) OR (h_id IN (3,9)) OR (q_id IN (4)) ORDER BY id DESC LIMIT 10', $res['sql']);
+        $this->assertEquals('SELECT * FROM activities WHERE (u_id IN (1,5,7)) OR (c_id IN (3,9)) OR (q_id IN (4)) ORDER BY id DESC LIMIT 10', $res['sql']);
 
         $activities = $res['activities'];
 

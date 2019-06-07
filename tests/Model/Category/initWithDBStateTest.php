@@ -5,9 +5,9 @@ class Category_initWithDBStateTest extends PHPUnit\Framework\TestCase
     public function testInitWithDatabaseState()
     {
         $category = Category::initWithDBState([
-            'h_id' => 13,
-            'h_title' => 'virtual',
-            'h_words' => 'cpu',
+            'c_id' => 13,
+            'c_title' => 'virtual',
+            'c_words' => 'cpu',
         ]);
 
         $this->assertEquals(13, $category->id);
@@ -17,9 +17,9 @@ class Category_initWithDBStateTest extends PHPUnit\Framework\TestCase
     public function testInitWithDatabaseStateOnRussian()
     {
         $category = Category::initWithDBState([
-            'h_id' => 231,
-            'h_title' => 'Медицинские услуги',
-            'h_words' => 'таблетка',
+            'c_id' => 231,
+            'c_title' => 'Медицинские услуги',
+            'c_words' => 'таблетка',
         ]);
 
         $this->assertEquals(231, $category->id);

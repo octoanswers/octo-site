@@ -19,7 +19,7 @@ class Flow_Query extends Abstract_Query
         //$follows_questions = [];
         foreach ($activities as &$activity) {
             unset($activity['u_id']);
-            unset($activity['h_id']);
+            unset($activity['c_id']);
             unset($activity['q_id']);
         }
 

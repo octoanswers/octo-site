@@ -1,7 +1,7 @@
 <?php
 
 $pdo->exec(
-    "INSERT INTO categories (h_id, h_title, h_words) VALUES
+    "INSERT INTO categories (c_id, c_title, c_words) VALUES
     (1, 'English literature', 'Lermontov Pushkin'),
     (2, 'Test', NULL),
     (3, 'Decoration Materials', NULL),

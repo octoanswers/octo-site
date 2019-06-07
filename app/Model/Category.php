@@ -22,13 +22,13 @@ class Category extends Abstract_Model
 
     public static function initWithDBState(array $state): Category
     {
-        if (!isset($state['h_id']) || !isset($state['h_title'])) {
+        if (!isset($state['c_id']) || !isset($state['c_title'])) {
             throw new Exception("Category init with empty state", 1);
         }
 
         $category = new self();
-        $category->id = (int) $state['h_id'];
-        $category->title = (string) $state['h_title'];
+        $category->id = (int) $state['c_id'];
+        $category->title = (string) $state['c_title'];
 
         return $category;
     }

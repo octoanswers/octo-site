@@ -1,7 +1,7 @@
 <?php
 
 $pdo->query(
-    "INSERT INTO activities (id, u_id, h_id, q_id, activity_type, data, created_at) VALUES
+    "INSERT INTO activities (id, u_id, c_id, q_id, activity_type, data, created_at) VALUES
         (1, 5, NULL, NULL, 'followed_U_write_A', '{\"category\":{\"id\": 3}, \"question\": {\"id\": 13}}', '2015-11-29 09:28:34'),
         (2, 4, NULL, NULL, 'followed_U_write_A', '{\"category\":{\"id\": 3}, \"question\": {\"id\": 13}}', '2015-11-29 09:28:34'),
         (3, 7, NULL, NULL, 'followed_U_follow_H', '{\"category\":{\"id\": 3}, \"question\": {\"id\": 13}}', '2015-11-29 09:28:34'),
