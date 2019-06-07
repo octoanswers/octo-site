@@ -140,6 +140,28 @@
   border-color: #fdc946;
 }
 
+.btn-outline-info {
+  color: #6152A4;
+  border-color: #6152A4;
+}
+
+.btn-outline-info:hover {
+  background-color: #6152A4;
+  border-color: #6152A4;
+}
+
+.btn-outline-light {
+  color: #848484;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-outline-light:hover {
+  color: #535353;
+  background-color: #F1F1F1;
+  border-color: #F1F1F1;
+}
+
 .card {
   border: 1px solid #D5D5D5;
 }
