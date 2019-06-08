@@ -10,7 +10,8 @@
 			data-follow-title="<?= $this->translator->get('Follow') ?>"
 			data-followed-title="<?= $this->translator->get('Followed') ?>"
 			data-unfollow-title="<?= $this->translator->get('Unfollow') ?>"
-			type="button">
+            type="button">
+            <i class="fas fa-bookmark mr-2"></i>
 			<?= $this->followed ? $this->translator->get('Followed') : $this->translator->get('Follow'); ?>
 		</button>
 	<?php else: ?>
