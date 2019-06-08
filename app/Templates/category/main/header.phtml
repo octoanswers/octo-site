@@ -2,9 +2,9 @@
 <!-- category header -->
 <div class="mb-4">
     <p class="mb-0 color-secondary-dark-2">
-        Вопросы c хештегом
+        <?= $this->translator->get('category', 'questions_with_category') ?>
     </p>
-    <h1>#<?= $this->category->title ?></h1>
+    <h1><?= $this->category->title ?></h1>
     <div class="mb-0 color-secondary-light-1">
         <?= count($this->category_questions)+3 ?> вопросов
     </div>

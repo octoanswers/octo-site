@@ -33,17 +33,17 @@
     "It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
     "Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
     "More questions": "Больше вопросов",
-    "New categories": "Новые хештеги",
+    "New categories": "Новые категории",
     "New users from around the world": "Новые пользователи со всего мира",
     "Newest questions": "Новые вопросы",
     "No description of changes": "Нет описания изменений",
-    "No category found for \"%query%\"": "Не удалось найти хештеги по запросу «%query%»",
-    "No categories found": "Хештегов не найдено",
+    "No category found for \"%query%\"": "Не удалось найти категории по запросу «%query%»",
+    "No categories found": "категорий не найдено",
     "No questions found": "Вопросов не найдено",
     "No users found": "Пользователей не найдено",
     "On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
     "On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
-    "Questions with category": "Вопросы c хештегом",
+    "Questions with category": "Вопросы в категории",
     "Questions without answers": "Вопросы без ответа",
     "Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
     "Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
@@ -56,17 +56,17 @@
     "Set real name": "Введите реальное имя",
     "Set signature": "Придумайте подпись",
     "Share link": "Поделиться ссылкой",
-    "Subscribe to several categories": "Подпишитесь на несколько хештегов",
+    "Subscribe to several categories": "Подпишитесь на несколько категорий",
     "Subscription to the question": "Подписка на вопрос",
     "Thanks for the feedback!": "Спасибо за отзыв!",
     "Tools": "Инструменты",
     "Top contributors": "Топ авторов",
     "Unfollow": "Отписаться",
     "Update picture": "Обновить картинку",
-    "View all categories": "Посмотреть все хештеги",
+    "View all categories": "Посмотреть все категории",
     "View all questions": "Посмотреть все вопросы",
     "View all users": "Посмотреть всех пользователей",
-    "View popular categories": "Посмотреть популярные хештеги",
+    "View popular categories": "Посмотреть популярные категории",
     "View questions in the sandbox": "Посмотреть вопросы в песочнице",
     "View users": "Посмотреть пользователей",
     "Views a questions": "Посмотреть вопросы",
@@ -79,10 +79,10 @@
     "activity": {
         "change answer": "обновил ответ",
         "change signature": "поменял подпись",
-        "follow category": "подписался на хештег",
+        "follow category": "подписался на категорию",
         "follow question": "подписался на вопрос",
         "follow user": "подписался на пользователя",
-        "category added question": "хештег вопрос",
+        "category added question": "вопрос добавлен в категорию",
         "question renamed": "вопрос переименован",
         "question updated answer": "обновлен ответ",
         "renamed question": "переименовал вопрос"
@@ -131,8 +131,8 @@
         "page_title": "Категория: "
     },
     "categories": {
-        "search_placeholder": "Поиск хештегов",
-        "title": "Хештеги"
+        "search_placeholder": "Поиск категорий",
+        "title": "Категории"
     },
     "internal_server_error": {
         "Error 500": "Ошибка 500",
@@ -193,7 +193,7 @@
         "about_answeropedia": "О&nbsp;проекте",
         "btn_ask": "Задать вопрос",
         "flow": "Свежие&nbsp;правки",
-        "categories": "Хештеги",
+        "categories": "Категории",
         "login": "Вход",
         "recent_changes": "Последние&nbsp;правки",
         "saarch_placeholder": "Какой у вас вопрос?",
@@ -212,11 +212,11 @@
         "block__related_questions": {
             "title": "Похожие вопросы"
         },
-        "categories": "Хештеги",
+        "categories": "Категории",
         "categories_block": {
-            "categories_add": "Добавить хештег",
+            "categories_add": "Добавить категорию",
             "categories_change": "Изменить",
-            "title": "Хештеги"
+            "title": "Категории вопроса"
         },
         "lure_be_first_contributor": {
             "Be the first author": "Станьте первым автором",
@@ -230,7 +230,7 @@
     },
     "question_update_categories": {
         "page_title": "",
-        "title": "Редактирование хештегов"
+        "title": "Редактирование категорий"
     },
     "question__actions_top": {
         "edit_answer": "Править ответ",
@@ -265,7 +265,7 @@
         "about_block": {
             "btn_action": "Присоединиться к сообществу",
             "msg_1": "Это место куда попадают новые, ещё не имеющие ответа вопросы.",
-            "msg_2": "Как только у вопроса появляется исчерпывающий ответ и несколько хештегов, он переносится в основной список.",
+            "msg_2": "Как только у вопроса появляется исчерпывающий ответ и несколько категорий, он переносится в основной список.",
             "now_in_the_sandbox": "сейчас в песочнице",
             "title": "Что такое «Песочница»?"
         },
@@ -275,7 +275,7 @@
         "page_title": "Поиск"
     },
     "search__filter": {
-        "categories": "Хештеги",
+        "categories": "Категории",
         "questions": "Вопросы",
         "users": "Пользователи"
     },
@@ -301,7 +301,7 @@
         "about_site": "О сайте",
         "feed": "Подписки",
         "main_page": "Главная страница",
-        "popular_categories": "Хештеги",
+        "popular_categories": "Категории",
         "random_question": "Случайный вопрос",
         "recent_changes": "Свежие правки",
         "sandbox": "Песочница"
