@@ -16,7 +16,7 @@ class Edit_Answer_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Как птицы делают игры? · Править ответ · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Как птицы делают игры? – Править ответ – Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

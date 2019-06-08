@@ -16,7 +16,7 @@ class History_Answer_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Answer history How to cry? · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Answer history How to cry? – Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

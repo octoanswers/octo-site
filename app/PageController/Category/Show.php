@@ -111,7 +111,7 @@ class Show_Category_PageController extends Abstract_PageController
 
     protected function _getPageDescription()
     {
-        return $this->translator->get('Questions with category').' #'.$this->category->title.' · '.$this->translator->get('answeropedia');
+        return $this->translator->get('Questions with category').' #'.$this->category->title.' – '.$this->translator->get('answeropedia');
     }
 
     private function _titleFromURI(string $uri): string

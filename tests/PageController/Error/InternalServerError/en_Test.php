@@ -14,7 +14,7 @@ class InternalServerError_Error_PageController__en__Test extends Abstract_Fronte
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Error 500 · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Error 500 – Answeropedia', $responseBody);
         $this->assertSame(500, $response->getStatusCode());
     }
 }

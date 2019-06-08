@@ -16,7 +16,7 @@ class Newest_Users_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Новые пользователи со всего мира · Страница 0 · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Новые пользователи со всего мира – Страница 0 – Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

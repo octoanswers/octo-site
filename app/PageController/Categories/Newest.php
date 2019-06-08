@@ -35,6 +35,6 @@ class Newest_Categories_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->translator->get('New categories').' · '.$this->translator->get('page').' '.$this->page.' · '.$this->translator->get('answeropedia');
+        return $this->translator->get('New categories').' – '.$this->translator->get('page').' '.$this->page.' – '.$this->translator->get('answeropedia');
     }
 }

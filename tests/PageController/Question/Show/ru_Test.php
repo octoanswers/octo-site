@@ -22,7 +22,7 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         //var_dump($responseBody);
 
 
-        $this->assertStringContainsString('Как дела? · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Как дела? – Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -38,7 +38,7 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('Что означает FILE_NAME? · Answeropedia', $responseBody);
+        $this->assertStringContainsString('Что означает FILE_NAME? – Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 

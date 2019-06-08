@@ -16,7 +16,7 @@ class List_Categories_PageController__en__Test extends Abstract_Frontend_TestCas
         $response = $this->app->run(true);
         $responseBody = (string) $response->getBody();
 
-        $this->assertStringContainsString('New categories · Page 1 · Answeropedia', $responseBody);
+        $this->assertStringContainsString('New categories – Page 1 – Answeropedia', $responseBody);
         $this->assertSame(200, $response->getStatusCode());
     }
 }
