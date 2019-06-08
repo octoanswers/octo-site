@@ -16,7 +16,7 @@
 
         <?php if ($question->categoriesCount == 0): ?>
             <a rel="nofollow" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>">
-                Проставить темы
+                <?= $this->translator->get('sandbox', 'btn_add_categories') ?> 
             </a>
             <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
         <?php endif; ?>

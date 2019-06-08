@@ -32,12 +32,6 @@
                     <span class="badge badge-primary mr-2">Новый</span>
                 <?php endif; ?>
 
-                <?php if ($question->categoriesCount == 0): ?>
-                    <a class="badge badge-success mr-2" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
-                        Проставить темы
-                    </a>
-                <?php endif; ?>
-
                 <?php if (strlen($question->answer->text)): ?>
                     <span class="small color-secondary-light-1">2 автора</a>
                     <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>

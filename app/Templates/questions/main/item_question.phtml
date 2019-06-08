@@ -27,7 +27,7 @@
 
         <?php if ($question->categoriesCount == 0): ?>
             <a class="badge badge-success mr-2" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
-                Проставить темы
+                <?= $this->translator->get('questions', 'btn_update_categories') ?> 
             </a>
         <?php endif; ?>
 

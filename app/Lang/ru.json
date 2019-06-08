@@ -24,7 +24,7 @@
     "Find your first friends": "Найдите первых друзей",
     "Find your friends": "Найдите друзей",
     "Follow": "Подписаться",
-    "Follow 3 more categories": "Подпишитесь на три темы",
+    "Follow 3 more categories": "Подпишитесь на три категории",
     "Follow some questions": "Следуйте за некоторыми вопросами",
     "Follow your first question": "Подпишитесь на первый вопрос",
     "Followed": "Подписан",
@@ -52,7 +52,7 @@
     "Save": "Сохранить",
     "Search categories": "Поиск тем",
     "Search in DuckDuckGo": "Поискать в DuckDuckGo",
-    "Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.": "Выберите и подпишитесь на три близких вам темы. Вопросы на эти темы будут появляться у вас в ленте новостей.",
+    "Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.": "Выберите и подпишитесь на три близких вам категории вопросов. После этого новые вопросы на эти темы будут появляться у вас в ленте новостей.",
     "Set real name": "Введите реальное имя",
     "Set signature": "Придумайте подпись",
     "Share link": "Поделиться ссылкой",
@@ -230,7 +230,8 @@
     },
     "question_update_categories": {
         "page_title": "",
-        "title": "Редактирование категорий"
+        "title": "Редактирование категорий",
+        "btn_update_categories": "Обновить категории"
     },
     "question__actions_top": {
         "edit_answer": "Править ответ",

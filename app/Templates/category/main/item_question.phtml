@@ -32,7 +32,7 @@
 
         <?php if ($question->categoriesCount == 0): ?>
             <a class="badge badge-success mr-3" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
-                Проставить темы
+            <?= $this->translator->get('categories', 'add_categories') ?> 
             </a>
         <?php endif; ?>
 
