@@ -1,0 +1,11 @@
+.btn-light-info {
+    color: $color-info;
+    background-color: $color-white;
+    border-color: $color-white;
+
+    &:hover {
+        color: $color-info-dark-2;
+        background-color: $color-info-light-4;
+        border-color: $color-info-light-4;
+    }
+}

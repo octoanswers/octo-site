@@ -7,13 +7,13 @@
 		</div>
 
         <?php foreach ($this->categories as $category): ?>
-            <a class="btn btn-sm btn-outline-info mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
+            <a class="btn btn-sm btn-info mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
 				<?= $category->title ?>
 			</a>
 		<?php endforeach; ?>
 
 		<?php if ($this->authUser): ?>
-			<a class="btn btn-sm btn-outline-light mb-2" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
+			<a class="btn btn-sm btn-light-info mb-2" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
                 <i class="fas fa-pen mr-1"></i></i>&nbsp;<?= $this->translator->get('question', 'categories_block', 'categories_change') ?>
 			</a>
 		<?php endif; ?>

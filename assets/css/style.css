@@ -50,6 +50,80 @@
   border-right: 1px solid #F1F1F1 !important;
 }
 
+.btn-light-info {
+  color: #5E6F80;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-light-info:hover {
+  color: #2F3F4F;
+  background-color: #C7D9ED;
+  border-color: #C7D9ED;
+}
+
+.btn-outline-primary {
+  color: #3d95e9;
+  border-color: #3d95e9;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3d95e9;
+  border-color: #3d95e9;
+}
+
+.btn-outline-secondary {
+  color: #6B6B6B;
+  border-color: #B9B9B9;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #848484;
+  border-color: #848484;
+}
+
+.btn-outline-success {
+  color: #009B2B;
+  border-color: #009B2B;
+}
+
+.btn-outline-success:hover {
+  background-color: #009B2B;
+  border-color: #009B2B;
+}
+
+.btn-outline-warning {
+  color: #fdc946;
+  border-color: #fdc946;
+}
+
+.btn-outline-warning:hover {
+  background-color: #fdc946;
+  border-color: #fdc946;
+}
+
+.btn-outline-info {
+  color: #5E6F80;
+  border-color: #5E6F80;
+}
+
+.btn-outline-info:hover {
+  background-color: #5E6F80;
+  border-color: #5E6F80;
+}
+
+.btn-outline-light {
+  color: #848484;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-outline-light:hover {
+  color: #535353;
+  background-color: #F1F1F1;
+  border-color: #F1F1F1;
+}
+
 .btn-primary {
   border-color: #3d95e9;
   background-color: #3d95e9;
@@ -100,66 +174,14 @@
   border-color: #CB0D45;
 }
 
-.btn-outline-primary {
-  color: #3d95e9;
-  border-color: #3d95e9;
+.btn-info {
+  background-color: #465767;
+  border-color: #465767;
 }
 
-.btn-outline-primary:hover {
-  background-color: #3d95e9;
-  border-color: #3d95e9;
-}
-
-.btn-outline-secondary {
-  color: #6B6B6B;
-  border-color: #B9B9B9;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #848484;
-  border-color: #848484;
-}
-
-.btn-outline-success {
-  color: #009B2B;
-  border-color: #009B2B;
-}
-
-.btn-outline-success:hover {
-  background-color: #009B2B;
-  border-color: #009B2B;
-}
-
-.btn-outline-warning {
-  color: #fdc946;
-  border-color: #fdc946;
-}
-
-.btn-outline-warning:hover {
-  background-color: #fdc946;
-  border-color: #fdc946;
-}
-
-.btn-outline-info {
-  color: #6152A4;
-  border-color: #6152A4;
-}
-
-.btn-outline-info:hover {
-  background-color: #6152A4;
-  border-color: #6152A4;
-}
-
-.btn-outline-light {
-  color: #848484;
-  background-color: #ffffff;
-  border-color: #ffffff;
-}
-
-.btn-outline-light:hover {
-  color: #535353;
-  background-color: #F1F1F1;
-  border-color: #F1F1F1;
+.btn-info:hover {
+  background-color: #2F3F4F;
+  border-color: #2F3F4F;
 }
 
 .card {

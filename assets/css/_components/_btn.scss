@@ -1,0 +1,61 @@
+// Filled buttons
+
+.btn-primary {
+    border-color: $color-primary;
+    background-color: $color-primary;
+
+    &:hover {
+        background-color: $color-primary-dark-1;
+        border-color: $color-primary-dark-1;
+    }
+}
+
+.btn-secondary {
+    border-color: $color-secondary;
+    background-color: $color-secondary;
+
+    &:hover {
+        background-color: $color-secondary-dark-1;
+        border-color: $color-secondary-dark-1;
+    }
+}
+
+.btn-success {
+    border-color: $color-success;
+    background-color: $color-success;
+
+    &:hover {
+        background-color: $color-success-dark-1;
+        border-color: $color-success-dark-1;
+    }
+}
+
+.btn-warning {
+    background-color: $color-warning;
+    border-color: $color-warning;
+
+    &:hover {
+        background-color: $color-warning;
+        border-color: $color-warning;
+    }
+}
+
+.btn-danger {
+    background-color: $color-danger;
+    border-color: $color-danger;
+
+    &:hover {
+        background-color: $color-danger-dark-1;
+        border-color: $color-danger-dark-1;
+    }
+}
+
+.btn-info {
+    background-color: $color-info-dark-1;
+    border-color: $color-info-dark-1;
+
+    &:hover {
+        background-color: $color-info-dark-2;
+        border-color: $color-info-dark-2;
+    }
+}
