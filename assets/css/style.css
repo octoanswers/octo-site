@@ -5,6 +5,15 @@
   border-color: #77F079;
 }
 
+.badge {
+  font-weight: 400;
+  line-height: 1.5;
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  border-radius: .2rem;
+  vertical-align: middle;
+}
+
 .badge-primary {
   border-color: #3d95e9;
   background-color: #3d95e9;
@@ -33,6 +42,12 @@
 .badge-light {
   border-color: #F1F1F1;
   background-color: #F1F1F1;
+}
+
+.badge-info {
+  color: #ffffff;
+  background-color: #864591;
+  border-color: #864591;
 }
 
 .border-top {
@@ -692,7 +707,7 @@ table:not([class]) td {
   margin-left: 0;
   margin-right: .5rem;
   margin-bottom: .5rem;
-  padding: 8px 12px;
+  padding-right: 8px;
 }
 
 .bootstrap-tagsinput .badge [data-role="remove"] {
