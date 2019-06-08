@@ -31,8 +31,6 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
         $this->pageTitle = str_replace("%question%", $this->question->title, $this->translator->get('Update categories for question "%question%" - Answeropedia'));
         $this->pageDescription = str_replace("%question%", $this->question->title, $this->translator->get('Update categories for question "%question%"'));
 
-        $this->includeCSS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.css';
-
         $this->includeJS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.js';
         $this->includeJS[] = SITE_URL.'/assets/_vendor/twitter/typeahead.js/bloodhound.js';
         $this->includeJS[] = SITE_URL.'/assets/_vendor/twitter/typeahead.js/typeahead.bundle.min.js';

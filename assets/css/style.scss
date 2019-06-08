@@ -18,7 +18,8 @@
 @import "_components/_size";
 @import "_components/_table";
 
-@import "_twitter-typeahead/_main";
+@import "_vendor/_twitter-typeahead";
+@import "_vendor/_bootstrap-tagsinput";
 
 @import "_typography/_font-weight";
 @import "_typography/_links";
