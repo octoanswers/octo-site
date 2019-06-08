@@ -51,15 +51,15 @@
 }
 
 .btn-light-info {
-  color: #5E6F80;
+  color: #864591;
   background-color: #ffffff;
   border-color: #ffffff;
 }
 
 .btn-light-info:hover {
-  color: #2F3F4F;
-  background-color: #C7D9ED;
-  border-color: #C7D9ED;
+  color: #6C2C77;
+  background-color: #FFC9FF;
+  border-color: #FFC9FF;
 }
 
 .btn-outline-primary {
@@ -103,13 +103,13 @@
 }
 
 .btn-outline-info {
-  color: #5E6F80;
-  border-color: #5E6F80;
+  color: #A15EAC;
+  border-color: #A15EAC;
 }
 
 .btn-outline-info:hover {
-  background-color: #5E6F80;
-  border-color: #5E6F80;
+  background-color: #A15EAC;
+  border-color: #A15EAC;
 }
 
 .btn-outline-light {
@@ -175,13 +175,13 @@
 }
 
 .btn-info {
-  background-color: #465767;
-  border-color: #465767;
+  background-color: #864591;
+  border-color: #864591;
 }
 
 .btn-info:hover {
-  background-color: #2F3F4F;
-  border-color: #2F3F4F;
+  background-color: #6C2C77;
+  border-color: #6C2C77;
 }
 
 .card {
@@ -753,5 +753,12 @@ blockquote p:last-child,
 
 .semi-small {
   font-size: .9rem;
+}
+
+.subtitle-1 {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  letter-spacing: .009375em;
 }
 /*# sourceMappingURL=style.css.map */

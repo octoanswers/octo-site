@@ -114,3 +114,12 @@ blockquote,
 .semi-small {
     font-size: .9rem;
 }
+
+// Type Scale based on https://material.io/design/typography/the-type-system.html#type-scale
+
+.subtitle-1 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    letter-spacing: .009375em;
+}

@@ -2,12 +2,12 @@
 <?php if (count($this->categories)): ?>
 	<!-- categories -->
 	<div class="my-5" id="question_categories_list">
-		<div class="h4 mb-3">
+		<div class="subtitle-1 mb-3 color-secondary-dark-1">
 			<?= $this->translator->get('question', 'categories_block', 'title') ?>
 		</div>
 
         <?php foreach ($this->categories as $category): ?>
-            <a class="btn btn-sm btn-info mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
+            <a class="btn btn-sm btn-info mb-2 mr-2 mr-lg-3" href="<?= $category->getURL($this->lang) ?>">
 				<?= $category->title ?>
 			</a>
 		<?php endforeach; ?>
