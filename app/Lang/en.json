@@ -21,6 +21,17 @@
         "text": "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.",
         "title": "About Answeropedia"
     },
+    "categories": {
+        "search_placeholder": "Search categories",
+        "title": "Categories"
+    },
+    "category": {
+        "page_title": "Category: "
+    },
+    "error__category_not_found": {
+        "page_title": "Category not found: ",
+        "title": "Category not found"
+    },
     "flow": {
         "page_title": "Flow"
     },
@@ -31,13 +42,6 @@
         "search": "Search",
         "support": "Support",
         "users": "Users"
-    },
-    "category": {
-        "page_title": "Category: "
-    },
-    "categories": {
-        "search_placeholder": "Search categories",
-        "title": "Categories"
     },
     "internal_server_error": {
         "page_title": "Error 500"
@@ -85,8 +89,8 @@
     "navbar": {
         "about_answeropedia": "About&nbsp;project",
         "btn_ask": "Ask a question",
-        "flow": "Flow",
         "categories": "Categories",
+        "flow": "Flow",
         "login": "Login",
         "questions": "Questions",
         "recent_changes": "Recent&nbsp;changes",
@@ -101,11 +105,11 @@
             "categories_change": "Change",
             "title": "Categories"
         },
-        "block__related_questions": {
-            "title": "Related questions"
-        },
         "block__categories_top": {
             "more_btn": "more…"
+        },
+        "block__related_questions": {
+            "title": "Related questions"
         }
     },
     "question__actions_top": {
@@ -148,8 +152,8 @@
     },
     "sidebar__main_nav": {
         "about_site": "About site",
-        "feed": "Feed",
         "categories": "Popular categories",
+        "feed": "Feed",
         "main_page": "Main page",
         "random_question": "Random question",
         "recent_changes": "Recent changes",

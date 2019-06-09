@@ -11,18 +11,18 @@ class Show_Category_PageController extends Abstract_PageController
         $categoryURI = $args['category_uri'];
 
         try {
-            $categoryTitle = $this->_titleFromURI($categoryURI);
-            $this->category = (new Category_Query($this->lang))->findWithTitle($categoryTitle);
+            $categoryTitle = $this->_categoryTitleFromURI($categoryURI);
+            $this->category = (new Category_Query($this->lang))->categoryWithTitle($categoryTitle);
         } catch (\Exception $e) {
-            //return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
-            return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new CategoryNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->parsedown = new ExtendedParsedown($this->lang);
 
         $humanDateTimezone = new DateTimeZone('UTC');
         $dateHumanizer = new HumanDate($humanDateTimezone, $this->lang);
-
+        // var_dump($this->category);
+        // exit;
         $category_questions = (new CategoriesToQuestions_Relations_Query($this->lang))->findNewestForCategoryWithID($this->category->id);
         $this->category_questions = [];
 
@@ -114,7 +114,7 @@ class Show_Category_PageController extends Abstract_PageController
         return $this->translator->get('Questions with category').' '.$this->category->title.' – '.$this->translator->get('answeropedia');
     }
 
-    private function _titleFromURI(string $uri): string
+    private function _categoryTitleFromURI(string $uri): string
     {
         $uri = str_replace('__', 'DOUBLEUNDERLINE', $uri);
         $uri = str_replace('_', ' ', $uri);

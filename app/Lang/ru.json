@@ -36,9 +36,9 @@
     "New categories": "Новые категории",
     "New users from around the world": "Новые пользователи со всего мира",
     "Newest questions": "Новые вопросы",
-    "No description of changes": "Нет описания изменений",
-    "No category found for \"%query%\"": "Не удалось найти категории по запросу «%query%»",
     "No categories found": "категорий не найдено",
+    "No category found for \"%query%\"": "Не удалось найти категории по запросу «%query%»",
+    "No description of changes": "Нет описания изменений",
     "No questions found": "Вопросов не найдено",
     "No users found": "Пользователей не найдено",
     "On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
@@ -77,12 +77,12 @@
     "Write the first answer": "Напишите первый ответ",
     "Your email": "Ваш email",
     "activity": {
+        "category added question": "вопрос добавлен в категорию",
         "change answer": "обновил ответ",
         "change signature": "поменял подпись",
         "follow category": "подписался на категорию",
         "follow question": "подписался на вопрос",
         "follow user": "подписался на пользователя",
-        "category added question": "вопрос добавлен в категорию",
         "question renamed": "вопрос переименован",
         "question updated answer": "обновлен ответ",
         "renamed question": "переименовал вопрос"
@@ -110,6 +110,18 @@
         "text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
         "title": "Что такое Answeropedia?"
     },
+    "categories": {
+        "search_placeholder": "Поиск категорий",
+        "title": "Категории"
+    },
+    "category": {
+        "More categories": "Больше тем",
+        "page_title": "Категория: "
+    },
+    "error__category_not_found": {
+        "page_title": "Категория не найдена: ",
+        "title": "Категория не найдена"
+    },
     "feed": {
         "Feed": "Лента"
     },
@@ -125,14 +137,6 @@
         "search": "Поиск",
         "support": "Поддержка",
         "users": "Пользователи"
-    },
-    "category": {
-        "More categories": "Больше тем",
-        "page_title": "Категория: "
-    },
-    "categories": {
-        "search_placeholder": "Поиск категорий",
-        "title": "Категории"
     },
     "internal_server_error": {
         "Error 500": "Ошибка 500",
@@ -192,8 +196,8 @@
     "navbar": {
         "about_answeropedia": "О&nbsp;проекте",
         "btn_ask": "Задать вопрос",
-        "flow": "Свежие&nbsp;правки",
         "categories": "Категории",
+        "flow": "Свежие&nbsp;правки",
         "login": "Вход",
         "recent_changes": "Последние&nbsp;правки",
         "saarch_placeholder": "Какой у вас вопрос?",
@@ -209,6 +213,9 @@
         "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
         "Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
         "Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
+        "block__categories_top": {
+            "more_btn": "ещё…"
+        },
         "block__related_questions": {
             "title": "Похожие вопросы"
         },
@@ -222,16 +229,8 @@
             "Be the first author": "Станьте первым автором",
             "Still no one tried to write an answer to this question. Be the first if the category of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
         },
-        "block__categories_top": {
-            "more_btn": "ещё…"
-        },
         "redirected_from": "Перенаправлено с вопроса: ",
         "user_contribution": "Вклад пользователя"
-    },
-    "question_update_categories": {
-        "page_title": "",
-        "title": "Редактирование категорий",
-        "btn_update_categories": "Обновить категории"
     },
     "question__actions_top": {
         "edit_answer": "Править ответ",
@@ -251,6 +250,11 @@
     "question_rename": {
         "Before you rename a question, please read the basic rules for renaming": "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными правилами переименования",
         "Leave redirect": "Оставить редирект"
+    },
+    "question_update_categories": {
+        "btn_update_categories": "Обновить категории",
+        "page_title": "",
+        "title": "Редактирование категорий"
     },
     "questions": {
         "nav": {
