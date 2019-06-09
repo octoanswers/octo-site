@@ -1,7 +1,7 @@
 
 
 var categoriesAPI = new Bloodhound({
-    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     // prefetch: '/api/v1/ru/search/categories.json',
     remote: {
@@ -17,9 +17,9 @@ var spaceKeyCode = 32;
 $('#new_categories').tagsinput({
     trimValue: true,
     typeaheadjs: {
-        name: 'bestPictures',
-        displayKey: 'value',
-        valueKey: 'value',
+        name: 'categories',
+        displayKey: 'title',
+        valueKey: 'title',
         source: categoriesAPI.ttAdapter()
     },
     confirmKeys: [enterKeyCode, commaKeyCode]

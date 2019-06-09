@@ -19,9 +19,9 @@ class SearchCategories_GET_APIController extends Abstract_APIController
                 
                 foreach ($categories as $category) {
                     $output[] = [
-                        "year" => "1967",
-                        "value" => $category->title,
-                        "name" => $category->title
+                        "id" => $category->id,
+                        "display_string" => $category->title.' – '.$category->id,
+                        "title" => $category->title
                     ];
                 }
             }
