@@ -2,13 +2,13 @@
 <?php if (isset($this->related_questions)): ?>
 <div class="my-5">
 	<!-- related questions -->
-	<div class="h4 mb-3">
+    <div class="subtitle-1 mb-2 color-secondary-dark-1">
 		<?= $this->translator->get('question', 'block__related_questions', 'title') ?>
 	</div>
 
 	<?php foreach ($this->related_questions as $question): ?>
 		<div class="my-2">
-			<a class="lead color-secondary-dark-3 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
+			<a class="h4 color-secondary-dark-3 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
 				<?= $question->title ?>
 			</a>
 			<div class="small color-secondary-light-1">
