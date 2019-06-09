@@ -15,9 +15,9 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
         $responseBody = (string) $response->getBody();
         
         $expectedResponseZeroItem = [
-            "year" => "1967",
-            'value' => 'Русская литература',
-            'name' => 'Русская литература'
+            'id' => 1,
+            'display_string' => 'Русская литература – 1',
+            'title' => 'Русская литература'
         ];
 
         $actualResponse = json_decode($responseBody, true);
@@ -38,14 +38,14 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
         
         $expectedResponse = [
             [
-                'year' => '1967',
-                'value' => 'Автомобили',
-                'name' => 'Автомобили'
+                'id' => 4,
+                'display_string' => 'Автомобили – 4',
+                'title' => 'Автомобили'
             ],
             [
-                'year' => '1967',
-                'value' => 'Автоспорт',
-                'name' => 'Автоспорт'
+                'id' => 6,
+                'display_string' => 'Автоспорт – 6',
+                'title' => 'Автоспорт'
             ]
         ];
 
