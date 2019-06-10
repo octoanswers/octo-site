@@ -1,12 +1,12 @@
 <?php
 
-class Redirects_Query__redirectForQuestionWithID__en__Test extends Abstract_DB_TestCase
+class Question_Redirects_Query__redirectForQuestionWithID__en__Test extends Abstract_DB_TestCase
 {
-    protected $setUpDB = ['en' => ['redirects']];
+    protected $setUpDB = ['en' => ['redirects_questions']];
 
     public function test_base()
     {
-        $redirect = (new Redirects_Query('en'))->redirectForQuestionWithID(7);
+        $redirect = (new Question_Redirects_Query('en'))->redirectForQuestionWithID(7);
 
         $this->assertEquals(7, $redirect->fromID);
         $this->assertEquals('How many showflakes in showrain?', $redirect->toTitle);
@@ -15,6 +15,6 @@ class Redirects_Query__redirectForQuestionWithID__en__Test extends Abstract_DB_T
     public function test_RedirectNotExists()
     {
         $this->expectExceptionMessage('Redirect for question with ID "457" not exists');
-        $redirect = (new Redirects_Query('en'))->redirectForQuestionWithID(457);
+        $redirect = (new Question_Redirects_Query('en'))->redirectForQuestionWithID(457);
     }
 }

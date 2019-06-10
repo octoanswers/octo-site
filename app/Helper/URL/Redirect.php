@@ -2,7 +2,7 @@
 
 class Redirect_URL_Helper extends Abstract_URL_Helper
 {
-    public static function getURL(string $lang, Redirect_Model $redirect): string
+    public static function getURL(string $lang, Question_Redirect_Model $redirect): string
     {
         return SITE_URL.'/'.$lang.'/'.self::URIFromTitle($redirect->toTitle);
     }

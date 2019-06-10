@@ -43,16 +43,16 @@ class Categories_Query__findNewest_base_Test extends Abstract_DB_TestCase
         $this->assertEquals('Русская литература', $categories[9]->title);
     }
 
-    public function test_FindFirst13Questions_Ok()
+    public function test_Find_first_7_categories()
     {
-        $categories = (new Categories_Query('ru'))->findNewest(1, 13);
+        $categories = (new Categories_Query('ru'))->findNewest(1, 7);
 
-        $this->assertEquals(13, count($categories));
+        $this->assertEquals(7, count($categories));
 
         $this->assertEquals(17, $categories[0]->id);
         $this->assertEquals('Фотосинтез', $categories[0]->title);
 
-        $this->assertEquals(5, $categories[12]->id);
-        $this->assertEquals('Москва', $categories[12]->title);
+        $this->assertEquals(11, $categories[6]->id);
+        $this->assertEquals('Каша', $categories[6]->title);
     }
 }

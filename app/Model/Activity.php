@@ -18,6 +18,20 @@ class Activity_Model extends Abstract_Model
     const F_H_ADDED_Q = 'F_H_ADDED_Q';
     const F_Q_UPDATE_A = 'F_Q_UPDATE_A';
 
+    // Question Activity Const
+
+    // Answer Activity Const
+
+    // Category Activity Const
+
+    const CATEGORY_RENAMED_BY_USER = 'CATEGORY_RENAMED_BY_USER';
+
+    // User Activity Const
+
+    const USER_RENAME_CATEGORY = 'USER_RENAME_CATEGORY';
+
+    // Achievment Activity Const
+
     // Activity properties
 
     public $id; // int

@@ -4,7 +4,7 @@ class Redirect_URL_Helper__getURL__Test extends PHPUnit\Framework\TestCase
 {
     public function test_baseURI()
     {
-        $redirect = Redirect_Model::initWithDBState([
+        $redirect = Question_Redirect_Model::initWithDBState([
             'rd_from' => 13,
             'rd_title' => 'This is question?',
         ]);

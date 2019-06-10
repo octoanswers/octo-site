@@ -37,13 +37,13 @@ class Show_Question_PageController extends Abstract_PageController
         $this->_tempJobs();
 
         if ($this->question->isRedirect) {
-            $redirect = (new Redirects_Query($this->lang))->redirectForQuestionWithID($this->question->id);
+            $redirect = (new Question_Redirects_Query($this->lang))->redirectForQuestionWithID($this->question->id);
             $this->questionRedirect = Question_Model::initWithTitle($redirect->toTitle);
 
             $needStopRedirect = $request->getParam('no_redirect');
             if (!$needStopRedirect) {
                 $redirectTitle = $this->questionRedirect->title;
-                $redirectURL = Redirect_URL_Helper::getRedirectURLForTitle($this->lang, $redirectTitle).'?redirect_from_id='.$this->question->id;
+                $redirectURL = Question_Redirect_URL_Helper::getRedirectURLForTitle($this->lang, $redirectTitle).'?redirect_from_id='.$this->question->id;
                 return $response->withRedirect($redirectURL, 301);
             }
 

@@ -1,12 +1,12 @@
 <?php
 
-class Redirect_Mapper extends Abstract_Mapper
+class Question_Redirect_Mapper extends Abstract_Mapper
 {
-    public function create(Redirect_Model $redirect): Redirect_Model
+    public function create(Question_Redirect_Model $redirect): Question_Redirect_Model
     {
-        Redirect_Validator::validate($redirect);
+        Question_Redirect_Validator::validate($redirect);
 
-        $sql = 'INSERT INTO redirects (rd_from, rd_title) VALUES (:rd_from, :rd_title)';
+        $sql = 'INSERT INTO redirects_questions (rd_from, rd_title) VALUES (:rd_from, :rd_title)';
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':rd_from', $redirect->fromID, PDO::PARAM_INT);
         $stmt->bindParam(':rd_title', $redirect->toTitle, PDO::PARAM_STR);

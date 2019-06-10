@@ -30,7 +30,7 @@ class Categories_Query extends Abstract_Query
 
         $offset = $categoriesLastID - ($perPage * $page);
 
-        $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE `c_id` > :id_offset LIMIT :per_page');
+        $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_id >= :id_offset AND cat_is_redirect = 0 LIMIT :per_page');
         $stmt->bindParam(':id_offset', $offset, PDO::PARAM_INT);
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {

@@ -2,7 +2,7 @@
 
 class QuestionsIDRename_PATCH_APIController__new_title_Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects'], 'users' => ['users']];
+    protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
 
     public function test_NewTitleNotSet_Error()
     {

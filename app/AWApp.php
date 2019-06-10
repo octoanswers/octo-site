@@ -48,6 +48,7 @@ class AWApp
             $this->delete('/users/{id}/follow.json', 'UsersIDFollow_DELETE_APIController:handle');
 
             // PATCH
+            $this->patch('/categories/{id}/rename.json', 'CategoriesIDRename_PATCH_APIController:handle');
             $this->patch('/questions/{id}/rename.json', 'QuestionsIDRename_PATCH_APIController:handle');
             $this->patch('/users/{id}/signature.json', 'UsersIDSignature_PATCH_APIController:handle');
             $this->patch('/users/{id}/site.json', 'UsersIDSite_PATCH_APIController:handle');

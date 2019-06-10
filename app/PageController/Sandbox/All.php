@@ -21,7 +21,7 @@ class All_Sandbox_PageController extends Abstract_PageController
 
         foreach ($this->questions as $question) {
             if ($question->isRedirect) {
-                $redirect = (new Redirects_Query($this->lang))->redirectForQuestionWithID($question->id);
+                $redirect = (new Question_Redirects_Query($this->lang))->redirectForQuestionWithID($question->id);
                 $this->redirects[$question->id] = $redirect;
             }
         }

@@ -1,6 +1,6 @@
 <?php
 
-class Redirect_Model extends Abstract_Model
+class Category_Redirect_Model extends Abstract_Model
 {
     public $fromID; // int
     public $toTitle; // string
@@ -9,7 +9,7 @@ class Redirect_Model extends Abstract_Model
     # Init methods
     #
 
-    public static function initWithDBState(array $state): Redirect_Model
+    public static function initWithDBState(array $state): Category_Redirect_Model
     {
         $redirect = new self();
         $redirect->fromID = (int) $state['rd_from'];

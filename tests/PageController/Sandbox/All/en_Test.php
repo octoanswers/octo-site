@@ -2,7 +2,7 @@
 
 class All_Sandbox_PageController__en__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['en' => ['questions', 'categories', 'revisions', 'redirects'], 'users' => ['users']];
+    protected $setUpDB = ['en' => ['questions', 'categories', 'revisions', 'redirects_questions'], 'users' => ['users']];
 
     public function testBase()
     {

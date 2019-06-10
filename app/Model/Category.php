@@ -7,6 +7,7 @@ class Category extends Abstract_Model
     public $id; // int
     public $title; // string
     public $words; // string
+    public $isRedirect = false; // bool
 
     #
     # Init methods
@@ -29,6 +30,7 @@ class Category extends Abstract_Model
         $category = new self();
         $category->id = (int) $state['c_id'];
         $category->title = (string) $state['c_title'];
+        $category->isRedirect = (bool) $state['cat_is_redirect'];
 
         return $category;
     }

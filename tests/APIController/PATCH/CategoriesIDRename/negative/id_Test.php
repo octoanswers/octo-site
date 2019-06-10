@@ -1,13 +1,13 @@
 <?php
 
-class QuestionsIDRename_PATCH_APIController__rename_id_Test extends Abstract_Frontend_TestCase
+class CategoriesIDRename_PATCH_APIController__negative_IDTest extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
+    protected $setUpDB = ['ru' => ['categories', 'activities', 'redirects_categories'], 'users' => ['users']];
 
-    public function test_QuestionIDEqualZero_Error()
+    public function test_Error_when_category_ID_equal_zero()
     {
         $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Как ты, мистер Хайдегер?');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/0/rename.json', $queryString, true);
+        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/0/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -16,17 +16,17 @@ class QuestionsIDRename_PATCH_APIController__rename_id_Test extends Abstract_Fro
 
         $expectedResponse = [
             'error_code' => 0,
-            'error_message' => 'Question id param 0 must be greater than or equal to 1',
+            'error_message' => 'Category id param 0 must be greater than or equal to 1',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
     }
 
-    public function test_QuestionIDBelowZero_Error()
+    public function test_Error_when_category_ID_below_zero()
     {
         $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Как ты, мистер Хайдегер?');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/-1/rename.json', $queryString, true);
+        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/-1/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -35,7 +35,7 @@ class QuestionsIDRename_PATCH_APIController__rename_id_Test extends Abstract_Fro
 
         $expectedResponse = [
             'error_code' => 0,
-            'error_message' => 'Question id param -1 must be greater than or equal to 1',
+            'error_message' => 'Category id param -1 must be greater than or equal to 1',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
