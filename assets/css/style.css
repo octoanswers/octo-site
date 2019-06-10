@@ -332,16 +332,16 @@ ul.list-links {
 ul.list-links li {
   padding: 0.25rem 0;
   font-size: 0.9rem;
-  color: #848484;
+  color: #535353;
 }
 
 ul.list-links li a {
-  color: #6B6B6B;
+  color: #535353;
   text-decoration: none;
 }
 
 ul.list-links li a:hover {
-  color: #3C3C3C;
+  color: #262626;
 }
 
 ul.list-links li a.active {

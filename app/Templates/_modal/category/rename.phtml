@@ -1,22 +1,23 @@
 
 <!-- Modal -->
-<div class="modal fade" id="modal_rename_question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_rename_category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= $this->translator->get('Rename question') ?>
+                    <?= $this->translator->get('Rename category') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>
-            <form id="form__rename_question" data-question-id="<?= $this->question->id ?>">
+            </div> 
+            <form id="form__rename_category" data-category-id="<?= $this->category->id ?>">
                 <div class="modal-body">
                     <div class="form-group">
                         <label>
-                            <?= $this->translator->get('Before you rename a question, please read the basic rules for renaming') ?></label>
-                        <textarea class="form-control" id="new_title" rows="6"><?= $this->question->title ?></textarea>
+                            <?= $this->translator->get('Before you rename a category, please read the basic rules for renaming') ?>
+                        </label>
+                        <input class="form-control" id="new_title" rows="6" value="<?= $this->category->title ?>">
                     </div>
                     <div class="form-check">
                         <label class="form-check-label mt-1">
@@ -26,8 +27,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" id="form__rename_question__submit" class="btn btn-primary">
-                        <?= $this->translator->get('Rename question') ?>
+                    <button type="submit" id="form__rename_category__submit" class="btn btn-primary">
+                        <?= $this->translator->get('Rename category') ?>
                     </button>
                 </div>
             </form>

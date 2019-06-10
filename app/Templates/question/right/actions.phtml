@@ -2,7 +2,7 @@
 <!-- right_actions -->
 
 <nav class="my-4">
-	<div class="h5">
+    <div class="subtitle-1 mb-2 color-secondary-dark-1">
         <?= $this->translator->get('Actions') ?>
 	</div>
 	<ul class="list-links">
@@ -25,7 +25,7 @@
 		<?php if ($this->authUser): ?>
 			<!-- rename question -->
 			<li>
-				<a href="#" data-toggle="modal" data-target="#modal_rename">
+				<a href="#" data-toggle="modal" data-target="#modal_rename_question">
 					<i class="fas fa-edit w-24px"></i>&nbsp;<?= $this->translator->get('Rename question') ?>	
 				</a>
 			</li>

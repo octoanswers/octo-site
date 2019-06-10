@@ -1,0 +1,24 @@
+
+<!-- right_actions -->
+
+<nav class="mb-4">
+    <div class="subtitle-1 mb-2 color-secondary-dark-1">
+        <?= $this->translator->get('category', 'actions_right', 'title') ?>
+	</div>
+	<ul class="list-links">
+        
+		<?php if ($this->authUser): ?>
+			<!-- rename_category -->
+			<li>
+				<a href="#" data-toggle="modal" data-target="#modal_rename_category">
+					<i class="fas fa-edit w-24px"></i>&nbsp;<?= $this->translator->get('category', 'actions_right', 'rename_category') ?>	
+				</a>
+			</li>
+			<!-- / rename_category -->
+		<?php endif; ?>
+		
+	</ul>
+</nav>
+
+<!-- / right_actions -->
+

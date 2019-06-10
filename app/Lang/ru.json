@@ -116,7 +116,12 @@
     },
     "category": {
         "More categories": "Больше тем",
-        "page_title": "Категория: "
+        "actions_right": {
+            "rename_category": "Переименовать категорию",
+            "title": "Действия"
+        },
+        "page_title": "Категория: ",
+        "title": "Категория"
     },
     "error__category_not_found": {
         "page_title": "Категория не найдена: ",

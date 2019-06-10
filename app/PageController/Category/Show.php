@@ -63,6 +63,8 @@ class Show_Category_PageController extends Abstract_PageController
         //}
 
         $this->_prepareFollowButton();
+        $this->_prepareAdditionalJS();
+        $this->_prepareModals();
 
         $this->template = 'category';
         $this->pageTitle = $this->_getPageTitle();
@@ -93,7 +95,6 @@ class Show_Category_PageController extends Abstract_PageController
             $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relationWithUserIDAndCategoryID($authUserID, $categoryID);
 
             $this->followed = $relation ? true : false;
-            $this->includeJS[] = 'category/follow';
         }
     }
 
@@ -179,5 +180,20 @@ class Show_Category_PageController extends Abstract_PageController
         }
 
         return $related_categories;
+    }
+
+    protected function _prepareAdditionalJS()
+    {
+        if ($this->authUser) {
+            $this->includeJS[] = 'category/rename';
+            $this->includeJS[] = 'category/follow';
+        }
+    }
+
+    protected function _prepareModals()
+    {
+        if ($this->authUser) {
+            $this->includeModals[] = 'category/rename';
+        }
     }
 }

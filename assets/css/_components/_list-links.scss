@@ -5,14 +5,14 @@ ul.list-links {
     li {
         padding: 0.25rem 0;
         font-size: 0.9rem;
-        color: $color-secondary;
+        color: $color-secondary-dark-2;
 
         a {
-            color: $color-secondary-dark-1;
+            color: $color-secondary-dark-2;
             text-decoration: none;
 
             &:hover {
-                color: $color-secondary-dark-3;
+                color: $color-secondary-dark-4;
             }
 
             &.active {
