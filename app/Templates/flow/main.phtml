@@ -27,6 +27,7 @@
             case 'F_U_UPDATE_A':
             case 'F_U_FOLLOW_Q':
             case 'F_U_FOLLOW_U':
+            case 'USER_RENAME_CATEGORY':
             //case 'followed_U_asked_Q':
             //case 'followed_U_repost_Q':
             //case 'followed_H_got_achievement':
@@ -35,6 +36,7 @@
                 break;
             // Don`t show some activities
             case 'F_Q_UPDATE_A':
+            case 'CATEGORY_RENAMED_BY_USER': // Doublicate of USER_RENAME_CATEGORY
                 echo "<!-- Not show: ".$activity['activity_type']." -->";
                 break;
             default:

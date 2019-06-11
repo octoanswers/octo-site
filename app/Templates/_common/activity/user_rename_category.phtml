@@ -1,0 +1,30 @@
+
+<!-- activity user_rename_category -->
+<div class="my-4">
+
+    <div class="media">
+		<a class="d-block wh-3 mr-3 mb-3 rounded-circle" href="<?= $data['user']['profile_url'] ?>">
+            <img class="wh-3 mr-3 rounded-circle" src="<?= $data['user']['avatar_xs_url'] ?>">
+        </a>
+  		<div class="media-body">
+			<a class="h5 color-secondary-dark-4 text-decoration-none" href="<?= $data['user']['profile_url'] ?>">
+				<?= $data['user']['name'] ?>
+			</a>
+            
+			<div class="semi-small color-secondary-dark-1">
+                <?= $activity['created_at__humanized'] ?>
+        
+			</div>
+		</div>
+    </div>
+
+    <?= $this->translator->get('flow', 'action', 'user_rename_category') ?>
+    <div>
+        <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['category']['url'] ?>"><?= $data['category']['title_new'] ?></a>,
+        <span class="color-secondary-dark-1">
+            <?= $this->translator->get('flow', 'action', 'user_rename_category_before') ?><?= $data['category']['title_old'] ?>
+        </span>
+    </div>
+
+</div>
+<!-- / activity user_rename_category -->

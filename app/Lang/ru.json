@@ -133,7 +133,11 @@
     "flow": {
         "Flow": "Поток",
         "Questions and answers flow on Answeropedia. ": " Поток вопросов и ответов на Answeropedia.",
-        "page_title": "Поток"
+        "page_title": "Поток",
+        "action": {
+            "user_rename_category": "Переименовал категорию",
+            "user_rename_category_before": "было: "
+        }
     },
     "footer": {
         "about": "О сайте",
