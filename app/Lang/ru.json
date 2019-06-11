@@ -136,7 +136,7 @@
         "page_title": "Поток",
         "action": {
             "user_rename_category": "Переименовал категорию",
-            "user_rename_category_before": "было: "
+            "user_rename_category_before": "Ранее: "
         }
     },
     "footer": {

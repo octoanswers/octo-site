@@ -20,10 +20,12 @@
 
     <?= $this->translator->get('flow', 'action', 'user_rename_category') ?>
     <div>
-        <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['category']['url'] ?>"><?= $data['category']['title_new'] ?></a>,
-        <span class="color-secondary-dark-1">
+        <a class="h3 text-decoration-none color-secondary-dark-4" href="<?= $data['category']['url'] ?>">
+            <?= $data['category']['title_new'] ?>
+        </a>
+        <div class="small mt-1 color-secondary">
             <?= $this->translator->get('flow', 'action', 'user_rename_category_before') ?><?= $data['category']['title_old'] ?>
-        </span>
+        </div>
     </div>
 
 </div>
