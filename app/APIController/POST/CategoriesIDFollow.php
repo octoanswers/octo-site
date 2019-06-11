@@ -43,7 +43,7 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
             $activity->type = Activity_Model::USER_FOLLOW_CATEGORY;
             $activity->subject = $user;
             $activity->data = $category;
-            $activity = (new UFollowH_Activity_Mapper($this->lang))->create($activity);
+            $activity = (new UFollowC_Activity_Mapper($this->lang))->create($activity);
             $output = [
                 'lang' => $this->lang,
                 'relation_id' => $relation->id,

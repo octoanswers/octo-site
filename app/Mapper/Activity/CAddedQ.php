@@ -1,6 +1,6 @@
 <?php
 
-class HAddedQ_Activity_Mapper extends Abstract_Mapper
+class CAddedQ_Activity_Mapper extends Abstract_Mapper
 {
     public function create(Activity_Model $activity): Activity_Model
     {

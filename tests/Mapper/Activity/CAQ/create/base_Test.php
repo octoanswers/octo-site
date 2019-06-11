@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Activity_HAQ__create__Test extends Abstract_DB_TestCase
+class Mapper_Activity_CAQ__create__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['activities']];
 
@@ -15,7 +15,7 @@ class Mapper_Activity_HAQ__create__Test extends Abstract_DB_TestCase
         $activity->subject = $category;
         $activity->data = $question;
 
-        $activity = (new HAddedQ_Activity_Mapper('ru'))->create($activity);
+        $activity = (new CAddedQ_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
         $this->assertEquals(Activity_Model::CATEGORY_ADDED_QUESTION, $activity->type);

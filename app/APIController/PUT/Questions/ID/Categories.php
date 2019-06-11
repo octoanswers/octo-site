@@ -68,7 +68,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                     $activity->type = Activity_Model::CATEGORY_ADDED_QUESTION;
                     $activity->subject = $category;
                     $activity->data = $question;
-                    $activity = (new HAddedQ_Activity_Mapper($this->lang))->create($activity);
+                    $activity = (new CAddedQ_Activity_Mapper($this->lang))->create($activity);
                 }
             }
 

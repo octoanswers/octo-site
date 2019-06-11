@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Activity_UFH__create__Test extends Abstract_DB_TestCase
+class Mapper_Activity_UFC__create__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['activities']];
 
@@ -17,7 +17,7 @@ class Mapper_Activity_UFH__create__Test extends Abstract_DB_TestCase
         $activity->subject = $user;
         $activity->data = $category;
 
-        $activity = (new UFollowH_Activity_Mapper('ru'))->create($activity);
+        $activity = (new UFollowC_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
         $this->assertEquals(Activity_Model::USER_FOLLOW_CATEGORY, $activity->type);
