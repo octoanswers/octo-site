@@ -331,7 +331,7 @@ ul.list-links {
 
 ul.list-links li {
   padding: 0.25rem 0;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: #535353;
 }
 
@@ -581,24 +581,72 @@ ul.list-links li a.active {
   width: 6rem;
 }
 
-.w-8px {
-  width: 8px;
-}
-
 .w-16px {
   width: 16px;
+}
+
+.w-20px {
+  width: 20px;
 }
 
 .w-24px {
   width: 24px;
 }
 
+.w-28px {
+  width: 28px;
+}
+
 .w-32px {
   width: 32px;
 }
 
+.w-36px {
+  width: 36px;
+}
+
 .w-40px {
   width: 40px;
+}
+
+.w-44px {
+  width: 44px;
+}
+
+.w-48px {
+  width: 48px;
+}
+
+.w-52px {
+  width: 52px;
+}
+
+.w-56px {
+  width: 56px;
+}
+
+.w-60px {
+  width: 60px;
+}
+
+.w-64px {
+  width: 64px;
+}
+
+.w-68px {
+  width: 68px;
+}
+
+.w-72px {
+  width: 72px;
+}
+
+.w-76px {
+  width: 76px;
+}
+
+.w-80px {
+  width: 80px;
 }
 
 .max-width-40px {
@@ -713,6 +761,58 @@ table:not([class]) td {
   text-decoration: none;
   outline: 0;
   background-color: #428bca;
+}
+
+/* Rules for sizing the icon. */
+.material-icons {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.material-icons.md-12 {
+  font-size: 12px;
+}
+
+.material-icons.md-14 {
+  font-size: 14px;
+}
+
+.material-icons.md-16 {
+  font-size: 16px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: white;
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .bootstrap-tagsinput {
@@ -966,9 +1066,10 @@ blockquote p:last-child,
 }
 
 .subtitle-1 {
-  font-size: 1rem;
+  font-size: 14px;
   line-height: 1.75rem;
   font-weight: 400;
   letter-spacing: .009375em;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

@@ -110,6 +110,11 @@
         },
         "block__related_questions": {
             "title": "Related questions"
+        },
+        "lure_be_first_contributor": {
+            "title": "Be the first author",
+            "message": "Still no one tried to write an answer to this question. Be the first if the category of the question is close to you!",
+            "btn_write": "Write first answer"
         }
     },
     "question__actions_top": {

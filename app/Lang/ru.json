@@ -73,7 +73,6 @@
     "Visit your feed": "Посетите ленту",
     "Wiki-answers on Answeropedia": "Вики-ответы на Answeropedia",
     "Without categories": "Без тем",
-    "Write first answer": "Написать первый ответ",
     "Write the first answer": "Напишите первый ответ",
     "Your email": "Ваш email",
     "activity": {
@@ -243,8 +242,9 @@
             "title": "Категории вопроса"
         },
         "lure_be_first_contributor": {
-            "Be the first author": "Станьте первым автором",
-            "Still no one tried to write an answer to this question. Be the first if the category of the question is close to you!": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!"
+            "title": "Станьте первым автором!",
+            "message": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!",
+            "btn_write": "Написать первый ответ"
         },
         "redirected_from": "Перенаправлено с вопроса: ",
         "user_contribution": "Вклад пользователя"
