@@ -497,6 +497,66 @@ ul.list-links li a.active {
   height: 6rem;
 }
 
+.wh-4px {
+  width: 4px;
+  height: 4px;
+}
+
+.wh-8px {
+  width: 8px;
+  height: 8px;
+}
+
+.wh-12px {
+  width: 12px;
+  height: 12px;
+}
+
+.wh-16px {
+  width: 16px;
+  height: 16px;
+}
+
+.wh-20px {
+  width: 20px;
+  height: 20px;
+}
+
+.wh-24px {
+  width: 24px;
+  height: 24px;
+}
+
+.wh-28px {
+  width: 28px;
+  height: 28px;
+}
+
+.wh-32px {
+  width: 32px;
+  height: 32px;
+}
+
+.wh-36px {
+  width: 36px;
+  height: 36px;
+}
+
+.wh-40px {
+  width: 40px;
+  height: 40px;
+}
+
+.wh-44px {
+  width: 44px;
+  height: 44px;
+}
+
+.wh-48px {
+  width: 48px;
+  height: 48px;
+}
+
 .w-1 {
   width: 1rem;
 }

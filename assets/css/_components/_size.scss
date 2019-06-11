@@ -7,6 +7,13 @@
     }
 }
 
+@for $i from 1 through 12 {
+    .wh-#{$i * 4 + px} {
+        width: $i * 4 + px;
+        height: $i * 4 + px;
+    }
+}
+
 // Width
 
 @for $i from 1 through 6 {
