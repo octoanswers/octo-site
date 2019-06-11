@@ -13,13 +13,13 @@ class Mapper_Activity_UFH__create__Test extends Abstract_DB_TestCase
         $category = Category::initWithTitle('tag10');
 
         $activity = new Activity_Model();
-        $activity->type = Activity_Model::F_U_FOLLOW_H;
+        $activity->type = Activity_Model::USER_FOLLOW_CATEGORY;
         $activity->subject = $user;
         $activity->data = $category;
 
         $activity = (new UFollowH_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
-        $this->assertEquals(Activity_Model::F_U_FOLLOW_H, $activity->type);
+        $this->assertEquals(Activity_Model::USER_FOLLOW_CATEGORY, $activity->type);
     }
 }

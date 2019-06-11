@@ -7,7 +7,7 @@ class UFollowH_Activity_Mapper extends Abstract_Mapper
         $user = $activity->subject;
         $category = $activity->data;
 
-        if ($activity->type != Activity_Model::F_U_FOLLOW_H) {
+        if ($activity->type != Activity_Model::USER_FOLLOW_CATEGORY) {
             throw new Exception("Incorrect activity type", 0);
         }
         if (!is_a($user, User_Model::class)) {
