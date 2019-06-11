@@ -13,31 +13,31 @@ class ExtendedParsedown extends Parsedown
         }
         $this->lang = $lang;
 
-        $this->InlineTypes['#'][]= 'TopicMention';
-        $this->inlineMarkerList .= '#';
+        // $this->InlineTypes['#'][]= 'CategoryMention';
+        // $this->inlineMarkerList .= '#';
     }
 
-    protected function inlineTopicMention($Excerpt)
-    {
-        if (preg_match(self::CATEGORY_PATTERN, $Excerpt['context'], $matches)) {
-            $category = new Category();
-            $category->title = $matches[1];
-            $categoryURL = $category->getURL($this->lang);
+    // protected function inlineCategoryMention($Excerpt)
+    // {
+    //     if (preg_match(self::CATEGORY_PATTERN, $Excerpt['context'], $matches)) {
+    //         $category = new Category();
+    //         $category->title = $matches[1];
+    //         $categoryURL = $category->getURL($this->lang);
             
-            return [
-                'extent' => strlen($matches[0]),
-                'element' => [
-                    'name' => 'a',
-                    'text' => $matches[0],
-                    'attributes' => [
-                        'href' => $categoryURL,
-                        'title' => '#'.$category->title,
-                        'class' => 'inline-category',
-                    ],
-                ],
-            ];
-        }
-    }
+    //         return [
+    //             'extent' => strlen($matches[0]),
+    //             'element' => [
+    //                 'name' => 'a',
+    //                 'text' => $matches[0],
+    //                 'attributes' => [
+    //                     'href' => $categoryURL,
+    //                     'title' => '#'.$category->title,
+    //                     'class' => 'inline-category',
+    //                 ],
+    //             ],
+    //         ];
+    //     }
+    // }
 
     /**
      * Overwrite methods from Parsedown

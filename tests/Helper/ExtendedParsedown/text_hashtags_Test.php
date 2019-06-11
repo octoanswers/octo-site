@@ -14,10 +14,10 @@ class Helper_ExtendedParsedown_text_categoriesTest extends TestCase
         $this->pd = null;
     }
 
-    public function test_Link_to_category()
+    public function test_Dont_link_to_hashtags()
     {
         $stringMD = "Any #birds may #fly.";
-        $stringHTML = '<p>Any <a href="https://answeropedia.org/ru/category/birds" title="#birds" class="inline-category">#birds</a> may <a href="https://answeropedia.org/ru/category/fly" title="#fly" class="inline-category">#fly</a>.</p>';
+        $stringHTML = '<p>Any #birds may #fly.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
