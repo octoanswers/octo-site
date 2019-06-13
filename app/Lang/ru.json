@@ -132,11 +132,11 @@
 	"flow": {
 		"Flow": "Поток",
 		"Questions and answers flow on Answeropedia. ": " Поток вопросов и ответов на Answeropedia.",
-		"page_title": "Поток",
 		"action": {
 			"user_rename_category": "Переименовал категорию",
 			"user_rename_category_before": "Ранее: "
-		}
+		},
+		"page_title": "Поток"
 	},
 	"footer": {
 		"about": "О сайте",
@@ -177,6 +177,14 @@
 			"title": "Поделиться ссылкой"
 		}
 	},
+	"modal": {
+		"category_rename": {
+			"btn_rename_category": "Переименовать категорию",
+			"leave_redirect": "Оставить перенаправление",
+			"note": "Перед тем как переименовывать категорию, пожалуйста ознакомьтесь с основными правилами переименования.",
+			"title": "Переименование категории"
+		}
+	},
 	"modal/question/upload_image": {
 		"Upload image": "Загрузить картинку",
 		"Upload question image": "Загрузка картинки вопроса"
@@ -200,14 +208,6 @@
 		"password": "Пароль",
 		"title": "Регистрация",
 		"username": "Логин"
-	},
-	"modal": {
-		"category_rename": {
-			"title": "Переименование категории",
-			"note": "Перед тем как переименовывать категорию, пожалуйста ознакомьтесь с основными правилами переименования.",
-			"leave_redirect": "Оставить перенаправление",
-			"btn_rename_category": "Переименовать категорию"
-		}
 	},
 	"navbar": {
 		"about_answeropedia": "О&nbsp;проекте",
@@ -235,6 +235,9 @@
 		"block__related_questions": {
 			"title": "Похожие вопросы"
 		},
+		"block_info": {
+			"title": "Информация о вопросе"
+		},
 		"categories": "Категории",
 		"categories_block": {
 			"categories_add": "Добавить категорию",
@@ -242,15 +245,13 @@
 			"title": "Категории вопроса"
 		},
 		"lure_be_first_contributor": {
-			"title": "Станьте первым автором!",
+			"btn_write": "Написать первый ответ",
 			"message": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!",
-			"btn_write": "Написать первый ответ"
+			"title": "Станьте первым автором!"
 		},
 		"redirected_from": "Перенаправлено с вопроса: ",
-		"user_contribution": "Вклад пользователя",
-		"block_info": {
-			"title": "Информация о вопросе"
-		}
+		"short_answer_title": "Короткий ответ",
+		"user_contribution": "Вклад пользователя"
 	},
 	"question__actions_top": {
 		"edit_answer": "Править ответ",

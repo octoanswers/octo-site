@@ -30,8 +30,8 @@
 }
 
 .badge-warning {
-  border-color: #fdc946;
-  background-color: #fdc946;
+  border-color: #FFEDA4;
+  background-color: #FFEDA4;
 }
 
 .badge-danger {
@@ -109,13 +109,13 @@
 }
 
 .btn-outline-warning {
-  color: #fdc946;
-  border-color: #fdc946;
+  color: #FFEDA4;
+  border-color: #FFEDA4;
 }
 
 .btn-outline-warning:hover {
-  background-color: #fdc946;
-  border-color: #fdc946;
+  background-color: #FFEDA4;
+  border-color: #FFEDA4;
 }
 
 .btn-outline-info {
@@ -171,13 +171,13 @@
 }
 
 .btn-warning {
-  background-color: #fdc946;
-  border-color: #fdc946;
+  background-color: #FFEDA4;
+  border-color: #FFEDA4;
 }
 
 .btn-warning:hover {
-  background-color: #fdc946;
-  border-color: #fdc946;
+  background-color: #FFEDA4;
+  border-color: #FFEDA4;
 }
 
 .btn-danger {
@@ -290,6 +290,18 @@
 
 .bg-color-primary-light-7 {
   background-color: #FAFDFF;
+}
+
+.bg-color-warning-light-2 {
+  background-color: #FFF7D7;
+}
+
+.bg-color-warning-light-1 {
+  background-color: #FFF2BE;
+}
+
+.bg-color-warning {
+  background-color: #FFEDA4;
 }
 
 img.cover-h8 {
