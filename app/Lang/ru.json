@@ -1,360 +1,363 @@
 {
-    "Actions": "Действия",
-    "Add picture": "Добавить картинку",
-    "All answer contributors": "Все авторы ответа",
-    "All questions": "Все вопросы",
-    "Answer a question": "Ответьте на вопрос",
-    "Answer contributors": "Авторы ответа",
-    "Answer updated": "Ответ обновлен",
-    "Ask a question and get one complete answer": "Задайте вопрос и получите один исчерпывающий ответ",
-    "Ask your first question": "Задайте первый вопрос",
-    "Back to question": "Вернуться к вопросу",
-    "By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.": "Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три или более вопроса.",
-    "Cancel": "Отмена",
-    "Change": "Правка",
-    "Change ID": "Правка",
-    "Change history": "История изменений",
-    "Close": "Закрыть",
-    "Description of changes": "Описание изменений",
-    "Edit": "Править",
-    "Edit answer": "Править ответ",
-    "Enter your email address to get notified about the answer as soon as it appears": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
-    "Filters": "Фильтры",
-    "Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.": "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и прочие активности этих пользователей будут появляться у вас в ленте новостей.",
-    "Find your first friends": "Найдите первых друзей",
-    "Find your friends": "Найдите друзей",
-    "Follow": "Подписаться",
-    "Follow 3 more categories": "Подпишитесь на три категории",
-    "Follow some questions": "Следуйте за некоторыми вопросами",
-    "Follow your first question": "Подпишитесь на первый вопрос",
-    "Followed": "Подписан",
-    "Go back": "Вернуться назад",
-    "Improve your feed": "Улучшите вашу ленту",
-    "It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
-    "Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
-    "More questions": "Больше вопросов",
-    "New categories": "Новые категории",
-    "New users from around the world": "Новые пользователи со всего мира",
-    "Newest questions": "Новые вопросы",
-    "No categories found": "категорий не найдено",
-    "No category found for \"%query%\"": "Не удалось найти категории по запросу «%query%»",
-    "No description of changes": "Нет описания изменений",
-    "No questions found": "Вопросов не найдено",
-    "No users found": "Пользователей не найдено",
-    "On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
-    "On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
-    "Questions with category": "Вопросы в категории",
-    "Questions without answers": "Вопросы без ответа",
-    "Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
-    "Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
-    "Rename question": "Переименовать вопрос",
-    "Report": "Пожаловаться",
-    "Save": "Сохранить",
-    "Search categories": "Поиск тем",
-    "Search in DuckDuckGo": "Поискать в DuckDuckGo",
-    "Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.": "Выберите и подпишитесь на три близких вам категории вопросов. После этого новые вопросы на эти темы будут появляться у вас в ленте новостей.",
-    "Set real name": "Введите реальное имя",
-    "Set signature": "Придумайте подпись",
-    "Share link": "Поделиться ссылкой",
-    "Subscribe to several categories": "Подпишитесь на несколько категорий",
-    "Subscription to the question": "Подписка на вопрос",
-    "Thanks for the feedback!": "Спасибо за отзыв!",
-    "Tools": "Инструменты",
-    "Top contributors": "Топ авторов",
-    "Unfollow": "Отписаться",
-    "Update picture": "Обновить картинку",
-    "View all categories": "Посмотреть все категории",
-    "View all questions": "Посмотреть все вопросы",
-    "View all users": "Посмотреть всех пользователей",
-    "View popular categories": "Посмотреть популярные категории",
-    "View questions in the sandbox": "Посмотреть вопросы в песочнице",
-    "View users": "Посмотреть пользователей",
-    "Views a questions": "Посмотреть вопросы",
-    "Visit your feed": "Посетите ленту",
-    "Wiki-answers on Answeropedia": "Вики-ответы на Answeropedia",
-    "Without categories": "Без тем",
-    "Write the first answer": "Напишите первый ответ",
-    "Your email": "Ваш email",
-    "activity": {
-        "category added question": "вопрос добавлен в категорию",
-        "change answer": "обновил ответ",
-        "change signature": "поменял подпись",
-        "follow category": "подписался на категорию",
-        "follow question": "подписался на вопрос",
-        "follow user": "подписался на пользователя",
-        "question renamed": "вопрос переименован",
-        "question updated answer": "обновлен ответ",
-        "renamed question": "переименовал вопрос"
-    },
-    "answer_edit": {
-        "block__how_to_edit": {
-            "item_1": "Не допускайте грамматические или орфографические ошибки",
-            "item_2": "Добавляйте ссылки на связанные ответы и сайты",
-            "item_3": "Всегда уважайте труд предыдущих авторов",
-            "more_about_editing": "Подробнее о редактировании:",
-            "title": "Памятка автору"
-        },
-        "title": "Редактирование ответа"
-    },
-    "answer_history": {
-        "Answer history": "История изменений ответа",
-        "page_title": "История изменений ответа"
-    },
-    "answeropedia": "Answeropedia",
-    "app_bar": {
-        "text": "Компетентные ответы на ваши вопросы"
-    },
-    "block__about_answeropedia": {
-        "btn_action": "Присоединиться к сообществу",
-        "text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
-        "title": "Что такое Answeropedia?"
-    },
-    "categories": {
-        "search_placeholder": "Поиск категорий",
-        "title": "Категории"
-    },
-    "category": {
-        "More categories": "Больше тем",
-        "actions_right": {
-            "rename_category": "Переименовать категорию",
-            "title": "Действия"
-        },
-        "page_title": "Категория: ",
-        "title": "Категория"
-    },
-    "error__category_not_found": {
-        "page_title": "Категория не найдена: ",
-        "title": "Категория не найдена"
-    },
-    "feed": {
-        "Feed": "Лента"
-    },
-    "flow": {
-        "Flow": "Поток",
-        "Questions and answers flow on Answeropedia. ": " Поток вопросов и ответов на Answeropedia.",
-        "page_title": "Поток",
-        "action": {
-            "user_rename_category": "Переименовал категорию",
-            "user_rename_category_before": "Ранее: "
-        }
-    },
-    "footer": {
-        "about": "О сайте",
-        "questions": "Вопросы",
-        "rules": "Правила",
-        "search": "Поиск",
-        "support": "Поддержка",
-        "users": "Пользователи"
-    },
-    "internal_server_error": {
-        "Error 500": "Ошибка 500",
-        "page_title": "Ошибка 500"
-    },
-    "main": {
-        "how_it_works": {
-            "step_1_msg": "Вы задаете вопрос на любую интересующую вас тему.",
-            "step_1_title": "Вы задаете вопрос",
-            "step_2_msg": "Авсверопедия показывает ваш вопрос специалистам, которые могут дать компетентный ответ.",
-            "step_2_title": "Система находит специалистов",
-            "step_3_msg": "После того как ответ утвердили минимум три специалиста, вы получаете ответ.",
-            "step_3_title": "Вы получаете ответ",
-            "title": "Как это работает?"
-        },
-        "jumbotron": {
-            "ask": "Задать вопрос",
-            "header_1": "Задайте вопрос на любую тему и получите",
-            "header_2": "один исчерпывающий ответ",
-            "login": "Вход",
-            "search_placeholder": "Поиск вопросов...",
-            "signup": "Присоединиться к сообществу",
-            "text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы."
-        },
-        "recent_questions": {
-            "title": "Последние вопросы"
-        },
-        "share_link": {
-            "note": "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями ссылкой на него.",
-            "title": "Поделиться ссылкой"
-        }
-    },
-    "modal/question/upload_image": {
-        "Upload image": "Загрузить картинку",
-        "Upload question image": "Загрузка картинки вопроса"
-    },
-    "modal_ask": {
-        "btn_ask": "Задать вопрос",
-        "input_placeholder": "Какой у вас вопрос?",
-        "note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
-        "title": "Новый вопрос"
-    },
-    "modal_login": {
-        "btn_login": "Войти",
-        "email": "Электронная почта",
-        "password": "Пароль",
-        "title": "Вход"
-    },
-    "modal_signup": {
-        "btn_signup": "Зарегистрироваться",
-        "email": "Электронная почта",
-        "note": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
-        "password": "Пароль",
-        "title": "Регистрация",
-        "username": "Логин"
-    },
-    "modal": {
-        "category_rename": {
-            "title": "Переименование категории",
-            "note": "Перед тем как переименовывать категорию, пожалуйста ознакомьтесь с основными правилами переименования.",
-            "leave_redirect": "Оставить перенаправление",
-            "btn_rename_category": "Переименовать категорию"
-        }
-    },
-    "navbar": {
-        "about_answeropedia": "О&nbsp;проекте",
-        "btn_ask": "Задать вопрос",
-        "categories": "Категории",
-        "flow": "Свежие&nbsp;правки",
-        "login": "Вход",
-        "recent_changes": "Последние&nbsp;правки",
-        "saarch_placeholder": "Какой у вас вопрос?",
-        "sandbox": "Песочница",
-        "signup": "Регистрация"
-    },
-    "page": "Страница",
-    "page_not_found": {
-        "Error 404": "Ошибка 404",
-        "page_title": "Ошибка 404"
-    },
-    "question": {
-        "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
-        "Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
-        "Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
-        "block__categories_top": {
-            "more_btn": "ещё…"
-        },
-        "block__related_questions": {
-            "title": "Похожие вопросы"
-        },
-        "categories": "Категории",
-        "categories_block": {
-            "categories_add": "Добавить категорию",
-            "categories_change": "Изменить",
-            "title": "Категории вопроса"
-        },
-        "lure_be_first_contributor": {
-            "title": "Станьте первым автором!",
-            "message": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!",
-            "btn_write": "Написать первый ответ"
-        },
-        "redirected_from": "Перенаправлено с вопроса: ",
-        "user_contribution": "Вклад пользователя"
-    },
-    "question__actions_top": {
-        "edit_answer": "Править ответ",
-        "history": "История",
-        "rename_question": "Переименовать вопрос",
-        "talk": "Обсуждение",
-        "talk_tooltip": "Обсуждение ответа"
-    },
-    "question_not_found": {
-        "Question not found": "Вопрос не найден",
-        "page_title": "Вопрос не найден",
-        "title": "Вопрос не найден"
-    },
-    "question_redirect": {
-        "redirect_to": " — перенаправлено на:"
-    },
-    "question_rename": {
-        "Before you rename a question, please read the basic rules for renaming": "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными правилами переименования",
-        "Leave redirect": "Оставить редирект"
-    },
-    "question_update_categories": {
-        "btn_update_categories": "Обновить категории",
-        "page_title": "",
-        "title": "Редактирование категорий"
-    },
-    "questions": {
-        "nav": {
-            "newest": "Новые вопросы",
-            "popular": "Популярные",
-            "recently_updated": "Недавно обновленные"
-        }
-    },
-    "root": {
-        "Questions and Answers": "Вопросы и ответы"
-    },
-    "sandbox": {
-        "about_block": {
-            "btn_action": "Присоединиться к сообществу",
-            "msg_1": "Это место куда попадают новые, ещё не имеющие ответа вопросы.",
-            "msg_2": "Как только у вопроса появляется исчерпывающий ответ и несколько категорий, он переносится в основной список.",
-            "now_in_the_sandbox": "сейчас в песочнице",
-            "title": "Что такое «Песочница»?"
-        },
-        "title": "Песочница"
-    },
-    "search": {
-        "page_title": "Поиск"
-    },
-    "search__filter": {
-        "categories": "Категории",
-        "questions": "Вопросы",
-        "users": "Пользователи"
-    },
-    "service_id": {
-        "about_answeropedia": "1",
-        "how_to_edit": "2"
-    },
-    "settings": {
-        "avatar__btn_upload": "Загрузить аватар",
-        "avatar__note": "Желательно использовать в качестве аватарки ваше реальное фото — это вызывает больше доверия у пользователей.",
-        "avatar__title": "Аватар",
-        "real_name_note": "Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.",
-        "real_name_title": "Реальное имя",
-        "save": "Сохранить",
-        "signature_note": "Введите подпись, описывающую ваши профессиональные навыки и знания.",
-        "signature_placeholder": "Например: Профессор психологии, предприниматель, начинающий поэт",
-        "signature_title": "Подпись",
-        "site_note": "Введите адрес вашего сайта или страницы в социальной сети.",
-        "site_title": "Сайт",
-        "title": "Настройки"
-    },
-    "sidebar__main_nav": {
-        "about_site": "О сайте",
-        "feed": "Подписки",
-        "main_page": "Главная страница",
-        "popular_categories": "Категории",
-        "random_question": "Случайный вопрос",
-        "recent_changes": "Свежие правки",
-        "sandbox": "Песочница"
-    },
-    "sidebar__other_languages": {
-        "all_languages": "Все языки",
-        "english": "Английский",
-        "russian": "Русский",
-        "title": "На других языках"
-    },
-    "test_key": {
-        "subkey_as_array": {
-            "foo": "bar"
-        }
-    },
-    "title": "Перевод заголовка",
-    "update_categories": {
-        "Update categories for question \"%question%\"": "Обновление тем вопроса «%question%»",
-        "Update categories for question \"%question%\" - Answeropedia": "Обновление тем вопроса «%question%» - Answeropedia"
-    },
-    "user": {
-        "Knows about": "Знает о",
-        "Logout": "Выйти",
-        "no_answers": {
-            "No answers": "Нет ответов",
-            "User has not written any answers yet": "Пользователь пока не написал ни одного ответа"
-        }
-    },
-    "users": {
-        "Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
-        "search_placeholder": "Поиск авторов",
-        "title": "Авторы ответов"
-    }
+	"Actions": "Действия",
+	"Add picture": "Добавить картинку",
+	"All answer contributors": "Все авторы ответа",
+	"All questions": "Все вопросы",
+	"Answer a question": "Ответьте на вопрос",
+	"Answer contributors": "Авторы ответа",
+	"Answer updated": "Ответ обновлен",
+	"Ask a question and get one complete answer": "Задайте вопрос и получите один исчерпывающий ответ",
+	"Ask your first question": "Задайте первый вопрос",
+	"Back to question": "Вернуться к вопросу",
+	"By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.": "Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три или более вопроса.",
+	"Cancel": "Отмена",
+	"Change": "Правка",
+	"Change ID": "Правка",
+	"Change history": "История изменений",
+	"Close": "Закрыть",
+	"Description of changes": "Описание изменений",
+	"Edit": "Править",
+	"Edit answer": "Править ответ",
+	"Enter your email address to get notified about the answer as soon as it appears": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
+	"Filters": "Фильтры",
+	"Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.": "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и прочие активности этих пользователей будут появляться у вас в ленте новостей.",
+	"Find your first friends": "Найдите первых друзей",
+	"Find your friends": "Найдите друзей",
+	"Follow": "Подписаться",
+	"Follow 3 more categories": "Подпишитесь на три категории",
+	"Follow some questions": "Следуйте за некоторыми вопросами",
+	"Follow your first question": "Подпишитесь на первый вопрос",
+	"Followed": "Подписан",
+	"Go back": "Вернуться назад",
+	"Improve your feed": "Улучшите вашу ленту",
+	"It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
+	"Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
+	"More questions": "Больше вопросов",
+	"New categories": "Новые категории",
+	"New users from around the world": "Новые пользователи со всего мира",
+	"Newest questions": "Новые вопросы",
+	"No categories found": "категорий не найдено",
+	"No category found for \"%query%\"": "Не удалось найти категории по запросу «%query%»",
+	"No description of changes": "Нет описания изменений",
+	"No questions found": "Вопросов не найдено",
+	"No users found": "Пользователей не найдено",
+	"On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
+	"On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
+	"Questions with category": "Вопросы в категории",
+	"Questions without answers": "Вопросы без ответа",
+	"Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
+	"Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
+	"Rename question": "Переименовать вопрос",
+	"Report": "Пожаловаться",
+	"Save": "Сохранить",
+	"Search categories": "Поиск тем",
+	"Search in DuckDuckGo": "Поискать в DuckDuckGo",
+	"Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.": "Выберите и подпишитесь на три близких вам категории вопросов. После этого новые вопросы на эти темы будут появляться у вас в ленте новостей.",
+	"Set real name": "Введите реальное имя",
+	"Set signature": "Придумайте подпись",
+	"Share link": "Поделиться ссылкой",
+	"Subscribe to several categories": "Подпишитесь на несколько категорий",
+	"Subscription to the question": "Подписка на вопрос",
+	"Thanks for the feedback!": "Спасибо за отзыв!",
+	"Tools": "Инструменты",
+	"Top contributors": "Топ авторов",
+	"Unfollow": "Отписаться",
+	"Update picture": "Обновить картинку",
+	"View all categories": "Посмотреть все категории",
+	"View all questions": "Посмотреть все вопросы",
+	"View all users": "Посмотреть всех пользователей",
+	"View popular categories": "Посмотреть популярные категории",
+	"View questions in the sandbox": "Посмотреть вопросы в песочнице",
+	"View users": "Посмотреть пользователей",
+	"Views a questions": "Посмотреть вопросы",
+	"Visit your feed": "Посетите ленту",
+	"Wiki-answers on Answeropedia": "Вики-ответы на Answeropedia",
+	"Without categories": "Без тем",
+	"Write the first answer": "Напишите первый ответ",
+	"Your email": "Ваш email",
+	"activity": {
+		"category added question": "вопрос добавлен в категорию",
+		"change answer": "обновил ответ",
+		"change signature": "поменял подпись",
+		"follow category": "подписался на категорию",
+		"follow question": "подписался на вопрос",
+		"follow user": "подписался на пользователя",
+		"question renamed": "вопрос переименован",
+		"question updated answer": "обновлен ответ",
+		"renamed question": "переименовал вопрос"
+	},
+	"answer_edit": {
+		"block__how_to_edit": {
+			"item_1": "Не допускайте грамматические или орфографические ошибки",
+			"item_2": "Добавляйте ссылки на связанные ответы и сайты",
+			"item_3": "Всегда уважайте труд предыдущих авторов",
+			"more_about_editing": "Подробнее о редактировании:",
+			"title": "Памятка автору"
+		},
+		"title": "Редактирование ответа"
+	},
+	"answer_history": {
+		"Answer history": "История изменений ответа",
+		"page_title": "История изменений ответа"
+	},
+	"answeropedia": "Answeropedia",
+	"app_bar": {
+		"text": "Компетентные ответы на ваши вопросы"
+	},
+	"block__about_answeropedia": {
+		"btn_action": "Присоединиться к сообществу",
+		"text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+		"title": "Что такое Answeropedia?"
+	},
+	"categories": {
+		"search_placeholder": "Поиск категорий",
+		"title": "Категории"
+	},
+	"category": {
+		"More categories": "Больше тем",
+		"actions_right": {
+			"rename_category": "Переименовать категорию",
+			"title": "Действия"
+		},
+		"page_title": "Категория: ",
+		"title": "Категория"
+	},
+	"error__category_not_found": {
+		"page_title": "Категория не найдена: ",
+		"title": "Категория не найдена"
+	},
+	"feed": {
+		"Feed": "Лента"
+	},
+	"flow": {
+		"Flow": "Поток",
+		"Questions and answers flow on Answeropedia. ": " Поток вопросов и ответов на Answeropedia.",
+		"page_title": "Поток",
+		"action": {
+			"user_rename_category": "Переименовал категорию",
+			"user_rename_category_before": "Ранее: "
+		}
+	},
+	"footer": {
+		"about": "О сайте",
+		"questions": "Вопросы",
+		"rules": "Правила",
+		"search": "Поиск",
+		"support": "Поддержка",
+		"users": "Пользователи"
+	},
+	"internal_server_error": {
+		"Error 500": "Ошибка 500",
+		"page_title": "Ошибка 500"
+	},
+	"main": {
+		"how_it_works": {
+			"step_1_msg": "Вы задаете вопрос на любую интересующую вас тему.",
+			"step_1_title": "Вы задаете вопрос",
+			"step_2_msg": "Авсверопедия показывает ваш вопрос специалистам, которые могут дать компетентный ответ.",
+			"step_2_title": "Система находит специалистов",
+			"step_3_msg": "После того как ответ утвердили минимум три специалиста, вы получаете ответ.",
+			"step_3_title": "Вы получаете ответ",
+			"title": "Как это работает?"
+		},
+		"jumbotron": {
+			"ask": "Задать вопрос",
+			"header_1": "Задайте вопрос на любую тему и получите",
+			"header_2": "один исчерпывающий ответ",
+			"login": "Вход",
+			"search_placeholder": "Поиск вопросов...",
+			"signup": "Присоединиться к сообществу",
+			"text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы."
+		},
+		"recent_questions": {
+			"title": "Последние вопросы"
+		},
+		"share_link": {
+			"note": "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями ссылкой на него.",
+			"title": "Поделиться ссылкой"
+		}
+	},
+	"modal/question/upload_image": {
+		"Upload image": "Загрузить картинку",
+		"Upload question image": "Загрузка картинки вопроса"
+	},
+	"modal_ask": {
+		"btn_ask": "Задать вопрос",
+		"input_placeholder": "Какой у вас вопрос?",
+		"note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
+		"title": "Новый вопрос"
+	},
+	"modal_login": {
+		"btn_login": "Войти",
+		"email": "Электронная почта",
+		"password": "Пароль",
+		"title": "Вход"
+	},
+	"modal_signup": {
+		"btn_signup": "Зарегистрироваться",
+		"email": "Электронная почта",
+		"note": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
+		"password": "Пароль",
+		"title": "Регистрация",
+		"username": "Логин"
+	},
+	"modal": {
+		"category_rename": {
+			"title": "Переименование категории",
+			"note": "Перед тем как переименовывать категорию, пожалуйста ознакомьтесь с основными правилами переименования.",
+			"leave_redirect": "Оставить перенаправление",
+			"btn_rename_category": "Переименовать категорию"
+		}
+	},
+	"navbar": {
+		"about_answeropedia": "О&nbsp;проекте",
+		"btn_ask": "Задать вопрос",
+		"categories": "Категории",
+		"flow": "Свежие&nbsp;правки",
+		"login": "Вход",
+		"recent_changes": "Последние&nbsp;правки",
+		"saarch_placeholder": "Какой у вас вопрос?",
+		"sandbox": "Песочница",
+		"signup": "Регистрация"
+	},
+	"page": "Страница",
+	"page_not_found": {
+		"Error 404": "Ошибка 404",
+		"page_title": "Ошибка 404"
+	},
+	"question": {
+		"Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
+		"Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
+		"Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
+		"block__categories_top": {
+			"more_btn": "ещё…"
+		},
+		"block__related_questions": {
+			"title": "Похожие вопросы"
+		},
+		"categories": "Категории",
+		"categories_block": {
+			"categories_add": "Добавить категорию",
+			"categories_change": "Изменить",
+			"title": "Категории вопроса"
+		},
+		"lure_be_first_contributor": {
+			"title": "Станьте первым автором!",
+			"message": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!",
+			"btn_write": "Написать первый ответ"
+		},
+		"redirected_from": "Перенаправлено с вопроса: ",
+		"user_contribution": "Вклад пользователя",
+		"block_info": {
+			"title": "Информация о вопросе"
+		}
+	},
+	"question__actions_top": {
+		"edit_answer": "Править ответ",
+		"history": "История",
+		"rename_question": "Переименовать вопрос",
+		"talk": "Обсуждение",
+		"talk_tooltip": "Обсуждение ответа"
+	},
+	"question_not_found": {
+		"Question not found": "Вопрос не найден",
+		"page_title": "Вопрос не найден",
+		"title": "Вопрос не найден"
+	},
+	"question_redirect": {
+		"redirect_to": " — перенаправлено на:"
+	},
+	"question_rename": {
+		"Before you rename a question, please read the basic rules for renaming": "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными правилами переименования",
+		"Leave redirect": "Оставить редирект"
+	},
+	"question_update_categories": {
+		"btn_update_categories": "Обновить категории",
+		"page_title": "",
+		"title": "Редактирование категорий"
+	},
+	"questions": {
+		"nav": {
+			"newest": "Новые вопросы",
+			"popular": "Популярные",
+			"recently_updated": "Недавно обновленные"
+		}
+	},
+	"root": {
+		"Questions and Answers": "Вопросы и ответы"
+	},
+	"sandbox": {
+		"about_block": {
+			"btn_action": "Присоединиться к сообществу",
+			"msg_1": "Это место куда попадают новые, ещё не имеющие ответа вопросы.",
+			"msg_2": "Как только у вопроса появляется исчерпывающий ответ и несколько категорий, он переносится в основной список.",
+			"now_in_the_sandbox": "сейчас в песочнице",
+			"title": "Что такое «Песочница»?"
+		},
+		"title": "Песочница"
+	},
+	"search": {
+		"page_title": "Поиск"
+	},
+	"search__filter": {
+		"categories": "Категории",
+		"questions": "Вопросы",
+		"users": "Пользователи"
+	},
+	"service_id": {
+		"about_answeropedia": "1",
+		"how_to_edit": "2"
+	},
+	"settings": {
+		"avatar__btn_upload": "Загрузить аватар",
+		"avatar__note": "Желательно использовать в качестве аватарки ваше реальное фото — это вызывает больше доверия у пользователей.",
+		"avatar__title": "Аватар",
+		"real_name_note": "Реальное имя вызывает больше доверия, чем @username. Оно будет показываться рядом с вашими правками и в ТОПе авторов.",
+		"real_name_title": "Реальное имя",
+		"save": "Сохранить",
+		"signature_note": "Введите подпись, описывающую ваши профессиональные навыки и знания.",
+		"signature_placeholder": "Например: Профессор психологии, предприниматель, начинающий поэт",
+		"signature_title": "Подпись",
+		"site_note": "Введите адрес вашего сайта или страницы в социальной сети.",
+		"site_title": "Сайт",
+		"title": "Настройки"
+	},
+	"sidebar__main_nav": {
+		"about_site": "О сайте",
+		"feed": "Подписки",
+		"main_page": "Главная страница",
+		"popular_categories": "Категории",
+		"random_question": "Случайный вопрос",
+		"recent_changes": "Свежие правки",
+		"sandbox": "Песочница"
+	},
+	"sidebar__other_languages": {
+		"all_languages": "Все языки",
+		"english": "Английский",
+		"russian": "Русский",
+		"title": "На других языках"
+	},
+	"test_key": {
+		"subkey_as_array": {
+			"foo": "bar"
+		}
+	},
+	"title": "Перевод заголовка",
+	"update_categories": {
+		"Update categories for question \"%question%\"": "Обновление тем вопроса «%question%»",
+		"Update categories for question \"%question%\" - Answeropedia": "Обновление тем вопроса «%question%» - Answeropedia"
+	},
+	"user": {
+		"Knows about": "Знает о",
+		"Logout": "Выйти",
+		"no_answers": {
+			"No answers": "Нет ответов",
+			"User has not written any answers yet": "Пользователь пока не написал ни одного ответа"
+		}
+	},
+	"users": {
+		"Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+		"search_placeholder": "Поиск авторов",
+		"title": "Авторы ответов"
+	}
 }

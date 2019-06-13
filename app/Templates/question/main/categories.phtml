@@ -14,7 +14,7 @@
 
 		<?php if ($this->authUser): ?>
 			<a class="btn btn-sm btn-light-info mb-2" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
-                <i class="fas fa-pen mr-1"></i></i>&nbsp;<?= $this->translator->get('question', 'categories_block', 'categories_change') ?>
+				<i class="material-icons md-18">edit</i>&nbsp;<?= $this->translator->get('question', 'categories_block', 'categories_change') ?>
 			</a>
 		<?php endif; ?>
 
@@ -31,7 +31,7 @@
             </div>
 		
 			<a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>">
-                <i class="fas fa-plus mr-1"></i>
+				<i class="material-icons md-18">add</i>
                 <?= $this->translator->get('question', 'categories_block', 'categories_add') ?>
 			</a>
 		</div>
