@@ -1,10 +1,10 @@
 
 <?php if ($this->question->getShortAnswer()): ?>
 	<div class="my-4">
-		<div class="subtitle-1 small color-secondary-dark-1 mb-2">
+		<div class="subtitle-1 color-secondary-dark-1 mb-2">
 			<?= $this->translator->get('question', 'short_answer_title') ?>
 		</div>
-		<div class="lead py-3 px-4 bg-color-warning-light-2">
+		<div class="py-3 px-4 bg-color-warning-light-2">
 			<?= $this->question->getShortAnswer() ?>
 		</div>
 	</div>

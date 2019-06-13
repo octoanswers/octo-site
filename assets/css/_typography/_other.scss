@@ -108,19 +108,18 @@ blockquote,
 }
 
 .small {
-    font-size: .8rem;
+    font-size: .8rem !important;
 }
 
 .semi-small {
-    font-size: .9rem;
+    font-size: .9rem !important;
 }
 
 // Type Scale based on https://material.io/design/typography/the-type-system.html#type-scale
 
 .subtitle-1 {
-    font-size: 14px;
-    line-height: 1.75rem;
+    font-size: 13px;
+    line-height: 1.5rem;
     font-weight: 400;
-    letter-spacing: .009375em;
     text-transform: uppercase;
 }
