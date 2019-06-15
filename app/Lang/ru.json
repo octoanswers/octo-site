@@ -282,7 +282,9 @@
 			"newest": "Новые вопросы",
 			"popular": "Популярные",
 			"recently_updated": "Недавно обновленные"
-		}
+		},
+		"btn_add_categories": "Добавить категори",
+		"new": "Новый"
 	},
 	"root": {
 		"Questions and Answers": "Вопросы и ответы"
@@ -295,7 +297,10 @@
 			"now_in_the_sandbox": "сейчас в песочнице",
 			"title": "Что такое «Песочница»?"
 		},
-		"title": "Песочница"
+		"title": "Песочница",
+		"btn_add_categories": "Добавить категории",
+		"btn_write_answer": "Написать ответ",
+		"answer_updated": "Ответ обновлен"
 	},
 	"search": {
 		"page_title": "Поиск"

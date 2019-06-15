@@ -22,12 +22,14 @@
 
     <div class="mt-2">
         <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60*60*24)): ?>
-            <span class="badge badge-primary mr-2">Новый</span>
+            <span class="badge badge-primary mr-2">
+				<?= $this->translator->get('questions', 'new') ?>
+			</span>
         <?php endif; ?>
 
         <?php if ($question->categoriesCount == 0): ?>
             <a class="badge badge-success mr-2" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
-                <?= $this->translator->get('questions', 'btn_update_categories') ?> 
+                <?= $this->translator->get('questions', 'btn_add_categories') ?> 
             </a>
         <?php endif; ?>
 
