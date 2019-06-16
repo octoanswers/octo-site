@@ -284,7 +284,8 @@
 			"recently_updated": "Недавно обновленные"
 		},
 		"btn_add_categories": "Добавить категори",
-		"new": "Новый"
+		"new": "Новый",
+		"questions_count": "вопросов с ответами"
 	},
 	"root": {
 		"Questions and Answers": "Вопросы и ответы"

@@ -1,0 +1,10 @@
+
+
+<div class="mb-4">
+	<?php if (isset($this->questionsCount)): ?>
+			<p class="h1 mb-0"><?= $this->questionsCount ?></p>
+			<p class="text-secondary semi-small mb-2">
+				<?= $this->translator->get('questions', 'questions_count') ?> 
+			</p>
+		<?php endif; ?>
+</div>

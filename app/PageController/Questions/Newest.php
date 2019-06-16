@@ -14,6 +14,8 @@ class Newest_Questions_PageController extends Abstract_PageController
 
         $this->questions = (new Questions_Query($this->lang))->findNewestWithAnswer($this->page);
 
+        $this->questionsCount = (new QuestionsCount_Query($this->lang))->countQuestionsWithAnswers();
+
         foreach ($this->questions as $question) {
             $contributors_array = (new Contributors_Query($this->lang))->findAnswerContributors($question->id);
             foreach ($contributors_array as $contributor) {
