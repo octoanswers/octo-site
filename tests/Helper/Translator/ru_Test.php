@@ -34,7 +34,7 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Triple_key()
     {
-        $this->assertEquals('Что такое «Песочница»?', $this->translator->get('sandbox', 'about_block', 'title'));
+        $this->assertEquals('Что такое Песочница', $this->translator->get('sandbox', 'about_block', 'title'));
     }
 
     public function test_Triple_key_not_exists()
