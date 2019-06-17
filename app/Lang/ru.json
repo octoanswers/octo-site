@@ -240,7 +240,7 @@
 		},
 		"categories": "Категории",
 		"categories_block": {
-			"categories_add": "Добавить категорию",
+			"categories_add": "Добавить категории",
 			"categories_change": "Изменить",
 			"title": "Категории вопроса"
 		},
@@ -283,7 +283,7 @@
 			"popular": "Популярные",
 			"recently_updated": "Недавно обновленные"
 		},
-		"btn_add_categories": "Добавить категори",
+		"btn_add_categories": "Добавить категории",
 		"new": "Новый",
 		"questions_count": "вопросов с ответами"
 	},
