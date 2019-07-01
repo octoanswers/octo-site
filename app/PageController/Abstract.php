@@ -5,9 +5,9 @@ abstract class Abstract_PageController
     protected $lang;
     protected $l = null;
 
+	// Page properties
     protected $template = null;
     protected $showFooter = true;
-
     protected $pageTitle;
     protected $pageDescription;
     protected $canonicalURL;
@@ -24,8 +24,6 @@ abstract class Abstract_PageController
     public function __construct(Slim\Container $container)
     {
         $this->container = $container;
-
-        //$this->authUser = $this->container->get('auth_user');
 
         $cookieStorage = new CookieStorage(); // @TODO Вынести бы
         $this->authUser = $cookieStorage->getAuthUser();
