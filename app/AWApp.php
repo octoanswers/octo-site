@@ -36,11 +36,12 @@ class AWApp
 
         # API v1
 
-        $app->group('/api/v1'.URL_PART_LANG, function () {
+        $app->group('/api/v1' . URL_PART_LANG, function () {
 
             // GET
+            $this->get('/answers/render.json', 'Render_Answers_GET_APIController:handle');
             $this->get('/search/categories.json', 'SearchCategories_GET_APIController:handle');
-            
+
             // DELETE
             $this->delete('/categories/{id}/follow.json', 'CategoriesIDFollow_DELETE_APIController:handle');
             $this->delete('/questions/{id}/follow.json', 'QuestionsIDFollow_DELETE_APIController:handle');
