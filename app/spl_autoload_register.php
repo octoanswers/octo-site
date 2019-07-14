@@ -7,20 +7,20 @@ spl_autoload_register(function ($class_name) {
     $class_map = [
 
         'AWApp' => 'app/AWApp.php',
-        
+
         // Model
 
         'Category' => 'app/Model/Category.php',
 
         # Helpers
 
+        'MarkdownParser' => 'app/Helper/MarkdownParser.php',
+        'ExtendedParsedown' => 'app/Helper/ExtendedParsedown.php', // Don`t use
         'FineDiff' => 'app/Helper/FineDiff/FineDiff.php',
         'PassHash' => 'app/Helper/PassHash.php',
         'Lang' => 'app/Helper/Lang.php',
         'PDOFactory' => 'app/Helper/PDOFactory.php',
         'CookieStorage' => 'app/Helper/CookieStorage.php',
-        'ExtendedParsedown' => 'app/Helper/ExtendedParsedown/ExtendedParsedown.php',
-        'Html2Text\Html2Text' => 'app/Helper/Html2Text.php',
         'HumanDate' => 'app/Humanizer/HumanDate/HumanDate.php',
         'Translator' => 'app/Helper/Translator/Translator.php',
 
@@ -44,7 +44,7 @@ spl_autoload_register(function ($class_name) {
     if (strpos($class_name, '_') !== false) {
         $pieces = explode('_', $class_name);
         $pathPieces = array_reverse($pieces);
-        $classPath = 'app/'.implode('/', $pathPieces).'.php';
+        $classPath = 'app/' . implode('/', $pathPieces) . '.php';
 
         if (file_exists($classPath)) {
             require_once $classPath;

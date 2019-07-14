@@ -16,8 +16,6 @@ Sample directory structure
 
 
 ```php
-use Gomzyakov\Translator;
-
 $translator = new Translator('ru', ROOT_PATH."/app/lang");
 ```
 
