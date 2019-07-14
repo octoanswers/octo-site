@@ -1,47 +1,46 @@
-
 <!-- question item -->
 <div class="my-4">
-    
+
     <div class="mb-2">
         <a class="lead color-secondary-dark-4 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
             <?= $question->title ?>
         </a>
     </div>
 
-    <?php if ($question->getShortAnswer()): ?>
+    <?php if (false) : ?>
         <div class="color-secondary-dark-2 my-2">
-            <?= $question->getShortAnswer(); ?>
+            <?= 'short_answer' ?>
         </div>
     <?php endif; ?>
 
-    <?php if ($question->imageBaseName): ?>
+    <?php if ($question->imageBaseName) : ?>
         <a class="d-block max-width-240px" href="<?= $question->getURL($this->lang) ?>">
             <img class="max-width-240px" src="<?= $question->getImageURLMedium($this->lang) ?>" alt="<?= $question->title ?>">
         </a>
     <?php endif; ?>
 
     <div class="mt-2">
-        <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60*60*24)): ?>
+        <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60 * 60 * 24)) : ?>
             <span class="badge badge-primary mr-2">
-				<?= $this->translator->get('questions', 'new') ?>
-			</span>
+                <?= $this->translator->get('questions', 'new') ?>
+            </span>
         <?php endif; ?>
 
-        <?php if ($question->categoriesCount == 0): ?>
+        <?php if ($question->categoriesCount == 0) : ?>
             <a class="badge badge-success mr-2" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
-                <?= $this->translator->get('questions', 'btn_add_categories') ?> 
+                <?= $this->translator->get('questions', 'btn_add_categories') ?>
             </a>
         <?php endif; ?>
 
-        <?php if (strlen($question->answer->text)): ?>
+        <?php if (strlen($question->answer->text)) : ?>
             <span class="small color-secondary-light-1">2 автора</a>
-            <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
-			<i class="material-icons md-14">access_time</i>
-            <span class="small color-secondary-light-1"><?= $question->getMinutesToRead() ?></span>
-            <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
-        <?php endif; ?>
+                <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
+                <i class="material-icons md-14">access_time</i>
+                <span class="small color-secondary-light-1"><?= $question->getMinutesToRead() ?></span>
+                <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
+            <?php endif; ?>
 
-        <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
+            <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
     </div>
 </div>
 <!-- / question item -->

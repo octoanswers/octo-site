@@ -24,7 +24,7 @@ class Show_Question_PageController extends Abstract_PageController
     public function handle($request, $response, $args)
     {
         parent::handleRequest($request, $response, $args);
-        
+
         $questionURI = $args['question_uri'];
 
         try {
@@ -43,12 +43,12 @@ class Show_Question_PageController extends Abstract_PageController
             $needStopRedirect = $request->getParam('no_redirect');
             if (!$needStopRedirect) {
                 $redirectTitle = $this->questionRedirect->title;
-                $redirectURL = Question_Redirect_URL_Helper::getRedirectURLForTitle($this->lang, $redirectTitle).'?redirect_from_id='.$this->question->id;
+                $redirectURL = Question_Redirect_URL_Helper::getRedirectURLForTitle($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
                 return $response->withRedirect($redirectURL, 301);
             }
 
             $this->template = 'question_redirect';
-            $this->pageTitle = 'Redirect page: '.$this->question->title.' – '.$this->translator->get('answeropedia');
+            $this->pageTitle = 'Redirect page: ' . $this->question->title . ' – ' . $this->translator->get('answeropedia');
 
             $output = $this->renderPage();
             $response->getBody()->write($output);
@@ -62,10 +62,8 @@ class Show_Question_PageController extends Abstract_PageController
         }
 
         if (isset($this->question->answer) && strlen($this->question->answer->text)) {
-            // trim first paragraph of answer
-            $answer_other_text = preg_replace("/^.+\n/iu", "", $this->question->answer->text);
             $parsedown = new ExtendedParsedown($this->lang);
-            $this->formattedAnswerText = trim($parsedown->text($answer_other_text));
+            $this->formattedAnswerText = $parsedown->text($this->question->answer->text);
         }
 
         $this->_prepareFollowButton();
@@ -91,7 +89,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->template = 'question';
         $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
-        $this->pageTitle = $this->question->title.' – '.$this->translator->get('answeropedia');
+        $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answeropedia');
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->getURL($this->lang);
 
@@ -102,14 +100,14 @@ class Show_Question_PageController extends Abstract_PageController
         $this->shareLink['title'] = $this->question->title;
         $this->shareLink['description'] = $this->translator->get('Wiki-answers to your questions on Answeropedia');
         $this->shareLink['url'] = $this->question->getURL($this->lang);
-        $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
+        $this->shareLink['image'] = SITE_URL . '/assets/img/og-image.png';
 
         $this->_prepareAdditionalJavascript();
         $this->_prepareModals();
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
-        
+
         return $response;
     }
 
@@ -119,7 +117,7 @@ class Show_Question_PageController extends Abstract_PageController
         $uri = str_replace('_', ' ', $uri);
         $uri = str_replace('DOUBLEUNDERLINE', '_', $uri);
 
-        $title = $uri.'?';
+        $title = $uri . '?';
 
         return $title;
     }
@@ -170,7 +168,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         foreach ($keys as $key) {
             try {
-                $question = (new Question_Query($this->lang))->questionWithID((int)$key);
+                $question = (new Question_Query($this->lang))->questionWithID((int) $key);
                 $related_questions[] = $question;
             } catch (\Exception $e) {
                 // do nothing
@@ -222,7 +220,7 @@ class Show_Question_PageController extends Abstract_PageController
             'title' => $this->question->title,
             'description' => $this->__getPageDescription(),
             'locale' => $this->lang,
-            'image' => IMAGE_URL.'/og-image.png'
+            'image' => IMAGE_URL . '/og-image.png'
         ];
         return $og;
     }
