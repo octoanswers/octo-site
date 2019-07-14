@@ -14,8 +14,7 @@ spl_autoload_register(function ($class_name) {
 
         # Helpers
 
-        'MarkdownParser' => 'app/Helper/MarkdownParser.php',
-        'ExtendedParsedown' => 'app/Helper/ExtendedParsedown.php', // Don`t use
+        'ExtendedParsedown' => 'app/Helper/ExtendedParsedown.php',
         'FineDiff' => 'app/Helper/FineDiff/FineDiff.php',
         'PassHash' => 'app/Helper/PassHash.php',
         'Lang' => 'app/Helper/Lang.php',
