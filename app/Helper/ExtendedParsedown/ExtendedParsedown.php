@@ -14,7 +14,9 @@ class ExtendedParsedown extends Parsedown
 
     public function text($text)
     {
-        // @TODO Move to PreParser?
+        #
+        # Pre-parser
+        #
 
         // {foo} --> {foo}()
         $text = preg_replace("/\{([^\}]+)\}([^\(])/iu", '{$1}()$2', $text);
@@ -47,7 +49,6 @@ class ExtendedParsedown extends Parsedown
         $text = preg_replace_callback(
             "/\[([^\]]+)\]\(([^\)]+)\)/iu",
             function ($matches) {
-                //$title_part = $matches[1];
                 $reference_part = $matches[2];
                 if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
                     $question = Question_Model::initWithTitle($reference_part);
@@ -58,14 +59,32 @@ class ExtendedParsedown extends Parsedown
             $text
         );
 
-        // if (!$this->_isAnsweropediaURL($reference_part)) {
-        //     // External link
-        //     $element['attributes']['class'] = 'link-external';
-        //     $element['attributes']['target'] = '_blank';
-        //     $element['attributes']['rel'] = 'nofollow';
-        // }
+        $textHTML = parent::text($text);
 
-        return parent::text($text);
+        #
+        # Post-parser
+        #
+
+        // Fix external URL`s (like a href="https://answeropedia.org/ru/http://site.com/page")
+        $incorrect_URL_pattern = "/href\=\"https\:\/\/answeropedia\.org\/" . $this->lang . "\/(https?.+(?!answeropedia\.org).+)\"/iuU";
+        $textHTML = preg_replace_callback(
+            $incorrect_URL_pattern,
+            function ($matches) {
+                return 'href="' . urldecode($matches[1]) . '"';
+            },
+            $textHTML
+        );
+
+        // Add attributes to external URL`s (class="link-external" target="_blank" rel="nofollow")
+        $textHTML = preg_replace_callback(
+            "/href\=\"(https?\:\/\/(?!answeropedia\.org).+)\"/iuU",
+            function ($matches) {
+                return 'href="' . $matches[1] . '" class="link-external" target="_blank" rel="nofollow"';
+            },
+            $textHTML
+        );
+
+        return $textHTML;
     }
 
     /**
@@ -100,10 +119,5 @@ class ExtendedParsedown extends Parsedown
 
             return $Block;
         }
-    }
-
-    protected function _isAnsweropediaURL($url)
-    {
-        return preg_match('/^https:\/\/' . SITE_URL_NAME . '\.org/', $url);
     }
 }

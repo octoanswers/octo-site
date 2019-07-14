@@ -18,7 +18,7 @@ class Render_Answers_GET_APIController_Test extends Abstract_Frontend_TestCase
         $textHTML = "<p>Any #birds may #fly.</p>\n";
         $textHTML .= "<h2>Header</h2>\n";
         $textHTML .= "<p>Text</p>\n";
-        $textHTML .= '<p>I eat <a href="https://answeropedia.org/ru/What_is_crisp" title="What is crisp?">crisp</a> every day.</p>';
+        $textHTML .= '<p>I eat <a href="https://answeropedia.org/ru/What_is_crisp">crisp</a> every day.</p>';
 
         $expectedResponse = [
             'lang' => 'ru',

@@ -17,7 +17,7 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
     public function test_Markdown_style_link()
     {
         $stringMD = "I eat [crisp](What is crisp?) every day.";
-        $stringHTML = '<p>I eat <a href="https://answeropedia.org/ru/What_is_crisp" title="What is crisp?">crisp</a> every day.</p>';
+        $stringHTML = '<p>I eat <a href="https://answeropedia.org/ru/What_is_crisp">crisp</a> every day.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
@@ -25,7 +25,7 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
     public function test_Double_Markdown_style_link()
     {
         $stringMD = "[Steve](Steve Jobs) and [iPhone 8](iPhone 8) together.";
-        $stringHTML = '<p><a href="https://answeropedia.org/ru/Steve_Jobs" title="Steve Jobs">Steve</a> and <a href="https://answeropedia.org/ru/iPhone_8" title="iPhone 8">iPhone 8</a> together.</p>';
+        $stringHTML = '<p><a href="https://answeropedia.org/ru/Steve_Jobs">Steve</a> and <a href="https://answeropedia.org/ru/iPhone_8">iPhone 8</a> together.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
@@ -33,7 +33,7 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
     public function test_Link_with_empty_reference_part_on_RU_lang()
     {
         $stringMD = "Это наш [дом]().";
-        $stringHTML = '<p>Это наш <a href="https://answeropedia.org/ru/%D0%B4%D0%BE%D0%BC" title="дом">дом</a>.</p>';
+        $stringHTML = '<p>Это наш <a href="https://answeropedia.org/ru/%D0%B4%D0%BE%D0%BC">дом</a>.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
@@ -41,7 +41,7 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
     public function test_Link_with_empty_reference_part()
     {
         $stringMD = "Some [peoples]() are strange.";
-        $stringHTML = '<p>Some <a href="https://answeropedia.org/ru/peoples" title="peoples">peoples</a> are strange.</p>';
+        $stringHTML = '<p>Some <a href="https://answeropedia.org/ru/peoples">peoples</a> are strange.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
@@ -49,7 +49,7 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
     public function test_Uncompleted_link_without_reference_part()
     {
         $stringMD = "Some [girls] are beautiful.";
-        $stringHTML = '<p>Some [girls] are beautiful.</p>';
+        $stringHTML = '<p>Some <a href="https://answeropedia.org/ru/girls">girls</a> are beautiful.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
@@ -61,7 +61,7 @@ class Helper_ExtendedParsedown_text_linksTest extends TestCase
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));
     }
-    
+
     public function test_Direct_link_to_Answeropedia()
     {
         $stringMD = "Это текст о [каше](https://answeropedia.org/ru/123/chto-takoe-kasha) и молоке.";
