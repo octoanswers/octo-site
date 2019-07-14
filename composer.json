@@ -1,9 +1,18 @@
 {
-  "require" : {
+  "name": "gomzyakov/answeropedia.org",
+  "description": "Wiki-based Q&A service fire answeropedia.org",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "gomzyakov",
+      "email": "alexander.gomzyakov@gmail.com"
+    }
+  ],
+  "require": {
     "slim/slim": "^3.8",
     "erusev/parsedown": "^1.6",
     "respect/validation": "^1.1",
-    "verot/class.upload.php": "dev-master",
     "jblond/php-diff": "^1.12"
   }
 }

@@ -11,4 +11,4 @@ local-settings.php
 .phpunit.result.cache
 
 # Packeges installed via Composer
-vendor/
+vendor/*
