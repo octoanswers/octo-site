@@ -17,10 +17,10 @@ class ExtendedParsedown extends Parsedown
         // @TODO Move to PreParser?
 
         // {foo} --> {foo}()
-        $text = preg_replace("/\{([^\}]+)\}([^\(])/iu", "[$1]()$2", $text);
+        $text = preg_replace("/\{([^\}]+)\}([^\(])/iu", '{$1}()$2', $text);
 
         // {foo}() --> {foo}(foo)
-        $text = preg_replace("/\{([^\}]+)\}\(\)/iu", "[$1]($1)", $text);
+        $text = preg_replace("/\{([^\}]+)\}\(\)/iu", '{$1}($1)', $text);
 
         // {foo}(bar) --> [foo](https://answeropedia.org/lang/category/foo)
         $text = preg_replace_callback(
