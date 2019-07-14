@@ -9,10 +9,21 @@ php:
 services:
   - mysql
 
+# Commands to be run before your environment runs:
+# - Install composer dependencies,
+before_script:
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+
 # Update composer
 before-install:
   - composer self-update
 
+# Install composer dependencies,
+# Create database, schema and fixtures
+install:
+  - composer install
+  
 # Install composer dependencies,
 # Create database, schema and fixtures
 install:

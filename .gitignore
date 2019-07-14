@@ -4,13 +4,11 @@ local-settings.php
 # Some Mac OS system files
 .DS_Store
 
-# Local php-cs-fixer files
-php-cs-fixer.phar
-php-cs-fixer-v2.phar
-.php_cs.cache
-
-# VS Code Settings
-.vscode/
+# VS Code Private Settings
+.vscode/sftp.json
 
 # PHPUnit cache
 .phpunit.result.cache
+
+# Packeges installed via Composer
+vendor/

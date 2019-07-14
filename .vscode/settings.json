@@ -1,0 +1,9 @@
+{
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        120
+    ]
+}
