@@ -2,13 +2,11 @@
 
 trait Question_Trait
 {
-
-
-    public function getMinutesToRead(): integer
+    public function getMinutesToRead(): int
     {
         $answer_len = mb_strlen($this->answer->text);
 
         $minites_to_read = ceil($answer_len / 1000);
-        return $minites_to_read;
+        return (int) $minites_to_read;
     }
 }
