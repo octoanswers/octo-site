@@ -12,83 +12,60 @@ class ExtendedParsedown extends Parsedown
         $this->lang = $lang;
     }
 
-    /**
-     * Overwrite methods from Parsedown
-     */
-    protected function inlineLink($excerpt)
+    public function text($text)
     {
-        $offset = 0;
-        $offsetAdjustment = 0;
+        // @TODO Move to PreParser?
 
-        // Transform empty links [foo]() to [foo](foo)
-        $short_link_pattern = '/\[(.+)\](\(\))/uU';
-        $replacement = '[$1]($1)';
-        if (preg_match($short_link_pattern, $excerpt['text'], $matches)) {
-            $excerpt['text'] = preg_replace($short_link_pattern, $replacement, $excerpt['text']);
-            $excerpt['context'] = preg_replace($short_link_pattern, $replacement, $excerpt['context']);
+        // {foo} --> {foo}()
+        $text = preg_replace("/\{([^\}]+)\}([^\(])/iu", "[$1]()$2", $text);
 
-            $cat_cat_pattern = '/\[cat\:(.+)\]\(cat\:(.+)\)/uU';
-            if (preg_match('/\[cat\:(.+)\]\(cat\:(.+)\)/uU', $excerpt['text'], $cat_matches)) {
-                $excerpt['text'] = preg_replace($cat_cat_pattern, '[cat:$1]($1)', $excerpt['text']);
-                $excerpt['context'] = preg_replace($cat_cat_pattern, '[cat:$1]($1)', $excerpt['context']);
-            }
+        // {foo}() --> {foo}(foo)
+        $text = preg_replace("/\{([^\}]+)\}\(\)/iu", "[$1]($1)", $text);
 
-            // @NOTE Учитывая, что мы изменяем длинну строк, необходимо будет скорректировать отступ.
-            $offsetAdjustment = strlen($matches[0]) - 4;
-            if (preg_match('/\[cat\:(.+)\]\((.+)\)/uU', $excerpt['text'], $cat_matches)) {
-                $offsetAdjustment = strlen($matches[0]) - 8;
-            }
-        }
-
-        // Proced default links like a [foo](What is foo?)
-        if (preg_match('/\[(.+)\]\((.+)\)/uU', $excerpt['text'], $matches)) {
-            // Get body and reference part of link [body](REF)
-            $bodyPart = $matches[1];
-            $referencePart = $matches[2];
-
-            $offset = strlen($matches[0]) - $offsetAdjustment;
-
-            // Question-link or category-link?
-            if (preg_match('/cat\:(.+)$/uU', $bodyPart, $cat_matches)) {
-                $category = Category::initWithTitle($referencePart);
-                $element =  [
-                    'name' => 'a',
-                    'text' => $cat_matches[1],
-                    'attributes' => [
-                        'href' => $category->getURL($this->lang),
-                        'title' => $category->title,
-                        'class' => 'inline-category'
-                    ],
-                ];
-            } else {
-                $question = Question_Model::initWithTitle($referencePart);
-                $element = [
-                    'name' => 'a',
-                    'handler' => 'line',
-                    'text' => $bodyPart,
-                    'attributes' => [
-                        'href' => $question->getURL($this->lang),
-                        'title' => $referencePart
-                    ],
-                ];
-            }
-
-            // Reference part started with HTTP/HTTPS
-            if (filter_var($referencePart, FILTER_VALIDATE_URL)) {
-                $element['attributes']['href'] = $referencePart;
-                $element['attributes']['title'] = null;
-                if (!$this->_isAnsweropediaURL($referencePart)) {
-                    // External link
-                    $element['attributes']['class'] = 'link-external';
-                    $element['attributes']['target'] = '_blank';
-                    $element['attributes']['rel'] = 'nofollow';
+        // {foo}(bar) --> [foo](https://answeropedia.org/lang/category/foo)
+        $text = preg_replace_callback(
+            "/\{([^\}]+)\}\(([^\)]+)\)/iu",
+            function ($matches) {
+                //$title_part = $matches[1];
+                $reference_part = $matches[2];
+                if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
+                    $category = Category::initWithTitle($reference_part);
+                    return "[" . $matches[1] . "](" . $category->getURL($this->lang) . ")";
                 }
-            }
+                return $matches[0];
+            },
+            $text
+        );
 
-            return ['extent' => $offset, 'element' => $element];
-        }
+        // [foo] --> [foo]()
+        $text = preg_replace("/\[([^\]]+)\]([^\(])/iu", "[$1]()$2", $text);
 
-        return;
+        // [foo]() --> [foo](foo)
+        $text = preg_replace("/\[([^\]]+)\]\(\)/iu", "[$1]($1)", $text);
+
+        // [foo](bar) --> [foo](https://answeropedia.org/lang/bar)
+        $text = preg_replace_callback(
+            "/\[([^\]]+)\]\(([^\)]+)\)/iu",
+            function ($matches) {
+                //$title_part = $matches[1];
+                $reference_part = $matches[2];
+                if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
+                    $question = Question_Model::initWithTitle($reference_part);
+                    return "[" . $matches[1] . "](" . $question->getURL($this->lang) . ")";
+                }
+                return $matches[0];
+            },
+            $text
+        );
+
+        // if (!$this->_isAnsweropediaURL($reference_part)) {
+        //     // External link
+        //     $element['attributes']['class'] = 'link-external';
+        //     $element['attributes']['target'] = '_blank';
+        //     $element['attributes']['rel'] = 'nofollow';
+        // }
+
+        return parent::text($text);
     }
 
     /**
