@@ -39,7 +39,6 @@ class AWApp
         $app->group('/api/v1' . URL_PART_LANG, function () {
 
             // GET
-            $this->get('/answers/render.json', 'Render_Answers_GET_APIController:handle');
             $this->get('/search/categories.json', 'SearchCategories_GET_APIController:handle');
 
             // DELETE
@@ -56,6 +55,7 @@ class AWApp
             $this->patch('/users/{id}/name.json', 'UsersIDName_PATCH_APIController:handle');
 
             // POST
+            $this->post('/answers/render.json', 'Render_Answers_POST_APIController:handle');
             $this->post('/avatar.json', 'Avatar_POST_APIController:handle');
             $this->post('/categories/{id}/follow.json', 'CategoriesIDFollow_POST_APIController:handle');
             $this->post('/login.json', 'Login_POST_APIController:handle');

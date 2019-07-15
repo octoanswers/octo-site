@@ -1,6 +1,6 @@
 <?php
 
-class Render_Answers_GET_APIController_Test extends Abstract_Frontend_TestCase
+class Render_Answers_POST_APIController_Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 
@@ -8,7 +8,7 @@ class Render_Answers_GET_APIController_Test extends Abstract_Frontend_TestCase
     {
         $textMD = "Any #birds may #fly.\n# Header\nText\n\nI eat [crisp](What is crisp?) every day.";
         $queryString = 'text=' . urlencode($textMD);
-        $request = $this->__getTestRequest('GET', '/api/v1/ru/answers/render.json', $queryString, true);
+        $request = $this->__getTestRequest('POST', '/api/v1/ru/answers/render.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
 
@@ -35,7 +35,7 @@ class Render_Answers_GET_APIController_Test extends Abstract_Frontend_TestCase
     public function test_Empty_query()
     {
         $queryString = 'text=' . urlencode('');
-        $request = $this->__getTestRequest('GET', '/api/v1/ru/answers/render.json', $queryString, true);
+        $request = $this->__getTestRequest('POST', '/api/v1/ru/answers/render.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
 

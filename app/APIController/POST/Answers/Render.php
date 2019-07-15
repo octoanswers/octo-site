@@ -3,7 +3,7 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-class Render_Answers_GET_APIController extends Abstract_APIController
+class Render_Answers_POST_APIController extends Abstract_APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
