@@ -13,7 +13,7 @@ services:
 # - Install composer dependencies,
 before_script:
   - composer self-update
-  - composer install --prefer-source --no-interaction --dev
+  - composer install --prefer-source --no-interaction --no-dev
 
 # Update composer
 before-install:
@@ -22,7 +22,7 @@ before-install:
 # Install composer dependencies,
 # Create database, schema and fixtures
 install:
-  - composer install
+  - composer install --no-dev
   
 # Install composer dependencies,
 # Create database, schema and fixtures
