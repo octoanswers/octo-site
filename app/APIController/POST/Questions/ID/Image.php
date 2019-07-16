@@ -7,7 +7,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
  @todo So bad, but... https://www.verot.net/php_class_upload_forum.htm?php_class_upload_forum_id=4739&php_class_upload_forum_thread_id=4739&lang=en-GB
 */
 
-require_once ROOT_PATH . '/vendor_manual/verot/class.upload.php/src/class.upload.php';
+require_once ROOT_PATH . '/vendor/verot/class.upload.php/src/class.upload.php';
 
 class Image_ID_Questions_POST_APIController extends Abstract_APIController
 {
