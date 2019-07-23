@@ -57,6 +57,7 @@ class AWApp
             // POST
             $this->post('/answers/render.json', 'Render_Answers_POST_APIController:handle');
             $this->post('/avatar.json', 'Avatar_POST_APIController:handle');
+            $this->post('/categories.json', 'Categories_POST_APIController:handle');
             $this->post('/categories/{id}/follow.json', 'CategoriesIDFollow_POST_APIController:handle');
             $this->post('/login.json', 'Login_POST_APIController:handle');
             $this->post('/logout.json', 'Logout_POST_APIController:handle');
