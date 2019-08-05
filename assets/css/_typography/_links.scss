@@ -1,23 +1,23 @@
 a {
-    color: $color-primary;
+  color: $color-primary;
 
-    &:hover {
-        color: $color-primary-dark-1;
-    }
+  &:hover {
+    color: darken($color-primary, 10%);
+  }
 }
 
 a.link-broken {
-    color: $color-danger;
+  color: $color-danger;
 
-    &:after {
-        content: url("http://images.answeropedia.org/images/unavailable.png");
-        margin: 0 0 0 5px;
-        vertical-align: middle;
-    }
+  &:after {
+    content: url("http://images.answeropedia.org/images/unavailable.png");
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+  }
 }
 
 a.link-external:after {
-    content: url("http://images.answeropedia.org/images/external-link.png");
-    margin: 0 0 0 5px;
-    vertical-align: middle;
+  content: url("http://images.answeropedia.org/images/external-link.png");
+  margin: 0 0 0 5px;
+  vertical-align: middle;
 }
