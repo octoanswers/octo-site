@@ -3,13 +3,13 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-class AnswersID_PUT_APIController extends Abstract_APIController
+class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
             $this->lang = $args['lang'];
-            
+
             $answer_id = (int) $args['id'];
             $new_answer_text = (string) $request->getParam('answer_text');
 
@@ -68,7 +68,7 @@ class AnswersID_PUT_APIController extends Abstract_APIController
             $activity = new Activity_Model();
             $activity->type = Activity_Model::F_U_UPDATE_A;
             $activity->subject = $user;
-            $activity->data = [ 'question' => $question, 'revision' => $revision];
+            $activity->data = ['question' => $question, 'revision' => $revision];
             $activity = (new UUpdateA_Activity_Mapper($this->lang))->create($activity);
 
             $activity = new Activity_Model();

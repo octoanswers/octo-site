@@ -70,7 +70,7 @@ class AWApp
 
             //PUT
             $this->put('/questions/{id}.json', 'QuestionsID_PUT_APIController:handle');
-            $this->put('/questions/{id}/answer.json', 'AnswersID_PUT_APIController:handle');
+            $this->put('/questions/{id}/answer.json', 'QuestionsIDAnswer_PUT_APIController:handle');
             $this->put('/questions/{id}/categories.json', 'Categories_ID_Questions_PUT_APIController:handle');
         });
 
