@@ -69,8 +69,8 @@ class AWApp
             $this->post('/users/{id}/follow.json', 'UsersIDFollow_POST_APIController:handle');
 
             //PUT
-            $this->put('/answers/{id}.json', 'AnswersID_PUT_APIController:handle');
             $this->put('/questions/{id}.json', 'QuestionsID_PUT_APIController:handle');
+            $this->put('/questions/{id}/answer.json', 'AnswersID_PUT_APIController:handle');
             $this->put('/questions/{id}/categories.json', 'Categories_ID_Questions_PUT_APIController:handle');
         });
 
