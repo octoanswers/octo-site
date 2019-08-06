@@ -3,32 +3,38 @@
 <nav class="ml-2" id="main-nav">
     <ul class="list-unstyled semi-small">
 
+        <li class="">
+            <a class="nav-link" href="<?= SITE_URL . '/' . $this->lang . '/' . $this->translator->get('service_id', 'about_answeropedia') ?>">
+                <?= $this->translator->get('sidebar__main_nav', 'about_site') ?>
+            </a>
+        </li>
+
         <li class="mb-3 mt-1">
             <a href="<?= Page_URL_Helper::getMainURL($this->lang) ?>" class="color-secondary-dark-2 text-decoration-none">
                 <i class="material-icons md-24 w-36px">home</i><?= $this->translator->get('sidebar__main_nav', 'main_page') ?>
             </a>
         </li>
-        
-        <?php if ($this->authUser): ?>
+
+        <?php if ($this->authUser) : ?>
             <li class="mb-3">
-            <a href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>" class="color-secondary-dark-2 text-decoration-none">
-                <i class="material-icons md-24 w-36px">bookmark</i><?= $this->translator->get('sidebar__main_nav', 'feed') ?>
-            </a>
+                <a href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>" class="color-secondary-dark-2 text-decoration-none">
+                    <i class="material-icons md-24 w-36px">bookmark</i><?= $this->translator->get('sidebar__main_nav', 'feed') ?>
+                </a>
             </li>
         <?php endif; ?>
-        
+
         <li class="mb-3">
             <a href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>" class="color-secondary-dark-2 text-decoration-none">
                 <i class="material-icons md-24 w-36px">bubble_chart</i><?= $this->translator->get('sidebar__main_nav', 'popular_categories') ?>
             </a>
         </li>
-        
+
         <li class="my-3">
             <a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>" class="color-secondary-dark-2 text-decoration-none">
-            <i class="material-icons md-24 w-36px">edit</i><?= $this->translator->get('sidebar__main_nav', 'recent_changes') ?>
+                <i class="material-icons md-24 w-36px">edit</i><?= $this->translator->get('sidebar__main_nav', 'recent_changes') ?>
             </a>
         </li>
-        
+
         <li class="my-3">
             <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="color-secondary-dark-2 text-decoration-none">
                 <i class="material-icons md-24 w-36px">fiber_new</i><?= $this->translator->get('sidebar__main_nav', 'sandbox') ?>
@@ -36,8 +42,8 @@
         </li>
 
         <li class="my-3">
-            <a href="<?= SITE_URL.'/'.$this->lang.'/random-question' ?>" class="color-secondary-dark-2 text-decoration-none">
-            <i class="material-icons md-24 w-36px">shuffle</i><?= $this->translator->get('sidebar__main_nav', 'random_question') ?>
+            <a href="<?= SITE_URL . '/' . $this->lang . '/random-question' ?>" class="color-secondary-dark-2 text-decoration-none">
+                <i class="material-icons md-24 w-36px">shuffle</i><?= $this->translator->get('sidebar__main_nav', 'random_question') ?>
             </a>
         </li>
     </ul>

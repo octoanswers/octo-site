@@ -1,103 +1,94 @@
 <!-- navbar -->
 
 <header class="navbar sticky-top navbar-expand-lg navbar-light">
-
-	<?php if ($this->authUser) : ?>
-		<a class="navbar-brand mr-0 mr-md-4 ml-xl-2" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
-			<?= $this->translator->get('answeropedia') ?>
-			<sup class="color-secondary">β</sup>
-		</a>
-	<?php else : ?>
-		<a class="navbar-brand mr-0 mr-md-2" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
-			<?= $this->translator->get('answeropedia') ?>
-			<sup class="color-secondary">β</sup>
-		</a>
-	<?php endif; ?>
+	<div class="container">
+		<?php if ($this->authUser) : ?>
+			<a class="navbar-brand mr-0 mr-md-4 ml-xl-2" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
+				<?= $this->translator->get('answeropedia') ?>
+			</a>
+		<?php else : ?>
+			<a class="navbar-brand mr-0 mr-md-2" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
+				<?= $this->translator->get('answeropedia') ?>
+			</a>
+		<?php endif; ?>
 
 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-	<div class="collapse navbar-collapse" id="navbar-supported-content">
-		<ul class="navbar-nav mr-auto">
+		<div class="collapse navbar-collapse" id="navbar-supported-content">
+			<ul class="navbar-nav">
 
-			<!-- Mobile links -->
+				<!-- Mobile links -->
 
-			<li class="nav-item d-lg-none">
-				<a class="nav-link" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
-					<?= $this->translator->get('navbar', 'recent_changes') ?>
-				</a>
-			</li>
-
-			<li class="nav-item d-lg-none">
-				<a class="nav-link" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>">
-					<?= $this->translator->get('navbar', 'categories') ?>
-				</a>
-			</li>
-
-			<li class="nav-item d-lg-none">
-				<a class="nav-link d-inline-block" href="#" data-toggle="modal" data-target="#modal_login">
-					<?= $this->translator->get('navbar', 'login') ?>
-				</a>
-				&middot;
-				<a class="nav-link d-inline-block" href="#" data-toggle="modal" data-target="#modal_signup">
-					<?= $this->translator->get('navbar', 'signup') ?>
-				</a>
-			</li>
-
-			<li class="nav-item my-3 d-lg-none">
-				<button class="btn btn-outline-primary btn-block" role="button" data-toggle="modal" data-target="#modal_ask">
-					<?= $this->translator->get('navbar', 'btn_ask') ?>
-				</button>
-			</li>
-
-			<!-- Desktop links -->
-
-			<li class="nav-item d-none d-lg-block">
-				<a class="nav-link" href="<?= SITE_URL . '/' . $this->lang . '/' . $this->translator->get('service_id', 'about_answeropedia') ?>">
-					<?= $this->translator->get('sidebar__main_nav', 'about_site') ?>
-				</a>
-			</li>
-
-			<li class="nav-item ml-4 d-none d-lg-block">
-				<form class="form-inline" action="<?= SITE_URL . '/' . $this->lang . '/search' ?>" method="GET">
-					<input name="q" class="form-control" type="search" placeholder="<?= $this->translator->get('navbar', 'search_placeholder') ?>" aria-label="Search">
-				</form>
-			</li>
-
-		</ul>
-		<ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-
-			<?php if (!$this->authUser) : ?>
-				<li class="nav-item">
-					<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_login">
-						<?= $this->translator->get('navbar', 'login') ?>
+				<li class="nav-item d-lg-none">
+					<a class="nav-link" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+						<?= $this->translator->get('navbar', 'recent_changes') ?>
 					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
+
+				<li class="nav-item d-lg-none">
+					<a class="nav-link" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>">
+						<?= $this->translator->get('navbar', 'categories') ?>
+					</a>
+				</li>
+
+				<li class="nav-item d-lg-none">
+					<a class="nav-link d-inline-block" href="#" data-toggle="modal" data-target="#modal_login">
+						<?= $this->translator->get('navbar', 'login') ?>
+					</a>
+					&middot;
+					<a class="nav-link d-inline-block" href="#" data-toggle="modal" data-target="#modal_signup">
 						<?= $this->translator->get('navbar', 'signup') ?>
 					</a>
 				</li>
-			<?php endif; ?>
 
-			<?php if ($this->authUser) : ?>
-				<li class="nav-item">
-					<a class="user-avatar d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->getURL($this->lang) ?>">
-						<img src="<?= $this->authUser->getAvatarSmallURL() ?>" alt="<?= $this->authUser->name ?>">
-					</a>
+				<li class="nav-item my-3 d-lg-none">
+					<button class="btn btn-outline-primary btn-block" role="button" data-toggle="modal" data-target="#modal_ask">
+						<?= $this->translator->get('navbar', 'btn_ask') ?>
+					</button>
 				</li>
-			<?php endif; ?>
 
-			<li class="nav-item">
-				<button class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
-					<?= $this->translator->get('navbar', 'btn_ask') ?>
-				</button>
-			</li>
+				<li class="nav-item d-none d-lg-block">
+					<form class="form-inline" action="<?= SITE_URL . '/' . $this->lang . '/search' ?>" method="GET">
+						<input name="q" class="form-control" type="search" placeholder="<?= $this->translator->get('navbar', 'search_placeholder') ?>" aria-label="Search">
+					</form>
+				</li>
 
-		</ul>
+			</ul>
+
+			<ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+
+				<?php if (!$this->authUser) : ?>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_login">
+							<?= $this->translator->get('navbar', 'login') ?>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
+							<?= $this->translator->get('navbar', 'signup') ?>
+						</a>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($this->authUser) : ?>
+					<li class="nav-item">
+						<a class="user-avatar d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->getURL($this->lang) ?>">
+							<img src="<?= $this->authUser->getAvatarSmallURL() ?>" alt="<?= $this->authUser->name ?>">
+						</a>
+					</li>
+				<?php endif; ?>
+
+				<li class="nav-item">
+					<button class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
+						<?= $this->translator->get('navbar', 'btn_ask') ?>
+					</button>
+				</li>
+
+			</ul>
+		</div>
 	</div>
 </header>
-
 <!-- / navbar -->

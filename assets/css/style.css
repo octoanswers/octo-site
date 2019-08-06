@@ -124,6 +124,13 @@
   border: 1px solid #d5d5d5;
 }
 
+.form-control {
+  height: calc($form-control-line-height + 2 * $form-control-padding-y + 2 * $form-control-border-width);
+  padding: 0.25rem 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 .color-primary {
   color: #3d95e9;
 }
@@ -299,24 +306,25 @@ ul.list-links li a.active {
 
 .navbar .navbar-brand {
   font-weight: 700;
+  color: #2688e6;
 }
 
-.navbar .navbar-toggler {
-  border: 0;
+.navbar .navbar-brand:hover {
+  color: #166fc3;
 }
 
 .navbar a.user-avatar {
   display: inline-block;
-  width: 38px;
-  height: 38px;
-  border: 1px solid #d5d5d5;
-  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  border: 1px solid #c7e6fd;
+  border-radius: 3px;
 }
 
 .navbar a.user-avatar img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  border-radius: 3px;
 }
 
 .navbar a.user-avatar img:hover {
@@ -328,8 +336,20 @@ ul.list-links li a.active {
   border-bottom: 1px solid #c7e6fd;
 }
 
+.navbar-light .navbar-toggler {
+  border: 0;
+}
+
+.navbar-light .navbar-toggler .navbar-toggler-icon {
+  color: #166fc3;
+}
+
 .navbar-light .navbar-nav .nav-link {
-  color: #666;
+  color: #3d95e9;
+}
+
+.navbar-light .form-control {
+  border: 1px solid #afdbfc;
 }
 
 .sidebar-right {
