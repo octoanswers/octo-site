@@ -12,25 +12,24 @@ Currently, Answeropedia is launched only in [Russian](https://answeropedia.org/r
 + Community edited :pencil2: wiki-answers (Markdown syntax) 
 + Categorization by categories :ledger:
 + User, category and question subscriptions :love_letter:
-+ Email notifications and personal news feeds :herb:
-+ Anonymous :sunglasses: questions 
 + SEO friendly (neat URLs) :tada:
 + User profiles :house:
++ Basic search;
++ Supports translation :globe_with_meridians: into any language
 
 ## Soon
 
 + :strawberry: SEO features such as microformats and XML Sitemaps;
-+ Basic search;
-+ Supports translation :globe_with_meridians: into any language
 + User points & reputation :trophy:
-+ Log in via Facebook or others (using plugins);
++ Anonymous :sunglasses: questions 
++ Email notifications and personal news feeds :herb:
+
 
 ## Test Environment 
 
 + Apache/Nginx
-+ PHP 7.2.15 or later;
++ PHP 7.2 or later;
 + MySQL/MariaDB databases;
-+ Gettext module;
 + PHPUnit 8.1.3 or later
 
 ## Copyright and license
