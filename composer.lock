@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "194a003665f395e59bc31701f2ee0b50",
+    "content-hash": "e6173a9676035f0d6cf1bfbaa9f2f6f1",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -522,20 +522,20 @@
         },
         {
             "name": "verot/class.upload.php",
-            "version": "dev-master",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verot/class.upload.php.git",
-                "reference": "2bed84ee034bbfa76d23e109d169ec352179d843"
+                "reference": "848c3d26511b9c7155e8655226e8f4b2e278243e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verot/class.upload.php/zipball/2bed84ee034bbfa76d23e109d169ec352179d843",
-                "reference": "2bed84ee034bbfa76d23e109d169ec352179d843",
+                "url": "https://api.github.com/repos/verot/class.upload.php/zipball/848c3d26511b9c7155e8655226e8f4b2e278243e",
+                "reference": "848c3d26511b9c7155e8655226e8f4b2e278243e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=4"
+                "php": ">=5.3"
             },
             "type": "library",
             "autoload": {
@@ -559,15 +559,13 @@
                 "gd",
                 "upload"
             ],
-            "time": "2019-06-06T18:24:28+00:00"
+            "time": "2019-08-03T14:31:39+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "verot/class.upload.php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

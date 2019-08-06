@@ -14,6 +14,6 @@
     "erusev/parsedown": "^1.6",
     "respect/validation": "^1.1",
     "jblond/php-diff": "^1.12",
-    "verot/class.upload.php": "dev-master"
+    "verot/class.upload.php": "*"
   }
 }
