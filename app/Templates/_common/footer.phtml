@@ -1,0 +1,55 @@
+<?php if ($this->showFooter) : ?>
+
+    <!-- footer -->
+    <footer class="ml-2 mt-4 pt-3 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list-inline small mb-3">
+                        <li class="list-inline-item">
+                            <a class="text-black-50 text-decoration-none" href="<?= SITE_URL . '/' . $this->lang . '/1' ?>">
+                                <?= $this->translator->get('footer', 'about') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-black-50 text-decoration-none" href="<?= SITE_URL . '/' . $this->lang . '/2' ?>">
+                                <?= $this->translator->get('footer', 'rules') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-black-50 text-decoration-none" rel="nofollow" target="_blank" href="https://vk.com/alexandergomzyakov">
+                                <?= $this->translator->get('footer', 'support') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-black-50 text-decoration-none" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
+                                <?= $this->translator->get('footer', 'questions') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-black-50 text-decoration-none" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+                                <?= $this->translator->get('footer', 'users') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-black-50 text-decoration-none" href="<?= Search_URL_Helper::getSearchQuestionsURL($this->lang) ?>">
+                                <?= $this->translator->get('footer', 'search') ?>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-black-50 text-decoration-none" href="https://www.facebook.com/en.answeropedia" target="_blank" rel="noopener">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-black-50 text-decoration-none" href="https://vk.com/answeropedia" target="_blank" rel="noopener">
+                                VK
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </footer>
+    <!-- / footer -->
+
+<?php endif; ?>
