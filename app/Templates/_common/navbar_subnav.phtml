@@ -1,0 +1,47 @@
+<!-- sidebar main -->
+
+<nav class="navbar-subnav sticky-top d-none d-md-block">
+    <div class="container">
+        <div class="row py-1">
+
+            <!-- main_column -->
+            <div class="col-12">
+
+                <ul class="list-inline mb-0 semi-small">
+
+                    <li class="list-inline-item my-1">
+                        <a href="<?= SITE_URL . '/' . $this->lang . '/' . $this->translator->get('service_id', 'about_answeropedia') ?>" class="text-decoration-none">
+                            <?= $this->translator->get('sidebar__main_nav', 'about_site') ?>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item my-1">
+                        <a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>" class="text-decoration-none">
+                            <?= $this->translator->get('sidebar__main_nav', 'recent_changes') ?>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item my-1">
+                        <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="text-decoration-none">
+                            <?= $this->translator->get('sidebar__main_nav', 'sandbox') ?>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item my-1">
+                        <a href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>" class="text-decoration-none">
+                            <i class="material-icons md-18 w-20px">bubble_chart</i><?= $this->translator->get('sidebar__main_nav', 'popular_categories') ?>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item my-1">
+                        <a href="<?= SITE_URL . '/' . $this->lang . '/random-question' ?>" class="text-decoration-none">
+                            <?= $this->translator->get('sidebar__main_nav', 'random_question') ?>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- / sidebar main -->

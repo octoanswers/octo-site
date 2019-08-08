@@ -11,6 +11,13 @@
                                 <?= $this->translator->get('footer', 'about') ?>
                             </a>
                         </li>
+
+                        <li class="list-inline-item">
+                            <a href="<?= Page_URL_Helper::getMainURL($this->lang) ?>" class="text-black-50 text-decoration-none">
+                                <?= $this->translator->get('sidebar__main_nav', 'main_page') ?>
+                            </a>
+                        </li>
+
                         <li class="list-inline-item">
                             <a class="text-black-50 text-decoration-none" href="<?= SITE_URL . '/' . $this->lang . '/2' ?>">
                                 <?= $this->translator->get('footer', 'rules') ?>

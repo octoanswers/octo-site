@@ -352,6 +352,20 @@ ul.list-links li a.active {
   border: 1px solid #afdbfc;
 }
 
+.navbar-subnav {
+  border-bottom: 1px solid #c7e6fd;
+  background-color: #ffffff;
+  top: 57px;
+}
+
+.navbar-subnav a {
+  color: #6c757d;
+}
+
+.navbar-subnav a:hover {
+  color: #494f54;
+}
+
 .CodeMirror .CodeMirror-code .cm-header-1 {
   font-size: 1.5rem !important;
   line-height: 1.2 !important;

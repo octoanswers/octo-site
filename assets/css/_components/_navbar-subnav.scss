@@ -1,0 +1,17 @@
+//
+// Navbar Style
+//
+
+.navbar-subnav {
+  border-bottom: 1px solid darken($color-navbar, 5%);
+  background-color: $color-white;
+  top: 57px;
+
+  a {
+    color: $color-gray;
+
+    &:hover {
+      color: darken($color-gray, 15%);
+    }
+  }
+}
