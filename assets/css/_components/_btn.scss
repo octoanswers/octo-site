@@ -47,7 +47,7 @@ $btn-line-height-lg: 1.5;
 .btn-primary {
   border-color: $color-primary;
   background-color: $color-primary;
-  border-color: lighten($color-primary, 10%);
+  border-color: $color-primary;
 
   &:hover {
     background-color: darken($color-primary, 10%);

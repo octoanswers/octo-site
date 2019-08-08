@@ -101,7 +101,7 @@
 .btn-primary {
   border-color: #3d95e9;
   background-color: #3d95e9;
-  border-color: #6baeee;
+  border-color: #3d95e9;
 }
 
 .btn-primary:hover {
@@ -350,39 +350,6 @@ ul.list-links li a.active {
 
 .navbar-light .form-control {
   border: 1px solid #afdbfc;
-}
-
-.sidebar-right {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-right {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 57px;
-    height: calc(100vh - 57px);
-    overflow-y: auto;
-  }
-}
-
-.sidebar-left {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-left {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 57px;
-    z-index: 1000;
-    height: calc(100vh - 57px);
-  }
 }
 
 .CodeMirror .CodeMirror-code .cm-header-1 {

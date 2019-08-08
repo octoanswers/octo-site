@@ -3,15 +3,14 @@
 <header class="navbar sticky-top navbar-expand-lg navbar-light">
 	<div class="container">
 		<?php if ($this->authUser) : ?>
-			<a class="navbar-brand mr-0 mr-md-4 ml-xl-2" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
+			<a class="navbar-brand mr-0 mr-md-4" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
 				<?= $this->translator->get('answeropedia') ?>
 			</a>
 		<?php else : ?>
-			<a class="navbar-brand mr-0 mr-md-2" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
+			<a class="navbar-brand mr-0 mr-md-4" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
 				<?= $this->translator->get('answeropedia') ?>
 			</a>
 		<?php endif; ?>
-
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>

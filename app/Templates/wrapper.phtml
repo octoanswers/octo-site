@@ -7,42 +7,41 @@
 
 <body <?= isset($this->bodyAttr) ? ' ' . $this->bodyAttr : '' ?>>
 
-	<?php require TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
+	<?php require_once __DIR__ . '/_common/navbar.phtml'; ?>
 
-	<div class="container-fluid">
-		<div class="row flex-xl-nowrap">
+	<?php require_once __DIR__ . '/_common/navbar_subline.phtml'; ?>
 
-			<!-- left_sidebar -->
-			<div class="d-none d-xl-block col-xl-2 py-md-3 sidebar-left">
-				<?php if (file_exists(TEMPLATE_PATH . '/' . $this->template . '/left.phtml')) : ?>
-					<?php require TEMPLATE_PATH . '/' . $this->template . '/left.phtml'; ?>
-				<?php else : ?>
-					<?php require TEMPLATE_PATH . '/_common/left.phtml'; ?>
-				<?php endif; ?>
-			</div>
-			<!-- / left_sidebar -->
-
-			<!-- right_sidebar -->
-			<div class="d-none d-md-block col-lg-4 col-xl-3 py-md-3 sidebar-right">
-				<?php if (file_exists(TEMPLATE_PATH . '/' . $this->template . '/right.phtml')) : ?>
-					<?php require TEMPLATE_PATH . '/' . $this->template . '/right.phtml'; ?>
-				<?php endif; ?>
-			</div>
-			<!-- / right_sidebar -->
+	<div class="container">
+		<div class="row">
 
 			<!-- main_column -->
-			<main class="col-12 col-lg-8 col-xl-7 py-md-3 pl-xl-5">
+			<main class="col-12 col-lg-8 col-xl-7 py-md-3">
+
+
 				<?php require TEMPLATE_PATH . '/' . $this->template . '/main.phtml'; ?>
 			</main>
 			<!-- / main_column -->
+
+			<!-- right_sidebar -->
+			<div class="d-none d-md-block col-lg-4 col-xl-3 py-md-3">
+
+				<?php if (file_exists(TEMPLATE_PATH . '/' . $this->template . '/right.phtml')) : ?>
+					<?php require TEMPLATE_PATH . '/' . $this->template . '/right.phtml'; ?>
+				<?php endif; ?>
+
+				<?php require TEMPLATE_PATH . '/_common/left/other_languages.phtml'; ?>
+
+			</div>
+			<!-- / right_sidebar -->
+
 
 		</div>
 	</div>
 
 	<?php require __DIR__ . '/_common/footer.phtml'; ?>
 
-	<?php require TEMPLATE_PATH . '/_common/modals.phtml'; ?>
-	<?php require TEMPLATE_PATH . '/_common/js.phtml'; ?>
+	<?php require __DIR__ . '/_common/modals.phtml'; ?>
+	<?php require __DIR__ . '/_common/js.phtml'; ?>
 
 </body>
 
