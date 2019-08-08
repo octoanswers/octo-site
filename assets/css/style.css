@@ -66,18 +66,6 @@
   border-right: 1px solid #f1f1f1 !important;
 }
 
-.btn-light-info {
-  color: #864591;
-  background-color: #ffffff;
-  border-color: #ffffff;
-}
-
-.btn-light-info:hover {
-  color: #6c2c77;
-  background-color: #ffc9ff;
-  border-color: #ffc9ff;
-}
-
 .btn {
   padding: 0.25rem 0.625rem;
   font-size: 0.875rem;
