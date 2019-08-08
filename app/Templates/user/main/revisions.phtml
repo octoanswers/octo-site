@@ -1,27 +1,26 @@
-
-<?php if (count($this->revisions)): ?>
-    <?php for ($i=0; $i < count($this->revisions); $i++): ?>
+<?php if (count($this->revisions)) : ?>
+    <?php for ($i = 0; $i < count($this->revisions); $i++) : ?>
         <div class="my-4">
             <div class="mb-3">
-                <a class="h5 color-secondary-dark-4 text-decoration-none" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
+                <a class="h5 text-dark text-decoration-none" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
                     <?= $this->questions[$i]->title ?>
                 </a>
-                <div class="small color-secondary-dark-1">
+                <div class="small text-secondary">
                     Правка #<?= $this->revisions[$i]->id ?>
-                    <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
-                    <?php if ($this->revisions[$i]->comment): ?>
+                    <span class="mx-1 text-dark font-weight-bold">&middot;</span>
+                    <?php if ($this->revisions[$i]->comment) : ?>
                         <strong><?= $this->revisions[$i]->comment ?></strong>
-                    <?php else: ?>
+                    <?php else : ?>
                         Нет описания изменений
                     <?php endif; ?>
-                    <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
+                    <span class="mx-1 text-dark font-weight-bold">&middot;</span>
                     <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->createdAt) ?>
                 </div>
             </div>
             <pre><?= FineDiff::renderDiffToHTMLFromOpcodes($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
         </div>
     <?php endfor; ?>
-<?php else: ?>
+<?php else : ?>
     <div class="alert alert-info mb-5" role="alert">
         В настоящее время пользователь не написал ни одного ответа.
     </div>

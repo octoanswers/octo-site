@@ -1,18 +1,17 @@
-
-<?php if ($this->authUser->username == $this->authUser->name): ?>
+<?php if ($this->authUser->username == $this->authUser->name) : ?>
     <!-- lure set_real_name -->
     <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
         <div class="mr-3 d-none d-sm-block">
-			<i class="material-icons md-24">check</i>
+            <i class="material-icons md-24">check</i>
         </div>
         <div class="width-full">
-            <div class="color-secondary-dark-4 font-weight-bold mb-2">
+            <div class="text-dark font-weight-bold mb-2">
                 Задайте реальное имя
             </div>
-            <div class="small color-secondary-dark-2 mb-3">
+            <div class="small text-muted mb-3">
                 Реальное имя вызывает больше доверия, чем <strong>+username</strong>. Оно будет показываться рядом с вашими правками и в ТОПе авторов.
             </div>
-            <a  class="btn btn-sm btn-outline-primary" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
+            <a class="btn btn-sm btn-outline-primary" href="<?= Settings_URL_Helper::getRealNameURL($this->lang) ?>">
                 Задать реальное имя
             </a>
         </div>

@@ -20,93 +20,25 @@ $breakpoint-xl: 1200px;
   }
 }
 
+//
+// Custom Theme Colors
+//
+
+$color-primary: #3d95e9;
+
+//
+// Default Bootstrap Theme Colors
+//
+
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-info: #17a2b8;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
+$color-light: #f8f9fa;
+$color-dark: #343a40;
+
 $color-white: #ffffff;
 $color-gray: #6c757d;
+$color-gray-dark: #343a40;
 $color-black: #000000;
-
-// Primary Color (https://convertingcolors.com/hex-color-3d95e9.html)
-
-$color-primary-light-7: #fafdff; // from C7E4FF
-$color-primary-light-6: #e1f0ff; // from C7E4FF
-$color-primary-light-5: #c7e4ff; // from C7E4FF
-$color-primary-light-4: #aed8ff; // from C7E4FF
-$color-primary-light-3: #94cbff; // from C7E4FF
-$color-primary-light-2: #7abfff; // from C7E4FF
-$color-primary-light-1: #61b3ff; // from C7E4FF
-$color-primary: #3d95e9; // 0366d6
-$color-primary-dark-1: #007bcd;
-$color-primary-dark-2: #0063b1;
-$color-primary-dark-3: #004b96;
-$color-primary-dark-4: #00357b;
-
-$color-secondary-light-5: #f8f8f8;
-$color-secondary-light-4: #f1f1f1;
-$color-secondary-light-3: #d5d5d5;
-$color-secondary-light-2: #b9b9b9;
-$color-secondary-light-1: #9e9e9e;
-$color-secondary: #848484;
-$color-secondary-dark-1: #6b6b6b;
-$color-secondary-dark-2: #535353;
-$color-secondary-dark-3: #3c3c3c;
-$color-secondary-dark-4: #262626;
-
-// Color Success
-
-$color-success-light-6: #d0ffcc;
-$color-success-light-5: #b2ffb0;
-$color-success-light-4: #95ff94;
-$color-success-light-3: #77f079;
-$color-success-light-2: #59d35f;
-$color-success-light-1: #38b745;
-$color-success: #009b2b;
-$color-success-dark-1: #00800c;
-$color-success-dark-2: #006600;
-$color-success-dark-3: #004d00;
-$color-success-dark-4: #003500;
-
-// Warning Color
-
-$color-warning-light-2: #fff7d7;
-$color-warning-light-1: #fff2be;
-$color-warning: #ffeda4;
-$color-warning-dark-1: #ffe88b;
-$color-warning-dark-2: #ffe371;
-$color-warning-dark-3: #ffde58;
-$color-warning-dark-4: #ffd93e;
-
-// Danger Color
-
-$color-danger-light-5: #ffcfdf;
-$color-danger-light-4: #ffb2c3;
-$color-danger-light-3: #ff94a8;
-$color-danger-light-2: #ff778e;
-$color-danger-light-1: #ff5a74;
-$color-danger: #eb3a5c;
-$color-danger-dark-1: #cb0d45;
-$color-danger-dark-2: #ac002f;
-$color-danger-dark-3: #8d001b;
-$color-danger-dark-4: #6f0000;
-
-// Info Color
-
-$color-info-light-4: #ffc9ff;
-$color-info-light-3: #f6adff;
-$color-info-light-2: #d992e4;
-$color-info-light-1: #bd78c7;
-$color-info: #a15eac; // Rectangle for Primary (+ 1 dark)
-$color-info-dark-1: #864591;
-$color-info-dark-2: #6c2c77;
-$color-info-dark-3: #52125e;
-$color-info-dark-4: #390046;
-
-// Blue Gray Color
-
-$color-blue-gray-light-4: #c7d9ed;
-$color-blue-gray-light-3: #acbed0;
-$color-blue-gray-light-2: #91a3b5;
-$color-blue-gray-light-1: #77889a;
-$color-blue-gray: #5e6f80; // Sweetspot for primary
-$color-blue-gray-dark-1: #465767;
-$color-blue-gray-dark-2: #2f3f4f;
-$color-blue-gray-dark-3: #182a38;
-$color-blue-gray-dark-4: #011523;

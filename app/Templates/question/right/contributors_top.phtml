@@ -1,7 +1,6 @@
-
-<?php if (count($this->contributors_top)): ?>
-	<!--noindex-->
-	<!--googleoff: index-->
+<?php if (count($this->contributors_top)) : ?>
+    <!--noindex-->
+    <!--googleoff: index-->
 
     <!-- top contributors @ sidebar -->
     <div class="mb-4">
@@ -9,51 +8,51 @@
             <a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
                 <span class="font-weight-bold"><?= count($this->contributors) ?></span>&nbsp;<i class="material-icons md-18">person</i>
             </a>
-			<div class="subtitle-1 color-secondary-dark-1">
+            <div class="subtitle-1 text-secondary">
                 <?= $this->translator->get('Top contributors') ?>
             </div>
         </div>
-            
-        <?php foreach ($this->contributors_top as $contributor): ?>
 
-        <div class="media position-relative mb-4">
-            <a class="wh-3 mr-3 rounded-circle" href="<?= $contributor->getURL($this->lang) ?>">
-                <img src="<?= $contributor->getAvatarMediumURL() ?>" class="wh-3 rounded-circle" alt="<?= $contributor->name ?>">
-            </a>
-            <div class="media-body">
-                <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
-                    <?= $contributor->name ?>
+        <?php foreach ($this->contributors_top as $contributor) : ?>
+
+            <div class="media position-relative mb-4">
+                <a class="wh-3 mr-3 rounded-circle" href="<?= $contributor->getURL($this->lang) ?>">
+                    <img src="<?= $contributor->getAvatarMediumURL() ?>" class="wh-3 rounded-circle" alt="<?= $contributor->name ?>">
                 </a>
+                <div class="media-body">
+                    <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
+                        <?= $contributor->name ?>
+                    </a>
 
-                <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
-                    <?= Contribution_Humanizer::humanizeCount($contributor->contribution) ?>
-                </span>
+                    <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
+                        <?= Contribution_Humanizer::humanizeCount($contributor->contribution) ?>
+                    </span>
 
-                <p class="semi-small text-secondary mt-1 mb-0">
-                    <?= $contributor->signature ? $contributor->signature : $contributor->username ?>
-                    <?php if ($contributor->site): ?>
-                        <a href="<?= $contributor->site ?>">
-                            <?= parse_url($contributor->site, PHP_URL_HOST) ?>
-                        </a>
-                    <?php endif; ?>
-                </p>
+                    <p class="semi-small text-secondary mt-1 mb-0">
+                        <?= $contributor->signature ? $contributor->signature : $contributor->username ?>
+                        <?php if ($contributor->site) : ?>
+                            <a href="<?= $contributor->site ?>">
+                                <?= parse_url($contributor->site, PHP_URL_HOST) ?>
+                            </a>
+                        <?php endif; ?>
+                    </p>
+                </div>
             </div>
-        </div>
         <?php endforeach; ?>
 
         <!--
-        <?php if (count($this->contributors) > count($this->contributors_top)): ?>
-            <div class="box-footer">
-                <a class="ml-5 small" data-scroll href="#contributors_full_list">
-                    <?= $this->translator->get('All answer contributors') ?>
-                </a>
-            </div>
-        <?php endif; ?>
-        -->
-    
-    </div>
-	<!-- / top contributors @ sidebar -->
+            <?php if (count($this->contributors) > count($this->contributors_top)) : ?>
+                    <div class="box-footer">
+                        <a class="ml-5 small" data-scroll href="#contributors_full_list">
+                            <?= $this->translator->get('All answer contributors') ?>
+                        </a>
+                    </div>
+            <?php endif; ?>
+            -->
 
-	<!--googleon: index -->
-	<!--/noindex-->
+    </div>
+    <!-- / top contributors @ sidebar -->
+
+    <!--googleon: index -->
+    <!--/noindex-->
 <?php endif; ?>

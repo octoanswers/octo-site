@@ -1,10 +1,8 @@
-
 <!-- jumbotron -->
 <div class="mb-5 pb-5 border-bottom">
-    
-    <h1 class="display-4 font-weight-700 color-primary my-4">
+
+    <h1 class="display-4 font-weight-700 text-primary my-4">
         <?= $this->translator->get('answeropedia') ?>
-        <sup class="color-secondary-light-3">β</sup>
     </h1>
 
     <h2 class="h1 my-4">
@@ -12,27 +10,27 @@
         <?= $this->translator->get('main', 'jumbotron', 'header_2') ?>
     </h2>
 
-    <p class="lead color-secondary-dark-4 mt-3">
+    <p class="lead text-dark mt-3">
         <?= $this->translator->get('main', 'jumbotron', 'text') ?>
     </p>
 
-    <form class="mt-4 mb-3" action="<?= SITE_URL.'/'.$this->lang.'/search' ?>" method="GET">
+    <form class="mt-4 mb-3" action="<?= SITE_URL . '/' . $this->lang . '/search' ?>" method="GET">
         <input type="hidden" name="list" value="questions">
         <div class="form-group">
             <input name="q" class="form-control form-control-lg" type="text" placeholder="<?= $this->translator->get('main', 'jumbotron', 'search_placeholder') ?>" aria-label="Search">
         </div>
     </form>
-    
+
     <div class="semi-small ml-1">
-        <a class="color-secondary-dark-2" href="#" data-toggle="modal" data-target="#modal_ask">
+        <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_ask">
             <?= $this->translator->get('main', 'jumbotron', 'ask') ?>
         </a>
-        <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
-        <a class="color-secondary-dark-2" href="#" data-toggle="modal" data-target="#modal_signup">
+        <span class="mx-1 text-muted font_weight_800">&middot;</span>
+        <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_signup">
             <?= $this->translator->get('main', 'jumbotron', 'signup') ?>
         </a>
-        <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
-        <a class="color-secondary-dark-2" href="#" data-toggle="modal" data-target="#modal_login">
+        <span class="mx-1 text-muted font_weight_800">&middot;</span>
+        <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_login">
             <?= $this->translator->get('main', 'jumbotron', 'login') ?>
         </a>
     </div>

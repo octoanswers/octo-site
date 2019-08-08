@@ -1,15 +1,14 @@
-
-<?php if (count($this->related_categories)): ?>
+<?php if (count($this->related_categories)) : ?>
 
     <!-- related_categories -->
     <div class="my-4">
         <div class="">
-            <a class="font-weight-bold color-secondary-dark-3" href="#">
-            <?= $this->translator->get('categories', 'related_categories') ?> 
+            <a class="font-weight-bold text-dark" href="#">
+                <?= $this->translator->get('categories', 'related_categories') ?>
             </a>
         </div>
         <div class="pt-4 pb-0">
-            <?php foreach ($this->related_categories as $category): ?>
+            <?php foreach ($this->related_categories as $category) : ?>
                 <a class="badge badge-secondary mr-2 mb-3" href="<?= $category->getURL($this->lang) ?>">
                     <?= $category->title ?>
                 </a>
@@ -17,7 +16,7 @@
         </div>
     </div>
     <!-- / related_categories -->
-<?php else: ?>
+<?php else : ?>
     <!-- <div class="alert alert-super" role="alert">
         <img src="/public/img/Ghost-96.png" alt="Нет вопросов в теме «{{ category.getTitle }}»"/>
         <p><strong>Вопросов нет</strong></p>

@@ -1,12 +1,11 @@
-
 <!-- category header -->
 <div class="mb-4">
-    <p class="mb-0 color-secondary-dark-2 mb-2">
+    <p class="mb-0 text-muted mb-2">
         <?= $this->translator->get('category', 'title') ?>
     </p>
     <h1><?= $this->category->title ?></h1>
-    <div class="mb-0 color-secondary-light-1">
-        <?= count($this->category_questions)+3 ?> вопросов
+    <div class="mb-0 text-secondary">
+        <?= count($this->category_questions) + 3 ?> вопросов
     </div>
 </div>
 <!-- / category header -->

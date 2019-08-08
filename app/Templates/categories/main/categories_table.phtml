@@ -1,19 +1,18 @@
-
-<?php if (count($this->categories)): ?>
+<?php if (count($this->categories)) : ?>
     <!-- categories_table -->
-    <?php foreach ($this->categories as $category): ?>
+    <?php foreach ($this->categories as $category) : ?>
         <div class="my-4">
-            <a class="h3 color-secondary-dark-3 text-decoration-none" href="<?= $category->getURL($this->lang) ?>">
+            <a class="h3 text-dark text-decoration-none" href="<?= $category->getURL($this->lang) ?>">
                 #<?= $category->title ?>
             </a>
-            <div class="small mt-1 color-secondary-light-1">
+            <div class="small mt-1 text-secondary">
 
                 <a rel="nofollow" href="#">
                     Подписаться
                 </a>
-                <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
+                <span class="mx-1 text-dark font-weight-bold">&middot;</span>
                 1 вопрос
-                <span class="mx-1 color-secondary-dark-4 font-weight-bold">&middot;</span>
+                <span class="mx-1 text-dark font-weight-bold">&middot;</span>
                 2 подписчика
 
             </div>

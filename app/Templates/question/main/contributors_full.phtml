@@ -1,16 +1,15 @@
-
-<?php if (count($this->contributors)): ?>
+<?php if (count($this->contributors)) : ?>
 	<!-- contributors_full -->
 	<div class="my-5" id="contributors_full_list">
-    
-		<div class="subtitle-1 color-secondary-dark-1 mb-3">
-            <?= $this->translator->get('Answer contributors') ?> 
-            <span class="text-muted">
-                <span class="ml-3"><?= count($this->contributors) ?></span> <i class="material-icons md-18 w-32px">people</i>
-            </span>
-        </div>
 
-		<?php foreach ($this->contributors as $contributor): ?>
+		<div class="subtitle-1 text-secondary mb-3">
+			<?= $this->translator->get('Answer contributors') ?>
+			<span class="text-muted">
+				<span class="ml-3"><?= count($this->contributors) ?></span> <i class="material-icons md-18 w-32px">people</i>
+			</span>
+		</div>
+
+		<?php foreach ($this->contributors as $contributor) : ?>
 			<a class="wh-5 mr-2 mb-2" href="<?= $contributor->getURL($this->lang) ?>">
 				<img class="wh-5 rounded" src="<?= $contributor->getAvatarMediumURL() ?>" alt="<?= $contributor->name ?>">
 			</a>

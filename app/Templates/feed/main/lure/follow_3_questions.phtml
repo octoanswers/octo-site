@@ -1,18 +1,17 @@
-
-<?php if ($this->isShowQuestionsFollowLure): ?>
+<?php if ($this->isShowQuestionsFollowLure) : ?>
     <!-- lure follow_3_questions -->
     <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
         <div class="mr-3 d-none d-sm-block">
-			<i class="material-icons md-24">check</i>
+            <i class="material-icons md-24">check</i>
         </div>
         <div class="width-full">
-            <div class="color-secondary-dark-4 font-weight-bold mb-2">
+            <div class="text-dark font-weight-bold mb-2">
                 <?= $this->translator->get('Follow some questions') ?>
             </div>
-            <div class="small color-secondary-dark-2 mb-3">
+            <div class="small text-muted mb-3">
                 <?= $this->translator->get('By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.') ?>.
             </div>
-            <a  class="btn btn-sm btn-outline-primary" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
+            <a class="btn btn-sm btn-outline-primary" href="<?= Questions_URL_Helper::getNewestURL($this->lang) ?>">
                 <?= $this->translator->get('Views a questions') ?>
             </a>
         </div>

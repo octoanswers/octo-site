@@ -1,18 +1,17 @@
-
 <!-- categories_top -->
 <div>
-	<?php if (count($this->firstTwoCategories)): ?>
+	<?php if (count($this->firstTwoCategories)) : ?>
 
-		<?php foreach ($this->firstTwoCategories as $category): ?>
-            <a class="text-decoration-none mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
+		<?php foreach ($this->firstTwoCategories as $category) : ?>
+			<a class="text-decoration-none mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>">
 				<?= $category->title ?>
 			</a>
 		<?php endforeach; ?>
 
-        <?php if (count($this->categories) > count($this->firstTwoCategories)): ?>
-            <a class="color-secondary-dark-1 text-decoration-none" data-scroll href="#question_categories_list">
-                <?= $this->translator->get('question', 'block__categories_top', 'more_btn') ?>
-            </a>
+		<?php if (count($this->categories) > count($this->firstTwoCategories)) : ?>
+			<a class="text-secondary text-decoration-none" data-scroll href="#question_categories_list">
+				<?= $this->translator->get('question', 'block__categories_top', 'more_btn') ?>
+			</a>
 		<?php endif; ?>
 
 	<?php endif; ?>

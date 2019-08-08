@@ -2,13 +2,13 @@
 <div class="my-4">
 
     <div class="mb-2">
-        <a class="lead color-secondary-dark-4 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
+        <a class="lead text-dark text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
             <?= $question->title ?>
         </a>
     </div>
 
     <?php if (false) : ?>
-        <div class="color-secondary-dark-2 my-2">
+        <div class="text-muted my-2">
             <?= 'short_answer' ?>
         </div>
     <?php endif; ?>
@@ -33,11 +33,11 @@
         <?php endif; ?>
 
         <?php if (strlen($question->answer->text)) : ?>
-            <span class="small color-secondary-light-1">2 автора</a>
-                <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
+            <span class="small text-secondary">2 автора</a>
+                <span class="mx-1 text-muted font_weight_800">&middot;</span>
                 <i class="material-icons md-14">access_time</i>
-                <span class="small color-secondary-light-1"><?= $question->getMinutesToRead() ?></span>
-                <span class="mx-1 color-secondary-dark-2 font_weight_800">&middot;</span>
+                <span class="small text-secondary"><?= $question->getMinutesToRead() ?></span>
+                <span class="mx-1 text-muted font_weight_800">&middot;</span>
             <?php endif; ?>
 
             <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>

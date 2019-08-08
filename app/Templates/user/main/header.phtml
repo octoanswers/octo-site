@@ -1,22 +1,21 @@
-
 <div class="mb-4">
-    
+
     <img class="wh-6 rounded mb-4" src="<?= $this->user->getAvatarMediumURL() ?>" alt="<?= $this->user->name ?>">
-    
+
     <h1 class="mb-1"><?= $this->user->name ?></h1>
-    <div class="mb-3 color-secondary-light-1 small">
+    <div class="mb-3 text-secondary small">
         +<?= $this->user->username ?>
     </div>
 
-    <?php if ($this->user->signature): ?>
-        <div class="color-secondary-dark-2">
+    <?php if ($this->user->signature) : ?>
+        <div class="text-muted">
             <?= $this->user->signature ?>
         </div>
     <?php endif; ?>
 
-    <?php if ($this->user->site): ?>
+    <?php if ($this->user->site) : ?>
         <div class="mt-2">
-			<i class="material-icons md-18 color-secondary">link</i>
+            <i class="material-icons md-18 text-secondary">link</i>
             <a href="<?= $this->user->site ?>">
                 <?= parse_url($this->user->site, PHP_URL_HOST) ?>
             </a>

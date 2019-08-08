@@ -1,18 +1,17 @@
-
-<?php if (isset($this->question->answer) && !$this->question->answer->text && !$this->authUser): ?>
+<?php if (isset($this->question->answer) && !$this->question->answer->text && !$this->authUser) : ?>
 
     <!-- lure subscribe -->
     <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-4">
         <div class="mr-3 d-none d-sm-block">
             <p class="h1 text-center mx-auto">
-				<i class="material-icons md-24">email</i>
+                <i class="material-icons md-24">email</i>
             </p>
         </div>
         <div class="width-full">
-            <div class="color-secondary-dark-4 font-weight-bold mb-2">
+            <div class="text-dark font-weight-bold mb-2">
                 <?= $this->translator->get('Subscription to the question') ?>
             </div>
-            <div class="small color-secondary-dark-2 mb-3">
+            <div class="small text-muted mb-3">
                 <?= $this->translator->get('Enter your email address to get notified about the answer as soon as it appears') ?>
             </div>
 

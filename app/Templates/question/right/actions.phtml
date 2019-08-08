@@ -1,46 +1,44 @@
-
 <!-- right_actions -->
 
 <nav class="my-4">
-    <div class="subtitle-1 mb-2 color-secondary-dark-1">
-        <?= $this->translator->get('Actions') ?>
+	<div class="subtitle-1 mb-2 text-secondary">
+		<?= $this->translator->get('Actions') ?>
 	</div>
 	<ul class="list-links">
-        
-        <!-- add or update image -->
-		<?php if ($this->authUser): ?>
+
+		<!-- add or update image -->
+		<?php if ($this->authUser) : ?>
 			<li>
 				<a href="#" data-toggle="modal" data-target="#modal_upload_image">
-                    <i class="material-icons md-18 w-32px">image</i><?= ($this->question->imageBaseName) ? $this->translator->get('Update picture') : $this->translator->get('Add picture') ?>
+					<i class="material-icons md-18 w-32px">image</i><?= ($this->question->imageBaseName) ? $this->translator->get('Update picture') : $this->translator->get('Add picture') ?>
 				</a>
 			</li>
 		<?php endif; ?>
 		<!-- add or update image -->
 
-		<?php if ($this->authUser): ?>
+		<?php if ($this->authUser) : ?>
 			<!-- rename question -->
 			<li>
 				<a href="#" data-toggle="modal" data-target="#modal_rename_question">
-                    <i class="material-icons md-18 w-32px">edit</i><?= $this->translator->get('Rename question') ?>	
+					<i class="material-icons md-18 w-32px">edit</i><?= $this->translator->get('Rename question') ?>
 				</a>
 			</li>
 			<!-- / rename question -->
 		<?php endif; ?>
-			
+
 		<li>
 			<a href="#" rel="nofollow">
-                <i class="material-icons md-18 w-32px">report</i><s><?= $this->translator->get('Report') ?></s>
+				<i class="material-icons md-18 w-32px">report</i><s><?= $this->translator->get('Report') ?></s>
 			</a>
-        </li>
-        
-        <li>
-            <a rel="nofollow" target="_blank" href="<?= DDG_URL_Helper::getSearchURL($this->question->title) ?>">
-                <i class="material-icons md-18 w-32px">link</i><?= $this->translator->get('Search in DuckDuckGo') ?>
-            </a>
-        </li>
+		</li>
+
+		<li>
+			<a rel="nofollow" target="_blank" href="<?= DDG_URL_Helper::getSearchURL($this->question->title) ?>">
+				<i class="material-icons md-18 w-32px">link</i><?= $this->translator->get('Search in DuckDuckGo') ?>
+			</a>
+		</li>
 
 	</ul>
 </nav>
 
 <!-- / right_actions -->
-

@@ -1,6 +1,5 @@
-
-<?php if (isset($this->question->answer) && !$this->question->answer->text): ?>
-    <?php if ($this->authUser): ?>
+<?php if (isset($this->question->answer) && !$this->question->answer->text) : ?>
+    <?php if ($this->authUser) : ?>
 
         <!-- lure be_first_contributor -->
         <div class="alert alert-primary py-3 my-4" role="alert">
@@ -15,7 +14,7 @@
         </div>
         <!-- / lure be_first_contributor -->
 
-    <?php else: ?>
+    <?php else : ?>
         <!--noindex-->
         <!--googleoff: index-->
 
@@ -23,24 +22,24 @@
         <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-4">
             <div class="mr-3 d-none d-sm-block">
                 <p class="h1">
-					<i class="material-icons md-24 color-danger">grade</i>
+                    <i class="material-icons md-24 color-danger">grade</i>
                 </p>
             </div>
             <div class="width-full">
-                <div class="color-secondary-dark-4 font-weight-bold mb-2">
+                <div class="text-dark font-weight-bold mb-2">
                     <?= $this->translator->get('Be the first author') ?>!
                 </div>
-                <div class="small color-secondary-dark-2 mb-3">
+                <div class="small text-muted mb-3">
                     <?= $this->translator->get('Still no one tried to write an answer to this question. Be the first if the category of the question is close to you!') ?>
                 </div>
                 <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#first_answer__signup">
                     <?= $this->translator->get('Write first answer') ?>
-                </a>
+                    </a>
             </div>
         </div>
         <!-- / lure be_first_contributor -->
 
-        <?php require_once TEMPLATE_PATH.'/_modal/question/_lure/first_answer_signup.phtml' ?>
+        <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/first_answer_signup.phtml' ?>
 
         <!--googleon: index -->
         <!--/noindex-->

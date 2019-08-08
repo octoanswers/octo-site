@@ -1,44 +1,13 @@
 .badge {
-    font-weight: 400;
-    line-height: 1.5;
-    padding: .25rem .5rem;
-    font-size: .875rem;
-    border-radius: .2rem;
-    vertical-align: middle;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+  vertical-align: middle;
 }
 
 .badge-primary {
-    border-color: $color-primary;
-    background-color: $color-primary;
-}
-
-.badge-secondary {
-    border-color: $color-secondary;
-    background-color: $color-secondary;
-}
-
-.badge-success {
-    border-color: $color-success;
-    background-color: $color-success;
-}
-
-.badge-warning {
-    border-color: $color-warning;
-    background-color: $color-warning;
-}
-
-.badge-danger {
-    border-color: $color-danger;
-    background-color: $color-danger;
-}
-
-.badge-light {
-    border-color: $color-secondary-light-4;
-    background-color: $color-secondary-light-4;
-}
-
-.badge-info {
-    color: $color-white;
-    background-color: $color-info-dark-1;
-    border-color: $color-info-dark-1;
+  border-color: $color-primary;
+  background-color: $color-primary;
 }

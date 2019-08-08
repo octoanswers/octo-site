@@ -1,4 +1,3 @@
-
 <!-- activity f_u_rename_q -->
 <div class="d-flex border-bottom py-3">
     <div class="mr-3 d-none d-sm-block">
@@ -7,17 +6,17 @@
         </a>
     </div>
     <div class="width-full">
-        <div class="color-secondary-dark-2">
-            <a class="color-secondary-dark-4 font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
-            <?= $this->translator->get('renamed question') ?> 
-            <span class="color-secondary-dark-4 font-weight-bold"><?= $data['question']['title_old'] ?></span>
+        <div class="text-muted">
+            <a class="text-dark font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
+            <?= $this->translator->get('renamed question') ?>
+            <span class="text-dark font-weight-bold"><?= $data['question']['title_old'] ?></span>
         </div>
         <div class="my-1">
-            <a class="h3 color-secondary-dark-4 text-decoration-none" href="<?= $data['question']['url'] ?>">
+            <a class="h3 text-dark text-decoration-none" href="<?= $data['question']['url'] ?>">
                 <?= $data['question']['title_new'] ?>
             </a>
         </div>
-        <div class="small color-secondary-light-1">
+        <div class="small text-secondary">
             <?= $activity['created_at__humanized'] ?>
         </div>
     </div>
