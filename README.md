@@ -2,7 +2,7 @@
 
 # Answeropedia
 
-Answeropedia is a wiki-based Q&A (questions and answers) service, running on PHP/MySQL.
+[Answeropedia](https://answeropedia.org) is a wiki-based Q&A (questions and answers) service, running on PHP/MySQL.
 
 Currently, Answeropedia is launched only in [Russian](https://answeropedia.org/ru). If you want that Answeropedia to work in your own language, please [contact me](https://www.facebook.com/alexandergomzyakov) on Facebook, we can talk about it.
 
@@ -32,6 +32,10 @@ Currently, Answeropedia is launched only in [Russian](https://answeropedia.org/r
 + MySQL/MariaDB databases;
 + PHPUnit 8.1.3 or later
 
-## Copyright and license
+## Contributors
 
-The following directories and their contents are &copy; [Alexander Gomzyakov](https://www.facebook.com/alexandergomzyakov).
+Open Source is best when supported by a [community](https://github.com/answeropedia/answeropedia/graphs/contributors). Any size of contribution is **very** appreciated.
+
+## License
+
+The project released under [GPL-3.0 license](https://github.com/answeropedia/answeropedia/blob/master/LICENSE).
