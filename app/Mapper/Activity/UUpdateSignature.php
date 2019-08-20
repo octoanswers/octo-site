@@ -8,7 +8,7 @@ class UUpdateSignature_Activity_Mapper extends Abstract_Mapper
         $user = $activity->subject;
 
         if (!isset($activity->data['signature'])) {
-            throw new Exception("Incorrect data param", 1);
+            throw new Exception('Incorrect data param', 1);
         }
 
         $signature = $activity->data['signature'];
@@ -17,7 +17,7 @@ class UUpdateSignature_Activity_Mapper extends Abstract_Mapper
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);
         }
         if (!is_a($user, User_Model::class)) {
-            throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
+            throw new Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
         // if (!is_a($signature, Revision_Model::class)) {
         //     throw new Exception('Incorrect activity "data" class type: '.get_class($revision), 0);
@@ -26,9 +26,9 @@ class UUpdateSignature_Activity_Mapper extends Abstract_Mapper
         $userID = $user->id;
         $data = json_encode([
             'user' => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'profile_url' => $user->get_URL($this->lang),
+                'id'            => $user->id,
+                'name'          => $user->name,
+                'profile_url'   => $user->get_URL($this->lang),
                 'avatar_xs_url' => $user->get_avatar_URL_small(),
             ],
             'signature' => $signature,
@@ -41,6 +41,7 @@ class UUpdateSignature_Activity_Mapper extends Abstract_Mapper
         $stmt->bindParam(':data', $data, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

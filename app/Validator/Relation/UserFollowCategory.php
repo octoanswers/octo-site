@@ -5,9 +5,9 @@ use Respect\Validation\Validator as v;
 
 class UserFollowCategory_Relation_Validator
 {
-    #
-    # Model validator
-    #
+    //
+    // Model validator
+    //
 
     public static function validateExists(UserFollowCategory_Relation_Model $relation)
     {
@@ -26,9 +26,9 @@ class UserFollowCategory_Relation_Validator
         return true;
     }
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validateID($id)
     {

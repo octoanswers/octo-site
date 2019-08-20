@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
 {
@@ -13,12 +13,12 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
             $api_key = (string) $request->getParam('api_key');
             $questionNewTitle = (string) $request->getParam('new_title');
 
-            # Validate params
+            // Validate params
 
             $user = (new User_Query())->userWithAPIKey($api_key);
             $userID = $user->id;
 
-            # change question title
+            // change question title
 
             $question = (new Question_Query($this->lang))->questionWithID($questionID);
             $old_title = $question->title;
@@ -28,13 +28,13 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
             $saveRedirect = (bool) $request->getParam('save_redirect');
             if ($saveRedirect) {
                 if (mb_strtolower($questionNewTitle) != mb_strtolower($old_title)) {
-                    # create question record with OLD title & redirect flag
-                    $oldQuestion = new Question_Model;
+                    // create question record with OLD title & redirect flag
+                    $oldQuestion = new Question_Model();
                     $oldQuestion->title = $old_title;
                     $oldQuestion->isRedirect = true;
                     $oldQuestion = (new Question_Mapper($this->lang))->create($oldQuestion);
 
-                    # create redirect record
+                    // create redirect record
                     $this->redirect = new Question_Redirect_Model();
                     $this->redirect->fromID = $oldQuestion->id;
                     $this->redirect->toTitle = $question->title;
@@ -42,9 +42,9 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
                 }
             }
 
-            #
-            # Create activities
-            #
+            //
+            // Create activities
+            //
 
             $activity = new Activity_Model();
             $activity->type = Activity_Model::U_RENAME_Q;
@@ -60,36 +60,36 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
 
             $output = [
                 'question' => [
-                    'id' => $question->id,
+                    'id'        => $question->id,
                     'old_title' => $old_title,
                     'new_title' => $question->title,
-                    'url' => $question->get_URL($this->lang),
+                    'url'       => $question->get_URL($this->lang),
                 ],
                 'user' => [
-                    'id' => $user->id,
+                    'id'   => $user->id,
                     'name' => $user->name,
                 ],
                 'activities' => [
                     [
-                        'id' => $activity->id,
+                        'id'   => $activity->id,
                         'type' => $activity->type,
                     ],
                     [
-                        'id' => $activity2->id,
+                        'id'   => $activity2->id,
                         'type' => $activity2->type,
                     ],
-                ]
+                ],
             ];
 
             if (isset($this->redirect)) {
                 $output['redirect'] = [
-                    'from_id' => $this->redirect->fromID,
+                    'from_id'  => $this->redirect->fromID,
                     'to_title' => $this->redirect->toTitle,
                 ];
             }
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

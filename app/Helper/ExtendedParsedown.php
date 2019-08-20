@@ -30,7 +30,7 @@ class ExtendedParsedown extends Parsedown
             $level = 1;
 
             while (isset($Line['text'][$level]) and $Line['text'][$level] === '#') {
-                ++$level;
+                $level++;
             }
 
             // changed from 6 to 5
@@ -43,21 +43,21 @@ class ExtendedParsedown extends Parsedown
             // increase H-tag (because H1 is busy)
             $hDigit = min(5, $level) + 1;
 
-            $Block = array(
-                'element' => array(
-                    'name' => 'h' . $hDigit,
-                    'text' => $text,
+            $Block = [
+                'element' => [
+                    'name'    => 'h'.$hDigit,
+                    'text'    => $text,
                     'handler' => 'line',
-                ),
-            );
+                ],
+            ];
 
             return $Block;
         }
     }
 
-    #
-    # Protected Methods
-    #
+    //
+    // Protected Methods
+    //
 
     protected function _preProcessing(string $text): string
     {
@@ -75,18 +75,20 @@ class ExtendedParsedown extends Parsedown
                 $reference_part = $matches[2];
                 if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
                     $category = Category::initWithTitle($reference_part);
-                    return "[" . $matches[1] . "](" . $category->get_URL($this->lang) . ")";
+
+                    return '['.$matches[1].']('.$category->get_URL($this->lang).')';
                 }
+
                 return $matches[0];
             },
             $text
         );
 
         // [foo] --> [foo]()
-        $text = preg_replace("/\[([^\]]+)\]([^\(])/iu", "[$1]()$2", $text);
+        $text = preg_replace("/\[([^\]]+)\]([^\(])/iu", '[$1]()$2', $text);
 
         // [foo]() --> [foo](foo)
-        $text = preg_replace("/\[([^\]]+)\]\(\)/iu", "[$1]($1)", $text);
+        $text = preg_replace("/\[([^\]]+)\]\(\)/iu", '[$1]($1)', $text);
 
         // [foo](bar) --> [foo](https://answeropedia.org/lang/bar)
         $text = preg_replace_callback(
@@ -95,8 +97,10 @@ class ExtendedParsedown extends Parsedown
                 $reference_part = $matches[2];
                 if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
                     $question = Question_Model::initWithTitle($reference_part);
-                    return "[" . $matches[1] . "](" . $question->get_URL($this->lang) . ")";
+
+                    return '['.$matches[1].']('.$question->get_URL($this->lang).')';
                 }
+
                 return $matches[0];
             },
             $text
@@ -108,11 +112,11 @@ class ExtendedParsedown extends Parsedown
     protected function _postProcessing(string $textHTML): string
     {
         // Fix external URL`s (like a href="https://answeropedia.org/ru/http://site.com/page")
-        $incorrect_URL_pattern = "/href\=\"https\:\/\/answeropedia\.org\/" . $this->lang . "\/(https?.+(?!answeropedia\.org).+)\"/iuU";
+        $incorrect_URL_pattern = "/href\=\"https\:\/\/answeropedia\.org\/".$this->lang."\/(https?.+(?!answeropedia\.org).+)\"/iuU";
         $textHTML = preg_replace_callback(
             $incorrect_URL_pattern,
             function ($matches) {
-                return 'href="' . urldecode($matches[1]) . '"';
+                return 'href="'.urldecode($matches[1]).'"';
             },
             $textHTML
         );
@@ -121,7 +125,7 @@ class ExtendedParsedown extends Parsedown
         $textHTML = preg_replace_callback(
             "/href\=\"(https?\:\/\/(?!answeropedia\.org).+)\"/iuU",
             function ($matches) {
-                return 'href="' . $matches[1] . '" class="link-external" target="_blank" rel="nofollow"';
+                return 'href="'.$matches[1].'" class="link-external" target="_blank" rel="nofollow"';
             },
             $textHTML
         );

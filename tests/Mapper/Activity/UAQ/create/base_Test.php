@@ -6,7 +6,7 @@ class Mapper_Activity_UAQ__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $user = new User_Model;
+        $user = new User_Model();
         $user->id = 46;
         $user->name = 'Steve Bo';
 

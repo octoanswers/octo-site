@@ -15,7 +15,7 @@ class QuestionsIDSubscribe_POST_APIController__question_id__Test extends Abstrac
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 1,
+            'error_code'    => 1,
             'error_message' => 'Question with ID "236" not exists',
         ];
 
@@ -34,7 +34,7 @@ class QuestionsIDSubscribe_POST_APIController__question_id__Test extends Abstrac
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Question id param 0 must be greater than or equal to 1',
         ];
 
@@ -53,7 +53,7 @@ class QuestionsIDSubscribe_POST_APIController__question_id__Test extends Abstrac
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Question id param -1 must be greater than or equal to 1',
         ];
 

@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class CategoryNotFound_Error_PageController extends Abstract_PageController
 {
@@ -9,7 +9,7 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
     {
         // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new Translator($this->lang, ROOT_PATH."/app/Lang");
+        $this->translator = new Translator($this->lang, ROOT_PATH.'/app/Lang');
 
         $categoryURI = $args['category_uri'];
 
@@ -20,8 +20,8 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
 
         $this->template = 'error/category_not_found';
         $this->showFooter = false;
-        $this->pageTitle = $this->translator->get("error__category_not_found", "page_title").$this->categoryTitle.' – '.$this->translator->get('answeropedia');
-        $this->pageDescription = $this->translator->get("error__category_not_found", "page_title").$this->categoryTitle;
+        $this->pageTitle = $this->translator->get('error__category_not_found', 'page_title').$this->categoryTitle.' – '.$this->translator->get('answeropedia');
+        $this->pageDescription = $this->translator->get('error__category_not_found', 'page_title').$this->categoryTitle;
 
         $this->categoryURI = $categoryURI;
         //$this->includeJS[] = 'goal/category_not_found';

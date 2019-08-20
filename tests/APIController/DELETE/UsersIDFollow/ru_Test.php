@@ -15,10 +15,10 @@ class UsersIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend_Tes
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'user_id' => 3,
-            'user_name' => 'Иван Коршунов',
-            'followed_user_id' => 7,
-            'followed_user_name' => 'Павел Перепелов'
+            'user_id'            => 3,
+            'user_name'          => 'Иван Коршунов',
+            'followed_user_id'   => 7,
+            'followed_user_name' => 'Павел Перепелов',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
@@ -36,8 +36,8 @@ class UsersIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend_Tes
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
-            'error_message' => 'User with ID "4" not followed by user with ID "3"'
+            'error_code'    => 0,
+            'error_message' => 'User with ID "4" not followed by user with ID "3"',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

@@ -12,6 +12,7 @@ class UserFollowCategory_Relation_Mapper extends Abstract_Mapper
         $stmt->bindParam(':category_id', $relation->categoryID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -38,12 +39,13 @@ class UserFollowCategory_Relation_Mapper extends Abstract_Mapper
         $stmt->bindParam(':category_id', $relation->categoryID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
         $deleted_rows = $stmt->rowCount();
         if ($deleted_rows == 0) {
-            throw new Exception("UserFollowCategory relation not deleted", 1);
+            throw new Exception('UserFollowCategory relation not deleted', 1);
         }
 
         return true;

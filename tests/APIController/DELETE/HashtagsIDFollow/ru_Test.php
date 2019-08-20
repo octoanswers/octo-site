@@ -15,10 +15,10 @@ class CategoriesIDFollow_DELETE_APIController__ru__Test extends Abstract_Fronten
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'user_id' => 3,
-            'user_name' => 'Иван Коршунов',
+            'user_id'             => 3,
+            'user_name'           => 'Иван Коршунов',
             'unfollowed_category' => [
-                'id' => 7,
+                'id'    => 7,
                 'title' => 'Косметика',
             ],
         ];
@@ -38,8 +38,8 @@ class CategoriesIDFollow_DELETE_APIController__ru__Test extends Abstract_Fronten
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
-            'error_message' => 'User with ID "3" not followed category with ID "4"'
+            'error_code'    => 0,
+            'error_message' => 'User with ID "3" not followed category with ID "4"',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

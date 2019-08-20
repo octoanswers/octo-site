@@ -15,7 +15,7 @@ class CategoriesIDRename_PATCH_APIController__negative_IDTest extends Abstract_F
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Category id param 0 must be greater than or equal to 1',
         ];
 
@@ -34,7 +34,7 @@ class CategoriesIDRename_PATCH_APIController__negative_IDTest extends Abstract_F
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Category id param -1 must be greater than or equal to 1',
         ];
 

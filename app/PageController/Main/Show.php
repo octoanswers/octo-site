@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Show_Main_PageController extends Abstract_PageController
 {
@@ -36,7 +36,7 @@ class Show_Main_PageController extends Abstract_PageController
         $this->parsedown = new ExtendedParsedown($this->lang);
 
         $this->template = 'main';
-        $this->pageTitle = $this->translator->get('answeropedia').' – '. $this->translator->get('Ask a question and get one complete answer');
+        $this->pageTitle = $this->translator->get('answeropedia').' – '.$this->translator->get('Ask a question and get one complete answer');
         $this->pageDescription = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
         $this->canonicalURL = Page_URL_Helper::getMainURL($this->lang);
 
@@ -58,13 +58,14 @@ class Show_Main_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => SITE_URL,
-            'type' => "website",
-            'title' => $this->translator->get('answeropedia').' – '.$this->translator->get('Ask a question and get one complete answer'),
+            'url'         => SITE_URL,
+            'type'        => 'website',
+            'title'       => $this->translator->get('answeropedia').' – '.$this->translator->get('Ask a question and get one complete answer'),
             'description' => $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.'),
-            'locale' => $this->lang,
-            'image' => IMAGE_URL.'/og-image.png'
+            'locale'      => $this->lang,
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
+
         return $og;
     }
 }

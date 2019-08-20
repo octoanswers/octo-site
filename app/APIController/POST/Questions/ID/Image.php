@@ -1,20 +1,20 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 /*
  @todo So bad, but... https://www.verot.net/php_class_upload_forum.htm?php_class_upload_forum_id=4739&php_class_upload_forum_thread_id=4739&lang=en-GB
 */
 
-require_once ROOT_PATH . '/vendor/verot/class.upload.php/src/class.upload.php';
+require_once ROOT_PATH.'/vendor/verot/class.upload.php/src/class.upload.php';
 
 class Image_ID_Questions_POST_APIController extends Abstract_APIController
 {
     const JPEG_QUALITY = 90;
     const WIDTH_LG = 1140;  // col-12 width
     const WIDTH_MD = 760;  // col-8 width
-    const UPLOAD_FOLDER = ROOT_PATH . '/uploads/img';
+    const UPLOAD_FOLDER = ROOT_PATH.'/uploads/img';
 
     private $verotUpload = null;
 
@@ -22,7 +22,7 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
     {
         try {
 
-            # Check params
+            // Check params
 
             if ($_FILES['upload_image_form__image_file']['size'] == 0 || $_FILES['upload_image_form__image_file']['name'] == '') {
                 throw new Exception('No file was selected for upload', 1);
@@ -44,14 +44,14 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
                 throw new Exception('No user', 0);
             }
 
-            # Upload image
+            // Upload image
 
             $this->verotUpload = new upload($_FILES['upload_image_form__image_file']);
             if ($this->verotUpload->uploaded) {
                 $imageBaseName = $this->_getImageBaseName();
 
-                $this->_makeUserAvatarWithSize($imageBaseName . '_lg', self::WIDTH_LG);
-                $this->_makeUserAvatarWithSize($imageBaseName . '_md', self::WIDTH_MD);
+                $this->_makeUserAvatarWithSize($imageBaseName.'_lg', self::WIDTH_LG);
+                $this->_makeUserAvatarWithSize($imageBaseName.'_md', self::WIDTH_MD);
 
                 // delete the original uploaded file
                 $this->verotUpload->clean();
@@ -64,15 +64,15 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
             $this->question = (new Question_Mapper($this->lang))->update($this->question);
 
             $output = [
-                'lang' => $this->lang,
-                'question_id' => $this->question->id,
-                'user_id' => $this->user->id,
+                'lang'         => $this->lang,
+                'question_id'  => $this->question->id,
+                'user_id'      => $this->user->id,
                 'image_url_lg' => $this->question->get_image_URL_large($this->lang),
                 'image_url_md' => $this->question->get_image_URL_medium($this->lang),
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }
@@ -84,7 +84,7 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
 
     protected function _makeUserAvatarWithSize($imageFilename, $imageWidth)
     {
-        $uploadFolder = self::UPLOAD_FOLDER . '/' . $this->lang . '/' . $this->question->id . '/';
+        $uploadFolder = self::UPLOAD_FOLDER.'/'.$this->lang.'/'.$this->question->id.'/';
 
         $this->verotUpload->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
         $this->verotUpload->image_convert = 'jpg';
@@ -105,9 +105,9 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
 
     protected function _getImageBaseName()
     {
-        $dateChunk = date("Ymj");
+        $dateChunk = date('Ymj');
         $rand = mt_rand(1, 999);
 
-        return $this->user->id . '_' . $dateChunk . '_' . $rand;
+        return $this->user->id.'_'.$dateChunk.'_'.$rand;
     }
 }

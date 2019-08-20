@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
 {
@@ -9,26 +9,26 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            
+
             $api_key = (string) $request->getParam('api_key');
             $question_id = (int) $args['id'];
 
             $new_categories_string = urldecode((string) $request->getParam('new_categories'));
 
             if (strlen($new_categories_string) == 0) {
-                throw new \Exception("Categories param not set", 0);
+                throw new \Exception('Categories param not set', 0);
             }
 
-            #
-            # Validate params
-            #
+            //
+            // Validate params
+            //
 
             $user = (new User_Query())->userWithAPIKey($api_key);
             $userID = $user->id;
 
             $question = (new Question_Query($this->lang))->questionWithID($question_id);
             $questionID = $question->id;
-            
+
             $old_categories_array = (new Categories_Query($this->lang))->categoriesForQuestionWithID($question->id);
 
             $oldCategoriesTitles = [];
@@ -36,7 +36,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                 $oldCategoriesTitles[] = $category->title;
             }
 
-            # Check categories-questions ER & creat new, if needed
+            // Check categories-questions ER & creat new, if needed
 
             $newCategoriesTitles = explode(',', $new_categories_string);
 
@@ -50,7 +50,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                 if ($category === null) {
                     $category = new Category();
                     $category->title = $category_title;
-                    
+
                     $category = (new Category_Mapper($this->lang))->create($category);
                 }
 
@@ -63,7 +63,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                     $er->questionID = $question->id;
                     $er = (new CategoryToQuestion_Relation_Mapper($this->lang))->create($er);
 
-                    # create activity
+                    // create activity
                     $activity = new Activity_Model();
                     $activity->type = Activity_Model::CATEGORY_ADDED_QUESTION;
                     $activity->subject = $category;
@@ -72,14 +72,14 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                 }
             }
 
-            #
-            # Update question
-            #
-            
+            //
+            // Update question
+            //
+
             $question->categoriesCount = count($newCategories);
             $question = (new Question_Mapper($this->lang))->updateCategoriesCount($question);
 
-            # Save activity
+            // Save activity
 
             // $activity = new Activity_Model();
             // $activity->type = Activity_Model::F_U_UPDATE_A;
@@ -94,20 +94,20 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             // $activity = (new QUpdateA_Activity_Mapper($this->lang))->create($activity);
 
             $output = [
-                'lang' => $this->lang,
+                'lang'     => $this->lang,
                 'question' => [
-                    'id' => $question->id,
+                    'id'    => $question->id,
                     'title' => $question->title,
-                    'url' => $question->get_URL($this->lang),
+                    'url'   => $question->get_URL($this->lang),
                 ],
-                'user_id' => $user->id,
-                'user_name' => $user->name,
+                'user_id'        => $user->id,
+                'user_name'      => $user->name,
                 'old_categories' => $oldCategoriesTitles,
                 'new_categories' => $newCategoriesTitles,
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

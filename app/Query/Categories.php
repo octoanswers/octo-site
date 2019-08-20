@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class Categories_Query extends Abstract_Query
 {
     public function categoriesLastID(): int
@@ -10,6 +7,7 @@ class Categories_Query extends Abstract_Query
         $stmt = $this->pdo->prepare('SELECT MAX(c_id) FROM categories');
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -26,7 +24,7 @@ class Categories_Query extends Abstract_Query
         List_Validator::validatePage($page);
         List_Validator::validatePerPage($perPage);
 
-        $categoriesLastID = (new Categories_Query($this->lang))->categoriesLastID();
+        $categoriesLastID = (new self($this->lang))->categoriesLastID();
 
         $offset = $categoriesLastID - ($perPage * $page);
 
@@ -35,6 +33,7 @@ class Categories_Query extends Abstract_Query
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -51,11 +50,12 @@ class Categories_Query extends Abstract_Query
     public function categoriesForQuestionWithID(int $questionID): array
     {
         Question_Validator::validateID($questionID);
-        
+
         $stmt = $this->pdo->prepare('SELECT * FROM er_categories_questions WHERE er_question_id=:er_question_id');
         $stmt->bindParam(':er_question_id', $questionID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

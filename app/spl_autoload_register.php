@@ -12,20 +12,20 @@ spl_autoload_register(function ($class_name) {
 
         'Category' => 'app/Model/Category.php',
 
-        # Helpers
+        // Helpers
 
         'ExtendedParsedown' => 'app/Helper/ExtendedParsedown.php',
-        'FineDiff' => 'app/Helper/FineDiff/FineDiff.php',
-        'PassHash' => 'app/Helper/PassHash.php',
-        'Lang' => 'app/Helper/Lang.php',
-        'PDOFactory' => 'app/Helper/PDOFactory.php',
-        'CookieStorage' => 'app/Helper/CookieStorage.php',
-        'HumanDate' => 'app/Humanizer/HumanDate/HumanDate.php',
-        'Translator' => 'app/Helper/Translator/Translator.php',
+        'FineDiff'          => 'app/Helper/FineDiff/FineDiff.php',
+        'PassHash'          => 'app/Helper/PassHash.php',
+        'Lang'              => 'app/Helper/Lang.php',
+        'PDOFactory'        => 'app/Helper/PDOFactory.php',
+        'CookieStorage'     => 'app/Helper/CookieStorage.php',
+        'HumanDate'         => 'app/Humanizer/HumanDate/HumanDate.php',
+        'Translator'        => 'app/Helper/Translator/Translator.php',
 
-        # Mailer`s
+        // Mailer`s
 
-        'AbstractMailer' => 'app/Helper/Mailer/Abstract.php',
+        'AbstractMailer'     => 'app/Helper/Mailer/Abstract.php',
         'SubscriptionMailer' => 'app/Helper/Mailer/Subscription.php',
 
     ];
@@ -43,7 +43,7 @@ spl_autoload_register(function ($class_name) {
     if (strpos($class_name, '_') !== false) {
         $pieces = explode('_', $class_name);
         $pathPieces = array_reverse($pieces);
-        $classPath = 'app/' . implode('/', $pathPieces) . '.php';
+        $classPath = 'app/'.implode('/', $pathPieces).'.php';
 
         if (file_exists($classPath)) {
             require_once $classPath;

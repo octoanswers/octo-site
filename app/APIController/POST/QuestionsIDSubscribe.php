@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
 {
@@ -9,39 +9,39 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            
+
             $question_id = (int) $args['id'];
             $email = (string) $request->getParam('email');
             $is_send_email = $request->getParam('no_email') ? false : true;
 
-            #
-            # Validate params
-            #
+            //
+            // Validate params
+            //
 
             $question = (new Question_Query($this->lang))->questionWithID($question_id);
             User_Validator::validateEmail($email); // @TODO Need?
 
-            #
-            # Check already subscribed
-            #
+            //
+            // Check already subscribed
+            //
 
             $s = (new Subscriptions_Query($this->lang))->findWithQuestionIDAndEmail($question_id, $email);
             if ($s != null) {
                 throw new \Exception('Email "'.$email.'" already subscribed to question with ID '.$question_id, 0);
             }
 
-            #
-            # Save subscription in DB
-            #
+            //
+            // Save subscription in DB
+            //
 
             $subscription = new Subscription_Model();
             $subscription->questionID = $question_id;
             $subscription->email = $email;
             $subscription = (new Subscription_Mapper($this->lang))->create($subscription);
 
-            #
-            # Send email
-            #
+            //
+            // Send email
+            //
 
             if ($is_send_email) {
                 $mailer = new SubscriptionMailer();
@@ -49,16 +49,16 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
             }
 
             $output = [
-                'lang' => $this->lang,
-                'question_id' => $question->id,
-                'question_title' => $question->title,
-                'question_url' => $question->get_URL($this->lang),
-                'subscription_id' => $subscription->id,
+                'lang'               => $this->lang,
+                'question_id'        => $question->id,
+                'question_title'     => $question->title,
+                'question_url'       => $question->get_URL($this->lang),
+                'subscription_id'    => $subscription->id,
                 'subscription_email' => $subscription->email,
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

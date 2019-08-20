@@ -16,29 +16,29 @@ class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestC
 
         $expectedResponse = [
             'category' => [
-                'id' => 9,
+                'id'        => 9,
                 'old_title' => 'Почвоведение',
                 'new_title' => 'Исследование почвы',
-                'url' => 'https://answeropedia.org/ru/category/%D0%98%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE%D1%87%D0%B2%D1%8B',
+                'url'       => 'https://answeropedia.org/ru/category/%D0%98%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE%D1%87%D0%B2%D1%8B',
             ],
             'user' => [
-                'id' => 3,
+                'id'   => 3,
                 'name' => 'Иван Коршунов',
             ],
             'redirect' => [
-                'from_id' => 19,
+                'from_id'  => 19,
                 'to_title' => 'Исследование почвы',
             ],
             'activities' => [
                 [
-                    'id' => 13,
+                    'id'   => 13,
                     'type' => 'USER_RENAME_CATEGORY',
                 ],
                 [
-                    'id' => 14,
+                    'id'   => 14,
                     'type' => 'CATEGORY_RENAMED_BY_USER',
                 ],
-            ]
+            ],
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
@@ -57,25 +57,25 @@ class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestC
 
         $expectedResponse = [
             'category' => [
-                'id' => 9,
+                'id'        => 9,
                 'old_title' => 'Почвоведение',
                 'new_title' => 'Наука о почвах',
-                'url' => 'https://answeropedia.org/ru/category/%D0%9D%D0%B0%D1%83%D0%BA%D0%B0_%D0%BE_%D0%BF%D0%BE%D1%87%D0%B2%D0%B0%D1%85',
+                'url'       => 'https://answeropedia.org/ru/category/%D0%9D%D0%B0%D1%83%D0%BA%D0%B0_%D0%BE_%D0%BF%D0%BE%D1%87%D0%B2%D0%B0%D1%85',
             ],
             'user' => [
-                'id' => 3,
+                'id'   => 3,
                 'name' => 'Иван Коршунов',
             ],
             'activities' => [
                 [
-                    'id' => 13,
+                    'id'   => 13,
                     'type' => 'USER_RENAME_CATEGORY',
                 ],
                 [
-                    'id' => 14,
+                    'id'   => 14,
                     'type' => 'CATEGORY_RENAMED_BY_USER',
                 ],
-            ]
+            ],
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
@@ -94,25 +94,25 @@ class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestC
 
         $expectedResponse = [
             'category' => [
-                'id' => 9,
+                'id'        => 9,
                 'old_title' => 'Почвоведение',
                 'new_title' => 'ПочвоВедение',
-                'url' => 'https://answeropedia.org/ru/category/%D0%9F%D0%BE%D1%87%D0%B2%D0%BE%D0%92%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5',
+                'url'       => 'https://answeropedia.org/ru/category/%D0%9F%D0%BE%D1%87%D0%B2%D0%BE%D0%92%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5',
             ],
             'user' => [
-                'id' => 3,
+                'id'   => 3,
                 'name' => 'Иван Коршунов',
             ],
             'activities' => [
                 [
-                    'id' => 13,
+                    'id'   => 13,
                     'type' => 'USER_RENAME_CATEGORY',
                 ],
                 [
-                    'id' => 14,
+                    'id'   => 14,
                     'type' => 'CATEGORY_RENAMED_BY_USER',
                 ],
-            ]
+            ],
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
@@ -131,25 +131,25 @@ class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestC
 
         $expectedResponse = [
             'category' => [
-                'id' => 9,
+                'id'        => 9,
                 'old_title' => 'Почвоведение',
                 'new_title' => 'ПочвоВедение',
-                'url' => 'https://answeropedia.org/ru/category/%D0%9F%D0%BE%D1%87%D0%B2%D0%BE%D0%92%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5',
+                'url'       => 'https://answeropedia.org/ru/category/%D0%9F%D0%BE%D1%87%D0%B2%D0%BE%D0%92%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5',
             ],
             'user' => [
-                'id' => 3,
+                'id'   => 3,
                 'name' => 'Иван Коршунов',
             ],
             'activities' => [
                 [
-                    'id' => 13,
+                    'id'   => 13,
                     'type' => 'USER_RENAME_CATEGORY',
                 ],
                 [
-                    'id' => 14,
+                    'id'   => 14,
                     'type' => 'CATEGORY_RENAMED_BY_USER',
                 ],
-            ]
+            ],
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

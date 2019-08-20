@@ -17,13 +17,13 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
         $user->email = 'steve@aw.org';
 
         $revision = Revision_Model::initWithDBState([
-            'rev_id' => 13,
-            'rev_answer_id' => 11,
-            'rev_opcodes' => 'opCodes',
-            'rev_base_text' => 'Ответ на вопрос про птиц.',
-            'rev_comment' => 'Rev comment',
-            'rev_parent_id' => 2,
-            'rev_user_id' => 14,
+            'rev_id'         => 13,
+            'rev_answer_id'  => 11,
+            'rev_opcodes'    => 'opCodes',
+            'rev_base_text'  => 'Ответ на вопрос про птиц.',
+            'rev_comment'    => 'Rev comment',
+            'rev_parent_id'  => 2,
+            'rev_user_id'    => 14,
             'rev_created_at' => '2015-12-16 13:28:56',
         ]);
 

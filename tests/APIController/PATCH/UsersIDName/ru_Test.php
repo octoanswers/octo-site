@@ -16,8 +16,8 @@ class UsersIDName_PATCH_APIController__ru__Test extends Abstract_Frontend_TestCa
 
         $expectedResponse = [
             'user' => [
-                'id' => 3,
-                'name' => 'Вова Малышов',
+                'id'       => 3,
+                'name'     => 'Вова Малышов',
                 'name_old' => 'Иван Коршунов',
             ],
             'message' => 'Name saved!',

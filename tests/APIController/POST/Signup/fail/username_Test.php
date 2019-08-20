@@ -14,7 +14,7 @@ class Signup_POST_APIController__username_Test extends Abstract_Frontend_TestCas
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User with username "kozel" is already registered',
         ];
 
@@ -32,7 +32,7 @@ class Signup_POST_APIController__username_Test extends Abstract_Frontend_TestCas
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "username" property "J" must have a length between 3 and 64',
         ];
 

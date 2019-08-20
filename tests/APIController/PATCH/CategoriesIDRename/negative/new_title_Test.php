@@ -15,7 +15,7 @@ class CategoriesIDRename_PATCH_APIController__negative_new_titleTest extends Abs
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Category title param "" must have a length between 2 and 127',
         ];
 
@@ -34,7 +34,7 @@ class CategoriesIDRename_PATCH_APIController__negative_new_titleTest extends Abs
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Category title param "z" must have a length between 2 and 127',
         ];
 

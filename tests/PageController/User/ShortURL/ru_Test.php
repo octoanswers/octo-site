@@ -8,7 +8,7 @@ class ShortURL_User_PageController__Test extends Abstract_Frontend_TestCase
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/ru/user/4',
+            'REQUEST_URI'    => '/ru/user/4',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

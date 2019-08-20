@@ -13,6 +13,7 @@ class Question_Mapper extends Abstract_Mapper
         $stmt->bindParam(':q_image_base_name', $question->imageBaseName, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -36,6 +37,7 @@ class Question_Mapper extends Abstract_Mapper
         $stmt->bindParam(':q_image_base_name', $question->imageBaseName, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         $count = $stmt->rowCount();
@@ -59,9 +61,10 @@ class Question_Mapper extends Abstract_Mapper
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':q_id', $question->id, PDO::PARAM_INT);
         $stmt->bindParam(':count_categories', $question->categoriesCount, PDO::PARAM_STR);
-        
+
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

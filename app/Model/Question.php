@@ -12,21 +12,21 @@ class Question_Model extends Abstract_Model
     public $imageBaseName;
     public $categoriesCount; // int
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithTitle(string $title): Question_Model
+    public static function initWithTitle(string $title): self
     {
         $question = new self();
         $question->title = $title;
 
-        $question->answer = new Answer_Model;
+        $question->answer = new Answer_Model();
 
         return $question;
     }
 
-    public static function initWithDBState(array $state): Question_Model
+    public static function initWithDBState(array $state): self
     {
         $question = new self();
         $question->id = (int) $state['q_id'];
@@ -36,7 +36,7 @@ class Question_Model extends Abstract_Model
         $question->categoriesCount = (int) $state['count_categories'];
 
         $question->answer = Answer_Model::initWithDBState($state);
-        
+
         return $question;
     }
 }

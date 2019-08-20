@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Categories_POST_APIController extends Abstract_APIController
 {
@@ -14,18 +14,18 @@ class Categories_POST_APIController extends Abstract_APIController
             $categories_string = urldecode((string) $request->getParam('categories'));
 
             if (strlen($categories_string) == 0) {
-                throw new \Exception("Categories param not set", 0);
+                throw new \Exception('Categories param not set', 0);
             }
 
-            #
-            # Validate params
-            #
+            //
+            // Validate params
+            //
 
             $user = (new User_Query())->userWithAPIKey($api_key);
 
-            #
-            # Check & creat new categories, if needed
-            #
+            //
+            // Check & creat new categories, if needed
+            //
 
             $category_titles = explode(',', $categories_string);
 
@@ -49,17 +49,17 @@ class Categories_POST_APIController extends Abstract_APIController
             $output = [
                 'lang' => $this->lang,
                 'user' => [
-                    'id' => $user->id,
+                    'id'   => $user->id,
                     'name' => $user->name,
                 ],
                 'categories' => [
                     'created' => $created_categories,
-                    'exists' => $exists_categories,
-                ]
+                    'exists'  => $exists_categories,
+                ],
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

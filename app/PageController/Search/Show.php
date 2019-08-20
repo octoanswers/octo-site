@@ -19,7 +19,7 @@ class Show_Search_PageController extends Abstract_PageController
 
         $this->list = (string) $request->getParam('list');
         $this->list = $this->_normalizeList($this->list);
-        
+
         $this->_getSearchResults();
 
         $this->template = 'search';
@@ -67,9 +67,10 @@ class Show_Search_PageController extends Abstract_PageController
                 $placeholder = $this->translator->get('Search by contributors');
                 break;
             default:
-                throw new Exception("Incorrect list param", 0);
+                throw new Exception('Incorrect list param', 0);
                 break;
         }
+
         return $placeholder;
     }
 }

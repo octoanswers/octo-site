@@ -8,7 +8,7 @@ class Show_Main_PageController__BaseTest extends Abstract_Frontend_TestCase
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/',
+            'REQUEST_URI'    => '/',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

@@ -7,21 +7,21 @@ class CategoriesToQuestions_Relation_Model extends Abstract_Model
     public $questionID;
     public $createdAt;
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithCategoryIDAndQuestionID(int $categoryID, int $questionID): CategoriesToQuestions_Relation_Model
+    public static function initWithCategoryIDAndQuestionID(int $categoryID, int $questionID): self
     {
         $relation = new self();
-        
+
         $relation->categoryID = $categoryID;
         $relation->questionID = $questionID;
 
         return $relation;
     }
 
-    public static function initWithDBState(array $state): CategoriesToQuestions_Relation_Model
+    public static function initWithDBState(array $state): self
     {
         $relation = new self();
 

@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UpdateCategories_Question_PageController extends Abstract_PageController
 {
@@ -25,11 +25,11 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
         foreach ($this->categories as $category) {
             $this->categoryNames[] = $category->title;
         }
-        $this->categories_string = count($this->categoryNames) ? implode(",", $this->categoryNames) : '';
+        $this->categories_string = count($this->categoryNames) ? implode(',', $this->categoryNames) : '';
 
         $this->template = 'question_update_categories';
-        $this->pageTitle = str_replace("%question%", $this->question->title, $this->translator->get('Update categories for question "%question%" - Answeropedia'));
-        $this->pageDescription = str_replace("%question%", $this->question->title, $this->translator->get('Update categories for question "%question%"'));
+        $this->pageTitle = str_replace('%question%', $this->question->title, $this->translator->get('Update categories for question "%question%" - Answeropedia'));
+        $this->pageDescription = str_replace('%question%', $this->question->title, $this->translator->get('Update categories for question "%question%"'));
 
         $this->includeJS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.js';
         $this->includeJS[] = SITE_URL.'/assets/_vendor/twitter/typeahead.js/bloodhound.js';

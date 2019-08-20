@@ -10,11 +10,12 @@ class UsersFollowCategories_Relations_Query extends Abstract_Query
         $stmt->bindParam(':category_id', $followedCategoryID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
         if (!$row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            return null;
+            return;
         }
 
         return UserFollowCategory_Relation_Model::initWithDBState($row);
@@ -30,6 +31,7 @@ class UsersFollowCategories_Relations_Query extends Abstract_Query
         $stmt->bindParam(':user_id', $userID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

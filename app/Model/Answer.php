@@ -6,11 +6,11 @@ class Answer_Model extends Abstract_Model
     public $text; // string
     public $updatedAt; // string
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithDBState(array $state): Answer_Model
+    public static function initWithDBState(array $state): self
     {
         $answer = new self();
 

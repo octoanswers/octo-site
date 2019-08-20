@@ -11,11 +11,11 @@ class Revision_Model extends Abstract_Model
     public $userID;
     public $createdAt;
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithDBState(array $state): Revision_Model
+    public static function initWithDBState(array $state): self
     {
         $revision = new self();
 
@@ -31,9 +31,9 @@ class Revision_Model extends Abstract_Model
         return $revision;
     }
 
-    #
-    # Supplementary methods
-    #
+    //
+    // Supplementary methods
+    //
 
     public function getUserContribution(): int
     {

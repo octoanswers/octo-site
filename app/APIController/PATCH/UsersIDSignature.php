@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UsersIDSignature_PATCH_APIController extends Abstract_APIController
 {
@@ -9,12 +9,12 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            
+
             $api_key = (string) $request->getParam('api_key');
             $userID = (int) $args['id'];
             $signature = $request->getParam('signature');
 
-            # Validate params
+            // Validate params
 
             if (!$signature) {
                 throw new Exception('User "signature" property null must be a string', 0);
@@ -24,15 +24,15 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             $old_signature = $user->signature;
 
             if ($user->id != $userID) {
-                throw new \Exception("Incorrect user id or API-key", 0);
+                throw new \Exception('Incorrect user id or API-key', 0);
             }
 
-            # Change user signature
+            // Change user signature
 
             $user->signature = $signature;
             $user = (new User_Mapper())->update($user);
 
-            # Create activity
+            // Create activity
 
             $activity = new Activity_Model();
             $activity->type = Activity_Model::U_UPDATE_SIGNATURE;
@@ -42,8 +42,8 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
 
             $output = [
                 'user' => [
-                    'id' => $user->id,
-                    'name' => $user->name,
+                    'id'            => $user->id,
+                    'name'          => $user->name,
                     'signature_old' => $old_signature,
                     'signature_new' => $signature,
                 ],
@@ -51,7 +51,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

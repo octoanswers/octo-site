@@ -13,7 +13,7 @@ class QuestionsIDSubscribe_DELETE_APIController__email__Test extends Abstract_Fr
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'API not realized',
         ];
 

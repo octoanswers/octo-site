@@ -16,6 +16,7 @@ class Answer_Mapper extends Abstract_Mapper
         $stmt->bindParam(':a_updated_at', $answer->updatedAt, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         $count = $stmt->rowCount();

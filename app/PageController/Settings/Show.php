@@ -1,19 +1,20 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Show_Settings_PageController extends Abstract_PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
         if (!$this->authUser) {
-            $data = array('msg' => 'You not logged');
+            $data = ['msg' => 'You not logged'];
+
             return $response->withJson($data, 404);
         }
 
         parent::handleRequest($request, $response, $args);
-        
+
         $this->template = 'settings';
         $this->pageTitle = $this->translator->get('Settings').' – '.$this->translator->get('answeropedia');
 

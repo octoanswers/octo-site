@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
 {
@@ -13,12 +13,12 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
             $api_key = (string) $request->getParam('api_key');
             $categoryNewTitle = (string) $request->getParam('new_title');
 
-            # Validate params
+            // Validate params
 
             $user = (new User_Query())->userWithAPIKey($api_key);
             $userID = $user->id;
 
-            # Change category title
+            // Change category title
 
             $category = (new Category_Query($this->lang))->categoryWithID($categoryID);
             $old_title = $category->title;
@@ -28,13 +28,13 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
             $saveRedirect = (bool) $request->getParam('save_redirect');
             if ($saveRedirect) {
                 if (mb_strtolower($categoryNewTitle) != mb_strtolower($old_title)) {
-                    # create category record with OLD title & redirect flag
-                    $oldCategory = new Category;
+                    // create category record with OLD title & redirect flag
+                    $oldCategory = new Category();
                     $oldCategory->title = $old_title;
                     $oldCategory->isRedirect = true;
                     $oldCategory = (new Category_Mapper($this->lang))->create($oldCategory);
 
-                    # create redirect record
+                    // create redirect record
                     $this->redirect = new Category_Redirect_Model();
                     $this->redirect->fromID = $oldCategory->id;
                     $this->redirect->toTitle = $category->title;
@@ -42,9 +42,9 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
                 }
             }
 
-            #
-            # Create activities
-            #
+            //
+            // Create activities
+            //
 
             $activity = new Activity_Model();
             $activity->type = Activity_Model::USER_RENAME_CATEGORY;
@@ -60,36 +60,36 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
 
             $output = [
                 'category' => [
-                    'id' => $category->id,
+                    'id'        => $category->id,
                     'old_title' => $old_title,
                     'new_title' => $category->title,
-                    'url' => $category->get_URL($this->lang),
+                    'url'       => $category->get_URL($this->lang),
                 ],
                 'user' => [
-                    'id' => $user->id,
+                    'id'   => $user->id,
                     'name' => $user->name,
                 ],
                 'activities' => [
                     [
-                        'id' => $activity->id,
+                        'id'   => $activity->id,
                         'type' => $activity->type,
                     ],
                     [
-                        'id' => $activity2->id,
+                        'id'   => $activity2->id,
                         'type' => $activity2->type,
                     ],
-                ]
+                ],
             ];
 
             if (isset($this->redirect)) {
                 $output['redirect'] = [
-                    'from_id' => $this->redirect->fromID,
+                    'from_id'  => $this->redirect->fromID,
                     'to_title' => $this->redirect->toTitle,
                 ];
             }
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

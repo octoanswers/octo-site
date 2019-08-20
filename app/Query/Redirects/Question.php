@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class Question_Redirects_Query extends Abstract_Query
 {
     public function redirectForQuestionWithID(int $questionID): Question_Redirect_Model
@@ -13,6 +10,7 @@ class Question_Redirects_Query extends Abstract_Query
         $stmt->bindParam(':rd_from', $questionID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

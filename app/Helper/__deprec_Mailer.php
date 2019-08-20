@@ -80,6 +80,7 @@ class Mailer
         $sent = mail($this->toEmail, $subject, $message, $header);
         if (!$sent) {
             $errorMessage = "Server couldn't send the email.";
+
             throw new Exception($errorMessage);
         } else {
             return true;

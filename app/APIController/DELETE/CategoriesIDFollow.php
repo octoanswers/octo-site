@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class CategoriesIDFollow_DELETE_APIController extends Abstract_APIController
 {
@@ -9,13 +9,13 @@ class CategoriesIDFollow_DELETE_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            
+
             $api_key = (string) $request->getParam('api_key');
             $categoryID = (int) $args['id'];
 
-            #
-            # Validate params
-            #
+            //
+            // Validate params
+            //
 
             $user = (new User_Query())->userWithAPIKey($api_key);
 
@@ -26,23 +26,23 @@ class CategoriesIDFollow_DELETE_APIController extends Abstract_APIController
                 throw new Exception('User with ID "'.$user->id.'" not followed category with ID "'.$categoryID.'"', 0);
             }
 
-            #
-            # Delete follow record
-            #
+            //
+            // Delete follow record
+            //
 
             (new UserFollowCategory_Relation_Mapper($this->lang))->deleteRelation($relation);
 
             $output = [
-                'user_id' => $user->id,
-                'user_name' => $user->name,
+                'user_id'             => $user->id,
+                'user_name'           => $user->name,
                 'unfollowed_category' => [
-                    'id' => $category->id,
+                    'id'    => $category->id,
                     'title' => $category->title,
                 ],
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

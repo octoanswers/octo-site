@@ -8,9 +8,9 @@ class Category_Redirect_Validator
     const TITLE_MIN_LENGHT = 3;
     const TITLE_MAX_LENGHT = 255;
 
-    #
-    # Model validator
-    #
+    //
+    // Model validator
+    //
 
     public static function validate(Category_Redirect_Model $redirect)
     {
@@ -20,9 +20,9 @@ class Category_Redirect_Validator
         return true;
     }
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validateFromID($fromID)
     {

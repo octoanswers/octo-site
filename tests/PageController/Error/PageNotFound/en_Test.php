@@ -6,7 +6,7 @@ class PageNotFound_Error_PageController__en__Test extends Abstract_Frontend_Test
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/en/settings/some_unfounded_page'
+            'REQUEST_URI'    => '/en/settings/some_unfounded_page',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

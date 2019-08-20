@@ -3,7 +3,6 @@
 class Contributor_Query extends Abstract_Query
 {
     /**
-     *
      * @return User_Model|null
      */
     public function findAnswerLastEditor(int $answerID)
@@ -15,12 +14,13 @@ class Contributor_Query extends Abstract_Query
         $stmt->bindParam(':answer_id', $answerID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            return null;
+            return;
         }
 
         $userID = $row['rev_user_id'];
@@ -30,7 +30,6 @@ class Contributor_Query extends Abstract_Query
     }
 
     /**
-     *
      * @return User_Model|null
      */
     public function findAnswerFirstEditor(int $answerID)
@@ -42,12 +41,13 @@ class Contributor_Query extends Abstract_Query
         $stmt->bindParam(':answer_id', $answerID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            return null;
+            return;
         }
 
         $userID = $row['rev_user_id'];

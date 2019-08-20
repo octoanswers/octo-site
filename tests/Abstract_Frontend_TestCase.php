@@ -1,6 +1,5 @@
 <?php
 
-
 abstract class Abstract_Frontend_TestCase extends Abstract_DB_TestCase
 {
     protected $app;
@@ -23,7 +22,7 @@ abstract class Abstract_Frontend_TestCase extends Abstract_DB_TestCase
     {
         $mockParams = [
             'REQUEST_METHOD' => $requestMethod,
-            'REQUEST_URI' => $requestURI,
+            'REQUEST_URI'    => $requestURI,
         ];
         if ($queryString != null) {
             $mockParams['QUERY_STRING'] = $queryString;

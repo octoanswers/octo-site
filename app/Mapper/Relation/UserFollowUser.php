@@ -12,6 +12,7 @@ class UserFollowUser_Relation_Mapper extends Abstract_Mapper
         $stmt->bindParam(':followed_user_id', $relation->followedUserID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -38,11 +39,12 @@ class UserFollowUser_Relation_Mapper extends Abstract_Mapper
         $stmt->bindParam(':followed_user_id', $relation->followedUserID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
         if ($stmt->rowCount() == 0) {
-            throw new Exception("UserFollowUser relation not deleted", 1);
+            throw new Exception('UserFollowUser relation not deleted', 1);
         }
 
         return true;

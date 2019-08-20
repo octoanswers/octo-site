@@ -15,7 +15,7 @@ class UsersIDSite_PATCH_APIController__abnormal__site__Test extends Abstract_Fro
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "site" property "example37.com" must be a URL',
         ];
 
@@ -34,7 +34,7 @@ class UsersIDSite_PATCH_APIController__abnormal__site__Test extends Abstract_Fro
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "site" property "www.example32.com" must be a URL',
         ];
 

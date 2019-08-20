@@ -29,6 +29,7 @@ class Users_Query
         } catch (NestedValidationException $exception) {
             throw new Exception('Optional "page" param '.$exception->getMessages()[0], 0);
         }
+
         try {
             v::optional(v::intType()->between(self::MIN_PER_PAGE, self::MAX_PER_PAGE, true))->assert($perPage);
         } catch (NestedValidationException $exception) {
@@ -42,6 +43,7 @@ class Users_Query
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -59,6 +61,7 @@ class Users_Query
         $stmt = $this->pdo->prepare('SELECT MAX(u_id) FROM users');
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

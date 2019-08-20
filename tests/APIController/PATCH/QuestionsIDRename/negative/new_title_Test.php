@@ -15,7 +15,7 @@ class QuestionsIDRename_PATCH_APIController__new_title_Test extends Abstract_Fro
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Question title param "" must have a length between 3 and 255',
         ];
 
@@ -34,7 +34,7 @@ class QuestionsIDRename_PATCH_APIController__new_title_Test extends Abstract_Fro
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Question title param "M?" must have a length between 3 and 255',
         ];
 

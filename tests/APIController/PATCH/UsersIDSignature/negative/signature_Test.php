@@ -15,7 +15,7 @@ class UsersIDSignature_PATCH_APIController__signature__Test extends Abstract_Fro
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "signature" property null must be a string',
         ];
 
@@ -34,7 +34,7 @@ class UsersIDSignature_PATCH_APIController__signature__Test extends Abstract_Fro
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "signature" property "Fo" must have a length between 3 and 255',
         ];
 

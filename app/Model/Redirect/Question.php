@@ -5,11 +5,11 @@ class Question_Redirect_Model extends Abstract_Model
     public $fromID; // int
     public $toTitle; // string
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithDBState(array $state): Question_Redirect_Model
+    public static function initWithDBState(array $state): self
     {
         $redirect = new self();
         $redirect->fromID = (int) $state['rd_from'];

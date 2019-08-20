@@ -7,11 +7,11 @@ class UserFollowCategory_Relation_Model extends Abstract_Model
     public $categoryID;
     public $createdAt;
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithUserIDAndCategoryID(int $userID, int $categoryID): UserFollowCategory_Relation_Model
+    public static function initWithUserIDAndCategoryID(int $userID, int $categoryID): self
     {
         $er = new self();
         $er->userID = $userID;
@@ -20,7 +20,7 @@ class UserFollowCategory_Relation_Model extends Abstract_Model
         return $er;
     }
 
-    public static function initWithDBState(array $state): UserFollowCategory_Relation_Model
+    public static function initWithDBState(array $state): self
     {
         $er = new self();
 

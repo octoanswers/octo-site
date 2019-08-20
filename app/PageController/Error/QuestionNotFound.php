@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class QuestionNotFound_Error_PageController extends Abstract_PageController
 {
@@ -9,7 +9,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
     {
         // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new Translator($this->lang, ROOT_PATH."/app/Lang");
+        $this->translator = new Translator($this->lang, ROOT_PATH.'/app/Lang');
 
         $questionURI = $args['question_uri'];
 
@@ -20,8 +20,8 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
 
         $this->template = 'error/question_not_found';
         $this->showFooter = false;
-        $this->pageTitle = $this->translator->get("question_not_found", "page_title").' – '.$this->questionTitle.' – '.$this->translator->get('answeropedia');
-        $this->pageDescription = $this->translator->get("question_not_found", "page_title");
+        $this->pageTitle = $this->translator->get('question_not_found', 'page_title').' – '.$this->questionTitle.' – '.$this->translator->get('answeropedia');
+        $this->pageDescription = $this->translator->get('question_not_found', 'page_title');
 
         $this->questionURI = $questionURI;
         $this->includeJS[] = 'goal/question_not_found';

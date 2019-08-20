@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class Flow_Query extends Abstract_Query
 {
     public function findFlow(): array
@@ -12,6 +9,7 @@ class Flow_Query extends Abstract_Query
         $stmt = $this->pdo->prepare($sql);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);

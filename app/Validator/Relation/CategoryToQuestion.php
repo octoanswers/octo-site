@@ -5,9 +5,9 @@ use Respect\Validation\Validator as v;
 
 class CategoryToQuestion_Relation_Validator
 {
-    #
-    # Model validator
-    #
+    //
+    // Model validator
+    //
 
     public static function validateExists(CategoriesToQuestions_Relation_Model $rel)
     {
@@ -26,9 +26,9 @@ class CategoryToQuestion_Relation_Validator
         return true;
     }
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validateID($id)
     {

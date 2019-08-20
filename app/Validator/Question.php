@@ -10,9 +10,9 @@ class Question_Validator
     const IMAGE_BASENAME_MIN_LENGHT = 4;
     const IMAGE_BASENAME_MAX_LENGHT = 64;
 
-    #
-    # Model validator
-    #
+    //
+    // Model validator
+    //
 
     public static function validateExists(Question_Model $question)
     {
@@ -31,9 +31,9 @@ class Question_Validator
         return true;
     }
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validateID($id)
     {

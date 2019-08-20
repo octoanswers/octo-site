@@ -6,7 +6,7 @@ class Index_SitemapXML_PageController__Test extends Abstract_Frontend_TestCase
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/sitemap.xml',
+            'REQUEST_URI'    => '/sitemap.xml',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

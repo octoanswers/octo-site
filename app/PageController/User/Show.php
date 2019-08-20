@@ -65,13 +65,14 @@ class Show_User_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => $this->user->get_URL($this->lang),
-            'type' => "website",
-            'title' => $this->user->name,
+            'url'         => $this->user->get_URL($this->lang),
+            'type'        => 'website',
+            'title'       => $this->user->name,
             'description' => $this->user->name.' '.$this->translator->get('Wiki-answers on Answeropedia'),
-            'locale' => $this->lang,
-            'image' => IMAGE_URL.'/og-image.png'
+            'locale'      => $this->lang,
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
+
         return $og;
     }
 }

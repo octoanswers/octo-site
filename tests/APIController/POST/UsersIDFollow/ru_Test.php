@@ -15,11 +15,11 @@ class UsersIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_TestC
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'relation_id' => 8,
-            'user_id' => 3,
-            'user_name' => 'Иван Коршунов',
-            'followed_user_id' => 4,
-            'followed_user_name' => 'Александр Пушкин'
+            'relation_id'        => 8,
+            'user_id'            => 3,
+            'user_name'          => 'Иван Коршунов',
+            'followed_user_id'   => 4,
+            'followed_user_name' => 'Александр Пушкин',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
@@ -37,8 +37,8 @@ class UsersIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_TestC
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
-            'error_message' => 'User with ID "7" already followed by user with ID "3"'
+            'error_code'    => 0,
+            'error_message' => 'User with ID "7" already followed by user with ID "3"',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

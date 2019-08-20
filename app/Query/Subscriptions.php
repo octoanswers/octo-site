@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class Subscriptions_Query extends Abstract_Query
 {
     public function findWithQuestionIDAndEmail(int $question_id, string $email)
@@ -15,12 +12,13 @@ class Subscriptions_Query extends Abstract_Query
         $stmt->bindParam(':s_email', $email, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            return null;
+            return;
         }
 
         return Subscription_Model::initWithDBState($row);

@@ -15,30 +15,30 @@ class Categories_ID_Questions_PUT_APIController__ru__Test extends Abstract_Front
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'lang' => 'ru',
-            'user_id' => 3,
+            'lang'      => 'ru',
+            'user_id'   => 3,
             'user_name' => 'Иван Коршунов',
-            'question' => [
-                'id' => 22,
+            'question'  => [
+                'id'    => 22,
                 'title' => 'Чем модульное тестирование отличается от интеграционного?',
-                'url' => 'https://answeropedia.org/ru/%D0%A7%D0%B5%D0%BC_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BE%D1%82%D0%BB%D0%B8%D1%87%D0%B0%D0%B5%D1%82%D1%81%D1%8F_%D0%BE%D1%82_%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE'
+                'url'   => 'https://answeropedia.org/ru/%D0%A7%D0%B5%D0%BC_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BE%D1%82%D0%BB%D0%B8%D1%87%D0%B0%D0%B5%D1%82%D1%81%D1%8F_%D0%BE%D1%82_%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE',
             ],
             'old_categories' => [
                 'Косметика',
-                'Птицы'
+                'Птицы',
             ],
             'new_categories' => [
                 'Медицина',
-                'Гинекология'
-            ]
+                'Гинекология',
+            ],
         ];
 
-        # Check API-response
+        // Check API-response
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
         $this->assertSame(200, $response->getStatusCode());
 
-        # Check real data changes
+        // Check real data changes
 
         $question = (new Question_Query('ru'))->questionWithID(22);
 
@@ -57,8 +57,8 @@ class Categories_ID_Questions_PUT_APIController__ru__Test extends Abstract_Front
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
-            'error_message' => 'Categories param not set'
+            'error_code'    => 0,
+            'error_message' => 'Categories param not set',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

@@ -6,7 +6,7 @@ class Model__Question__get_minutes_to_read__Test extends PHPUnit\Framework\TestC
 
     public function setUp(): void
     {
-        $this->question = new Question_Model;
+        $this->question = new Question_Model();
         $this->question->answer = new Answer_Model();
     }
 

@@ -15,7 +15,7 @@ class QuestionsIDRename_PATCH_APIController__rename_id_Test extends Abstract_Fro
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Question id param 0 must be greater than or equal to 1',
         ];
 
@@ -34,7 +34,7 @@ class QuestionsIDRename_PATCH_APIController__rename_id_Test extends Abstract_Fro
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Question id param -1 must be greater than or equal to 1',
         ];
 

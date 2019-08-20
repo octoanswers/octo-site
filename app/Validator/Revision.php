@@ -8,9 +8,9 @@ class Revision_Validator
     const REVISION_MIN_LENGHT = 3;
     const REVISION_MAX_LENGHT = 255;
 
-    #
-    # Model validator
-    #
+    //
+    // Model validator
+    //
 
     public static function validate(Revision_Model $revision)
     {
@@ -62,9 +62,9 @@ class Revision_Validator
         return true;
     }
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validateComment($comment)
     {

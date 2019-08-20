@@ -14,7 +14,7 @@ class Signup_POST_APIController__email_Test extends Abstract_Frontend_TestCase
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-        'error_code' => 0,
+        'error_code'    => 0,
         'error_message' => 'User "email" property "foo_answeropedia.org" must be valid email',
     ];
 
@@ -32,7 +32,7 @@ class Signup_POST_APIController__email_Test extends Abstract_Frontend_TestCase
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-        'error_code' => 1,
+        'error_code'    => 1,
         'error_message' => 'User with specific email is already registered',
     ];
 

@@ -16,7 +16,7 @@ class Helper_ExtendedParsedown_text_categoriesTest extends TestCase
 
     public function test_Dont_link_to_hashtags()
     {
-        $stringMD = "Any #birds may #fly.";
+        $stringMD = 'Any #birds may #fly.';
         $stringHTML = '<p>Any #birds may #fly.</p>';
 
         $this->assertEquals($stringHTML, $this->pd->text($stringMD));

@@ -34,13 +34,13 @@ class Newest_Questions_PageController extends Abstract_PageController
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
-        
+
         return $response;
     }
 
-    #
-    # Helper methods
-    #
+    //
+    // Helper methods
+    //
 
     public function _getPageTitle()
     {

@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Show_Flow_PageController extends Abstract_PageController
 {
@@ -26,7 +26,7 @@ class Show_Flow_PageController extends Abstract_PageController
                 continue;
             }
             $activity['created_at__humanized'] = $date_humanizer->format($activity['created_at']);
-        };
+        }
 
         $this->template = 'flow';
         $this->pageTitle = $this->translator->get('flow', 'page_title').' – '.$this->translator->get('answeropedia');
@@ -42,13 +42,14 @@ class Show_Flow_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => SITE_URL,
-            'type' => "website",
-            'title' => $this->translator->get("flow", "page_title").' – '.$this->translator->get('answeropedia'),
+            'url'         => SITE_URL,
+            'type'        => 'website',
+            'title'       => $this->translator->get('flow', 'page_title').' – '.$this->translator->get('answeropedia'),
             'description' => $this->translator->get('Questions and answers flow on Answeropedia.'),
-            'locale' => $this->lang,
-            'image' => IMAGE_URL.'/og-image.png'
+            'locale'      => $this->lang,
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
+
         return $og;
     }
 }

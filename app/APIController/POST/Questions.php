@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Questions_POST_APIController extends Abstract_APIController
 {
@@ -22,7 +22,7 @@ class Questions_POST_APIController extends Abstract_APIController
                 }
             }
 
-            # save activity if user want that
+            // save activity if user want that
 
             // $activity = new Activity_Model();
             // $activity->type = Activity_Model::F_U_ASKED_Q;
@@ -32,14 +32,14 @@ class Questions_POST_APIController extends Abstract_APIController
             // $activity = (new UAskedQ_Activity_Mapper())->create($activity);
 
             $output = [
-                'lang' => $this->lang,
-                'id' => $question->id,
+                'lang'  => $this->lang,
+                'id'    => $question->id,
                 'title' => $question->title,
-                'url' => $question->get_URL($this->lang),
+                'url'   => $question->get_URL($this->lang),
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

@@ -8,7 +8,7 @@ class Newest_Questions_PageController__ru__Test extends Abstract_Frontend_TestCa
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/ru/questions/newest',
+            'REQUEST_URI'    => '/ru/questions/newest',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

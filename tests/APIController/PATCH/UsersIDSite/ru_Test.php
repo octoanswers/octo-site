@@ -16,8 +16,8 @@ class UsersIDSite_PATCH_APIController__ru__Test extends Abstract_Frontend_TestCa
 
         $expectedResponse = [
             'user' => [
-                'id' => 3,
-                'name' => 'Иван Коршунов',
+                'id'       => 3,
+                'name'     => 'Иван Коршунов',
                 'site_old' => null,
                 'site_new' => 'https://answeropedia.org',
             ],

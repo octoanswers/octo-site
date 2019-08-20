@@ -8,7 +8,7 @@ class All_Sandbox_PageController__ru__Test extends Abstract_Frontend_TestCase
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/ru/sandbox/all',
+            'REQUEST_URI'    => '/ru/sandbox/all',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
