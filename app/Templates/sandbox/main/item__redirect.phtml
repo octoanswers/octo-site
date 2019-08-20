@@ -1,19 +1,19 @@
 <?php $redirect = $this->redirects[$question->id]; ?>
 
 <div class="my-4">
-    <a class="lead text-dark text-decoration-none" href="<?= Redirect_URL_Helper::getURL($this->lang, $redirect) ?>">
+    <a class="lead text-dark text-decoration-none" href="<?= Redirect_URL_Helper::get_URL($this->lang, $redirect) ?>">
         <span class="badge badge-warning mr-1">Redirect</span>
         <?= $redirect->toTitle ?>
     </a>
     <div class="small pt-1 text-secondary">
 
         Было:
-        <a rel="nofollow" class="text-secondary" href="<?= $question->getURL($this->lang) ?>">
+        <a rel="nofollow" class="text-secondary" href="<?= $question->get_URL($this->lang) ?>">
             <?= $question->title ?>
         </a>
 
         <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-        <a rel="nofollow" class="text-secondary" href="<?= $question->getURL($this->lang) ?>?no_redirect=1">
+        <a rel="nofollow" class="text-secondary" href="<?= $question->get_URL($this->lang) ?>?no_redirect=1">
             Redirect page
         </a>
 

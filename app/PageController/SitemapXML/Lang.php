@@ -17,7 +17,7 @@ class Lang_SitemapXML_PageController extends Abstract_PageController
 
         foreach ($questions as $question) {
             $output .= '<url>';
-            $output .= '<loc>'.$question->getURL($this->lang).'</loc>';
+            $output .= '<loc>'.$question->get_URL($this->lang).'</loc>';
             $output .= '</url>';
         }
 

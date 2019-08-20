@@ -1,46 +1,46 @@
 <?php if (count($this->contributors_top)) : ?>
-    <!--noindex-->
-    <!--googleoff: index-->
+<!--noindex-->
+<!--googleoff: index-->
 
-    <!-- top contributors @ sidebar -->
-    <div class="mb-4">
-        <div class="mb-3">
-            <a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
-                <span class="font-weight-bold"><?= count($this->contributors) ?></span>&nbsp;<i class="material-icons md-18">person</i>
-            </a>
-            <div class="subtitle-1 text-secondary">
-                <?= $this->translator->get('Top contributors') ?>
-            </div>
+<!-- top contributors @ sidebar -->
+<div class="mb-4">
+    <div class="mb-3">
+        <a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
+            <span class="font-weight-bold"><?= count($this->contributors) ?></span>&nbsp;<i class="material-icons md-18">person</i>
+        </a>
+        <div class="subtitle-1 text-secondary">
+            <?= $this->translator->get('Top contributors') ?>
         </div>
+    </div>
 
-        <?php foreach ($this->contributors_top as $contributor) : ?>
+    <?php foreach ($this->contributors_top as $contributor) : ?>
 
-            <div class="media position-relative mb-4">
-                <a class="wh-3 mr-3 rounded-circle" href="<?= $contributor->getURL($this->lang) ?>">
-                    <img src="<?= $contributor->getAvatarMediumURL() ?>" class="wh-3 rounded-circle" alt="<?= $contributor->name ?>">
+    <div class="media position-relative mb-4">
+        <a class="wh-3 mr-3 rounded-circle" href="<?= $contributor->get_URL($this->lang) ?>">
+            <img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-3 rounded-circle" alt="<?= $contributor->name ?>">
+        </a>
+        <div class="media-body">
+            <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->get_URL($this->lang) ?>">
+                <?= $contributor->name ?>
+            </a>
+
+            <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
+                <?= Contribution_Humanizer::humanizeCount($contributor->contribution) ?>
+            </span>
+
+            <p class="semi-small text-secondary mt-1 mb-0">
+                <?= $contributor->signature ? $contributor->signature : $contributor->username ?>
+                <?php if ($contributor->site) : ?>
+                <a href="<?= $contributor->site ?>">
+                    <?= parse_url($contributor->site, PHP_URL_HOST) ?>
                 </a>
-                <div class="media-body">
-                    <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
-                        <?= $contributor->name ?>
-                    </a>
+                <?php endif; ?>
+            </p>
+        </div>
+    </div>
+    <?php endforeach; ?>
 
-                    <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
-                        <?= Contribution_Humanizer::humanizeCount($contributor->contribution) ?>
-                    </span>
-
-                    <p class="semi-small text-secondary mt-1 mb-0">
-                        <?= $contributor->signature ? $contributor->signature : $contributor->username ?>
-                        <?php if ($contributor->site) : ?>
-                            <a href="<?= $contributor->site ?>">
-                                <?= parse_url($contributor->site, PHP_URL_HOST) ?>
-                            </a>
-                        <?php endif; ?>
-                    </p>
-                </div>
-            </div>
-        <?php endforeach; ?>
-
-        <!--
+    <!--
             <?php if (count($this->contributors) > count($this->contributors_top)) : ?>
                     <div class="box-footer">
                         <a class="ml-5 small" data-scroll href="#contributors_full_list">
@@ -50,9 +50,9 @@
             <?php endif; ?>
             -->
 
-    </div>
-    <!-- / top contributors @ sidebar -->
+</div>
+<!-- / top contributors @ sidebar -->
 
-    <!--googleon: index -->
-    <!--/noindex-->
+<!--googleon: index -->
+<!--/noindex-->
 <?php endif; ?>

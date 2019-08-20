@@ -2,7 +2,7 @@
     <!-- categories_table -->
     <?php foreach ($this->categories as $category) : ?>
         <div class="my-4">
-            <a class="h3 text-dark text-decoration-none" href="<?= $category->getURL($this->lang) ?>">
+            <a class="h3 text-dark text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
                 #<?= $category->title ?>
             </a>
             <div class="small mt-1 text-secondary">

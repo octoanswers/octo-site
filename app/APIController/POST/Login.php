@@ -9,7 +9,7 @@ class Login_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            
+
             $userEmail = (string) $request->getParam('email');
             $userPassword = (string) $request->getParam('password');
 
@@ -27,9 +27,7 @@ class Login_POST_APIController extends Abstract_APIController
                 throw new Exception('WRONG_PASSWORD', 1);
             }
 
-            if (!isset($cookieStorage) || !is_a($cookieStorage, 'CookieStorage')) {
-                $cookieStorage = new CookieStorage();
-            }
+            $cookieStorage = new CookieStorage();
             $cookieStorage->saveUser($user);
 
             $output = [
@@ -39,7 +37,7 @@ class Login_POST_APIController extends Abstract_APIController
                 'name' => $user->name,
                 'api_key' => $user->apiKey,
                 'created_at' => $user->createdAt,
-                'url' => $user->getURL($this->lang),
+                'url' => $user->get_URL($this->lang),
                 'destination_url' => Page_URL_Helper::getMainURL($this->lang),
             ];
         } catch (Throwable $e) {

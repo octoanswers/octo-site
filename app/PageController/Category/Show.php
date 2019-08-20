@@ -101,7 +101,7 @@ class Show_Category_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => $this->category->getURL($this->lang),
+            'url' => $this->category->get_URL($this->lang),
             'type' => "website",
             'title' => $this->_getPageTitle(),
             'description' => $this->_getPageDescription(),

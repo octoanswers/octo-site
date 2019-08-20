@@ -75,7 +75,7 @@ class ExtendedParsedown extends Parsedown
                 $reference_part = $matches[2];
                 if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
                     $category = Category::initWithTitle($reference_part);
-                    return "[" . $matches[1] . "](" . $category->getURL($this->lang) . ")";
+                    return "[" . $matches[1] . "](" . $category->get_URL($this->lang) . ")";
                 }
                 return $matches[0];
             },
@@ -95,7 +95,7 @@ class ExtendedParsedown extends Parsedown
                 $reference_part = $matches[2];
                 if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
                     $question = Question_Model::initWithTitle($reference_part);
-                    return "[" . $matches[1] . "](" . $question->getURL($this->lang) . ")";
+                    return "[" . $matches[1] . "](" . $question->get_URL($this->lang) . ")";
                 }
                 return $matches[0];
             },

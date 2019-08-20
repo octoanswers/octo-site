@@ -21,11 +21,11 @@ class CAddedQ_Activity_Mapper extends Abstract_Mapper
         $data = json_encode([
             'category' => [
                 'title' => $category->title,
-                'url' => $category->getURL($this->lang),
+                'url' => $category->get_URL($this->lang),
             ],
             'question' => [
                 'title' => $question->title,
-                'url' => $question->getURL($this->lang),
+                'url' => $question->get_URL($this->lang),
             ]
         ], JSON_UNESCAPED_UNICODE);
 

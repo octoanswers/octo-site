@@ -2,7 +2,7 @@
 
 trait Question_URL_Trait
 {
-    public function getURL(string $lang): string
+    public function get_URL(string $lang): string
     {
         $uri = rtrim($this->title, '?');
         $uri = str_replace('_', '__', $uri);
@@ -18,29 +18,29 @@ trait Question_URL_Trait
 
     # Image URLs
 
-    public function getImageURLLarge(string $lang): string
+    public function get_image_URL_large(string $lang): string
     {
         return SITE_URL . '/uploads/img/' . $lang . '/' . $this->id . '/' . $this->imageBaseName . '_lg.jpg';
     }
 
-    public function getImageURLMedium(string $lang): string
+    public function get_image_URL_medium(string $lang): string
     {
         return SITE_URL . '/uploads/img/' . $lang . '/' . $this->id . '/' . $this->imageBaseName . '_md.jpg';
     }
 
     // Some actions
 
-    public function getUpdateCategoriesURL(string $lang): string
+    public function get_update_categories_URL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/question/' . $this->id . '/categories';
     }
 
-    public function getHistoryURL(string $lang): string
+    public function get_history_URL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/answer/' . $this->id . '/history';
     }
 
-    public function getEditURL(string $lang): string
+    public function get_edit_URL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/answer/' . $this->id . '/edit';
     }

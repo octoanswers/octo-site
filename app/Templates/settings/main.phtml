@@ -1,7 +1,7 @@
 <div class="mb-5">
     <p class="lead text-muted mb-1"><?= $this->translator->get('settings', 'title') ?></p>
     <h1 class="mt-0">
-        <a class="text-dark text-decoration-none" href="<?= $this->authUser->getURL($this->lang) ?>">
+        <a class="text-dark text-decoration-none" href="<?= $this->authUser->get_URL($this->lang) ?>">
             <?= $this->authUser->name ? $this->authUser->name : $this->authUser->username; ?>
         </a>
     </h1>
@@ -9,7 +9,7 @@
 
 <div class="border-top my-5 pt-4">
     <h4><?= $this->translator->get('settings', 'avatar__title') ?></h4>
-    <img class="rounded wh-6 mt-3 mb-4" id="settings_pg__user_avatar" src="<?= $this->authUser->getAvatarMediumURL() ?>" />
+    <img class="rounded wh-6 mt-3 mb-4" id="settings_pg__user_avatar" src="<?= $this->authUser->get_avatar_URL_medium() ?>" />
     <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="form__update_name__name">

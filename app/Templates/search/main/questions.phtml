@@ -1,21 +1,21 @@
 <?php if ($this->list == 'questions' && count($this->questions)) : ?>
 
-	<?php foreach ($this->questions as $question) : ?>
-		<div class="my-4">
-			<a class="h3 text-dark text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
-				<?= $question->title ?>
-			</a>
-			<div class="small text-secondary">
-				<?= $this->translator->get('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
+<?php foreach ($this->questions as $question) : ?>
+<div class="my-4">
+	<a class="h3 text-dark text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+		<?= $question->title ?>
+	</a>
+	<div class="small text-secondary">
+		<?= $this->translator->get('Answer updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
 
-				<?php if (strlen($question->answer->text) == 0) : ?>
-					<span class="mx-1 text-dark font-weight-bold">&middot;</span>
-					<a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
-						<?= $this->translator->get('Write first answer') ?>
-					</a>
-				<?php endif; ?>
-			</div>
-		</div>
-	<?php endforeach; ?>
+		<?php if (strlen($question->answer->text) == 0) : ?>
+		<span class="mx-1 text-dark font-weight-bold">&middot;</span>
+		<a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
+			<?= $this->translator->get('Write first answer') ?>
+		</a>
+		<?php endif; ?>
+	</div>
+</div>
+<?php endforeach; ?>
 
 <?php endif; ?>

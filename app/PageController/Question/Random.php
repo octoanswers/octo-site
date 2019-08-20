@@ -19,6 +19,6 @@ class Random_Question_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        return $response->withRedirect($question->getURL($this->lang), 303);
+        return $response->withRedirect($question->get_URL($this->lang), 303);
     }
 }

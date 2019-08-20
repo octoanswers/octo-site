@@ -31,7 +31,7 @@ class Show_User_PageController extends Abstract_PageController
         $this->template = 'user';
         $this->pageTitle = $this->user->name.' '.$this->translator->get('Wiki-answers on Answeropedia');
         $this->pageDescription = $this->user->name.' '.$this->translator->get('Wiki-answers on Answeropedia');
-        $this->canonicalURL = $this->user->getURL($this->lang);
+        $this->canonicalURL = $this->user->get_URL($this->lang);
 
         $this->openGraph = $this->_getOpenGraph();
 
@@ -65,7 +65,7 @@ class Show_User_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => $this->user->getURL($this->lang),
+            'url' => $this->user->get_URL($this->lang),
             'type' => "website",
             'title' => $this->user->name,
             'description' => $this->user->name.' '.$this->translator->get('Wiki-answers on Answeropedia'),

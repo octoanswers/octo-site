@@ -63,7 +63,7 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
                     'id' => $category->id,
                     'old_title' => $old_title,
                     'new_title' => $category->title,
-                    'url' => $category->getURL($this->lang),
+                    'url' => $category->get_URL($this->lang),
                 ],
                 'user' => [
                     'id' => $user->id,

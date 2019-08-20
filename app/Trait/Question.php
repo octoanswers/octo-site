@@ -2,7 +2,7 @@
 
 trait Question_Trait
 {
-    public function getMinutesToRead(): int
+    public function get_minutes_to_read(): int
     {
         $answer_len = mb_strlen($this->answer->text);
 

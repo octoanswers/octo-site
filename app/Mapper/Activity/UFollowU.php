@@ -8,13 +8,13 @@ class UFollowU_Activity_Mapper extends Abstract_Mapper
         $followedUser = $activity->data;
 
         if ($activity->type != Activity_Model::F_U_FOLLOW_U) {
-            throw new Exception("Incorrect activity type: ".$activity->type, 0);
+            throw new Exception("Incorrect activity type: " . $activity->type, 0);
         }
         if (!is_a($user, User_Model::class)) {
-            throw new Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
+            throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
         if (!is_a($followedUser, User_Model::class)) {
-            throw new Exception('Incorrect activity "data" class type: '.get_class($followedUser), 0);
+            throw new Exception('Incorrect activity "data" class type: ' . get_class($followedUser), 0);
         }
 
         $userID = $user->id;
@@ -23,14 +23,14 @@ class UFollowU_Activity_Mapper extends Abstract_Mapper
             'user' => [
                 'id' => $user->id,
                 'name' => $user->name,
-                'profile_url' => $user->getURL($this->lang),
-                'avatar_xs_url' => $user->getAvatarSmallURL(),
+                'profile_url' => $user->get_URL($this->lang),
+                'avatar_xs_url' => $user->get_avatar_URL_small(),
             ],
             'followed_user' => [
                 'id' => $followedUser->id,
                 'name' => $followedUser->name,
-                'profile_url' => $user->getURL($this->lang),
-                'avatar_xs_url' => $user->getAvatarSmallURL(),
+                'profile_url' => $user->get_URL($this->lang),
+                'avatar_xs_url' => $user->get_avatar_URL_small(),
             ]
         ], JSON_UNESCAPED_UNICODE);
 

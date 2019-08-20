@@ -18,7 +18,7 @@ class Show_Question_PageController extends Abstract_PageController
             return (new PageNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        return $response->withRedirect($question->getURL($this->lang), 301);
+        return $response->withRedirect($question->get_URL($this->lang), 301);
     }
 
     public function handle($request, $response, $args)
@@ -91,7 +91,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
         $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answeropedia');
         $this->pageDescription = $this->__getPageDescription();
-        $this->canonicalURL = $this->question->getURL($this->lang);
+        $this->canonicalURL = $this->question->get_URL($this->lang);
 
         $this->related_questions = $this->_relatedQuestions();
 
@@ -99,7 +99,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->shareLink['title'] = $this->question->title;
         $this->shareLink['description'] = $this->translator->get('Wiki-answers to your questions on Answeropedia');
-        $this->shareLink['url'] = $this->question->getURL($this->lang);
+        $this->shareLink['url'] = $this->question->get_URL($this->lang);
         $this->shareLink['image'] = SITE_URL . '/assets/img/og-image.png';
 
         $this->_prepareAdditionalJavascript();
@@ -215,7 +215,7 @@ class Show_Question_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => $this->question->getURL($this->lang),
+            'url' => $this->question->get_URL($this->lang),
             'type' => "website",
             'title' => $this->question->title,
             'description' => $this->__getPageDescription(),

@@ -67,8 +67,8 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
                 'lang' => $this->lang,
                 'question_id' => $this->question->id,
                 'user_id' => $this->user->id,
-                'image_url_lg' => $this->question->getImageURLLarge($this->lang),
-                'image_url_md' => $this->question->getImageURLMedium($this->lang),
+                'image_url_lg' => $this->question->get_image_URL_large($this->lang),
+                'image_url_md' => $this->question->get_image_URL_medium($this->lang),
             ];
         } catch (Throwable $e) {
             $output = [

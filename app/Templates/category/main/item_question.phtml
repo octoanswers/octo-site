@@ -1,42 +1,42 @@
 <!-- question item -->
 <div class="my-4">
     <div class="mb-2">
-        <a class="lead text-dark text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
+        <a class="lead text-dark text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
             <?= $question->title ?>
         </a>
     </div>
 
     <?php if ($question->imageBaseName) : ?>
-        <a class="d-block max-width-240px" href="<?= $question->getURL($this->lang) ?>">
-            <img class="max-width-240px" src="<?= $question->getImageURLMedium($this->lang) ?>" alt="<?= $question->title ?>">
-        </a>
+    <a class="d-block max-width-240px" href="<?= $question->get_URL($this->lang) ?>">
+        <img class="max-width-240px" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
+    </a>
     <?php endif; ?>
 
     <div class="mt-2 small text-secondary">
         <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60 * 60 * 24)) : ?>
-            <span class="badge badge-primary mr-3">Новый</span>
+        <span class="badge badge-primary mr-3">Новый</span>
         <?php endif; ?>
 
         <?php if (strlen($question->answer->text) == 0) : ?>
-            <a class="badge badge-primary mr-3" href="<?= $question->getEditURL($this->lang) ?>" rel="nofollow">
-                <?= $this->translator->get('Write first answer') ?>
-            </a>
+        <a class="badge badge-primary mr-3" href="<?= $question->get_edit_URL($this->lang) ?>" rel="nofollow">
+            <?= $this->translator->get('Write first answer') ?>
+        </a>
         <?php endif; ?>
 
         <?php if ($question->categoriesCount == 0) : ?>
-            <a class="badge badge-success mr-3" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
-                <?= $this->translator->get('categories', 'add_categories') ?>
-            </a>
+        <a class="badge badge-success mr-3" href="<?= $question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+            <?= $this->translator->get('categories', 'add_categories') ?>
+        </a>
         <?php endif; ?>
 
         <?php if (strlen($question->answer->text)) : ?>
-            2 автора
-            <span class="mx-1 text-muted font_weight_800">&middot;</span>
-            <i class="material-icons md-14">access_time</i>
-            <span title="<?= $this->translator->get('Minutes to read') ?>">
-                <?= $question->getMinutesToRead() ?>&nbsp;<?= $this->translator->get('min') ?>
-            </span>
-            <span class="mx-1 text-muted font_weight_800">&middot;</span>
+        2 автора
+        <span class="mx-1 text-muted font_weight_800">&middot;</span>
+        <i class="material-icons md-14">access_time</i>
+        <span title="<?= $this->translator->get('Minutes to read') ?>">
+            <?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
+        </span>
+        <span class="mx-1 text-muted font_weight_800">&middot;</span>
         <?php endif; ?>
 
         <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>

@@ -52,7 +52,7 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
                 'lang' => $this->lang,
                 'question_id' => $question->id,
                 'question_title' => $question->title,
-                'question_url' => $question->getURL($this->lang),
+                'question_url' => $question->get_URL($this->lang),
                 'subscription_id' => $subscription->id,
                 'subscription_email' => $subscription->email,
             ];

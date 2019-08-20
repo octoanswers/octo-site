@@ -2,7 +2,7 @@
 
 trait User_URL_Trait
 {
-    public function getURL(string $lang): string
+    public function get_URL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/+' . $this->username;
     }
@@ -12,17 +12,17 @@ trait User_URL_Trait
         return SITE_URL . '/' . $lang . '/user/' . $this->id;
     }
 
-    public function getAvatarSmallURL(): string
+    public function get_avatar_URL_small(): string
     {
         return SITE_URL . '/uploads/avatar/' . $this->id . '_100.jpg';
     }
 
-    public function getAvatarMediumURL(): string
+    public function get_avatar_URL_medium(): string
     {
         return SITE_URL . '/uploads/avatar/' . $this->id . '_200.jpg';
     }
 
-    public function getAvatarLargeURL(): string
+    public function get_avatar_URL_large(): string
     {
         return SITE_URL . '/uploads/avatar/' . $this->id . '_400.jpg';
     }

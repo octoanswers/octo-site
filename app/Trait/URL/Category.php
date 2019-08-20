@@ -2,7 +2,7 @@
 
 trait Category_URL_Trait
 {
-    public function getURL(string $lang): string
+    public function get_URL(string $lang): string
     {
         $uri = $this->title;
 

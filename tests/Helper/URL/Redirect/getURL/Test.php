@@ -1,6 +1,6 @@
 <?php
 
-class Redirect_URL_Helper__getURL__Test extends PHPUnit\Framework\TestCase
+class Redirect_URL_Helper__get_URL__Test extends PHPUnit\Framework\TestCase
 {
     public function test_baseURI()
     {
@@ -9,6 +9,6 @@ class Redirect_URL_Helper__getURL__Test extends PHPUnit\Framework\TestCase
             'rd_title' => 'This is question?',
         ]);
 
-        $this->assertEquals('https://answeropedia.org/ru/This_is_question', Redirect_URL_Helper::getURL('ru', $redirect));
+        $this->assertEquals('https://answeropedia.org/ru/This_is_question', Redirect_URL_Helper::get_URL('ru', $redirect));
     }
 }

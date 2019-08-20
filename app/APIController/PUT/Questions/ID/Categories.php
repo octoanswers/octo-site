@@ -98,7 +98,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                 'question' => [
                     'id' => $question->id,
                     'title' => $question->title,
-                    'url' => $question->getURL($this->lang),
+                    'url' => $question->get_URL($this->lang),
                 ],
                 'user_id' => $user->id,
                 'user_name' => $user->name,

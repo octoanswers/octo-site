@@ -2,7 +2,7 @@
     <?php for ($i = 0; $i < count($this->revisions); $i++) : ?>
         <div class="my-4">
             <div class="mb-3">
-                <a class="h5 text-dark text-decoration-none" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
+                <a class="h5 text-dark text-decoration-none" href="<?= ($this->questions[$i])->get_URL($this->lang) ?>">
                     <?= $this->questions[$i]->title ?>
                 </a>
                 <div class="small text-secondary">
