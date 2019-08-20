@@ -29,9 +29,9 @@ class Newest_Categories_PageController extends Abstract_PageController
         return $response;
     }
 
-    #
-    # Helper methods
-    #
+    //
+    // Helper methods
+    //
 
     public function _getPageTitle()
     {

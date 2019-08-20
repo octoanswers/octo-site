@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class Question_Query extends Abstract_Query
 {
     public function questionWithTitle(string $title): Question_Model
@@ -15,6 +12,7 @@ class Question_Query extends Abstract_Query
         $stmt->bindParam(':q_title', $title, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -25,7 +23,7 @@ class Question_Query extends Abstract_Query
 
         return Question_Model::initWithDBState($row);
     }
-    
+
     public function questionWithID(int $questionID): Question_Model
     {
         Question_Validator::validateID($questionID);
@@ -36,6 +34,7 @@ class Question_Query extends Abstract_Query
         $stmt->bindParam(':q_id', $questionID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

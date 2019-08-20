@@ -6,11 +6,11 @@ class Mapper_Activities__createUFU__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $user = new User_Model;
+        $user = new User_Model();
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $followedUser = new User_Model;
+        $followedUser = new User_Model();
         $followedUser->id = 6;
         $followedUser->name = 'Steve Bar';
 

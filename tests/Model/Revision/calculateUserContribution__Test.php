@@ -23,9 +23,9 @@ class Model_Revision__getUserContribution__Test extends PHPUnit\Framework\TestCa
     public function test__EmptyOpcodes()
     {
         $revision = new Revision_Model();
-        $revision->opcodes = "";
+        $revision->opcodes = '';
 
-        $this->assertEquals("", $revision->opcodes);
+        $this->assertEquals('', $revision->opcodes);
         $this->assertEquals(0, $revision->getUserContribution());
     }
 
@@ -33,7 +33,7 @@ class Model_Revision__getUserContribution__Test extends PHPUnit\Framework\TestCa
     {
         $revision = new Revision_Model();
 
-        $this->assertEquals("", $revision->opcodes);
+        $this->assertEquals('', $revision->opcodes);
         $this->assertEquals(0, $revision->getUserContribution());
     }
 }

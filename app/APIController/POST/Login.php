@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Login_POST_APIController extends Abstract_APIController
 {
@@ -31,18 +31,18 @@ class Login_POST_APIController extends Abstract_APIController
             $cookieStorage->saveUser($user);
 
             $output = [
-                'lang' => $this->lang,
-                'id' => $user->id,
-                'email' => $user->email,
-                'name' => $user->name,
-                'api_key' => $user->apiKey,
-                'created_at' => $user->createdAt,
-                'url' => $user->get_URL($this->lang),
+                'lang'            => $this->lang,
+                'id'              => $user->id,
+                'email'           => $user->email,
+                'name'            => $user->name,
+                'api_key'         => $user->apiKey,
+                'created_at'      => $user->createdAt,
+                'url'             => $user->get_URL($this->lang),
                 'destination_url' => Page_URL_Helper::getMainURL($this->lang),
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class QuestionsIDFollow_POST_APIController extends Abstract_APIController
 {
@@ -12,9 +12,9 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             $api_key = (string) $request->getParam('api_key');
             $question_id = (int) $args['id'];
 
-            #
-            # Validate params
-            #
+            //
+            // Validate params
+            //
 
             $user = (new User_Query())->userWithAPIKey($api_key);
             $userID = $user->id;
@@ -27,9 +27,9 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
                 throw new Exception('User with ID "'.$userID.'" already followed question with ID "'.$questionID.'"', 0);
             }
 
-            #
-            # Save follow relation
-            #
+            //
+            // Save follow relation
+            //
 
             $relation = new UserFollowQuestion_Relation_Model();
             $relation->userID = $userID;
@@ -37,9 +37,9 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
 
             $relation = (new UserFollowQuestion_Relation_Mapper($this->lang))->create($relation);
 
-            #
-            # Create activity
-            #
+            //
+            // Create activity
+            //
 
             $activity = new Activity_Model();
             $activity->type = Activity_Model::F_U_FOLLOW_Q;
@@ -49,16 +49,16 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             $activity = (new UFollowQ_Activity_Mapper($this->lang))->create($activity);
 
             $output = [
-                'lang' => $this->lang,
-                'relation_id' => $relation->id,
-                'user_id' => $user->id,
-                'user_name' => $user->name,
-                'followed_question_id' => $question->id,
+                'lang'                    => $this->lang,
+                'relation_id'             => $relation->id,
+                'user_id'                 => $user->id,
+                'user_name'               => $user->name,
+                'followed_question_id'    => $question->id,
                 'followed_question_title' => $question->title,
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

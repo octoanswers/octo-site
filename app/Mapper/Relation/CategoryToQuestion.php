@@ -12,6 +12,7 @@ class CategoryToQuestion_Relation_Mapper extends Abstract_Mapper
         $stmt->bindParam(':er_question_id', $er->questionID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

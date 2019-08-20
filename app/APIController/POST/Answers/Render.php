@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Render_Answers_POST_APIController extends Abstract_APIController
 {
@@ -16,13 +16,13 @@ class Render_Answers_POST_APIController extends Abstract_APIController
             $textHTML = $parsedown->text($textMD);
 
             $output = [
-                'lang' => $lang,
-                'text_md' => $textMD,
-                'text_html' => $textHTML
+                'lang'      => $lang,
+                'text_md'   => $textMD,
+                'text_html' => $textHTML,
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

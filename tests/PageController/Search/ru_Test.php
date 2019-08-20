@@ -8,8 +8,8 @@ class Questions_Search_PageController__ru__Test extends Abstract_Frontend_TestCa
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/ru/search',
-            'QUERY_STRING' => 'q=Apple',
+            'REQUEST_URI'    => '/ru/search',
+            'QUERY_STRING'   => 'q=Apple',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
@@ -25,7 +25,7 @@ class Questions_Search_PageController__ru__Test extends Abstract_Frontend_TestCa
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/ru/search',
+            'REQUEST_URI'    => '/ru/search',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

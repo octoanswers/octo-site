@@ -13,7 +13,7 @@ class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends Abstr
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'API not realized',
         ];
 
@@ -32,7 +32,7 @@ class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends Abstr
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'API not realized',
         ];
 

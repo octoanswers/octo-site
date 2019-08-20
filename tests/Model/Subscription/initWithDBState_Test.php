@@ -5,10 +5,10 @@ class Model_Subscription__initWithDBState__Test extends PHPUnit\Framework\TestCa
     public function test__FullParams()
     {
         $s = Subscription_Model::initWithDBState([
-            's_id' => 13,
+            's_id'          => 13,
             's_question_id' => 9,
-            's_email' => 'wer@sio.ru',
-            's_created_at' => '2015-11-29 09:28:34'
+            's_email'       => 'wer@sio.ru',
+            's_created_at'  => '2015-11-29 09:28:34',
         ]);
 
         $this->assertEquals(13, $s->id);

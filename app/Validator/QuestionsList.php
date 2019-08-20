@@ -10,9 +10,9 @@ class QuestionsList_Validator
     const PER_PAGE_MIN = 5;
     const PER_PAGE_MAX = 100;
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validatePage($page)
     {

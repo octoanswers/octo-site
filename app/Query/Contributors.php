@@ -23,10 +23,10 @@ class Contributors_Query extends Abstract_Query
         $contributorsData = [];
         foreach ($contributions as $key => $value) {
             $contributorsData[] = [
-                'user_id' => $key,
+                'user_id'      => $key,
                 'contribution' => $value['total'],
-                'plus' => $value['plus'],
-                'minus' => $value['minus'],
+                'plus'         => $value['plus'],
+                'minus'        => $value['minus'],
             ];
         }
 
@@ -56,7 +56,7 @@ class Contributors_Query extends Abstract_Query
             if ($user->site) {
                 $contributor->site = $user->site;
             }
-            
+
             $contributors[] = $contributor;
         }
 

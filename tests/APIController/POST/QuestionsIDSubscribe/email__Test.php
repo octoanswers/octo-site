@@ -15,7 +15,7 @@ class QuestionsIDSubscribe_POST_APIController__email__Test extends Abstract_Fron
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "email" property "test_mail.ru" must be valid email',
         ];
 

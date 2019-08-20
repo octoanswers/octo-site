@@ -12,6 +12,7 @@ class Category_Redirect_Mapper extends Abstract_Mapper
         $stmt->bindParam(':rd_title', $redirect->toTitle, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

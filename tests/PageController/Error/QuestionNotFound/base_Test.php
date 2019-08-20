@@ -8,7 +8,7 @@ class PageController_QuestionNotFound_base_Test extends Abstract_Frontend_TestCa
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/ru/Some_unfounded_question',
+            'REQUEST_URI'    => '/ru/Some_unfounded_question',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

@@ -9,11 +9,11 @@ class Category extends Abstract_Model
     public $words; // string
     public $isRedirect = false; // bool
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithTitle(string $title): Category
+    public static function initWithTitle(string $title): self
     {
         $category = new self();
         $category->title = $title;
@@ -21,10 +21,10 @@ class Category extends Abstract_Model
         return $category;
     }
 
-    public static function initWithDBState(array $state): Category
+    public static function initWithDBState(array $state): self
     {
         if (!isset($state['c_id']) || !isset($state['c_title'])) {
-            throw new Exception("Category init with empty state", 1);
+            throw new Exception('Category init with empty state', 1);
         }
 
         $category = new self();

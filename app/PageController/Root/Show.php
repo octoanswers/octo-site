@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Show_Root_PageController extends Abstract_PageController
 {
@@ -11,7 +11,7 @@ class Show_Root_PageController extends Abstract_PageController
         $default_language = Lang::getDefaultLang();
 
         $this->lang = $default_language;
-        $this->translator = new Translator($this->lang, ROOT_PATH."/app/Lang");
+        $this->translator = new Translator($this->lang, ROOT_PATH.'/app/Lang');
 
         if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
             $this->lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);

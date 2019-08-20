@@ -16,8 +16,8 @@ class UsersIDSignature_PATCH_APIController__ru__Test extends Abstract_Frontend_T
 
         $expectedResponse = [
             'user' => [
-                'id' => 3,
-                'name' => 'Иван Коршунов',
+                'id'            => 3,
+                'name'          => 'Иван Коршунов',
                 'signature_old' => 'Old signature',
                 'signature_new' => 'Enterpreneur, writer.',
             ],

@@ -13,6 +13,7 @@ class Category_Mapper extends Abstract_Mapper
 
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -36,6 +37,7 @@ class Category_Mapper extends Abstract_Mapper
 
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

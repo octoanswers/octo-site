@@ -15,10 +15,10 @@ class QuestionsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'user_id' => 3,
-            'user_name' => 'Иван Коршунов',
-            'followed_question_id' => 7,
-            'followed_question_title' => 'Какую роль играет почва во взаимосвязи неживой и живой природы?'
+            'user_id'                 => 3,
+            'user_name'               => 'Иван Коршунов',
+            'followed_question_id'    => 7,
+            'followed_question_title' => 'Какую роль играет почва во взаимосвязи неживой и живой природы?',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
@@ -36,8 +36,8 @@ class QuestionsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
-            'error_message' => 'User with ID "3" not followed question with ID "4"'
+            'error_code'    => 0,
+            'error_message' => 'User with ID "3" not followed question with ID "4"',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

@@ -5,10 +5,10 @@ class Model_ER_CategoriesQuestions__initWithDBState__Test extends PHPUnit\Framew
     public function test__EnFullParams_ReturnObject()
     {
         $rel = CategoriesToQuestions_Relation_Model::initWithDBState([
-            'er_id' => 13,
+            'er_id'          => 13,
             'er_category_id' => 3,
             'er_question_id' => 9,
-            'er_created_at' => '2015-11-29 09:28:34'
+            'er_created_at'  => '2015-11-29 09:28:34',
         ]);
 
         $this->assertEquals(13, $rel->id);
@@ -20,10 +20,10 @@ class Model_ER_CategoriesQuestions__initWithDBState__Test extends PHPUnit\Framew
     public function test_RuFullParams_ReturnObject()
     {
         $rel = CategoriesToQuestions_Relation_Model::initWithDBState([
-            'er_id' => 13,
+            'er_id'          => 13,
             'er_category_id' => 3,
             'er_question_id' => 9,
-            'er_created_at' => '2015-11-29 09:28:34'
+            'er_created_at'  => '2015-11-29 09:28:34',
         ]);
 
         $this->assertEquals(13, $rel->id);

@@ -12,10 +12,11 @@ class Answers_Query extends Abstract_Query
         $stmt->bindParam(':q_id', $answerID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         if (!$row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            return null;
+            return;
         }
 
         return Answer_Model::initWithDBState($row);

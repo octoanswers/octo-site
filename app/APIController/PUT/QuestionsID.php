@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class QuestionsID_PUT_APIController extends Abstract_APIController
 {
@@ -30,14 +30,14 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
             $question = (new Question_Mapper($this->lang))->update($question);
 
             $output = [
-                'id' => $question->id,
-                'title' => $question->title,
-                'url' => $question->get_URL($this->lang),
+                'id'          => $question->id,
+                'title'       => $question->title,
+                'url'         => $question->get_URL($this->lang),
                 'is_redirect' => $question->isRedirect,
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

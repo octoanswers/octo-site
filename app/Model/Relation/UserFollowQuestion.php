@@ -7,11 +7,11 @@ class UserFollowQuestion_Relation_Model extends Abstract_Model
     public $questionID;
     public $createdAt;
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithUserIDAndQuestionID(int $userID, int $questionID): UserFollowQuestion_Relation_Model
+    public static function initWithUserIDAndQuestionID(int $userID, int $questionID): self
     {
         $er = new self();
         $er->userID = $userID;
@@ -20,7 +20,7 @@ class UserFollowQuestion_Relation_Model extends Abstract_Model
         return $er;
     }
 
-    public static function initWithDBState(array $state): UserFollowQuestion_Relation_Model
+    public static function initWithDBState(array $state): self
     {
         $er = new self();
 

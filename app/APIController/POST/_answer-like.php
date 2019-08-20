@@ -2,14 +2,14 @@
 
 require_once 'header.action.php';
 
-use Parse\ParseUser;
-use Parse\ParseObject;
-use Parse\ParseQuery;
 use Parse\ParseACL;
 use Parse\ParseException;
+use Parse\ParseObject;
+use Parse\ParseQuery;
+use Parse\ParseUser;
 
-$errors = array();
-$response = array();
+$errors = [];
+$response = [];
 
 if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
     $currentUser = ParseUser::getCurrentUser();

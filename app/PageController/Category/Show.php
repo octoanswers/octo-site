@@ -47,7 +47,7 @@ class Show_Category_PageController extends Abstract_PageController
         if (is_array($this->category_questions) && count($this->category_questions) == 10) {
             $data['next_page_button'] = [
                 'title' => $this->translator->get('More categories'),
-                'url' => '#',
+                'url'   => '#',
             ];
         }
 
@@ -101,12 +101,13 @@ class Show_Category_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => $this->category->get_URL($this->lang),
-            'type' => "website",
-            'title' => $this->_getPageTitle(),
+            'url'         => $this->category->get_URL($this->lang),
+            'type'        => 'website',
+            'title'       => $this->_getPageTitle(),
             'description' => $this->_getPageDescription(),
-            'image' => IMAGE_URL.'/og-image.png'
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
+
         return $og;
     }
 
@@ -131,12 +132,12 @@ class Show_Category_PageController extends Abstract_PageController
     {
         $most_viewed_writers = [
             [
-                'name' => 'Alexander Gomzyakov',
-                'url' => 'https://answeropedia.org/user/1/aleksandr-gomzyakov',
-                'signature' => 'IT Project Manager',
+                'name'       => 'Alexander Gomzyakov',
+                'url'        => 'https://answeropedia.org/user/1/aleksandr-gomzyakov',
+                'signature'  => 'IT Project Manager',
                 'avatar_url' => 'http://placehold.it/48x48',
                 'avatar_alt' => 'Answeropedia user',
-            ]
+            ],
         ];
 
         return $most_viewed_writers;

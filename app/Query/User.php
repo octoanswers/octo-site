@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class User_Query
 {
     protected $pdo;
@@ -25,6 +22,7 @@ class User_Query
         $stmt->bindParam(':u_api_key', $apiKey, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         if (!$row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -45,6 +43,7 @@ class User_Query
         $stmt->bindParam(':u_id', $userID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         if (!$row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -65,10 +64,11 @@ class User_Query
         $stmt->bindParam(':u_username', $username, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         if (!$row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            return null;
+            return;
         }
 
         unset($row['u_password_hash']);
@@ -85,10 +85,11 @@ class User_Query
         $stmt->bindParam(':u_email', $email);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         if (!$row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            return null;
+            return;
         }
 
         return User_Model::initWithDBState($row);

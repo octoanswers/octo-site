@@ -12,7 +12,7 @@ class Signup_POST_APIController__Password_Test extends Abstract_Frontend_TestCas
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "password" property "1234" must have a length between 6 and 32',
         ];
 

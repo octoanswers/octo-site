@@ -21,12 +21,12 @@ class CAddedQ_Activity_Mapper extends Abstract_Mapper
         $data = json_encode([
             'category' => [
                 'title' => $category->title,
-                'url' => $category->get_URL($this->lang),
+                'url'   => $category->get_URL($this->lang),
             ],
             'question' => [
                 'title' => $question->title,
-                'url' => $question->get_URL($this->lang),
-            ]
+                'url'   => $question->get_URL($this->lang),
+            ],
         ], JSON_UNESCAPED_UNICODE);
 
         $sql = 'INSERT INTO activities (c_id, activity_type, data) VALUES (:c_id, :activity_type, :data)';
@@ -36,6 +36,7 @@ class CAddedQ_Activity_Mapper extends Abstract_Mapper
         $stmt->bindParam(':data', $data, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

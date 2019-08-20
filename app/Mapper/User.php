@@ -26,9 +26,10 @@ class User_Mapper extends Abstract_Mapper
         $stmt->bindParam(':u_site', $user->site, PDO::PARAM_STR);
         $stmt->bindParam(':u_password_hash', $user->passwordHash, PDO::PARAM_STR);
         $stmt->bindParam(':u_api_key', $user->apiKey, PDO::PARAM_STR);
-        
+
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -58,12 +59,13 @@ class User_Mapper extends Abstract_Mapper
         $stmt->bindParam(':u_site', $user->site, PDO::PARAM_STR);
         $stmt->bindParam(':u_password_hash', $user->passwordHash, PDO::PARAM_STR);
         $stmt->bindParam(':u_api_key', $user->apiKey, PDO::PARAM_STR);
-        
+
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
-        
+
         if ($stmt->rowCount() == 0) {
             throw new Exception('User with ID '.$user->id.' not updated', 0);
         }

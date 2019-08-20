@@ -15,7 +15,7 @@ class UsersIDName_PATCH_APIController__signature__Test extends Abstract_Frontend
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "name" property null must be a string',
         ];
 
@@ -34,7 +34,7 @@ class UsersIDName_PATCH_APIController__signature__Test extends Abstract_Frontend
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "name" property "Fo" must have a length between 2 and 255',
         ];
 

@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class Sandbox_Query extends Abstract_Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
@@ -21,6 +18,7 @@ class Sandbox_Query extends Abstract_Query
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -50,6 +48,7 @@ class Sandbox_Query extends Abstract_Query
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 

@@ -28,15 +28,15 @@ class AWApp
 
         $app = new \Slim\App($container);
 
-        # Set supported array on languages
+        // Set supported array on languages
 
         if (!defined('URL_PART_LANG')) {
             define('URL_PART_LANG', '/{lang:[en|ru]+}');
         }
 
-        # API v1
+        // API v1
 
-        $app->group('/api/v1' . URL_PART_LANG, function () {
+        $app->group('/api/v1'.URL_PART_LANG, function () {
 
             // GET
             $this->get('/search/categories.json', 'SearchCategories_GET_APIController:handle');
@@ -74,7 +74,7 @@ class AWApp
             $this->put('/questions/{id}/categories.json', 'Categories_ID_Questions_PUT_APIController:handle');
         });
 
-        # Publuc URI`s
+        // Publuc URI`s
 
         $app->group(URL_PART_LANG, function () {
             $this->get('', 'Show_Main_PageController:handle');
@@ -102,7 +102,7 @@ class AWApp
             $this->get('/{id:[0-9]+}[/{uri_slug}]', 'Show_Question_PageController:handleByID'); // @TODO Deprecated
         });
 
-        # Language-agnostic URLs
+        // Language-agnostic URLs
 
         $app->get('/sitemap.xml', 'Index_SitemapXML_PageController:handle');
         $app->get('/', 'Show_Root_PageController:handle');

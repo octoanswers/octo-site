@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class Feeds_Query extends Abstract_Query
 {
     public function findFeedsForUserWithID(int $userID): array
@@ -26,7 +23,7 @@ class Feeds_Query extends Abstract_Query
 
         if (count($where) == 0) {
             return [
-                'user' => $user,
+                'user'       => $user,
                 'activities' => [],
             ];
         }
@@ -38,6 +35,7 @@ class Feeds_Query extends Abstract_Query
         $stmt = $this->pdo->prepare($sql);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -50,8 +48,8 @@ class Feeds_Query extends Abstract_Query
         }
 
         return [
-            'user_id' => $userID,
-            'sql' => $sql,
+            'user_id'    => $userID,
+            'sql'        => $sql,
             'activities' => $activities,
         ];
 

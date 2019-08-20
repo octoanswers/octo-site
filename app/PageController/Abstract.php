@@ -5,7 +5,7 @@ abstract class Abstract_PageController
     protected $lang;
     protected $l = null;
 
-	// Page properties
+    // Page properties
     protected $template = null;
     protected $showFooter = true;
     protected $pageTitle;
@@ -35,13 +35,13 @@ abstract class Abstract_PageController
     public function handleRequest($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $this->translator = new Translator($this->lang, ROOT_PATH."/app/Lang");
+        $this->translator = new Translator($this->lang, ROOT_PATH.'/app/Lang');
     }
 
     protected function renderPage()
     {
         if (!$this->template) {
-            throw new Exception("Page template not set!", 1);
+            throw new Exception('Page template not set!', 1);
         }
 
         $fullPage = TEMPLATE_PATH.'/'.$this->template.'_full.phtml';
@@ -57,9 +57,9 @@ abstract class Abstract_PageController
         return $output;
     }
 
-    #
-    # Private Methods
-    #
+    //
+    // Private Methods
+    //
 
     private function _initCommonModals()
     {

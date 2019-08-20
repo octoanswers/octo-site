@@ -5,9 +5,9 @@ use Respect\Validation\Validator as v;
 
 class Subscription_Validator
 {
-    #
-    # Model validator
-    #
+    //
+    // Model validator
+    //
 
     public static function validateExists(Subscription_Model $s)
     {
@@ -26,9 +26,9 @@ class Subscription_Validator
         return true;
     }
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validateID($id)
     {

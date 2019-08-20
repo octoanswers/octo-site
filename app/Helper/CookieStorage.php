@@ -13,27 +13,28 @@ class CookieStorage
         if (isset($_COOKIE['u_id'])) {
             try {
                 static::$authUser = User_Model::initWithDBState([
-                    'u_id' => $_COOKIE['u_id'],
-                    'u_username' => $_COOKIE['u_username'],
-                    'u_name' => $_COOKIE['u_name'],
-                    'u_email' => $_COOKIE['u_email'],
-                    'u_signature' => isset($_COOKIE['u_signature']) ? $_COOKIE['u_signature'] : null,
-                    'u_site' => isset($_COOKIE['u_site']) ? $_COOKIE['u_site'] : null,
-                    'u_api_key' => $_COOKIE['u_api_key'],
+                    'u_id'         => $_COOKIE['u_id'],
+                    'u_username'   => $_COOKIE['u_username'],
+                    'u_name'       => $_COOKIE['u_name'],
+                    'u_email'      => $_COOKIE['u_email'],
+                    'u_signature'  => isset($_COOKIE['u_signature']) ? $_COOKIE['u_signature'] : null,
+                    'u_site'       => isset($_COOKIE['u_site']) ? $_COOKIE['u_site'] : null,
+                    'u_api_key'    => $_COOKIE['u_api_key'],
                     'u_created_at' => $_COOKIE['u_created_at'],
                 ]);
                 if (!User_Validator::validateAuthUser(static::$authUser)) {
                     $this->clear();
-                    return null;
+
+                    return;
                 }
+
                 return static::$authUser;
             } catch (Throwable $e) {
                 $this->clear();
+
                 return;
             }
         }
-
-        return;
     }
 
     public function saveUser(User_Model $user)

@@ -43,12 +43,13 @@ class Show_Question_PageController extends Abstract_PageController
             $needStopRedirect = $request->getParam('no_redirect');
             if (!$needStopRedirect) {
                 $redirectTitle = $this->questionRedirect->title;
-                $redirectURL = Redirect_URL_Helper::get_redirect_URL_for_title($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
+                $redirectURL = Redirect_URL_Helper::get_redirect_URL_for_title($this->lang, $redirectTitle).'?redirect_from_id='.$this->question->id;
+
                 return $response->withRedirect($redirectURL, 301);
             }
 
             $this->template = 'question_redirect';
-            $this->pageTitle = 'Redirect page: ' . $this->question->title . ' – ' . $this->translator->get('answeropedia');
+            $this->pageTitle = 'Redirect page: '.$this->question->title.' – '.$this->translator->get('answeropedia');
 
             $output = $this->renderPage();
             $response->getBody()->write($output);
@@ -89,7 +90,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->template = 'question';
         $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
-        $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answeropedia');
+        $this->pageTitle = $this->question->title.' – '.$this->translator->get('answeropedia');
         $this->pageDescription = $this->__getPageDescription();
         $this->canonicalURL = $this->question->get_URL($this->lang);
 
@@ -100,7 +101,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->shareLink['title'] = $this->question->title;
         $this->shareLink['description'] = $this->translator->get('Wiki-answers to your questions on Answeropedia');
         $this->shareLink['url'] = $this->question->get_URL($this->lang);
-        $this->shareLink['image'] = SITE_URL . '/assets/img/og-image.png';
+        $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
 
         $this->_prepareAdditionalJavascript();
         $this->_prepareModals();
@@ -117,7 +118,7 @@ class Show_Question_PageController extends Abstract_PageController
         $uri = str_replace('_', ' ', $uri);
         $uri = str_replace('DOUBLEUNDERLINE', '_', $uri);
 
-        $title = $uri . '?';
+        $title = $uri.'?';
 
         return $title;
     }
@@ -215,13 +216,14 @@ class Show_Question_PageController extends Abstract_PageController
     protected function _getOpenGraph()
     {
         $og = [
-            'url' => $this->question->get_URL($this->lang),
-            'type' => "website",
-            'title' => $this->question->title,
+            'url'         => $this->question->get_URL($this->lang),
+            'type'        => 'website',
+            'title'       => $this->question->title,
             'description' => $this->__getPageDescription(),
-            'locale' => $this->lang,
-            'image' => IMAGE_URL . '/og-image.png'
+            'locale'      => $this->lang,
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
+
         return $og;
     }
 }

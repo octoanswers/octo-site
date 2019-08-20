@@ -1,7 +1,7 @@
 <?php
 
 /**
- * I need to show a page views value in the format of 1K of equal to one thousand, or 1.1K, 1.2K, 1.9K etc,
+ * I need to show a page views value in the format of 1K of equal to one thousand, or 1.1K, 1.2K, 1.9K etc,.
  */
 class Contribution_Humanizer
 {
@@ -18,10 +18,10 @@ class Contribution_Humanizer
         $formatted = '';
 
         if ($count >= 1000 && $count < 1000000) {
-            if ($count%1000 === 0) {
-                $formatted = ($count/1000);
+            if ($count % 1000 === 0) {
+                $formatted = ($count / 1000);
             } else {
-                $formatted = substr($count, 0, -3) . '.' . substr($count, -3, -2);
+                $formatted = substr($count, 0, -3).'.'.substr($count, -3, -2);
 
                 if (substr($formatted, -1, 1) === '0') {
                     $formatted = substr($formatted, 0, -2);

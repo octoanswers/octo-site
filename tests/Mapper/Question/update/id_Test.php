@@ -11,7 +11,7 @@ class Mapper_Question_update_id_Test extends Abstract_DB_TestCase
         $question->title = 'This is question?';
         $question->isRedirect = false;
 
-        $this->expectExceptionMessage("Question with ID 2215 not exists");
+        $this->expectExceptionMessage('Question with ID 2215 not exists');
         $question = (new Question_Mapper('ru'))->update($question);
     }
 

@@ -8,7 +8,7 @@ class Edit_Answer_PageController__en__Test extends Abstract_Frontend_TestCase
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/en/answer/13/edit',
+            'REQUEST_URI'    => '/en/answer/13/edit',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

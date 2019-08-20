@@ -23,6 +23,7 @@ class Questions_Query extends Abstract_Query
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -52,6 +53,7 @@ class Questions_Query extends Abstract_Query
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -79,6 +81,7 @@ class Questions_Query extends Abstract_Query
         $stmt->bindParam(':limit_count', $limit, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -106,6 +109,7 @@ class Questions_Query extends Abstract_Query
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -142,6 +146,7 @@ class Questions_Query extends Abstract_Query
         $stmt->bindParam(':per_page', $questionsPerPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

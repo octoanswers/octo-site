@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class Category_Query extends Abstract_Query
 {
     public function categoryWithTitle(string $categoryTitle): Category
@@ -13,6 +10,7 @@ class Category_Query extends Abstract_Query
         $stmt->bindParam(':c_title', $categoryTitle, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -23,7 +21,7 @@ class Category_Query extends Abstract_Query
 
         return Category::initWithDBState($row);
     }
-    
+
     public function categoryWithID(int $categoryID): Category
     {
         Category_Validator::validateID($categoryID);
@@ -32,6 +30,7 @@ class Category_Query extends Abstract_Query
         $stmt->bindParam(':c_id', $categoryID, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -51,12 +50,13 @@ class Category_Query extends Abstract_Query
         $stmt->bindParam(':c_title', $title, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            return null;
+            return;
         }
 
         return Category::initWithDBState($row);

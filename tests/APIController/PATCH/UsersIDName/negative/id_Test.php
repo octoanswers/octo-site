@@ -15,7 +15,7 @@ class UsersIDName_PATCH_APIController__id__Test extends Abstract_Frontend_TestCa
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Incorrect user id or API-key',
         ];
 
@@ -34,7 +34,7 @@ class UsersIDName_PATCH_APIController__id__Test extends Abstract_Frontend_TestCa
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'Incorrect user id or API-key',
         ];
 

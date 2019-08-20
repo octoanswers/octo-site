@@ -1,8 +1,5 @@
 <?php
 
-use Respect\Validation\Exceptions\NestedValidationException;
-use Respect\Validation\Validator as v;
-
 class CategoriesToQuestions_Relations_Query extends Abstract_Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
@@ -21,6 +18,7 @@ class CategoriesToQuestions_Relations_Query extends Abstract_Query
         $stmt->bindParam(':per_page', $per_page, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
@@ -44,12 +42,13 @@ class CategoriesToQuestions_Relations_Query extends Abstract_Query
         $stmt->bindParam(':er_question_id', $question_id, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
+
             throw new Exception($error[2], $error[1]);
         }
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            return null;
+            return;
         }
 
         return CategoriesToQuestions_Relation_Model::initWithDBState($row);
@@ -62,9 +61,9 @@ class CategoriesToQuestions_Relations_Query extends Abstract_Query
 
         $category = (new Category_Query($this->lang))->findWithTitle($category_title);
         if ($category === null) {
-            return null;
+            return;
         }
 
-        return (new CategoriesToQuestions_Relations_Query($this->lang))->findByCategoryIDAndQuestionID($category->id, $question_id);
+        return (new self($this->lang))->findByCategoryIDAndQuestionID($category->id, $question_id);
     }
 }

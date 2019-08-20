@@ -15,11 +15,11 @@ class QuestionsIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_T
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'lang' => 'ru',
-            'relation_id' => 9,
-            'user_id' => 3,
-            'user_name' => 'Иван Коршунов',
-            'followed_question_id' => 4,
+            'lang'                    => 'ru',
+            'relation_id'             => 9,
+            'user_id'                 => 3,
+            'user_name'               => 'Иван Коршунов',
+            'followed_question_id'    => 4,
             'followed_question_title' => 'Чем занимается гинеколог?',
         ];
 
@@ -38,8 +38,8 @@ class QuestionsIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_T
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
-            'error_message' => 'User with ID "3" already followed question with ID "7"'
+            'error_code'    => 0,
+            'error_message' => 'User with ID "3" already followed question with ID "7"',
         ];
 
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));

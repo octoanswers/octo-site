@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class History_Answer_PageController extends Abstract_PageController
 {
@@ -29,8 +29,8 @@ class History_Answer_PageController extends Abstract_PageController
         }
 
         $this->template = 'answer_history';
-        $this->pageTitle = $this->translator->get("answer_history", "page_title").' '.$this->question->title.' – '.$this->translator->get('answeropedia');
-        $this->pageDescription = $this->translator->get("answer_history", "page_title");
+        $this->pageTitle = $this->translator->get('answer_history', 'page_title').' '.$this->question->title.' – '.$this->translator->get('answeropedia');
+        $this->pageDescription = $this->translator->get('answer_history', 'page_title');
 
         $output = $this->renderPage();
         $response->getBody()->write($output);

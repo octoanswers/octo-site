@@ -8,7 +8,7 @@ class Lang_SitemapXML_PageController__ru__Test extends Abstract_Frontend_TestCas
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI' => '/ru/sitemap.xml',
+            'REQUEST_URI'    => '/ru/sitemap.xml',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

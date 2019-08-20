@@ -14,11 +14,11 @@ class User_Model extends Abstract_Model
     public $apiKey; // string
     public $createdAt;
 
-    #
-    # Init methods
-    #
+    //
+    // Init methods
+    //
 
-    public static function initWithDBState(array $state): User_Model
+    public static function initWithDBState(array $state): self
     {
         $user = new self();
 

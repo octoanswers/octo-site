@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Show_Feed_PageController extends Abstract_PageController
 {
@@ -28,7 +28,7 @@ class Show_Feed_PageController extends Abstract_PageController
                 continue;
             }
             $activity['created_at__humanized'] = $date_humanizer->format($activity['created_at']);
-        };
+        }
 
         $follows_users = (new UsersFollowUsers_Relations_Query($this->lang))->findUsersFollowedByUser($userID);
         $this->isShowUsersFollowLure = (count($follows_users) < 3);
@@ -41,7 +41,7 @@ class Show_Feed_PageController extends Abstract_PageController
 
         $this->template = 'feed';
         $this->showFooter = false;
-        $this->pageTitle = $this->translator->get("feed", "page_title").' – '.$this->translator->get('answeropedia');
+        $this->pageTitle = $this->translator->get('feed', 'page_title').' – '.$this->translator->get('answeropedia');
         $this->canonicalURL = SITE_URL;
 
         $output = $this->renderPage();

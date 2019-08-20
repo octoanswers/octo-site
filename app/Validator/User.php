@@ -16,9 +16,9 @@ class User_Validator
     const SIGNATURE_MIN_LENGHT = 3;
     const SIGNATURE_MAX_LENGHT = 255;
 
-    #
-    # Model validator
-    #
+    //
+    // Model validator
+    //
 
     public static function validateExists(User_Model $user)
     {
@@ -53,9 +53,9 @@ class User_Validator
         return true;
     }
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validateID($id)
     {

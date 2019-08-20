@@ -10,7 +10,7 @@ class Mapper_Category_update_negativeIDTest extends Abstract_DB_TestCase
         $category->id = 2215;
         $category->title = 'impossible';
 
-        $this->expectExceptionMessage("Category with ID 2215 not exists");
+        $this->expectExceptionMessage('Category with ID 2215 not exists');
         $category = (new Category_Mapper('ru'))->update($category);
     }
 

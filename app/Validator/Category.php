@@ -8,9 +8,9 @@ class Category_Validator
     const TITLE_MIN_LENGHT = 2;
     const TITLE_MAX_LENGHT = 127;
 
-    #
-    # Model validator
-    #
+    //
+    // Model validator
+    //
 
     public static function validateNew(Category $category)
     {
@@ -32,9 +32,9 @@ class Category_Validator
         return true;
     }
 
-    #
-    # Property validators
-    #
+    //
+    // Property validators
+    //
 
     public static function validateID($id)
     {

@@ -24,7 +24,7 @@ class PDOFactory
 
     public static function getConnectionToInterDB()
     {
-        throw new \Exception("Not implemented method getConnectionToInterDB", 1);
+        throw new \Exception('Not implemented method getConnectionToInterDB', 1);
     }
 
     /**
@@ -44,7 +44,7 @@ class PDOFactory
             // if (defined('LOCAL_TESTS')) {
             //     $DB_DSN = $DB_DSN.';unix_socket=/tmp/mysql.sock';
             // }
-            
+
             $pdo = new PDO($DB_DSN, DB_USERNAME, DB_PASSWORD);
             $pdo->exec('SET CHARACTER SET utf8');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -1,7 +1,7 @@
 <?php
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 {
@@ -18,19 +18,19 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 
             $user_api_key = (string) $request->getParam('user_api_key');
 
-            # Check user
+            // Check user
 
             $user = (new User_Query())->userWithAPIKey($user_api_key);
             // @TODO Check rigths to edit
 
-            # Check answer
+            // Check answer
 
             $answer = (new Answers_Query($this->lang))->answerWithID($answer_id);
 
             $old_answer_text = $answer->text;
             $opcodes = FineDiff::getDiffOpcodes($old_answer_text, $new_answer_text, FineDiff::$wordGranularity);
 
-            # Update answer
+            // Update answer
 
             $answerUpdatedAt = (new DateTime('NOW'))->format('Y-m-d H:i:s');
 
@@ -40,7 +40,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 
             $answer = (new Answer_Mapper($this->lang))->update($answer);
 
-            # Create revision
+            // Create revision
 
             $revision = new Revision_Model();
             $revision->answerID = $answer_id;
@@ -63,7 +63,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             // Read updated question
             $question = (new Question_Query($this->lang))->questionWithID($answer_id);
 
-            # Save activity
+            // Save activity
 
             $activity = new Activity_Model();
             $activity->type = Activity_Model::F_U_UPDATE_A;
@@ -78,22 +78,22 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             $activity = (new QUpdateA_Activity_Mapper($this->lang))->create($activity);
 
             $output = [
-                'question_id' => $answer_id,
-                'question_title' => $question->title,
-                'question_url' => $question->get_URL($this->lang),
-                'answer_text' => $new_answer_text,
-                'revision_id' => $revision->id,
-                'revision_opcodes' => $revision->opcodes,
+                'question_id'        => $answer_id,
+                'question_title'     => $question->title,
+                'question_url'       => $question->get_URL($this->lang),
+                'answer_text'        => $new_answer_text,
+                'revision_id'        => $revision->id,
+                'revision_opcodes'   => $revision->opcodes,
                 'revision_base_text' => $revision->baseText,
-                'revision_comment' => $revision->comment,
-                'user' => [
-                    'id' => $user->id,
+                'revision_comment'   => $revision->comment,
+                'user'               => [
+                    'id'   => $user->id,
                     'name' => $user->name,
-                ]
+                ],
             ];
         } catch (Throwable $e) {
             $output = [
-                'error_code' => $e->getCode(),
+                'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
             ];
         }

@@ -15,7 +15,7 @@ class UsersIDSite_PATCH_APIController__site__Test extends Abstract_Frontend_Test
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "site" property "xxx" must be a URL',
         ];
 
@@ -34,7 +34,7 @@ class UsersIDSite_PATCH_APIController__site__Test extends Abstract_Frontend_Test
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
-            'error_code' => 0,
+            'error_code'    => 0,
             'error_message' => 'User "site" property null must be a string',
         ];
 

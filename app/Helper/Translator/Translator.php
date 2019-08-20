@@ -20,7 +20,7 @@ class Translator
     /**
      * Returns instance of this class.
      *
-     * @var string $lang Language code.
+     * @var string Language code.
      * @var string $messagesDirectory Directory with translated JSON-files.
      */
     public function __construct(string $lang, string $messagesDirectory)
@@ -39,10 +39,10 @@ class Translator
         if ($messages == null) {
             die("Error in $fileWithMessages");
         }
-        
+
         //$this->messages[$this->lang] = $messages;
         $this->messages = $messages;
-       
+
         return $this;
     }
 
@@ -59,46 +59,48 @@ class Translator
     /**
      * Return translated message OR message key (if message not found).
      *
-     * @var string $key
+     * @var string
      * @var string $subkey
      */
     public function get(...$keys): string
     {
         if (count($keys) > 3) {
-            return 'TOO_MACH_KEYS ('.$this->lang.') '.implode(" - ", $keys);
+            return 'TOO_MACH_KEYS ('.$this->lang.') '.implode(' - ', $keys);
         }
 
         switch (count($keys)) {
             case 3:
-                # Keys like a 'key - key -key'
+                // Keys like a 'key - key -key'
                 $message = @$this->messages[$keys[0]][$keys[1]][$keys[2]];
-                
+
                 if ($message) {
                     if (is_array($message)) {
-                        return 'KEY_IS_ARRAY ('.$this->lang.') '.implode(" - ", $keys);
+                        return 'KEY_IS_ARRAY ('.$this->lang.') '.implode(' - ', $keys);
                     }
+
                     return $message;
                 }
-    
-                return 'NEED TRANSLATE ('.$this->lang.') '.implode(" - ", $keys);
-                
+
+                return 'NEED TRANSLATE ('.$this->lang.') '.implode(' - ', $keys);
+
             case 2:
-                # Keys like a 'key - key'
+                // Keys like a 'key - key'
                 $message = @$this->messages[$keys[0]][$keys[1]];
 
                 if ($message) {
                     if (is_array($message)) {
-                        return 'KEY_IS_ARRAY ('.$this->lang.') '.implode(" - ", $keys);
+                        return 'KEY_IS_ARRAY ('.$this->lang.') '.implode(' - ', $keys);
                     }
+
                     return $message;
                 }
-    
-                return 'NEED TRANSLATE ('.$this->lang.') '.implode(" - ", $keys);
-            
+
+                return 'NEED TRANSLATE ('.$this->lang.') '.implode(' - ', $keys);
+
             default:
-                # Keys like a 'key'
+                // Keys like a 'key'
                 $message = @$this->messages[$keys[0]];
-            
+
                 if (isset($message)) {
                     if (is_array($message)) {
                         return 'KEY_IS_ARRAY ('.$this->lang.') '.$keys[0];

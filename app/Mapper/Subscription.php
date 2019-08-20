@@ -12,6 +12,7 @@ class Subscription_Mapper extends Abstract_Mapper
         $stmt->bindParam(':s_email', $s->email, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $sror = $stmt->errorInfo();
+
             throw new Exception($sror[2], $sror[1]);
         }
 

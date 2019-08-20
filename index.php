@@ -18,6 +18,7 @@ $app = (new AWApp())->getApp();
 
 $app->add(function ($req, $res, $next) {
     $response = $next($req, $res);
+
     return $response
             ->withHeader('Access-Control-Allow-Origin', 'https://upload.answeropedia.org')
             ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
