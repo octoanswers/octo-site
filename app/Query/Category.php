@@ -16,7 +16,7 @@ class Category_Query extends Abstract_Query
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new Exception('Category with lang "'.$this->lang.'" and title "'.$categoryTitle.'" not exists', 1);
+            throw new Exception('Category with lang "' . $this->lang . '" and title "' . $categoryTitle . '" not exists', 1);
         }
 
         return Category::initWithDBState($row);
@@ -36,7 +36,7 @@ class Category_Query extends Abstract_Query
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new Exception('Category with ID "'.$categoryID.'" not exists', 1);
+            throw new Exception('Category with ID "' . $categoryID . '" not exists', 1);
         }
 
         return Category::initWithDBState($row);

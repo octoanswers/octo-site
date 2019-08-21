@@ -24,7 +24,7 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
 
             $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relationWithUserIDAndQuestionID($userID, $questionID);
             if ($relation) {
-                throw new Exception('User with ID "'.$userID.'" already followed question with ID "'.$questionID.'"', 0);
+                throw new Exception('User with ID "' . $userID . '" already followed question with ID "' . $questionID . '"', 0);
             }
 
             //

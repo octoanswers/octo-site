@@ -36,16 +36,16 @@ class Show_Main_PageController extends Abstract_PageController
         $this->parsedown = new ExtendedParsedown($this->lang);
 
         $this->template = 'main';
-        $this->pageTitle = $this->translator->get('answeropedia').' – '.$this->translator->get('Ask a question and get one complete answer');
+        $this->pageTitle = $this->translator->get('answeropedia') . ' – ' . $this->translator->get('Ask a question and get one complete answer');
         $this->pageDescription = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
         $this->canonicalURL = Page_URL_Helper::getMainURL($this->lang);
 
         $this->openGraph = $this->_getOpenGraph();
 
-        $this->shareLink['title'] = $this->translator->get('Ask a question and get one complete answer').' – '.$this->translator->get('answeropedia');
+        $this->shareLink['title'] = $this->translator->get('Ask a question and get one complete answer') . ' – ' . $this->translator->get('answeropedia');
         $this->shareLink['description'] = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
         $this->shareLink['url'] = SITE_URL;
-        $this->shareLink['image'] = SITE_URL.'/assets/img/og-image.png';
+        $this->shareLink['image'] = SITE_URL . '/assets/img/og-image.png';
 
         $this->includeJS[] = 'question/create';
 
@@ -60,10 +60,10 @@ class Show_Main_PageController extends Abstract_PageController
         $og = [
             'url'         => SITE_URL,
             'type'        => 'website',
-            'title'       => $this->translator->get('answeropedia').' – '.$this->translator->get('Ask a question and get one complete answer'),
+            'title'       => $this->translator->get('answeropedia') . ' – ' . $this->translator->get('Ask a question and get one complete answer'),
             'description' => $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.'),
             'locale'      => $this->lang,
-            'image'       => IMAGE_URL.'/og-image.png',
+            'image'       => IMAGE_URL . '/og-image.png',
         ];
 
         return $og;

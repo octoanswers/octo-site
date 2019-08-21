@@ -42,7 +42,7 @@ class Category_Mapper extends Abstract_Mapper
         }
 
         if ($stmt->rowCount() == 0) {
-            throw new Exception('Category with ID '.$category->id.' not exists', 0);
+            throw new Exception('Category with ID ' . $category->id . ' not exists', 0);
         }
 
         return $category;

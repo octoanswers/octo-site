@@ -27,13 +27,13 @@ class Users_Query
         try {
             v::optional(v::intType()->between(self::MIN_PAGE, self::MAX_PAGE, true))->assert($page);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Optional "page" param '.$exception->getMessages()[0], 0);
+            throw new Exception('Optional "page" param ' . $exception->getMessages()[0], 0);
         }
 
         try {
             v::optional(v::intType()->between(self::MIN_PER_PAGE, self::MAX_PER_PAGE, true))->assert($perPage);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Optional "perPage" param '.$exception->getMessages()[0], 0);
+            throw new Exception('Optional "perPage" param ' . $exception->getMessages()[0], 0);
         }
 
         $offset = $page * $perPage;

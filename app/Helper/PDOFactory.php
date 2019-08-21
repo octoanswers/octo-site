@@ -39,7 +39,7 @@ class PDOFactory
     public static function getConnection(string $database)
     {
         if (!isset(self::$connection[$database])) {
-            $DB_DSN = 'mysql:host=localhost;dbname=ap_'.$database.';charset=utf8';
+            $DB_DSN = 'mysql:host=localhost;dbname=ap_' . $database . ';charset=utf8';
 
             // if (defined('LOCAL_TESTS')) {
             //     $DB_DSN = $DB_DSN.';unix_socket=/tmp/mysql.sock';

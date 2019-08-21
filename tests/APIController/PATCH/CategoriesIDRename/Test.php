@@ -6,7 +6,7 @@ class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestC
 
     public function test_Rename_category_with_save_redirect()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Исследование почвы').'&save_redirect=true';
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Исследование почвы') . '&save_redirect=true';
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/9/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -47,7 +47,7 @@ class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestC
 
     public function test_Rename_category_without_saving_redirect()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Наука о почвах');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Наука о почвах');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/9/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -84,7 +84,7 @@ class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestC
 
     public function test_Change_category_char_case_without_add_redirect()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('ПочвоВедение');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('ПочвоВедение');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/9/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -121,7 +121,7 @@ class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestC
 
     public function test_Change_category_char_case_with_add_redirect()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('ПочвоВедение').'&save_redirect=true';
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('ПочвоВедение') . '&save_redirect=true';
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/9/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

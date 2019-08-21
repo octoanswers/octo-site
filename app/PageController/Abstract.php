@@ -35,7 +35,7 @@ abstract class Abstract_PageController
     public function handleRequest($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $this->translator = new Translator($this->lang, ROOT_PATH.'/app/Lang');
+        $this->translator = new Translator($this->lang, ROOT_PATH . '/app/Lang');
     }
 
     protected function renderPage()
@@ -44,13 +44,13 @@ abstract class Abstract_PageController
             throw new Exception('Page template not set!', 1);
         }
 
-        $fullPage = TEMPLATE_PATH.'/'.$this->template.'_full.phtml';
+        $fullPage = TEMPLATE_PATH . '/' . $this->template . '_full.phtml';
 
         ob_start();
         if (file_exists($fullPage)) {
             include $fullPage;
         } else {
-            include TEMPLATE_PATH.'/wrapper.phtml';
+            include TEMPLATE_PATH . '/wrapper.phtml';
         }
         $output = ob_get_clean();
 

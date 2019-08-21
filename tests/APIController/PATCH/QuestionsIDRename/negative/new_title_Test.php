@@ -6,7 +6,7 @@ class QuestionsIDRename_PATCH_APIController__new_title_Test extends Abstract_Fro
 
     public function test_NewTitleNotSet_Error()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&not_new_title='.urlencode('ab?');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&not_new_title=' . urlencode('ab?');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/12/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -25,7 +25,7 @@ class QuestionsIDRename_PATCH_APIController__new_title_Test extends Abstract_Fro
 
     public function test_NewTitleTooShort_Error()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('M?');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('M?');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/12/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

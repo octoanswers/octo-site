@@ -6,7 +6,7 @@ class CategoriesIDRename_PATCH_APIController__negative_IDTest extends Abstract_F
 
     public function test_Error_when_category_ID_equal_zero()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Как ты, мистер Хайдегер?');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/0/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -25,7 +25,7 @@ class CategoriesIDRename_PATCH_APIController__negative_IDTest extends Abstract_F
 
     public function test_Error_when_category_ID_below_zero()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Как ты, мистер Хайдегер?');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/-1/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

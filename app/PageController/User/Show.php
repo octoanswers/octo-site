@@ -29,8 +29,8 @@ class Show_User_PageController extends Abstract_PageController
         $this->_prepareFollowButton();
 
         $this->template = 'user';
-        $this->pageTitle = $this->user->name.' '.$this->translator->get('Wiki-answers on Answeropedia');
-        $this->pageDescription = $this->user->name.' '.$this->translator->get('Wiki-answers on Answeropedia');
+        $this->pageTitle = $this->user->name . ' ' . $this->translator->get('Wiki-answers on Answeropedia');
+        $this->pageDescription = $this->user->name . ' ' . $this->translator->get('Wiki-answers on Answeropedia');
         $this->canonicalURL = $this->user->get_URL($this->lang);
 
         $this->openGraph = $this->_getOpenGraph();
@@ -68,9 +68,9 @@ class Show_User_PageController extends Abstract_PageController
             'url'         => $this->user->get_URL($this->lang),
             'type'        => 'website',
             'title'       => $this->user->name,
-            'description' => $this->user->name.' '.$this->translator->get('Wiki-answers on Answeropedia'),
+            'description' => $this->user->name . ' ' . $this->translator->get('Wiki-answers on Answeropedia'),
             'locale'      => $this->lang,
-            'image'       => IMAGE_URL.'/og-image.png',
+            'image'       => IMAGE_URL . '/og-image.png',
         ];
 
         return $og;

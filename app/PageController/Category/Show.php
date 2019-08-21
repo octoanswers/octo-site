@@ -83,7 +83,7 @@ class Show_Category_PageController extends Abstract_PageController
 
     protected function _getPageTitle()
     {
-        return $this->translator->get('category', 'page_title').$this->category->title.' – '.$this->translator->get('answeropedia');
+        return $this->translator->get('category', 'page_title') . $this->category->title . ' – ' . $this->translator->get('answeropedia');
     }
 
     protected function _prepareFollowButton()
@@ -105,7 +105,7 @@ class Show_Category_PageController extends Abstract_PageController
             'type'        => 'website',
             'title'       => $this->_getPageTitle(),
             'description' => $this->_getPageDescription(),
-            'image'       => IMAGE_URL.'/og-image.png',
+            'image'       => IMAGE_URL . '/og-image.png',
         ];
 
         return $og;
@@ -113,7 +113,7 @@ class Show_Category_PageController extends Abstract_PageController
 
     protected function _getPageDescription()
     {
-        return $this->translator->get('Questions with category').' '.$this->category->title.' – '.$this->translator->get('answeropedia');
+        return $this->translator->get('Questions with category') . ' ' . $this->category->title . ' – ' . $this->translator->get('answeropedia');
     }
 
     private function _categoryTitleFromURI(string $uri): string

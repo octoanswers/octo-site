@@ -67,7 +67,7 @@ class User_Mapper extends Abstract_Mapper
         }
 
         if ($stmt->rowCount() == 0) {
-            throw new Exception('User with ID '.$user->id.' not updated', 0);
+            throw new Exception('User with ID ' . $user->id . ' not updated', 0);
         }
 
         return $user;

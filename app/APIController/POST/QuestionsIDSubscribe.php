@@ -27,7 +27,7 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
 
             $s = (new Subscriptions_Query($this->lang))->findWithQuestionIDAndEmail($question_id, $email);
             if ($s != null) {
-                throw new \Exception('Email "'.$email.'" already subscribed to question with ID '.$question_id, 0);
+                throw new \Exception('Email "' . $email . '" already subscribed to question with ID ' . $question_id, 0);
             }
 
             //

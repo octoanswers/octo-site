@@ -32,7 +32,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
             $query = new ParseQuery('Answer');
             $parseAnswer = $query->get($_POST['answer-id']);
             if (!$parseAnswer) {
-                throw new ParseException('Not found answer by ID: '.$_POST['answer-id']);
+                throw new ParseException('Not found answer by ID: ' . $_POST['answer-id']);
             }
 
             //  _isUserAlreadyLikedAnswer
@@ -41,7 +41,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
             $likeQuery->equalTo('likeAnswer', $parseAnswer);
             $answerLike = $likeQuery->first();
             if ($answerLike) {
-                throw new ParseException('Answer '.$_POST['answer-id'].' already liked by user: '.$currentUser->getObjectId());
+                throw new ParseException('Answer ' . $_POST['answer-id'] . ' already liked by user: ' . $currentUser->getObjectId());
             }
 
             // _createLikeEntity
@@ -65,7 +65,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
             $response['success'] = true;
             $response['message'] = 'API: Answer liked';
         } catch (ParseException $ex) {
-            $errors['other'] = 'API Error'.': '.$ex->getCode().' '.$ex->getMessage();
+            $errors['other'] = 'API Error' . ': ' . $ex->getCode() . ' ' . $ex->getMessage();
             $response['success'] = false;
             $response['errors'] = $errors;
         }

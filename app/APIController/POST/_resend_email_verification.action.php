@@ -23,7 +23,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
     try {
         $parseUser = $query->get($currentUser->getObjectId());
         if (!$parseUser) {
-            throw new ParseException('User not found by ID: '.$currentUser->getObjectId());
+            throw new ParseException('User not found by ID: ' . $currentUser->getObjectId());
         }
     } catch (ParseException $ex) {
         $errors['other'] = $ex->getMessage();
@@ -51,7 +51,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
 
             $response['success'] = true;
         } catch (ParseException $ex) {
-            $errors['other'] = 'Error: '.$ex->getCode().' '.$ex->getMessage();
+            $errors['other'] = 'Error: ' . $ex->getCode() . ' ' . $ex->getMessage();
             $response['success'] = false;
             $response['errors'] = $errors;
         }

@@ -6,7 +6,7 @@ class UsersIDName_PATCH_APIController__ru__Test extends Abstract_Frontend_TestCa
 
     public function test_RenameWithSaveRedirect_Ok()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name='.urlencode('Вова Малышов');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Вова Малышов');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/name.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

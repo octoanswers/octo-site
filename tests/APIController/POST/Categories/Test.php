@@ -6,7 +6,7 @@ class APIController_POST_CategoriesTest extends Abstract_Frontend_TestCase
 
     public function test_Post_one_category()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories='.urlencode('Apple');
+        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories=' . urlencode('Apple');
         $request = $this->__getTestRequest('POST', '/api/v1/ru/categories.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -37,7 +37,7 @@ class APIController_POST_CategoriesTest extends Abstract_Frontend_TestCase
 
     public function test_Post_multiple_categories()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories='.urlencode('Apple,Косметика');
+        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories=' . urlencode('Apple,Косметика');
         $request = $this->__getTestRequest('POST', '/api/v1/ru/categories.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -70,7 +70,7 @@ class APIController_POST_CategoriesTest extends Abstract_Frontend_TestCase
 
     public function test_Categories_not_set()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories='.urlencode('');
+        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories=' . urlencode('');
         $request = $this->__getTestRequest('POST', '/api/v1/ru/categories.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -89,7 +89,7 @@ class APIController_POST_CategoriesTest extends Abstract_Frontend_TestCase
 
     public function test_Incorrect_API_key()
     {
-        $query_string = 'api_key=XXX1ebdbec3d4e396043c96b6ab44a6e&categories='.urlencode('Hello');
+        $query_string = 'api_key=XXX1ebdbec3d4e396043c96b6ab44a6e&categories=' . urlencode('Hello');
         $request = $this->__getTestRequest('POST', '/api/v1/ru/categories.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;

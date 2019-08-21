@@ -4,7 +4,7 @@ class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends Abstr
 {
     public function test__QuestionIDEqualZero()
     {
-        $query_string = 'email='.urlencode('test@mail.ru').'&no_email=1';
+        $query_string = 'email=' . urlencode('test@mail.ru') . '&no_email=1';
         $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/0/subscribe.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -23,7 +23,7 @@ class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends Abstr
 
     public function test__QuestionIDBelowZero()
     {
-        $query_string = 'email='.urlencode('test@mail.ru').'&no_email=1';
+        $query_string = 'email=' . urlencode('test@mail.ru') . '&no_email=1';
         $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/-1/subscribe.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;

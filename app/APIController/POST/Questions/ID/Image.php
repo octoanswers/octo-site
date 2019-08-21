@@ -7,14 +7,14 @@ use Psr\Http\Message\ServerRequestInterface as Request;
  @todo So bad, but... https://www.verot.net/php_class_upload_forum.htm?php_class_upload_forum_id=4739&php_class_upload_forum_thread_id=4739&lang=en-GB
 */
 
-require_once ROOT_PATH.'/vendor/verot/class.upload.php/src/class.upload.php';
+require_once ROOT_PATH . '/vendor/verot/class.upload.php/src/class.upload.php';
 
 class Image_ID_Questions_POST_APIController extends Abstract_APIController
 {
     const JPEG_QUALITY = 90;
     const WIDTH_LG = 1140;  // col-12 width
     const WIDTH_MD = 760;  // col-8 width
-    const UPLOAD_FOLDER = ROOT_PATH.'/uploads/img';
+    const UPLOAD_FOLDER = ROOT_PATH . '/uploads/img';
 
     private $verotUpload = null;
 
@@ -50,8 +50,8 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
             if ($this->verotUpload->uploaded) {
                 $imageBaseName = $this->_getImageBaseName();
 
-                $this->_makeUserAvatarWithSize($imageBaseName.'_lg', self::WIDTH_LG);
-                $this->_makeUserAvatarWithSize($imageBaseName.'_md', self::WIDTH_MD);
+                $this->_makeUserAvatarWithSize($imageBaseName . '_lg', self::WIDTH_LG);
+                $this->_makeUserAvatarWithSize($imageBaseName . '_md', self::WIDTH_MD);
 
                 // delete the original uploaded file
                 $this->verotUpload->clean();
@@ -84,7 +84,7 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
 
     protected function _makeUserAvatarWithSize($imageFilename, $imageWidth)
     {
-        $uploadFolder = self::UPLOAD_FOLDER.'/'.$this->lang.'/'.$this->question->id.'/';
+        $uploadFolder = self::UPLOAD_FOLDER . '/' . $this->lang . '/' . $this->question->id . '/';
 
         $this->verotUpload->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
         $this->verotUpload->image_convert = 'jpg';
@@ -108,6 +108,6 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
         $dateChunk = date('Ymj');
         $rand = mt_rand(1, 999);
 
-        return $this->user->id.'_'.$dateChunk.'_'.$rand;
+        return $this->user->id . '_' . $dateChunk . '_' . $rand;
     }
 }

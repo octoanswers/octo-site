@@ -18,7 +18,7 @@ class Question_Query extends Abstract_Query
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new Exception('Question with lang "'.$this->lang.'" and title "'.$title.'" not exists', 1);
+            throw new Exception('Question with lang "' . $this->lang . '" and title "' . $title . '" not exists', 1);
         }
 
         return Question_Model::initWithDBState($row);
@@ -40,7 +40,7 @@ class Question_Query extends Abstract_Query
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new Exception('Question with ID "'.$questionID.'" not exists', 1);
+            throw new Exception('Question with ID "' . $questionID . '" not exists', 1);
         }
 
         return Question_Model::initWithDBState($row);

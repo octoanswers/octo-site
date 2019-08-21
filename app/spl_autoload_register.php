@@ -43,7 +43,7 @@ spl_autoload_register(function ($class_name) {
     if (strpos($class_name, '_') !== false) {
         $pieces = explode('_', $class_name);
         $pathPieces = array_reverse($pieces);
-        $classPath = 'app/'.implode('/', $pathPieces).'.php';
+        $classPath = 'app/' . implode('/', $pathPieces) . '.php';
 
         if (file_exists($classPath)) {
             require_once $classPath;

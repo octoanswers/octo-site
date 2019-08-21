@@ -12,7 +12,7 @@ class Search_Query extends Abstract_Query
         try {
             v::stringType()->length(2, 32, true)->assert($query);
         } catch (NestedValidationException $e) {
-            throw new Exception('Search query param '.$e->getMessages()[0], 0);
+            throw new Exception('Search query param ' . $e->getMessages()[0], 0);
         }
 
         List_Validator::validatePage($questionsPage);
@@ -20,7 +20,7 @@ class Search_Query extends Abstract_Query
 
         $id_offset = 0;
 
-        $sql = "SELECT * FROM questions WHERE (q_title LIKE '%".$query."%') LIMIT :id_offset, :per_page";
+        $sql = "SELECT * FROM questions WHERE (q_title LIKE '%" . $query . "%') LIMIT :id_offset, :per_page";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id_offset', $id_offset, PDO::PARAM_INT);
@@ -45,7 +45,7 @@ class Search_Query extends Abstract_Query
         try {
             v::stringType()->length(1, 32, true)->assert($query);
         } catch (NestedValidationException $e) {
-            throw new Exception('Search query param '.$e->getMessages()[0], 0);
+            throw new Exception('Search query param ' . $e->getMessages()[0], 0);
         }
 
         List_Validator::validatePage($page);
@@ -53,7 +53,7 @@ class Search_Query extends Abstract_Query
 
         $id_offset = 0;
 
-        $sql = "SELECT * FROM categories WHERE (c_title LIKE '%".$query."%') LIMIT :id_offset, :per_page";
+        $sql = "SELECT * FROM categories WHERE (c_title LIKE '%" . $query . "%') LIMIT :id_offset, :per_page";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id_offset', $id_offset, PDO::PARAM_INT);
@@ -78,7 +78,7 @@ class Search_Query extends Abstract_Query
         try {
             v::stringType()->length(2, 32, true)->assert($query);
         } catch (NestedValidationException $e) {
-            throw new Exception('Search query param '.$e->getMessages()[0], 0);
+            throw new Exception('Search query param ' . $e->getMessages()[0], 0);
         }
 
         List_Validator::validatePage($page);
@@ -86,7 +86,7 @@ class Search_Query extends Abstract_Query
 
         $id_offset = 0;
 
-        $sql = "SELECT * FROM users WHERE (u_name LIKE '%".$query."%') LIMIT :id_offset, :per_page";
+        $sql = "SELECT * FROM users WHERE (u_name LIKE '%" . $query . "%') LIMIT :id_offset, :per_page";
 
         $this->pdo = PDOFactory::getConnectionToUsersDB();
         $stmt = $this->pdo->prepare($sql);

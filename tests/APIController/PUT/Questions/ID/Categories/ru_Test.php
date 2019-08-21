@@ -6,7 +6,7 @@ class Categories_ID_Questions_PUT_APIController__ru__Test extends Abstract_Front
 
     public function test_Add_one_category()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_categories='.urlencode('Медицина,Гинекология');
+        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_categories=' . urlencode('Медицина,Гинекология');
         $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/22/categories.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;

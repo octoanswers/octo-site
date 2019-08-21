@@ -11,7 +11,7 @@ class QRenamedByU_Activity_Mapper extends Abstract_Mapper
 
         $question = $activity->subject;
         if (!is_a($question, Question_Model::class)) {
-            throw new Exception('Incorrect activity "data" class type: '.get_class($question), 0);
+            throw new Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
         }
 
         if (!isset($activity->data['user']) || !isset($activity->data['old_title'])) {
@@ -19,7 +19,7 @@ class QRenamedByU_Activity_Mapper extends Abstract_Mapper
         }
         $user = $activity->data['user'];
         if (!is_a($user, User_Model::class)) {
-            throw new Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
+            throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
         $old_title = $activity->data['old_title'];
         if (!is_string($old_title)) {

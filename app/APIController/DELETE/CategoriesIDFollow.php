@@ -23,7 +23,7 @@ class CategoriesIDFollow_DELETE_APIController extends Abstract_APIController
 
             $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relationWithUserIDAndCategoryID($user->id, $categoryID);
             if (!$relation) {
-                throw new Exception('User with ID "'.$user->id.'" not followed category with ID "'.$categoryID.'"', 0);
+                throw new Exception('User with ID "' . $user->id . '" not followed category with ID "' . $categoryID . '"', 0);
             }
 
             //

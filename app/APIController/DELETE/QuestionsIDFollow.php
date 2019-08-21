@@ -24,7 +24,7 @@ class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
 
             $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relationWithUserIDAndQuestionID($userID, $questionID);
             if (!$relation) {
-                throw new Exception('User with ID "'.$userID.'" not followed question with ID "'.$questionID.'"', 0);
+                throw new Exception('User with ID "' . $userID . '" not followed question with ID "' . $questionID . '"', 0);
             }
 
             //
