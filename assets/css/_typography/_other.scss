@@ -79,7 +79,7 @@ ul {
 
 pre {
   padding: 1rem;
-  background-color: $color-light;
+  background-color: lighten($color-secondary, 20%);
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;

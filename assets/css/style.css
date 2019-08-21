@@ -13,22 +13,6 @@
   background-color: #3d95e9;
 }
 
-.border-top {
-  border-top: 1px solid #dbdcdd !important;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #dbdcdd !important;
-}
-
-.border-left {
-  border-left: 1px solid #dbdcdd !important;
-}
-
-.border-right {
-  border-right: 1px solid #dbdcdd !important;
-}
-
 .btn {
   padding: 0.25rem 0.625rem;
   font-size: 0.875rem;
@@ -127,7 +111,7 @@ ul.list-links li a {
 }
 
 ul.list-links li a:hover {
-  color: #343a40;
+  color: #545b62;
 }
 
 ul.list-links li a.active {
@@ -701,16 +685,6 @@ a:hover {
   color: #197cda;
 }
 
-a.link-broken {
-  color: #dc3545;
-}
-
-a.link-broken:after {
-  content: url("http://images.answeropedia.org/images/unavailable.png");
-  margin: 0 0 0 5px;
-  vertical-align: middle;
-}
-
 a.link-external:after {
   content: url("http://images.answeropedia.org/images/external-link.png");
   margin: 0 0 0 5px;
@@ -809,7 +783,7 @@ ul {
 
 pre {
   padding: 1rem;
-  background-color: #dbdcdd;
+  background-color: #a1a8ae;
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;

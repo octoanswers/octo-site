@@ -8,10 +8,10 @@
   top: 57px;
 
   a {
-    color: $color-gray;
+    color: $color-secondary;
 
     &:hover {
-      color: darken($color-gray, 15%);
+      color: darken($color-secondary, 15%);
     }
   }
 }

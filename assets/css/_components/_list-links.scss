@@ -12,7 +12,7 @@ ul.list-links {
       text-decoration: none;
 
       &:hover {
-        color: $color-dark;
+        color: darken($color-secondary, 10%);
       }
 
       &.active {

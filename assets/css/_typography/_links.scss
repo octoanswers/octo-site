@@ -6,16 +6,6 @@ a {
   }
 }
 
-a.link-broken {
-  color: $color-danger;
-
-  &:after {
-    content: url("http://images.answeropedia.org/images/unavailable.png");
-    margin: 0 0 0 5px;
-    vertical-align: middle;
-  }
-}
-
 a.link-external:after {
   content: url("http://images.answeropedia.org/images/external-link.png");
   margin: 0 0 0 5px;
