@@ -12,6 +12,7 @@ class User_Model extends Abstract_Model
     public $site; // string
     public $passwordHash; // string
     public $apiKey; // string
+    public $is_avatar_uploaded = false; // bool
     public $createdAt;
 
     //
