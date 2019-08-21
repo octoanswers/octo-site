@@ -2,11 +2,12 @@
 
 class User_URL_Trait__get_avatar_URL_large__Test extends PHPUnit\Framework\TestCase
 {
-    public function testFullParams()
+    public function test_Full_params()
     {
         $user = new User_Model();
         $user->id = 13;
+        $user->name = 'Sasha';
 
-        $this->assertEquals('https://answeropedia.org/uploads/avatar/13_400.jpg', $user->get_avatar_URL_large());
+        $this->assertEquals('https://avatars.answeropedia.org/avatars/user.png?size=400&name=Sasha', $user->get_avatar_URL_large());
     }
 }
