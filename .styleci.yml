@@ -1,0 +1,19 @@
+preset: recommended
+
+risky: true
+
+# Let's change a bit "preset: recommended"
+
+enabled:
+ - concat_with_spaces
+
+disabled:
+ - concat_without_spaces
+
+# Handled files
+
+finder:
+  exclude:
+    - vendor
+  name: "*.php"
+  not-name: "*.blade.php"
