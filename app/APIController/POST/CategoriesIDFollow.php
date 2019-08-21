@@ -23,7 +23,7 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
 
             $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relationWithUserIDAndCategoryID($userID, $categoryID);
             if ($relation) {
-                throw new Exception('User with ID "'.$userID.'" already followed category with ID "'.$categoryID.'"', 0);
+                throw new Exception('User with ID "' . $userID . '" already followed category with ID "' . $categoryID . '"', 0);
             }
 
             //

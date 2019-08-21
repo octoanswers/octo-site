@@ -43,7 +43,7 @@ class Newest_Users_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->translator->get('New users from around the world').' – '.$this->translator->get('page').' '.$this->page.' – '.$this->translator->get('answeropedia');
+        return $this->translator->get('New users from around the world') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
     }
 
     public function _nextPageURL()
@@ -51,8 +51,8 @@ class Newest_Users_PageController extends Abstract_PageController
         $nextPageURL = null;
 
         if (count($this->users) == self::USERS_PER_PAGE) {
-            $postfix = '?page='.($this->page + 1);
-            $nextPageURL = SITE_URL.'/'.$this->lang.'/users/'.$this->list.$postfix;
+            $postfix = '?page=' . ($this->page + 1);
+            $nextPageURL = SITE_URL . '/' . $this->lang . '/users/' . $this->list . $postfix;
         }
 
         return $nextPageURL;

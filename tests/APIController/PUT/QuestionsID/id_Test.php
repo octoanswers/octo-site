@@ -4,7 +4,7 @@ class QuestionsID_PUT_APIController__id_Test extends Abstract_Frontend_TestCase
 {
     public function testQuestionIDEqualZero()
     {
-        $queryString = 'lang=en&question_title='.urlencode('Where is my answers for Q12?');
+        $queryString = 'lang=en&question_title=' . urlencode('Where is my answers for Q12?');
         $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/0.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -23,7 +23,7 @@ class QuestionsID_PUT_APIController__id_Test extends Abstract_Frontend_TestCase
 
     public function testQuestionIDBelowZero()
     {
-        $queryString = 'lang=en&question_title='.urlencode('Where is my answers for Q12?');
+        $queryString = 'lang=en&question_title=' . urlencode('Where is my answers for Q12?');
         $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/-1.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

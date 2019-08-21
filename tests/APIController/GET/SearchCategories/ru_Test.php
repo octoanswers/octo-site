@@ -6,7 +6,7 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
 
     public function test_One_char_query()
     {
-        $queryString = 'query='.urlencode('а');
+        $queryString = 'query=' . urlencode('а');
         $request = $this->__getTestRequest('GET', '/api/v1/ru/search/categories.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -28,7 +28,7 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
 
     public function test_Two_char_query()
     {
-        $queryString = 'query='.urlencode('авто');
+        $queryString = 'query=' . urlencode('авто');
         $request = $this->__getTestRequest('GET', '/api/v1/ru/search/categories.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -55,7 +55,7 @@ class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestC
 
     public function test_Search_empty_query()
     {
-        $queryString = 'query='.urlencode('');
+        $queryString = 'query=' . urlencode('');
         $request = $this->__getTestRequest('GET', '/api/v1/ru/search/categories.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

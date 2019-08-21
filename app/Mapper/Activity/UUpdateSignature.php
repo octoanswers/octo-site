@@ -17,7 +17,7 @@ class UUpdateSignature_Activity_Mapper extends Abstract_Mapper
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);
         }
         if (!is_a($user, User_Model::class)) {
-            throw new Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
+            throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
         // if (!is_a($signature, Revision_Model::class)) {
         //     throw new Exception('Incorrect activity "data" class type: '.get_class($revision), 0);

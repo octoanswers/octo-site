@@ -6,7 +6,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
 
     public function test_RenameWithSaveRedirect_Ok()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Как ты, мистер Гек?').'&save_redirect=true';
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?') . '&save_redirect=true';
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/12/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -47,7 +47,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
 
     public function test_RenameWithoutSaveRedirect_Ok()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Как ты, мистер Гек?');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/12/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -84,7 +84,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
 
     public function test__ChangeCharCase__WithoutRedirect()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Огонь уничтожает КРОВЬ?');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/12/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -121,7 +121,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends Abstract_Frontend_
 
     public function test__ChangeCharCase__WithRedirect()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title='.urlencode('Огонь уничтожает КРОВЬ?').'&save_redirect=true';
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?') . '&save_redirect=true';
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/12/rename.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

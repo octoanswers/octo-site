@@ -6,7 +6,7 @@ class QuestionsID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
 
     public function testFullParams()
     {
-        $queryString = 'question_title='.urlencode('Где мой новый ответ?');
+        $queryString = 'question_title=' . urlencode('Где мой новый ответ?');
         $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/12.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

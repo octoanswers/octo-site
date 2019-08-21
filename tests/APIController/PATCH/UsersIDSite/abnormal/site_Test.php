@@ -6,7 +6,7 @@ class UsersIDSite_PATCH_APIController__abnormal__site__Test extends Abstract_Fro
 
     public function test__URLWithoutProtocol()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site='.urlencode('example37.com');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('example37.com');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/site.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -25,7 +25,7 @@ class UsersIDSite_PATCH_APIController__abnormal__site__Test extends Abstract_Fro
 
     public function test__URLWithWWW()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site='.urlencode('www.example32.com');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('www.example32.com');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/site.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

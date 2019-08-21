@@ -44,12 +44,12 @@ class Newest_Questions_PageController extends Abstract_PageController
 
     public function _getPageTitle()
     {
-        return $this->translator->get('Newest questions').' – '.$this->translator->get('page').' '.$this->page.' – '.$this->translator->get('answeropedia');
+        return $this->translator->get('Newest questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
     }
 
     public function _getPageDescription(): string
     {
-        $description = $this->translator->get('Newest questions').' – '.$this->translator->get('page').' '.$this->page.' – '.$this->translator->get('answeropedia');
+        $description = $this->translator->get('Newest questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
 
         return $description;
     }

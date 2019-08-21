@@ -27,10 +27,10 @@ class Translator
     {
         $this->lang = $lang;
 
-        $fileWithMessages = $messagesDirectory.'/'.$lang.'.json';
+        $fileWithMessages = $messagesDirectory . '/' . $lang . '.json';
 
         if (!file_exists($fileWithMessages)) {
-            throw new Exception('File with translated messages "'.$this->lang.'.json" not exists', 1);
+            throw new Exception('File with translated messages "' . $this->lang . '.json" not exists', 1);
         }
 
         $string = file_get_contents($fileWithMessages);
@@ -65,7 +65,7 @@ class Translator
     public function get(...$keys): string
     {
         if (count($keys) > 3) {
-            return 'TOO_MACH_KEYS ('.$this->lang.') '.implode(' - ', $keys);
+            return 'TOO_MACH_KEYS (' . $this->lang . ') ' . implode(' - ', $keys);
         }
 
         switch (count($keys)) {
@@ -75,13 +75,13 @@ class Translator
 
                 if ($message) {
                     if (is_array($message)) {
-                        return 'KEY_IS_ARRAY ('.$this->lang.') '.implode(' - ', $keys);
+                        return 'KEY_IS_ARRAY (' . $this->lang . ') ' . implode(' - ', $keys);
                     }
 
                     return $message;
                 }
 
-                return 'NEED TRANSLATE ('.$this->lang.') '.implode(' - ', $keys);
+                return 'NEED TRANSLATE (' . $this->lang . ') ' . implode(' - ', $keys);
 
             case 2:
                 // Keys like a 'key - key'
@@ -89,13 +89,13 @@ class Translator
 
                 if ($message) {
                     if (is_array($message)) {
-                        return 'KEY_IS_ARRAY ('.$this->lang.') '.implode(' - ', $keys);
+                        return 'KEY_IS_ARRAY (' . $this->lang . ') ' . implode(' - ', $keys);
                     }
 
                     return $message;
                 }
 
-                return 'NEED TRANSLATE ('.$this->lang.') '.implode(' - ', $keys);
+                return 'NEED TRANSLATE (' . $this->lang . ') ' . implode(' - ', $keys);
 
             default:
                 // Keys like a 'key'
@@ -103,7 +103,7 @@ class Translator
 
                 if (isset($message)) {
                     if (is_array($message)) {
-                        return 'KEY_IS_ARRAY ('.$this->lang.') '.$keys[0];
+                        return 'KEY_IS_ARRAY (' . $this->lang . ') ' . $keys[0];
                     }
 
                     return $message;

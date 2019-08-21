@@ -6,7 +6,7 @@ class UsersIDSignature_PATCH_APIController__signature__Test extends Abstract_Fro
 
     public function test_SignatureNotSet()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e'.'&'.'foo_signature='.urlencode('Enterpreneur, writer.');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'foo_signature=' . urlencode('Enterpreneur, writer.');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/signature.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -25,7 +25,7 @@ class UsersIDSignature_PATCH_APIController__signature__Test extends Abstract_Fro
 
     public function test_SignatureTooShort()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&signature='.urlencode('Fo');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&signature=' . urlencode('Fo');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/signature.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

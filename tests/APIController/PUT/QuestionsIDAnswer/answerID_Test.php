@@ -6,7 +6,7 @@ class QuestionsIDAnswer_PUT_APIController__answerID_Test extends Abstract_Fronte
 
     public function testQuestionIDEqualZero()
     {
-        $queryString = 'answer_text='.urlencode('In Ekaterinburg.').'revision_comment='.urlencode('Some fixes for Q15').'&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
+        $queryString = 'answer_text=' . urlencode('In Ekaterinburg.') . 'revision_comment=' . urlencode('Some fixes for Q15') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
         $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/0/answer.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -25,7 +25,7 @@ class QuestionsIDAnswer_PUT_APIController__answerID_Test extends Abstract_Fronte
 
     public function test_questionIDBelowZero()
     {
-        $queryString = 'answer_text='.urlencode('In Ekaterinburg.').'revision_comment='.urlencode('Some fixes for Q15').'&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
+        $queryString = 'answer_text=' . urlencode('In Ekaterinburg.') . 'revision_comment=' . urlencode('Some fixes for Q15') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
         $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/-1/answer.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

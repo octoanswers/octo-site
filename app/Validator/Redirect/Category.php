@@ -29,7 +29,7 @@ class Category_Redirect_Validator
         try {
             v::intType()->min(1, true)->assert($fromID);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Category_Redirect_Model property "fromID" '.$exception->getMessages()[0], 0);
+            throw new Exception('Category_Redirect_Model property "fromID" ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -38,7 +38,7 @@ class Category_Redirect_Validator
         try {
             v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, null)->assert($title);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Category_Redirect_Model property "to_title" '.$exception->getMessages()[0], 0);
+            throw new Exception('Category_Redirect_Model property "to_title" ' . $exception->getMessages()[0], 0);
         }
     }
 }

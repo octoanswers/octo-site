@@ -81,20 +81,20 @@
                 $month = $date->format('m');
 
                 if ($shortMonths) {
-                    $beauty .= ' '.$this->translation('shortMonths', $month - 1);
+                    $beauty .= ' ' . $this->translation('shortMonths', $month - 1);
                 } else {
-                    $beauty .= ' '.$this->translation('months', $month - 1);
+                    $beauty .= ' ' . $this->translation('months', $month - 1);
                 }
 
                 // Year
                 if ($this->distance($date) > $this->year()) {
-                    $beauty .= ' '.$date->format('y');
+                    $beauty .= ' ' . $date->format('y');
                 }
             }
 
             // Time
-            $beauty .= ' '.$this->translation('delimiter');
-            $beauty .= ' '.$date->format($this->translation('time'));
+            $beauty .= ' ' . $this->translation('delimiter');
+            $beauty .= ' ' . $date->format($this->translation('time'));
 
             return $beauty;
         }
@@ -143,9 +143,9 @@
                 }
 
                 if ($this->isPast($date)) {
-                    $words .= ' '.$this->translation('ago');
+                    $words .= ' ' . $this->translation('ago');
                 } else {
-                    $words = $this->translation('after').' '.$words;
+                    $words = $this->translation('after') . ' ' . $words;
                 }
             }
 
@@ -320,7 +320,7 @@
                 $index = 0;
             }
 
-            return $number.' '.$this->translation($label, $index);
+            return $number . ' ' . $this->translation($label, $index);
         }
 
         /**
@@ -330,7 +330,7 @@
          */
         protected function langFile()
         {
-            return __DIR__.'/lang/'.$this->lang.'.php';
+            return __DIR__ . '/lang/' . $this->lang . '.php';
         }
 
         /**

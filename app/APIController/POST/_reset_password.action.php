@@ -22,10 +22,10 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
     try {
         $parseUser = $query->first();
         if (!$parseUser) {
-            throw new ParseException('User not found by email: '.$_POST['user_email']);
+            throw new ParseException('User not found by email: ' . $_POST['user_email']);
         }
     } catch (ParseException $ex) {
-        $errors['email'] = 'Error: '.$ex->getMessage();
+        $errors['email'] = 'Error: ' . $ex->getMessage();
     }
 
     if (empty($_POST['user_email'])) {
@@ -42,7 +42,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
             // Password reset request was sent successfully
             $response['success'] = true;
         } catch (ParseException $ex) {
-            $errors['email'] = 'Error: '.$ex->getCode().' '.$ex->getMessage();
+            $errors['email'] = 'Error: ' . $ex->getCode() . ' ' . $ex->getMessage();
             $response['success'] = false;
             $response['errors'] = $errors;
         }

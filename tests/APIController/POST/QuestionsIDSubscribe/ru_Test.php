@@ -6,7 +6,7 @@ class QuestionsIDSubscribe_POST_APIController__Test extends Abstract_Frontend_Te
 
     public function test__BaseSubscription()
     {
-        $query_string = 'email='.urlencode('data@test.ru').'&no_email=1';
+        $query_string = 'email=' . urlencode('data@test.ru') . '&no_email=1';
         $request = $this->__getTestRequest('POST', '/api/v1/ru/questions/17/subscribe.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -29,7 +29,7 @@ class QuestionsIDSubscribe_POST_APIController__Test extends Abstract_Frontend_Te
 
     public function test__AlreadySubscribed()
     {
-        $query_string = 'email='.urlencode('data@test.ru').'&no_email=1';
+        $query_string = 'email=' . urlencode('data@test.ru') . '&no_email=1';
         $request = $this->__getTestRequest('POST', '/api/v1/ru/questions/7/subscribe.json', $query_string, true);
 
         $this->app->getContainer()['request'] = $request;

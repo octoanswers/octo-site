@@ -6,7 +6,7 @@ class UsersIDName_PATCH_APIController__id__Test extends Abstract_Frontend_TestCa
 
     public function test_UserIDEqualZero_Error()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name='.urlencode('Mike');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Mike');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/0/name.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;
@@ -25,7 +25,7 @@ class UsersIDName_PATCH_APIController__id__Test extends Abstract_Frontend_TestCa
 
     public function test_UserIDBelowZero_Error()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name='.urlencode('Joe');
+        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Joe');
         $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/-1/name.json', $queryString, true);
 
         $this->app->getContainer()['request'] = $request;

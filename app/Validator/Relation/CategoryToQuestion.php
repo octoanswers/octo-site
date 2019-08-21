@@ -35,7 +35,7 @@ class CategoryToQuestion_Relation_Validator
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('CategoryToQuestion relation "id" property '.$exception->getMessages()[0], 0);
+            throw new Exception('CategoryToQuestion relation "id" property ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -44,7 +44,7 @@ class CategoryToQuestion_Relation_Validator
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('CategoryToQuestion relation "categoryID" property '.$exception->getMessages()[0], 0);
+            throw new Exception('CategoryToQuestion relation "categoryID" property ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -53,7 +53,7 @@ class CategoryToQuestion_Relation_Validator
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('CategoryToQuestion relation "questionID" property '.$exception->getMessages()[0], 0);
+            throw new Exception('CategoryToQuestion relation "questionID" property ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -62,7 +62,7 @@ class CategoryToQuestion_Relation_Validator
         try {
             v::optional(v::stringType())->assert($createdAt);
         } catch (NestedValidationException $exception) {
-            throw new Exception('CategoryToQuestion relation "createdAt" property '.$exception->getMessages()[0], 0);
+            throw new Exception('CategoryToQuestion relation "createdAt" property ' . $exception->getMessages()[0], 0);
         }
     }
 }
