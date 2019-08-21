@@ -17,7 +17,7 @@ class Signup_POST_APIController__ru__Test extends Abstract_Frontend_TestCase
             'id'              => 16,
             'username'        => 'jasonborn',
             'email'           => 'new@answeropedia.org',
-            'url'             => 'https://answeropedia.org/ru/+jasonborn',
+            'url'             => 'https://answeropedia.org/ru/@jasonborn',
             'destination_url' => 'https://answeropedia.org/ru',
             'avatar_100'      => 'Avatar file "16_100.png" copied',
             'avatar_200'      => 'Avatar file "16_200.png" copied',

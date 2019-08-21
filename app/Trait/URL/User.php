@@ -4,7 +4,7 @@ trait User_URL_Trait
 {
     public function get_URL(string $lang): string
     {
-        return SITE_URL . '/' . $lang . '/+' . $this->username;
+        return SITE_URL . '/' . $lang . '/@' . $this->username;
     }
 
     public function get_short_URL(string $lang): string

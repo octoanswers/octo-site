@@ -25,7 +25,7 @@ class Login_POST_APIController__BaseTest extends Abstract_Frontend_TestCase
             'name'            => 'Иван Коршунов',
             'api_key'         => '7d21ebdbec3d4e396043c96b6ab44a6e',
             'created_at'      => '2016-03-19 06:47:41',
-            'url'             => 'https://answeropedia.org/ru/+ivan',
+            'url'             => 'https://answeropedia.org/ru/@ivan',
             'destination_url' => 'https://answeropedia.org/ru',
         ];
 
