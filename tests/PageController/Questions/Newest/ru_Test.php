@@ -14,10 +14,12 @@ class Newest_Questions_PageController__ru__Test extends Abstract_Frontend_TestCa
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Новые вопросы – Страница 1 – Answeropedia', $responseBody);
-        $this->assertStringContainsString('Птицы играют в игры?', $responseBody);
+        $this->assertStringContainsString('Новые вопросы – Страница 1 – Answeropedia', $response_body);
+        $this->assertStringContainsString('Птицы играют в игры?', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

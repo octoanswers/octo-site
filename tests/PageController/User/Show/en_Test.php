@@ -14,10 +14,11 @@ class Show_User_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Виталий Козлов Wiki-answers on Answeropedia', $responseBody);
-        //$this->assertStringContainsString('Alexander Gomzyakov', $responseBody);
+        $this->assertStringContainsString('Виталий Козлов Wiki-answers on Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

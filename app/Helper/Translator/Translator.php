@@ -81,7 +81,7 @@ class Translator
                     return $message;
                 }
 
-                return 'NEED TRANSLATE (' . $this->lang . ') ' . implode(' - ', $keys);
+                return 'NEED_TRANSLATE (' . $this->lang . ') ' . implode(' - ', $keys);
 
             case 2:
                 // Keys like a 'key - key'
@@ -95,7 +95,7 @@ class Translator
                     return $message;
                 }
 
-                return 'NEED TRANSLATE (' . $this->lang . ') ' . implode(' - ', $keys);
+                return 'NEED_TRANSLATE (' . $this->lang . ') ' . implode(' - ', $keys);
 
             default:
                 // Keys like a 'key'

@@ -14,10 +14,12 @@ class All_Sandbox_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Sandbox – Page 1 – Answeropedia', $responseBody);
-        $this->assertStringContainsString('What is main president daily function?', $responseBody);
+        $this->assertStringContainsString('Sandbox – Page 1 – Answeropedia', $response_body);
+        $this->assertStringContainsString('What is main president daily function?', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

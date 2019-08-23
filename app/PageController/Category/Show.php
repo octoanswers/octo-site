@@ -46,7 +46,7 @@ class Show_Category_PageController extends Abstract_PageController
 
         if (is_array($this->category_questions) && count($this->category_questions) == 10) {
             $data['next_page_button'] = [
-                'title' => $this->translator->get('More categories'),
+                'title' => $this->translator->get('category', 'more_categories'),
                 'url'   => '#',
             ];
         }

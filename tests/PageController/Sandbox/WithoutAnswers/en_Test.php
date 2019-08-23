@@ -14,10 +14,12 @@ class WithoutAnswers_Sandbox_PageController__en__Test extends Abstract_Frontend_
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Questions without answers – Page 1 – Answeropedia', $responseBody);
-        $this->assertStringContainsString('Do you like iPhone 6?', $responseBody);
+        $this->assertStringContainsString('Questions without answers – Page 1 – Answeropedia', $response_body);
+        $this->assertStringContainsString('Do you like iPhone 6?', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

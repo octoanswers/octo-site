@@ -1,9 +1,9 @@
 <?php if (count($this->users)) : ?>
 
 <?php foreach ($this->users as $user) : ?>
-<div class="media">
-	<a class="d-block wh-4 mr-3 mb-3" href="<?= $user->get_URL($this->lang) ?>">
-		<img class="wh-4 mr-3 rounded" src="<?= $user->get_avatar_URL_small() ?>">
+<div class="media mb-4">
+	<a class="d-block wh-3 mr-3" href="<?= $user->get_URL($this->lang) ?>">
+		<img class="wh-3 mr-3 rounded" src="<?= $user->get_avatar_URL_small() ?>">
 	</a>
 	<div class="media-body">
 		<a class="h5 text-dark text-decoration-none" href="<?= $user->get_URL($this->lang) ?>">

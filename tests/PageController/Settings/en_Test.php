@@ -12,9 +12,11 @@ class Settings_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('You not logged', $responseBody);
+        $this->assertStringContainsString('You not logged', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(404, $response->getStatusCode());
     }
 
@@ -28,9 +30,11 @@ class Settings_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('You not logged', $responseBody);
+        $this->assertStringContainsString('You not logged', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(404, $response->getStatusCode());
     }
 }

@@ -18,10 +18,11 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
-        //var_dump($responseBody);
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Как дела? – Answeropedia', $responseBody);
+        $this->assertStringContainsString('Как дела? – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -35,9 +36,11 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Что означает FILE_NAME? – Answeropedia', $responseBody);
+        $this->assertStringContainsString('Что означает FILE_NAME? – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -51,7 +54,6 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
 
         $this->assertSame(301, $response->getStatusCode());
     }

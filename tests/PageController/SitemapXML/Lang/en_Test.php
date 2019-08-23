@@ -14,9 +14,11 @@ class Lang_SitemapXML_PageController__en__Test extends Abstract_Frontend_TestCas
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('https://answeropedia.org/en/How_developers_made_interesting_games', $responseBody);
+        $this->assertStringContainsString('https://answeropedia.org/en/How_developers_made_interesting_games', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

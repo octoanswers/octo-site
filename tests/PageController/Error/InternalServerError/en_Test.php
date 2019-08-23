@@ -12,9 +12,11 @@ class InternalServerError_Error_PageController__en__Test extends Abstract_Fronte
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Error 500 – Answeropedia', $responseBody);
+        $this->assertStringContainsString('Error 500 – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(500, $response->getStatusCode());
     }
 }

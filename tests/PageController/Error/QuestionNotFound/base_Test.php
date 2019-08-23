@@ -14,9 +14,11 @@ class PageController_QuestionNotFound_base_Test extends Abstract_Frontend_TestCa
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Вопрос не найден – Some unfounded question? – Answeropedia', $responseBody);
+        $this->assertStringContainsString('Вопрос не найден – Some unfounded question? – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(404, $response->getStatusCode());
     }
 }

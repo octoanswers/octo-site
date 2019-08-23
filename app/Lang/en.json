@@ -21,12 +21,28 @@
         "text": "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.",
         "title": "About Answeropedia"
     },
+    "block__sign_up": {
+        "btn_log_in": "Log in",
+        "btn_sign_up": "Sign up",
+        "text": "Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.",
+        "title": "Sign up"
+    },
     "categories": {
+        "add_categories": "add_categories",
+        "more_categories": "More categories",
+        "page_description": "Questions by category",
         "search_placeholder": "Search categories",
         "title": "Categories"
     },
     "category": {
-        "page_title": "Category: "
+        "actions_right": {
+            "rename_category": "Rename category",
+            "title": "Actions"
+        },
+        "more_categories": "More categories",
+        "page_title": "Category: ",
+        "title": "Category",
+        "total_questions": "Total questions"
     },
     "error__category_not_found": {
         "page_title": "Category not found: ",
@@ -48,13 +64,25 @@
     },
     "main": {
         "how_it_works": {
-            "step_1": "You ask a question about any category of interest to you",
-            "step_2": "We find a specialist who can give a competent answer",
-            "step_3": "You receive an answer to the email",
+            "step_1_msg": "You ask a question about any category of interest to you",
+            "step_1_title": "You ask a question",
+            "step_2_msg": "We find a specialist who can give a competent answer",
+            "step_2_title": "The system finds the experts",
+            "step_3_msg": "You receive an answer to the email",
+            "step_3_title": "You get an answer",
             "title": "How it works?"
         },
+        "jumbotron": {
+            "ask": "Ask a Question",
+            "header_1": "Ask a question on any topic and get",
+            "header_2": "one complete &amp; competent answer",
+            "login": "Log in",
+            "search_placeholder": "Search questions...",
+            "signup": "Sign up",
+            "text": "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community."
+        },
         "recent_questions": {
-            "title": "Последние вопросы"
+            "title": "Recent questions"
         },
         "share_link": {
             "note": "You can help the Answeropedia project by simply sharing your link with your friends.",
@@ -91,12 +119,12 @@
         "btn_ask": "Ask a question",
         "categories": "Categories",
         "flow": "Flow",
-        "login": "Login",
+        "login": "Log in",
         "questions": "Questions",
         "recent_changes": "Recent&nbsp;changes",
-        "search_placeholder": "Search questions…",
         "sandbox": "Sandbox",
-        "signup": "Signup"
+        "search_placeholder": "Search questions…",
+        "signup": "Sign up"
     },
     "page": "Page",
     "question": {
@@ -111,10 +139,18 @@
         "block__related_questions": {
             "title": "Related questions"
         },
+        "block_info": {
+            "title": "Question Information"
+        },
+        "categories_block": {
+            "categories_add": "Add category",
+            "categories_change": "Change",
+            "title": "Categories"
+        },
         "lure_be_first_contributor": {
-            "title": "Be the first author",
+            "btn_write": "Write first answer",
             "message": "Still no one tried to write an answer to this question. Be the first if the category of the question is close to you!",
-            "btn_write": "Write first answer"
+            "title": "Be the first author"
         }
     },
     "question__actions_top": {
@@ -124,14 +160,27 @@
         "talk": "Talk",
         "talk_tooltip": "Discussion about the answer"
     },
+    "questions": {
+        "btn_add_categories": "Add categories",
+        "nav": {
+            "newest": "New questions",
+            "popular": "Popular",
+            "recently_updated": "Recently updated"
+        },
+        "new": "New",
+        "questions_count": "questions with answers"
+    },
     "sandbox": {
-        "about": {
+        "about_block": {
             "btn_action": "Join the community",
             "msg_1": "The sandbox is a place to get new questions that have not yet been answered.",
             "msg_2": "As soon as the question has a comprehensive answer and several categories, it is transferred to the main list.",
             "now_in_the_sandbox": "now in the sandbox",
             "title": "What is a «sandbox»?"
         },
+        "answer_updated": "Answer updated",
+        "btn_add_categories": "Add categories",
+        "btn_write_answer": "Write answer",
         "title": "Sandbox"
     },
     "search": {
@@ -156,10 +205,10 @@
         "title": "Settings"
     },
     "sidebar__main_nav": {
-        "about_site": "About site",
-        "categories": "Popular categories",
         "feed": "Feed",
+        "how_it_works": "How it works",
         "main_page": "Main page",
+        "popular_categories": "Categories",
         "random_question": "Random question",
         "recent_changes": "Recent changes",
         "sandbox": "Sandbox"
@@ -170,5 +219,9 @@
         "russian": "Russian",
         "title": "In other languages"
     },
-    "title": "Перевод заголовка"
+    "title": "Перевод заголовка",
+    "users": {
+        "search_placeholder": "Search contributors",
+        "title": "Contributors"
+    }
 }

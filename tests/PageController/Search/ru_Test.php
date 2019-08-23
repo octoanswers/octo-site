@@ -15,9 +15,11 @@ class Questions_Search_PageController__ru__Test extends Abstract_Frontend_TestCa
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Поиск: Apple – Answeropedia', $responseBody);
+        $this->assertStringContainsString('Поиск: Apple – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -31,9 +33,11 @@ class Questions_Search_PageController__ru__Test extends Abstract_Frontend_TestCa
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Поиск:  – Answeropedia', $responseBody);
+        $this->assertStringContainsString('Поиск:  – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

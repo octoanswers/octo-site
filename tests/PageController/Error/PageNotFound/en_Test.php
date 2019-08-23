@@ -12,9 +12,11 @@ class PageNotFound_Error_PageController__en__Test extends Abstract_Frontend_Test
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Ошибка 404 – Answeropedia', $responseBody);
+        $this->assertStringContainsString('Ошибка 404 – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(404, $response->getStatusCode());
     }
 }

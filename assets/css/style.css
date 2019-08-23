@@ -18,7 +18,7 @@
   font-size: 0.875rem;
   line-height: 1.5;
   font-weight: 600;
-  border: 2px solid;
+  border-width: 2px;
 }
 
 .btn-lg {

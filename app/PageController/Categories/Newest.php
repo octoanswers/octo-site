@@ -16,7 +16,7 @@ class Newest_Categories_PageController extends Abstract_PageController
 
         $this->template = 'categories';
         $this->pageTitle = $this->_getPageTitle();
-        $this->pageDescription = $this->translator->get('categories_newest', 'page_description');
+        $this->pageDescription = $this->translator->get('categories', 'page_description');
         $this->activeFilter = 'newest';
 
         if ((isset($this->categories[9])) && ($this->categories[9]->id > 1)) {

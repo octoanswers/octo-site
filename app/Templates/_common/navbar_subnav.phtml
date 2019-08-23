@@ -9,25 +9,25 @@
 
                 <ul class="list-inline mb-0 semi-small">
 
-                    <li class="list-inline-item my-1">
+                    <li class="list-inline-item my-1 mr-3">
                         <a href="<?= SITE_URL . '/' . $this->lang . '/' . $this->translator->get('service_id', 'about_answeropedia') ?>" class="text-decoration-none">
-                            <?= $this->translator->get('sidebar__main_nav', 'about_site') ?>
+                            <?= $this->translator->get('sidebar__main_nav', 'how_it_works') ?>
                         </a>
                     </li>
 
-                    <li class="list-inline-item my-1">
+                    <li class="list-inline-item my-1 mr-3">
                         <a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>" class="text-decoration-none">
                             <?= $this->translator->get('sidebar__main_nav', 'recent_changes') ?>
                         </a>
                     </li>
 
-                    <li class="list-inline-item my-1">
+                    <li class="list-inline-item my-1 mr-3">
                         <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="text-decoration-none">
                             <?= $this->translator->get('sidebar__main_nav', 'sandbox') ?>
                         </a>
                     </li>
 
-                    <li class="list-inline-item my-1">
+                    <li class="list-inline-item my-1 mr-3">
                         <a href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>" class="text-decoration-none">
                             <i class="material-icons md-18 w-20px">bubble_chart</i><?= $this->translator->get('sidebar__main_nav', 'popular_categories') ?>
                         </a>

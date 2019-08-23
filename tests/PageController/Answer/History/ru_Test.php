@@ -14,9 +14,11 @@ class History_Answer_PageController__ru__Test extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('История изменений ответа Чем занимается гинеколог? – Answeropedia', $responseBody);
+        $this->assertStringContainsString('История изменений ответа Чем занимается гинеколог? – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

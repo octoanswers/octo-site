@@ -14,9 +14,11 @@ class Newest_Users_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('New users from around the world – Page 0 – Answeropedia', $responseBody);
+        $this->assertStringContainsString('New users from around the world – Page 0 – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

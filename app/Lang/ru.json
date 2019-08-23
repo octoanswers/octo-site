@@ -109,18 +109,27 @@
 		"text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
 		"title": "Что такое Answeropedia?"
 	},
+	"block__sign_up": {
+		"btn_log_in": "Вход",
+		"btn_sign_up": "Регистрация",
+		"text": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+		"title": "Регистрация"
+	},
 	"categories": {
+		"add_categories": "add_categories",
+		"more_categories": "Больше тем",
+		"page_description": "Вопросы по категориям",
 		"search_placeholder": "Поиск категорий",
 		"title": "Категории"
 	},
 	"category": {
-		"More categories": "Больше тем",
 		"actions_right": {
 			"rename_category": "Переименовать категорию",
 			"title": "Действия"
 		},
 		"page_title": "Категория: ",
-		"title": "Категория"
+		"title": "Категория",
+		"total_questions": "Всего вопросов"
 	},
 	"error__category_not_found": {
 		"page_title": "Категория не найдена: ",
@@ -216,8 +225,8 @@
 		"flow": "Свежие&nbsp;правки",
 		"login": "Вход",
 		"recent_changes": "Последние&nbsp;правки",
-		"search_placeholder": "Поиск вопросов...",
 		"sandbox": "Песочница",
+		"search_placeholder": "Поиск вопросов...",
 		"signup": "Регистрация"
 	},
 	"page": "Страница",
@@ -278,12 +287,12 @@
 		"title": "Редактирование категорий"
 	},
 	"questions": {
+		"btn_add_categories": "Добавить категории",
 		"nav": {
 			"newest": "Новые вопросы",
 			"popular": "Популярные",
 			"recently_updated": "Недавно обновленные"
 		},
-		"btn_add_categories": "Добавить категории",
 		"new": "Новый",
 		"questions_count": "вопросов с ответами"
 	},
@@ -298,10 +307,10 @@
 			"now_in_the_sandbox": "сейчас в песочнице",
 			"title": "Что такое Песочница"
 		},
-		"title": "Песочница",
+		"answer_updated": "Ответ обновлен",
 		"btn_add_categories": "Добавить категории",
 		"btn_write_answer": "Написать ответ",
-		"answer_updated": "Ответ обновлен"
+		"title": "Песочница"
 	},
 	"search": {
 		"page_title": "Поиск"
@@ -330,8 +339,8 @@
 		"title": "Настройки"
 	},
 	"sidebar__main_nav": {
-		"about_site": "О сайте",
 		"feed": "Подписки",
+		"how_it_works": "Как это работает",
 		"main_page": "Главная страница",
 		"popular_categories": "Категории",
 		"random_question": "Случайный вопрос",

@@ -14,10 +14,12 @@ class WithoutAnswers_Sandbox_PageController__ru__Test extends Abstract_Frontend_
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Вопросы без ответа – Страница 1 – Answeropedia', $responseBody);
-        $this->assertStringContainsString('Какая сейчас погода?', $responseBody);
+        $this->assertStringContainsString('Вопросы без ответа – Страница 1 – Answeropedia', $response_body);
+        $this->assertStringContainsString('Какая сейчас погода?', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

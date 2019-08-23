@@ -14,9 +14,11 @@ class List_Categories_PageController__ru__Test extends Abstract_Frontend_TestCas
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Новые категории – Страница 1 – Answeropedia', $responseBody);
+        $this->assertStringContainsString('Новые категории – Страница 1 – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

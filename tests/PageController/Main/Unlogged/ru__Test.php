@@ -14,9 +14,11 @@ class Unlogged_Main_PageController__ru__Test extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Answeropedia – Задайте вопрос и получите один исчерпывающий ответ', $responseBody);
+        $this->assertStringContainsString('Answeropedia – Задайте вопрос и получите один исчерпывающий ответ', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

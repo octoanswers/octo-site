@@ -14,7 +14,6 @@ class ShortURL_User_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
 
         $this->assertSame(301, $response->getStatusCode());
     }

@@ -29,6 +29,6 @@ class Translator_EN_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Double_key_not_exists()
     {
-        $this->assertEquals('NEED TRANSLATE (en) navbar - key_not_exists', $this->translator->get('navbar', 'key_not_exists'));
+        $this->assertEquals('NEED_TRANSLATE (en) navbar - key_not_exists', $this->translator->get('navbar', 'key_not_exists'));
     }
 }

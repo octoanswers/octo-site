@@ -29,7 +29,7 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Double_key_not_exists()
     {
-        $this->assertEquals('NEED TRANSLATE (ru) navbar - key_not_exists', $this->translator->get('navbar', 'key_not_exists'));
+        $this->assertEquals('NEED_TRANSLATE (ru) navbar - key_not_exists', $this->translator->get('navbar', 'key_not_exists'));
     }
 
     public function test_Triple_key()
@@ -39,6 +39,6 @@ class Translator_RU_langTest extends PHPUnit\Framework\TestCase
 
     public function test_Triple_key_not_exists()
     {
-        $this->assertEquals('NEED TRANSLATE (ru) sandbox - about_block - key_not_exists', $this->translator->get('sandbox', 'about_block', 'key_not_exists'));
+        $this->assertEquals('NEED_TRANSLATE (ru) sandbox - about_block - key_not_exists', $this->translator->get('sandbox', 'about_block', 'key_not_exists'));
     }
 }
