@@ -1,38 +1,51 @@
 <!-- jumbotron -->
-<div class="mb-5 pb-5 border-bottom">
+<div class="main-page-jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 mx-auto py-3 py-md-5">
 
-    <h1 class="display-4 font-weight-700 text-primary my-4">
-        <?= $this->translator->get('answeropedia') ?>
-    </h1>
 
-    <h2 class="h1 my-4">
-        <span class="font-weight-300"><?= $this->translator->get('main', 'jumbotron', 'header_1') ?></span><br>
-        <?= $this->translator->get('main', 'jumbotron', 'header_2') ?>
-    </h2>
+                <h2 class="h1 text-center my-4">
+                    <span class="font-weight-300"><?= $this->translator->get('main', 'jumbotron', 'header_1') ?></span><br>
+                    <?= $this->translator->get('main', 'jumbotron', 'header_2') ?>
+                </h2>
 
-    <p class="lead text-dark mt-3">
-        <?= $this->translator->get('main', 'jumbotron', 'text') ?>
-    </p>
+                <form class="mt-5 mb-4" action="<?= SITE_URL . '/' . $this->lang . '/search' ?>" method="GET">
+                    <input type="hidden" name="list" value="questions">
+                    <div class="form-group">
 
-    <form class="mt-4 mb-3" action="<?= SITE_URL . '/' . $this->lang . '/search' ?>" method="GET">
-        <input type="hidden" name="list" value="questions">
-        <div class="form-group">
-            <input name="q" class="form-control form-control-lg" type="text" placeholder="<?= $this->translator->get('main', 'jumbotron', 'search_placeholder') ?>" aria-label="Search">
+                        <div class="input-group input-group-lg my-3">
+                            <input name="q" type="text" class="form-control form-control-outline-secondary" placeholder="<?= $this->translator->get('main', 'jumbotron', 'search_placeholder') ?>" aria-label="ask-question-button" aria-describedby="ask-question-button">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit" id="ask-question-button"><?= $this->translator->get('main', 'jumbotron', 'btn_ask') ?></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+                <div class="text-center lead text-dark my-3">
+                    <?= $this->translator->get('main', 'jumbotron', 'text') ?>
+
+                </div>
+
+                <div class="semi-small ml-1">
+                    <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_ask">
+                        <?= $this->translator->get('main', 'jumbotron', 'ask') ?>
+                    </a>
+                    <span class="mx-1 text-muted font_weight_800">&middot;</span>
+                    <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_signup">
+                        <?= $this->translator->get('main', 'jumbotron', 'signup') ?>
+                    </a>
+                    <span class="mx-1 text-muted font_weight_800">&middot;</span>
+                    <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_login">
+                        <?= $this->translator->get('main', 'jumbotron', 'login') ?>
+                    </a>
+                </div>
+            </div>
         </div>
-    </form>
-
-    <div class="semi-small ml-1">
-        <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_ask">
-            <?= $this->translator->get('main', 'jumbotron', 'ask') ?>
-        </a>
-        <span class="mx-1 text-muted font_weight_800">&middot;</span>
-        <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_signup">
-            <?= $this->translator->get('main', 'jumbotron', 'signup') ?>
-        </a>
-        <span class="mx-1 text-muted font_weight_800">&middot;</span>
-        <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_login">
-            <?= $this->translator->get('main', 'jumbotron', 'login') ?>
-        </a>
     </div>
 </div>
+
+
 <!-- / jumbotron -->

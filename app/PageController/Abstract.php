@@ -44,7 +44,7 @@ abstract class Abstract_PageController
             throw new Exception('Page template not set!', 1);
         }
 
-        $fullPage = TEMPLATE_PATH . '/' . $this->template . '_full.phtml';
+        $fullPage = TEMPLATE_PATH . '/' . $this->template . '/_page.phtml';
 
         ob_start();
         if (file_exists($fullPage)) {

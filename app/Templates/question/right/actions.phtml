@@ -1,29 +1,29 @@
 <!-- right_actions -->
 
 <nav class="my-4">
-	<div class="subtitle-1 mb-2 text-secondary">
+	<div class="text-uppercase semi-small mb-2 text-secondary">
 		<?= $this->translator->get('Actions') ?>
 	</div>
 	<ul class="list-links">
 
 		<!-- add or update image -->
 		<?php if ($this->authUser) : ?>
-			<li>
-				<a href="#" data-toggle="modal" data-target="#modal_upload_image">
-					<i class="material-icons md-18 w-32px">image</i><?= ($this->question->imageBaseName) ? $this->translator->get('Update picture') : $this->translator->get('Add picture') ?>
-				</a>
-			</li>
+		<li>
+			<a href="#" data-toggle="modal" data-target="#modal_upload_image">
+				<i class="material-icons md-18 w-32px">image</i><?= ($this->question->imageBaseName) ? $this->translator->get('Update picture') : $this->translator->get('Add picture') ?>
+			</a>
+		</li>
 		<?php endif; ?>
 		<!-- add or update image -->
 
 		<?php if ($this->authUser) : ?>
-			<!-- rename question -->
-			<li>
-				<a href="#" data-toggle="modal" data-target="#modal_rename_question">
-					<i class="material-icons md-18 w-32px">edit</i><?= $this->translator->get('Rename question') ?>
-				</a>
-			</li>
-			<!-- / rename question -->
+		<!-- rename question -->
+		<li>
+			<a href="#" data-toggle="modal" data-target="#modal_rename_question">
+				<i class="material-icons md-18 w-32px">edit</i><?= $this->translator->get('Rename question') ?>
+			</a>
+		</li>
+		<!-- / rename question -->
 		<?php endif; ?>
 
 		<li>

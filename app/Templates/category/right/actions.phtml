@@ -1,19 +1,19 @@
 <!-- right_actions -->
 
 <nav class="mb-4">
-	<div class="subtitle-1 mb-2 text-secondary">
+	<div class="text-uppercase semi-small mb-2 text-secondary">
 		<?= $this->translator->get('category', 'actions_right', 'title') ?>
 	</div>
 	<ul class="list-links">
 
 		<?php if ($this->authUser) : ?>
-			<!-- rename_category -->
-			<li>
-				<a href="#" data-toggle="modal" data-target="#modal_rename_category">
-					<i class="material-icons md-18">edit</i>&nbsp;<?= $this->translator->get('category', 'actions_right', 'rename_category') ?>
-				</a>
-			</li>
-			<!-- / rename_category -->
+		<!-- rename_category -->
+		<li>
+			<a href="#" data-toggle="modal" data-target="#modal_rename_category">
+				<i class="material-icons md-18">edit</i>&nbsp;<?= $this->translator->get('category', 'actions_right', 'rename_category') ?>
+			</a>
+		</li>
+		<!-- / rename_category -->
 		<?php endif; ?>
 
 	</ul>
