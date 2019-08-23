@@ -802,11 +802,11 @@ blockquote p:last-child,
   border-color: #0077c6;
 }
 
-.form-control-outline-primary {
-  border-color: #0077c6;
-}
-
 .form-control-outline-secondary {
   border-color: #6c757d;
+}
+
+.border-bottom-primary {
+  border-bottom: 1px solid #c6e8ff;
 }
 /*# sourceMappingURL=style.css.map */

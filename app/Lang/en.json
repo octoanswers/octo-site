@@ -75,6 +75,7 @@
         "jumbotron": {
             "ask": "Ask a Question",
             "btn_ask": "Ask",
+            "how_it_works": "How it works",
             "header_1": "Ask a question on any topic and get",
             "header_2": "one complete &amp; competent answer",
             "login": "Log in",

@@ -48,12 +48,14 @@
   }
 }
 
-//
-
-.form-control-outline-primary {
-  border-color: $color-primary;
-}
+// Input on main page
 
 .form-control-outline-secondary {
   border-color: $color-secondary;
+}
+
+// Light-blue borders
+
+.border-bottom-primary {
+  border-bottom: 1px solid lighten($color-primary, 50%);
 }

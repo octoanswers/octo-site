@@ -1,5 +1,5 @@
 <!-- jumbotron -->
-<div class="main-page-jumbotron">
+<div class="main-page-jumbotron border-bottom-primary">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-10 mx-auto py-3 py-md-5">
@@ -24,20 +24,19 @@
                     </div>
                 </form>
 
-                <div class="text-center lead text-dark my-3">
+                <div class="text-center lead text-dark my-3 pt-2">
                     <?= $this->translator->get('main', 'jumbotron', 'text') ?>
-
                 </div>
 
-                <div class="semi-small ml-1">
-                    <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_ask">
-                        <?= $this->translator->get('main', 'jumbotron', 'ask') ?>
+                <div class="semi-small ml-1 text-center mr-5">
+                    <a class="text-muted" href="#how-it-works" data-toggle="modal" data-target="#modal_ask">
+                        <?= $this->translator->get('main', 'jumbotron', 'how_it_works') ?>
                     </a>
-                    <span class="mx-1 text-muted font_weight_800">&middot;</span>
+                    <span class="mx-1 text-muted">&middot;</span>
                     <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_signup">
                         <?= $this->translator->get('main', 'jumbotron', 'signup') ?>
                     </a>
-                    <span class="mx-1 text-muted font_weight_800">&middot;</span>
+                    <span class="mx-1 text-muted">&middot;</span>
                     <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_login">
                         <?= $this->translator->get('main', 'jumbotron', 'login') ?>
                     </a>
