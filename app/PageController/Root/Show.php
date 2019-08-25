@@ -21,7 +21,7 @@ class Show_Root_PageController extends Abstract_PageController
             }
         }
 
-        $this->template = 'root/show';
+        $this->template = 'root';
         $this->showFooter = false;
         $this->pageTitle = $this->translator->get('answeropedia');
         $this->pageDescription = $this->translator->get('Questions and Answers');
