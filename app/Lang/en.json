@@ -64,11 +64,11 @@
     },
     "main": {
         "how_it_works": {
-            "step_1_msg": "You ask a question about any category of interest to you",
+            "step_1_msg": "You ask a question about any category of interest to you.",
             "step_1_title": "You ask a question",
-            "step_2_msg": "We find a specialist who can give a competent answer",
+            "step_2_msg": "We find a specialist who can give a competent answer.",
             "step_2_title": "The system finds the experts",
-            "step_3_msg": "You receive an answer to the email",
+            "step_3_msg": "You receive an answer to the email.",
             "step_3_title": "You get an answer",
             "title": "How it works?"
         },

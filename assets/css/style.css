@@ -513,6 +513,10 @@ table:not([class]) td {
   font-size: 48px;
 }
 
+.material-icons.md-64 {
+  font-size: 64px;
+}
+
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark {
   color: rgba(0, 0, 0, 0.54);
@@ -819,5 +823,14 @@ blockquote p:last-child,
   .jumbotron-title {
     font-size: 1.25rem;
   }
+}
+
+.item__how_it_works {
+  background: url(https://answeropedia.org/assets/img/how-it-works-item-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 90px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,39 +1,49 @@
-
 <!-- how_it_works -->
-
-<h3 class="mb-4 mt-5">
-    <?= $this->translator->get('main', 'how_it_works', 'title') ?>
-</h3>
-
-<div class="card-deck">
-	<div class="card">
-		<img src="https://answeropedia.org/assets/img/step_1.jpg" class="card-img-top" alt="...">
-    	<div class="card-body">
-    		<h5 class="card-title"><?= $this->translator->get('main', 'how_it_works', 'step_1_title') ?></h5>
-    		<p class="card-text">
-				<?= $this->translator->get('main', 'how_it_works', 'step_1_msg') ?>
-			</p>
-    		<p class="card-text"><small class="text-muted">Подробнее</small></p>
-    	</div>
+<div class="container my-3 my-md-5">
+	<div class="row">
+		<div class="col-12 col-lg-10 mx-auto">
+			<h2 class="h2 mb-5 mt-5 text-center">
+				<?= $this->translator->get('main', 'how_it_works', 'title') ?>
+			</h2>
+		</div>
 	</div>
-	<div class="card">
-		<img src="https://answeropedia.org/assets/img/step_2.jpg" class="card-img-top" alt="...">
-    	<div class="card-body">
-    		<h5 class="card-title"><?= $this->translator->get('main', 'how_it_works', 'step_2_title') ?></h5>
-    		<p class="card-text"><?= $this->translator->get('main', 'how_it_works', 'step_2_msg') ?></p>
-    		<p class="card-text"><small class="text-muted">Подробнее</small></p>
-    	</div>
-	</div>
-	<div class="card">
-		<img src="https://answeropedia.org/assets/img/step_3.jpg" class="card-img-top" alt="...">
-    	<div class="card-body">
-    		<h5 class="card-title"><?= $this->translator->get('main', 'how_it_works', 'step_3_title') ?></h5>
-    		<p class="card-text">
-				<?= $this->translator->get('main', 'how_it_works', 'step_3_msg') ?>
-			</p>
-    		<p class="card-text"><small class="text-muted">Подробнее</small></p>
-    	</div>
+	<div class="row">
+		<div class="col-12 col-md-3 ml-auto">
+			<div class="mx-auto text-primary font-weight-bold pl-5">1</div>
+			<div class="item__how_it_works text-center mb-4 mx-auto">
+				<i class="material-icons md-64 text-primary" style="margin-top:10px!important;">perm_identity</i>
+			</div>
+			<div class="text-center">
+				<h5 class="lead"><?= $this->translator->get('main', 'how_it_works', 'step_1_title') ?></h5>
+				<p class="text-muted">
+					<?= $this->translator->get('main', 'how_it_works', 'step_1_msg') ?>
+				</p>
+			</div>
+		</div>
+		<div class="col-12 col-md-3">
+			<div class="mx-auto text-primary font-weight-bold pl-5">2</div>
+			<div class="item__how_it_works text-center mb-4 mx-auto">
+				<i class="material-icons md-64 text-primary" style="margin-top:10px!important;">compare_arrows</i>
+			</div>
+			<div class="text-center">
+				<h5 class="lead"><?= $this->translator->get('main', 'how_it_works', 'step_2_title') ?></h5>
+				<p class="text-muted">
+					<?= $this->translator->get('main', 'how_it_works', 'step_2_msg') ?>
+				</p>
+			</div>
+		</div>
+		<div class="col-12 col-md-3 mr-auto">
+			<div class="mx-auto text-primary font-weight-bold pl-5">3</div>
+			<div class="item__how_it_works text-center mb-4 mx-auto">
+				<i class="material-icons md-64 text-primary" style="margin-top:10px!important;">spellcheck</i>
+			</div>
+			<div class="text-center">
+				<h5 class="lead"><?= $this->translator->get('main', 'how_it_works', 'step_3_title') ?></h5>
+				<p class="text-muted">
+					<?= $this->translator->get('main', 'how_it_works', 'step_3_msg') ?>
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
-
 <!-- / how_it_works -->
