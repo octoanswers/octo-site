@@ -13,13 +13,12 @@
 		<div class="semi-small text-secondary">
 			<?php if ($user->signature) : ?>
 			<?= $user->signature ?>
-			<?php endif; ?>
-
-			<?php if ($user->signature && $user->site) : ?>
-			<span class="font-weight-bold mx-1 text-dark">&middot;</span>
+			<?php else : ?>
+			@<?= $user->username ?>
 			<?php endif; ?>
 
 			<?php if ($user->site) : ?>
+			<span class="font-weight-bold mx-1 text-dark">&middot;</span>
 			<a href="<?= $user->site ?>">
 				<?= parse_url($user->site, PHP_URL_HOST) ?>
 			</a>
