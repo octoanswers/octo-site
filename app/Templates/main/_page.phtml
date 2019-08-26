@@ -10,32 +10,25 @@
     <?php require_once TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
     <?php require_once TEMPLATE_PATH . '/_common/navbar_subnav.phtml'; ?>
 
-    <?php require_once TEMPLATE_PATH . '/main/main/jumbotron.phtml' ?>
-    <?php require_once TEMPLATE_PATH . '/main/main/how_it_works.phtml' ?>
+    <?php require_once __DIR__ . '/jumbotron.phtml' ?>
+    <?php require_once __DIR__ . '/how_it_works.phtml' ?>
 
     <div class="container">
         <div class="row">
-
-            <!-- main_column -->
-            <main class="col-12 col-lg-8 py-3 py-md-4">
-                <?php require_once TEMPLATE_PATH . '/main/main/recent_questions.phtml' ?>
-                <?php require_once TEMPLATE_PATH . '/main/main/share.phtml' ?>
+            <main class="col-12 col-lg-7 py-3 py-md-4 mx-auto">
+                <?php require_once __DIR__ . '/recent_questions.phtml' ?>
             </main>
-            <!-- / main_column -->
+        </div>
+    </div>
 
-            <!-- right_sidebar -->
-            <div class="d-none d-md-block col-lg-4 py-md-3">
-
-                <?php if (file_exists(TEMPLATE_PATH . '/' . $this->template . '/right.phtml')) : ?>
-                <?php require TEMPLATE_PATH . '/' . $this->template . '/right.phtml'; ?>
-                <?php endif; ?>
-
-                <?php require TEMPLATE_PATH . '/_common/left/other_languages.phtml'; ?>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-7 py-3 py-md-4 ml-auto">
+                <?php require_once __DIR__ . '/share.phtml' ?>
             </div>
-            <!-- / right_sidebar -->
-
-
+            <div class="d-none d-md-block col-lg-2 py-md-3 mr-auto">
+                <?php require __DIR__ . '/other_languages.phtml'; ?>
+            </div>
         </div>
     </div>
 

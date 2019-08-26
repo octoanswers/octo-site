@@ -42,10 +42,10 @@ class Show_Main_PageController extends Abstract_PageController
 
         $this->openGraph = $this->_getOpenGraph();
 
-        $this->shareLink['title'] = $this->translator->get('Ask a question and get one complete answer') . ' – ' . $this->translator->get('answeropedia');
-        $this->shareLink['description'] = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
-        $this->shareLink['url'] = SITE_URL;
-        $this->shareLink['image'] = SITE_URL . '/assets/img/og-image.png';
+        $this->share_link['title'] = $this->translator->get('Ask a question and get one complete answer') . ' – ' . $this->translator->get('answeropedia');
+        $this->share_link['description'] = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
+        $this->share_link['url'] = SITE_URL;
+        $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
         $this->includeJS[] = 'question/create';
 

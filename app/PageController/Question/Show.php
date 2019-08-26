@@ -98,10 +98,10 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->openGraph = $this->_getOpenGraph();
 
-        $this->shareLink['title'] = $this->question->title;
-        $this->shareLink['description'] = $this->translator->get('Wiki-answers to your questions on Answeropedia');
-        $this->shareLink['url'] = $this->question->get_URL($this->lang);
-        $this->shareLink['image'] = SITE_URL . '/assets/img/og-image.png';
+        $this->share_link['title'] = $this->question->title;
+        $this->share_link['description'] = $this->translator->get('Wiki-answers to your questions on Answeropedia');
+        $this->share_link['url'] = $this->question->get_URL($this->lang);
+        $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
         $this->_prepareAdditionalJavascript();
         $this->_prepareModals();
