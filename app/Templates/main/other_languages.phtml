@@ -2,22 +2,22 @@
 
 <nav class="mb-4">
 	<div class="text-uppercase text-secondary mb-3">
-		<?= $this->translator->get('sidebar__other_languages', 'title') ?>
+		<?= $this->translator->get('other_languages', 'title') ?>
 	</div>
 	<ul class="list-links">
 		<li>
 			<a data-lang="ru" href="<?= Page_URL_Helper::getMainURL('en') ?>">
-				<?= $this->translator->get('sidebar__other_languages', 'english') ?>
+				<?= $this->translator->get('other_languages', 'english') ?>
 			</a>
 		</li>
 		<li>
 			<a data-lang="ru" href="<?= Page_URL_Helper::getMainURL('ru') ?>">
-				<?= $this->translator->get('sidebar__other_languages', 'russian') ?>
+				<?= $this->translator->get('other_languages', 'russian') ?>
 			</a>
 		</li>
-		<li>
+		<li class="font-weight-bold">
 			<a href="<?= SITE_URL ?>">
-				<?= $this->translator->get('sidebar__other_languages', 'all_languages') ?>
+				<?= $this->translator->get('other_languages', 'all_languages') ?>
 			</a>
 		</li>
 	</ul>

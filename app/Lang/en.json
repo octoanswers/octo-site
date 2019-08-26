@@ -215,11 +215,11 @@
         "recent_changes": "Recent changes",
         "sandbox": "Sandbox"
     },
-    "sidebar__other_languages": {
+    "other_languages": {
         "all_languages": "All languages",
         "english": "English",
         "russian": "Russian",
-        "title": "In other languages"
+        "title": "Languages"
     },
     "title": "Перевод заголовка",
     "users": {

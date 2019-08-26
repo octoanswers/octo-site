@@ -8,16 +8,6 @@
 		<li>
 			<?= $this->translator->get('Answer updated') . ': ' . DateTime_Humanizer::humanizeTimestamp($this->lang, $this->question->answer->updatedAt) ?>
 		</li>
-		<!-- <li>
-			<a data-lang="ru" href="<?= Page_URL_Helper::getMainURL('ru') ?>">
-				<?= $this->translator->get('sidebar__other_languages', 'russian') ?>
-			</a>
-		</li>
-		<li>
-			<a href="<?= SITE_URL ?>">
-				<?= $this->translator->get('sidebar__other_languages', 'all_languages') ?>
-			</a>
-		</li> -->
 	</ul>
 </nav>
 

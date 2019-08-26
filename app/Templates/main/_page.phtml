@@ -15,19 +15,17 @@
 
     <div class="container">
         <div class="row">
-            <main class="col-12 col-lg-7 py-3 py-md-4 mx-auto">
-                <?php require_once __DIR__ . '/recent_questions.phtml' ?>
-            </main>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
             <div class="col-12 col-lg-7 py-3 py-md-4 ml-auto">
-                <?php require_once __DIR__ . '/share.phtml' ?>
+                <?php require_once __DIR__ . '/recent_questions.phtml' ?>
             </div>
             <div class="d-none d-md-block col-lg-2 py-md-3 mr-auto">
                 <?php require __DIR__ . '/other_languages.phtml'; ?>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-9 mx-auto">
+                <?php require_once __DIR__ . '/share.phtml' ?>
             </div>
         </div>
     </div>

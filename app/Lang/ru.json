@@ -349,7 +349,7 @@
 		"recent_changes": "Свежие правки",
 		"sandbox": "Песочница"
 	},
-	"sidebar__other_languages": {
+	"other_languages": {
 		"all_languages": "Все языки",
 		"english": "Английский",
 		"russian": "Русский",
