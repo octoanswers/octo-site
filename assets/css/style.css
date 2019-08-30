@@ -97,15 +97,15 @@ ul.list-links li a.active {
 
 .navbar a.user-avatar {
   display: inline-block;
-  width: 33px;
-  height: 33px;
+  width: 38px;
+  height: 38px;
   border: 1px solid #c7e6fd;
   border-radius: 3px;
 }
 
 .navbar a.user-avatar img {
-  width: 31px;
-  height: 31px;
+  width: 36px;
+  height: 36px;
   border-radius: 3px;
 }
 
