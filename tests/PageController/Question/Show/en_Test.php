@@ -19,6 +19,9 @@ class Show_Question_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->assertStringContainsString('Where i am born? – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

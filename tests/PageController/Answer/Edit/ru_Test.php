@@ -19,6 +19,9 @@ class Edit_Answer_PageController__ru__Test extends Abstract_Frontend_TestCase
         $this->assertStringContainsString('Как птицы делают игры? – Править ответ – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

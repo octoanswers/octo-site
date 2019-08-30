@@ -20,6 +20,9 @@ class Newest_Questions_PageController__ru__Test extends Abstract_Frontend_TestCa
         $this->assertStringContainsString('Птицы играют в игры?', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

@@ -19,6 +19,9 @@ class Unlogged_Main_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->assertStringContainsString('Answeropedia – Ask a question and get one complete answer', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

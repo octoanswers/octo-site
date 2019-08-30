@@ -18,6 +18,9 @@ class Index_SitemapXML_PageController__Test extends Abstract_Frontend_TestCase
         $this->assertStringContainsString('https://answeropedia.org/ru', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

@@ -23,6 +23,9 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         $this->assertStringContainsString('Как дела? – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -41,6 +44,9 @@ class PageController_Question_Show_baseTest extends Abstract_Frontend_TestCase
         $this->assertStringContainsString('Что означает FILE_NAME? – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 

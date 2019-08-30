@@ -19,6 +19,9 @@ class List_Categories_PageController__ru__Test extends Abstract_Frontend_TestCas
         $this->assertStringContainsString('Новые категории – Страница 1 – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

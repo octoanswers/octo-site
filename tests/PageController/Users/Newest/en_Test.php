@@ -19,6 +19,9 @@ class Newest_Users_PageController__en__Test extends Abstract_Frontend_TestCase
         $this->assertStringContainsString('New users from around the world – Page 0 – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

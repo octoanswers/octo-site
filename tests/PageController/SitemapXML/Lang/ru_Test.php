@@ -19,6 +19,9 @@ class Lang_SitemapXML_PageController__ru__Test extends Abstract_Frontend_TestCas
         $this->assertStringContainsString('https://answeropedia.org/ru/%D0%9F%D1%82%D0%B8%D1%86%D1%8B_%D0%B8%D0%B3%D1%80%D0%B0%D1%8E%D1%82_%D0%B2_%D0%B8%D0%B3%D1%80%D1%8B', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

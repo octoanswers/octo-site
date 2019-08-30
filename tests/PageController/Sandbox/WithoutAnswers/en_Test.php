@@ -20,6 +20,9 @@ class WithoutAnswers_Sandbox_PageController__en__Test extends Abstract_Frontend_
         $this->assertStringContainsString('Do you like iPhone 6?', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(200, $response->getStatusCode());
     }
 }

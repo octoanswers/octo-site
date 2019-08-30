@@ -17,6 +17,9 @@ class PageNotFound_Error_PageController__en__Test extends Abstract_Frontend_Test
         $this->assertStringContainsString('Ошибка 404 – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
+
         $this->assertSame(404, $response->getStatusCode());
     }
 }
