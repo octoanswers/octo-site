@@ -10,7 +10,7 @@ class CategoryRenamedByUser_Activity_Mapper extends Abstract_Mapper
         }
 
         $category = $activity->subject;
-        if (!is_a($category, Category::class)) {
+        if (!is_a($category, Category_Model::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($category), 0);
         }
 

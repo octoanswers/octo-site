@@ -10,7 +10,7 @@ class CAddedQ_Activity_Mapper extends Abstract_Mapper
         if ($activity->type != Activity_Model::CATEGORY_ADDED_QUESTION) {
             throw new Exception("Incorrect activity type \"$activity->type\"", 0);
         }
-        if (!is_a($category, Category::class)) {
+        if (!is_a($category, Category_Model::class)) {
             throw new Exception('Incorrect activity "subject" class type: ' . get_class($category), 0);
         }
         if (!is_a($question, Question_Model::class)) {

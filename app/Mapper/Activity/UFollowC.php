@@ -13,7 +13,7 @@ class UFollowC_Activity_Mapper extends Abstract_Mapper
         if (!is_a($user, User_Model::class)) {
             throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
-        if (!is_a($category, Category::class)) {
+        if (!is_a($category, Category_Model::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($category), 0);
         }
 

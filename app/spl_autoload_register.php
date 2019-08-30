@@ -8,10 +8,6 @@ spl_autoload_register(function ($class_name) {
 
         'AWApp' => 'app/AWApp.php',
 
-        // Model
-
-        'Category' => 'app/Model/Category.php',
-
         // Helpers
 
         'ExtendedParsedown' => 'app/Helper/ExtendedParsedown.php',

@@ -67,7 +67,7 @@ class Search_Query extends Abstract_Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = Category::initWithDBState($row);
+            $categories[] = Category_Model::initWithDBState($row);
         }
 
         return $categories;

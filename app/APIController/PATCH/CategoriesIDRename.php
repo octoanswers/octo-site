@@ -16,7 +16,6 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
             // Validate params
 
             $user = (new User_Query())->userWithAPIKey($api_key);
-            $userID = $user->id;
 
             // Change category title
 
@@ -29,14 +28,14 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
             if ($saveRedirect) {
                 if (mb_strtolower($categoryNewTitle) != mb_strtolower($old_title)) {
                     // create category record with OLD title & redirect flag
-                    $oldCategory = new Category();
-                    $oldCategory->title = $old_title;
-                    $oldCategory->isRedirect = true;
-                    $oldCategory = (new Category_Mapper($this->lang))->create($oldCategory);
+                    $old_category = new Category_Model();
+                    $old_category->title = $old_title;
+                    $old_category->isRedirect = true;
+                    $old_category = (new Category_Mapper($this->lang))->create($old_category);
 
                     // create redirect record
                     $this->redirect = new Category_Redirect_Model();
-                    $this->redirect->fromID = $oldCategory->id;
+                    $this->redirect->fromID = $old_category->id;
                     $this->redirect->toTitle = $category->title;
                     $this->redirect = (new Category_Redirect_Mapper($this->lang))->create($this->redirect);
                 }

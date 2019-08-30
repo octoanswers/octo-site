@@ -173,7 +173,7 @@ class Show_Category_PageController extends Abstract_PageController
         $related_categories = [];
         if (count($related_titles)) {
             foreach ($related_titles as $title) {
-                $category = Category::initWithTitle($title);
+                $category = Category_Model::initWithTitle($title);
                 $related_categories[] = $category;
             }
         } else {

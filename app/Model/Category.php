@@ -1,6 +1,6 @@
 <?php
 
-class Category extends Abstract_Model
+class Category_Model extends Abstract_Model
 {
     use Category_URL_Trait;
 

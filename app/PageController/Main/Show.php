@@ -21,7 +21,7 @@ class Show_Main_PageController extends Abstract_PageController
         // foreach ($this->recent_questions as $question) {
         //     $categoriesTitles = Category_Extractor_Helper::extractCategories($question->answer->text);
         //     foreach ($categoriesTitles as $title) {
-        //         $category = Category::initWithTitle($title);
+        //         $category = Category_Model::initWithTitle($title);
         //         $this->categories[$question->id][] = $category;
         //     }
         // }

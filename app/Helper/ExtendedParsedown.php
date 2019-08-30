@@ -74,7 +74,7 @@ class ExtendedParsedown extends Parsedown
                 //$title_part = $matches[1];
                 $reference_part = $matches[2];
                 if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
-                    $category = Category::initWithTitle($reference_part);
+                    $category = Category_Model::initWithTitle($reference_part);
 
                     return '[' . $matches[1] . '](' . $category->get_URL($this->lang) . ')';
                 }

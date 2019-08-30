@@ -6,7 +6,7 @@ class Mapper_Category_update_negativeTitleTest extends Abstract_DB_TestCase
 
     public function test_Exception_when_title_is_empty()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 2;
         $category->title = '';
 
@@ -16,7 +16,7 @@ class Mapper_Category_update_negativeTitleTest extends Abstract_DB_TestCase
 
     public function test_Exception_when_title_too_short()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 2;
         $category->title = 'x';
 
@@ -26,7 +26,7 @@ class Mapper_Category_update_negativeTitleTest extends Abstract_DB_TestCase
 
     public function test_Exception_when_title_too_long()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 2;
         $category->title = 'title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title';
 

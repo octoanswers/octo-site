@@ -48,7 +48,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             foreach ($newCategoriesTitles as $category_title) {
                 $category = (new Category_Query($this->lang))->findWithTitle($category_title);
                 if ($category === null) {
-                    $category = new Category();
+                    $category = new Category_Model();
                     $category->title = $category_title;
 
                     $category = (new Category_Mapper($this->lang))->create($category);

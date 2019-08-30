@@ -10,7 +10,7 @@ class Mapper_Activity_UFC__create__Test extends Abstract_DB_TestCase
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $category = Category::initWithTitle('tag10');
+        $category = Category_Model::initWithTitle('tag10');
 
         $activity = new Activity_Model();
         $activity->type = Activity_Model::USER_FOLLOW_CATEGORY;

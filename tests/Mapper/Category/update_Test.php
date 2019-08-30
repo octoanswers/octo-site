@@ -6,7 +6,7 @@ class Mapper_Category_updateTest extends Abstract_DB_TestCase
 
     public function test_Update_category_with_EN_title()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 7;
         $category->title = 'newcategory';
 
@@ -18,7 +18,7 @@ class Mapper_Category_updateTest extends Abstract_DB_TestCase
 
     public function test_Update_category_with_RU_title()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 4;
         $category->title = 'новаятема';
 

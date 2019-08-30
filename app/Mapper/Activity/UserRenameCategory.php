@@ -19,7 +19,7 @@ class UserRenameCategory_Activity_Mapper extends Abstract_Mapper
         }
         $category = $activity->data['category'];
         $old_title = $activity->data['old_title'];
-        if (!is_a($category, Category::class)) {
+        if (!is_a($category, Category_Model::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($category), 0);
         }
         if (!is_string($old_title)) {

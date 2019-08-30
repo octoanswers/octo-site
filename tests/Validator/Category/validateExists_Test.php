@@ -4,7 +4,7 @@ class Validator_Category_validateExistsTest extends PHPUnit\Framework\TestCase
 {
     public function test_Exception_when_category_title_not_set()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 13;
 
         $this->expectExceptionMessage('Category title param null must be a string');
@@ -13,7 +13,7 @@ class Validator_Category_validateExistsTest extends PHPUnit\Framework\TestCase
 
     public function test_Exception_when_category_title_is_empty()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 13;
         $category->title = '';
 
@@ -23,7 +23,7 @@ class Validator_Category_validateExistsTest extends PHPUnit\Framework\TestCase
 
     public function test_Exception_when_category_title_too_short()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 13;
         $category->title = 'x';
 
@@ -33,7 +33,7 @@ class Validator_Category_validateExistsTest extends PHPUnit\Framework\TestCase
 
     public function test_Exception_when_category_title_too_long()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 13;
         $category->title = 'title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title';
 

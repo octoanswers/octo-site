@@ -12,17 +12,17 @@ class Category_Validator
     // Model validator
     //
 
-    public static function validateNew(Category $category)
+    public static function validateNew(Category_Model $category)
     {
         return self::validate($category, false);
     }
 
-    public static function validateExists(Category $category)
+    public static function validateExists(Category_Model $category)
     {
         return self::validate($category, true);
     }
 
-    protected static function validate(Category $category, $isExists = true)
+    protected static function validate(Category_Model $category, $isExists = true)
     {
         if ($isExists) {
             self::validateID($category->id);

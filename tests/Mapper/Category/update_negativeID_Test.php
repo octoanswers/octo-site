@@ -6,7 +6,7 @@ class Mapper_Category_update_negativeIDTest extends Abstract_DB_TestCase
 
     public function test_Exception_when_category_ID_not_exists()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 2215;
         $category->title = 'impossible';
 
@@ -16,7 +16,7 @@ class Mapper_Category_update_negativeIDTest extends Abstract_DB_TestCase
 
     public function test_Exception_when_category_ID_equal_zero()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = 0;
         $category->title = 'car';
 
@@ -26,7 +26,7 @@ class Mapper_Category_update_negativeIDTest extends Abstract_DB_TestCase
 
     public function test_Exception_when_category_ID_below_zero()
     {
-        $category = new Category();
+        $category = new Category_Model();
         $category->id = -1;
         $category->title = 'guf';
 
