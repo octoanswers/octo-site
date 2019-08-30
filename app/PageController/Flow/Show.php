@@ -39,7 +39,7 @@ class Show_Flow_PageController extends Abstract_PageController
         return $response;
     }
 
-    protected function _getOpenGraph()
+    protected function _get_open_graph()
     {
         $og = [
             'url'         => SITE_URL,

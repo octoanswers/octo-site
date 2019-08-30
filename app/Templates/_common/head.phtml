@@ -3,11 +3,11 @@
 
 <title><?= $this->pageTitle ?></title>
 
-<?php if ($this->pageDescription): ?>
+<?php if ($this->pageDescription) : ?>
 <meta name="description" content="<?= $this->pageDescription ?>">
 <?php endif; ?>
 
-<?php if (isset($this->canonicalURL)): ?>
+<?php if (isset($this->canonicalURL)) : ?>
 <link rel="canonical" href="<?= $this->canonicalURL ?>" />
 <?php endif; ?>
 
@@ -18,10 +18,8 @@
 <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-160.png" sizes="160x160">
 <link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-196.png" sizes="196x196">
 <link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-120.png">
-<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-152.png"
-    sizes="152x152">
-<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-180.png"
-    sizes="180x180">
+<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-152.png" sizes="152x152">
+<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-180.png" sizes="180x180">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -29,37 +27,23 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Stylesheet -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
-    rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" rel="stylesheet">
 <link rel="stylesheet" href="https://answeropedia.org/assets/css/style.css?v=7">
 
-<?php if (count($this->includeCSS)): ?>
-    <!-- Additional CSS -->
-    <?php foreach ($this->includeCSS as $linkToCSS): ?>
-        <link rel="stylesheet" href="<?= $linkToCSS ?>">
-    <?php endforeach; ?>
-    <!-- / Additional CSS -->
+<?php if (count($this->includeCSS)) : ?>
+<!-- Additional CSS -->
+<?php foreach ($this->includeCSS as $linkToCSS) : ?>
+<link rel="stylesheet" href="<?= $linkToCSS ?>">
+<?php endforeach; ?>
+<!-- / Additional CSS -->
 <?php endif; ?>
 
 <!-- Open Graph tags -->
-<?php if (isset($this->openGraph['url'])): ?>
-    <meta property="og:url" content="<?= $this->openGraph['url'] ?>" />
-<?php endif; ?>
-<?php if (isset($this->openGraph['type'])): ?>
-    <meta property="og:type" content="<?= $this->openGraph['type'] ?>" />
-<?php endif; ?>
-<?php if (isset($this->openGraph['title'])): ?>
-    <meta property="og:title" content="<?= $this->openGraph['title'] ?>" />
-<?php endif; ?>
-<?php if (isset($this->openGraph['description'])): ?>
-    <meta property="og:description" content="<?= $this->openGraph['description'] ?>" />
-<?php endif; ?>
-<?php if (isset($this->openGraph['image'])): ?>
-    <meta property="og:image" content="<?= $this->openGraph['image'] ?>" />
-<?php endif; ?>
-<?php if (isset($this->openGraph['locale'])): ?>
-    <meta property="og:locale" content="<?= $this->openGraph['locale'] ?>" />
-<?php endif; ?>
+<?php
+if (isset($this->open_graph) && count($this->open_graph)) {
+    foreach ($this->open_graph as $key => $value) {
+        echo '<meta property="og:' . $key . '" content="' . $value . '"' . "\n";
+    }
+} ?>
 
-<?php require_once __DIR__.'/counter/google_analytics.html' ?>
+<?php require_once __DIR__ . '/counter/google_analytics.html' ?>

@@ -72,8 +72,8 @@ class Show_Category_PageController extends Abstract_PageController
         $this->pageDescription = $this->_getPageDescription();
         $this->nextPageURL = null;
 
-        $this->openGraph = $this->_getOpenGraph();
-        $this->share = $this->_getOpenGraph();
+        $this->open_graph = $this->_get_open_graph();
+        $this->share = $this->_get_open_graph();
 
         $output = $this->renderPage();
         $response->getBody()->write($output);
@@ -98,7 +98,7 @@ class Show_Category_PageController extends Abstract_PageController
         }
     }
 
-    protected function _getOpenGraph()
+    protected function _get_open_graph()
     {
         $og = [
             'url'         => $this->category->get_URL($this->lang),

@@ -33,7 +33,7 @@ class Show_User_PageController extends Abstract_PageController
         $this->pageDescription = $this->user->name . ' ' . $this->translator->get('Wiki-answers on Answeropedia');
         $this->canonicalURL = $this->user->get_URL($this->lang);
 
-        $this->openGraph = $this->_getOpenGraph();
+        $this->open_graph = $this->_get_open_graph();
 
         // prepare 'logout' button
         if (($this->authUser != null) && ($this->authUser->id == $this->user->id)) {
@@ -62,7 +62,7 @@ class Show_User_PageController extends Abstract_PageController
         }
     }
 
-    protected function _getOpenGraph()
+    protected function _get_open_graph()
     {
         $og = [
             'url'         => $this->user->get_URL($this->lang),

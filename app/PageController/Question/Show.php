@@ -96,7 +96,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->related_questions = $this->_relatedQuestions();
 
-        $this->openGraph = $this->_getOpenGraph();
+        $this->open_graph = $this->_get_open_graph();
 
         $this->share_link['title'] = $this->question->title;
         $this->share_link['description'] = $this->translator->get('Wiki-answers to your questions on Answeropedia');
@@ -213,7 +213,7 @@ class Show_Question_PageController extends Abstract_PageController
         return $pageDescription;
     }
 
-    protected function _getOpenGraph()
+    protected function _get_open_graph()
     {
         $og = [
             'url'         => $this->question->get_URL($this->lang),
