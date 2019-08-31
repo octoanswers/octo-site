@@ -3,39 +3,43 @@
 <div class="mt-3 mb-4">
 
     <?php if ($this->authUser) : ?>
-    <button class="btn follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= $this->translator->get('Follow') ?>" data-followed-title="<?= $this->translator->get('Followed') ?>" data-unfollow-title="<?= $this->translator->get('Unfollow') ?>" type="button">
-        <i class="material-icons md-18 mr-2">bookmark</i>
+    <button class="btn btn-sm follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= $this->translator->get('Follow') ?>" data-followed-title="<?= $this->translator->get('Followed') ?>" data-unfollow-title="<?= $this->translator->get('Unfollow') ?>" type="button">
+        <i class="material-icons md-18">bookmark_border</i>
         <?= $this->followed ? $this->translator->get('Followed') : $this->translator->get('Follow'); ?>
     </button>
-    <?php else : ?>
-    <button type="button" class="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
+    <?php endif; ?>
+
+    <?php if (!$this->authUser) : ?>
+    <!-- fake follow_btn -->
+    <button type="button" class="btn btn-sm btn-primary mb-2 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
         <?= $this->translator->get('Follow'); ?>
     </button>
     <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/follow_question.phtml' ?>
+    <!-- / fake follow_btn -->
     <?php endif; ?>
 
     <!-- edit answer -->
     <?php if ($this->authUser) : ?>
-    <a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_edit_URL($this->lang) ?>">
+    <a class="btn btn-sm btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_edit_URL($this->lang) ?>">
         <?= $this->translator->get('question__actions_top', 'edit_answer') ?>
     </a>
     <?php else : ?>
-    <a class="btn btn-outline-primary mb-2 mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
+    <a class="btn btn-sm btn-outline-primary mb-2 mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
         <?= $this->translator->get('question__actions_top', 'edit_answer') ?>
     </a>
     <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/edit_answer.phtml' ?>
     <?php endif; ?>
     <!-- / edit answer -->
 
-    <!-- tab_history -->
     <?php if (mb_strlen($this->question->answer->text) > 0) : ?>
-    <a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_history_URL($this->lang) ?>">
+    <!-- btn history -->
+    <a class="btn btn-sm btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_history_URL($this->lang) ?>">
         <?= $this->translator->get('question__actions_top', 'history') ?>
     </a>
+    <!-- btn history -->
     <?php endif; ?>
-    <!-- tab_history -->
 
-    <a class="btn btn-outline-secondary disabled mb-2 mr-2" href="#" tabindex="-1" aria-disabled="true" title="<?= $this->translator->get('question__actions_top', 'talk_tooltip') ?>">
+    <a class="btn btn-sm btn-outline-secondary disabled mb-2 mr-2" href="#" tabindex="-1" aria-disabled="true" title="<?= $this->translator->get('question__actions_top', 'talk_tooltip') ?>">
         <?= $this->translator->get('question__actions_top', 'talk') ?>
     </a>
 
