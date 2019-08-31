@@ -74,18 +74,17 @@ ul.list-links li a.active {
 
 .navbar .navbar-brand {
   font-weight: 700;
-  color: #035abd;
 }
 
 .navbar .navbar-brand:hover {
-  color: #02428b;
+  color: #035abd;
 }
 
 .navbar a.user-avatar {
   display: inline-block;
   width: 38px;
   height: 38px;
-  border: 1px solid #c7e6fd;
+  border: 1px solid #ffffff;
   border-radius: 3px;
 }
 
@@ -100,8 +99,8 @@ ul.list-links li a.active {
 }
 
 .navbar-light {
-  background-color: #e0f1fe;
-  border-bottom: 1px solid #c7e6fd;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8dbdd;
 }
 
 .navbar-light .navbar-toggler {
@@ -113,16 +112,12 @@ ul.list-links li a.active {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #0366d6;
-}
-
-.navbar-light .form-control {
-  border: 1px solid #afdbfc;
+  color: #6c757d;
 }
 
 .navbar-subnav {
-  border-bottom: 1px solid #c7e6fd;
-  background-color: #ffffff;
+  border-bottom: 1px solid #d8dbdd;
+  background-color: #f9f9fa;
   top: 57px;
 }
 

@@ -1,21 +1,16 @@
-//
 // Navbar Variables
-//
 
-$color-navbar: #e0f1fe;
 $user-avatar-size: 38px;
 
-//
 // Navbar Style
-//
 
 .navbar {
   .navbar-brand {
     font-weight: 700;
-    color: darken($color-primary, 5%);
+    //color: darken($color-primary, 5%);
 
     &:hover {
-      color: darken($color-primary, 15%);
+      color: darken($color-primary, 5%);
     }
   }
 
@@ -23,7 +18,7 @@ $user-avatar-size: 38px;
     display: inline-block;
     width: $user-avatar-size;
     height: $user-avatar-size;
-    border: 1px solid darken($color-navbar, 5%);
+    border: 1px solid $color-white;
     border-radius: 3px;
 
     img {
@@ -39,8 +34,8 @@ $user-avatar-size: 38px;
 }
 
 .navbar-light {
-  background-color: $color-navbar;
-  border-bottom: 1px solid darken($color-navbar, 5%);
+  background-color: $color-white;
+  border-bottom: 1px solid lighten($color-secondary, 40%);
 
   .navbar-toggler {
     border: 0;
@@ -51,11 +46,23 @@ $user-avatar-size: 38px;
 
   .navbar-nav {
     .nav-link {
-      color: $color-primary;
+      color: $color-secondary;
     }
   }
+}
 
-  .form-control {
-    border: 1px solid darken($color-navbar, 10%);
+// Navbar Subnav Style
+
+.navbar-subnav {
+  border-bottom: 1px solid lighten($color-secondary, 40%);
+  background-color: lighten($color-secondary, 52%);
+  top: 57px;
+
+  a {
+    color: $color-secondary;
+
+    &:hover {
+      color: darken($color-secondary, 15%);
+    }
   }
 }
