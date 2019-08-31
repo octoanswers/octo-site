@@ -115,7 +115,7 @@
 		"title": "Регистрация"
 	},
 	"categories": {
-		"add_categories": "add_categories",
+		"add_categories": "Добавить категорию",
 		"more_categories": "Больше тем",
 		"page_description": "Вопросы по категориям",
 		"search_placeholder": "Поиск категорий",

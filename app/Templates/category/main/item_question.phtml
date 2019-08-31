@@ -12,9 +12,9 @@
     </a>
     <?php endif; ?>
 
-    <div class="mt-2 small text-secondary">
+    <div class="mt-2 text-secondary">
         <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60 * 60 * 24)) : ?>
-        <span class="badge badge-primary mr-3">Новый</span>
+        <span class="badge badge-primary mr-3">New</span>
         <?php endif; ?>
 
         <?php if (strlen($question->answer->text) == 0) : ?>
@@ -24,22 +24,24 @@
         <?php endif; ?>
 
         <?php if ($question->categoriesCount == 0) : ?>
-        <a class="badge badge-success mr-3" href="<?= $question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+        <a class="text-success semi-small mr-3" href="<?= $question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+            <i class="material-icons md-18">bubble_chart</i>
             <?= $this->translator->get('categories', 'add_categories') ?>
         </a>
         <?php endif; ?>
 
         <?php if (strlen($question->answer->text)) : ?>
-        2 автора
+        <i class="material-icons md-18">people_alt</i>
+        <span class="semi-small">2</span>
         <span class="mx-1 text-muted font_weight_800">&middot;</span>
         <i class="material-icons md-14">access_time</i>
-        <span title="<?= $this->translator->get('Minutes to read') ?>">
+        <span class="semi-small" title="<?= $this->translator->get('Minutes to read') ?>">
             <?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
         </span>
         <span class="mx-1 text-muted font_weight_800">&middot;</span>
         <?php endif; ?>
 
-        <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
+        <span class="semi-small"><?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?></span>
     </div>
 </div>
 <!-- / question item -->

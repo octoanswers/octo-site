@@ -1,6 +1,5 @@
 @import "variables";
 
-@import "_components/_badge";
 @import "_components/_image";
 @import "_components/_list-links";
 @import "_components/_nav-pills";
@@ -15,7 +14,6 @@
 @import "_vendor/_material-icons";
 @import "_vendor/_bootstrap-tagsinput";
 
-@import "_typography/_font-weight";
 @import "_typography/_links";
 @import "_typography/_other";
 
@@ -24,28 +22,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-// Modufy primary button color
-
-.btn-primary {
-  border-color: $color-primary;
-  background-color: $color-primary;
-
-  &:hover {
-    background-color: darken($color-primary, 10%);
-    border-color: darken($color-primary, 10%);
-  }
-}
-
-.btn-outline-primary {
-  color: $color-primary;
-  border-color: $color-primary;
-
-  &:hover {
-    background-color: $color-primary;
-    border-color: $color-primary;
-  }
 }
 
 // Input on main page
