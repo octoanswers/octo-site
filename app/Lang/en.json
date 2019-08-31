@@ -75,9 +75,9 @@
         "jumbotron": {
             "ask": "Ask a Question",
             "btn_ask": "Ask",
-            "how_it_works": "How it works",
             "header_1": "Ask a question on any topic and get",
             "header_2": "one complete &amp; competent answer",
+            "how_it_works": "How it works",
             "login": "Log in",
             "search_placeholder": "What is your question?",
             "signup": "Sign up",
@@ -128,6 +128,12 @@
         "search_placeholder": "Search questions…",
         "signup": "Sign up"
     },
+    "other_languages": {
+        "all_languages": "All languages",
+        "english": "English",
+        "russian": "Russian",
+        "title": "Languages"
+    },
     "page": "Page",
     "question": {
         "block__categories": {
@@ -161,6 +167,12 @@
         "rename_question": "Rename question",
         "talk": "Talk",
         "talk_tooltip": "Discussion about the answer"
+    },
+    "question_not_found": {
+        "btn_ask": "Ask this question",
+        "btn_go_back": "Go back",
+        "page_title": "Question not found",
+        "title": "Question not found"
     },
     "questions": {
         "btn_add_categories": "Add categories",
@@ -214,12 +226,6 @@
         "random_question": "Random question",
         "recent_changes": "Recent changes",
         "sandbox": "Sandbox"
-    },
-    "other_languages": {
-        "all_languages": "All languages",
-        "english": "English",
-        "russian": "Russian",
-        "title": "Languages"
     },
     "title": "Перевод заголовка",
     "users": {

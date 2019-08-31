@@ -28,7 +28,6 @@
 	"Follow some questions": "Следуйте за некоторыми вопросами",
 	"Follow your first question": "Подпишитесь на первый вопрос",
 	"Followed": "Подписан",
-	"Go back": "Вернуться назад",
 	"Improve your feed": "Улучшите вашу ленту",
 	"It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
 	"Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
@@ -172,9 +171,9 @@
 		"jumbotron": {
 			"ask": "Задать вопрос",
 			"btn_ask": "Задать",
-			"how_it_works": "Как это работает",
 			"header_1": "Задайте вопрос на любую тему и получите",
 			"header_2": "один исчерпывающий ответ",
+			"how_it_works": "Как это работает",
 			"login": "Вход",
 			"search_placeholder": "Какой у вас вопрос?",
 			"signup": "Присоединиться к сообществу",
@@ -231,6 +230,12 @@
 		"search_placeholder": "Поиск вопросов...",
 		"signup": "Регистрация"
 	},
+	"other_languages": {
+		"all_languages": "Все языки",
+		"english": "Английский",
+		"russian": "Русский",
+		"title": "На других языках"
+	},
 	"page": "Страница",
 	"page_not_found": {
 		"Error 404": "Ошибка 404",
@@ -272,7 +277,8 @@
 		"talk_tooltip": "Обсуждение ответа"
 	},
 	"question_not_found": {
-		"Question not found": "Вопрос не найден",
+		"btn_ask": "Задать этот вопрос",
+		"btn_go_back": "Вернуться назад",
 		"page_title": "Вопрос не найден",
 		"title": "Вопрос не найден"
 	},
@@ -348,12 +354,6 @@
 		"random_question": "Случайный вопрос",
 		"recent_changes": "Свежие правки",
 		"sandbox": "Песочница"
-	},
-	"other_languages": {
-		"all_languages": "Все языки",
-		"english": "Английский",
-		"russian": "Русский",
-		"title": "На других языках"
 	},
 	"test_key": {
 		"subkey_as_array": {
