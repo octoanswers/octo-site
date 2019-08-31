@@ -27,10 +27,10 @@ class Edit_Answer_PageController extends Abstract_PageController
             $answer->id = $this->question->id;
             $answer->text = null;
 
-            $this->answer = (new Answer_Mapper())->create($answer);
+            $this->answer = (new Answer_Mapper($this->lang))->create($answer);
         }
 
-        $this->howToEditQuestion = $this->_getHowToEditQuestion();
+        $this->question_how_to_edit = $this->_get_how_to_edit_question();
 
         $this->template = 'answer_edit';
         $this->showFooter = false;
@@ -46,15 +46,15 @@ class Edit_Answer_PageController extends Abstract_PageController
         return $response;
     }
 
-    private function _getHowToEditQuestion()
+    private function _get_how_to_edit_question()
     {
         try {
-            $howToEditQuestionID = $this->translator->get('service_id', 'how_to_edit');
-            $howToEditQuestion = (new Question_Query($this->lang))->questionWithID($howToEditQuestionID);
+            $how_to_edit_question_ID = $this->translator->get('service_id', 'how_to_edit');
+            $how_to_edit_question = (new Question_Query($this->lang))->questionWithID($how_to_edit_question_ID);
         } catch (Throwable $e) {
-            $howToEditQuestion = null;
+            $how_to_edit_question = null;
         }
 
-        return $howToEditQuestion;
+        return $how_to_edit_question;
     }
 }
