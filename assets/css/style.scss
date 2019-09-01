@@ -54,3 +54,9 @@
   width: 90px;
   height: 90px;
 }
+
+// Background Colors
+
+.bg-secondary-lightest {
+  background-color: lighten($color-secondary, 50%);
+}

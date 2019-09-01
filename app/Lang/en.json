@@ -52,12 +52,18 @@
         "page_title": "Flow"
     },
     "footer": {
-        "about": "About",
-        "questions": "Questions",
-        "rules": "Rules",
-        "search": "Search",
-        "support": "Support",
-        "users": "Users"
+        "nav": {
+            "about": "About",
+            "questions": "Questions",
+            "rules": "Rules",
+            "support": "Support",
+            "main_page": "Main page",
+            "users": "Users"
+        },
+        "note": {
+            "designed_and_built": "Designed and built with ♥ by the <a class=\"text-dark\" href=\"https://github.com/orgs/answeropedia/people\">Answeropedia team</a> with the help of <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/graphs/contributors\">our contributors</a>.",
+            "code_licensed": "Code licensed <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/blob/master/LICENSE\">MIT</a>, answers <a class=\"text-dark\" href=\"https://github.com/answeropedia/dumps/blob/master/LICENSE\">CC BY SA 4.0</a>."
+        }
     },
     "internal_server_error": {
         "page_title": "Error 500"
@@ -221,7 +227,6 @@
     "sidebar__main_nav": {
         "feed": "Feed",
         "how_it_works": "How it works",
-        "main_page": "Main page",
         "popular_categories": "Categories",
         "random_question": "Random question",
         "recent_changes": "Recent changes",

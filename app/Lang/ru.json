@@ -147,12 +147,18 @@
 		"page_title": "Поток"
 	},
 	"footer": {
-		"about": "О сайте",
-		"questions": "Вопросы",
-		"rules": "Правила",
-		"search": "Поиск",
-		"support": "Поддержка",
-		"users": "Пользователи"
+		"nav": {
+			"about": "О сайте",
+			"questions": "Вопросы",
+			"rules": "Правила",
+			"support": "Поддержка",
+			"main_page": "Главная",
+			"users": "Пользователи"
+		},
+		"note": {
+			"designed_and_built": "Сайт разработан с ♥ командой <a class=\"text-dark\" href=\"https://github.com/orgs/answeropedia/people\">Ансверопедии</a>, при поддержке <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/graphs/contributors\">контрибъюторов</a>.",
+			"code_licensed": "Код под лицензией <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/blob/master/LICENSE\">MIT</a>, ответы <a class=\"text-dark\" href=\"https://github.com/answeropedia/dumps/blob/master/LICENSE\">CC BY SA 4.0</a>."
+		}
 	},
 	"internal_server_error": {
 		"Error 500": "Ошибка 500",
@@ -349,7 +355,6 @@
 	"sidebar__main_nav": {
 		"feed": "Подписки",
 		"how_it_works": "Как это работает",
-		"main_page": "Главная страница",
 		"popular_categories": "Категории",
 		"random_question": "Случайный вопрос",
 		"recent_changes": "Свежие правки",

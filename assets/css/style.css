@@ -695,7 +695,7 @@ ul {
 
 pre {
   padding: 1rem;
-  background-color: #a1a8ae;
+  background-color: #f3f4f5;
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;
@@ -769,5 +769,9 @@ blockquote p:last-child,
   background-repeat: no-repeat;
   width: 90px;
   height: 90px;
+}
+
+.bg-secondary-lightest {
+  background-color: #f3f4f5;
 }
 /*# sourceMappingURL=style.css.map */
