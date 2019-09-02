@@ -1,20 +1,20 @@
 <?php if ($this->isShowUsersFollowLure) : ?>
-    <!-- lure follow_3_users -->
-    <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
-        <div class="mr-3 d-none d-sm-block">
-            <i class="material-icons md-24">check</i>
-        </div>
-        <div class="width-full">
-            <div class="text-dark font-weight-bold mb-2">
-                <?= $this->translator->get('Find your first friends') ?>
-            </div>
-            <div class="small text-muted mb-3">
-                <?= $this->translator->get('Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.') ?>.
-            </div>
-            <a class="btn btn-sm btn-outline-primary" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
-                <?= $this->translator->get('View users') ?>
-            </a>
-        </div>
+<!-- lure follow_3_users -->
+<div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
+    <div class="mr-3 d-none d-sm-block">
+        <i class="material-icons md-24">check</i>
     </div>
-    <!-- / lure follow_3_users -->
+    <div class="width-full">
+        <div class="text-dark font-weight-bold mb-2">
+            <?= $this->translator->get('feed', 'find_your_first_friends', 'title') ?>
+        </div>
+        <div class="small text-muted mb-3">
+            <?= $this->translator->get('feed', 'find_your_first_friends', 'msg') ?>.
+        </div>
+        <a class="btn btn-sm btn-outline-primary" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>">
+            <?= $this->translator->get('feed', 'find_your_first_friends', 'action') ?>
+        </a>
+    </div>
+</div>
+<!-- / lure follow_3_users -->
 <?php endif; ?>

@@ -1,20 +1,20 @@
 <?php if ($this->isShowCategoriesFollowLure) : ?>
-    <!-- lure follow_3_categories -->
-    <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
-        <div class="mr-3 d-none d-sm-block">
-            <i class="material-icons md-24">check</i>
-        </div>
-        <div class="width-full">
-            <div class="text-dark font-weight-bold mb-2">
-                <?= $this->translator->get('Subscribe to several categories') ?>
-            </div>
-            <div class="small text-muted mb-3">
-                <?= $this->translator->get('Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.') ?>
-            </div>
-            <a class="btn btn-sm btn-outline-primary" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>">
-                <?= $this->translator->get('View popular categories') ?>
-            </a>
-        </div>
+<!-- lure follow_3_categories -->
+<div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
+    <div class="mr-3 d-none d-sm-block">
+        <i class="material-icons md-24">check</i>
     </div>
-    <!-- / lure follow_3_categories -->
+    <div class="width-full">
+        <div class="text-dark font-weight-bold mb-2">
+            <?= $this->translator->get('feed', 'subscribe_to_several_categories', 'title') ?>
+        </div>
+        <div class="small text-muted mb-3">
+            <?= $this->translator->get('feed', 'subscribe_to_several_categories', 'msg') ?>
+        </div>
+        <a class="btn btn-sm btn-outline-primary" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>">
+            <?= $this->translator->get('feed', 'subscribe_to_several_categories', 'action') ?>
+        </a>
+    </div>
+</div>
+<!-- / lure follow_3_categories -->
 <?php endif; ?>

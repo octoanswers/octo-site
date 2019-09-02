@@ -1,20 +1,20 @@
 <?php if (false) : ?>
-    <!-- lure write_answer -->
-    <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
-        <div class="mr-3 d-none d-sm-block">
-            XXX
-        </div>
-        <div class="width-full">
-            <div class="text-dark font-weight-bold mb-2">
-                <?= $this->translator->get('Напишите первый ответ') ?>
-            </div>
-            <div class="small text-muted mb-3">
-                <?= $this->translator->get('Look at the questions that no one else has written an answer and become the first author.') ?>.
-            </div>
-            <a class="btn btn-sm btn-outline-primary" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
-                <?= $this->translator->get('View questions in the sandbox') ?>
-            </a>
-        </div>
+<!-- lure write_answer -->
+<div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
+    <div class="mr-3 d-none d-sm-block">
+        XXX
     </div>
-    <!-- / lure write_answer -->
+    <div class="width-full">
+        <div class="text-dark font-weight-bold mb-2">
+            <?= $this->translator->get('feed', 'write_the_first_answer', 'title') ?>
+        </div>
+        <div class="small text-muted mb-3">
+            <?= $this->translator->get('feed', 'write_the_first_answer', 'msg') ?>.
+        </div>
+        <a class="btn btn-sm btn-outline-primary" href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>">
+            <?= $this->translator->get('feed', 'write_the_first_answer', 'action') ?>
+        </a>
+    </div>
+</div>
+<!-- / lure write_answer -->
 <?php endif; ?>

@@ -1,23 +1,20 @@
 <!-- sandbox_nav -->
 
 <nav class="ml-2 my-4">
-    <div class="text-uppercase semi-small mb-2 text-secondary">
-        <?= $this->translator->get('Filters') ?>
-    </div>
     <ul class="list-links">
         <li>
             <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="<?= ($this->list == 'without-answers') ? 'active' : '' ?>">
-                <?= $this->translator->get('Questions without answers') ?>
+                <?= $this->translator->get('sandbox', 'questions_without_answers') ?>
             </a>
         </li>
         <li>
             <a href="<?= Sandbox_URL_Helper::getWithoutCategoriesURL($this->lang) ?>" class="<?= ($this->list == 'without_categories') ? 'active' : '' ?>">
-                <?= $this->translator->get('Without categories') ?>
+                <?= $this->translator->get('sandbox', 'without_categories') ?>
             </a>
         </li>
         <li>
             <a href="<?= Sandbox_URL_Helper::getAllURL($this->lang) ?>" class="<?= ($this->list == 'newest') ? 'active' : '' ?>">
-                <?= $this->translator->get('All questions') ?>
+                <?= $this->translator->get('sandbox', 'all_questions') ?>
             </a>
         </li>
     </ul>

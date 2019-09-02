@@ -2,7 +2,7 @@
 
 <nav class="my-4">
 	<div class="text-uppercase semi-small mb-2 text-secondary">
-		<?= $this->translator->get('Actions') ?>
+		<?= $this->translator->get('question', 'actions') ?>
 	</div>
 	<ul class="list-links">
 
@@ -10,7 +10,7 @@
 		<?php if ($this->authUser) : ?>
 		<li>
 			<a href="#" data-toggle="modal" data-target="#modal_upload_image">
-				<i class="material-icons md-18 w-32px">image</i><?= ($this->question->imageBaseName) ? $this->translator->get('Update picture') : $this->translator->get('Add picture') ?>
+				<i class="material-icons md-18 w-32px">image</i><?= ($this->question->imageBaseName) ? $this->translator->get('question', 'update_picture') : $this->translator->get('question', 'add_picture') ?>
 			</a>
 		</li>
 		<?php endif; ?>
@@ -20,7 +20,7 @@
 		<!-- rename question -->
 		<li>
 			<a href="#" data-toggle="modal" data-target="#modal_rename_question">
-				<i class="material-icons md-18 w-32px">edit</i><?= $this->translator->get('Rename question') ?>
+				<i class="material-icons md-18 w-32px">edit</i><?= $this->translator->get('question', 'rename_question') ?>
 			</a>
 		</li>
 		<!-- / rename question -->
@@ -28,13 +28,13 @@
 
 		<li>
 			<a href="#" rel="nofollow">
-				<i class="material-icons md-18 w-32px">report</i><s><?= $this->translator->get('Report') ?></s>
+				<i class="material-icons md-18 w-32px">report</i><s><?= $this->translator->get('question', 'report') ?></s>
 			</a>
 		</li>
 
 		<li>
 			<a rel="nofollow" target="_blank" href="<?= DDG_URL_Helper::getSearchURL($this->question->title) ?>">
-				<i class="material-icons md-18 w-32px">link</i><?= $this->translator->get('Search in DuckDuckGo') ?>
+				<i class="material-icons md-18 w-32px">link</i><?= $this->translator->get('question', 'search_in_ddg') ?>
 			</a>
 		</li>
 

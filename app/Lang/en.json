@@ -1,5 +1,25 @@
 {
+    "btn": {
+        "cancel": "Cancel",
+        "close": "Close",
+        "follow": "Follow",
+        "followed": "Followed",
+        "save": "Save",
+        "unfollow": "Unfollow"
+    },
+    "activity": {
+        "category added question": "question added to category",
+        "change answer": "updated answer",
+        "change signature": "changed the signature",
+        "follow category": "subscribed to a category",
+        "follow question": "subscribed to a question",
+        "follow user": "subscribed to user",
+        "question renamed": "the question is renamed",
+        "question updated answer": "updated answer",
+        "renamed question": "renamed the question"
+    },
     "answer_edit": {
+        "description_of_changes": "Description of changes",
         "block__how_to_edit": {
             "item_1": "Fix grammatical or spelling errors",
             "item_2": "Add related resources or links",
@@ -9,13 +29,16 @@
         },
         "title": "Edit answer"
     },
+    "answer": {
+        "edit_answer": "Edit answer"
+    },
     "answer_history": {
+        "no_description_of_changes": "No description of changes",
+        "description_of_changes": "Description of changes",
+        "change_ID": "Change ID",
         "page_title": "Answer history"
     },
     "answeropedia": "Answeropedia",
-    "app_bar": {
-        "text": "Community answers to your questions"
-    },
     "block__about_answeropedia": {
         "btn_action": "Join the community",
         "text": "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.",
@@ -28,6 +51,7 @@
         "title": "Sign up"
     },
     "categories": {
+        "new_categories": "New categories",
         "add_categories": "Add category",
         "more_categories": "More categories",
         "page_description": "Questions by category",
@@ -35,6 +59,7 @@
         "title": "Categories"
     },
     "category": {
+        "questions_with_category": "Questions with category",
         "actions_right": {
             "rename_category": "Rename category",
             "title": "Actions"
@@ -47,6 +72,48 @@
     "error__category_not_found": {
         "page_title": "Category not found: ",
         "title": "Category not found"
+    },
+    "feed": {
+        "write_the_first_answer": {
+            "title": "Write the first answer",
+            "msg": "Look at the questions that no one else has written an answer and become the first author.",
+            "action": "View questions in the sandbox"
+        },
+        "find_your_first_friends": {
+            "title": "Find your first friends",
+            "msg": "Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.",
+            "action": "View users"
+        },
+        "subscribe_to_several_categories": {
+            "title": "Subscribe to several categories",
+            "msg": "Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.",
+            "action": "View popular categories"
+        },
+        "follow_some_questions": {
+            "title": "Follow some questions",
+            "msg": "By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.",
+            "action": "Views a questions"
+        },
+        "improve_your_feed": {
+            "title": "Improve your feed"
+        },
+        "visit_your_feed": "Visit your feed",
+        "set_real_name": {
+            "title": "Set real name",
+            "action": "Set real name",
+            "msg": "A real name is more credible than <strong> @username </strong>. It will be shown next to your edits and in the TOP authors."
+        },
+        "set_signature": {
+            "msg": "The signature describes your professional skills and knowledge. It will appear next to the edits of the answers you make.",
+            "action": "Set signature",
+            "title": "Set signature"
+        },
+        "follow_3_more_categories": "Follow 3 more categories",
+        "follow_your_first_question": "Follow your first question",
+        "find_your_friends": "Find your friends",
+        "ask_your_first_question": "Ask your first question",
+        "answer_a_question": "Answer a question",
+        "Feed": "Лента"
     },
     "flow": {
         "page_title": "Flow"
@@ -69,6 +136,7 @@
         "page_title": "Error 500"
     },
     "main": {
+        "slogan": "Ask a question and get one complete answer",
         "how_it_works": {
             "step_1_msg": "You ask a question about any category of interest to you.",
             "step_1_title": "You ask a question",
@@ -142,6 +210,29 @@
     },
     "page": "Page",
     "question": {
+        "share_link": "Share link",
+        "rename_question": "Rename question",
+        "update_picture": "Update picture",
+        "top_contributors": "Top contributors",
+        "thanks_for_the_feedback": "Thanks for the feedback!",
+        "report": "Report",
+        "search_in_ddg": "Search in DuckDuckGo",
+        "lure_follow_question": {
+            "msg": "Register or sign in and you can subscribe to this question.",
+            "signup": "Sign up"
+        },
+        "lure_first_answer": {
+            "msg": "Register or log in and you will be the first to write the answer to this question.",
+            "signup": "Sign up"
+        },
+        "your_email": "Your email",
+        "subscription_title": "Subscription to the question",
+        "email_notification_msg": "Enter your email address to get notified about the answer as soon as it appears",
+        "answer_updated": "Answer updated",
+        "answer_contributors": "Answer contributors",
+        "actions": "Actions",
+        "add_picture": "Add picture",
+        "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
         "block__categories": {
             "categories_add": "Add categories",
             "categories_change": "Change",
@@ -181,6 +272,8 @@
         "title": "Question not found"
     },
     "questions": {
+        "newest_questions": "Newest questions",
+        "more_questions": "More questions",
         "btn_add_categories": "Add categories",
         "nav": {
             "newest": "New questions",
@@ -191,6 +284,9 @@
         "questions_count": "questions with answers"
     },
     "sandbox": {
+        "without_categories": "Without categories",
+        "questions_without_answers": "Questions without answers",
+        "all_questions": "All questions",
         "about_block": {
             "btn_action": "Join the community",
             "msg_1": "The sandbox is a place to get new questions that have not yet been answered.",
@@ -204,6 +300,17 @@
         "title": "Sandbox"
     },
     "search": {
+        "view_all_categories": "View all categories",
+        "no_users_found": {
+            "title": "No users found",
+            "msg": "On request \"%query%\" could not find any users",
+            "view_all_users": "View all users"
+        },
+        "no_category_found_for_query": "No category found for \"%query%\"",
+        "no_categories_found": "No categories found",
+        "no_questions_found_msg": "On request \"%query%\" could not find any questions",
+        "no_questions_found": "No questions found",
+        "view_all_questions": "View all questions",
         "page_title": "Search"
     },
     "service_id": {
@@ -233,7 +340,11 @@
         "sandbox": "Sandbox"
     },
     "title": "Перевод заголовка",
+    "user": {
+        "answers_on_answeropedia": "Wiki-answers on Answeropedia"
+    },
     "users": {
+        "new_users_msg": "New users from around the world",
         "search_placeholder": "Search contributors",
         "title": "Contributors"
     }

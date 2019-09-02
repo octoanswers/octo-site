@@ -9,7 +9,7 @@
             <span class="font-weight-bold"><?= count($this->contributors) ?></span>&nbsp;<i class="material-icons md-18">person</i>
         </a>
         <div class="text-uppercase semi-small text-secondary">
-            <?= $this->translator->get('Top contributors') ?>
+            <?= $this->translator->get('question', 'top_contributors') ?>
         </div>
     </div>
 
@@ -39,16 +39,6 @@
         </div>
     </div>
     <?php endforeach; ?>
-
-    <!--
-            <?php if (count($this->contributors) > count($this->contributors_top)) : ?>
-                    <div class="box-footer">
-                        <a class="ml-5 small" data-scroll href="#contributors_full_list">
-                            <?= $this->translator->get('All answer contributors') ?>
-                        </a>
-                    </div>
-            <?php endif; ?>
-            -->
 
 </div>
 <!-- / top contributors @ sidebar -->

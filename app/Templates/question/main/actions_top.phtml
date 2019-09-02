@@ -3,16 +3,16 @@
 <div class="mt-3 mb-4">
 
     <?php if ($this->authUser) : ?>
-    <button class="btn btn-sm follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= $this->translator->get('Follow') ?>" data-followed-title="<?= $this->translator->get('Followed') ?>" data-unfollow-title="<?= $this->translator->get('Unfollow') ?>" type="button">
+    <button class="btn btn-sm follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
         <i class="material-icons md-18">bookmark_border</i>
-        <?= $this->followed ? $this->translator->get('Followed') : $this->translator->get('Follow'); ?>
+        <?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?>
     </button>
     <?php endif; ?>
 
     <?php if (!$this->authUser) : ?>
     <!-- fake follow_btn -->
     <button type="button" class="btn btn-sm btn-primary mb-2 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
-        <?= $this->translator->get('Follow'); ?>
+        <?= $this->translator->get('btn', 'follow'); ?>
     </button>
     <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/follow_question.phtml' ?>
     <!-- / fake follow_btn -->

@@ -1,79 +1,12 @@
 {
-	"Actions": "Действия",
-	"Add picture": "Добавить картинку",
-	"All answer contributors": "Все авторы ответа",
-	"All questions": "Все вопросы",
-	"Answer a question": "Ответьте на вопрос",
-	"Answer contributors": "Авторы ответа",
-	"Answer updated": "Ответ обновлен",
-	"Ask a question and get one complete answer": "Задайте вопрос и получите один исчерпывающий ответ",
-	"Ask your first question": "Задайте первый вопрос",
-	"Back to question": "Вернуться к вопросу",
-	"By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.": "Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три или более вопроса.",
-	"Cancel": "Отмена",
-	"Change": "Правка",
-	"Change ID": "Правка",
-	"Change history": "История изменений",
-	"Close": "Закрыть",
-	"Description of changes": "Описание изменений",
-	"Edit": "Править",
-	"Edit answer": "Править ответ",
-	"Enter your email address to get notified about the answer as soon as it appears": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
-	"Filters": "Фильтры",
-	"Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.": "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и прочие активности этих пользователей будут появляться у вас в ленте новостей.",
-	"Find your first friends": "Найдите первых друзей",
-	"Find your friends": "Найдите друзей",
-	"Follow": "Подписаться",
-	"Follow 3 more categories": "Подпишитесь на три категории",
-	"Follow some questions": "Следуйте за некоторыми вопросами",
-	"Follow your first question": "Подпишитесь на первый вопрос",
-	"Followed": "Подписан",
-	"Improve your feed": "Улучшите вашу ленту",
-	"It's like wikipedia, only for questions and answers.": "Это как Википедия, только для вопросов и ответов.",
-	"Look at the questions that no one else has written an answer and become the first author.": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
-	"More questions": "Больше вопросов",
-	"New categories": "Новые категории",
-	"New users from around the world": "Новые пользователи со всего мира",
-	"Newest questions": "Новые вопросы",
-	"No categories found": "категорий не найдено",
-	"No category found for \"%query%\"": "Не удалось найти категории по запросу «%query%»",
-	"No description of changes": "Нет описания изменений",
-	"No questions found": "Вопросов не найдено",
-	"No users found": "Пользователей не найдено",
-	"On request \"%query%\" could not find any questions": "По запросу «%query%» не удалось найти ни одного вопроса",
-	"On request \"%query%\" could not find any users": "По запросу «%query%» не удалось найти ни одного пользователя",
-	"Questions with category": "Вопросы в категории",
-	"Questions without answers": "Вопросы без ответа",
-	"Register or log in and you will be the first to write the answer to this question.": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
-	"Register or sign in and you can subscribe to this question.": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
-	"Rename question": "Переименовать вопрос",
-	"Report": "Пожаловаться",
-	"Save": "Сохранить",
-	"Search categories": "Поиск тем",
-	"Search in DuckDuckGo": "Поискать в DuckDuckGo",
-	"Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.": "Выберите и подпишитесь на три близких вам категории вопросов. После этого новые вопросы на эти темы будут появляться у вас в ленте новостей.",
-	"Set real name": "Введите реальное имя",
-	"Set signature": "Придумайте подпись",
-	"Share link": "Поделиться ссылкой",
-	"Subscribe to several categories": "Подпишитесь на несколько категорий",
-	"Subscription to the question": "Подписка на вопрос",
-	"Thanks for the feedback!": "Спасибо за отзыв!",
-	"Tools": "Инструменты",
-	"Top contributors": "Топ авторов",
-	"Unfollow": "Отписаться",
-	"Update picture": "Обновить картинку",
-	"View all categories": "Посмотреть все категории",
-	"View all questions": "Посмотреть все вопросы",
-	"View all users": "Посмотреть всех пользователей",
-	"View popular categories": "Посмотреть популярные категории",
-	"View questions in the sandbox": "Посмотреть вопросы в песочнице",
-	"View users": "Посмотреть пользователей",
-	"Views a questions": "Посмотреть вопросы",
-	"Visit your feed": "Посетите ленту",
-	"Wiki-answers on Answeropedia": "Вики-ответы на Answeropedia",
-	"Without categories": "Без тем",
-	"Write the first answer": "Напишите первый ответ",
-	"Your email": "Ваш email",
+	"btn": {
+		"cancel": "Отмена",
+		"close": "Закрыть",
+		"follow": "Подписаться",
+		"followed": "Подписан",
+		"save": "Сохранить",
+		"unfollow": "Отписаться"
+	},
 	"activity": {
 		"category added question": "вопрос добавлен в категорию",
 		"change answer": "обновил ответ",
@@ -85,7 +18,11 @@
 		"question updated answer": "обновлен ответ",
 		"renamed question": "переименовал вопрос"
 	},
+	"answer": {
+		"edit_answer": "Править ответ"
+	},
 	"answer_edit": {
+		"description_of_changes": "Описание изменений",
 		"block__how_to_edit": {
 			"item_1": "Не допускайте грамматические или орфографические ошибки",
 			"item_2": "Добавляйте ссылки на связанные ответы и сайты",
@@ -96,13 +33,12 @@
 		"title": "Редактирование ответа"
 	},
 	"answer_history": {
-		"Answer history": "История изменений ответа",
+		"no_description_of_changes": "Нет описания изменений",
+		"description_of_changes": "Описание изменений",
+		"change_ID": "Правка",
 		"page_title": "История изменений ответа"
 	},
 	"answeropedia": "Answeropedia",
-	"app_bar": {
-		"text": "Компетентные ответы на ваши вопросы"
-	},
 	"block__about_answeropedia": {
 		"btn_action": "Присоединиться к сообществу",
 		"text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
@@ -115,6 +51,7 @@
 		"title": "Регистрация"
 	},
 	"categories": {
+		"new_categories": "Новые категории",
 		"add_categories": "Добавить категорию",
 		"more_categories": "Больше тем",
 		"page_description": "Вопросы по категориям",
@@ -122,6 +59,7 @@
 		"title": "Категории"
 	},
 	"category": {
+		"questions_with_category": "Вопросы в категории",
 		"actions_right": {
 			"rename_category": "Переименовать категорию",
 			"title": "Действия"
@@ -135,6 +73,45 @@
 		"title": "Категория не найдена"
 	},
 	"feed": {
+		"write_the_first_answer": {
+			"title": "Напишите первый ответ",
+			"msg": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
+			"action": "Посмотреть вопросы в песочнице"
+		},
+		"find_your_first_friends": {
+			"title": "Найдите первых друзей",
+			"msg": "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и прочие активности этих пользователей будут появляться у вас в ленте новостей.",
+			"action": "Посмотреть пользователей"
+		},
+		"subscribe_to_several_categories": {
+			"title": "Подпишитесь на несколько категорий",
+			"msg": "Выберите и подпишитесь на три близких вам категории вопросов. После этого новые вопросы на эти темы будут появляться у вас в ленте новостей.",
+			"action": "Посмотреть популярные категории"
+		},
+		"follow_some_questions": {
+			"title": "Следуйте за некоторыми вопросами",
+			"msg": "Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три или более вопроса.",
+			"action": "Посмотреть вопросы"
+		},
+		"improve_your_feed": {
+			"title": "Улучшите вашу ленту"
+		},
+		"visit_your_feed": "Посетите ленту",
+		"set_real_name": {
+			"title": "Задайте реальное имя",
+			"action": "Задать реальное имя",
+			"msg": "Реальное имя вызывает больше доверия, чем <strong>@username</strong>. Оно будет показываться рядом с вашими правками и в ТОПе авторов."
+		},
+		"set_signature": {
+			"msg": "Подпись описывает ваши профессиональные навыки и знания. Она показываться рядом с правками ответов, которые вы делаете.",
+			"action": "Задать подпись",
+			"title": "Придумайте подпись"
+		},
+		"follow_3_more_categories": "Подпишитесь на три категории",
+		"follow_your_first_question": "Подпишитесь на первый вопрос",
+		"find_your_friends": "Найдите друзей",
+		"ask_your_first_question": "Задайте первый вопрос",
+		"answer_a_question": "Ответьте на вопрос",
 		"Feed": "Лента"
 	},
 	"flow": {
@@ -165,6 +142,7 @@
 		"page_title": "Ошибка 500"
 	},
 	"main": {
+		"slogan": "Задайте вопрос и получите один исчерпывающий ответ",
 		"how_it_works": {
 			"step_1_msg": "Вы задаете вопрос на любую интересующую вас тему.",
 			"step_1_title": "Вы задаете вопрос",
@@ -248,6 +226,28 @@
 		"page_title": "Ошибка 404"
 	},
 	"question": {
+		"share_link": "Поделиться ссылкой",
+		"update_picture": "Обновить картинку",
+		"top_contributors": "Топ авторов",
+		"thanks_for_the_feedback": "Спасибо за отзыв!",
+		"report": "Пожаловаться",
+		"search_in_ddg": "Поискать в DuckDuckGo",
+		"lure_follow_question": {
+			"msg": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
+			"signup": "Регистраци"
+		},
+		"lure_first_answer": {
+			"msg": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
+			"signup": "Регистрация"
+		},
+		"your_email": "Ваш email",
+		"subscription_title": "Подписка на вопрос",
+		"email_notification_msg": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
+		"answer_updated": "Ответ обновлен",
+		"answer_contributors": "Авторы ответа",
+		"actions": "Действия",
+		"add_picture": "Добавить картинку",
+		"rename_question": "Переименовать вопрос",
 		"Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
 		"Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
 		"Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
@@ -301,6 +301,8 @@
 		"title": "Редактирование категорий"
 	},
 	"questions": {
+		"newest_questions": "Новые вопросы",
+		"more_questions": "Больше вопросов",
 		"btn_add_categories": "Добавить категории",
 		"nav": {
 			"newest": "Новые вопросы",
@@ -314,6 +316,9 @@
 		"Questions and Answers": "Вопросы и ответы"
 	},
 	"sandbox": {
+		"without_categories": "Без тем",
+		"questions_without_answers": "Вопросы без ответа",
+		"all_questions": "Все вопросы",
 		"about_block": {
 			"btn_action": "Присоединиться к сообществу",
 			"msg_1": "Это место куда попадают новые, ещё не имеющие ответа вопросы.",
@@ -327,6 +332,17 @@
 		"title": "Песочница"
 	},
 	"search": {
+		"view_all_categories": "Посмотреть все категории",
+		"no_users_found": {
+			"title": "Пользователей не найдено",
+			"msg": "По запросу «%query%» не удалось найти ни одного пользователя",
+			"view_all_users": "Посмотреть всех пользователей"
+		},
+		"no_category_found_for_query": "Не удалось найти категории по запросу «%query%»",
+		"no_categories_found": "категорий не найдено",
+		"no_questions_found_msg": "On request \"%query%\" could not find any questions",
+		"no_questions_found": "Вопросов не найдено",
+		"view_all_questions": "Посмотреть все вопросы",
 		"page_title": "Поиск"
 	},
 	"search__filter": {
@@ -371,6 +387,7 @@
 		"Update categories for question \"%question%\" - Answeropedia": "Обновление тем вопроса «%question%» - Answeropedia"
 	},
 	"user": {
+		"answers_on_answeropedia": "Вики-ответы на Answeropedia",
 		"Knows about": "Знает о",
 		"Logout": "Выйти",
 		"no_answers": {
@@ -379,6 +396,7 @@
 		}
 	},
 	"users": {
+		"new_users_msg": "Новые пользователи со всего мира",
 		"Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
 		"search_placeholder": "Поиск авторов",
 		"title": "Авторы ответов"

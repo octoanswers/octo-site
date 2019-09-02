@@ -6,18 +6,18 @@
         <div class="modal-content text-center">
             <div class="modal-header border-0">
                 <p class="h1 text-center mx-auto">
-					<i class="material-icons md-24">account_circle</i>
+                    <i class="material-icons md-24">account_circle</i>
                 </p>
             </div>
             <div class="modal-body">
-                <p><?= $this->translator->get('Register or log in and you will be the first to write the answer to this question.') ?></p>
+                <p><?= $this->translator->get('question', 'lure_first_answer', 'msg') ?></p>
             </div>
             <div class="modal-footer">
                 <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal_signup">
-                    <?= $this->translator->get('Signup') ?>
+                    <?= $this->translator->get('question', 'lure_first_answer', 'signup') ?>
                 </a>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                    <?= $this->translator->get('Close') ?>
+                    <?= $this->translator->get('btn', 'close') ?>
                 </button>
             </div>
         </div>
