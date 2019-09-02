@@ -1,12 +1,4 @@
 {
-	"btn": {
-		"cancel": "Отмена",
-		"close": "Закрыть",
-		"follow": "Подписаться",
-		"followed": "Подписан",
-		"save": "Сохранить",
-		"unfollow": "Отписаться"
-	},
 	"activity": {
 		"category added question": "вопрос добавлен в категорию",
 		"change answer": "обновил ответ",
@@ -22,7 +14,6 @@
 		"edit_answer": "Править ответ"
 	},
 	"answer_edit": {
-		"description_of_changes": "Описание изменений",
 		"block__how_to_edit": {
 			"item_1": "Не допускайте грамматические или орфографические ошибки",
 			"item_2": "Добавляйте ссылки на связанные ответы и сайты",
@@ -30,12 +21,13 @@
 			"more_about_editing": "Подробнее о редактировании:",
 			"title": "Памятка автору"
 		},
+		"description_of_changes": "Описание изменений",
 		"title": "Редактирование ответа"
 	},
 	"answer_history": {
-		"no_description_of_changes": "Нет описания изменений",
-		"description_of_changes": "Описание изменений",
 		"change_ID": "Правка",
+		"description_of_changes": "Описание изменений",
+		"no_description_of_changes": "Нет описания изменений",
 		"page_title": "История изменений ответа"
 	},
 	"answeropedia": "Answeropedia",
@@ -50,21 +42,29 @@
 		"text": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
 		"title": "Регистрация"
 	},
+	"btn": {
+		"cancel": "Отмена",
+		"close": "Закрыть",
+		"follow": "Подписаться",
+		"followed": "Подписан",
+		"save": "Сохранить",
+		"unfollow": "Отписаться"
+	},
 	"categories": {
-		"new_categories": "Новые категории",
 		"add_categories": "Добавить категорию",
 		"more_categories": "Больше тем",
+		"new_categories": "Новые категории",
 		"page_description": "Вопросы по категориям",
 		"search_placeholder": "Поиск категорий",
 		"title": "Категории"
 	},
 	"category": {
-		"questions_with_category": "Вопросы в категории",
 		"actions_right": {
 			"rename_category": "Переименовать категорию",
 			"title": "Действия"
 		},
 		"page_title": "Категория: ",
+		"questions_with_category": "Вопросы в категории",
 		"title": "Категория",
 		"total_questions": "Всего вопросов"
 	},
@@ -73,46 +73,46 @@
 		"title": "Категория не найдена"
 	},
 	"feed": {
-		"write_the_first_answer": {
-			"title": "Напишите первый ответ",
-			"msg": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
-			"action": "Посмотреть вопросы в песочнице"
-		},
+		"Feed": "Лента",
+		"answer_a_question": "Ответьте на вопрос",
+		"ask_your_first_question": "Задайте первый вопрос",
 		"find_your_first_friends": {
-			"title": "Найдите первых друзей",
+			"action": "Посмотреть пользователей",
 			"msg": "Найдите и подпишитесь на три интересных вам пользователя. Вопросы, ответы и прочие активности этих пользователей будут появляться у вас в ленте новостей.",
-			"action": "Посмотреть пользователей"
+			"title": "Найдите первых друзей"
 		},
-		"subscribe_to_several_categories": {
-			"title": "Подпишитесь на несколько категорий",
-			"msg": "Выберите и подпишитесь на три близких вам категории вопросов. После этого новые вопросы на эти темы будут появляться у вас в ленте новостей.",
-			"action": "Посмотреть популярные категории"
-		},
+		"find_your_friends": "Найдите друзей",
+		"follow_3_more_categories": "Подпишитесь на три категории",
 		"follow_some_questions": {
-			"title": "Следуйте за некоторыми вопросами",
+			"action": "Посмотреть вопросы",
 			"msg": "Подписываясь на интересные вопросы, вы сможете следить за их правками. Найдите и подпишитесь на три или более вопроса.",
-			"action": "Посмотреть вопросы"
+			"title": "Следуйте за некоторыми вопросами"
 		},
+		"follow_your_first_question": "Подпишитесь на первый вопрос",
 		"improve_your_feed": {
 			"title": "Улучшите вашу ленту"
 		},
-		"visit_your_feed": "Посетите ленту",
 		"set_real_name": {
-			"title": "Задайте реальное имя",
 			"action": "Задать реальное имя",
-			"msg": "Реальное имя вызывает больше доверия, чем <strong>@username</strong>. Оно будет показываться рядом с вашими правками и в ТОПе авторов."
+			"msg": "Реальное имя вызывает больше доверия, чем <strong>@username</strong>. Оно будет показываться рядом с вашими правками и в ТОПе авторов.",
+			"title": "Задайте реальное имя"
 		},
 		"set_signature": {
-			"msg": "Подпись описывает ваши профессиональные навыки и знания. Она показываться рядом с правками ответов, которые вы делаете.",
 			"action": "Задать подпись",
+			"msg": "Подпись описывает ваши профессиональные навыки и знания. Она показываться рядом с правками ответов, которые вы делаете.",
 			"title": "Придумайте подпись"
 		},
-		"follow_3_more_categories": "Подпишитесь на три категории",
-		"follow_your_first_question": "Подпишитесь на первый вопрос",
-		"find_your_friends": "Найдите друзей",
-		"ask_your_first_question": "Задайте первый вопрос",
-		"answer_a_question": "Ответьте на вопрос",
-		"Feed": "Лента"
+		"subscribe_to_several_categories": {
+			"action": "Посмотреть популярные категории",
+			"msg": "Выберите и подпишитесь на три близких вам категории вопросов. После этого новые вопросы на эти темы будут появляться у вас в ленте новостей.",
+			"title": "Подпишитесь на несколько категорий"
+		},
+		"visit_your_feed": "Посетите ленту",
+		"write_the_first_answer": {
+			"action": "Посмотреть вопросы в песочнице",
+			"msg": "Посмотрите вопросы на которые еще никто не написал ответа и станьте первым автором.",
+			"title": "Напишите первый ответ"
+		}
 	},
 	"flow": {
 		"Flow": "Поток",
@@ -126,15 +126,15 @@
 	"footer": {
 		"nav": {
 			"about": "О сайте",
+			"main_page": "Главная",
 			"questions": "Вопросы",
 			"rules": "Правила",
 			"support": "Поддержка",
-			"main_page": "Главная",
 			"users": "Пользователи"
 		},
 		"note": {
-			"designed_and_built": "Сайт разработан с ♥ командой <a class=\"text-dark\" href=\"https://github.com/orgs/answeropedia/people\">Ансверопедии</a>, при поддержке <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/graphs/contributors\">контрибъюторов</a>.",
-			"code_licensed": "Код под лицензией <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/blob/master/LICENSE\">MIT</a>, ответы <a class=\"text-dark\" href=\"https://github.com/answeropedia/dumps/blob/master/LICENSE\">CC BY SA 4.0</a>."
+			"code_licensed": "Код под лицензией <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/blob/master/LICENSE\">MIT</a>, ответы <a class=\"text-dark\" href=\"https://github.com/answeropedia/dumps/blob/master/LICENSE\">CC BY SA 4.0</a>.",
+			"designed_and_built": "Сайт разработан с ♥ командой <a class=\"text-dark\" href=\"https://github.com/orgs/answeropedia/people\">Ансверопедии</a>, при поддержке <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/graphs/contributors\">контрибъюторов</a>."
 		}
 	},
 	"internal_server_error": {
@@ -142,7 +142,6 @@
 		"page_title": "Ошибка 500"
 	},
 	"main": {
-		"slogan": "Задайте вопрос и получите один исчерпывающий ответ",
 		"how_it_works": {
 			"step_1_msg": "Вы задаете вопрос на любую интересующую вас тему.",
 			"step_1_title": "Вы задаете вопрос",
@@ -169,7 +168,8 @@
 		"share_link": {
 			"note": "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями ссылкой на него.",
 			"title": "Поделиться ссылкой"
-		}
+		},
+		"slogan": "Задайте вопрос и получите один исчерпывающий ответ"
 	},
 	"modal": {
 		"category_rename": {
@@ -226,31 +226,13 @@
 		"page_title": "Ошибка 404"
 	},
 	"question": {
-		"share_link": "Поделиться ссылкой",
-		"update_picture": "Обновить картинку",
-		"top_contributors": "Топ авторов",
-		"thanks_for_the_feedback": "Спасибо за отзыв!",
-		"report": "Пожаловаться",
-		"search_in_ddg": "Поискать в DuckDuckGo",
-		"lure_follow_question": {
-			"msg": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
-			"signup": "Регистраци"
-		},
-		"lure_first_answer": {
-			"msg": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
-			"signup": "Регистрация"
-		},
-		"your_email": "Ваш email",
-		"subscription_title": "Подписка на вопрос",
-		"email_notification_msg": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
-		"answer_updated": "Ответ обновлен",
-		"answer_contributors": "Авторы ответа",
-		"actions": "Действия",
-		"add_picture": "Добавить картинку",
-		"rename_question": "Переименовать вопрос",
 		"Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
 		"Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
 		"Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
+		"actions": "Действия",
+		"add_picture": "Добавить картинку",
+		"answer_contributors": "Авторы ответа",
+		"answer_updated": "Ответ обновлен",
 		"block__categories_top": {
 			"more_btn": "ещё…"
 		},
@@ -266,14 +248,32 @@
 			"categories_change": "Изменить",
 			"title": "Категории вопроса"
 		},
+		"email_notification_msg": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
 		"lure_be_first_contributor": {
 			"btn_write": "Написать первый ответ",
 			"message": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!",
 			"title": "Станьте первым автором!"
 		},
+		"lure_first_answer": {
+			"msg": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
+			"signup": "Регистрация"
+		},
+		"lure_follow_question": {
+			"msg": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
+			"signup": "Регистраци"
+		},
 		"redirected_from": "Перенаправлено с вопроса: ",
+		"rename_question": "Переименовать вопрос",
+		"report": "Пожаловаться",
+		"search_in_ddg": "Поискать в DuckDuckGo",
+		"share_link": "Поделиться ссылкой",
 		"short_answer_title": "Короткий ответ",
-		"user_contribution": "Вклад пользователя"
+		"subscription_title": "Подписка на вопрос",
+		"thanks_for_the_feedback": "Спасибо за отзыв!",
+		"top_contributors": "Топ авторов",
+		"update_picture": "Обновить картинку",
+		"user_contribution": "Вклад пользователя",
+		"your_email": "Ваш email"
 	},
 	"question__actions_top": {
 		"edit_answer": "Править ответ",
@@ -301,24 +301,21 @@
 		"title": "Редактирование категорий"
 	},
 	"questions": {
-		"newest_questions": "Новые вопросы",
-		"more_questions": "Больше вопросов",
 		"btn_add_categories": "Добавить категории",
+		"more_questions": "Больше вопросов",
 		"nav": {
 			"newest": "Новые вопросы",
 			"popular": "Популярные",
 			"recently_updated": "Недавно обновленные"
 		},
 		"new": "Новый",
+		"newest_questions": "Новые вопросы",
 		"questions_count": "вопросов с ответами"
 	},
 	"root": {
 		"Questions and Answers": "Вопросы и ответы"
 	},
 	"sandbox": {
-		"without_categories": "Без тем",
-		"questions_without_answers": "Вопросы без ответа",
-		"all_questions": "Все вопросы",
 		"about_block": {
 			"btn_action": "Присоединиться к сообществу",
 			"msg_1": "Это место куда попадают новые, ещё не имеющие ответа вопросы.",
@@ -326,24 +323,27 @@
 			"now_in_the_sandbox": "сейчас в песочнице",
 			"title": "Что такое Песочница"
 		},
+		"all_questions": "Все вопросы",
 		"answer_updated": "Ответ обновлен",
 		"btn_add_categories": "Добавить категории",
 		"btn_write_answer": "Написать ответ",
-		"title": "Песочница"
+		"questions_without_answers": "Вопросы без ответа",
+		"title": "Песочница",
+		"without_categories": "Без тем"
 	},
 	"search": {
-		"view_all_categories": "Посмотреть все категории",
+		"no_categories_found": "категорий не найдено",
+		"no_category_found_for_query": "Не удалось найти категории по запросу «%query%»",
+		"no_questions_found": "Вопросов не найдено",
+		"no_questions_found_msg": "On request \"%query%\" could not find any questions",
 		"no_users_found": {
-			"title": "Пользователей не найдено",
 			"msg": "По запросу «%query%» не удалось найти ни одного пользователя",
+			"title": "Пользователей не найдено",
 			"view_all_users": "Посмотреть всех пользователей"
 		},
-		"no_category_found_for_query": "Не удалось найти категории по запросу «%query%»",
-		"no_categories_found": "категорий не найдено",
-		"no_questions_found_msg": "On request \"%query%\" could not find any questions",
-		"no_questions_found": "Вопросов не найдено",
-		"view_all_questions": "Посмотреть все вопросы",
-		"page_title": "Поиск"
+		"page_title": "Поиск",
+		"view_all_categories": "Посмотреть все категории",
+		"view_all_questions": "Посмотреть все вопросы"
 	},
 	"search__filter": {
 		"categories": "Категории",
@@ -387,17 +387,17 @@
 		"Update categories for question \"%question%\" - Answeropedia": "Обновление тем вопроса «%question%» - Answeropedia"
 	},
 	"user": {
-		"answers_on_answeropedia": "Вики-ответы на Answeropedia",
 		"Knows about": "Знает о",
 		"Logout": "Выйти",
+		"answers_on_answeropedia": "Вики-ответы на Answeropedia",
 		"no_answers": {
 			"No answers": "Нет ответов",
 			"User has not written any answers yet": "Пользователь пока не написал ни одного ответа"
 		}
 	},
 	"users": {
-		"new_users_msg": "Новые пользователи со всего мира",
 		"Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+		"new_users_msg": "Новые пользователи со всего мира",
 		"search_placeholder": "Поиск авторов",
 		"title": "Авторы ответов"
 	}
