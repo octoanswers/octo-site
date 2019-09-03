@@ -16,7 +16,7 @@ class History_Answer_PageController__en__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Answer history How to cry? – Answeropedia', $response_body);
+        $this->assertStringContainsString('Answer history: How to cry? – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);

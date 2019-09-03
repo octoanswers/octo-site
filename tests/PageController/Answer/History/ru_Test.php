@@ -16,7 +16,7 @@ class History_Answer_PageController__ru__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('История изменений ответа Чем занимается гинеколог? – Answeropedia', $response_body);
+        $this->assertStringContainsString('История изменений ответа: Чем занимается гинеколог? – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);

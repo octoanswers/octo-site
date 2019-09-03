@@ -29,7 +29,7 @@ class History_Answer_PageController extends Abstract_PageController
         }
 
         $this->template = 'answer_history';
-        $this->pageTitle = $this->translator->get('answer_history', 'page_title') . ' ' . $this->question->title . ' – ' . $this->translator->get('answeropedia');
+        $this->pageTitle = $this->translator->get('answer_history', 'page_title') . ': ' . $this->question->title . ' – ' . $this->translator->get('answeropedia');
         $this->pageDescription = $this->translator->get('answer_history', 'page_title');
 
         $output = $this->renderPage();
