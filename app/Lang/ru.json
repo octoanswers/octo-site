@@ -1,14 +1,14 @@
 {
 	"activity": {
-		"category added question": "вопрос добавлен в категорию",
-		"change answer": "обновил ответ",
-		"change signature": "поменял подпись",
-		"follow category": "подписался на категорию",
-		"follow question": "подписался на вопрос",
-		"follow user": "подписался на пользователя",
-		"question renamed": "вопрос переименован",
-		"question updated answer": "обновлен ответ",
-		"renamed question": "переименовал вопрос"
+		"category_added_question": "вопрос добавлен в категорию",
+		"change_answer": "обновил ответ",
+		"change_signature": "поменял подпись",
+		"follow_category": "подписался на категорию",
+		"follow_question": "подписался на вопрос",
+		"follow_user": "подписался на пользователя",
+		"question_renamed": "вопрос переименован",
+		"question_updated_answer": "обновлен ответ",
+		"renamed_question": "переименовал вопрос"
 	},
 	"answer": {
 		"edit_answer": "Править ответ"
@@ -73,7 +73,6 @@
 		"title": "Категория не найдена"
 	},
 	"feed": {
-		"Feed": "Лента",
 		"answer_a_question": "Ответьте на вопрос",
 		"ask_your_first_question": "Задайте первый вопрос",
 		"find_your_first_friends": {
@@ -226,7 +225,6 @@
 		"page_title": "Ошибка 404"
 	},
 	"question": {
-		"Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
 		"Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
 		"Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
 		"actions": "Действия",
@@ -253,6 +251,10 @@
 			"btn_write": "Написать первый ответ",
 			"message": "Еще никто не попытался написать ответ на этот вопрос. Будьте первым, если тема вопроса вам близка!",
 			"title": "Станьте первым автором!"
+		},
+		"lure_edit_answer": {
+			"action": "Регистрация",
+			"msg": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос."
 		},
 		"lure_first_answer": {
 			"msg": "Зарегистрируйтесь или войдите и вы сможете первым написать ответ на этот вопрос.",
@@ -381,19 +383,15 @@
 			"foo": "bar"
 		}
 	},
-	"title": "Перевод заголовка",
-	"update_categories": {
-		"Update categories for question \"%question%\"": "Обновление тем вопроса «%question%»",
-		"Update categories for question \"%question%\" - Answeropedia": "Обновление тем вопроса «%question%» - Answeropedia"
-	},
 	"user": {
-		"Knows about": "Знает о",
-		"Logout": "Выйти",
 		"answers_on_answeropedia": "Вики-ответы на Answeropedia",
+		"knows_about": "Знает о",
+		"logout": "Выйти",
 		"no_answers": {
 			"No answers": "Нет ответов",
 			"User has not written any answers yet": "Пользователь пока не написал ни одного ответа"
-		}
+		},
+		"settings": "Настройки"
 	},
 	"users": {
 		"Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",

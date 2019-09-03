@@ -1,14 +1,14 @@
 {
     "activity": {
-        "category added question": "question added to category",
-        "change answer": "updated answer",
-        "change signature": "changed the signature",
-        "follow category": "subscribed to a category",
-        "follow question": "subscribed to a question",
-        "follow user": "subscribed to user",
-        "question renamed": "the question is renamed",
-        "question updated answer": "updated answer",
-        "renamed question": "renamed the question"
+        "category_added_question": "question added to category",
+        "change_answer": "updated answer",
+        "change_signature": "changed the signature",
+        "follow_category": "subscribed to a category",
+        "follow_question": "subscribed to a question",
+        "follow_user": "subscribed to user",
+        "question_renamed": "the question is renamed",
+        "question_updated_answer": "updated answer",
+        "renamed_question": "renamed the question"
     },
     "answer": {
         "edit_answer": "Edit answer"
@@ -74,7 +74,6 @@
         "title": "Category not found"
     },
     "feed": {
-        "Feed": "Лента",
         "answer_a_question": "Answer a question",
         "ask_your_first_question": "Ask your first question",
         "find_your_first_friends": {
@@ -210,7 +209,6 @@
     },
     "page": "Page",
     "question": {
-        "Register or log in and you can edit or supplement this question.": "Зарегистрируйтесь или войдите и вы сможете отредактировать или дополнить этот вопрос.",
         "actions": "Actions",
         "add_picture": "Add picture",
         "answer_contributors": "Answer contributors",
@@ -239,6 +237,10 @@
             "btn_write": "Write first answer",
             "message": "Still no one tried to write an answer to this question. Be the first if the category of the question is close to you!",
             "title": "Be the first author"
+        },
+        "lure_edit_answer": {
+            "action": "Sign up",
+            "msg": "Register or log in and you can edit or supplement this question."
         },
         "lure_first_answer": {
             "msg": "Register or log in and you will be the first to write the answer to this question.",
@@ -339,9 +341,15 @@
         "recent_changes": "Recent changes",
         "sandbox": "Sandbox"
     },
-    "title": "Перевод заголовка",
     "user": {
-        "answers_on_answeropedia": "Wiki-answers on Answeropedia"
+        "answers_on_answeropedia": "Wiki-answers on Answeropedia",
+        "knows_about": "Knows about",
+        "logout": "Log out",
+        "no_answers": {
+            "No answers": "No answers",
+            "User has not written any answers yet": "This user has not yet written any answer"
+        },
+        "settings": "Settings"
     },
     "users": {
         "new_users_msg": "New users from around the world",

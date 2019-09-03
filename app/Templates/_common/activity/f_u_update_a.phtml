@@ -8,7 +8,7 @@
     <div class="width-full">
         <div class="text-muted mb-3">
             <a class="text-dark font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
-            <?= $this->translator->get('change answer') ?>
+            <?= $this->translator->get('activity', 'change_answer') ?>
             <a class="text-dark font-weight-bold" href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
         </div>
         <pre><?= $data['revision']['diff_text'] ?></pre>

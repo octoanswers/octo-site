@@ -8,7 +8,7 @@
     <div class="width-full">
         <div class="text-muted">
             <a class="text-dark font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
-            <?= $this->translator->get('follow category') ?>
+            <?= $this->translator->get('activity', 'follow_category') ?>
             <a class="text-dark font-weight-bold" href="<?= $data['category']['url'] ?>">#<?= $data['category']['title'] ?></a>
         </div>
         <span class="small text-secondary">

@@ -10,7 +10,7 @@
             <a class="text-dark font-weight-bold" href="<?= $data['user']['profile_url'] ?>">
                 <?= $data['user']['name'] ?>
             </a>
-            <?= $this->translator->get('follow user') ?>
+            <?= $this->translator->get('activity', 'follow_user') ?>
             <a class="text-dark font-weight-bold" href="<?= $data['followed_user']['profile_url'] ?>">
                 <?= $data['followed_user']['name'] ?>
             </a>

@@ -2,21 +2,21 @@
 <div class="my-3">
 
     <?php if ($this->authUser && $this->authUser->id != $this->user->id) : ?>
-    <button class="btn follow_user_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>" data-user-id="<?= $this->user->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
-        <i class="material-icons md-18">bookmark</i>
-        <span><?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?></span>
-    </button>
+        <button class="btn follow_user_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>" data-user-id="<?= $this->user->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
+            <i class="material-icons md-18">bookmark</i>
+            <span><?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?></span>
+        </button>
     <?php endif; ?>
 
     <?php if ($this->authUser && ($this->authUser->id == $this->user->id)) : ?>
-    <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::getSettingsURL($this->lang) ?>">
-        <i class="material-icons md-18">settings</i>
-        <?= $this->translator->get('Settings') ?>
-    </a>
-    <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="#" data-toggle="modal" data-target="#modal__logout">
-        <i class="material-icons md-18">exit_to_app</i>
-        <?= $this->translator->get('Logout') ?>
-    </a>
+        <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::getSettingsURL($this->lang) ?>">
+            <i class="material-icons md-18">settings</i>
+            <?= $this->translator->get('user', 'settings') ?>
+        </a>
+        <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="#" data-toggle="modal" data-target="#modal__logout">
+            <i class="material-icons md-18">exit_to_app</i>
+            <?= $this->translator->get('user', 'logout') ?>
+        </a>
     <?php endif; ?>
 
 </div>

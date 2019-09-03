@@ -7,7 +7,7 @@
     </div>
     <div class="width-full">
         <div class="text-muted">
-            <?= $this->translator->get('category added question') ?>:
+            <?= $this->translator->get('activity', 'category_added_question') ?>:
 
             <?php if (isset($data['category'])) : ?>
                 <a class="text-dark font-weight-bold" href="<?= $data['category']['url'] ?>"><?= $data['category']['title'] ?></a>
