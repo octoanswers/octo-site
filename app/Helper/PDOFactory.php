@@ -56,19 +56,25 @@ class PDOFactory
      * *Singleton* via the `new` operator from outside of this class.
      */
     protected function __construct()
-    { }
+    {
+        // Do nothing
+    }
 
     /**
      * Private clone method to prevent cloning of the instance of the
      * *Singleton* instance.
      */
     private function __clone()
-    { }
+    {
+        // Do nothing
+    }
 
     /**
      * Private unserialize method to prevent unserializing of the *Singleton*
      * instance.
      */
     private function __wakeup()
-    { }
+    {
+        // Do nothing
+    }
 }
