@@ -19,7 +19,7 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->categories = (new Categories_Query($this->lang))->categoriesForQuestionWithID($questionID);
+        $this->categories = (new Categories_Query($this->lang))->categories_for_question_with_ID($questionID);
 
         $this->categoryNames = [];
         foreach ($this->categories as $category) {

@@ -77,7 +77,7 @@ class Show_Question_PageController extends Abstract_PageController
             $this->contributors_top = $this->contributors;
         }
 
-        $this->categories = (new Categories_Query($this->lang))->categoriesForQuestionWithID($this->question->id);
+        $this->categories = (new Categories_Query($this->lang))->categories_for_question_with_ID($this->question->id);
 
         if (count($this->categories)) {
             if (count($this->categories) > 2) {

@@ -41,10 +41,6 @@ class PDOFactory
         if (!isset(self::$connection[$database])) {
             $DB_DSN = 'mysql:host=localhost;dbname=ap_' . $database . ';charset=utf8';
 
-            // if (defined('LOCAL_TESTS')) {
-            //     $DB_DSN = $DB_DSN.';unix_socket=/tmp/mysql.sock';
-            // }
-
             $pdo = new PDO($DB_DSN, DB_USERNAME, DB_PASSWORD);
             $pdo->exec('SET CHARACTER SET utf8');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -60,22 +56,19 @@ class PDOFactory
      * *Singleton* via the `new` operator from outside of this class.
      */
     protected function __construct()
-    {
-    }
+    { }
 
     /**
      * Private clone method to prevent cloning of the instance of the
      * *Singleton* instance.
      */
     private function __clone()
-    {
-    }
+    { }
 
     /**
      * Private unserialize method to prevent unserializing of the *Singleton*
      * instance.
      */
     private function __wakeup()
-    {
-    }
+    { }
 }

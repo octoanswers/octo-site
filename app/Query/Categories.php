@@ -47,7 +47,7 @@ class Categories_Query extends Abstract_Query
         return array_reverse($categories);
     }
 
-    public function categoriesForQuestionWithID(int $questionID): array
+    public function categories_for_question_with_ID(int $questionID): array
     {
         Question_Validator::validateID($questionID);
 
@@ -63,7 +63,7 @@ class Categories_Query extends Abstract_Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = (new Category_Query('ru'))->categoryWithID($row['er_category_id']);
+            $categories[] = (new Category_Query($this->lang))->categoryWithID($row['er_category_id']);
         }
 
         return $categories;

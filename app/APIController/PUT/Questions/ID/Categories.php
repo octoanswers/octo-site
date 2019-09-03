@@ -29,7 +29,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             $question = (new Question_Query($this->lang))->questionWithID($question_id);
             $questionID = $question->id;
 
-            $old_categories_array = (new Categories_Query($this->lang))->categoriesForQuestionWithID($question->id);
+            $old_categories_array = (new Categories_Query($this->lang))->categories_for_question_with_ID($question->id);
 
             $oldCategoriesTitles = [];
             foreach ($old_categories_array as $category) {
