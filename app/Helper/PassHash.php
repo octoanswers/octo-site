@@ -37,8 +37,8 @@ class PassHash
     public function hash($password)
     {
         return crypt($password, self::$algo .
-                self::$cost .
-                '$' . $this->unique_salt());
+            self::$cost .
+            '$' . $this->unique_salt());
     }
 
     /**
@@ -59,7 +59,7 @@ class PassHash
      *
      * @return string
      */
-    public function generateApiKey()
+    public function generate_API_key()
     {
         return md5(uniqid(rand(), true));
     }

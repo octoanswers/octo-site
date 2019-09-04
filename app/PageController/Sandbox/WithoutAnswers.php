@@ -14,10 +14,10 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $this->questionsCount = (new QuestionsCount_Query($this->lang))->countQuestionsWithoutAnswers();
+        $this->questionsCount = (new QuestionsCount_Query($this->lang))->count_questions_without_answers();
 
         try {
-            $this->questions = (new Sandbox_Query($this->lang))->findNewestWithoutAnswer($this->page);
+            $this->questions = (new Sandbox_Query($this->lang))->find_newest_without_answer($this->page);
         } catch (\Exception $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -32,17 +32,17 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
         }
 
         $this->template = 'sandbox';
-        $this->pageTitle = $this->_getPageTitle();
-        $this->pageDescription = $this->_getPageDescription();
+        $this->pageTitle = $this->_get_page_title();
+        $this->pageDescription = $this->_get_page_description();
         $this->activeFilter = $this->translator->get('Without answers');
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
-            $this->nextPageURL = Sandbox_URL_Helper::getWithoutAnswersURL($this->lang, ($this->page + 1));
+            $this->nextPageURL = Sandbox_URL_Helper::get_without_answers_URL($this->lang, ($this->page + 1));
         }
 
         $this->list = 'without-answers';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;
@@ -52,12 +52,12 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
     // Helper methods
     //
 
-    public function _getPageTitle()
+    public function _get_page_title()
     {
         return $this->translator->get('sandbox', 'questions_without_answers') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
     }
 
-    public function _getPageDescription(): string
+    public function _get_page_description(): string
     {
         $description = $this->translator->get('sandbox', 'questions_without_answers') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
 

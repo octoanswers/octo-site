@@ -3,12 +3,12 @@
 <nav class="ml-2 my-4">
     <ul class="list-links">
         <li>
-            <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="<?= ($this->list == 'without-answers') ? 'active' : '' ?>">
+            <a href="<?= Sandbox_URL_Helper::get_without_answers_URL($this->lang) ?>" class="<?= ($this->list == 'without-answers') ? 'active' : '' ?>">
                 <?= $this->translator->get('sandbox', 'questions_without_answers') ?>
             </a>
         </li>
         <li>
-            <a href="<?= Sandbox_URL_Helper::getWithoutCategoriesURL($this->lang) ?>" class="<?= ($this->list == 'without_categories') ? 'active' : '' ?>">
+            <a href="<?= Sandbox_URL_Helper::get_without_categories_URL($this->lang) ?>" class="<?= ($this->list == 'without_categories') ? 'active' : '' ?>">
                 <?= $this->translator->get('sandbox', 'without_categories') ?>
             </a>
         </li>

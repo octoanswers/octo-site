@@ -26,19 +26,20 @@ abstract class Abstract_PageController
         $this->container = $container;
 
         $cookieStorage = new CookieStorage(); // @TODO Вынести бы
-        $this->authUser = $cookieStorage->getAuthUser();
+        $this->authUser = $cookieStorage->get_auth_user();
 
-        $this->_initCommonModals();
-        $this->_initCommonJS();
+        $this->_init_common_modals();
+        $this->_init_common_JS();
     }
 
+    // handleRequest name set by Slim framework
     public function handleRequest($request, $response, $args)
     {
         $this->lang = $args['lang'];
         $this->translator = new Translator($this->lang, ROOT_PATH . '/app/Lang');
     }
 
-    protected function renderPage()
+    protected function render_page()
     {
         if (!$this->template) {
             throw new Exception('Page template not set!', 1);
@@ -61,7 +62,7 @@ abstract class Abstract_PageController
     // Private Methods
     //
 
-    private function _initCommonModals()
+    private function _init_common_modals()
     {
         $this->includeModals[] = '_common/ask';
 
@@ -71,7 +72,7 @@ abstract class Abstract_PageController
         }
     }
 
-    private function _initCommonJS()
+    private function _init_common_JS()
     {
         $this->includeJS[] = 'question/create';
 

@@ -6,7 +6,7 @@ class User_Query
 
     public function __construct()
     {
-        $this->pdo = PDOFactory::getConnectionToUsersDB();
+        $this->pdo = PDOFactory::get_connection_to_users_DB();
     }
 
     public function __destruct()
@@ -14,7 +14,7 @@ class User_Query
         $this->pdo = null;
     }
 
-    public function userWithAPIKey(string $apiKey): User_Model
+    public function user_with_API_key(string $apiKey): User_Model
     {
         User_Validator::validateAPIKey($apiKey);
 
@@ -32,10 +32,10 @@ class User_Query
         //unset($row['u_password_hash']);
         //unset($row['u_api_key']);
 
-        return User_Model::initWithDBState($row);
+        return User_Model::init_with_DB_state($row);
     }
 
-    public function userWithID(int $userID): User_Model
+    public function user_with_ID(int $userID): User_Model
     {
         User_Validator::validateID($userID);
 
@@ -53,10 +53,10 @@ class User_Query
         unset($row['u_password_hash']);
         unset($row['u_api_key']);
 
-        return User_Model::initWithDBState($row);
+        return User_Model::init_with_DB_state($row);
     }
 
-    public function userWithUsername(string $username)
+    public function user_with_username(string $username)
     {
         User_Validator::validateUsername($username);
 
@@ -74,10 +74,10 @@ class User_Query
         unset($row['u_password_hash']);
         unset($row['u_api_key']);
 
-        return User_Model::initWithDBState($row);
+        return User_Model::init_with_DB_state($row);
     }
 
-    public function userWithEmail(string $email)
+    public function user_with_email(string $email)
     {
         User_Validator::validateEmail($email);
 
@@ -92,6 +92,6 @@ class User_Query
             return;
         }
 
-        return User_Model::initWithDBState($row);
+        return User_Model::init_with_DB_state($row);
     }
 }

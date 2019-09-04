@@ -22,7 +22,7 @@ class Avatar_POST_APIController extends Abstract_APIController
             }
 
             $APIKey = $request->getParam('api_key');
-            $user = (new User_Query())->userWithAPIKey($APIKey);
+            $user = (new User_Query())->user_with_API_key($APIKey);
 
             $this->handle = new upload($_FILES['new_avatar_file']);
             if ($this->handle->uploaded) {

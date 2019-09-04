@@ -1,10 +1,10 @@
 <?php
 
-class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
+class Model_Question_init_with_DB_state_BaseTest extends PHPUnit\Framework\TestCase
 {
     public function test_EnFullParams_ReturnObject()
     {
-        $question = Question_Model::initWithDBState([
+        $question = Question_Model::init_with_DB_state([
             'q_id'              => 13,
             'q_title'           => 'This is question?',
             'q_is_redirect'     => 1,
@@ -25,7 +25,7 @@ class Model_Question_initWithDBState_BaseTest extends PHPUnit\Framework\TestCase
 
     public function test_RuFullParams_ReturnObject()
     {
-        $question = Question_Model::initWithDBState([
+        $question = Question_Model::init_with_DB_state([
             'q_id'             => 13,
             'q_title'          => 'Это вопрос?',
             'q_is_redirect'    => 1,

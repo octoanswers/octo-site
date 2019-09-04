@@ -2,11 +2,11 @@
 
 class Question_Query extends Abstract_Query
 {
-    public function questionWithTitle(string $title): Question_Model
+    public function question_with_title(string $title): Question_Model
     {
         Question_Validator::validateTitle($title);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE q_title=:q_title LIMIT 1');
         $stmt->bindParam(':q_title', $title, PDO::PARAM_STR);
@@ -21,14 +21,14 @@ class Question_Query extends Abstract_Query
             throw new Exception('Question with lang "' . $this->lang . '" and title "' . $title . '" not exists', 1);
         }
 
-        return Question_Model::initWithDBState($row);
+        return Question_Model::init_with_DB_state($row);
     }
 
-    public function questionWithID(int $questionID): Question_Model
+    public function question_with_ID(int $questionID): Question_Model
     {
         Question_Validator::validateID($questionID);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE q_id=:q_id LIMIT 1');
         $stmt->bindParam(':q_id', $questionID, PDO::PARAM_INT);
@@ -43,6 +43,6 @@ class Question_Query extends Abstract_Query
             throw new Exception('Question with ID "' . $questionID . '" not exists', 1);
         }
 
-        return Question_Model::initWithDBState($row);
+        return Question_Model::init_with_DB_state($row);
     }
 }

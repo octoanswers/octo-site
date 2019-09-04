@@ -14,19 +14,19 @@ class Show_User_PageController extends Abstract_PageController
 
         $this->username = $args['username'];
 
-        $this->user = (new User_Query())->userWithUsername($this->username);
+        $this->user = (new User_Query())->user_with_username($this->username);
         if (!$this->user) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->revisions = (new Revisions_Query($this->lang))->findRevisionsForUserWithID($this->user->id);
+        $this->revisions = (new Revisions_Query($this->lang))->find_revisions_for_user_with_ID($this->user->id);
 
         $this->questions = [];
         foreach ($this->revisions as &$revision) {
-            $this->questions[] = (new Question_Query($this->lang))->questionWithID($revision->answerID);
+            $this->questions[] = (new Question_Query($this->lang))->question_with_ID($revision->answerID);
         }
 
-        $this->_prepareFollowButton();
+        $this->_prepare_follow_button();
 
         $this->template = 'user';
         $this->pageTitle = $this->user->name . ' ' . $this->translator->get('user', 'answers_on_answeropedia');
@@ -43,19 +43,19 @@ class Show_User_PageController extends Abstract_PageController
             $this->includeModals[] = 'user/logout';
         }
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;
     }
 
-    protected function _prepareFollowButton()
+    protected function _prepare_follow_button()
     {
         if ($this->authUser && $this->authUser->id != $this->user->id) {
             $authUserID = $this->authUser->id;
             $followedUserID = $this->user->id;
 
-            $relation = (new UsersFollowUsers_Relations_Query($this->lang))->relationWithUserIDAndFollowedUserID($authUserID, $followedUserID);
+            $relation = (new UsersFollowUsers_Relations_Query($this->lang))->relation_with_user_ID_and_followed_user_ID($authUserID, $followedUserID);
 
             $this->followed = $relation ? true : false;
             $this->includeJS[] = 'user/follow';

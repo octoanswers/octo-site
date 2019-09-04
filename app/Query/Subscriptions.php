@@ -2,7 +2,7 @@
 
 class Subscriptions_Query extends Abstract_Query
 {
-    public function findWithQuestionIDAndEmail(int $question_id, string $email)
+    public function find_with_question_ID_and_email(int $question_id, string $email)
     {
         Question_Validator::validateID($question_id);
         User_Validator::validateEmail($email);
@@ -21,6 +21,6 @@ class Subscriptions_Query extends Abstract_Query
             return;
         }
 
-        return Subscription_Model::initWithDBState($row);
+        return Subscription_Model::init_with_DB_state($row);
     }
 }

@@ -19,7 +19,7 @@ class Mapper_User_Update_id_Test extends Abstract_DB_TestCase
         $user = (new User_Mapper())->update($user);
     }
 
-    public function test_UpdateUserWithIDEqualZero_ThrowException()
+    public function test_Updateuser_with_IDEqualZero_ThrowException()
     {
         $user = new User_Model();
         $user->id = 0;
@@ -35,7 +35,7 @@ class Mapper_User_Update_id_Test extends Abstract_DB_TestCase
         $user = (new User_Mapper())->update($user);
     }
 
-    public function test_UpdateUserWithIDBelowZero_ThrowException()
+    public function test_Updateuser_with_IDBelowZero_ThrowException()
     {
         $user = new User_Model();
         $user->id = -1;

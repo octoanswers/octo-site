@@ -1,12 +1,12 @@
 <?php
 
-class CategoriesToQuestions_Relations_Query__findNewestForcategoryWithID__Test extends Abstract_DB_TestCase
+class CategoriesToQuestions_Relations_Query__find_newest_for_category_with_ID__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['er_categories_questions']];
 
     public function test_withoutParams()
     {
-        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->findNewestForcategoryWithID(58);
+        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->find_newest_for_category_with_ID(58);
 
         $this->assertEquals(10, count($relations));
 
@@ -21,7 +21,7 @@ class CategoriesToQuestions_Relations_Query__findNewestForcategoryWithID__Test e
 
     public function test_firstPage()
     {
-        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->findNewestForcategoryWithID(58, 1);
+        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->find_newest_for_category_with_ID(58, 1);
 
         $this->assertEquals(10, count($relations));
 
@@ -36,7 +36,7 @@ class CategoriesToQuestions_Relations_Query__findNewestForcategoryWithID__Test e
 
     public function test_secondPage()
     {
-        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->findNewestForcategoryWithID(58, 2);
+        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->find_newest_for_category_with_ID(58, 2);
 
         $this->assertEquals(5, count($relations));
 
@@ -51,7 +51,7 @@ class CategoriesToQuestions_Relations_Query__findNewestForcategoryWithID__Test e
 
     public function test_thirdPage()
     {
-        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->findNewestForcategoryWithID(58, 3);
+        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->find_newest_for_category_with_ID(58, 3);
 
         $this->assertEquals(0, count($relations));
     }

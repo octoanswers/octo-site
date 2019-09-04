@@ -1,12 +1,12 @@
 <?php
 
-class Query_Search_searchUsers_base_Test extends Abstract_DB_TestCase
+class Query_Search_search_users_base_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
     public function test_SearchWithTwoResults_Ok()
     {
-        $users = (new Search_Query('users'))->searchUsers('сява');
+        $users = (new Search_Query('users'))->search_users('сява');
 
         $this->assertEquals(1, count($users));
 

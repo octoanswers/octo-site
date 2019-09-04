@@ -2,7 +2,7 @@
 
 class Categories_Query extends Abstract_Query
 {
-    public function categoriesLastID(): int
+    public function categories_last_ID(): int
     {
         $stmt = $this->pdo->prepare('SELECT MAX(c_id) FROM categories');
         if (!$stmt->execute()) {
@@ -19,14 +19,14 @@ class Categories_Query extends Abstract_Query
         return (int) $result['MAX(c_id)'];
     }
 
-    public function findNewest($page = 1, $perPage = 10): array
+    public function find_newest($page = 1, $perPage = 10): array
     {
         List_Validator::validatePage($page);
         List_Validator::validatePerPage($perPage);
 
-        $categoriesLastID = (new self($this->lang))->categoriesLastID();
+        $categories_last_ID = (new self($this->lang))->categories_last_ID();
 
-        $offset = $categoriesLastID - ($perPage * $page);
+        $offset = $categories_last_ID - ($perPage * $page);
 
         $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_id >= :id_offset AND cat_is_redirect = 0 LIMIT :per_page');
         $stmt->bindParam(':id_offset', $offset, PDO::PARAM_INT);
@@ -41,7 +41,7 @@ class Categories_Query extends Abstract_Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = Category_Model::initWithDBState($row);
+            $categories[] = Category_Model::init_with_DB_state($row);
         }
 
         return array_reverse($categories);
@@ -63,7 +63,7 @@ class Categories_Query extends Abstract_Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = (new Category_Query($this->lang))->categoryWithID($row['er_category_id']);
+            $categories[] = (new Category_Query($this->lang))->category_with_ID($row['er_category_id']);
         }
 
         return $categories;

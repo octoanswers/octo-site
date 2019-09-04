@@ -20,7 +20,7 @@ class UserFollowQuestion_Relation_Model extends Abstract_Model
         return $er;
     }
 
-    public static function initWithDBState(array $state): self
+    public static function init_with_DB_state(array $state): self
     {
         $er = new self();
 

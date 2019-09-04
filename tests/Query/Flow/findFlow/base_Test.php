@@ -1,12 +1,12 @@
 <?php
 
-class Query_Flow__findFlow__Test extends Abstract_DB_TestCase
+class Query_Flow__find_flow__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['activities', 'questions', 'er_users_follow_users', 'er_users_follow_categories', 'er_users_follow_questions'], 'users' => ['users']];
 
     public function test__firstPage()
     {
-        $activities = (new Flow_Query('ru'))->findFlow();
+        $activities = (new Flow_Query('ru'))->find_flow();
 
         $this->assertEquals(10, count($activities));
 

@@ -40,7 +40,7 @@ class Categories_ID_Questions_PUT_APIController__ru__Test extends Abstract_Front
 
         // Check real data changes
 
-        $question = (new Question_Query('ru'))->questionWithID(22);
+        $question = (new Question_Query('ru'))->question_with_ID(22);
 
         $this->assertEquals(22, $question->id);
         $this->assertEquals(2, $question->categoriesCount);

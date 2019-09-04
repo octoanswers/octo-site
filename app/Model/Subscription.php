@@ -9,7 +9,7 @@ class Subscription_Model extends Abstract_Model
 
     // Init methods -----------------------------------------------------------
 
-    public static function initWithDBState(array $state): self
+    public static function init_with_DB_state(array $state): self
     {
         $s = new self();
         $s->id = $state['s_id'];

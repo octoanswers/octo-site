@@ -5,7 +5,7 @@
  */
 class Contribution_Humanizer
 {
-    public static function humanizeCount(int $count): string
+    public static function humanize_count(int $count): string
     {
         if ($count < 0) {
             throw new Exception('Count param ' . $count . ' must be greater than or equal to 0', 1);

@@ -1,10 +1,10 @@
 <?php
 
-class Model_Subscription__initWithDBState__Test extends PHPUnit\Framework\TestCase
+class Model_Subscription__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
 {
     public function test__FullParams()
     {
-        $s = Subscription_Model::initWithDBState([
+        $s = Subscription_Model::init_with_DB_state([
             's_id'          => 13,
             's_question_id' => 9,
             's_email'       => 'wer@sio.ru',

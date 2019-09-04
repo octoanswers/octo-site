@@ -10,29 +10,29 @@ class Newest_Questions_PageController extends Abstract_PageController
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $questionsCount = (new QuestionsCount_Query($this->lang))->questionsLastID();
+        $questionsCount = (new QuestionsCount_Query($this->lang))->questions_last_ID();
 
-        $this->questions = (new Questions_Query($this->lang))->findNewestWithAnswer($this->page);
+        $this->questions = (new Questions_Query($this->lang))->find_newest_with_answer($this->page);
 
-        $this->questionsCount = (new QuestionsCount_Query($this->lang))->countQuestionsWithAnswers();
+        $this->questionsCount = (new QuestionsCount_Query($this->lang))->count_questions_with_answers();
 
         foreach ($this->questions as $question) {
-            $contributors_array = (new Contributors_Query($this->lang))->findAnswerContributors($question->id);
+            $contributors_array = (new Contributors_Query($this->lang))->find_answer_contributors($question->id);
             foreach ($contributors_array as $contributor) {
                 $this->contributors[$question->id][] = $contributor;
             }
         }
 
         $this->template = 'questions';
-        $this->pageTitle = $this->_getPageTitle();
-        $this->pageDescription = $this->_getPageDescription();
+        $this->pageTitle = $this->_get_page_title();
+        $this->pageDescription = $this->_get_page_description();
         $this->list = 'with-answers';
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
-            $this->nextPageURL = Questions_URL_Helper::getNewestURL($this->lang, ($this->page + 1));
+            $this->nextPageURL = Questions_URL_Helper::get_newest_URL($this->lang, ($this->page + 1));
         }
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;
@@ -42,12 +42,12 @@ class Newest_Questions_PageController extends Abstract_PageController
     // Helper methods
     //
 
-    public function _getPageTitle()
+    public function _get_page_title()
     {
         return $this->translator->get('questions', 'newest_questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
     }
 
-    public function _getPageDescription(): string
+    public function _get_page_description(): string
     {
         $description = $this->translator->get('questions', 'newest_questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
 

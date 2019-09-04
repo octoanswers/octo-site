@@ -1,12 +1,12 @@
 <?php
 
-class Query_Questions_findNewestWithAnswer_Test extends Abstract_DB_TestCase
+class Query_Questions_find_newest_with_answer_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions'], 'en' => ['questions']];
 
     public function test__Ru()
     {
-        $questions = (new Questions_Query('ru'))->findNewestWithAnswer();
+        $questions = (new Questions_Query('ru'))->find_newest_with_answer();
 
         $this->assertEquals(10, count($questions));
 
@@ -21,7 +21,7 @@ class Query_Questions_findNewestWithAnswer_Test extends Abstract_DB_TestCase
 
     public function test_firstPage()
     {
-        $questions = (new Questions_Query('ru'))->findNewestWithAnswer(1);
+        $questions = (new Questions_Query('ru'))->find_newest_with_answer(1);
 
         $this->assertEquals(10, count($questions));
 
@@ -36,7 +36,7 @@ class Query_Questions_findNewestWithAnswer_Test extends Abstract_DB_TestCase
 
     public function test_secondPage()
     {
-        $questions = (new Questions_Query('ru'))->findNewestWithAnswer(2);
+        $questions = (new Questions_Query('ru'))->find_newest_with_answer(2);
 
         $this->assertEquals(1, count($questions));
     }

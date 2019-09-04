@@ -15,26 +15,26 @@ class All_Sandbox_PageController extends Abstract_PageController
         $this->list = 'newest';
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $questionsCount = (new QuestionsCount_Query($this->lang))->questionsLastID();
+        $questionsCount = (new QuestionsCount_Query($this->lang))->questions_last_ID();
 
-        $this->questions = (new Questions_Query($this->lang))->findNewest($this->page);
+        $this->questions = (new Questions_Query($this->lang))->find_newest($this->page);
 
         foreach ($this->questions as $question) {
             if ($question->isRedirect) {
-                $redirect = (new Question_Redirects_Query($this->lang))->redirectForQuestionWithID($question->id);
+                $redirect = (new Question_Redirects_Query($this->lang))->redirect_for_question_with_ID($question->id);
                 $this->redirects[$question->id] = $redirect;
             }
         }
 
         $this->template = 'sandbox';
-        $this->pageTitle = $this->_getPageTitle();
-        $this->pageDescription = $this->_getPageDescription();
+        $this->pageTitle = $this->_get_page_title();
+        $this->pageDescription = $this->_get_page_description();
 
         if ($this->questions[9]->id > 1) {
             $this->nextPageURL = Sandbox_URL_Helper::getAllURL($this->lang, ($this->page + 1));
         }
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;
@@ -44,12 +44,12 @@ class All_Sandbox_PageController extends Abstract_PageController
     // Helper methods
     //
 
-    public function _getPageTitle()
+    public function _get_page_title()
     {
         return $this->translator->get('sandbox', 'title') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
     }
 
-    public function _getPageDescription(): string
+    public function _get_page_description(): string
     {
         $description = $this->translator->get('sandbox', 'title') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
 

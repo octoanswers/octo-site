@@ -17,11 +17,11 @@ class CategoriesIDFollow_DELETE_APIController extends Abstract_APIController
             // Validate params
             //
 
-            $user = (new User_Query())->userWithAPIKey($api_key);
+            $user = (new User_Query())->user_with_API_key($api_key);
 
-            $category = (new Category_Query($this->lang))->categoryWithID($categoryID);
+            $category = (new Category_Query($this->lang))->category_with_ID($categoryID);
 
-            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relationWithUserIDAndCategoryID($user->id, $categoryID);
+            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relation_with_user_ID_and_category_ID($user->id, $categoryID);
             if (!$relation) {
                 throw new Exception('User with ID "' . $user->id . '" not followed category with ID "' . $categoryID . '"', 0);
             }

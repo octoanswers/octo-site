@@ -14,17 +14,17 @@ class Newest_Users_PageController extends Abstract_PageController
         $this->list = 'newest';
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 0;
 
-        $usersCount = (new Users_Query())->usersLastID();
+        $usersCount = (new Users_Query())->users_last_ID();
 
-        $this->users = (new Users_Query())->usersNewest();
+        $this->users = (new Users_Query())->users_newest();
 
         $this->template = 'users';
-        $this->pageTitle = $this->_getPageTitle();
-        $this->activeFilter = $this->_getActiveFilterName();
+        $this->pageTitle = $this->_get_page_title();
+        $this->activeFilter = $this->_get_active_filter_name();
 
-        $this->nextPageURL = $this->_nextPageURL();
+        $this->nextPageURL = $this->_next_page_URL();
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;
@@ -34,19 +34,19 @@ class Newest_Users_PageController extends Abstract_PageController
     // Helper methods
     //
 
-    public function _getActiveFilterName(): string
+    public function _get_active_filter_name(): string
     {
         $filterName = $this->translator->get('Newest');
 
         return $filterName;
     }
 
-    public function _getPageTitle()
+    public function _get_page_title()
     {
         return $this->translator->get('users', 'new_users_msg') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
     }
 
-    public function _nextPageURL()
+    public function _next_page_URL()
     {
         $nextPageURL = null;
 

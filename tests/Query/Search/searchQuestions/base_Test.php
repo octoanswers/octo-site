@@ -1,12 +1,12 @@
 <?php
 
-class Query_Search_searchQuestions_Base_Test extends Abstract_DB_TestCase
+class Query_Search_search_questions_Base_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 
     public function testBase()
     {
-        $questions = (new Search_Query('ru'))->searchQuestions('птицы');
+        $questions = (new Search_Query('ru'))->search_questions('птицы');
 
         $this->assertEquals(5, count($questions));
 

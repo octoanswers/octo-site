@@ -1,12 +1,12 @@
 <?php
 
-class Categories_Query__findNewest_base_Test extends Abstract_DB_TestCase
+class Categories_Query__find_newest_base_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 
     public function test_withoutParams()
     {
-        $categories = (new Categories_Query('ru'))->findNewest();
+        $categories = (new Categories_Query('ru'))->find_newest();
 
         $this->assertEquals(10, count($categories));
 
@@ -19,7 +19,7 @@ class Categories_Query__findNewest_base_Test extends Abstract_DB_TestCase
 
     public function test_firstPage()
     {
-        $categories = (new Categories_Query('ru'))->findNewest(1);
+        $categories = (new Categories_Query('ru'))->find_newest(1);
 
         $this->assertEquals(10, count($categories));
 
@@ -32,7 +32,7 @@ class Categories_Query__findNewest_base_Test extends Abstract_DB_TestCase
 
     public function test_secondPage()
     {
-        $categories = (new Categories_Query('ru'))->findNewest(2);
+        $categories = (new Categories_Query('ru'))->find_newest(2);
 
         $this->assertEquals(10, count($categories));
 
@@ -45,7 +45,7 @@ class Categories_Query__findNewest_base_Test extends Abstract_DB_TestCase
 
     public function test_Find_first_7_categories()
     {
-        $categories = (new Categories_Query('ru'))->findNewest(1, 7);
+        $categories = (new Categories_Query('ru'))->find_newest(1, 7);
 
         $this->assertEquals(7, count($categories));
 

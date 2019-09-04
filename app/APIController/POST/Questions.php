@@ -12,13 +12,13 @@ class Questions_POST_APIController extends Abstract_APIController
 
             $title = htmlspecialchars((string) $request->getParam('title'));
 
-            $question = Question_Model::initWithTitle($title);
+            $question = Question_Model::init_with_title($title);
 
             try {
                 $question = (new Question_Mapper($this->lang))->create($question);
             } catch (\Exception $e) {
                 if ($e->getCode() == 23000) {
-                    $question = (new Question_Query($this->lang))->questionWithTitle($title);
+                    $question = (new Question_Query($this->lang))->question_with_title($title);
                 }
             }
 

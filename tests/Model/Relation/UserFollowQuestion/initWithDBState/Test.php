@@ -1,10 +1,10 @@
 <?php
 
-class UserFollowQuestion_Relation_Model__initWithDBState__Test extends PHPUnit\Framework\TestCase
+class UserFollowQuestion_Relation_Model__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = UserFollowQuestion_Relation_Model::initWithDBState([
+        $rel = UserFollowQuestion_Relation_Model::init_with_DB_state([
             'id'          => 13,
             'user_id'     => 3,
             'question_id' => 9,
@@ -19,7 +19,7 @@ class UserFollowQuestion_Relation_Model__initWithDBState__Test extends PHPUnit\F
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = UserFollowQuestion_Relation_Model::initWithDBState([
+        $rel = UserFollowQuestion_Relation_Model::init_with_DB_state([
             'id'          => 13,
             'user_id'     => 3,
             'question_id' => 9,

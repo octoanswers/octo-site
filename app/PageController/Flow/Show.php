@@ -14,7 +14,7 @@ class Show_Flow_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $this->activities = (new Flow_Query($this->lang))->findFlow();
+        $this->activities = (new Flow_Query($this->lang))->find_flow();
 
         $human_date_timezone = new DateTimeZone('UTC');
         $date_humanizer = new HumanDate($human_date_timezone, $this->lang);
@@ -31,9 +31,9 @@ class Show_Flow_PageController extends Abstract_PageController
         $this->template = 'flow';
         $this->pageTitle = $this->translator->get('flow', 'page_title') . ' – ' . $this->translator->get('answeropedia');
         $this->pageDescription = $this->translator->get('Questions and answers flow on Answeropedia.');
-        $this->canonicalURL = Page_URL_Helper::getFlowURL($this->lang);
+        $this->canonicalURL = Page_URL_Helper::get_flow_URL($this->lang);
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;

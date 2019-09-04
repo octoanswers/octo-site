@@ -6,9 +6,9 @@ class Mapper_Activity_CAQ__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $category = Category_Model::initWithTitle('tag1102');
+        $category = Category_Model::init_with_title('tag1102');
 
-        $question = Question_Model::initWithTitle('Когда закончится дождь?');
+        $question = Question_Model::init_with_title('Когда закончится дождь?');
 
         $activity = new Activity_Model();
         $activity->type = Activity_Model::CATEGORY_ADDED_QUESTION;

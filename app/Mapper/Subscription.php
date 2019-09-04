@@ -24,13 +24,12 @@ class Subscription_Mapper extends Abstract_Mapper
         return $s;
     }
 
-    private function update(CategoriesToQuestions_Relation_Model $s): CategoriesToQuestions_Relation_Model
+    public function update(Subscription_Model $s): void
     {
-        // We don`t need to update ER
-        return $s;
+        throw new Exception('CategoriesQuestions ER update not realized', 1);
     }
 
-    public function delete(CategoriesToQuestions_Relation_Model $s): CategoriesToQuestions_Relation_Model
+    public function delete(Subscription_Model $s): void
     {
         throw new Exception('CategoriesQuestions ER delete not realized', 1);
     }

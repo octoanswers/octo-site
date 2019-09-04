@@ -15,7 +15,7 @@ class Revision_Model extends Abstract_Model
     // Init methods
     //
 
-    public static function initWithDBState(array $state): self
+    public static function init_with_DB_state(array $state): self
     {
         $revision = new self();
 
@@ -35,15 +35,15 @@ class Revision_Model extends Abstract_Model
     // Supplementary methods
     //
 
-    public function getUserContribution(): int
+    public function get_user_contribution(): int
     {
-        $insertions = $this->getUserInsertions();
-        $deletions = $this->getUserDeletions();
+        $insertions = $this->get_user_insertions();
+        $deletions = $this->get_user_deletions();
 
         return $insertions + $deletions;
     }
 
-    public function getUserInsertions(): int
+    public function get_user_insertions(): int
     {
         $opcodes_string = $this->opcodes;
 
@@ -58,7 +58,7 @@ class Revision_Model extends Abstract_Model
         return $insertions;
     }
 
-    public function getUserDeletions(): int
+    public function get_user_deletions(): int
     {
         $opcodes_string = $this->opcodes;
 

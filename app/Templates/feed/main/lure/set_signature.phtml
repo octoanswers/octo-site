@@ -1,20 +1,20 @@
 <?php if (strlen($this->authUser->signature) == 0) : ?>
-<!-- lure set_signature -->
-<div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
-    <div class="mr-3 d-none d-sm-block">
-        <i class="material-icons md-24">check</i>
-    </div>
-    <div class="width-full">
-        <div class="text-dark font-weight-bold mb-2">
-            <?= $this->translator->get('feed', 'set_signature', 'title') ?>
+    <!-- lure set_signature -->
+    <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-3">
+        <div class="mr-3 d-none d-sm-block">
+            <i class="material-icons md-24">check</i>
         </div>
-        <div class="small text-muted mb-3">
-            <?= $this->translator->get('feed', 'set_signature', 'msg') ?>
+        <div class="width-full">
+            <div class="text-dark font-weight-bold mb-2">
+                <?= $this->translator->get('feed', 'set_signature', 'title') ?>
+            </div>
+            <div class="small text-muted mb-3">
+                <?= $this->translator->get('feed', 'set_signature', 'msg') ?>
+            </div>
+            <a class="btn btn-sm btn-outline-primary" href="<?= Settings_URL_Helper::get_signature_URL($this->lang) ?>">
+                <?= $this->translator->get('feed', 'set_signature', 'action') ?>
+            </a>
         </div>
-        <a class="btn btn-sm btn-outline-primary" href="<?= Settings_URL_Helper::getSignatureURL($this->lang) ?>">
-            <?= $this->translator->get('feed', 'set_signature', 'action') ?>
-        </a>
     </div>
-</div>
-<!-- / lure set_signature -->
+    <!-- / lure set_signature -->
 <?php endif; ?>

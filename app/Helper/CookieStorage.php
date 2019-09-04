@@ -4,7 +4,7 @@ class CookieStorage
 {
     protected static $authUser = null;
 
-    public function getAuthUser()
+    public function get_auth_user()
     {
         if (static::$authUser) {
             return static::$authUser;
@@ -12,7 +12,7 @@ class CookieStorage
 
         if (isset($_COOKIE['u_id'])) {
             try {
-                static::$authUser = User_Model::initWithDBState([
+                static::$authUser = User_Model::init_with_DB_state([
                     'u_id'         => $_COOKIE['u_id'],
                     'u_username'   => $_COOKIE['u_username'],
                     'u_name'       => $_COOKIE['u_name'],
@@ -37,44 +37,44 @@ class CookieStorage
         }
     }
 
-    public function saveUser(User_Model $user)
+    public function save_user(User_Model $user)
     {
-        $expireTime = $this->_getExpireTime();
+        $expire_time = $this->_get_expire_time();
 
-        @setcookie('u_id', $user->id, $expireTime, '/');
-        @setcookie('u_username', $user->username, $expireTime, '/');
-        @setcookie('u_email', $user->email, $expireTime, '/');
-        @setcookie('u_name', $user->name, $expireTime, '/');
+        @setcookie('u_id', $user->id, $expire_time, '/');
+        @setcookie('u_username', $user->username, $expire_time, '/');
+        @setcookie('u_email', $user->email, $expire_time, '/');
+        @setcookie('u_name', $user->name, $expire_time, '/');
         if ($user->signature) {
-            @setcookie('u_signature', $user->signature, $expireTime, '/');
+            @setcookie('u_signature', $user->signature, $expire_time, '/');
         }
         if ($user->site) {
-            @setcookie('u_site', $user->site, $expireTime, '/');
+            @setcookie('u_site', $user->site, $expire_time, '/');
         }
-        @setcookie('u_created_at', $user->createdAt, $expireTime, '/');
+        @setcookie('u_created_at', $user->createdAt, $expire_time, '/');
         if ($user->apiKey) {
-            @setcookie('u_api_key', $user->apiKey, $expireTime, '/');
+            @setcookie('u_api_key', $user->apiKey, $expire_time, '/');
         }
         static::$authUser = $user;
     }
 
-    public function setLang(string $lang)
+    public function set_lang(string $lang)
     {
-        @setcookie('lang', $lang, $this->_getExpireTime(), '/');
+        @setcookie('lang', $lang, $this->_get_expire_time(), '/');
     }
 
     public function clear()
     {
-        $pastTime = $this->_getPastTime();
+        $time_in_past = $this->_get_time_in_past();
 
-        @setcookie('u_id', '', $expireTime, '/');
-        @setcookie('u_username', '', $expireTime, '/');
-        @setcookie('u_email', '', $expireTime, '/');
-        @setcookie('u_name', '', $expireTime, '/');
-        @setcookie('u_signature', '', $expireTime, '/');
-        @setcookie('u_site', '', $expireTime, '/');
-        @setcookie('u_created_at', '', $expireTime, '/');
-        @setcookie('api_key', '', $expireTime, '/');
+        @setcookie('u_id', '', $time_in_past, '/');
+        @setcookie('u_username', '', $time_in_past, '/');
+        @setcookie('u_email', '', $time_in_past, '/');
+        @setcookie('u_name', '', $time_in_past, '/');
+        @setcookie('u_signature', '', $time_in_past, '/');
+        @setcookie('u_site', '', $time_in_past, '/');
+        @setcookie('u_created_at', '', $time_in_past, '/');
+        @setcookie('api_key', '', $time_in_past, '/');
 
         unset($_COOKIE['u_id']);
         unset($_COOKIE['u_username']);
@@ -88,12 +88,12 @@ class CookieStorage
         static::$authUser = null;
     }
 
-    private function _getExpireTime(): int
+    private function _get_expire_time(): int
     {
         return time() + (86400 * 30); // 86400 = 1 day
     }
 
-    private function _getPastTime(): int
+    private function _get_time_in_past(): int
     {
         return time() - 60;
     }

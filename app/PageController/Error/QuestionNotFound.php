@@ -26,7 +26,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
         $this->questionURI = $questionURI;
         $this->includeJS[] = 'goal/question_not_found';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response->withStatus(404);

@@ -12,19 +12,14 @@ class PDOFactory
      */
     protected static $connection;
 
-    public static function getConnectionToLangDB(string $lang)
+    public static function get_connection_to_lang_DB(string $lang)
     {
-        return self::getConnection($lang);
+        return self::get_connection($lang);
     }
 
-    public static function getConnectionToUsersDB()
+    public static function get_connection_to_users_DB()
     {
-        return self::getConnection('users');
-    }
-
-    public static function getConnectionToInterDB()
-    {
-        throw new \Exception('Not implemented method getConnectionToInterDB', 1);
+        return self::get_connection('users');
     }
 
     /**
@@ -36,7 +31,7 @@ class PDOFactory
      *
      * @return Database
      */
-    public static function getConnection(string $database)
+    public static function get_connection(string $database)
     {
         if (!isset(self::$connection[$database])) {
             $DB_DSN = 'mysql:host=localhost;dbname=ap_' . $database . ';charset=utf8';

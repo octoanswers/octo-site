@@ -7,16 +7,16 @@ class Questions_Query extends Abstract_Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
 
-    public function findNewest($page = 1, $perPage = 10): array
+    public function find_newest($page = 1, $perPage = 10): array
     {
         QuestionsList_Validator::validatePage($page);
         QuestionsList_Validator::validatePerPage($perPage);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
-        $questionsLastID = (new QuestionsCount_Query($this->lang))->questionsLastID();
+        $questions_last_ID = (new QuestionsCount_Query($this->lang))->questions_last_ID();
 
-        $offset = $questionsLastID - ($perPage * $page);
+        $offset = $questions_last_ID - ($perPage * $page);
 
         $stmt = $this->pdo->prepare('SELECT * FROM `questions` WHERE `q_id` > :id_offset LIMIT :per_page');
         $stmt->bindParam(':id_offset', $offset, PDO::PARAM_INT);
@@ -31,18 +31,18 @@ class Questions_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::initWithDBState($row);
+            $questions[] = Question_Model::init_with_DB_state($row);
         }
 
         return array_reverse($questions);
     }
 
-    public function findRecentlyUpdated($page = 0, $perPage = 10): array
+    public function find_recently_updated($page = 0, $perPage = 10): array
     {
         //QuestionsList_Validator::validatePage($page);
         QuestionsList_Validator::validatePerPage($perPage);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $offset = $perPage * $page;
 
@@ -61,19 +61,19 @@ class Questions_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::initWithDBState($row);
+            $questions[] = Question_Model::init_with_DB_state($row);
         }
 
         return $questions;
     }
 
-    public function findQuestionsWithImage(int $offset = 0, int $limit = 3): array
+    public function find_questions_with_image(int $offset = 0, int $limit = 3): array
     {
         // @TODO Check params
         // QuestionsList_Validator::validatePage($page);
         // QuestionsList_Validator::validatePerPage($perPage);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $query = 'SELECT * FROM `questions` WHERE (`q_id` < :id_offset AND q_image_base_name IS NOT NULL) ORDER BY q_id DESC LIMIT :limit_count';
         $stmt = $this->pdo->prepare($query);
@@ -89,18 +89,18 @@ class Questions_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::initWithDBState($row);
+            $questions[] = Question_Model::init_with_DB_state($row);
         }
 
         return $questions;
     }
 
-    public function findNewestWithAnswer($page = 1, $perPage = 10): array
+    public function find_newest_with_answer($page = 1, $perPage = 10): array
     {
         QuestionsList_Validator::validatePage($page);
         QuestionsList_Validator::validatePerPage($perPage);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $offset = $perPage * ($page - 1);
 
@@ -117,7 +117,7 @@ class Questions_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::initWithDBState($row);
+            $questions[] = Question_Model::init_with_DB_state($row);
         }
 
         return $questions;
@@ -153,7 +153,7 @@ class Questions_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::initWithDBState($row);
+            $questions[] = Question_Model::init_with_DB_state($row);
         }
 
         return $questions;

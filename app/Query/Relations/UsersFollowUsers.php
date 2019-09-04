@@ -2,7 +2,7 @@
 
 class UsersFollowUsers_Relations_Query extends Abstract_Query
 {
-    public function relationWithUserIDAndFollowedUserID(int $userID, int $followedQuestionID)
+    public function relation_with_user_ID_and_followed_user_ID(int $userID, int $followedQuestionID)
     {
         $sql = 'SELECT * FROM er_users_follow_users WHERE user_id=:user_id AND followed_user_id=:followed_user_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);
@@ -18,13 +18,13 @@ class UsersFollowUsers_Relations_Query extends Abstract_Query
             return;
         }
 
-        return UserFollowUser_Relation_Model::initWithDBState($row);
+        return UserFollowUser_Relation_Model::init_with_DB_state($row);
     }
 
     /**
      * List of users that this specific user is following.
      */
-    public function findUsersFollowedByUser(int $userID)
+    public function find_users_followed_by_user(int $userID)
     {
         $sql = 'SELECT followed_user_id FROM er_users_follow_users WHERE (user_id=:user_id)';
         $stmt = $this->pdo->prepare($sql);

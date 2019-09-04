@@ -1,10 +1,10 @@
 <?php
 
-class Category_initWithDBStateTest extends PHPUnit\Framework\TestCase
+class Category_init_with_DB_stateTest extends PHPUnit\Framework\TestCase
 {
     public function test_Init_category_with_DB_state()
     {
-        $category = Category_Model::initWithDBState([
+        $category = Category_Model::init_with_DB_state([
             'c_id'            => 13,
             'c_title'         => 'virtual',
             'c_words'         => 'cpu',
@@ -17,7 +17,7 @@ class Category_initWithDBStateTest extends PHPUnit\Framework\TestCase
 
     public function test_Init_category_with_DB_state_on_Russian()
     {
-        $category = Category_Model::initWithDBState([
+        $category = Category_Model::init_with_DB_state([
             'c_id'            => 231,
             'c_title'         => 'Медицинские услуги',
             'c_words'         => 'таблетка',
@@ -31,6 +31,6 @@ class Category_initWithDBStateTest extends PHPUnit\Framework\TestCase
     public function test_Error_when_init_category_with_empty_state()
     {
         $this->expectExceptionMessage('Category init with empty state');
-        $category = Category_Model::initWithDBState([]);
+        $category = Category_Model::init_with_DB_state([]);
     }
 }

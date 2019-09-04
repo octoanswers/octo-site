@@ -11,8 +11,8 @@ class Show_Category_PageController extends Abstract_PageController
         $categoryURI = $args['category_uri'];
 
         try {
-            $categoryTitle = $this->_categoryTitleFromURI($categoryURI);
-            $this->category = (new Category_Query($this->lang))->categoryWithTitle($categoryTitle);
+            $categoryTitle = $this->_category_title_from_URI($categoryURI);
+            $this->category = (new Category_Query($this->lang))->category_with_title($categoryTitle);
         } catch (\Exception $e) {
             return (new CategoryNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -23,11 +23,11 @@ class Show_Category_PageController extends Abstract_PageController
         $dateHumanizer = new HumanDate($humanDateTimezone, $this->lang);
         // var_dump($this->category);
         // exit;
-        $category_questions = (new CategoriesToQuestions_Relations_Query($this->lang))->findNewestForCategoryWithID($this->category->id);
+        $category_questions = (new CategoriesToQuestions_Relations_Query($this->lang))->find_newest_for_category_with_ID($this->category->id);
         $this->category_questions = [];
 
         foreach ($category_questions as $category_question_er) {
-            $this->category_questions[] = (new Question_Query($this->lang))->questionWithID($category_question_er->questionID);
+            $this->category_questions[] = (new Question_Query($this->lang))->question_with_ID($category_question_er->questionID);
 
             //$question['date_humanized'] = $dateHumanizer->format($question->createdAt);
         }
@@ -53,46 +53,46 @@ class Show_Category_PageController extends Abstract_PageController
 
         //$data['alternate_url_prefix'] = $category['url'].'?';
 
-        //$data['most_viewed_writers'] = $this->_getMostViewedWriters();
+        //$data['most_viewed_writers'] = $this->_get_most_viewed_writers();
 
         if (is_array($this->category_questions)) {
-            //    $this->related_categories = $this->_getRelatedCategories($this->category_questions);
+            //    $this->related_categories = $this->_get_related_categories($this->category_questions);
         }
         //} else {
         $this->related_categories = [];
         //}
 
-        $this->_prepareFollowButton();
-        $this->_prepareAdditionalJS();
-        $this->_prepareModals();
+        $this->_prepare_follow_button();
+        $this->_prepare_additional_JS();
+        $this->_prepare_modals();
 
         $this->template = 'category';
-        $this->pageTitle = $this->_getPageTitle();
+        $this->pageTitle = $this->_get_page_title();
         //str_replace('%category%', , $this->translator->get('Category - Page title')).' • '.$this->translator->get('answeropedia');
-        $this->pageDescription = $this->_getPageDescription();
+        $this->pageDescription = $this->_get_page_description();
         $this->nextPageURL = null;
 
         $this->open_graph = $this->_get_open_graph();
         $this->share = $this->_get_open_graph();
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;
     }
 
-    protected function _getPageTitle()
+    protected function _get_page_title()
     {
         return $this->translator->get('category', 'page_title') . $this->category->title . ' – ' . $this->translator->get('answeropedia');
     }
 
-    protected function _prepareFollowButton()
+    protected function _prepare_follow_button()
     {
         if ($this->authUser) {
             $authUserID = $this->authUser->id;
             $categoryID = $this->category->id;
 
-            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relationWithUserIDAndCategoryID($authUserID, $categoryID);
+            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relation_with_user_ID_and_category_ID($authUserID, $categoryID);
 
             $this->followed = $relation ? true : false;
         }
@@ -103,20 +103,20 @@ class Show_Category_PageController extends Abstract_PageController
         $og = [
             'url'         => $this->category->get_URL($this->lang),
             'type'        => 'website',
-            'title'       => $this->_getPageTitle(),
-            'description' => $this->_getPageDescription(),
+            'title'       => $this->_get_page_title(),
+            'description' => $this->_get_page_description(),
             'image'       => IMAGE_URL . '/og-image.png',
         ];
 
         return $og;
     }
 
-    protected function _getPageDescription()
+    protected function _get_page_description()
     {
         return $this->translator->get('category', 'questions_with_category') . ' ' . $this->category->title . ' – ' . $this->translator->get('answeropedia');
     }
 
-    private function _categoryTitleFromURI(string $uri): string
+    private function _category_title_from_URI(string $uri): string
     {
         $uri = str_replace('__', 'DOUBLEUNDERLINE', $uri);
         $uri = str_replace('_', ' ', $uri);
@@ -128,7 +128,7 @@ class Show_Category_PageController extends Abstract_PageController
     /**
      * Get most_viewed_writers.
      */
-    public function _getMostViewedWriters()
+    public function _get_most_viewed_writers()
     {
         $most_viewed_writers = [
             [
@@ -143,7 +143,7 @@ class Show_Category_PageController extends Abstract_PageController
         return $most_viewed_writers;
     }
 
-    public function _getRelatedCategories(array $questions): array
+    public function _get_related_categories(array $questions): array
     {
         if (count($questions) == 0) {
             return [];
@@ -173,7 +173,7 @@ class Show_Category_PageController extends Abstract_PageController
         $related_categories = [];
         if (count($related_titles)) {
             foreach ($related_titles as $title) {
-                $category = Category_Model::initWithTitle($title);
+                $category = Category_Model::init_with_title($title);
                 $related_categories[] = $category;
             }
         } else {
@@ -183,7 +183,7 @@ class Show_Category_PageController extends Abstract_PageController
         return $related_categories;
     }
 
-    protected function _prepareAdditionalJS()
+    protected function _prepare_additional_JS()
     {
         if ($this->authUser) {
             $this->includeJS[] = 'category/rename';
@@ -191,7 +191,7 @@ class Show_Category_PageController extends Abstract_PageController
         }
     }
 
-    protected function _prepareModals()
+    protected function _prepare_modals()
     {
         if ($this->authUser) {
             $this->includeModals[] = 'category/rename';

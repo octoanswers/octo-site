@@ -1,12 +1,12 @@
 <?php
 
-class Query_Questions__findNewest__en__Test extends Abstract_DB_TestCase
+class Query_Questions__find_newest__en__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['en' => ['questions']];
 
     public function test__En()
     {
-        $questions = (new Questions_Query('en'))->findNewest();
+        $questions = (new Questions_Query('en'))->find_newest();
 
         $this->assertEquals(10, count($questions));
 

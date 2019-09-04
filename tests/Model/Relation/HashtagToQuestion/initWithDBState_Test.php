@@ -1,10 +1,10 @@
 <?php
 
-class Model_ER_CategoriesQuestions__initWithDBState__Test extends PHPUnit\Framework\TestCase
+class Model_ER_CategoriesQuestions__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = CategoriesToQuestions_Relation_Model::initWithDBState([
+        $rel = CategoriesToQuestions_Relation_Model::init_with_DB_state([
             'er_id'          => 13,
             'er_category_id' => 3,
             'er_question_id' => 9,
@@ -19,7 +19,7 @@ class Model_ER_CategoriesQuestions__initWithDBState__Test extends PHPUnit\Framew
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = CategoriesToQuestions_Relation_Model::initWithDBState([
+        $rel = CategoriesToQuestions_Relation_Model::init_with_DB_state([
             'er_id'          => 13,
             'er_category_id' => 3,
             'er_question_id' => 9,

@@ -3,13 +3,13 @@
 <header class="navbar sticky-top navbar-expand-lg navbar-light">
 	<div class="container">
 		<?php if ($this->authUser) : ?>
-		<a class="navbar-brand mr-0 mr-md-4" href="<?= Page_URL_Helper::getFeedURL($this->lang) ?>">
-			<?= $this->translator->get('answeropedia') ?>
-		</a>
+			<a class="navbar-brand mr-0 mr-md-4" href="<?= Page_URL_Helper::get_feed_URL($this->lang) ?>">
+				<?= $this->translator->get('answeropedia') ?>
+			</a>
 		<?php else : ?>
-		<a class="navbar-brand mr-0 mr-md-4" href="<?= Page_URL_Helper::getMainURL($this->lang) ?>">
-			<?= $this->translator->get('answeropedia') ?>
-		</a>
+			<a class="navbar-brand mr-0 mr-md-4" href="<?= Page_URL_Helper::get_main_URL($this->lang) ?>">
+				<?= $this->translator->get('answeropedia') ?>
+			</a>
 		<?php endif; ?>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,13 +22,13 @@
 				<!-- Mobile links -->
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link" href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>">
+					<a class="nav-link" href="<?= Page_URL_Helper::get_flow_URL($this->lang) ?>">
 						<?= $this->translator->get('navbar', 'recent_changes') ?>
 					</a>
 				</li>
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>">
+					<a class="nav-link" href="<?= Categories_URL_Helper::get_newest_URL($this->lang) ?>">
 						<?= $this->translator->get('navbar', 'categories') ?>
 					</a>
 				</li>
@@ -60,24 +60,24 @@
 			<ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
 
 				<?php if (!$this->authUser) : ?>
-				<li class="nav-item">
-					<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_login">
-						<?= $this->translator->get('navbar', 'login') ?>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
-						<?= $this->translator->get('navbar', 'signup') ?>
-					</a>
-				</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_login">
+							<?= $this->translator->get('navbar', 'login') ?>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
+							<?= $this->translator->get('navbar', 'signup') ?>
+						</a>
+					</li>
 				<?php endif; ?>
 
 				<?php if ($this->authUser) : ?>
-				<li class="nav-item">
-					<a class="user-avatar d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->get_URL($this->lang) ?>">
-						<img src="<?= $this->authUser->get_avatar_URL_small() ?>" alt="<?= $this->authUser->name ?>">
-					</a>
-				</li>
+					<li class="nav-item">
+						<a class="user-avatar d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->get_URL($this->lang) ?>">
+							<img src="<?= $this->authUser->get_avatar_URL_small() ?>" alt="<?= $this->authUser->name ?>">
+						</a>
+					</li>
 				<?php endif; ?>
 
 				<li class="nav-item">

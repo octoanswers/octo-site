@@ -18,12 +18,12 @@ class Signup_POST_APIController extends Abstract_APIController
             User_Validator::validateEmail($userEmail);
             User_Validator::validatePassword($userPassword);
 
-            $user = (new User_Query())->userWithEmail($userEmail);
+            $user = (new User_Query())->user_with_email($userEmail);
             if ($user) {
                 throw new Exception('User with specific email is already registered', 1);
             }
 
-            $user = (new User_Query())->userWithUsername($username);
+            $user = (new User_Query())->user_with_username($username);
             if ($user) {
                 throw new Exception('User with username "' . $username . '" is already registered', 0);
             }
@@ -31,7 +31,7 @@ class Signup_POST_APIController extends Abstract_APIController
             // Generating password hash
             $passHash = new PassHash();
             $userPasswordHash = $passHash->hash($userPassword);
-            $apiKey = $passHash->generateApiKey();
+            $apiKey = $passHash->generate_API_key();
 
             // @TODO check API-key by doubles
             //$user = $api->get('users_api_key', ['api_key' => $api_key]);
@@ -48,7 +48,7 @@ class Signup_POST_APIController extends Abstract_APIController
             $user = (new User_Mapper())->create($user);
 
             $cookieStorage = new CookieStorage();
-            $cookieStorage->saveUser($user);
+            $cookieStorage->save_user($user);
 
             $this->output = [
                 'id'              => $user->id,
@@ -58,7 +58,7 @@ class Signup_POST_APIController extends Abstract_APIController
                 'api_key'         => $user->apiKey,
                 'created_at'      => date('Y-m-d H:i:s'),
                 'url'             => $user->get_URL($this->lang),
-                'destination_url' => Page_URL_Helper::getMainURL($this->lang),
+                'destination_url' => Page_URL_Helper::get_main_URL($this->lang),
             ];
 
             $this->_copyDefaultAvatar($user->id);

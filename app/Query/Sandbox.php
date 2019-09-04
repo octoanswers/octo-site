@@ -4,12 +4,12 @@ class Sandbox_Query extends Abstract_Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
 
-    public function findNewestWithoutAnswer($page = 1, $perPage = 10): array
+    public function find_newest_without_answer($page = 1, $perPage = 10): array
     {
         QuestionsList_Validator::validatePage($page);
         QuestionsList_Validator::validatePerPage($perPage);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $offset = $perPage * ($page - 1);
 
@@ -26,18 +26,18 @@ class Sandbox_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::initWithDBState($row);
+            $questions[] = Question_Model::init_with_DB_state($row);
         }
 
         return $questions;
     }
 
-    public function questionsWithoutCategories($page = 1, $perPage = 10): array
+    public function questions_without_categories($page = 1, $perPage = 10): array
     {
         QuestionsList_Validator::validatePage($page);
         QuestionsList_Validator::validatePerPage($perPage);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $offset = $perPage * ($page - 1);
 
@@ -56,7 +56,7 @@ class Sandbox_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::initWithDBState($row);
+            $questions[] = Question_Model::init_with_DB_state($row);
         }
 
         return $questions;

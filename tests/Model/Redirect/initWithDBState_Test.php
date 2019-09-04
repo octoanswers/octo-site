@@ -1,10 +1,10 @@
 <?php
 
-class Model_Redirect_initWithDBState_Test extends PHPUnit\Framework\TestCase
+class Model_Redirect_init_with_DB_state_Test extends PHPUnit\Framework\TestCase
 {
     public function test_baseParams()
     {
-        $redirect = Question_Redirect_Model::initWithDBState([
+        $redirect = Question_Redirect_Model::init_with_DB_state([
             'rd_from'  => 13,
             'rd_title' => 'This is question?',
         ]);

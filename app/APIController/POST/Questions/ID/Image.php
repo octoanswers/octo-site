@@ -31,14 +31,14 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
             $this->lang = $args['lang'];
 
             $question_id = (int) $args['id'];
-            $this->question = (new Question_Query($this->lang))->questionWithID($question_id);
+            $this->question = (new Question_Query($this->lang))->question_with_ID($question_id);
 
             if (!$this->question) {
                 throw new Exception('No QUESTION', 0);
             }
 
             $APIKey = $request->getParam('api_key');
-            $this->user = (new User_Query())->userWithAPIKey($APIKey);
+            $this->user = (new User_Query())->user_with_API_key($APIKey);
 
             if (!$this->user) {
                 throw new Exception('No user', 0);

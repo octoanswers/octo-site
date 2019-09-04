@@ -14,12 +14,12 @@
                 <?= $this->translator->get('answer_history', 'change_ID') ?> #<?= $this->revisions[$i]->id ?>
                 <span class="text-dark font_weight_800">&middot;</span>
                 <?php if ($this->revisions[$i]->comment) : ?>
-                <?= $this->translator->get('answer_history', 'description_of_changes') ?>: <?= $this->revisions[$i]->comment ?>
+                    <?= $this->translator->get('answer_history', 'description_of_changes') ?>: <?= $this->revisions[$i]->comment ?>
                 <?php else : ?>
-                <?= $this->translator->get('answer_history', 'no_description_of_changes') ?>
+                    <?= $this->translator->get('answer_history', 'no_description_of_changes') ?>
                 <?php endif; ?>
                 <span class="text-dark font_weight_800">&middot;</span>
-                <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $this->revisions[$i]->createdAt) ?>
+                <?= DateTime_Humanizer::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
             </div>
 
         </div>

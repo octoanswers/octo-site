@@ -1,12 +1,12 @@
 <?php
 
-class Query_Questions_findNewest_perPage_Test extends Abstract_DB_TestCase
+class Query_Questions_find_newest_perPage_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 
     public function test_FindFirst13Questions_Ok()
     {
-        $questions = (new Questions_Query('ru'))->findNewest(1, 13);
+        $questions = (new Questions_Query('ru'))->find_newest(1, 13);
 
         $this->assertEquals(13, count($questions));
 

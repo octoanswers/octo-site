@@ -1,12 +1,12 @@
 <?php
 
-class Query_Questions__findRecentlyUpdated__Test extends Abstract_DB_TestCase
+class Query_Questions__find_recently_updated__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 
     public function test__Ru()
     {
-        $questions = (new Questions_Query('ru'))->findRecentlyUpdated();
+        $questions = (new Questions_Query('ru'))->find_recently_updated();
 
         $this->assertEquals(10, count($questions));
 
@@ -21,7 +21,7 @@ class Query_Questions__findRecentlyUpdated__Test extends Abstract_DB_TestCase
 
     public function test_firstPage()
     {
-        $questions = (new Questions_Query('ru'))->findRecentlyUpdated();
+        $questions = (new Questions_Query('ru'))->find_recently_updated();
 
         $this->assertEquals(10, count($questions));
 
@@ -36,7 +36,7 @@ class Query_Questions__findRecentlyUpdated__Test extends Abstract_DB_TestCase
 
     public function test_secondPage()
     {
-        $questions = (new Questions_Query('ru'))->findRecentlyUpdated(1);
+        $questions = (new Questions_Query('ru'))->find_recently_updated(1);
 
         $this->assertEquals(1, count($questions));
 

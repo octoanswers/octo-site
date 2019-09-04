@@ -1,12 +1,12 @@
 <?php
 
-class Query_Questions__findQuestionsWithImage__Test extends Abstract_DB_TestCase
+class Query_Questions__find_questions_with_image__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 
     public function test__Ru()
     {
-        $questions = (new Questions_Query('ru'))->findQuestionsWithImage(32);
+        $questions = (new Questions_Query('ru'))->find_questions_with_image(32);
 
         $this->assertEquals(3, count($questions));
 
@@ -25,7 +25,7 @@ class Query_Questions__findQuestionsWithImage__Test extends Abstract_DB_TestCase
 
     public function test_firstPage()
     {
-        $questions = (new Questions_Query('ru'))->findQuestionsWithImage(27);
+        $questions = (new Questions_Query('ru'))->find_questions_with_image(27);
 
         $this->assertEquals(3, count($questions));
 
@@ -44,7 +44,7 @@ class Query_Questions__findQuestionsWithImage__Test extends Abstract_DB_TestCase
 
     public function test_secondPage()
     {
-        $questions = (new Questions_Query('ru'))->findQuestionsWithImage(2);
+        $questions = (new Questions_Query('ru'))->find_questions_with_image(2);
 
         $this->assertEquals(0, count($questions));
     }

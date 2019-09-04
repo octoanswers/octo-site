@@ -23,7 +23,7 @@ class Show_Settings_PageController extends Abstract_PageController
         $this->includeJS[] = 'user/update_signature';
         $this->includeJS[] = 'user/update_site';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;

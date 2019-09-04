@@ -6,7 +6,7 @@
 	</div>
 	<ul class="list-links">
 		<li>
-			<?= $this->translator->get('question', 'answer_updated') . ': ' . DateTime_Humanizer::humanizeTimestamp($this->lang, $this->question->answer->updatedAt) ?>
+			<?= $this->translator->get('question', 'answer_updated') . ': ' . DateTime_Humanizer::humanize_timestamp($this->lang, $this->question->answer->updatedAt) ?>
 		</li>
 	</ul>
 </nav>

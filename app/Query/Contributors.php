@@ -2,21 +2,21 @@
 
 class Contributors_Query extends Abstract_Query
 {
-    public function findAnswerContributors(int $answerID): array
+    public function find_answer_contributors(int $answerID): array
     {
-        $revisions = (new Revisions_Query($this->lang))->revisionsForAnswerWithID($answerID);
+        $revisions = (new Revisions_Query($this->lang))->revisions_for_answer_with_ID($answerID);
         $contributions = [];
 
         foreach ($revisions as $revision) {
             $revUserID = $revision->userID;
             if (isset($contributions[$revUserID])) {
-                $contributions[$revUserID]['total'] += $revision->getUserContribution();
-                $contributions[$revUserID]['plus'] += $revision->getUserInsertions();
-                $contributions[$revUserID]['minus'] += $revision->getUserDeletions();
+                $contributions[$revUserID]['total'] += $revision->get_user_contribution();
+                $contributions[$revUserID]['plus'] += $revision->get_user_insertions();
+                $contributions[$revUserID]['minus'] += $revision->get_user_deletions();
             } else {
-                $contributions[$revUserID]['total'] = $revision->getUserContribution();
-                $contributions[$revUserID]['plus'] = $revision->getUserInsertions();
-                $contributions[$revUserID]['minus'] = $revision->getUserDeletions();
+                $contributions[$revUserID]['total'] = $revision->get_user_contribution();
+                $contributions[$revUserID]['plus'] = $revision->get_user_insertions();
+                $contributions[$revUserID]['minus'] = $revision->get_user_deletions();
             }
         }
 
@@ -30,7 +30,7 @@ class Contributors_Query extends Abstract_Query
             ];
         }
 
-        $sortedContributorsData = Contributors_Sort_Helper::sortByContributions($contributorsData);
+        $sortedContributorsData = Contributors_Sort_Helper::sort_by_contributions($contributorsData);
 
         $contributors = [];
         foreach ($sortedContributorsData as $contributorData) {
@@ -39,7 +39,7 @@ class Contributors_Query extends Abstract_Query
             $insertionsCount = $contributorData['plus'];
             $deletionsCount = $contributorData['minus'];
 
-            $user = (new User_Query())->userWithID($userID);
+            $user = (new User_Query())->user_with_ID($userID);
 
             $contributor = new Contributor_Model();
             $contributor->id = $user->id;

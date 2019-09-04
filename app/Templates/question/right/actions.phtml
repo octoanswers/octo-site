@@ -8,22 +8,22 @@
 
 		<!-- add or update image -->
 		<?php if ($this->authUser) : ?>
-		<li>
-			<a href="#" data-toggle="modal" data-target="#modal_upload_image">
-				<i class="material-icons md-18 w-32px">image</i><?= ($this->question->imageBaseName) ? $this->translator->get('question', 'update_picture') : $this->translator->get('question', 'add_picture') ?>
-			</a>
-		</li>
+			<li>
+				<a href="#" data-toggle="modal" data-target="#modal_upload_image">
+					<i class="material-icons md-18 w-32px">image</i><?= ($this->question->imageBaseName) ? $this->translator->get('question', 'update_picture') : $this->translator->get('question', 'add_picture') ?>
+				</a>
+			</li>
 		<?php endif; ?>
 		<!-- add or update image -->
 
 		<?php if ($this->authUser) : ?>
-		<!-- rename question -->
-		<li>
-			<a href="#" data-toggle="modal" data-target="#modal_rename_question">
-				<i class="material-icons md-18 w-32px">edit</i><?= $this->translator->get('question', 'rename_question') ?>
-			</a>
-		</li>
-		<!-- / rename question -->
+			<!-- rename question -->
+			<li>
+				<a href="#" data-toggle="modal" data-target="#modal_rename_question">
+					<i class="material-icons md-18 w-32px">edit</i><?= $this->translator->get('question', 'rename_question') ?>
+				</a>
+			</li>
+			<!-- / rename question -->
 		<?php endif; ?>
 
 		<li>
@@ -33,7 +33,7 @@
 		</li>
 
 		<li>
-			<a rel="nofollow" target="_blank" href="<?= DDG_URL_Helper::getSearchURL($this->question->title) ?>">
+			<a rel="nofollow" target="_blank" href="<?= DDG_URL_Helper::get_search_URL($this->question->title) ?>">
 				<i class="material-icons md-18 w-32px">link</i><?= $this->translator->get('question', 'search_in_ddg') ?>
 			</a>
 		</li>

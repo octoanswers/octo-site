@@ -13,7 +13,7 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
 
         $categoryURI = $args['category_uri'];
 
-        $this->categoryTitle = $this->_categoryTitleFromURI($categoryURI);
+        $this->categoryTitle = $this->_category_title_from_URI($categoryURI);
 
         $category = new Category_Model();
         $category->title = $this->categoryTitle;
@@ -26,13 +26,13 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
         $this->categoryURI = $categoryURI;
         //$this->includeJS[] = 'goal/category_not_found';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response->withStatus(404);
     }
 
-    private function _categoryTitleFromURI(string $uri): string
+    private function _category_title_from_URI(string $uri): string
     {
         $uri = str_replace('__', 'DOUBLEUNDERLINE', $uri);
         $uri = str_replace('_', ' ', $uri);

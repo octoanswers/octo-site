@@ -1,10 +1,10 @@
 <?php
 
-class Model_Revision_initWithDBState_Test extends PHPUnit\Framework\TestCase
+class Model_Revision_init_with_DB_state_Test extends PHPUnit\Framework\TestCase
 {
     public function testFullParams()
     {
-        $revision = Revision_Model::initWithDBState([
+        $revision = Revision_Model::init_with_DB_state([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',
@@ -27,7 +27,7 @@ class Model_Revision_initWithDBState_Test extends PHPUnit\Framework\TestCase
 
     public function testMinParams()
     {
-        $revision = Revision_Model::initWithDBState([
+        $revision = Revision_Model::init_with_DB_state([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',

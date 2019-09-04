@@ -15,7 +15,7 @@ class Show_Feed_PageController extends Abstract_PageController
 
         $userID = $this->authUser->id;
 
-        $res = (new Feeds_Query($this->lang))->findFeedsForUserWithID($userID);
+        $res = (new Feeds_Query($this->lang))->find_feeds_for_user_with_ID($userID);
         $this->activities = $res['activities'];
 
         $human_date_timezone = new DateTimeZone('UTC');
@@ -30,13 +30,13 @@ class Show_Feed_PageController extends Abstract_PageController
             $activity['created_at__humanized'] = $date_humanizer->format($activity['created_at']);
         }
 
-        $follows_users = (new UsersFollowUsers_Relations_Query($this->lang))->findUsersFollowedByUser($userID);
+        $follows_users = (new UsersFollowUsers_Relations_Query($this->lang))->find_users_followed_by_user($userID);
         $this->isShowUsersFollowLure = (count($follows_users) < 3);
 
-        $follows_categories = (new UsersFollowCategories_Relations_Query($this->lang))->findCategoriesFollowedByUser($userID);
+        $follows_categories = (new UsersFollowCategories_Relations_Query($this->lang))->find_categories_followed_by_user($userID);
         $this->isShowCategoriesFollowLure = (count($follows_categories) < 3);
 
-        $follows_questions = (new UsersFollowQuestions_Relations_Query($this->lang))->findQuestionsFollowedByUser($userID);
+        $follows_questions = (new UsersFollowQuestions_Relations_Query($this->lang))->find_questions_followed_by_user($userID);
         $this->isShowQuestionsFollowLure = (count($follows_questions) < 3);
 
         $this->template = 'feed';
@@ -44,7 +44,7 @@ class Show_Feed_PageController extends Abstract_PageController
         $this->pageTitle = $this->translator->get('feed', 'page_title') . ' – ' . $this->translator->get('answeropedia');
         $this->canonicalURL = SITE_URL;
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;

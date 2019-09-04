@@ -16,7 +16,7 @@ class Login_POST_APIController extends Abstract_APIController
             User_Validator::validateEmail($userEmail);
             User_Validator::validatePassword($userPassword);
 
-            $user = (new User_Query())->userWithEmail($userEmail);
+            $user = (new User_Query())->user_with_email($userEmail);
             if (!$user) {
                 throw new Exception('User with specific email not found', 1);
             }
@@ -28,7 +28,7 @@ class Login_POST_APIController extends Abstract_APIController
             }
 
             $cookieStorage = new CookieStorage();
-            $cookieStorage->saveUser($user);
+            $cookieStorage->save_user($user);
 
             $output = [
                 'lang'            => $this->lang,
@@ -38,7 +38,7 @@ class Login_POST_APIController extends Abstract_APIController
                 'api_key'         => $user->apiKey,
                 'created_at'      => $user->createdAt,
                 'url'             => $user->get_URL($this->lang),
-                'destination_url' => Page_URL_Helper::getMainURL($this->lang),
+                'destination_url' => Page_URL_Helper::get_main_URL($this->lang),
             ];
         } catch (Throwable $e) {
             $output = [

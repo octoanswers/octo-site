@@ -17,12 +17,12 @@ class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
             // Validate params
             //
 
-            $user = (new User_Query())->userWithAPIKey($api_key);
+            $user = (new User_Query())->user_with_API_key($api_key);
             $userID = $user->id;
 
-            $question = (new Question_Query($this->lang))->questionWithID($questionID);
+            $question = (new Question_Query($this->lang))->question_with_ID($questionID);
 
-            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relationWithUserIDAndQuestionID($userID, $questionID);
+            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relation_with_user_ID_and_question_ID($userID, $questionID);
             if (!$relation) {
                 throw new Exception('User with ID "' . $userID . '" not followed question with ID "' . $questionID . '"', 0);
             }

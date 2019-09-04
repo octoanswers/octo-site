@@ -5,7 +5,7 @@ class Contributor_Query extends Abstract_Query
     /**
      * @return User_Model|null
      */
-    public function findAnswerLastEditor(int $answerID)
+    public function find_answer_last_editor(int $answerID)
     {
         Answer_Validator::validateID($answerID);
 
@@ -24,7 +24,7 @@ class Contributor_Query extends Abstract_Query
         }
 
         $userID = $row['rev_user_id'];
-        $user = (new User_Query())->userWithID($userID);
+        $user = (new User_Query())->user_with_ID($userID);
 
         return $user;
     }
@@ -32,7 +32,7 @@ class Contributor_Query extends Abstract_Query
     /**
      * @return User_Model|null
      */
-    public function findAnswerFirstEditor(int $answerID)
+    public function find_answer_first_editor(int $answerID)
     {
         Answer_Validator::validateID($answerID);
 
@@ -51,7 +51,7 @@ class Contributor_Query extends Abstract_Query
         }
 
         $userID = $row['rev_user_id'];
-        $user = (new User_Query())->userWithID($userID);
+        $user = (new User_Query())->user_with_ID($userID);
 
         return $user;
     }

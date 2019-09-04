@@ -20,12 +20,12 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 
             // Check user
 
-            $user = (new User_Query())->userWithAPIKey($user_api_key);
+            $user = (new User_Query())->user_with_API_key($user_api_key);
             // @TODO Check rigths to edit
 
             // Check answer
 
-            $answer = (new Answers_Query($this->lang))->answerWithID($answer_id);
+            $answer = (new Answers_Query($this->lang))->answer_with_ID($answer_id);
 
             $old_answer_text = $answer->text;
             $opcodes = FineDiff::getDiffOpcodes($old_answer_text, $new_answer_text, FineDiff::$wordGranularity);
@@ -53,7 +53,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 
             Revision_Validator::validateComment($revisionComment);
 
-            $parentRevision = (new Revisions_Query($this->lang))->lastRevisionForAnswerWithID($answer_id);
+            $parentRevision = (new Revisions_Query($this->lang))->last_revision_for_answer_with_ID($answer_id);
             if ($parentRevision) {
                 $revision->parentID = $parentRevision->id;
             }
@@ -61,7 +61,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             $revision = (new Revision_Mapper($this->lang))->save($revision);
 
             // Read updated question
-            $question = (new Question_Query($this->lang))->questionWithID($answer_id);
+            $question = (new Question_Query($this->lang))->question_with_ID($answer_id);
 
             // Save activity
 

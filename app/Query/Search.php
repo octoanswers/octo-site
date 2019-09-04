@@ -7,7 +7,7 @@ class Search_Query extends Abstract_Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
 
-    public function searchQuestions(string $query, int $questionsPage = 1, int $questionsPerPage = 10): array
+    public function search_questions(string $query, int $questionsPage = 1, int $questionsPerPage = 10): array
     {
         try {
             v::stringType()->length(2, 32, true)->assert($query);
@@ -34,13 +34,13 @@ class Search_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::initWithDBState($row);
+            $questions[] = Question_Model::init_with_DB_state($row);
         }
 
         return $questions;
     }
 
-    public function searchCategories(string $query, int $page = 1, int $perPage = 10): array
+    public function search_categories(string $query, int $page = 1, int $perPage = 10): array
     {
         try {
             v::stringType()->length(1, 32, true)->assert($query);
@@ -67,13 +67,13 @@ class Search_Query extends Abstract_Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = Category_Model::initWithDBState($row);
+            $categories[] = Category_Model::init_with_DB_state($row);
         }
 
         return $categories;
     }
 
-    public function searchUsers(string $query, int $page = 1, int $perPage = 10): array
+    public function search_users(string $query, int $page = 1, int $perPage = 10): array
     {
         try {
             v::stringType()->length(2, 32, true)->assert($query);
@@ -88,7 +88,7 @@ class Search_Query extends Abstract_Query
 
         $sql = "SELECT * FROM users WHERE (u_name LIKE '%" . $query . "%') LIMIT :id_offset, :per_page";
 
-        $this->pdo = PDOFactory::getConnectionToUsersDB();
+        $this->pdo = PDOFactory::get_connection_to_users_DB();
         $stmt = $this->pdo->prepare($sql);
 
         $stmt->bindParam(':id_offset', $id_offset, PDO::PARAM_INT);
@@ -102,7 +102,7 @@ class Search_Query extends Abstract_Query
 
         $users = [];
         foreach ($rows as $row) {
-            $users[] = User_Model::initWithDBState($row);
+            $users[] = User_Model::init_with_DB_state($row);
         }
 
         return $users;

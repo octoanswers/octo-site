@@ -9,7 +9,7 @@ class Category_Redirect_Model extends Abstract_Model
     // Init methods
     //
 
-    public static function initWithDBState(array $state): self
+    public static function init_with_DB_state(array $state): self
     {
         $redirect = new self();
         $redirect->fromID = (int) $state['rd_from'];

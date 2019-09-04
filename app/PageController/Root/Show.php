@@ -7,8 +7,8 @@ class Show_Root_PageController extends Abstract_PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
-        $supported_languages = Lang::getSupportedLangs();
-        $default_language = Lang::getDefaultLang();
+        $supported_languages = Lang::get_supported_langs();
+        $default_language = Lang::get_default_lang();
 
         $this->lang = $default_language;
         $this->translator = new Translator($this->lang, ROOT_PATH . '/app/Lang');
@@ -27,7 +27,7 @@ class Show_Root_PageController extends Abstract_PageController
         $this->pageDescription = $this->translator->get('Questions and Answers');
         $this->canonicalURL = SITE_URL;
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;

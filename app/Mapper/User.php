@@ -4,7 +4,7 @@ class User_Mapper extends Abstract_Mapper
 {
     public function __construct()
     {
-        $this->pdo = PDOFactory::getConnectionToUsersDB();
+        $this->pdo = PDOFactory::get_connection_to_users_DB();
     }
 
     public function __destruct()

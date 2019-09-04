@@ -12,12 +12,12 @@
  */
 class Lang
 {
-    public static function getSupportedLangs(): array
+    public static function get_supported_langs(): array
     {
         return ['en', 'ru'];
     }
 
-    public static function getDefaultLang(): string
+    public static function get_default_lang(): string
     {
         return 'en';
     }
@@ -40,7 +40,7 @@ class Lang
             }
 
             $cookieStorage = new CookieStorage();
-            $cookieStorage->setLang($lang);
+            $cookieStorage->set_lang($lang);
 
             return $lang;
         }
@@ -63,7 +63,7 @@ class Lang
             }
 
             $cookieStorage = new CookieStorage();
-            $cookieStorage->setLang($lang);
+            $cookieStorage->set_lang($lang);
 
             return $lang;
         }

@@ -1,12 +1,12 @@
 <?php
 
-class Query_Search_searchCategories_base_Test extends Abstract_DB_TestCase
+class Query_Search_search_categories_base_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 
     public function test_SearchWithTwoResults_Ok()
     {
-        $categories = (new Search_Query('ru'))->searchCategories('фото');
+        $categories = (new Search_Query('ru'))->search_categories('фото');
 
         $this->assertEquals(2, count($categories));
 
@@ -19,7 +19,7 @@ class Query_Search_searchCategories_base_Test extends Abstract_DB_TestCase
 
     public function test_One_letter_search()
     {
-        $categories = (new Search_Query('ru'))->searchCategories('а');
+        $categories = (new Search_Query('ru'))->search_categories('а');
 
         $this->assertEquals(10, count($categories));
 

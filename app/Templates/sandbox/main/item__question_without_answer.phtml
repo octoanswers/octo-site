@@ -7,20 +7,20 @@
     <div class="small text-secondary">
 
         <?php if (strlen($question->answer->text) == 0) : ?>
-        <a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
-            <?= $this->translator->get('sandbox', 'btn_write_answer') ?>
-        </a>
-        <span class="mx-1 text-dark font-weight-bold">&middot;</span>
+            <a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
+                <?= $this->translator->get('sandbox', 'btn_write_answer') ?>
+            </a>
+            <span class="mx-1 text-dark font-weight-bold">&middot;</span>
         <?php endif; ?>
 
         <?php if ($question->categoriesCount == 0) : ?>
-        <a rel="nofollow" href="<?= $question->get_update_categories_URL($this->lang) ?>">
-            <?= $this->translator->get('sandbox', 'btn_add_categories') ?>
-        </a>
-        <span class="mx-1 text-dark font-weight-bold">&middot;</span>
+            <a rel="nofollow" href="<?= $question->get_update_categories_URL($this->lang) ?>">
+                <?= $this->translator->get('sandbox', 'btn_add_categories') ?>
+            </a>
+            <span class="mx-1 text-dark font-weight-bold">&middot;</span>
         <?php endif; ?>
 
-        <?= $this->translator->get('sandbox', 'answer_updated') ?> <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
+        <?= $this->translator->get('sandbox', 'answer_updated') ?> <?= DateTime_Humanizer::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
 
     </div>
 </div>

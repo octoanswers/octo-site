@@ -51,7 +51,7 @@ class Translator
      *
      * @var string
      */
-    public function getLang()
+    public function get_lang()
     {
         return $this->lang;
     }

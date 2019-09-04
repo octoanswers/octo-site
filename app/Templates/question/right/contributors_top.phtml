@@ -1,48 +1,48 @@
 <?php if (count($this->contributors_top)) : ?>
-<!--noindex-->
-<!--googleoff: index-->
+    <!--noindex-->
+    <!--googleoff: index-->
 
-<!-- top contributors @ sidebar -->
-<div class="mb-5">
-    <div class="mb-3">
-        <a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
-            <span class="font-weight-bold"><?= count($this->contributors) ?></span>&nbsp;<i class="material-icons md-18">person</i>
-        </a>
-        <div class="text-uppercase semi-small text-secondary">
-            <?= $this->translator->get('question', 'top_contributors') ?>
-        </div>
-    </div>
-
-    <?php foreach ($this->contributors_top as $contributor) : ?>
-
-    <div class="media position-relative mb-4">
-        <a class="wh-3 mt-1 mr-3 rounded" href="<?= $contributor->get_URL($this->lang) ?>">
-            <img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-3 rounded" alt="<?= $contributor->name ?>">
-        </a>
-        <div class="media-body">
-            <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->get_URL($this->lang) ?>">
-                <?= $contributor->name ?>
+    <!-- top contributors @ sidebar -->
+    <div class="mb-5">
+        <div class="mb-3">
+            <a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
+                <span class="font-weight-bold"><?= count($this->contributors) ?></span>&nbsp;<i class="material-icons md-18">person</i>
             </a>
-
-            <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
-                <?= Contribution_Humanizer::humanizeCount($contributor->contribution) ?>
-            </span>
-
-            <p class="small text-secondary mt-1 mb-0">
-                <?= $contributor->signature ? $contributor->signature : $contributor->username ?>
-                <?php if ($contributor->site) : ?>
-                <a href="<?= $contributor->site ?>">
-                    <?= parse_url($contributor->site, PHP_URL_HOST) ?>
-                </a>
-                <?php endif; ?>
-            </p>
+            <div class="text-uppercase semi-small text-secondary">
+                <?= $this->translator->get('question', 'top_contributors') ?>
+            </div>
         </div>
+
+        <?php foreach ($this->contributors_top as $contributor) : ?>
+
+            <div class="media position-relative mb-4">
+                <a class="wh-3 mt-1 mr-3 rounded" href="<?= $contributor->get_URL($this->lang) ?>">
+                    <img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-3 rounded" alt="<?= $contributor->name ?>">
+                </a>
+                <div class="media-body">
+                    <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->get_URL($this->lang) ?>">
+                        <?= $contributor->name ?>
+                    </a>
+
+                    <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
+                        <?= Contribution_Humanizer::humanize_count($contributor->contribution) ?>
+                    </span>
+
+                    <p class="small text-secondary mt-1 mb-0">
+                        <?= $contributor->signature ? $contributor->signature : $contributor->username ?>
+                        <?php if ($contributor->site) : ?>
+                            <a href="<?= $contributor->site ?>">
+                                <?= parse_url($contributor->site, PHP_URL_HOST) ?>
+                            </a>
+                        <?php endif; ?>
+                    </p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
     </div>
-    <?php endforeach; ?>
+    <!-- / top contributors @ sidebar -->
 
-</div>
-<!-- / top contributors @ sidebar -->
-
-<!--googleon: index -->
-<!--/noindex-->
+    <!--googleon: index -->
+    <!--/noindex-->
 <?php endif; ?>

@@ -10,7 +10,7 @@ class Mapper_Activity_URenameQ__create__Test extends Abstract_DB_TestCase
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $question = (new Question_Query('ru'))->questionWithID(6);
+        $question = (new Question_Query('ru'))->question_with_ID(6);
 
         $activity = new Activity_Model();
         $activity->type = Activity_Model::U_RENAME_Q;

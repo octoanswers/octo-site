@@ -1,6 +1,6 @@
 <?php
 
-class APIController_GET_SearchCategories_ru_Test extends Abstract_Frontend_TestCase
+class APIController_GET_search_categories_ru_Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 

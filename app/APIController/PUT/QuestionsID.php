@@ -24,7 +24,7 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
             //     // $user['id'] ==
             // }
 
-            $question = (new Question_Query($this->lang))->questionWithID($questionID);
+            $question = (new Question_Query($this->lang))->question_with_ID($questionID);
             $question->title = $questionTitle;
 
             $question = (new Question_Mapper($this->lang))->update($question);

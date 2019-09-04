@@ -1,12 +1,12 @@
 <?php
 
-class Query_Revisions_revisionsForAnswerWithID_BaseTest extends Abstract_DB_TestCase
+class Query_Revisions_revisions_for_answer_with_ID_BaseTest extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['revisions', 'questions']];
 
     public function testQuestionHaveSomeRevisions()
     {
-        $revisions = (new Revisions_Query('ru'))->revisionsForAnswerWithID(4);
+        $revisions = (new Revisions_Query('ru'))->revisions_for_answer_with_ID(4);
 
         $this->assertEquals(4, $revisions[0]->id);
         $this->assertEquals(4, $revisions[0]->answerID);
@@ -26,7 +26,7 @@ class Query_Revisions_revisionsForAnswerWithID_BaseTest extends Abstract_DB_Test
 
     public function testQuestionDontHaveRevisions()
     {
-        $actualResponse = (new Revisions_Query('ru'))->revisionsForAnswerWithID(7);
+        $actualResponse = (new Revisions_Query('ru'))->revisions_for_answer_with_ID(7);
 
         $this->assertEquals([], $actualResponse);
     }

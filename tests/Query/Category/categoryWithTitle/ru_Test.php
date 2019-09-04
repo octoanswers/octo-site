@@ -1,12 +1,12 @@
 <?php
 
-class Category_Query__findWithTitle__ru__Test extends Abstract_DB_TestCase
+class Category_Query__find_with_title__ru__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 
     public function test__HastagExists()
     {
-        $category = (new Category_Query('ru'))->findWithTitle('парфюмерия');
+        $category = (new Category_Query('ru'))->find_with_title('парфюмерия');
 
         $this->assertEquals(8, $category->id);
         $this->assertEquals('Парфюмерия', $category->title);
@@ -14,7 +14,7 @@ class Category_Query__findWithTitle__ru__Test extends Abstract_DB_TestCase
 
     public function test__CategoryNotExists()
     {
-        $category = (new Category_Query('ru'))->findWithTitle('notexists');
+        $category = (new Category_Query('ru'))->find_with_title('notexists');
 
         $this->assertEquals(null, $category);
     }

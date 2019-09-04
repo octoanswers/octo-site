@@ -16,7 +16,7 @@ class PageNotFound_Error_PageController extends Abstract_PageController
         $this->pageDescription = $this->translator->get('page_not_found', 'page_title');
         $this->includeJS[] = 'goal/page_not_found';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response->withStatus(404);

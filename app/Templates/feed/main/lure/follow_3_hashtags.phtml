@@ -11,7 +11,7 @@
         <div class="small text-muted mb-3">
             <?= $this->translator->get('feed', 'subscribe_to_several_categories', 'msg') ?>
         </div>
-        <a class="btn btn-sm btn-outline-primary" href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>">
+        <a class="btn btn-sm btn-outline-primary" href="<?= Categories_URL_Helper::get_newest_URL($this->lang) ?>">
             <?= $this->translator->get('feed', 'subscribe_to_several_categories', 'action') ?>
         </a>
     </div>

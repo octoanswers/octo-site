@@ -1,12 +1,12 @@
 <?php
 
-class Users_Query__userWithEmail__Test extends Abstract_DB_TestCase
+class Users_Query__user_with_email__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
     public function test_base()
     {
-        $user = (new User_Query())->userWithEmail('pushka@answeropedia.org');
+        $user = (new User_Query())->user_with_email('pushka@answeropedia.org');
 
         $this->assertEquals(4, $user->id);
         $this->assertEquals('sasha', $user->username);

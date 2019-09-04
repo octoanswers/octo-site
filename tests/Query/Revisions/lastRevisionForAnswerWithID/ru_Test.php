@@ -1,12 +1,12 @@
 <?php
 
-class Mapper_Revisions_lastRevisionForAnswerWithID_Base_Test extends Abstract_DB_TestCase
+class Mapper_Revisions_last_revision_for_answer_with_ID_Base_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['revisions']];
 
     public function testRevisionExists()
     {
-        $revision = (new Revisions_Query('ru'))->lastRevisionForAnswerWithID(4);
+        $revision = (new Revisions_Query('ru'))->last_revision_for_answer_with_ID(4);
 
         $this->assertEquals(4, $revision->id);
         $this->assertEquals(4, $revision->answerID);
@@ -18,7 +18,7 @@ class Mapper_Revisions_lastRevisionForAnswerWithID_Base_Test extends Abstract_DB
 
     public function testRevisionNotExists()
     {
-        $revision = (new Revisions_Query('ru'))->lastRevisionForAnswerWithID(17);
+        $revision = (new Revisions_Query('ru'))->last_revision_for_answer_with_ID(17);
 
         $this->assertEquals(null, $revision);
     }

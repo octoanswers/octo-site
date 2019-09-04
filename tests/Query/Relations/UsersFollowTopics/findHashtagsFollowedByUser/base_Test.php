@@ -1,12 +1,12 @@
 <?php
 
-class UsersFollowQuestions_Relations_Query__findCategoriesFollowedByUser__Test extends Abstract_DB_TestCase
+class UsersFollowQuestions_Relations_Query__find_categories_followed_by_user__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['er_users_follow_categories']];
 
     public function test__RelationExists()
     {
-        $followed = (new UsersFollowCategories_Relations_Query('ru'))->findCategoriesFollowedByUser(7);
+        $followed = (new UsersFollowCategories_Relations_Query('ru'))->find_categories_followed_by_user(7);
 
         $this->assertEquals(22, $followed[0]);
         $this->assertEquals(15, $followed[1]);
@@ -16,7 +16,7 @@ class UsersFollowQuestions_Relations_Query__findCategoriesFollowedByUser__Test e
 
     public function test__RelationNotExists()
     {
-        $followed = (new UsersFollowCategories_Relations_Query('ru'))->findCategoriesFollowedByUser(12);
+        $followed = (new UsersFollowCategories_Relations_Query('ru'))->find_categories_followed_by_user(12);
 
         $this->assertEquals(0, count($followed));
     }

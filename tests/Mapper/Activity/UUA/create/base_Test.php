@@ -10,7 +10,7 @@ class Mapper_Activity_UUA__create__Test extends Abstract_DB_TestCase
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $question = Question_Model::initWithDBState([
+        $question = Question_Model::init_with_DB_state([
             'q_id'             => 13,
             'q_title'          => 'This is question?',
             'q_is_redirect'    => 1,
@@ -20,7 +20,7 @@ class Mapper_Activity_UUA__create__Test extends Abstract_DB_TestCase
             'count_categories' => 0,
         ]);
 
-        $revision = Revision_Model::initWithDBState([
+        $revision = Revision_Model::init_with_DB_state([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',

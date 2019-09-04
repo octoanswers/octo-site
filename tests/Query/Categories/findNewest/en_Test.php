@@ -1,12 +1,12 @@
 <?php
 
-class Categories_Query__findNewest__en__Test extends Abstract_DB_TestCase
+class Categories_Query__find_newest__en__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['en' => ['categories']];
 
     public function test_withoutParams()
     {
-        $categories = (new Categories_Query('en'))->findNewest();
+        $categories = (new Categories_Query('en'))->find_newest();
 
         $this->assertEquals(10, count($categories));
 

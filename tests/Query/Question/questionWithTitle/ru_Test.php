@@ -1,12 +1,12 @@
 <?php
 
-class Mapper_Question_questionWithTitle_Base_Test extends Abstract_DB_TestCase
+class Mapper_Question_question_with_title_Base_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 
     public function test__baseArgs()
     {
-        $question = (new Question_Query('ru'))->questionWithTitle('Как птицы помечают свою территорию?');
+        $question = (new Question_Query('ru'))->question_with_title('Как птицы помечают свою территорию?');
 
         $this->assertEquals(6, $question->id);
         $this->assertEquals('Как птицы помечают свою территорию?', $question->title);
@@ -15,7 +15,7 @@ class Mapper_Question_questionWithTitle_Base_Test extends Abstract_DB_TestCase
 
     public function testQuestionWithoutAnswer()
     {
-        $question = (new Question_Query('ru'))->questionWithTitle('В чем драматизм человека?');
+        $question = (new Question_Query('ru'))->question_with_title('В чем драматизм человека?');
 
         $this->assertEquals(5, $question->id);
         $this->assertEquals('В чем драматизм человека?', $question->title);

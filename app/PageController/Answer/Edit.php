@@ -15,12 +15,12 @@ class Edit_Answer_PageController extends Abstract_PageController
         $answerID = $args['id'];
 
         try {
-            $this->question = (new Question_Query($this->lang))->questionWithID($answerID);
+            $this->question = (new Question_Query($this->lang))->question_with_ID($answerID);
         } catch (Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->answer = (new Answers_Query($this->lang))->answerWithID($this->question->id);
+        $this->answer = (new Answers_Query($this->lang))->answer_with_ID($this->question->id);
 
         if ($this->answer == null) {
             $answer = new Answer_Model();
@@ -40,7 +40,7 @@ class Edit_Answer_PageController extends Abstract_PageController
         $this->includeJS[] = 'answer/update.js?v=1';
         $this->includeCSS[] = 'https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;
@@ -50,7 +50,7 @@ class Edit_Answer_PageController extends Abstract_PageController
     {
         try {
             $how_to_edit_question_ID = $this->translator->get('service_id', 'how_to_edit');
-            $how_to_edit_question = (new Question_Query($this->lang))->questionWithID($how_to_edit_question_ID);
+            $how_to_edit_question = (new Question_Query($this->lang))->question_with_ID($how_to_edit_question_ID);
         } catch (Throwable $e) {
             $how_to_edit_question = null;
         }

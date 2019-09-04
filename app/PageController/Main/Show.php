@@ -16,18 +16,18 @@ class Show_Main_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $this->recent_questions = (new Questions_Query($this->lang))->findNewestWithAnswer(1, 5);
+        $this->recent_questions = (new Questions_Query($this->lang))->find_newest_with_answer(1, 5);
 
         // foreach ($this->recent_questions as $question) {
         //     $categoriesTitles = Category_Extractor_Helper::extractCategories($question->answer->text);
         //     foreach ($categoriesTitles as $title) {
-        //         $category = Category_Model::initWithTitle($title);
+        //         $category = Category_Model::init_with_title($title);
         //         $this->categories[$question->id][] = $category;
         //     }
         // }
 
         foreach ($this->recent_questions as $question) {
-            $contributors_array = (new Contributors_Query($this->lang))->findAnswerContributors($question->id);
+            $contributors_array = (new Contributors_Query($this->lang))->find_answer_contributors($question->id);
             foreach ($contributors_array as $contributor) {
                 $this->contributors[$question->id][] = $contributor;
             }
@@ -38,7 +38,7 @@ class Show_Main_PageController extends Abstract_PageController
         $this->template = 'main';
         $this->pageTitle = $this->translator->get('answeropedia') . ' – ' . $this->translator->get('main', 'slogan');
         $this->pageDescription = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
-        $this->canonicalURL = Page_URL_Helper::getMainURL($this->lang);
+        $this->canonicalURL = Page_URL_Helper::get_main_URL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 
@@ -49,7 +49,7 @@ class Show_Main_PageController extends Abstract_PageController
 
         $this->includeJS[] = 'question/create';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;

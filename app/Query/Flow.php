@@ -2,7 +2,7 @@
 
 class Flow_Query extends Abstract_Query
 {
-    public function findFlow(): array
+    public function find_flow(): array
     {
         $sql = 'SELECT * FROM activities ORDER BY id DESC LIMIT 10';
 

@@ -2,13 +2,13 @@
 
 class Feeds_Query extends Abstract_Query
 {
-    public function findFeedsForUserWithID(int $userID): array
+    public function find_feeds_for_user_with_ID(int $userID): array
     {
-        $user = (new User_Query())->userWithID($userID);
+        $user = (new User_Query())->user_with_ID($userID);
 
-        $follows_users = (new UsersFollowUsers_Relations_Query($this->lang))->findUsersFollowedByUser($userID);
-        $follows_categories = (new UsersFollowCategories_Relations_Query($this->lang))->findCategoriesFollowedByUser($userID);
-        $follows_questions = (new UsersFollowQuestions_Relations_Query($this->lang))->findQuestionsFollowedByUser($userID);
+        $follows_users = (new UsersFollowUsers_Relations_Query($this->lang))->find_users_followed_by_user($userID);
+        $follows_categories = (new UsersFollowCategories_Relations_Query($this->lang))->find_categories_followed_by_user($userID);
+        $follows_questions = (new UsersFollowQuestions_Relations_Query($this->lang))->find_questions_followed_by_user($userID);
 
         $where = [];
         if (count($follows_users)) {
@@ -52,21 +52,5 @@ class Feeds_Query extends Abstract_Query
             'sql'        => $sql,
             'activities' => $activities,
         ];
-
-        // read feed file
-        // $feed_file = DATA_DIR.'/users/'.$user['id'].'/_feed.json';
-        // if (file_exists($feed_file)) {
-        //     $json_string = file_get_contents($feed_file);
-        //     $items = json_decode($json_string, true);
-        //
-        //     if (json_last_error()) {
-        //         throw new Exception(json_last_error_msg(), json_last_error());
-        //     }
-        //
-        //     $response['items'] = $items;
-        // } else {
-        //     $response['error_code'] = 1;
-        //     $response['error_message'] = 'Not found feed file '.$feed_file;
-        // }
     }
 }

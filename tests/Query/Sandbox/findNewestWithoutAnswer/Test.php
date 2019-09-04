@@ -1,12 +1,12 @@
 <?php
 
-class Sandbox_Query__findNewestWithoutAnswer_Test extends Abstract_DB_TestCase
+class Sandbox_Query__find_newest_without_answer_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions'], 'en' => ['questions']];
 
     public function test_Ru()
     {
-        $questions = (new Sandbox_Query('ru'))->findNewestWithoutAnswer();
+        $questions = (new Sandbox_Query('ru'))->find_newest_without_answer();
 
         $this->assertEquals(10, count($questions));
 
@@ -21,7 +21,7 @@ class Sandbox_Query__findNewestWithoutAnswer_Test extends Abstract_DB_TestCase
 
     public function test_firstPage()
     {
-        $questions = (new Sandbox_Query('ru'))->findNewestWithoutAnswer(1);
+        $questions = (new Sandbox_Query('ru'))->find_newest_without_answer(1);
 
         $this->assertEquals(10, count($questions));
 
@@ -36,7 +36,7 @@ class Sandbox_Query__findNewestWithoutAnswer_Test extends Abstract_DB_TestCase
 
     public function test_secondPage()
     {
-        $questions = (new Sandbox_Query('ru'))->findNewestWithoutAnswer(2);
+        $questions = (new Sandbox_Query('ru'))->find_newest_without_answer(2);
 
         $this->assertEquals(10, count($questions));
 

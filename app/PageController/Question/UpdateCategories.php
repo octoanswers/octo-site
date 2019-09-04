@@ -14,7 +14,7 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
         $questionID = $args['id'];
 
         try {
-            $this->question = (new Question_Query($this->lang))->questionWithID($questionID);
+            $this->question = (new Question_Query($this->lang))->question_with_ID($questionID);
         } catch (Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -37,7 +37,7 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
         $this->includeJS[] = 'question/tagsinput';
         $this->includeJS[] = 'question/update_topics';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;

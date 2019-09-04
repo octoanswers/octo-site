@@ -4,7 +4,7 @@
     <p class="font-weight-bold"><?= $this->translator->get('search', 'no_users_found', 'title') ?></p>
     <p><?= str_replace('%query%', $this->query, $this->translator->get('search', 'no_users_found', 'msg')); ?></p>
 
-    <a class="btn btn-primary mb-2" href="<?= Users_URL_Helper::getNewestURL($this->lang) ?>" role="button">
+    <a class="btn btn-primary mb-2" href="<?= Users_URL_Helper::get_newest_URL($this->lang) ?>" role="button">
         <?= $this->translator->get('search', 'no_users_found', 'view_all_users') ?>
     </a>
 </div>

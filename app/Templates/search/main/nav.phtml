@@ -1,17 +1,16 @@
-
 <ul class="nav nav-pills">
     <li class="nav-item">
-        <a class="nav-link <?= $this->list == 'questions' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchQuestionsURL($this->lang, $this->query) ?>">
+        <a class="nav-link <?= $this->list == 'questions' ? 'active' : '' ?>" href="<?= Search_URL_Helper::get_search_questions_URL($this->lang, $this->query) ?>">
             <?= $this->translator->get('search__filter', 'questions'); ?>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link <?= $this->list == 'categories' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchCategoriesURL($this->lang, $this->query) ?>">
+        <a class="nav-link <?= $this->list == 'categories' ? 'active' : '' ?>" href="<?= Search_URL_Helper::get_search_categories_URL($this->lang, $this->query) ?>">
             <?= $this->translator->get('search__filter', 'categories'); ?>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link <?= $this->list == 'users' ? 'active' : '' ?>" href="<?= Search_URL_Helper::getSearchUsersURL($this->lang, $this->query) ?>">
+        <a class="nav-link <?= $this->list == 'users' ? 'active' : '' ?>" href="<?= Search_URL_Helper::get_search_users_URL($this->lang, $this->query) ?>">
             <?= $this->translator->get('search__filter', 'users'); ?>
         </a>
     </li>

@@ -2,17 +2,17 @@
 
 class Page_URL_Helper
 {
-    public static function getMainURL(string $lang): string
+    public static function get_main_URL(string $lang): string
     {
         return SITE_URL . '/' . $lang;
     }
 
-    public static function getFeedURL(string $lang): string
+    public static function get_feed_URL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/feed';
     }
 
-    public static function getFlowURL(string $lang): string
+    public static function get_flow_URL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/flow';
     }

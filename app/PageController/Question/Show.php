@@ -13,7 +13,7 @@ class Show_Question_PageController extends Abstract_PageController
         $questionID = $args['id'];
 
         try {
-            $question = (new Question_Query($this->lang))->questionWithID($questionID);
+            $question = (new Question_Query($this->lang))->question_with_ID($questionID);
         } catch (Throwable $e) {
             return (new PageNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -29,7 +29,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         try {
             $questionTitle = $this->_titleFromURI($questionURI);
-            $this->question = (new Question_Query($this->lang))->questionWithTitle($questionTitle);
+            $this->question = (new Question_Query($this->lang))->question_with_title($questionTitle);
         } catch (Throwable $e) {
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -37,8 +37,8 @@ class Show_Question_PageController extends Abstract_PageController
         $this->_tempJobs();
 
         if ($this->question->isRedirect) {
-            $redirect = (new Question_Redirects_Query($this->lang))->redirectForQuestionWithID($this->question->id);
-            $this->questionRedirect = Question_Model::initWithTitle($redirect->toTitle);
+            $redirect = (new Question_Redirects_Query($this->lang))->redirect_for_question_with_ID($this->question->id);
+            $this->questionRedirect = Question_Model::init_with_title($redirect->toTitle);
 
             $needStopRedirect = $request->getParam('no_redirect');
             if (!$needStopRedirect) {
@@ -51,7 +51,7 @@ class Show_Question_PageController extends Abstract_PageController
             $this->template = 'question_redirect';
             $this->pageTitle = 'Redirect page: ' . $this->question->title . ' – ' . $this->translator->get('answeropedia');
 
-            $output = $this->renderPage();
+            $output = $this->render_page();
             $response->getBody()->write($output);
 
             return $response;
@@ -59,7 +59,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         $redirectedQuestionID = $request->getParam('redirect_from_id') ? (int) $request->getParam('redirect_from_id') : null;
         if ($redirectedQuestionID) {
-            $this->redirectedQuestion = (new Question_Query($this->lang))->questionWithID($redirectedQuestionID);
+            $this->redirectedQuestion = (new Question_Query($this->lang))->question_with_ID($redirectedQuestionID);
         }
 
         if (isset($this->question->answer) && strlen($this->question->answer->text)) {
@@ -67,9 +67,9 @@ class Show_Question_PageController extends Abstract_PageController
             $this->formattedAnswerText = $parsedown->text($this->question->answer->text);
         }
 
-        $this->_prepareFollowButton();
+        $this->_prepare_follow_button();
 
-        $this->contributors = (new Contributors_Query($this->lang))->findAnswerContributors($this->question->id);
+        $this->contributors = (new Contributors_Query($this->lang))->find_answer_contributors($this->question->id);
 
         if (count($this->contributors) > 3) {
             $this->contributors_top = array_slice($this->contributors, 0, 3);
@@ -91,10 +91,10 @@ class Show_Question_PageController extends Abstract_PageController
         $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
         $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answeropedia');
-        $this->pageDescription = $this->__getPageDescription();
+        $this->pageDescription = $this->_get_page_description();
         $this->canonicalURL = $this->question->get_URL($this->lang);
 
-        $this->related_questions = $this->_relatedQuestions();
+        $this->related_questions = $this->_related_questions();
 
         $this->open_graph = $this->_get_open_graph();
 
@@ -103,10 +103,10 @@ class Show_Question_PageController extends Abstract_PageController
         $this->share_link['url'] = $this->question->get_URL($this->lang);
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
-        $this->_prepareAdditionalJavascript();
-        $this->_prepareModals();
+        $this->_prepare_additional_JS();
+        $this->_prepare_modals();
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response;
@@ -123,7 +123,7 @@ class Show_Question_PageController extends Abstract_PageController
         return $title;
     }
 
-    protected function _prepareAdditionalJavascript()
+    protected function _prepare_additional_JS()
     {
         if ($this->authUser) {
             $this->includeJS[] = 'question/rename';
@@ -132,7 +132,7 @@ class Show_Question_PageController extends Abstract_PageController
         }
     }
 
-    protected function _prepareModals()
+    protected function _prepare_modals()
     {
         if ($this->authUser) {
             $this->includeModals[] = 'question/rename';
@@ -140,19 +140,19 @@ class Show_Question_PageController extends Abstract_PageController
         }
     }
 
-    protected function _prepareFollowButton()
+    protected function _prepare_follow_button()
     {
         if ($this->authUser) {
             $authUserID = $this->authUser->id;
             $question_id = $this->question->id;
 
-            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relationWithUserIDAndQuestionID($authUserID, $question_id);
+            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relation_with_user_ID_and_question_ID($authUserID, $question_id);
 
             $this->followed = $relation ? true : false;
         }
     }
 
-    protected function _relatedQuestions(): array
+    protected function _related_questions(): array
     {
         $question_id = $this->question->id;
         $delta = strlen($this->question->title);
@@ -169,7 +169,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         foreach ($keys as $key) {
             try {
-                $question = (new Question_Query($this->lang))->questionWithID((int) $key);
+                $question = (new Question_Query($this->lang))->question_with_ID((int) $key);
                 $related_questions[] = $question;
             } catch (\Exception $e) {
                 // do nothing
@@ -206,7 +206,7 @@ class Show_Question_PageController extends Abstract_PageController
         }
     }
 
-    protected function __getPageDescription()
+    protected function _get_page_description()
     {
         $pageDescription = str_replace('%question%', $this->question->title, $this->translator->get('Wiki-answer on question: %question%'));
 
@@ -219,7 +219,7 @@ class Show_Question_PageController extends Abstract_PageController
             'url'         => $this->question->get_URL($this->lang),
             'type'        => 'website',
             'title'       => $this->question->title,
-            'description' => $this->__getPageDescription(),
+            'description' => $this->_get_page_description(),
             'locale'      => $this->lang,
             'image'       => IMAGE_URL . '/og-image.png',
         ];

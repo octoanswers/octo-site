@@ -21,7 +21,7 @@ class Categories_POST_APIController extends Abstract_APIController
             // Validate params
             //
 
-            $user = (new User_Query())->userWithAPIKey($api_key);
+            $user = (new User_Query())->user_with_API_key($api_key);
 
             //
             // Check & creat new categories, if needed
@@ -34,7 +34,7 @@ class Categories_POST_APIController extends Abstract_APIController
 
             foreach ($category_titles as $category_title) {
                 $category_title = trim($category_title);
-                $category = (new Category_Query($this->lang))->findWithTitle($category_title);
+                $category = (new Category_Query($this->lang))->find_with_title($category_title);
                 if ($category === null) {
                     $category = new Category_Model();
                     $category->title = $category_title;

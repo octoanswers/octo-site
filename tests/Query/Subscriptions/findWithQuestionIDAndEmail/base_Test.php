@@ -1,12 +1,12 @@
 <?php
 
-class Subscription_findWithQuestionIDAndEmail__Test extends Abstract_DB_TestCase
+class Subscription_find_with_question_ID_and_email__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['questions_subscriptions']];
 
     public function test__baseArgs()
     {
-        $s = (new Subscriptions_Query('ru'))->findWithQuestionIDAndEmail(236, 'data@test.ru');
+        $s = (new Subscriptions_Query('ru'))->find_with_question_ID_and_email(236, 'data@test.ru');
 
         $this->assertEquals(2, $s->id);
         $this->assertEquals(236, $s->questionID);
@@ -16,7 +16,7 @@ class Subscription_findWithQuestionIDAndEmail__Test extends Abstract_DB_TestCase
 
     public function test__SubscriptionNotFound()
     {
-        $s = (new Subscriptions_Query('ru'))->findWithQuestionIDAndEmail(665, 'test@mail.ru');
+        $s = (new Subscriptions_Query('ru'))->find_with_question_ID_and_email(665, 'test@mail.ru');
 
         $this->assertEquals(null, $s);
     }

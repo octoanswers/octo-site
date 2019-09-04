@@ -1,12 +1,12 @@
 <?php
 
-class Query_Questions__findQuestionsWithImage__en__Test extends Abstract_DB_TestCase
+class Query_Questions__find_questions_with_image__en__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['en' => ['questions']];
 
     public function test__En()
     {
-        $questions = (new Questions_Query('en'))->findQuestionsWithImage(29);
+        $questions = (new Questions_Query('en'))->find_questions_with_image(29);
 
         $this->assertEquals(1, count($questions));
 

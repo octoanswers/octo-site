@@ -15,11 +15,11 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
 
             // Validate params
 
-            $user = (new User_Query())->userWithAPIKey($api_key);
+            $user = (new User_Query())->user_with_API_key($api_key);
 
             // Change category title
 
-            $category = (new Category_Query($this->lang))->categoryWithID($categoryID);
+            $category = (new Category_Query($this->lang))->category_with_ID($categoryID);
             $old_title = $category->title;
             $category->title = $categoryNewTitle;
             $category = (new Category_Mapper($this->lang))->update($category);

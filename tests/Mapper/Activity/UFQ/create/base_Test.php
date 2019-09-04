@@ -10,7 +10,7 @@ class Mapper_Activity_UFQ__create__Test extends Abstract_DB_TestCase
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $question = Question_Model::initWithTitle('Когда закончится дождь?');
+        $question = Question_Model::init_with_title('Когда закончится дождь?');
 
         $activity = new Activity_Model();
         $activity->type = Activity_Model::F_U_FOLLOW_Q;

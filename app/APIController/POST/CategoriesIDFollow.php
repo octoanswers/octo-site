@@ -16,12 +16,12 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
             // Validate params
             //
 
-            $user = (new User_Query())->userWithAPIKey($api_key);
+            $user = (new User_Query())->user_with_API_key($api_key);
             $userID = $user->id;
 
-            $category = (new Category_Query($this->lang))->categoryWithID($categoryID);
+            $category = (new Category_Query($this->lang))->category_with_ID($categoryID);
 
-            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relationWithUserIDAndCategoryID($userID, $categoryID);
+            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relation_with_user_ID_and_category_ID($userID, $categoryID);
             if ($relation) {
                 throw new Exception('User with ID "' . $userID . '" already followed category with ID "' . $categoryID . '"', 0);
             }

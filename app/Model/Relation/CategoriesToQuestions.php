@@ -21,7 +21,7 @@ class CategoriesToQuestions_Relation_Model extends Abstract_Model
         return $relation;
     }
 
-    public static function initWithDBState(array $state): self
+    public static function init_with_DB_state(array $state): self
     {
         $relation = new self();
 

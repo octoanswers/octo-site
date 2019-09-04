@@ -8,39 +8,39 @@
     </div>
 
     <?php if (false) : ?>
-    <div class="text-muted my-2">
-        <?= 'short_answer' ?>
-    </div>
+        <div class="text-muted my-2">
+            <?= 'short_answer' ?>
+        </div>
     <?php endif; ?>
 
     <?php if ($question->imageBaseName) : ?>
-    <a class="d-block max-width-240px" href="<?= $question->get_URL($this->lang) ?>">
-        <img class="max-width-240px" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
-    </a>
+        <a class="d-block max-width-240px" href="<?= $question->get_URL($this->lang) ?>">
+            <img class="max-width-240px" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
+        </a>
     <?php endif; ?>
 
     <div class="mt-2">
         <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60 * 60 * 24)) : ?>
-        <span class="badge badge-primary mr-2">
-            <?= $this->translator->get('questions', 'new') ?>
-        </span>
+            <span class="badge badge-primary mr-2">
+                <?= $this->translator->get('questions', 'new') ?>
+            </span>
         <?php endif; ?>
 
         <?php if ($question->categoriesCount == 0) : ?>
-        <a class="badge badge-success mr-2" href="<?= $question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
-            <?= $this->translator->get('questions', 'btn_add_categories') ?>
-        </a>
+            <a class="badge badge-success mr-2" href="<?= $question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+                <?= $this->translator->get('questions', 'btn_add_categories') ?>
+            </a>
         <?php endif; ?>
 
         <?php if (strlen($question->answer->text)) : ?>
-        <span class="small text-secondary">2 автора</a>
-            <span class="mx-1 text-muted font_weight_800">&middot;</span>
-            <i class="material-icons md-14">access_time</i>
-            <span class="small text-secondary"><?= $question->get_minutes_to_read() ?></span>
-            <span class="mx-1 text-muted font_weight_800">&middot;</span>
+            <span class="small text-secondary">2 автора</a>
+                <span class="mx-1 text-muted font_weight_800">&middot;</span>
+                <i class="material-icons md-14">access_time</i>
+                <span class="small text-secondary"><?= $question->get_minutes_to_read() ?></span>
+                <span class="mx-1 text-muted font_weight_800">&middot;</span>
             <?php endif; ?>
 
-            <?= DateTime_Humanizer::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
+            <?= DateTime_Humanizer::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
     </div>
 </div>
 <!-- / question item -->

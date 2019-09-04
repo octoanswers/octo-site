@@ -16,19 +16,19 @@
                     </li>
 
                     <li class="list-inline-item my-1 mr-3">
-                        <a href="<?= Page_URL_Helper::getFlowURL($this->lang) ?>" class="text-decoration-none">
+                        <a href="<?= Page_URL_Helper::get_flow_URL($this->lang) ?>" class="text-decoration-none">
                             <?= $this->translator->get('sidebar__main_nav', 'recent_changes') ?>
                         </a>
                     </li>
 
                     <li class="list-inline-item my-1 mr-3">
-                        <a href="<?= Sandbox_URL_Helper::getWithoutAnswersURL($this->lang) ?>" class="text-decoration-none">
+                        <a href="<?= Sandbox_URL_Helper::get_without_answers_URL($this->lang) ?>" class="text-decoration-none">
                             <?= $this->translator->get('sidebar__main_nav', 'sandbox') ?>
                         </a>
                     </li>
 
                     <li class="list-inline-item my-1 mr-3">
-                        <a href="<?= Categories_URL_Helper::getNewestURL($this->lang) ?>" class="text-decoration-none">
+                        <a href="<?= Categories_URL_Helper::get_newest_URL($this->lang) ?>" class="text-decoration-none">
                             <i class="material-icons md-18 w-20px">bubble_chart</i><?= $this->translator->get('sidebar__main_nav', 'popular_categories') ?>
                         </a>
                     </li>

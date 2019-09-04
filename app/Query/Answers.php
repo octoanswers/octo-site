@@ -2,11 +2,11 @@
 
 class Answers_Query extends Abstract_Query
 {
-    public function answerWithID(int $answerID)
+    public function answer_with_ID(int $answerID)
     {
         Answer_Validator::validateID($answerID);
 
-        $this->pdo = PDOFactory::getConnectionToLangDB($this->lang);
+        $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE q_id=:q_id LIMIT 1');
         $stmt->bindParam(':q_id', $answerID, PDO::PARAM_INT);
@@ -19,6 +19,6 @@ class Answers_Query extends Abstract_Query
             return;
         }
 
-        return Answer_Model::initWithDBState($row);
+        return Answer_Model::init_with_DB_state($row);
     }
 }

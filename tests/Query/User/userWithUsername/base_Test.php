@@ -1,12 +1,12 @@
 <?php
 
-class Users_Query__userWithUsername__Test extends Abstract_DB_TestCase
+class Users_Query__user_with_username__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
     public function test_base()
     {
-        $user = (new User_Query())->userWithUsername('sasha');
+        $user = (new User_Query())->user_with_username('sasha');
 
         $this->assertEquals(4, $user->id);
         $this->assertEquals('sasha', $user->username);

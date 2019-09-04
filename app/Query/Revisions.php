@@ -2,7 +2,7 @@
 
 class Revisions_Query extends Abstract_Query
 {
-    public function lastRevisionForAnswerWithID(int $answerID)
+    public function last_revision_for_answer_with_ID(int $answerID)
     {
         $stmt = $this->pdo->prepare('SELECT * FROM revisions WHERE rev_answer_id=:rev_answer_id  ORDER BY rev_id DESC LIMIT 1');
         $stmt->bindParam(':rev_answer_id', $answerID, PDO::PARAM_INT);
@@ -17,10 +17,10 @@ class Revisions_Query extends Abstract_Query
             return;
         }
 
-        return Revision_Model::initWithDBState($row);
+        return Revision_Model::init_with_DB_state($row);
     }
 
-    public function revisionsForAnswerWithID(int $questionID): array
+    public function revisions_for_answer_with_ID(int $questionID): array
     {
         Question_Validator::validateID($questionID);
         $page = 1; //QuestionsList_Validator::validatePage($page);
@@ -28,11 +28,11 @@ class Revisions_Query extends Abstract_Query
 
         $offset = $perPage * ($page - 1);
 
-        $questionWithIDResponce = (new Question_Query($this->lang))->questionWithID($questionID);
+        $question = (new Question_Query($this->lang))->question_with_ID($questionID);
 
         $sql = 'SELECT * FROM revisions WHERE rev_answer_id = :question_id ORDER BY rev_id DESC LIMIT :id_offset, :per_page';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':question_id', $questionID, PDO::PARAM_INT);
+        $stmt->bindParam(':question_id', $question->id, PDO::PARAM_INT);
         $stmt->bindParam(':id_offset', $offset, PDO::PARAM_INT);
         $stmt->bindParam(':per_page', $perPage, PDO::PARAM_INT);
         if (!$stmt->execute()) {
@@ -44,13 +44,13 @@ class Revisions_Query extends Abstract_Query
 
         $revisions = [];
         foreach ($rows as $row) {
-            $revisions[] = Revision_Model::initWithDBState($row);
+            $revisions[] = Revision_Model::init_with_DB_state($row);
         }
 
         return $revisions;
     }
 
-    public function findRevisionsForUserWithID(int $userID): array
+    public function find_revisions_for_user_with_ID(int $userID): array
     {
         User_Validator::validateID($userID);
         $page = 1; //QuestionsList_Validator::validatePage($page);
@@ -58,7 +58,7 @@ class Revisions_Query extends Abstract_Query
 
         $offset = $perPage * ($page - 1);
 
-        $user = (new User_Query())->userWithID($userID);
+        $user = (new User_Query())->user_with_ID($userID);
 
         $sql = 'SELECT * FROM revisions WHERE rev_user_id = :rev_user_id ORDER BY rev_id DESC LIMIT :id_offset, :per_page';
         $stmt = $this->pdo->prepare($sql);
@@ -74,7 +74,7 @@ class Revisions_Query extends Abstract_Query
 
         $revisions = [];
         foreach ($rows as $row) {
-            $revisions[] = Revision_Model::initWithDBState($row);
+            $revisions[] = Revision_Model::init_with_DB_state($row);
         }
 
         return $revisions;

@@ -15,12 +15,12 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
 
             // Validate params
 
-            $user = (new User_Query())->userWithAPIKey($api_key);
+            $user = (new User_Query())->user_with_API_key($api_key);
             $userID = $user->id;
 
             // change question title
 
-            $question = (new Question_Query($this->lang))->questionWithID($questionID);
+            $question = (new Question_Query($this->lang))->question_with_ID($questionID);
             $old_title = $question->title;
             $question->title = $questionNewTitle;
             $question = (new Question_Mapper($this->lang))->update($question);

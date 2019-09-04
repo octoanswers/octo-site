@@ -14,16 +14,14 @@ class Logout_POST_APIController extends Abstract_APIController
 
             User_Validator::validateAPIKey($apiKey);
 
-            $user = (new User_Query())->userWithAPIKey($apiKey);
+            $user = (new User_Query())->user_with_API_key($apiKey);
 
-            if (!isset($cookieStorage) || !is_a($cookieStorage, 'CookieStorage')) {
-                $cookieStorage = new CookieStorage();
-            }
+            $cookieStorage = new CookieStorage();
             $cookieStorage->clear();
 
             $output = [
                 'message'         => 'User unlogged',
-                'destination_url' => Page_URL_Helper::getMainURL($this->lang),
+                'destination_url' => Page_URL_Helper::get_main_URL($this->lang),
             ];
         } catch (Throwable $e) {
             $output = [

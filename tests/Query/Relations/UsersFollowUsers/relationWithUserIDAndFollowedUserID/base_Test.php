@@ -1,12 +1,12 @@
 <?php
 
-class UsersFollowUsers_Relations_Query__relationWithUserIDAndFollowedUserID__Test extends Abstract_DB_TestCase
+class UsersFollowUsers_Relations_Query__relation_with_user_ID_and_followed_user_ID__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['er_users_follow_users']];
 
     public function test__RelationExists()
     {
-        $relation = (new UsersFollowUsers_Relations_Query('ru'))->relationWithUserIDAndFollowedUserID(4, 5);
+        $relation = (new UsersFollowUsers_Relations_Query('ru'))->relation_with_user_ID_and_followed_user_ID(4, 5);
 
         $this->assertEquals(3, $relation->id);
         $this->assertEquals(4, $relation->userID);
@@ -16,7 +16,7 @@ class UsersFollowUsers_Relations_Query__relationWithUserIDAndFollowedUserID__Tes
 
     public function test__RelationNotExists()
     {
-        $relation = (new UsersFollowUsers_Relations_Query('ru'))->relationWithUserIDAndFollowedUserID(3, 99);
+        $relation = (new UsersFollowUsers_Relations_Query('ru'))->relation_with_user_ID_and_followed_user_ID(3, 99);
         $this->assertEquals(null, $relation);
     }
 }

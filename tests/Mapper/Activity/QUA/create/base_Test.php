@@ -6,7 +6,7 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $question = Question_Model::initWithTitle('Когда закончится дождь?');
+        $question = Question_Model::init_with_title('Когда закончится дождь?');
 
         $answer = new Answer_Model();
         $answer->text = 'Melody of my life.';
@@ -16,7 +16,7 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';
 
-        $revision = Revision_Model::initWithDBState([
+        $revision = Revision_Model::init_with_DB_state([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',

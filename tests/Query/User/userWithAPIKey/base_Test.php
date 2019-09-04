@@ -1,12 +1,12 @@
 <?php
 
-class Query_Users_userWithAPIKey_Base_Test extends Abstract_DB_TestCase
+class Query_Users_user_with_API_key_Base_Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
     public function testCorrectLogin()
     {
-        $user = (new User_Query())->userWithAPIKey('7d21ebdbec3d4e396043c96b6ab44a6e');
+        $user = (new User_Query())->user_with_API_key('7d21ebdbec3d4e396043c96b6ab44a6e');
 
         $this->assertEquals(3, $user->id);
         $this->assertEquals('ivan', $user->username);

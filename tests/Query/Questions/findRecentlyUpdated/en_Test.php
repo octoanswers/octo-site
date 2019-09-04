@@ -1,12 +1,12 @@
 <?php
 
-class Query_Questions__findRecentlyUpdated__en__Test extends Abstract_DB_TestCase
+class Query_Questions__find_recently_updated__en__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['en' => ['questions']];
 
     public function test__En()
     {
-        $questions = (new Questions_Query('en'))->findRecentlyUpdated();
+        $questions = (new Questions_Query('en'))->find_recently_updated();
 
         $this->assertEquals(9, count($questions));
 

@@ -19,7 +19,7 @@ class InternalServerError_Error_PageController extends Abstract_PageController
         $this->errorDescription = $this->translator->get('internal_server_error', 'page_title');
         $this->includeJS[] = 'goal/error_404';
 
-        $output = $this->renderPage();
+        $output = $this->render_page();
         $response->getBody()->write($output);
 
         return $response->withStatus(500);

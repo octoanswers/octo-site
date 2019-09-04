@@ -1,10 +1,10 @@
 <?php
 
-class Model_User_initWithDBState_Test extends PHPUnit\Framework\TestCase
+class Model_User_init_with_DB_state_Test extends PHPUnit\Framework\TestCase
 {
     public function test_FullParams()
     {
-        $user = User_Model::initWithDBState([
+        $user = User_Model::init_with_DB_state([
             'u_id'            => 13,
             'u_username'      => 'steve',
             'u_name'          => 'Steve Bo',
@@ -29,7 +29,7 @@ class Model_User_initWithDBState_Test extends PHPUnit\Framework\TestCase
 
     public function test_MinParams()
     {
-        $user = User_Model::initWithDBState([
+        $user = User_Model::init_with_DB_state([
             'u_id'         => 13,
             'u_username'   => 'steve',
             'u_name'       => 'Steve Bo',

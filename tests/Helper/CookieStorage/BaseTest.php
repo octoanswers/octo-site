@@ -6,7 +6,7 @@ class CookieStorage_BaseTest extends TestCase
 {
     protected function setUp(): void
     {
-        $user = User_Model::initWithDBState([
+        $user = User_Model::init_with_DB_state([
             'u_id'         => 13,
             'u_name'       => 'Joe Milk',
             'u_email'      => 'joe@answeropedia.org',
@@ -14,7 +14,7 @@ class CookieStorage_BaseTest extends TestCase
         ]);
 
         $this->storage = new CookieStorage();
-        $this->storage->saveUser($user);
+        $this->storage->save_user($user);
     }
 
     public function tearDown(): void
@@ -30,7 +30,7 @@ class CookieStorage_BaseTest extends TestCase
 
     public function testConstValues()
     {
-        $user = $this->storage->getAuthUser();
+        $user = $this->storage->get_auth_user();
 
         $this->assertEquals('Joe Milk', $user->name);
         $this->assertEquals('joe@answeropedia.org', $user->email);
