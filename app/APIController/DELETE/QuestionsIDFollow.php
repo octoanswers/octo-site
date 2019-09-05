@@ -19,7 +19,6 @@ class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
 
             $user = (new User_Query())->user_with_API_key($api_key);
 
-
             $question = (new Question_Query($this->lang))->question_with_ID($question_ID);
 
             $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relation_with_user_ID_and_question_ID($user->id, $question_ID);
