@@ -25,11 +25,11 @@ class Show_Question_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $questionURI = $args['question_uri'];
+        $question_URI = $args['question_uri'];
 
         try {
-            $questionTitle = $this->_titleFromURI($questionURI);
-            $this->question = (new Question_Query($this->lang))->question_with_title($questionTitle);
+            $question_title = $this->_titleFromURI($question_URI);
+            $this->question = (new Question_Query($this->lang))->question_with_title($question_title);
         } catch (Throwable $e) {
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -40,8 +40,8 @@ class Show_Question_PageController extends Abstract_PageController
             $redirect = (new Question_Redirects_Query($this->lang))->redirect_for_question_with_ID($this->question->id);
             $this->questionRedirect = Question_Model::init_with_title($redirect->toTitle);
 
-            $needStopRedirect = $request->getParam('no_redirect');
-            if (!$needStopRedirect) {
+            $need_stop_redirect = $request->getParam('no_redirect');
+            if (!$need_stop_redirect) {
                 $redirectTitle = $this->questionRedirect->title;
                 $redirectURL = Redirect_URL_Helper::get_redirect_URL_for_title($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
 
@@ -57,9 +57,9 @@ class Show_Question_PageController extends Abstract_PageController
             return $response;
         }
 
-        $redirectedQuestionID = $request->getParam('redirect_from_id') ? (int) $request->getParam('redirect_from_id') : null;
-        if ($redirectedQuestionID) {
-            $this->redirectedQuestion = (new Question_Query($this->lang))->question_with_ID($redirectedQuestionID);
+        $redirected_question_ID = $request->getParam('redirect_from_id') ? (int) $request->getParam('redirect_from_id') : null;
+        if ($redirected_question_ID) {
+            $this->redirectedQuestion = (new Question_Query($this->lang))->question_with_ID($redirected_question_ID);
         }
 
         if (isset($this->question->answer) && strlen($this->question->answer->text)) {

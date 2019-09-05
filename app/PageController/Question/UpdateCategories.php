@@ -11,21 +11,21 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $questionID = $args['id'];
+        $question_ID = $args['id'];
 
         try {
-            $this->question = (new Question_Query($this->lang))->question_with_ID($questionID);
+            $this->question = (new Question_Query($this->lang))->question_with_ID($question_ID);
         } catch (Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->categories = (new Categories_Query($this->lang))->categories_for_question_with_ID($questionID);
+        $this->categories = (new Categories_Query($this->lang))->categories_for_question_with_ID($question_ID);
 
-        $this->categoryNames = [];
+        $this->category_names = [];
         foreach ($this->categories as $category) {
-            $this->categoryNames[] = $category->title;
+            $this->category_names[] = $category->title;
         }
-        $this->categories_string = count($this->categoryNames) ? implode(',', $this->categoryNames) : '';
+        $this->categories_string = count($this->category_names) ? implode(',', $this->category_names) : '';
 
         $this->template = 'question_update_categories';
         $this->pageTitle = str_replace('%question%', $this->question->title, $this->translator->get('Update categories for question "%question%" - Answeropedia'));

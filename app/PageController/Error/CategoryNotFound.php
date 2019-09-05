@@ -11,9 +11,9 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
         $this->lang = $lang;
         $this->translator = new Translator($this->lang, ROOT_PATH . '/app/Lang');
 
-        $categoryURI = $args['category_uri'];
+        $category_URI = $args['category_uri'];
 
-        $this->categoryTitle = $this->_category_title_from_URI($categoryURI);
+        $this->categoryTitle = $this->_category_title_from_URI($category_URI);
 
         $category = new Category_Model();
         $category->title = $this->categoryTitle;
@@ -23,8 +23,7 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
         $this->pageTitle = $this->translator->get('error__category_not_found', 'page_title') . $this->categoryTitle . ' – ' . $this->translator->get('answeropedia');
         $this->pageDescription = $this->translator->get('error__category_not_found', 'page_title') . $this->categoryTitle;
 
-        $this->categoryURI = $categoryURI;
-        //$this->includeJS[] = 'goal/category_not_found';
+        $this->categoryURI = $category_URI;
 
         $output = $this->render_page();
         $response->getBody()->write($output);

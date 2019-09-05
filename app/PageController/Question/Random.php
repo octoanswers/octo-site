@@ -9,12 +9,12 @@ class Random_Question_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $questionsCount = (new QuestionsCount_Query($this->lang))->questions_last_ID();
+        $questions_count = (new QuestionsCount_Query($this->lang))->questions_last_ID();
 
-        $randomQuestionID = mt_rand(1, $questionsCount);
+        $random_question_ID = mt_rand(1, $questions_count);
 
         try {
-            $question = (new Question_Query($this->lang))->question_with_ID($randomQuestionID);
+            $question = (new Question_Query($this->lang))->question_with_ID($random_question_ID);
         } catch (Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }

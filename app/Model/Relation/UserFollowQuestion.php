@@ -11,7 +11,7 @@ class UserFollowQuestion_Relation_Model extends Abstract_Model
     // Init methods
     //
 
-    public static function initWithUserIDAndQuestionID(int $userID, int $questionID): self
+    public static function init_with_user_ID_and_question_ID(int $userID, int $questionID): self
     {
         $er = new self();
         $er->userID = $userID;

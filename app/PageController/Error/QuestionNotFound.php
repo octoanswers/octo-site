@@ -11,9 +11,9 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
         $this->lang = $lang;
         $this->translator = new Translator($this->lang, ROOT_PATH . '/app/Lang');
 
-        $questionURI = $args['question_uri'];
+        $question_URI = $args['question_uri'];
 
-        $this->questionTitle = $this->_titleFromURI($questionURI);
+        $this->questionTitle = $this->_titleFromURI($question_URI);
 
         $question = new Question_Model();
         $question->title = $this->questionTitle;
@@ -23,7 +23,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
         $this->pageTitle = $this->translator->get('question_not_found', 'page_title') . ' – ' . $this->questionTitle . ' – ' . $this->translator->get('answeropedia');
         $this->pageDescription = $this->translator->get('question_not_found', 'page_title');
 
-        $this->questionURI = $questionURI;
+        $this->questionURI = $question_URI;
         $this->includeJS[] = 'goal/question_not_found';
 
         $output = $this->render_page();

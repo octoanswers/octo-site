@@ -8,21 +8,20 @@ class Show_Category_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $categoryURI = $args['category_uri'];
+        $category_URI = $args['category_uri'];
 
         try {
-            $categoryTitle = $this->_category_title_from_URI($categoryURI);
-            $this->category = (new Category_Query($this->lang))->category_with_title($categoryTitle);
+            $category_title = $this->_category_title_from_URI($category_URI);
+            $this->category = (new Category_Query($this->lang))->category_with_title($category_title);
         } catch (\Exception $e) {
             return (new CategoryNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->parsedown = new ExtendedParsedown($this->lang);
 
-        $humanDateTimezone = new DateTimeZone('UTC');
-        $dateHumanizer = new HumanDate($humanDateTimezone, $this->lang);
-        // var_dump($this->category);
-        // exit;
+        $human_date_time_zone = new DateTimeZone('UTC');
+        $date_humanizer = new HumanDate($human_date_time_zone, $this->lang);
+
         $category_questions = (new CategoriesToQuestions_Relations_Query($this->lang))->find_newest_for_category_with_ID($this->category->id);
         $this->category_questions = [];
 

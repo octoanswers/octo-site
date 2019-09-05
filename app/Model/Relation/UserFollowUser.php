@@ -11,7 +11,7 @@ class UserFollowUser_Relation_Model extends Abstract_Model
     // Init methods
     //
 
-    public static function initWithUserIDAndFollowedUserID(int $userID, int $followedUserID): self
+    public static function init_with_user_ID_and_followed_user_ID(int $userID, int $followedUserID): self
     {
         $er = new self();
         $er->userID = $userID;

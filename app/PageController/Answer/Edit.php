@@ -12,10 +12,10 @@ class Edit_Answer_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $answerID = $args['id'];
+        $answer_ID = $args['id'];
 
         try {
-            $this->question = (new Question_Query($this->lang))->question_with_ID($answerID);
+            $this->question = (new Question_Query($this->lang))->question_with_ID($answer_ID);
         } catch (Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }

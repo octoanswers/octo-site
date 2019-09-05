@@ -11,7 +11,7 @@ class UserFollowCategory_Relation_Model extends Abstract_Model
     // Init methods
     //
 
-    public static function initWithUserIDAndCategoryID(int $userID, int $categoryID): self
+    public static function init_with_user_ID_and_category_ID(int $userID, int $categoryID): self
     {
         $er = new self();
         $er->userID = $userID;

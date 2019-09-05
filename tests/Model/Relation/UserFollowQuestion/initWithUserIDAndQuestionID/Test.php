@@ -1,10 +1,10 @@
 <?php
 
-class UserFollowQuestion_Relation_Model__initWithUserIDAndQuestionID__Test extends PHPUnit\Framework\TestCase
+class UserFollowQuestion_Relation_Model__init_with_user_ID_and_question_ID__Test extends PHPUnit\Framework\TestCase
 {
     public function test__BaseParams()
     {
-        $rel = UserFollowQuestion_Relation_Model::initWithUserIDAndQuestionID(3, 9);
+        $rel = UserFollowQuestion_Relation_Model::init_with_user_ID_and_question_ID(3, 9);
 
         $this->assertEquals(null, $rel->id);
         $this->assertEquals(3, $rel->userID);
