@@ -1,4 +1,4 @@
-<img src="https://travis-ci.org/answeropedia/answeropedia.svg?branch=master" />
+<img src="https://travis-ci.org/answeropedia/answeropedia.svg?branch=master" /> <img src="https://github.styleci.io/repos/135262396/shield?branch=master" />
 
 # Answeropedia
 
