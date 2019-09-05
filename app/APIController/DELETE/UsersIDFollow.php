@@ -9,7 +9,7 @@ class UsersIDFollow_DELETE_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $followedUserID = (int) $args['id'];
+            $followed_user_ID = (int) $args['id'];
             $api_key = (string) $request->getParam('api_key');
 
             //
@@ -17,20 +17,20 @@ class UsersIDFollow_DELETE_APIController extends Abstract_APIController
             //
 
             $user = (new User_Query())->user_with_API_key($api_key);
-            $userID = $user->id;
+            $user_ID = $user->id;
 
-            $followed_user = (new User_Query())->user_with_ID($followedUserID);
+            $followed_user = (new User_Query())->user_with_ID($followed_user_ID);
 
-            $relation = (new UsersFollowUsers_Relations_Query($this->lang))->relation_with_user_ID_and_followed_user_ID($userID, $followedUserID);
+            $relation = (new UsersFollowUsers_Relations_Query($this->lang))->relation_with_user_ID_and_followed_user_ID($user_ID, $followed_user_ID);
             if (!$relation) {
-                throw new Exception('User with ID "' . $followedUserID . '" not followed by user with ID "' . $userID . '"', 0);
+                throw new Exception('User with ID "' . $followed_user_ID . '" not followed by user with ID "' . $user_ID . '"', 0);
             }
 
             //
             // Delete follow record
             //
 
-            (new UserFollowUser_Relation_Mapper($this->lang))->deleteRelation($relation);
+            (new UserFollowUser_Relation_Mapper($this->lang))->delete_relation($relation);
 
             $output = [
                 'user_id'            => $user->id,

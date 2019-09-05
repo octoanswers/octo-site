@@ -15,10 +15,10 @@ class ExtendedParsedown extends Parsedown
     public function text($text)
     {
         $text = self::_preProcessing($text);
-        $textHTML = parent::text($text);
-        $textHTML = self::_postProcessing($textHTML);
+        $text_HTML = parent::text($text);
+        $text_HTML = self::_postProcessing($text_HTML);
 
-        return $textHTML;
+        return $text_HTML;
     }
 
     /**
@@ -109,27 +109,27 @@ class ExtendedParsedown extends Parsedown
         return $text;
     }
 
-    protected function _postProcessing(string $textHTML): string
+    protected function _postProcessing(string $text_HTML): string
     {
         // Fix external URL`s (like a href="https://answeropedia.org/ru/http://site.com/page")
         $incorrect_URL_pattern = "/href\=\"https\:\/\/answeropedia\.org\/" . $this->lang . "\/(https?.+(?!answeropedia\.org).+)\"/iuU";
-        $textHTML = preg_replace_callback(
+        $text_HTML = preg_replace_callback(
             $incorrect_URL_pattern,
             function ($matches) {
                 return 'href="' . urldecode($matches[1]) . '"';
             },
-            $textHTML
+            $text_HTML
         );
 
         // Add attributes to external URL`s (class="link-external" target="_blank" rel="nofollow")
-        $textHTML = preg_replace_callback(
+        $text_HTML = preg_replace_callback(
             "/href\=\"(https?\:\/\/(?!answeropedia\.org).+)\"/iuU",
             function ($matches) {
                 return 'href="' . $matches[1] . '" class="link-external" target="_blank" rel="nofollow"';
             },
-            $textHTML
+            $text_HTML
         );
 
-        return $textHTML;
+        return $text_HTML;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowQuestion_Relation_Mapper__deleteRelation__Test extends Abstract_DB_TestCase
+class UserFollowQuestion_Relation_Mapper__delete_relation__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['er_users_follow_questions']];
 
@@ -13,7 +13,7 @@ class UserFollowQuestion_Relation_Mapper__deleteRelation__Test extends Abstract_
         $relation->questionID = 23;
         $relation->createdAt = '2014-12-16 11:28:56';
 
-        $deleted = (new UserFollowQuestion_Relation_Mapper('ru'))->deleteRelation($relation);
+        $deleted = (new UserFollowQuestion_Relation_Mapper('ru'))->delete_relation($relation);
 
         $this->assertEquals(true, $deleted);
     }
@@ -28,6 +28,6 @@ class UserFollowQuestion_Relation_Mapper__deleteRelation__Test extends Abstract_
         $relation->createdAt = '2014-12-16 11:28:56';
 
         $this->expectExceptionMessage('UserFollowQuestion relation not deleted');
-        $deleted = (new UserFollowQuestion_Relation_Mapper('ru'))->deleteRelation($relation);
+        $deleted = (new UserFollowQuestion_Relation_Mapper('ru'))->delete_relation($relation);
     }
 }

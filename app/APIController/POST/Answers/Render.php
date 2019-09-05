@@ -10,15 +10,15 @@ class Render_Answers_POST_APIController extends Abstract_APIController
         try {
             $lang = $args['lang'];
 
-            $textMD = urldecode((string) $request->getParam('text'));
+            $text_MD = urldecode((string) $request->getParam('text'));
 
             $parsedown = new ExtendedParsedown($lang);
-            $textHTML = $parsedown->text($textMD);
+            $text_HTML = $parsedown->text($text_MD);
 
             $output = [
                 'lang'      => $lang,
-                'text_md'   => $textMD,
-                'text_html' => $textHTML,
+                'text_md'   => $text_MD,
+                'text_html' => $text_HTML,
             ];
         } catch (Throwable $e) {
             $output = [

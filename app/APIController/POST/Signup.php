@@ -11,14 +11,14 @@ class Signup_POST_APIController extends Abstract_APIController
             $this->lang = $args['lang'];
 
             $username = $request->getParam('username');
-            $userEmail = $request->getParam('email');
-            $userPassword = $request->getParam('password');
+            $user_email = $request->getParam('email');
+            $user_password = $request->getParam('password');
 
             User_Validator::validateUsername($username);
-            User_Validator::validateEmail($userEmail);
-            User_Validator::validatePassword($userPassword);
+            User_Validator::validateEmail($user_email);
+            User_Validator::validatePassword($user_password);
 
-            $user = (new User_Query())->user_with_email($userEmail);
+            $user = (new User_Query())->user_with_email($user_email);
             if ($user) {
                 throw new Exception('User with specific email is already registered', 1);
             }
@@ -29,9 +29,9 @@ class Signup_POST_APIController extends Abstract_APIController
             }
 
             // Generating password hash
-            $passHash = new PassHash();
-            $userPasswordHash = $passHash->hash($userPassword);
-            $apiKey = $passHash->generate_API_key();
+            $password_hash = new PassHash();
+            $user_password_hash = $password_hash->hash($user_password);
+            $apiKey = $password_hash->generate_API_key();
 
             // @TODO check API-key by doubles
             //$user = $api->get('users_api_key', ['api_key' => $api_key]);
@@ -41,8 +41,8 @@ class Signup_POST_APIController extends Abstract_APIController
             $user = new User_Model();
             $user->username = $username;
             $user->name = $name;
-            $user->email = $userEmail;
-            $user->passwordHash = $userPasswordHash;
+            $user->email = $user_email;
+            $user->passwordHash = $user_password_hash;
             $user->apiKey = $apiKey;
 
             $user = (new User_Mapper())->create($user);

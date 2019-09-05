@@ -13,8 +13,8 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             $answer_id = (int) $args['id'];
             $new_answer_text = (string) $request->getParam('answer_text');
 
-            $revisionComment = (string) $request->getParam('changes_comment');
-            $revisionComment = strlen($revisionComment) ? $revisionComment : null;
+            $revision_comment = (string) $request->getParam('changes_comment');
+            $revision_comment = strlen($revision_comment) ? $revision_comment : null;
 
             $user_api_key = (string) $request->getParam('user_api_key');
 
@@ -48,10 +48,10 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             if ($old_answer_text) {
                 $revision->baseText = $old_answer_text;
             }
-            $revision->comment = $revisionComment;
+            $revision->comment = $revision_comment;
             $revision->userID = $user->id;
 
-            Revision_Validator::validateComment($revisionComment);
+            Revision_Validator::validateComment($revision_comment);
 
             $parentRevision = (new Revisions_Query($this->lang))->last_revision_for_answer_with_ID($answer_id);
             if ($parentRevision) {

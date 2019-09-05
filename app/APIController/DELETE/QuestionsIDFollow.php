@@ -11,27 +11,27 @@ class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
             $this->lang = $args['lang'];
 
             $api_key = (string) $request->getParam('api_key');
-            $questionID = (int) $args['id'];
+            $question_ID = (int) $args['id'];
 
             //
             // Validate params
             //
 
             $user = (new User_Query())->user_with_API_key($api_key);
-            $userID = $user->id;
 
-            $question = (new Question_Query($this->lang))->question_with_ID($questionID);
 
-            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relation_with_user_ID_and_question_ID($userID, $questionID);
+            $question = (new Question_Query($this->lang))->question_with_ID($question_ID);
+
+            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relation_with_user_ID_and_question_ID($user->id, $question_ID);
             if (!$relation) {
-                throw new Exception('User with ID "' . $userID . '" not followed question with ID "' . $questionID . '"', 0);
+                throw new Exception('User with ID "' . $user->id . '" not followed question with ID "' . $question_ID . '"', 0);
             }
 
             //
             // Delete follow record
             //
 
-            (new UserFollowQuestion_Relation_Mapper($this->lang))->deleteRelation($relation);
+            (new UserFollowQuestion_Relation_Mapper($this->lang))->delete_relation($relation);
 
             $output = [
                 'user_id'                 => $user->id,

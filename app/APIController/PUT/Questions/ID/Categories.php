@@ -24,10 +24,8 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             //
 
             $user = (new User_Query())->user_with_API_key($api_key);
-            $userID = $user->id;
 
             $question = (new Question_Query($this->lang))->question_with_ID($question_id);
-            $questionID = $question->id;
 
             $old_categories_array = (new Categories_Query($this->lang))->categories_for_question_with_ID($question->id);
 

@@ -21,14 +21,14 @@ class Avatar_POST_APIController extends Abstract_APIController
                 throw new Exception('No file was selected for upload', 1);
             }
 
-            $APIKey = $request->getParam('api_key');
-            $user = (new User_Query())->user_with_API_key($APIKey);
+            $API_key = $request->getParam('api_key');
+            $user = (new User_Query())->user_with_API_key($API_key);
 
             $this->handle = new upload($_FILES['new_avatar_file']);
             if ($this->handle->uploaded) {
-                $mediumAvatarFile = $this->__makeUserAvatarWithSize($user->id, 400);
-                $smallAvatarFile = $this->__makeUserAvatarWithSize($user->id, 200);
-                $extraSmallAvatarFile = $this->__makeUserAvatarWithSize($user->id, 100);
+                $medium_avatar_file = $this->_make_user_avatar_with_size($user->id, 400);
+                $small_avatar_file = $this->_make_user_avatar_with_size($user->id, 200);
+                $extra_small_avatar_file = $this->_make_user_avatar_with_size($user->id, 100);
 
                 // delete the original uploaded file
                 $this->handle->clean();
@@ -54,9 +54,9 @@ class Avatar_POST_APIController extends Abstract_APIController
         return $response->withHeader('Content-Type', 'application/json')->write($json);
     }
 
-    protected function __makeUserAvatarWithSize($userID, $avatarSize)
+    protected function _make_user_avatar_with_size($user_ID, $avatar_size)
     {
-        $avatarFilename = $userID . '_' . $avatarSize;
+        $avatarFilename = $user_ID . '_' . $avatar_size;
 
         $this->handle->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
         $this->handle->image_convert = 'jpg';
@@ -64,8 +64,8 @@ class Avatar_POST_APIController extends Abstract_APIController
         $this->handle->image_resize = true;
         $this->handle->image_ratio_crop = true;
         $this->handle->file_overwrite = true;
-        $this->handle->image_y = $avatarSize;
-        $this->handle->image_x = $avatarSize;
+        $this->handle->image_y = $avatar_size;
+        $this->handle->image_x = $avatar_size;
         $this->handle->file_src_name_body = $avatarFilename;
         $this->handle->process($this->uploadFolder);
         if ($this->handle->processed) {

@@ -9,7 +9,7 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $categoryID = (int) $args['id'];
+            $category_ID = (int) $args['id'];
             $api_key = (string) $request->getParam('api_key');
 
             //
@@ -17,13 +17,13 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
             //
 
             $user = (new User_Query())->user_with_API_key($api_key);
-            $userID = $user->id;
+            $user_ID = $user->id;
 
-            $category = (new Category_Query($this->lang))->category_with_ID($categoryID);
+            $category = (new Category_Query($this->lang))->category_with_ID($category_ID);
 
-            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relation_with_user_ID_and_category_ID($userID, $categoryID);
+            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relation_with_user_ID_and_category_ID($user_ID, $category_ID);
             if ($relation) {
-                throw new Exception('User with ID "' . $userID . '" already followed category with ID "' . $categoryID . '"', 0);
+                throw new Exception('User with ID "' . $user_ID . '" already followed category with ID "' . $category_ID . '"', 0);
             }
 
             //
@@ -31,8 +31,8 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
             //
 
             $relation = new UserFollowCategory_Relation_Model();
-            $relation->userID = $userID;
-            $relation->categoryID = $categoryID;
+            $relation->userID = $user_ID;
+            $relation->categoryID = $category_ID;
 
             $relation = (new UserFollowCategory_Relation_Mapper($this->lang))->create($relation);
 

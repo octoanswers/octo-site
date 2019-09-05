@@ -9,10 +9,10 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $questionID = (int) $args['id'];
-            $questionTitle = (string) $request->getParam('question_title');
+            $question_ID = (int) $args['id'];
+            $question_title = (string) $request->getParam('question_title');
 
-            Question_Validator::validateID($questionID);
+            Question_Validator::validateID($question_ID);
 
             // check API-key
             // if ($check_api_key) {
@@ -24,8 +24,8 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
             //     // $user['id'] ==
             // }
 
-            $question = (new Question_Query($this->lang))->question_with_ID($questionID);
-            $question->title = $questionTitle;
+            $question = (new Question_Query($this->lang))->question_with_ID($question_ID);
+            $question->title = $question_title;
 
             $question = (new Question_Mapper($this->lang))->update($question);
 

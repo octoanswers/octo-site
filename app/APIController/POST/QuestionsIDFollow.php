@@ -17,14 +17,12 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             //
 
             $user = (new User_Query())->user_with_API_key($api_key);
-            $userID = $user->id;
 
             $question = (new Question_Query($this->lang))->question_with_ID($question_id);
-            $questionID = $question->id;
 
-            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relation_with_user_ID_and_question_ID($userID, $questionID);
+            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relation_with_user_ID_and_question_ID($user->id, $question->id);
             if ($relation) {
-                throw new Exception('User with ID "' . $userID . '" already followed question with ID "' . $questionID . '"', 0);
+                throw new Exception('User with ID "' . $user->id . '" already followed question with ID "' . $question->id . '"', 0);
             }
 
             //
@@ -32,8 +30,8 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             //
 
             $relation = new UserFollowQuestion_Relation_Model();
-            $relation->userID = $userID;
-            $relation->questionID = $questionID;
+            $relation->userID = $user->id;
+            $relation->questionID = $question->id;
 
             $relation = (new UserFollowQuestion_Relation_Mapper($this->lang))->create($relation);
 

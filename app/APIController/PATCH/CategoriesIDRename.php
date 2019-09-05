@@ -9,9 +9,9 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $categoryID = (int) $args['id'];
+            $category_ID = (int) $args['id'];
             $api_key = (string) $request->getParam('api_key');
-            $categoryNewTitle = (string) $request->getParam('new_title');
+            $category_new_title = (string) $request->getParam('new_title');
 
             // Validate params
 
@@ -19,14 +19,14 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
 
             // Change category title
 
-            $category = (new Category_Query($this->lang))->category_with_ID($categoryID);
+            $category = (new Category_Query($this->lang))->category_with_ID($category_ID);
             $old_title = $category->title;
-            $category->title = $categoryNewTitle;
+            $category->title = $category_new_title;
             $category = (new Category_Mapper($this->lang))->update($category);
 
-            $saveRedirect = (bool) $request->getParam('save_redirect');
-            if ($saveRedirect) {
-                if (mb_strtolower($categoryNewTitle) != mb_strtolower($old_title)) {
+            $is_save_redirect = (bool) $request->getParam('save_redirect');
+            if ($is_save_redirect) {
+                if (mb_strtolower($category_new_title) != mb_strtolower($old_title)) {
                     // create category record with OLD title & redirect flag
                     $old_category = new Category_Model();
                     $old_category->title = $old_title;

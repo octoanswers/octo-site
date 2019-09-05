@@ -10,11 +10,11 @@ class Logout_POST_APIController extends Abstract_APIController
         try {
             $this->lang = $args['lang'];
 
-            $apiKey = (string) $request->getParam('api_key');
+            $api_key = (string) $request->getParam('api_key');
 
-            User_Validator::validateAPIKey($apiKey);
+            User_Validator::validateAPIKey($api_key);
 
-            $user = (new User_Query())->user_with_API_key($apiKey);
+            $user = (new User_Query())->user_with_API_key($api_key);
 
             $cookieStorage = new CookieStorage();
             $cookieStorage->clear();

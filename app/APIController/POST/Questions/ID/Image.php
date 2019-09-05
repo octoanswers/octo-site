@@ -16,7 +16,7 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
     const WIDTH_MD = 760;  // col-8 width
     const UPLOAD_FOLDER = ROOT_PATH . '/uploads/img';
 
-    private $verotUpload = null;
+    private $verot_upload = null;
 
     public function handle(Request $request, Response $response, $args)
     {
@@ -37,8 +37,8 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
                 throw new Exception('No QUESTION', 0);
             }
 
-            $APIKey = $request->getParam('api_key');
-            $this->user = (new User_Query())->user_with_API_key($APIKey);
+            $API_key = $request->getParam('api_key');
+            $this->user = (new User_Query())->user_with_API_key($API_key);
 
             if (!$this->user) {
                 throw new Exception('No user', 0);
@@ -46,21 +46,21 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
 
             // Upload image
 
-            $this->verotUpload = new upload($_FILES['upload_image_form__image_file']);
-            if ($this->verotUpload->uploaded) {
-                $imageBaseName = $this->_getImageBaseName();
+            $this->verot_upload = new upload($_FILES['upload_image_form__image_file']);
+            if ($this->verot_upload->uploaded) {
+                $image_base_bame = $this->_get_image_base_bame();
 
-                $this->_makeUserAvatarWithSize($imageBaseName . '_lg', self::WIDTH_LG);
-                $this->_makeUserAvatarWithSize($imageBaseName . '_md', self::WIDTH_MD);
+                $this->_make_user_avatar_with_size($image_base_bame . '_lg', self::WIDTH_LG);
+                $this->_make_user_avatar_with_size($image_base_bame . '_md', self::WIDTH_MD);
 
                 // delete the original uploaded file
-                $this->verotUpload->clean();
+                $this->verot_upload->clean();
             } else {
                 throw new Exception('Image don`t upload', 0);
             }
 
             // Update question image base name
-            $this->question->imageBaseName = $imageBaseName;
+            $this->question->image_base_bame = $image_base_bame;
             $this->question = (new Question_Mapper($this->lang))->update($this->question);
 
             $output = [
@@ -82,28 +82,28 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
         return $response->withHeader('Content-Type', 'application/json')->write($json);
     }
 
-    protected function _makeUserAvatarWithSize($imageFilename, $imageWidth)
+    protected function _make_user_avatar_with_size($image_filename, $image_width)
     {
         $uploadFolder = self::UPLOAD_FOLDER . '/' . $this->lang . '/' . $this->question->id . '/';
 
-        $this->verotUpload->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
-        $this->verotUpload->image_convert = 'jpg';
-        $this->verotUpload->jpeg_quality = self::JPEG_QUALITY;
-        $this->verotUpload->image_resize = true;
-        $this->verotUpload->image_ratio_crop = true;
-        $this->verotUpload->file_overwrite = true;
-        $this->verotUpload->image_x = $imageWidth;
-        $this->verotUpload->image_y = (int) ($imageWidth * (1 / 2) - 10);
-        $this->verotUpload->file_src_name_body = $imageFilename;
-        $this->verotUpload->process($uploadFolder);
-        if ($this->verotUpload->processed) {
-            return $this->verotUpload->file_dst_pathname;
+        $this->verot_upload->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
+        $this->verot_upload->image_convert = 'jpg';
+        $this->verot_upload->jpeg_quality = self::JPEG_QUALITY;
+        $this->verot_upload->image_resize = true;
+        $this->verot_upload->image_ratio_crop = true;
+        $this->verot_upload->file_overwrite = true;
+        $this->verot_upload->image_x = $image_width;
+        $this->verot_upload->image_y = (int) ($image_width * (1 / 2) - 10);
+        $this->verot_upload->file_src_name_body = $image_filename;
+        $this->verot_upload->process($uploadFolder);
+        if ($this->verot_upload->processed) {
+            return $this->verot_upload->file_dst_pathname;
         } else {
-            return $this->verotUpload->error;
+            return $this->verot_upload->error;
         }
     }
 
-    protected function _getImageBaseName()
+    protected function _get_image_base_bame()
     {
         $dateChunk = date('Ymj');
         $rand = mt_rand(1, 999);

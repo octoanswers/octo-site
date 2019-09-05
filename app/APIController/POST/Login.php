@@ -10,20 +10,20 @@ class Login_POST_APIController extends Abstract_APIController
         try {
             $this->lang = $args['lang'];
 
-            $userEmail = (string) $request->getParam('email');
-            $userPassword = (string) $request->getParam('password');
+            $user_email = (string) $request->getParam('email');
+            $user_password = (string) $request->getParam('password');
 
-            User_Validator::validateEmail($userEmail);
-            User_Validator::validatePassword($userPassword);
+            User_Validator::validateEmail($user_email);
+            User_Validator::validatePassword($user_password);
 
-            $user = (new User_Query())->user_with_email($userEmail);
+            $user = (new User_Query())->user_with_email($user_email);
             if (!$user) {
                 throw new Exception('User with specific email not found', 1);
             }
 
             // check user password
-            $passHash = new PassHash();
-            if (!$passHash->check_password($user->passwordHash, $userPassword)) {
+            $password_hash = new PassHash();
+            if (!$password_hash->check_password($user->passwordHash, $user_password)) {
                 throw new Exception('WRONG_PASSWORD', 1);
             }
 

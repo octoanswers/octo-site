@@ -11,7 +11,7 @@ class CategoriesIDFollow_DELETE_APIController extends Abstract_APIController
             $this->lang = $args['lang'];
 
             $api_key = (string) $request->getParam('api_key');
-            $categoryID = (int) $args['id'];
+            $category_ID = (int) $args['id'];
 
             //
             // Validate params
@@ -19,18 +19,18 @@ class CategoriesIDFollow_DELETE_APIController extends Abstract_APIController
 
             $user = (new User_Query())->user_with_API_key($api_key);
 
-            $category = (new Category_Query($this->lang))->category_with_ID($categoryID);
+            $category = (new Category_Query($this->lang))->category_with_ID($category_ID);
 
-            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relation_with_user_ID_and_category_ID($user->id, $categoryID);
+            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relation_with_user_ID_and_category_ID($user->id, $category_ID);
             if (!$relation) {
-                throw new Exception('User with ID "' . $user->id . '" not followed category with ID "' . $categoryID . '"', 0);
+                throw new Exception('User with ID "' . $user->id . '" not followed category with ID "' . $category_ID . '"', 0);
             }
 
             //
             // Delete follow record
             //
 
-            (new UserFollowCategory_Relation_Mapper($this->lang))->deleteRelation($relation);
+            (new UserFollowCategory_Relation_Mapper($this->lang))->delete_relation($relation);
 
             $output = [
                 'user_id'             => $user->id,

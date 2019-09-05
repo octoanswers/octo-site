@@ -29,7 +29,7 @@ class UserFollowUser_Relation_Mapper extends Abstract_Mapper
         throw new Exception('UserFollowUser relation "update" method not applicable', 0);
     }
 
-    public function deleteRelation(UserFollowUser_Relation_Model $relation): bool
+    public function delete_relation(UserFollowUser_Relation_Model $relation): bool
     {
         UserFollowUser_Relation_Validator::validateExists($relation);
 

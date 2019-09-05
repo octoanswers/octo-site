@@ -29,7 +29,7 @@ class UserFollowCategory_Relation_Mapper extends Abstract_Mapper
         throw new Exception('UserFollowCategory relation "update" method not applicable', 0);
     }
 
-    public function deleteRelation(UserFollowCategory_Relation_Model $relation): bool
+    public function delete_relation(UserFollowCategory_Relation_Model $relation): bool
     {
         UserFollowCategory_Relation_Validator::validateExists($relation);
 

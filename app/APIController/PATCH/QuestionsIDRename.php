@@ -9,34 +9,33 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
     {
         try {
             $this->lang = $args['lang'];
-            $questionID = (int) $args['id'];
+            $question_ID = (int) $args['id'];
             $api_key = (string) $request->getParam('api_key');
-            $questionNewTitle = (string) $request->getParam('new_title');
+            $question_new_title = (string) $request->getParam('new_title');
 
             // Validate params
 
             $user = (new User_Query())->user_with_API_key($api_key);
-            $userID = $user->id;
 
             // change question title
 
-            $question = (new Question_Query($this->lang))->question_with_ID($questionID);
+            $question = (new Question_Query($this->lang))->question_with_ID($question_ID);
             $old_title = $question->title;
-            $question->title = $questionNewTitle;
+            $question->title = $question_new_title;
             $question = (new Question_Mapper($this->lang))->update($question);
 
-            $saveRedirect = (bool) $request->getParam('save_redirect');
-            if ($saveRedirect) {
-                if (mb_strtolower($questionNewTitle) != mb_strtolower($old_title)) {
+            $is_save_redirect = (bool) $request->getParam('save_redirect');
+            if ($is_save_redirect) {
+                if (mb_strtolower($question_new_title) != mb_strtolower($old_title)) {
                     // create question record with OLD title & redirect flag
-                    $oldQuestion = new Question_Model();
-                    $oldQuestion->title = $old_title;
-                    $oldQuestion->isRedirect = true;
-                    $oldQuestion = (new Question_Mapper($this->lang))->create($oldQuestion);
+                    $old_question = new Question_Model();
+                    $old_question->title = $old_title;
+                    $old_question->isRedirect = true;
+                    $old_question = (new Question_Mapper($this->lang))->create($old_question);
 
                     // create redirect record
                     $this->redirect = new Question_Redirect_Model();
-                    $this->redirect->fromID = $oldQuestion->id;
+                    $this->redirect->fromID = $old_question->id;
                     $this->redirect->toTitle = $question->title;
                     $this->redirect = (new Question_Redirect_Mapper($this->lang))->create($this->redirect);
                 }

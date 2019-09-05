@@ -11,7 +11,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             $this->lang = $args['lang'];
 
             $api_key = (string) $request->getParam('api_key');
-            $userID = (int) $args['id'];
+            $user_ID = (int) $args['id'];
             $signature = $request->getParam('signature');
 
             // Validate params
@@ -23,7 +23,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             $user = (new User_Query())->user_with_API_key($api_key);
             $old_signature = $user->signature;
 
-            if ($user->id != $userID) {
+            if ($user->id != $user_ID) {
                 throw new \Exception('Incorrect user id or API-key', 0);
             }
 
