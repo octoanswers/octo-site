@@ -34,8 +34,6 @@ class Show_Question_PageController extends Abstract_PageController
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->_tempJobs();
-
         if ($this->question->isRedirect) {
             $redirect = (new Question_Redirects_Query($this->lang))->redirect_for_question_with_ID($this->question->id);
             $this->questionRedirect = Question_Model::init_with_title($redirect->toTitle);
@@ -176,34 +174,7 @@ class Show_Question_PageController extends Abstract_PageController
             }
         }
 
-        // FIX bad "a" letter
-        try {
-            foreach ($related_questions as &$question) {
-                $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($question->title);
-                if ($replacedTitle != $question->title) {
-                    $question->title = $replacedTitle;
-                    $question = (new Question_Mapper($this->lang))->update($question);
-                }
-            }
-        } catch (\Exception $e) {
-            // @TODO: depr
-        }
-
         return $related_questions;
-    }
-
-    protected function _tempJobs()
-    {
-        try {
-            // FIX bad "a" letter
-            $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($this->question->title);
-            if ($replacedTitle != $this->question->title) {
-                $this->question->title = $replacedTitle;
-                $this->question = (new Question_Mapper($this->lang))->update($this->question);
-            }
-        } catch (\Exception $e) {
-            // Not critical. Nothing to do.
-        }
     }
 
     protected function _get_page_description()

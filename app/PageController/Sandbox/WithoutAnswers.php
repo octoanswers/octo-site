@@ -22,15 +22,6 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        // FIX bad "a" letter
-        foreach ($this->questions as &$question) {
-            $replacedTitle = Question_Replacer_Helper::replaceBadAInTitle($question->title);
-            if ($replacedTitle != $question->title) {
-                $question->title = $replacedTitle;
-                $question = (new Question_Mapper($this->lang))->update($question);
-            }
-        }
-
         $this->template = 'sandbox';
         $this->pageTitle = $this->_get_page_title();
         $this->pageDescription = $this->_get_page_description();
