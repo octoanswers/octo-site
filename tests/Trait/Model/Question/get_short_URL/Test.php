@@ -1,8 +1,8 @@
 <?php
 
-class Question_URL_Trait__get_short_URL__Test extends PHPUnit\Framework\TestCase
+class Trait_Model_Question_URL__get_short_URLTest extends PHPUnit\Framework\TestCase
 {
-    public function test_FullParam_Ok()
+    public function test__Full_params_hort_URL()
     {
         $question = new Question_Model();
         $question->id = 13;
@@ -11,7 +11,7 @@ class Question_URL_Trait__get_short_URL__Test extends PHPUnit\Framework\TestCase
         $this->assertEquals('https://answeropedia.org/en/13', $question->get_short_URL('en'));
     }
 
-    public function test_MinParam_Ok()
+    public function test__Min_param_short_URL()
     {
         $question = new Question_Model();
         $question->id = 13;

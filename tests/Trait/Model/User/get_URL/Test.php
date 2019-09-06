@@ -1,8 +1,8 @@
 <?php
 
-class User_URL_Trait__get_URL__Test extends PHPUnit\Framework\TestCase
+class Trait_Model_User_URL__get_URLTest extends PHPUnit\Framework\TestCase
 {
-    public function test__en()
+    public function test__EN_URL()
     {
         $user = new User_Model();
         $user->username = 'vladimir';
@@ -10,7 +10,7 @@ class User_URL_Trait__get_URL__Test extends PHPUnit\Framework\TestCase
         $this->assertEquals('https://answeropedia.org/en/@vladimir', $user->get_URL('en'));
     }
 
-    public function test__ru()
+    public function test__RU_URL()
     {
         $user = new User_Model();
         $user->username = 'foxy';

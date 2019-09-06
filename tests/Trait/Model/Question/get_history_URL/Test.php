@@ -1,8 +1,8 @@
 <?php
 
-class Question_URL_Trait__get_history_URL__Test extends PHPUnit\Framework\TestCase
+class Trait_Model_Question_URL__get_history_URLTest extends PHPUnit\Framework\TestCase
 {
-    public function test_en()
+    public function test__EN_history_URL()
     {
         $question = new Question_Model();
         $question->id = 12;
@@ -10,7 +10,7 @@ class Question_URL_Trait__get_history_URL__Test extends PHPUnit\Framework\TestCa
         $this->assertEquals('https://answeropedia.org/en/answer/12/history', $question->get_history_URL('en'));
     }
 
-    public function test_ru()
+    public function test__RU_history_URL()
     {
         $question = new Question_Model();
         $question->id = 7;

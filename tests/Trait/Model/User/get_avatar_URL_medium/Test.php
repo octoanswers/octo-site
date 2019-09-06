@@ -1,8 +1,8 @@
 <?php
 
-class User_URL_Trait__get_avatar_URL_medium__Test extends PHPUnit\Framework\TestCase
+class Trait_Model_User_URL__get_avatar_URL_mediumTest extends PHPUnit\Framework\TestCase
 {
-    public function test_Full_params()
+    public function test__Full_params()
     {
         $user = new User_Model();
         $user->id = 13;

@@ -1,8 +1,8 @@
 <?php
 
-class Question_URL_Trait__get_URL__Test extends PHPUnit\Framework\TestCase
+class Trait_Model_Question_URL__get_URLTest extends PHPUnit\Framework\TestCase
 {
-    public function test_baseURI()
+    public function test__Base_URL()
     {
         $question = new Question_Model();
         $question->id = 19;
@@ -11,7 +11,7 @@ class Question_URL_Trait__get_URL__Test extends PHPUnit\Framework\TestCase
         $this->assertEquals('https://answeropedia.org/en/How_iPhone_8_are_charged', $question->get_URL('en'));
     }
 
-    public function test_RuTitle()
+    public function test__Base_RU_URL()
     {
         $question = new Question_Model();
         $question->id = 18;
