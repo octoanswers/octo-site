@@ -13,3 +13,6 @@ local-settings.php
 # Packeges installed via Composer
 vendor/*
 vendor/
+
+# Code coverage file
+build/logs/clover.xml
