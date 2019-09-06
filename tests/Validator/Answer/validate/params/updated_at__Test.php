@@ -1,23 +1,24 @@
 <?php
 
-class Validator_Answer_validate_base_Test extends PHPUnit\Framework\TestCase
+class Validator_Answer__validate__params__updated_atTest extends PHPUnit\Framework\TestCase
 {
-    public function test_fullParams()
+    public function test__UpdatedAt_not_set()
     {
         $answer = new Answer_Model();
         $answer->id = 4;
         $answer->text = 'Answer written at 08:04';
-        $answer->updatedAt = '2016-03-19 06:47:41';
 
         $this->assertEquals(true, Answer_Validator::validate($answer));
     }
 
-    public function test_minParams()
+    public function test_UpdatedAt_is_empty()
     {
         $answer = new Answer_Model();
-        $answer->id = 214;
+        $answer->id = 4;
         $answer->text = 'Answer written at 08:04';
+        $answer->updatedAt = '';
 
         $this->assertEquals(true, Answer_Validator::validate($answer));
+        $this->assertEquals(null, $answer->updatedAt);
     }
 }

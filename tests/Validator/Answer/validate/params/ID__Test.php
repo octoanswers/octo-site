@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Answer_validate_ID_Test extends PHPUnit\Framework\TestCase
+class Validator_Answer__validate__params__IDTest extends PHPUnit\Framework\TestCase
 {
-    public function test_IDEqualZero()
+    public function test__ID_equal_zero()
     {
         $answer = new Answer_Model();
         $answer->id = 0;
@@ -13,7 +13,7 @@ class Validator_Answer_validate_ID_Test extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Answer_Validator::validate($answer));
     }
 
-    public function test_IDBelowZero()
+    public function test__ID_below_zero()
     {
         $answer = new Answer_Model();
         $answer->id = -1;

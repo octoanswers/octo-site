@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Answer_text_Test extends PHPUnit\Framework\TestCase
+class Validator_Answer__validate__params__textTest extends PHPUnit\Framework\TestCase
 {
-    public function test_empty()
+    public function test__Text_is_empty()
     {
         $answer = new Answer_Model();
         $answer->id = 4;

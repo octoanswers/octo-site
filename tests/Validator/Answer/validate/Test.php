@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Answer_timestamp_Test extends PHPUnit\Framework\TestCase
+class Validator_Answer__validateTest extends PHPUnit\Framework\TestCase
 {
-    public function test_timestampNotSet()
+    public function test__Full_params()
     {
         $answer = new Answer_Model();
         $answer->id = 4;
@@ -12,14 +12,12 @@ class Validator_Answer_timestamp_Test extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Answer_Validator::validate($answer));
     }
 
-    public function test_timestampIsEmpty()
+    public function test__Min_params()
     {
         $answer = new Answer_Model();
-        $answer->id = 4;
+        $answer->id = 214;
         $answer->text = 'Answer written at 08:04';
-        $answer->updatedAt = '';
 
         $this->assertEquals(true, Answer_Validator::validate($answer));
-        $this->assertEquals(null, $answer->updatedAt);
     }
 }
