@@ -1,13 +1,13 @@
 <?php
 
-class Validator_Category_validateNew_negativeTest extends PHPUnit\Framework\TestCase
+class Validator_Category_validate_new_negativeTest extends PHPUnit\Framework\TestCase
 {
     public function test_Exception_when_title_not_set()
     {
         $category = new Category_Model();
 
         $this->expectExceptionMessage('Category title param null must be a string');
-        $this->assertEquals(true, Category_Validator::validateNew($category));
+        $this->assertEquals(true, Category_Validator::validate_new($category));
     }
 
     public function test_Exception_when_title_is_empty()
@@ -16,7 +16,7 @@ class Validator_Category_validateNew_negativeTest extends PHPUnit\Framework\Test
         $category->title = '';
 
         $this->expectExceptionMessage('Category title param "" must have a length between 2 and 127');
-        $this->assertEquals(true, Category_Validator::validateNew($category));
+        $this->assertEquals(true, Category_Validator::validate_new($category));
     }
 
     public function test_Exception_when_title_too_long()

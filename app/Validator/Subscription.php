@@ -12,12 +12,12 @@ class Subscription_Validator
     public static function validate_exists(Subscription_Model $s)
     {
         self::validateID($s->id);
-        self::validateNew($s);
+        self::validate_new($s);
 
         return true;
     }
 
-    public static function validateNew(Subscription_Model $s)
+    public static function validate_new(Subscription_Model $s)
     {
         self::validateQuestionID($s->questionID);
         self::validateEmail($s->email);

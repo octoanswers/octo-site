@@ -4,7 +4,7 @@ class UserFollowUser_Relation_Mapper extends Abstract_Mapper
 {
     public function create(UserFollowUser_Relation_Model $relation): UserFollowUser_Relation_Model
     {
-        UserFollowUser_Relation_Validator::validateNew($relation);
+        UserFollowUser_Relation_Validator::validate_new($relation);
 
         $sql = 'INSERT INTO er_users_follow_users (user_id, followed_user_id) VALUES (:user_id, :followed_user_id)';
         $stmt = $this->pdo->prepare($sql);

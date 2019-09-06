@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Subscription__validate_exists__Test extends PHPUnit\Framework\TestCase
+class Validator_Subscription__validate_existsTest extends PHPUnit\Framework\TestCase
 {
-    public function test__FullParams__OK()
+    public function test__Full_params()
     {
         $s = new Subscription_Model();
         $s->id = 18;
@@ -13,7 +13,7 @@ class Validator_Subscription__validate_exists__Test extends PHPUnit\Framework\Te
         $this->assertEquals(true, Subscription_Validator::validate_exists($s));
     }
 
-    public function test__MinParams__OK()
+    public function test__Min_params()
     {
         $s = new Subscription_Model();
         $s->id = 89;

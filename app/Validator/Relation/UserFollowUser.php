@@ -12,12 +12,12 @@ class UserFollowUser_Relation_Validator
     public static function validate_exists(UserFollowUser_Relation_Model $relation)
     {
         self::validateID($relation->id);
-        self::validateNew($relation);
+        self::validate_new($relation);
 
         return true;
     }
 
-    public static function validateNew(UserFollowUser_Relation_Model $relation)
+    public static function validate_new(UserFollowUser_Relation_Model $relation)
     {
         self::validateUserID($relation->userID);
         self::validateFollowedUserID($relation->followedUserID);

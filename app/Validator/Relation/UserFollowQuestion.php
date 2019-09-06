@@ -12,12 +12,12 @@ class UserFollowQuestion_Relation_Validator
     public static function validate_exists(UserFollowQuestion_Relation_Model $rel)
     {
         self::validateID($rel->id);
-        self::validateNew($rel);
+        self::validate_new($rel);
 
         return true;
     }
 
-    public static function validateNew(UserFollowQuestion_Relation_Model $rel)
+    public static function validate_new(UserFollowQuestion_Relation_Model $rel)
     {
         self::validateUserID($rel->userID);
         self::validateQuestionID($rel->questionID);

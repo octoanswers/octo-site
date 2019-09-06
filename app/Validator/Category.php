@@ -12,7 +12,7 @@ class Category_Validator
     // Model validator
     //
 
-    public static function validateNew(Category_Model $category)
+    public static function validate_new(Category_Model $category)
     {
         return self::validate($category, false);
     }

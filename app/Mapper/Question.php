@@ -4,7 +4,7 @@ class Question_Mapper extends Abstract_Mapper
 {
     public function create(Question_Model $question): Question_Model
     {
-        Question_Validator::validateNew($question);
+        Question_Validator::validate_new($question);
 
         $sql = 'INSERT INTO questions (q_title, q_is_redirect, q_image_base_name) VALUES (:q_title, :q_is_redirect, :q_image_base_name)';
         $stmt = $this->pdo->prepare($sql);

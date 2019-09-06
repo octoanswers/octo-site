@@ -4,7 +4,7 @@ class UserFollowCategory_Relation_Mapper extends Abstract_Mapper
 {
     public function create(UserFollowCategory_Relation_Model $relation): UserFollowCategory_Relation_Model
     {
-        UserFollowCategory_Relation_Validator::validateNew($relation);
+        UserFollowCategory_Relation_Validator::validate_new($relation);
 
         $sql = 'INSERT INTO er_users_follow_categories (user_id, category_id) VALUES (:user_id, :category_id)';
         $stmt = $this->pdo->prepare($sql);

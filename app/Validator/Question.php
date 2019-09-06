@@ -17,12 +17,12 @@ class Question_Validator
     public static function validate_exists(Question_Model $question)
     {
         self::validateID($question->id);
-        self::validateNew($question);
+        self::validate_new($question);
 
         return true;
     }
 
-    public static function validateNew(Question_Model $question)
+    public static function validate_new(Question_Model $question)
     {
         self::validateTitle($question->title);
         self::validateRedirect($question->isRedirect);

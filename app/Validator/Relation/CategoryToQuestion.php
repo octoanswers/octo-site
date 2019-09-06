@@ -12,12 +12,12 @@ class CategoryToQuestion_Relation_Validator
     public static function validate_exists(CategoriesToQuestions_Relation_Model $rel)
     {
         self::validateID($rel->id);
-        self::validateNew($rel);
+        self::validate_new($rel);
 
         return true;
     }
 
-    public static function validateNew(CategoriesToQuestions_Relation_Model $rel)
+    public static function validate_new(CategoriesToQuestions_Relation_Model $rel)
     {
         self::validateCategoryID($rel->categoryID);
         self::validateQuestionID($rel->questionID);

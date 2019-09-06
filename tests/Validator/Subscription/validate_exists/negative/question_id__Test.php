@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Subscription__question_id__Test extends PHPUnit\Framework\TestCase
+class Validator_Subscription__validate_exists__negative__question_idTest extends PHPUnit\Framework\TestCase
 {
-    public function test__QiestionIDEqualZero()
+    public function test__Question_ID_equal_zero()
     {
         $s = new Subscription_Model();
         $s->id = 18;
@@ -13,7 +13,7 @@ class Validator_Subscription__question_id__Test extends PHPUnit\Framework\TestCa
         Subscription_Validator::validate_exists($s);
     }
 
-    public function test__QiestionIDBelowZero()
+    public function test__Question_ID_below_zero()
     {
         $s = new Subscription_Model();
         $s->id = 18;

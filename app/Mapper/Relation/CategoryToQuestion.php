@@ -4,7 +4,7 @@ class CategoryToQuestion_Relation_Mapper extends Abstract_Mapper
 {
     public function create(CategoriesToQuestions_Relation_Model $er): CategoriesToQuestions_Relation_Model
     {
-        CategoryToQuestion_Relation_Validator::validateNew($er);
+        CategoryToQuestion_Relation_Validator::validate_new($er);
 
         $sql = 'INSERT INTO er_categories_questions (er_category_id, er_question_id) VALUES (:er_category_id, :er_question_id)';
         $stmt = $this->pdo->prepare($sql);
@@ -30,7 +30,7 @@ class CategoryToQuestion_Relation_Mapper extends Abstract_Mapper
         return $er;
     }
 
-    public function delete(CategoriesToQuestions_Relation_Model $er): CategoriesToQuestions_Relation_Model
+    public function delete(CategoriesToQuestions_Relation_Model $er): void
     {
         throw new Exception('CategoriesQuestions ER delete not realized', 1);
     }

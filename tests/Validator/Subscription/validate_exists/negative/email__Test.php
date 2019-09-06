@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Subscription__email__Test extends PHPUnit\Framework\TestCase
+class Validator_Subscription__validate_exists__negative__emailTest extends PHPUnit\Framework\TestCase
 {
-    public function test__EmailNotSet()
+    public function test__Email_not_set()
     {
         $s = new Subscription_Model();
         $s->id = 18;
@@ -12,7 +12,7 @@ class Validator_Subscription__email__Test extends PHPUnit\Framework\TestCase
         Subscription_Validator::validate_exists($s);
     }
 
-    public function test__IncorrectEmail()
+    public function test__Incorrect_email()
     {
         $s = new Subscription_Model();
         $s->id = 18;

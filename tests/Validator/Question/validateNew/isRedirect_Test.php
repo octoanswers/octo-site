@@ -1,6 +1,6 @@
 <?php
 
-class Validator_Question_validateNew_isRedirect_Test extends PHPUnit\Framework\TestCase
+class Validator_Question_validate_new_isRedirect_Test extends PHPUnit\Framework\TestCase
 {
     public function test_isRedirect_NotSet()
     {
@@ -8,6 +8,6 @@ class Validator_Question_validateNew_isRedirect_Test extends PHPUnit\Framework\T
         $question->title = 'How iPhone 8 are charged?';
 
         $this->assertEquals(false, $question->isRedirect);
-        $this->assertEquals(true, Question_Validator::validateNew($question));
+        $this->assertEquals(true, Question_Validator::validate_new($question));
     }
 }

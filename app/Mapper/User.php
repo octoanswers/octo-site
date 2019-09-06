@@ -14,7 +14,7 @@ class User_Mapper extends Abstract_Mapper
 
     public function create(User_Model $user): User_Model
     {
-        User_Validator::validateNew($user);
+        User_Validator::validate_new($user);
 
         $sql = 'INSERT INTO users (u_username, u_name, u_email, u_signature, u_site, u_password_hash, u_api_key) VALUES (:u_username, :u_name, :u_email, :u_signature, :u_site, :u_password_hash, :u_api_key)';
         $stmt = $this->pdo->prepare($sql);

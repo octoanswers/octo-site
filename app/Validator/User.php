@@ -23,12 +23,12 @@ class User_Validator
     public static function validate_exists(User_Model $user)
     {
         self::validateID($user->id);
-        self::validateNew($user);
+        self::validate_new($user);
 
         return true;
     }
 
-    public static function validateNew(User_Model $user)
+    public static function validate_new(User_Model $user)
     {
         self::validateUsername($user->username);
         self::validateName($user->name);
