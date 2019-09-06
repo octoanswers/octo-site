@@ -1,8 +1,8 @@
 <?php
 
-class UserFollowQuestion_Relation_Validator__validate_exists__Test extends PHPUnit\Framework\TestCase
+class UserFollowQuestion_Relation_Validator__validate_existsTest extends PHPUnit\Framework\TestCase
 {
-    public function test__FullParams__OK()
+    public function test__Full_params()
     {
         $rel = new UserFollowQuestion_Relation_Model();
         $rel->id = 13;
@@ -13,7 +13,7 @@ class UserFollowQuestion_Relation_Validator__validate_exists__Test extends PHPUn
         $this->assertEquals(true, UserFollowQuestion_Relation_Validator::validate_exists($rel));
     }
 
-    public function test__MinParams__OK()
+    public function test__Min_params()
     {
         $rel = new UserFollowQuestion_Relation_Model();
         $rel->id = 13;

@@ -1,8 +1,8 @@
 <?php
 
-class UserFollowUser_Relation_Validator__id__Test extends PHPUnit\Framework\TestCase
+class UserFollowUser_Relation_Validator__validate_exists__negative__IDTest extends PHPUnit\Framework\TestCase
 {
-    public function test_IDEqualZero()
+    public function test__ID_equal_zero()
     {
         $relation = new UserFollowUser_Relation_Model();
         $relation->id = 0;
@@ -13,7 +13,7 @@ class UserFollowUser_Relation_Validator__id__Test extends PHPUnit\Framework\Test
         UserFollowUser_Relation_Validator::validate_exists($relation);
     }
 
-    public function test__IDBelowZero()
+    public function test__ID_below_zero()
     {
         $relation = new UserFollowUser_Relation_Model();
         $relation->id = -1;

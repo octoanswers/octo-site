@@ -1,8 +1,8 @@
 <?php
 
-class UserFollowCategory_Relation_Validator__validate_new__Test extends PHPUnit\Framework\TestCase
+class UserFollowCategory_Relation_Validator__validate_newTest extends PHPUnit\Framework\TestCase
 {
-    public function test__FullParams__OK()
+    public function test__Full_params()
     {
         $relation = new UserFollowCategory_Relation_Model();
         $relation->userID = 3;
@@ -12,7 +12,7 @@ class UserFollowCategory_Relation_Validator__validate_new__Test extends PHPUnit\
         $this->assertEquals(true, UserFollowCategory_Relation_Validator::validate_new($relation));
     }
 
-    public function test__MinParams__OK()
+    public function test__Min_params()
     {
         $relation = new UserFollowCategory_Relation_Model();
         $relation->userID = 3;

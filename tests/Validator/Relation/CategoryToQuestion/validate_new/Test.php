@@ -1,8 +1,8 @@
 <?php
 
-class Validator_ER_CategoriesQuestions__validate_new__Test extends PHPUnit\Framework\TestCase
+class Validator_Relation_CategoryToQuestion__validate_newTest extends PHPUnit\Framework\TestCase
 {
-    public function test__FullParams__OK()
+    public function test__Full_params()
     {
         $rel = new CategoriesToQuestions_Relation_Model();
         $rel->categoryID = 3;
@@ -12,7 +12,7 @@ class Validator_ER_CategoriesQuestions__validate_new__Test extends PHPUnit\Frame
         $this->assertEquals(true, CategoryToQuestion_Relation_Validator::validate_new($rel));
     }
 
-    public function test__MinParams__OK()
+    public function test__Min_params()
     {
         $rel = new CategoriesToQuestions_Relation_Model();
         $rel->categoryID = 3;

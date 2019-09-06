@@ -1,8 +1,8 @@
 <?php
 
-class Validator__Relation__CategoryToQuestion__fail__id_Test extends PHPUnit\Framework\TestCase
+class Validator_Relation_CategoryToQuestion__validate_exists__negative__IDTest extends PHPUnit\Framework\TestCase
 {
-    public function test_IDEqualZero()
+    public function test__ID_equal_zero()
     {
         $rel = new CategoriesToQuestions_Relation_Model();
         $rel->id = 0;
@@ -13,7 +13,7 @@ class Validator__Relation__CategoryToQuestion__fail__id_Test extends PHPUnit\Fra
         CategoryToQuestion_Relation_Validator::validate_exists($rel);
     }
 
-    public function test__IDBelowZero()
+    public function test__ID_below_zero()
     {
         $rel = new CategoriesToQuestions_Relation_Model();
         $rel->id = -1;
