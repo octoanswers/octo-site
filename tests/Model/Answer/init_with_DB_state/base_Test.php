@@ -1,8 +1,8 @@
 <?php
 
-class Model_Answer__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
+class Model_Answer__init_with_DB_stateTest extends PHPUnit\Framework\TestCase
 {
-    public function test_FullParams()
+    public function test__Full_params()
     {
         $answer = Answer_Model::init_with_DB_state([
             'q_id'         => 13,

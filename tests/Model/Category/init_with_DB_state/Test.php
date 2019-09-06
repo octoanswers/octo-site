@@ -2,7 +2,7 @@
 
 class Model_Category__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
 {
-    public function test_Init_category_with_DB_state()
+    public function test__Init_category_with_DB_state()
     {
         $category = Category_Model::init_with_DB_state([
             'c_id'            => 13,
@@ -15,7 +15,7 @@ class Model_Category__init_with_DB_state__Test extends PHPUnit\Framework\TestCas
         $this->assertEquals('virtual', $category->title);
     }
 
-    public function test_Init_category_with_DB_state_on_Russian()
+    public function test__Init_category_with_DB_state_on_Russian()
     {
         $category = Category_Model::init_with_DB_state([
             'c_id'            => 231,
@@ -28,7 +28,7 @@ class Model_Category__init_with_DB_state__Test extends PHPUnit\Framework\TestCas
         $this->assertEquals('Медицинские услуги', $category->title);
     }
 
-    public function test_Error_when_init_category_with_empty_state()
+    public function test__Error_when_init_category_with_empty_state()
     {
         $this->expectExceptionMessage('Category init with empty state');
         $category = Category_Model::init_with_DB_state([]);

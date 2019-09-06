@@ -1,8 +1,8 @@
 <?php
 
-class Model_Question__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
+class Model_Question__init_with_DB_stateTest extends PHPUnit\Framework\TestCase
 {
-    public function test_EnFullParams_ReturnObject()
+    public function test__EnFullParams()
     {
         $question = Question_Model::init_with_DB_state([
             'q_id'              => 13,
@@ -23,7 +23,7 @@ class Model_Question__init_with_DB_state__Test extends PHPUnit\Framework\TestCas
         $this->assertEquals(0, $question->categoriesCount);
     }
 
-    public function test_RuFullParams_ReturnObject()
+    public function test__RuFullParams()
     {
         $question = Question_Model::init_with_DB_state([
             'q_id'             => 13,

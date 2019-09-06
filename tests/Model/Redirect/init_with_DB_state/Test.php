@@ -1,8 +1,8 @@
 <?php
 
-class Model_Redirect__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
+class Model_Redirect__init_with_DB_stateTest extends PHPUnit\Framework\TestCase
 {
-    public function test_baseParams()
+    public function test__Base_params()
     {
         $redirect = Question_Redirect_Model::init_with_DB_state([
             'rd_from'  => 13,

@@ -1,8 +1,8 @@
 <?php
 
-class Model_Question__init_with_title__Test extends PHPUnit\Framework\TestCase
+class Model_Question__init_with_titleTest extends PHPUnit\Framework\TestCase
 {
-    public function testFullParams()
+    public function test__Full_params()
     {
         $question = Question_Model::init_with_title('This is question?');
 
@@ -11,7 +11,7 @@ class Model_Question__init_with_title__Test extends PHPUnit\Framework\TestCase
         $this->assertEquals(false, $question->isRedirect);
     }
 
-    public function testRuTitle()
+    public function test__RU_title()
     {
         $question = Question_Model::init_with_title('Когда закончится дождь?');
 

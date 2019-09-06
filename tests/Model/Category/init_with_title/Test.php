@@ -1,8 +1,8 @@
 <?php
 
-class Model_Category__init_with_title__Test extends PHPUnit\Framework\TestCase
+class Model_Category__init_with_titleTest extends PHPUnit\Framework\TestCase
 {
-    public function test_Init_with_title()
+    public function test__Init_with_title()
     {
         $category = Category_Model::init_with_title('common_questions');
 
@@ -10,7 +10,7 @@ class Model_Category__init_with_title__Test extends PHPUnit\Framework\TestCase
         $this->assertEquals(null, $category->id);
     }
 
-    public function test_Init_with_title_on_Russian()
+    public function test__Init_with_title_on_Russian()
     {
         $category = Category_Model::init_with_title('проливной_дождь');
 
