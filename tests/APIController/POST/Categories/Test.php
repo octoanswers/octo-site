@@ -1,6 +1,6 @@
 <?php
 
-class APIController_POST_CategoriesTest extends Abstract_Frontend_TestCase
+class APIController_POST_Categories__Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'categories', 'activities', 'er_categories_questions'], 'users' => ['users']];
 

@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Question_update_title_Test extends Abstract_DB_TestCase
+class Mapper_Question__update__title__Test extends Abstract_DB_TestCase
 {
     public function test_UpdateWithEmptyTitle_throwException()
     {

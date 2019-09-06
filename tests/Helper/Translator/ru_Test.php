@@ -1,6 +1,6 @@
 <?php
 
-class Translator_RU_langTest extends PHPUnit\Framework\TestCase
+class Translator__RU_lang__Test extends PHPUnit\Framework\TestCase
 {
     protected function setUp(): void
     {

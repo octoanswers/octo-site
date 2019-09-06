@@ -31,7 +31,7 @@ class All_Sandbox_PageController extends Abstract_PageController
         $this->pageDescription = $this->_get_page_description();
 
         if ($this->questions[9]->id > 1) {
-            $this->nextPageURL = Sandbox_URL_Helper::getAllURL($this->lang, ($this->page + 1));
+            $this->nextPageURL = Sandbox_URL_Helper::get_all_URL($this->lang, ($this->page + 1));
         }
 
         $output = $this->render_page();

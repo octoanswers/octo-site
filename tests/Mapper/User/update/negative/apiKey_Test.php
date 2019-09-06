@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_User_save_negative_apiKey_Test extends Abstract_DB_TestCase
+class Mapper_User_save__negative__api_key__Test extends Abstract_DB_TestCase
 {
     public function test_notSet()
     {

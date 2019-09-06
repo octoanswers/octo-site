@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Helper_ExtendedParsedown_text_headersTest extends TestCase
+class Helper_ExtendedParsedown__text_headers__Test extends TestCase
 {
     protected function setUp(): void
     {

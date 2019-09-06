@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Helper_ExtendedParsedown_category_links_Test extends TestCase
+class Helper_ExtendedParsedown__category_links__Test extends TestCase
 {
     protected function setUp(): void
     {

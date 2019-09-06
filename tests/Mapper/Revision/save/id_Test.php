@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Mapper_Revisions_save_NegativeIDTest extends TestCase
+class Mapper_Revisions__save__negative__ID__Test extends TestCase
 {
     protected $setUpDB = ['ru' => ['revisions']];
 

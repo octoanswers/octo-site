@@ -1,6 +1,6 @@
 <?php
 
-class Login_POST_APIController__BaseTest extends Abstract_Frontend_TestCase
+class Login_POST_APIController__Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 

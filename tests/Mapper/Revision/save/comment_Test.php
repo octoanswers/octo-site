@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Mapper_Revisions_save_NegativeCommentTest extends TestCase
+class Mapper_Revisions__save__negative__comment__Test extends TestCase
 {
     public function testCommentNotString()
     {

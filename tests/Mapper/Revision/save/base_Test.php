@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Revisions_New_BaseTest extends Abstract_DB_TestCase
+class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['ru' => ['revisions']];
 

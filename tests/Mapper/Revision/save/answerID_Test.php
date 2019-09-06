@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Mapper_Revisions_save_NegativeAnswerIDTest extends TestCase
+class Mapper_Revisions__save__negative__answer_ID__Test extends TestCase
 {
     public function testAnswerIDEqualZero()
     {

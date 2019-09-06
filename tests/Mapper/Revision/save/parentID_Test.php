@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Mapper_Revisions_New_NegativeParentIDTest extends TestCase
+class Mapper_Revisions__save__negative__parent_ID__Test extends TestCase
 {
     public function testParentIDEqualZero()
     {

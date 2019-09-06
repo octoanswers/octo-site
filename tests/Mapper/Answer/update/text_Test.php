@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class Mapper_Answer_update_text_Test extends TestCase
+class Mapper_Answer__update__text__Test extends TestCase
 {
     public function test_TextNotSet_Ok()
     {

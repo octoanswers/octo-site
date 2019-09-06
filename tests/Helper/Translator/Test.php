@@ -1,6 +1,6 @@
 <?php
 
-class TranslatorTest extends PHPUnit\Framework\TestCase
+class Translator__Test extends PHPUnit\Framework\TestCase
 {
     public function test_Lang_file_not_exists()
     {

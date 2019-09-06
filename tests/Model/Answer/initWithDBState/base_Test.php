@@ -1,6 +1,6 @@
 <?php
 
-class Model_Answer_init_with_DB_state_Test extends PHPUnit\Framework\TestCase
+class Model_Answer__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
 {
     public function test_FullParams()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class UsersIDSite_PATCH_APIController__id__Test extends Abstract_Frontend_TestCase
+class UsersIDSite_PATCH_APIController__negative__id__Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 

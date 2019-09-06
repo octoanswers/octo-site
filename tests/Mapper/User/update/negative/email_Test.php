@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_User_save_negative_email_Test extends Abstract_DB_TestCase
+class Mapper_User__save__negative__email__Test extends Abstract_DB_TestCase
 {
     public function test_notSet()
     {

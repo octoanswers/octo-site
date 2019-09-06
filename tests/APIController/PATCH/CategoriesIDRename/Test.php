@@ -1,6 +1,6 @@
 <?php
 
-class CategoriesIDRename_PATCH_APIControllerTest extends Abstract_Frontend_TestCase
+class CategoriesIDRename_PATCH_APIController__Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['ru' => ['categories', 'activities', 'redirects_categories'], 'users' => ['users']];
 
