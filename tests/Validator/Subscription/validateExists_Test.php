@@ -1,6 +1,6 @@
 <?php
 
-class Validator_Subscription__validateExists__Test extends PHPUnit\Framework\TestCase
+class Validator_Subscription__validate_exists__Test extends PHPUnit\Framework\TestCase
 {
     public function test__FullParams__OK()
     {
@@ -10,7 +10,7 @@ class Validator_Subscription__validateExists__Test extends PHPUnit\Framework\Tes
         $s->email = 'loz@ba.com';
         $s->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, Subscription_Validator::validateExists($s));
+        $this->assertEquals(true, Subscription_Validator::validate_exists($s));
     }
 
     public function test__MinParams__OK()
@@ -20,6 +20,6 @@ class Validator_Subscription__validateExists__Test extends PHPUnit\Framework\Tes
         $s->questionID = 9;
         $s->email = 'loz@ba.com';
 
-        $this->assertEquals(true, Subscription_Validator::validateExists($s));
+        $this->assertEquals(true, Subscription_Validator::validate_exists($s));
     }
 }

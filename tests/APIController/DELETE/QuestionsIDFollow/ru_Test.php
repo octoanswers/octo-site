@@ -4,7 +4,7 @@ class QuestionsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'er_users_follow_questions'], 'users' => ['users']];
 
-    public function test__BaseUnfollow()
+    public function test__Base_unfollow()
     {
         $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
         $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/7/follow.json', $query_string, true);
@@ -25,7 +25,7 @@ class QuestionsIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__NotFollowed()
+    public function test__Not_followed()
     {
         $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
         $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/4/follow.json', $query_string, true);

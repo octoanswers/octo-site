@@ -1,6 +1,6 @@
 <?php
 
-class Validator_User__negative_signature__Test extends PHPUnit\Framework\TestCase
+class Validator_User__validate_exists__negative__signatureTest extends PHPUnit\Framework\TestCase
 {
     protected function setUp(): void
     {
@@ -18,19 +18,19 @@ class Validator_User__negative_signature__Test extends PHPUnit\Framework\TestCas
         $this->user = null;
     }
 
-    public function test_SignatureTooShort()
+    public function test__Signature_too_short()
     {
         $this->user->signature = 'B';
 
         $this->expectExceptionMessage('User "signature" property "B" must have a length between 3 and 255');
-        $this->assertEquals(true, User_Validator::validateExists($this->user));
+        $this->assertEquals(true, User_Validator::validate_exists($this->user));
     }
 
-    public function test_SignatureTooLong()
+    public function test__Signature_too_long()
     {
         $this->user->signature = 'My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name.';
 
         $this->expectExceptionMessage('User "signature" property "My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name." must have a length between 3 and 255');
-        $this->assertEquals(true, User_Validator::validateExists($this->user));
+        $this->assertEquals(true, User_Validator::validate_exists($this->user));
     }
 }

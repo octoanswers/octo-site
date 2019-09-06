@@ -1,6 +1,6 @@
 <?php
 
-class Question_Validator__validateExists__id__Test extends PHPUnit\Framework\TestCase
+class Question_Validator__validate_exists__id__Test extends PHPUnit\Framework\TestCase
 {
     public function test_IDEqualZero()
     {
@@ -10,7 +10,7 @@ class Question_Validator__validateExists__id__Test extends PHPUnit\Framework\Tes
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param 0 must be greater than or equal to 1');
-        Question_Validator::validateExists($question);
+        Question_Validator::validate_exists($question);
     }
 
     public function testIDBelowZero()
@@ -21,6 +21,6 @@ class Question_Validator__validateExists__id__Test extends PHPUnit\Framework\Tes
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param -1 must be greater than or equal to 1');
-        Question_Validator::validateExists($question);
+        Question_Validator::validate_exists($question);
     }
 }

@@ -27,7 +27,7 @@ class Question_Mapper extends Abstract_Mapper
 
     public function update(Question_Model $question): Question_Model
     {
-        Question_Validator::validateExists($question);
+        Question_Validator::validate_exists($question);
 
         $sql = 'UPDATE questions SET q_title=:q_title, q_is_redirect=:q_is_redirect, q_image_base_name=:q_image_base_name WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);

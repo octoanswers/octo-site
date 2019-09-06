@@ -10,7 +10,7 @@ class Validator__Relation__CategoryToQuestion__fail__id_Test extends PHPUnit\Fra
         $rel->questionID = 9;
 
         $this->expectExceptionMessage('CategoryToQuestion relation "id" property 0 must be greater than or equal to 1');
-        CategoryToQuestion_Relation_Validator::validateExists($rel);
+        CategoryToQuestion_Relation_Validator::validate_exists($rel);
     }
 
     public function test__IDBelowZero()
@@ -21,6 +21,6 @@ class Validator__Relation__CategoryToQuestion__fail__id_Test extends PHPUnit\Fra
         $rel->questionID = 9;
 
         $this->expectExceptionMessage('CategoryToQuestion relation "id" property -1 must be greater than or equal to 1');
-        CategoryToQuestion_Relation_Validator::validateExists($rel);
+        CategoryToQuestion_Relation_Validator::validate_exists($rel);
     }
 }

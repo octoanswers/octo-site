@@ -31,7 +31,7 @@ class UserFollowCategory_Relation_Mapper extends Abstract_Mapper
 
     public function delete_relation(UserFollowCategory_Relation_Model $relation): bool
     {
-        UserFollowCategory_Relation_Validator::validateExists($relation);
+        UserFollowCategory_Relation_Validator::validate_exists($relation);
 
         $sql = 'DELETE FROM er_users_follow_categories WHERE category_id=:category_id AND user_id=:user_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);

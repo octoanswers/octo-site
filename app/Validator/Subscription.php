@@ -9,7 +9,7 @@ class Subscription_Validator
     // Model validator
     //
 
-    public static function validateExists(Subscription_Model $s)
+    public static function validate_exists(Subscription_Model $s)
     {
         self::validateID($s->id);
         self::validateNew($s);

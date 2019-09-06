@@ -17,7 +17,7 @@ class Category_Validator
         return self::validate($category, false);
     }
 
-    public static function validateExists(Category_Model $category)
+    public static function validate_exists(Category_Model $category)
     {
         return self::validate($category, true);
     }

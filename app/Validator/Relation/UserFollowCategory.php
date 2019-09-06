@@ -9,7 +9,7 @@ class UserFollowCategory_Relation_Validator
     // Model validator
     //
 
-    public static function validateExists(UserFollowCategory_Relation_Model $relation)
+    public static function validate_exists(UserFollowCategory_Relation_Model $relation)
     {
         self::validateID($relation->id);
         self::validateNew($relation);

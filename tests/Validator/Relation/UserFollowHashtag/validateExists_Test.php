@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowCategory_Relation_Validator__validateExists__Test extends PHPUnit\Framework\TestCase
+class UserFollowCategory_Relation_Validator__validate_exists__Test extends PHPUnit\Framework\TestCase
 {
     public function test__FullParams__OK()
     {
@@ -10,7 +10,7 @@ class UserFollowCategory_Relation_Validator__validateExists__Test extends PHPUni
         $relation->categoryID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, UserFollowCategory_Relation_Validator::validateExists($relation));
+        $this->assertEquals(true, UserFollowCategory_Relation_Validator::validate_exists($relation));
     }
 
     public function test__MinParams__OK()
@@ -20,6 +20,6 @@ class UserFollowCategory_Relation_Validator__validateExists__Test extends PHPUni
         $relation->userID = 3;
         $relation->categoryID = 9;
 
-        $this->assertEquals(true, UserFollowCategory_Relation_Validator::validateExists($relation));
+        $this->assertEquals(true, UserFollowCategory_Relation_Validator::validate_exists($relation));
     }
 }

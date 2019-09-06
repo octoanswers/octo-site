@@ -1,8 +1,8 @@
 <?php
 
-class Validator_User_Test extends PHPUnit\Framework\TestCase
+class Validator_User__validate_existsTest extends PHPUnit\Framework\TestCase
 {
-    public function test_ValidateWithFullParams()
+    public function test__Validate_with_full_params()
     {
         $user = new User_Model();
         $user->id = 13;
@@ -15,10 +15,10 @@ class Validator_User_Test extends PHPUnit\Framework\TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
         $user->createdAt = '2016-03-19 06:47:41';
 
-        $this->assertEquals(true, User_Validator::validateExists($user));
+        $this->assertEquals(true, User_Validator::validate_exists($user));
     }
 
-    public function test_ValidateWithMinParams()
+    public function test__Validate_with_min_params()
     {
         $user = new User_Model();
         $user->id = 13;
@@ -28,6 +28,6 @@ class Validator_User_Test extends PHPUnit\Framework\TestCase
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
-        $this->assertEquals(true, User_Validator::validateExists($user));
+        $this->assertEquals(true, User_Validator::validate_exists($user));
     }
 }

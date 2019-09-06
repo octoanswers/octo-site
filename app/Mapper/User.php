@@ -46,7 +46,7 @@ class User_Mapper extends Abstract_Mapper
 
     public function update(User_Model $user): User_Model
     {
-        User_Validator::validateExists($user);
+        User_Validator::validate_exists($user);
 
         $sql = 'UPDATE users SET u_username=:u_username, u_name=:u_name, u_email=:u_email, u_signature=:u_signature, u_site=:u_site, u_password_hash=:u_password_hash, u_api_key=:u_api_key WHERE u_id=:u_id';
         $stmt = $this->pdo->prepare($sql);

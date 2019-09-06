@@ -1,8 +1,8 @@
 <?php
 
-class Validator_User_validate_id_Test extends PHPUnit\Framework\TestCase
+class Validator_User__validate_exists__negative__idTest extends PHPUnit\Framework\TestCase
 {
-    public function test_idNotSet()
+    public function test__ID_not_set()
     {
         $user = new User_Model();
         $user->name = 'Boris Bro';
@@ -11,10 +11,10 @@ class Validator_User_validate_id_Test extends PHPUnit\Framework\TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
         $this->expectExceptionMessage('User id param null must be of the type integer');
-        $this->assertEquals(true, User_Validator::validateExists($user));
+        $this->assertEquals(true, User_Validator::validate_exists($user));
     }
 
-    public function test_IDEqualZero()
+    public function test__ID_equal_zero()
     {
         $user = new User_Model();
         $user->id = 0;
@@ -24,10 +24,10 @@ class Validator_User_validate_id_Test extends PHPUnit\Framework\TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
         $this->expectExceptionMessage('User id param 0 must be greater than or equal to 1');
-        $this->assertEquals(true, User_Validator::validateExists($user));
+        $this->assertEquals(true, User_Validator::validate_exists($user));
     }
 
-    public function test_IDBelowZero()
+    public function test__ID_below_zero()
     {
         $user = new User_Model();
         $user->id = -1;
@@ -37,6 +37,6 @@ class Validator_User_validate_id_Test extends PHPUnit\Framework\TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
         $this->expectExceptionMessage('User id param -1 must be greater than or equal to 1');
-        $this->assertEquals(true, User_Validator::validateExists($user));
+        $this->assertEquals(true, User_Validator::validate_exists($user));
     }
 }

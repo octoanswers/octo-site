@@ -20,7 +20,7 @@ class User_Validator
     // Model validator
     //
 
-    public static function validateExists(User_Model $user)
+    public static function validate_exists(User_Model $user)
     {
         self::validateID($user->id);
         self::validateNew($user);

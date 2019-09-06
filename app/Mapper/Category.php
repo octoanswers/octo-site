@@ -27,7 +27,7 @@ class Category_Mapper extends Abstract_Mapper
 
     public function update(Category_Model $category): Category_Model
     {
-        Category_Validator::validateExists($category);
+        Category_Validator::validate_exists($category);
 
         $sql = 'UPDATE categories SET c_title=:c_title, cat_is_redirect=:cat_is_redirect WHERE c_id=:c_id';
         $stmt = $this->pdo->prepare($sql);

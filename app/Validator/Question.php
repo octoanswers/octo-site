@@ -14,7 +14,7 @@ class Question_Validator
     // Model validator
     //
 
-    public static function validateExists(Question_Model $question)
+    public static function validate_exists(Question_Model $question)
     {
         self::validateID($question->id);
         self::validateNew($question);

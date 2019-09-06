@@ -26,6 +26,6 @@ class Validator_Category_validateNew_negativeTest extends PHPUnit\Framework\Test
         $category->title = 'title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title';
 
         $this->expectExceptionMessage('Category title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
-        $this->assertEquals(true, Category_Validator::validateExists($category));
+        $this->assertEquals(true, Category_Validator::validate_exists($category));
     }
 }

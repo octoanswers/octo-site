@@ -2,7 +2,7 @@
 
 class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends Abstract_Frontend_TestCase
 {
-    public function test__QuestionIDEqualZero()
+    public function test__Question_ID_equal_zero()
     {
         $query_string = 'email=' . urlencode('test@mail.ru') . '&no_email=1';
         $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/0/subscribe.json', $query_string, true);
@@ -21,7 +21,7 @@ class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends Abstr
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__QuestionIDBelowZero()
+    public function test__Question_ID_below_zero()
     {
         $query_string = 'email=' . urlencode('test@mail.ru') . '&no_email=1';
         $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/-1/subscribe.json', $query_string, true);

@@ -9,7 +9,7 @@ class Validator_Subscription__email__Test extends PHPUnit\Framework\TestCase
         $s->questionID = 22;
 
         $this->expectExceptionMessage('Subscription "email" property null must be a string');
-        Subscription_Validator::validateExists($s);
+        Subscription_Validator::validate_exists($s);
     }
 
     public function test__IncorrectEmail()
@@ -20,6 +20,6 @@ class Validator_Subscription__email__Test extends PHPUnit\Framework\TestCase
         $s->email = 'loz_ba.com';
 
         $this->expectExceptionMessage('Subscription "email" property "loz_ba.com" must be valid email');
-        Subscription_Validator::validateExists($s);
+        Subscription_Validator::validate_exists($s);
     }
 }

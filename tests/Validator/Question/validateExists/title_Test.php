@@ -9,7 +9,7 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param null must be a string');
-        $this->assertEquals(true, Question_Validator::validateExists($question));
+        $this->assertEquals(true, Question_Validator::validate_exists($question));
     }
 
     public function test_titleIsEmpty()
@@ -20,7 +20,7 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "" must have a length between 3 and 255');
-        $this->assertEquals(true, Question_Validator::validateExists($question));
+        $this->assertEquals(true, Question_Validator::validate_exists($question));
     }
 
     public function testCommentTooShort()
@@ -31,7 +31,7 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "x" must have a length between 3 and 255');
-        $this->assertEquals(true, Question_Validator::validateExists($question));
+        $this->assertEquals(true, Question_Validator::validate_exists($question));
     }
 
     public function testCommentTooLong()
@@ -42,6 +42,6 @@ class Validator_Question_negative_title_Test extends PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42." must have a length between 3 and 255');
-        $this->assertEquals(true, Question_Validator::validateExists($question));
+        $this->assertEquals(true, Question_Validator::validate_exists($question));
     }
 }

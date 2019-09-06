@@ -1,8 +1,8 @@
 <?php
 
-class Validator_User_negative_timestamp_Test extends PHPUnit\Framework\TestCase
+class Validator_User__validate_exists__negative__timestampTest extends PHPUnit\Framework\TestCase
 {
-    public function test_timestampNotSet()
+    public function test__Timestamp_not_set()
     {
         $user = new User_Model();
         $user->id = 13;
@@ -13,10 +13,10 @@ class Validator_User_negative_timestamp_Test extends PHPUnit\Framework\TestCase
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
-        $this->assertEquals(true, User_Validator::validateExists($user));
+        $this->assertEquals(true, User_Validator::validate_exists($user));
     }
 
-    public function test_timestampIsEmpty()
+    public function test__Timestamp_is_empty()
     {
         $user = new User_Model();
         $user->id = 13;
@@ -28,7 +28,7 @@ class Validator_User_negative_timestamp_Test extends PHPUnit\Framework\TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
         $user->createdAt = '';
 
-        $this->assertEquals(true, User_Validator::validateExists($user));
+        $this->assertEquals(true, User_Validator::validate_exists($user));
         $this->assertEquals(null, $user->createdAt);
     }
 }

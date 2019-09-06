@@ -10,7 +10,7 @@ class Validator_Subscription__id__Test extends PHPUnit\Framework\TestCase
         $s->email = 'loz@ba.com';
 
         $this->expectExceptionMessage('Subscription "id" property 0 must be greater than or equal to 1');
-        Subscription_Validator::validateExists($s);
+        Subscription_Validator::validate_exists($s);
     }
 
     public function test__IDBelowZero()
@@ -21,6 +21,6 @@ class Validator_Subscription__id__Test extends PHPUnit\Framework\TestCase
         $s->email = 'loz@ba.com';
 
         $this->expectExceptionMessage('Subscription "id" property -1 must be greater than or equal to 1');
-        Subscription_Validator::validateExists($s);
+        Subscription_Validator::validate_exists($s);
     }
 }
