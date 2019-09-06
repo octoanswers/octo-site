@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Category_validate_exists_negativeIDTest extends PHPUnit\Framework\TestCase
+class Validator_Category__validate_exists__negative__IDTest extends PHPUnit\Framework\TestCase
 {
-    public function test_Exception_when_category_ID_equal_zero()
+    public function test__Exception_when_category_ID_equal_zero()
     {
         $category = new Category_Model();
         $category->id = 0;
@@ -12,7 +12,7 @@ class Validator_Category_validate_exists_negativeIDTest extends PHPUnit\Framewor
         Category_Validator::validate_exists($category);
     }
 
-    public function test_Exception_when_category_ID_below_zero()
+    public function test__Exception_when_category_ID_below_zero()
     {
         $category = new Category_Model();
         $category->id = -1;

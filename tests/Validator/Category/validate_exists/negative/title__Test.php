@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Category_validate_existsTest extends PHPUnit\Framework\TestCase
+class Validator_Category__validate_exists__negative__titleTest extends PHPUnit\Framework\TestCase
 {
-    public function test_Exception_when_category_title_not_set()
+    public function test__Exception_when_category_title_not_set()
     {
         $category = new Category_Model();
         $category->id = 13;
@@ -11,7 +11,7 @@ class Validator_Category_validate_existsTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Category_Validator::validate_exists($category));
     }
 
-    public function test_Exception_when_category_title_is_empty()
+    public function test__Exception_when_category_title_is_empty()
     {
         $category = new Category_Model();
         $category->id = 13;
@@ -21,7 +21,7 @@ class Validator_Category_validate_existsTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Category_Validator::validate_exists($category));
     }
 
-    public function test_Exception_when_category_title_too_short()
+    public function test__Exception_when_category_title_too_short()
     {
         $category = new Category_Model();
         $category->id = 13;
@@ -31,7 +31,7 @@ class Validator_Category_validate_existsTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Category_Validator::validate_exists($category));
     }
 
-    public function test_Exception_when_category_title_too_long()
+    public function test__Exception_when_category_title_too_long()
     {
         $category = new Category_Model();
         $category->id = 13;

@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Category_validate_newTest extends PHPUnit\Framework\TestCase
+class Validator_Category__validate_newTest extends PHPUnit\Framework\TestCase
 {
-    public function test_One_word_category()
+    public function test__One_word_category()
     {
         $category = new Category_Model();
         $category->title = 'Apple';
@@ -10,7 +10,7 @@ class Validator_Category_validate_newTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Category_Validator::validate_new($category));
     }
 
-    public function test_Two_word_category()
+    public function test__Two_word_category()
     {
         $category = new Category_Model();
         $category->title = 'iPhone 8';
@@ -18,7 +18,7 @@ class Validator_Category_validate_newTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Category_Validator::validate_new($category));
     }
 
-    public function test_Category_with_underscore()
+    public function test__Category_with_underscore()
     {
         $category = new Category_Model();
         $category->title = 'my_category';
