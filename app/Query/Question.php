@@ -4,7 +4,7 @@ class Question_Query extends Abstract_Query
 {
     public function question_with_title(string $title): Question_Model
     {
-        Question_Validator::validateTitle($title);
+        Question_Validator::validate_title($title);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 

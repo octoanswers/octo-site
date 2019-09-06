@@ -1,8 +1,8 @@
 <?php
 
-class Question_Validator__validate_exists__id__Test extends PHPUnit\Framework\TestCase
+class Validator_Question__validate_exists__params__IDTest extends PHPUnit\Framework\TestCase
 {
-    public function test_IDEqualZero()
+    public function test__ID_equal_zero()
     {
         $question = new Question_Model();
         $question->id = 0;
@@ -13,7 +13,7 @@ class Question_Validator__validate_exists__id__Test extends PHPUnit\Framework\Te
         Question_Validator::validate_exists($question);
     }
 
-    public function testIDBelowZero()
+    public function test__ID_below_zero()
     {
         $question = new Question_Model();
         $question->id = -1;

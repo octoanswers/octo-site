@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Question_validate_new_isRedirect_Test extends PHPUnit\Framework\TestCase
+class Validator_Question__validate_new__params__is_redirectTest extends PHPUnit\Framework\TestCase
 {
-    public function test_isRedirect_NotSet()
+    public function test__IsRedirect_not_set()
     {
         $question = new Question_Model();
         $question->title = 'How iPhone 8 are charged?';

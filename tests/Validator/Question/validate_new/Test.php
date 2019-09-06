@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Question_validate_new_BaseTest extends PHPUnit\Framework\TestCase
+class Validator_Question__validate_newTest extends PHPUnit\Framework\TestCase
 {
-    public function test_validate_newQuestionWithFullParams_Ok()
+    public function test__New_question_with_full_params()
     {
         $question = new Question_Model();
         $question->title = 'How iPhone 8 are charged?';
@@ -11,7 +11,7 @@ class Validator_Question_validate_new_BaseTest extends PHPUnit\Framework\TestCas
         $this->assertEquals(true, Question_Validator::validate_new($question));
     }
 
-    public function test_validate_newQuestionWithMinParams_Ok()
+    public function test__New_question_with_min_params()
     {
         $question = new Question_Model();
         $question->title = 'How iPhone 8 are charged?';

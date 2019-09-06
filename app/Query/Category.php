@@ -4,7 +4,7 @@ class Category_Query extends Abstract_Query
 {
     public function category_with_title(string $categoryTitle): Category_Model
     {
-        Category_Validator::validateTitle($categoryTitle);
+        Category_Validator::validate_title($categoryTitle);
 
         $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_title=:c_title LIMIT 1');
         $stmt->bindParam(':c_title', $categoryTitle, PDO::PARAM_STR);
@@ -44,7 +44,7 @@ class Category_Query extends Abstract_Query
 
     public function find_with_title(string $title)
     {
-        Category_Validator::validateTitle($title);
+        Category_Validator::validate_title($title);
 
         $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_title=:c_title LIMIT 1');
         $stmt->bindParam(':c_title', $title, PDO::PARAM_STR);

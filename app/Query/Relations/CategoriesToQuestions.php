@@ -56,7 +56,7 @@ class CategoriesToQuestions_Relations_Query extends Abstract_Query
 
     public function find_by_category_title_and_question_ID(string $category_title, int $question_id)
     {
-        Category_Validator::validateTitle($category_title);
+        Category_Validator::validate_title($category_title);
         CategoryToQuestion_Relation_Validator::validateQuestionID($question_id);
 
         $category = (new Category_Query($this->lang))->find_with_title($category_title);

@@ -24,9 +24,9 @@ class Question_Validator
 
     public static function validate_new(Question_Model $question)
     {
-        self::validateTitle($question->title);
+        self::validate_title($question->title);
         self::validateRedirect($question->isRedirect);
-        self::validateImageBaseName($question->imageBaseName);
+        self::validate_image_base_name($question->imageBaseName);
 
         return true;
     }
@@ -44,7 +44,7 @@ class Question_Validator
         }
     }
 
-    public static function validateTitle($title)
+    public static function validate_title($title)
     {
         try {
             v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, null)->assert($title);
@@ -78,7 +78,7 @@ class Question_Validator
         }
     }
 
-    public static function validateImageBaseName($imageBaseName)
+    public static function validate_image_base_name($imageBaseName)
     {
         try {
             v::optional(v::stringType()->length(self::IMAGE_BASENAME_MIN_LENGHT, self::IMAGE_BASENAME_MAX_LENGHT, null))->assert($imageBaseName);

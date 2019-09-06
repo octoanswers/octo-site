@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Question_BaseTest extends PHPUnit\Framework\TestCase
+class Validator_Question__validate_existsTest extends PHPUnit\Framework\TestCase
 {
-    public function test_validate_existsQuestionWithFullParams_Ok()
+    public function test__Exists_question_with_full_params()
     {
         $question = new Question_Model();
         $question->id = 13;
@@ -12,7 +12,7 @@ class Validator_Question_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Question_Validator::validate_exists($question));
     }
 
-    public function test_validate_existsQuestionWithMinParams_Ok()
+    public function test__Exists_question_with_min_params()
     {
         $question = new Question_Model();
         $question->id = 13;

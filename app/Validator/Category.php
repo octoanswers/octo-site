@@ -27,7 +27,7 @@ class Category_Validator
         if ($isExists) {
             self::validateID($category->id);
         }
-        self::validateTitle($category->title);
+        self::validate_title($category->title);
 
         return true;
     }
@@ -45,7 +45,7 @@ class Category_Validator
         }
     }
 
-    public static function validateTitle($title)
+    public static function validate_title($title)
     {
         try {
             v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, true)->assert($title);
