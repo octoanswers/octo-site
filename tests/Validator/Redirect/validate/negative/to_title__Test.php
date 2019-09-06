@@ -1,8 +1,8 @@
 <?php
 
-class Redirect_Validator_negative_toTitle_Test extends PHPUnit\Framework\TestCase
+class Redirect_Validator__validate__negative__to_titleTest extends PHPUnit\Framework\TestCase
 {
-    public function test_titleNotSet()
+    public function test__Title_not_set()
     {
         $redirect = new Question_Redirect_Model();
         $redirect->fromID = 7;
@@ -11,7 +11,7 @@ class Redirect_Validator_negative_toTitle_Test extends PHPUnit\Framework\TestCas
         $this->assertEquals(true, Question_Redirect_Validator::validate($redirect));
     }
 
-    public function test_titleIsEmpty()
+    public function test__Title_is_empty()
     {
         $redirect = new Question_Redirect_Model();
         $redirect->fromID = 7;
@@ -21,7 +21,7 @@ class Redirect_Validator_negative_toTitle_Test extends PHPUnit\Framework\TestCas
         $this->assertEquals(true, Question_Redirect_Validator::validate($redirect));
     }
 
-    public function testCommentTooShort()
+    public function test__Comment_too_short()
     {
         $redirect = new Question_Redirect_Model();
         $redirect->fromID = 12;
@@ -31,7 +31,7 @@ class Redirect_Validator_negative_toTitle_Test extends PHPUnit\Framework\TestCas
         $this->assertEquals(true, Question_Redirect_Validator::validate($redirect));
     }
 
-    public function testCommentTooLong()
+    public function test__Comment_too_long()
     {
         $redirect = new Question_Redirect_Model();
         $redirect->fromID = 7;

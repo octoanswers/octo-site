@@ -1,8 +1,8 @@
 <?php
 
-class Redirect_Validator__validate_exists__Test extends PHPUnit\Framework\TestCase
+class Redirect_Validator__validateTest extends PHPUnit\Framework\TestCase
 {
-    public function test_validate_existsQuestionWithFullParams_Ok()
+    public function test_Validate_exists_question_with_full_params()
     {
         $redirect = new Question_Redirect_Model();
         $redirect->fromID = 12;

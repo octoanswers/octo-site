@@ -1,8 +1,8 @@
 <?php
 
-class Redirect_Validator__validate_id__Test extends PHPUnit\Framework\TestCase
+class Redirect_Validator__validate__negative__from_IDTest extends PHPUnit\Framework\TestCase
 {
-    public function test_IDEqualZero()
+    public function test__FromID_equal_zero()
     {
         $redirect = new Question_Redirect_Model();
         $redirect->fromID = 0;
@@ -12,7 +12,7 @@ class Redirect_Validator__validate_id__Test extends PHPUnit\Framework\TestCase
         Question_Redirect_Validator::validate($redirect);
     }
 
-    public function test_fromIDBelowZero()
+    public function test__FromID_below_zero()
     {
         $redirect = new Question_Redirect_Model();
         $redirect->fromID = -1;
