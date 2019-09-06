@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Revision_NegativeTimestampID_Test extends PHPUnit\Framework\TestCase
+class Validator_Revision__validate__negative__created_atTest extends PHPUnit\Framework\TestCase
 {
-    public function testWrongType()
+    public function test__Wrong_type()
     {
         $revision = new Revision_Model();
         $revision->answerID = 11;

@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Revision_NegativeComment_Test extends PHPUnit\Framework\TestCase
+class Validator_Revision__validate__negative__commentTest extends PHPUnit\Framework\TestCase
 {
-    public function testCommentIsEmpty()
+    public function test__Comment_is_empty()
     {
         $revision = new Revision_Model();
         $revision->answerID = 11;
@@ -14,7 +14,7 @@ class Validator_Revision_NegativeComment_Test extends PHPUnit\Framework\TestCase
         Revision_Validator::validate($revision);
     }
 
-    public function testCommentTooShort()
+    public function test__Comment_too_short()
     {
         $revision = new Revision_Model();
         $revision->answerID = 11;
@@ -26,7 +26,7 @@ class Validator_Revision_NegativeComment_Test extends PHPUnit\Framework\TestCase
         Revision_Validator::validate($revision);
     }
 
-    public function testCommentTooLong()
+    public function test__Comment_too_long()
     {
         $revision = new Revision_Model();
         $revision->answerID = 11;

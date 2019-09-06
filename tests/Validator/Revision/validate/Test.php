@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
+class Validator_Revision__validateTest extends PHPUnit\Framework\TestCase
 {
-    public function test__ValidFullRevision()
+    public function test__Revision_with_full_params()
     {
         $revision = new Revision_Model();
         $revision->id = 13;
@@ -17,7 +17,7 @@ class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(true, Revision_Validator::validate($revision));
     }
 
-    public function test__RevisionWithMinParams()
+    public function test__Revision_with_min_params()
     {
         $revision = new Revision_Model();
         $revision->answerID = 11;
@@ -35,5 +35,15 @@ class Validator_Revision_BaseTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(null, $revision->parentID);
         $this->assertEquals(14, $revision->userID);
         $this->assertEquals(null, $revision->createdAt);
+    }
+
+    public function test__BaseTextEqualNull()
+    {
+        $revision = new Revision_Model();
+        $revision->answerID = 11;
+        $revision->opcodes = 'xyz';
+        $revision->userID = 14;
+
+        $this->assertEquals(true, Revision_Validator::validate($revision));
     }
 }

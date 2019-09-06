@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Revision__opcodes__Test extends PHPUnit\Framework\TestCase
+class Validator_Revision__validate__negative__opcodesTest extends PHPUnit\Framework\TestCase
 {
-    public function test__OpcodesEqualNull()
+    public function test__Opcodes_equal_null()
     {
         $revision = new Revision_Model();
         $revision->answerID = 11;
@@ -12,18 +12,7 @@ class Validator_Revision__opcodes__Test extends PHPUnit\Framework\TestCase
         Revision_Validator::validate($revision);
     }
 
-    // public function test__OpcodesNotString()
-    // {
-    //     $revision = new Revision_Model();
-    //     $revision->answerID = 11;
-    //     $revision->opcodes = 123;
-    //     $revision->baseText = 'Answer about thunderbird 14-16.';
-    //
-    //     $this->expectExceptionMessage('Revision opcodes param "" must have a length greater than 2');
-    //     Revision_Validator::validate($revision);
-    // }
-
-    public function test__OpcodesIsEmpty()
+    public function test__Opcodes_is_empty()
     {
         $revision = new Revision_Model();
         $revision->answerID = 11;
@@ -34,7 +23,7 @@ class Validator_Revision__opcodes__Test extends PHPUnit\Framework\TestCase
         Revision_Validator::validate($revision);
     }
 
-    public function test__OpcodesTooShort()
+    public function test__Opcodes_too_hort()
     {
         $revision = new Revision_Model();
         $revision->answerID = 11;

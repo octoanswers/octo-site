@@ -1,8 +1,8 @@
 <?php
 
-class Validator_Revision_validate_NegativeID_Test extends PHPUnit\Framework\TestCase
+class Validator_Revision__validate__negative__IDTest extends PHPUnit\Framework\TestCase
 {
-    public function testIDEqualZero()
+    public function test__ID_equal_zero()
     {
         $revision = new Revision_Model();
         $revision->id = 0;
@@ -13,7 +13,7 @@ class Validator_Revision_validate_NegativeID_Test extends PHPUnit\Framework\Test
         Revision_Validator::validate($revision);
     }
 
-    public function testIDBelowZero()
+    public function test__ID_below_zero()
     {
         $revision = new Revision_Model();
         $revision->id = -1;
