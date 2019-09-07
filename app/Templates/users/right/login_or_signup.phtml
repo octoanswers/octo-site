@@ -1,15 +1,15 @@
 <?php if (!$this->authUser) : ?>
-<div class="alert alert-warning mt-3">
-    <p class="alert-heading"><strong><?= $this->translator->get('block__sign_up', 'title') ?></strong></p>
-    <p><?= $this->translator->get('block__sign_up', 'text') ?></p>
+    <div class="alert alert-warning mt-3">
+        <p class="alert-heading"><strong><?= $this->translator->get('common_blocks', 'sign_up', 'title') ?></strong></p>
+        <p><?= $this->translator->get('common_blocks', 'sign_up', 'text') ?></p>
 
-    <div class="mt-4">
-        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal_signup">
-            <?= $this->translator->get('block__sign_up', 'btn_sign_up') ?>
-        </a>
-        <a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#modal_login">
-            <?= $this->translator->get('block__sign_up', 'btn_log_in') ?>
-        </a>
+        <div class="mt-4">
+            <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal_signup">
+                <?= $this->translator->get('common_blocks', 'sign_up', 'btn_sign_up') ?>
+            </a>
+            <a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#modal_login">
+                <?= $this->translator->get('common_blocks', 'sign_up', 'btn_log_in') ?>
+            </a>
+        </div>
     </div>
-</div>
 <?php endif; ?>

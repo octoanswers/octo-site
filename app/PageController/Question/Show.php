@@ -97,7 +97,7 @@ class Show_Question_PageController extends Abstract_PageController
         $this->open_graph = $this->_get_open_graph();
 
         $this->share_link['title'] = $this->question->title;
-        $this->share_link['description'] = $this->translator->get('Wiki-answers to your questions on Answeropedia');
+        $this->share_link['description'] = $this->translator->get('question', 'share_link__description');
         $this->share_link['url'] = $this->question->get_URL($this->lang);
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
@@ -179,9 +179,9 @@ class Show_Question_PageController extends Abstract_PageController
 
     protected function _get_page_description()
     {
-        $pageDescription = str_replace('%question%', $this->question->title, $this->translator->get('Wiki-answer on question: %question%'));
+        $page_description = str_replace('%question%', $this->question->title, $this->translator->get('question', 'page_description'));
 
-        return $pageDescription;
+        return $page_description;
     }
 
     protected function _get_open_graph()

@@ -1,11 +1,10 @@
-
 <!-- modal_ask -->
 <div class="modal fade" id="modal_ask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= $this->translator->get('modal_ask', 'title') ?>
+                    <?= $this->translator->get('modal', 'ask', 'title') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -15,14 +14,14 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label class="small text-muted mb-3">
-                            <?= $this->translator->get('modal_ask', 'note') ?>.
+                            <?= $this->translator->get('modal', 'ask', 'note') ?>.
                         </label>
-                        <textarea class="form-control" id="question_title" rows="6" placeholder="<?= $this->translator->get('modal_ask', 'input_placeholder') ?>"></textarea>
+                        <textarea class="form-control" id="question_title" rows="6" placeholder="<?= $this->translator->get('modal', 'ask', 'input_placeholder') ?>"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="form__question_create__submit" class="btn btn-block btn-primary">
-                        <?= $this->translator->get('modal_ask', 'btn_ask') ?>
+                        <?= $this->translator->get('modal', 'ask', 'btn_ask') ?>
                     </button>
                 </div>
             </form>

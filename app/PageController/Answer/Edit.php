@@ -34,8 +34,8 @@ class Edit_Answer_PageController extends Abstract_PageController
 
         $this->template = 'answer_edit';
         $this->showFooter = false;
-        $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answer', 'edit_answer') . ' – ' . $this->translator->get('answeropedia');
-        $this->pageDescription = $this->translator->get('answer', 'edit_answer');
+        $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answer_edit', 'page_title') . ' – ' . $this->translator->get('answeropedia');
+        $this->pageDescription = $this->translator->get('answer_edit', 'page_title');
 
         $this->includeJS[] = 'answer/update.js?v=1';
         $this->includeCSS[] = 'https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css';

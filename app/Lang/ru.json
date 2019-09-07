@@ -10,9 +10,6 @@
 		"question_updated_answer": "обновлен ответ",
 		"renamed_question": "переименовал вопрос"
 	},
-	"answer": {
-		"edit_answer": "Править ответ"
-	},
 	"answer_edit": {
 		"block__how_to_edit": {
 			"item_1": "Не допускайте грамматические или орфографические ошибки",
@@ -22,6 +19,7 @@
 			"title": "Памятка автору"
 		},
 		"description_of_changes": "Описание изменений",
+		"page_title": "Править ответ",
 		"title": "Редактирование ответа"
 	},
 	"answer_history": {
@@ -31,17 +29,6 @@
 		"page_title": "История изменений ответа"
 	},
 	"answeropedia": "Answeropedia",
-	"block__about_answeropedia": {
-		"btn_action": "Присоединиться к сообществу",
-		"text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
-		"title": "Что такое Answeropedia?"
-	},
-	"block__sign_up": {
-		"btn_log_in": "Вход",
-		"btn_sign_up": "Регистрация",
-		"text": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
-		"title": "Регистрация"
-	},
 	"btn": {
 		"cancel": "Отмена",
 		"close": "Закрыть",
@@ -68,9 +55,33 @@
 		"title": "Категория",
 		"total_questions": "Всего вопросов"
 	},
-	"error__category_not_found": {
-		"page_title": "Категория не найдена: ",
-		"title": "Категория не найдена"
+	"common_blocks": {
+		"about_answeropedia": {
+			"btn_action": "Присоединиться к сообществу",
+			"text": "Answeropedia — это как Википедия, только для вопросов и ответов. Пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+			"title": "Что такое Answeropedia?"
+		},
+		"sign_up": {
+			"btn_log_in": "Вход",
+			"btn_sign_up": "Регистрация",
+			"text": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",
+			"title": "Регистрация"
+		}
+	},
+	"error_page": {
+		"category_not_found": {
+			"page_title": "Категория не найдена: ",
+			"title": "Категория не найдена"
+		},
+		"internal_server_error": {
+			"page_title": "Ошибка 500"
+		},
+		"question_not_found": {
+			"btn_ask": "Задать этот вопрос",
+			"btn_go_back": "Вернуться назад",
+			"page_title": "Вопрос не найден",
+			"title": "Вопрос не найден"
+		}
 	},
 	"feed": {
 		"answer_a_question": "Ответьте на вопрос",
@@ -114,12 +125,12 @@
 		}
 	},
 	"flow": {
-		"Flow": "Поток",
-		"Questions and answers flow on Answeropedia. ": " Поток вопросов и ответов на Answeropedia.",
 		"action": {
 			"user_rename_category": "Переименовал категорию",
-			"user_rename_category_before": "Ранее: "
+			"user_rename_category_before": "Ранее:"
 		},
+		"new_categories": "Новые категории",
+		"note": "Поток вопросов и ответов на Answeropedia.",
 		"page_title": "Поток"
 	},
 	"footer": {
@@ -135,10 +146,6 @@
 			"code_licensed": "Код под лицензией <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/blob/master/LICENSE\">MIT</a>, ответы <a class=\"text-dark\" href=\"https://github.com/answeropedia/dumps/blob/master/LICENSE\">CC BY SA 4.0</a>.",
 			"designed_and_built": "Сайт разработан с ♥ командой <a class=\"text-dark\" href=\"https://github.com/orgs/answeropedia/people\">Ансверопедии</a>, при поддержке <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/graphs/contributors\">контрибъюторов</a>."
 		}
-	},
-	"internal_server_error": {
-		"Error 500": "Ошибка 500",
-		"page_title": "Ошибка 500"
 	},
 	"main": {
 		"how_it_works": {
@@ -171,36 +178,32 @@
 		"slogan": "Задайте вопрос и получите один исчерпывающий ответ"
 	},
 	"modal": {
+		"ask": {
+			"btn_ask": "Задать вопрос",
+			"input_placeholder": "Какой у вас вопрос?",
+			"note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
+			"title": "Новый вопрос"
+		},
 		"category_rename": {
 			"btn_rename_category": "Переименовать категорию",
 			"leave_redirect": "Оставить перенаправление",
 			"note": "Перед тем как переименовывать категорию, пожалуйста ознакомьтесь с основными правилами переименования.",
 			"title": "Переименование категории"
+		},
+		"login": {
+			"btn_login": "Войти",
+			"email": "Электронная почта",
+			"password": "Пароль",
+			"title": "Вход"
+		},
+		"signup": {
+			"btn_signup": "Зарегистрироваться",
+			"email": "Электронная почта",
+			"note": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
+			"password": "Пароль",
+			"title": "Регистрация",
+			"username": "Логин"
 		}
-	},
-	"modal/question/upload_image": {
-		"Upload image": "Загрузить картинку",
-		"Upload question image": "Загрузка картинки вопроса"
-	},
-	"modal_ask": {
-		"btn_ask": "Задать вопрос",
-		"input_placeholder": "Какой у вас вопрос?",
-		"note": "Задавайте вопросы в форме понятной реальным людям — отвечать будут они, а не поисковые роботы.",
-		"title": "Новый вопрос"
-	},
-	"modal_login": {
-		"btn_login": "Войти",
-		"email": "Электронная почта",
-		"password": "Пароль",
-		"title": "Вход"
-	},
-	"modal_signup": {
-		"btn_signup": "Зарегистрироваться",
-		"email": "Электронная почта",
-		"note": "Регистрируясь на сайте, вы подтверждаете что ознакомленны с нашими правилами.",
-		"password": "Пароль",
-		"title": "Регистрация",
-		"username": "Логин"
 	},
 	"navbar": {
 		"about_answeropedia": "О&nbsp;проекте",
@@ -212,6 +215,14 @@
 		"sandbox": "Песочница",
 		"search_placeholder": "Поиск вопросов...",
 		"signup": "Регистрация"
+	},
+	"navbar_subnav": {
+		"feed": "Подписки",
+		"how_it_works": "Как это работает",
+		"popular_categories": "Категории",
+		"random_question": "Случайный вопрос",
+		"recent_changes": "Свежие правки",
+		"sandbox": "Песочница"
 	},
 	"other_languages": {
 		"all_languages": "Все языки",
@@ -225,9 +236,14 @@
 		"page_title": "Ошибка 404"
 	},
 	"question": {
-		"Wiki-answer on question: %question%": "Вики-ответ на вопрос: %question%",
-		"Wiki-answers to your questions on Answeropedia": "Вики-ответы на Ваши вопросы на answeropedia.org",
 		"actions": "Действия",
+		"actions_top": {
+			"edit_answer": "Править ответ",
+			"history": "История",
+			"rename_question": "Переименовать вопрос",
+			"talk": "Обсуждение",
+			"talk_tooltip": "Обсуждение ответа"
+		},
 		"add_picture": "Добавить картинку",
 		"answer_contributors": "Авторы ответа",
 		"answer_updated": "Ответ обновлен",
@@ -264,11 +280,13 @@
 			"msg": "Зарегистрируйтесь или войдите и вы сможете подписаться на этот вопрос.",
 			"signup": "Регистраци"
 		},
+		"page_description": "Вики-ответ на вопрос: %question%",
 		"redirected_from": "Перенаправлено с вопроса: ",
 		"rename_question": "Переименовать вопрос",
 		"report": "Пожаловаться",
 		"search_in_ddg": "Поискать в DuckDuckGo",
 		"share_link": "Поделиться ссылкой",
+		"share_link__description": "Вики-ответы на Ваши вопросы на answeropedia.org",
 		"short_answer_title": "Короткий ответ",
 		"subscription_title": "Подписка на вопрос",
 		"thanks_for_the_feedback": "Спасибо за отзыв!",
@@ -276,19 +294,6 @@
 		"update_picture": "Обновить картинку",
 		"user_contribution": "Вклад пользователя",
 		"your_email": "Ваш email"
-	},
-	"question__actions_top": {
-		"edit_answer": "Править ответ",
-		"history": "История",
-		"rename_question": "Переименовать вопрос",
-		"talk": "Обсуждение",
-		"talk_tooltip": "Обсуждение ответа"
-	},
-	"question_not_found": {
-		"btn_ask": "Задать этот вопрос",
-		"btn_go_back": "Вернуться назад",
-		"page_title": "Вопрос не найден",
-		"title": "Вопрос не найден"
 	},
 	"question_redirect": {
 		"redirect_to": " — перенаправлено на:"
@@ -334,6 +339,11 @@
 		"without_categories": "Без тем"
 	},
 	"search": {
+		"filters": {
+			"categories": "Категории",
+			"questions": "Вопросы",
+			"users": "Пользователи"
+		},
 		"no_categories_found": "категорий не найдено",
 		"no_category_found_for_query": "Не удалось найти категории по запросу «%query%»",
 		"no_questions_found": "Вопросов не найдено",
@@ -346,11 +356,6 @@
 		"page_title": "Поиск",
 		"view_all_categories": "Посмотреть все категории",
 		"view_all_questions": "Посмотреть все вопросы"
-	},
-	"search__filter": {
-		"categories": "Категории",
-		"questions": "Вопросы",
-		"users": "Пользователи"
 	},
 	"service_id": {
 		"about_answeropedia": "1",
@@ -369,14 +374,6 @@
 		"site_note": "Введите адрес вашего сайта или страницы в социальной сети.",
 		"site_title": "Сайт",
 		"title": "Настройки"
-	},
-	"sidebar__main_nav": {
-		"feed": "Подписки",
-		"how_it_works": "Как это работает",
-		"popular_categories": "Категории",
-		"random_question": "Случайный вопрос",
-		"recent_changes": "Свежие правки",
-		"sandbox": "Песочница"
 	},
 	"test_key": {
 		"subkey_as_array": {

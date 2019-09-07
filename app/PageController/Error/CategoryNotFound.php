@@ -20,8 +20,8 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
 
         $this->template = 'error/category_not_found';
         $this->showFooter = false;
-        $this->pageTitle = $this->translator->get('error__category_not_found', 'page_title') . $this->categoryTitle . ' – ' . $this->translator->get('answeropedia');
-        $this->pageDescription = $this->translator->get('error__category_not_found', 'page_title') . $this->categoryTitle;
+        $this->pageTitle = $this->translator->get('error_page', 'category_not_found', 'page_title') . $this->categoryTitle . ' – ' . $this->translator->get('answeropedia');
+        $this->pageDescription = $this->translator->get('error_page', 'category_not_found', 'page_title') . $this->categoryTitle;
 
         $this->categoryURI = $category_URI;
 

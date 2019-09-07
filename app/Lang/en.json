@@ -10,9 +10,6 @@
         "question_updated_answer": "updated answer",
         "renamed_question": "renamed the question"
     },
-    "answer": {
-        "edit_answer": "Edit answer"
-    },
     "answer_edit": {
         "block__how_to_edit": {
             "item_1": "Fix grammatical or spelling errors",
@@ -22,6 +19,7 @@
             "title": "How to Edit"
         },
         "description_of_changes": "Description of changes",
+        "page_title": "Edit answer",
         "title": "Edit answer"
     },
     "answer_history": {
@@ -31,17 +29,6 @@
         "page_title": "Answer history"
     },
     "answeropedia": "Answeropedia",
-    "block__about_answeropedia": {
-        "btn_action": "Join the community",
-        "text": "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.",
-        "title": "About Answeropedia"
-    },
-    "block__sign_up": {
-        "btn_log_in": "Log in",
-        "btn_sign_up": "Sign up",
-        "text": "Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.",
-        "title": "Sign up"
-    },
     "btn": {
         "cancel": "Cancel",
         "close": "Close",
@@ -69,9 +56,33 @@
         "title": "Category",
         "total_questions": "Total questions"
     },
-    "error__category_not_found": {
-        "page_title": "Category not found: ",
-        "title": "Category not found"
+    "common_blocks": {
+        "about_answeropedia": {
+            "btn_action": "Join the community",
+            "text": "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.",
+            "title": "About Answeropedia"
+        },
+        "sign_up": {
+            "btn_log_in": "Log in",
+            "btn_sign_up": "Sign up",
+            "text": "Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.",
+            "title": "Sign up"
+        }
+    },
+    "error_page": {
+        "category_not_found": {
+            "page_title": "Category not found: ",
+            "title": "Category not found"
+        },
+        "internal_server_error": {
+            "page_title": "Error 500"
+        },
+        "question_not_found": {
+            "btn_ask": "Ask this question",
+            "btn_go_back": "Go back",
+            "page_title": "Question not found",
+            "title": "Question not found"
+        }
     },
     "feed": {
         "answer_a_question": "Answer a question",
@@ -115,6 +126,12 @@
         }
     },
     "flow": {
+        "action": {
+            "user_rename_category": "user rename category",
+            "user_rename_category_before": "Before:"
+        },
+        "new_categories": "New categories",
+        "note": "Questions and answers flow on Answeropedia.",
         "page_title": "Flow"
     },
     "footer": {
@@ -130,9 +147,6 @@
             "code_licensed": "Code licensed <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/blob/master/LICENSE\">MIT</a>, answers <a class=\"text-dark\" href=\"https://github.com/answeropedia/dumps/blob/master/LICENSE\">CC BY SA 4.0</a>.",
             "designed_and_built": "Designed and built with ♥ by the <a class=\"text-dark\" href=\"https://github.com/orgs/answeropedia/people\">Answeropedia team</a> with the help of <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/graphs/contributors\">our contributors</a>."
         }
-    },
-    "internal_server_error": {
-        "page_title": "Error 500"
     },
     "main": {
         "how_it_works": {
@@ -165,29 +179,32 @@
         "slogan": "Ask a question and get one complete answer"
     },
     "modal": {
+        "ask": {
+            "btn_ask": "Ask a question",
+            "input_placeholder": "What is your question?",
+            "note": "Ask questions in a form understandable to real people - they will answer, not search robots.",
+            "title": "New question"
+        },
+        "category_rename": {
+            "btn_rename_category": "Rename category",
+            "leave_redirect": "Leave redirect",
+            "note": "Before renaming a category, please review the basic rules for renaming.",
+            "title": "Rename category"
+        },
         "login": {
+            "btn_login": "Log in",
+            "email": "Email",
+            "password": "Password",
             "title": "Login"
+        },
+        "signup": {
+            "btn_signup": "Signup",
+            "email": "Email",
+            "note": "By signing up, you agree to our terms of use, privacy policy, and cookie policy.",
+            "password": "Password",
+            "title": "Sign up",
+            "username": "Username"
         }
-    },
-    "modal_ask": {
-        "btn_ask": "Ask a question",
-        "input_placeholder": "What is your question?",
-        "note": "Ask questions in a form understandable to real people - they will answer, not search robots.",
-        "title": "New question"
-    },
-    "modal_login": {
-        "btn_login": "Log in",
-        "email": "Email",
-        "password": "Password",
-        "title": "Login"
-    },
-    "modal_signup": {
-        "btn_signup": "Signup",
-        "email": "Email",
-        "note": "By signing up, you agree to our terms of use, privacy policy, and cookie policy.",
-        "password": "Password",
-        "title": "Sign up",
-        "username": "Username"
     },
     "navbar": {
         "about_answeropedia": "About&nbsp;project",
@@ -201,6 +218,14 @@
         "search_placeholder": "Search questions…",
         "signup": "Sign up"
     },
+    "navbar_subnav": {
+        "feed": "Feed",
+        "how_it_works": "How it works",
+        "popular_categories": "Categories",
+        "random_question": "Random question",
+        "recent_changes": "Recent changes",
+        "sandbox": "Sandbox"
+    },
     "other_languages": {
         "all_languages": "All languages",
         "english": "English",
@@ -210,6 +235,13 @@
     "page": "Page",
     "question": {
         "actions": "Actions",
+        "actions_top": {
+            "edit_answer": "Edit answer",
+            "history": "History",
+            "rename_question": "Rename question",
+            "talk": "Talk",
+            "talk_tooltip": "Discussion about the answer"
+        },
         "add_picture": "Add picture",
         "answer_contributors": "Answer contributors",
         "answer_updated": "Answer updated",
@@ -250,28 +282,17 @@
             "msg": "Register or sign in and you can subscribe to this question.",
             "signup": "Sign up"
         },
+        "page_description": "Wiki-answer on question: %question%",
         "rename_question": "Rename question",
         "report": "Report",
         "search_in_ddg": "Search in DuckDuckGo",
         "share_link": "Share link",
+        "share_link__description": "Wiki-answers to your questions on Answeropedia",
         "subscription_title": "Subscription to the question",
         "thanks_for_the_feedback": "Thanks for the feedback!",
         "top_contributors": "Top contributors",
         "update_picture": "Update picture",
         "your_email": "Your email"
-    },
-    "question__actions_top": {
-        "edit_answer": "Edit answer",
-        "history": "History",
-        "rename_question": "Rename question",
-        "talk": "Talk",
-        "talk_tooltip": "Discussion about the answer"
-    },
-    "question_not_found": {
-        "btn_ask": "Ask this question",
-        "btn_go_back": "Go back",
-        "page_title": "Question not found",
-        "title": "Question not found"
     },
     "questions": {
         "btn_add_categories": "Add categories",
@@ -302,6 +323,11 @@
         "without_categories": "Without categories"
     },
     "search": {
+        "filters": {
+            "categories": "Categories",
+            "questions": "Questions",
+            "users": "Users"
+        },
         "no_categories_found": "No categories found",
         "no_category_found_for_query": "No category found for \"%query%\"",
         "no_questions_found": "No questions found",
@@ -332,14 +358,6 @@
         "site_note": "Enter the address of your website or page on the social network.",
         "site_title": "Site",
         "title": "Settings"
-    },
-    "sidebar__main_nav": {
-        "feed": "Feed",
-        "how_it_works": "How it works",
-        "popular_categories": "Categories",
-        "random_question": "Random question",
-        "recent_changes": "Recent changes",
-        "sandbox": "Sandbox"
     },
     "user": {
         "answers_on_answeropedia": "Wiki-answers on Answeropedia",
