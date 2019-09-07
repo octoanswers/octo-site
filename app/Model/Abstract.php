@@ -6,11 +6,11 @@ abstract class Abstract_Model
 
     public function __set($var, $val)
     {
-        trigger_error("Property \"$var\" doesn't exists and cannot be set.", E_USER_ERROR);
+        throw new Exception("Property \"$var\" doesn't exists and cannot be set.", 0);
     }
 
     public function __get($var)
     {
-        trigger_error("Property \"$var\" doesn't exists and cannot be get.", E_USER_ERROR);
+        throw new Exception("Property \"$var\" doesn't exists and cannot be get.", 0);
     }
 }

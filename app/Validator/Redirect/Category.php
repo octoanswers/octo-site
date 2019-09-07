@@ -14,8 +14,8 @@ class Category_Redirect_Validator
 
     public static function validate(Category_Redirect_Model $redirect)
     {
-        self::validateFromID($redirect->fromID);
-        self::validateToTitle($redirect->toTitle);
+        self::validateFromID($redirect->from_ID);
+        self::validateToTitle($redirect->to_title);
 
         return true;
     }
@@ -24,19 +24,19 @@ class Category_Redirect_Validator
     // Property validators
     //
 
-    public static function validateFromID($fromID)
+    public static function validateFromID($from_ID)
     {
         try {
-            v::intType()->min(1, true)->assert($fromID);
+            v::intType()->min(1, true)->assert($from_ID);
         } catch (NestedValidationException $exception) {
             throw new Exception('Category_Redirect_Model property "fromID" ' . $exception->getMessages()[0], 0);
         }
     }
 
-    public static function validateToTitle($title)
+    public static function validateToTitle($to_title)
     {
         try {
-            v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, null)->assert($title);
+            v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, null)->assert($to_title);
         } catch (NestedValidationException $exception) {
             throw new Exception('Category_Redirect_Model property "to_title" ' . $exception->getMessages()[0], 0);
         }

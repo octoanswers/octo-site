@@ -1,6 +1,6 @@
 <?php
 
-class Model_Redirect__init_with_DB_stateTest extends PHPUnit\Framework\TestCase
+class Model_Redirect_Question__init_with_DB_stateTest extends PHPUnit\Framework\TestCase
 {
     public function test__Base_params()
     {

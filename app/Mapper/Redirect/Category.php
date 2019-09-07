@@ -8,8 +8,8 @@ class Category_Redirect_Mapper extends Abstract_Mapper
 
         $sql = 'INSERT INTO redirects_categories (rd_from, rd_title) VALUES (:rd_from, :rd_title)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':rd_from', $redirect->fromID, PDO::PARAM_INT);
-        $stmt->bindParam(':rd_title', $redirect->toTitle, PDO::PARAM_STR);
+        $stmt->bindParam(':rd_from', $redirect->from_ID, PDO::PARAM_INT);
+        $stmt->bindParam(':rd_title', $redirect->to_title, PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
 

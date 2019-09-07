@@ -35,8 +35,8 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
 
                     // create redirect record
                     $this->redirect = new Category_Redirect_Model();
-                    $this->redirect->fromID = $old_category->id;
-                    $this->redirect->toTitle = $category->title;
+                    $this->redirect->from_ID = $old_category->id;
+                    $this->redirect->to_title = $category->title;
                     $this->redirect = (new Category_Redirect_Mapper($this->lang))->create($this->redirect);
                 }
             }
@@ -82,8 +82,8 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
 
             if (isset($this->redirect)) {
                 $output['redirect'] = [
-                    'from_id'  => $this->redirect->fromID,
-                    'to_title' => $this->redirect->toTitle,
+                    'from_id'  => $this->redirect->from_ID,
+                    'to_title' => $this->redirect->to_title,
                 ];
             }
         } catch (Throwable $e) {
