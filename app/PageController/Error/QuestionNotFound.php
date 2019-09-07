@@ -13,7 +13,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
 
         $question_URI = $args['question_uri'];
 
-        $this->questionTitle = $this->_titleFromURI($question_URI);
+        $this->questionTitle = Title_Helper::title_from_question_URI($question_URI);
 
         $question = new Question_Model();
         $question->title = $this->questionTitle;
@@ -30,16 +30,5 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
         $response->getBody()->write($output);
 
         return $response->withStatus(404);
-    }
-
-    private function _titleFromURI(string $uri): string
-    {
-        $uri = str_replace('__', 'DOUBLEUNDERLINE', $uri);
-        $uri = str_replace('_', ' ', $uri);
-        $uri = str_replace('DOUBLEUNDERLINE', '_', $uri);
-
-        $title = $uri . '?';
-
-        return $title;
     }
 }
