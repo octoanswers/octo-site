@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= $this->translator->get('question', 'rename_question') ?>
+                    <?= $this->translator->get('modal', 'question_rename', 'title') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -13,20 +13,25 @@
             <form id="form__rename_question" data-question-id="<?= $this->question->id ?>">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>
-                            <?= $this->translator->get('Before you rename a question, please read the basic rules for renaming') ?></label>
-                        <textarea class="form-control" id="new_title" rows="6"><?= $this->question->title ?></textarea>
+                        <label class="semi-small text-secondary mb-3">
+                            <?= $this->translator->get('modal', 'question_rename', 'note') ?>
+                        </label>
+                        <input id="new_title" class="form-control" type="text" value="<?= $this->question->title ?>">
+
+
                     </div>
                     <div class="form-check">
                         <label class="form-check-label mt-1">
                             <input id="save_redirect" type="checkbox" class="form-check-input" checked>
-                            <?= $this->translator->get('Leave redirect') ?>
+                            <span class="semi-small text-secondary">
+                                <?= $this->translator->get('modal', 'question_rename', 'leave_redirect') ?>
+                            </span>
                         </label>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="form__rename_question__submit" class="btn btn-primary">
-                        <?= $this->translator->get('question', 'rename_question') ?>
+                        <?= $this->translator->get('modal', 'question_rename', 'btn_action') ?>
                     </button>
                 </div>
             </form>

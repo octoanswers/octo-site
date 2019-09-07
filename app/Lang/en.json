@@ -179,6 +179,12 @@
         "slogan": "Ask a question and get one complete answer"
     },
     "modal": {
+        "question_rename": {
+            "title": "Rename question",
+            "note": "Before you rename a question, please read the basic rules for renaming",
+            "leave_redirect": "Leave redirect",
+            "btn_action": "Rename question"
+        },
         "ask": {
             "btn_ask": "Ask a question",
             "input_placeholder": "What is your question?",

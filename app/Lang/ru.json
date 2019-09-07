@@ -196,6 +196,12 @@
 			"password": "Пароль",
 			"title": "Вход"
 		},
+		"question_rename": {
+			"title": "Переименовать вопрос",
+			"note": "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными правилами переименования",
+			"leave_redirect": "Оставить редирект",
+			"btn_action": "Переименовать "
+		},
 		"signup": {
 			"btn_signup": "Зарегистрироваться",
 			"email": "Электронная почта",
@@ -297,10 +303,6 @@
 	},
 	"question_redirect": {
 		"redirect_to": " — перенаправлено на:"
-	},
-	"question_rename": {
-		"Before you rename a question, please read the basic rules for renaming": "Перед тем как переименовывать какой-либо вопрос, пожалуйста ознакомьтесь с основными правилами переименования",
-		"Leave redirect": "Оставить редирект"
 	},
 	"question_update_categories": {
 		"btn_update_categories": "Обновить категории",
