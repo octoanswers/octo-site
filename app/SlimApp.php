@@ -1,6 +1,6 @@
 <?php
 
-class AWApp
+class SlimApp
 {
     /**
      * Stores an instance of the Slim application.
@@ -115,7 +115,7 @@ class AWApp
      *
      * @return \Slim\App
      */
-    public function getApp()
+    public function get_app()
     {
         return $this->app;
     }

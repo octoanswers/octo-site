@@ -8,7 +8,7 @@ abstract class Abstract_Frontend_TestCase extends Abstract_DB_TestCase
     {
         parent::setUp();
 
-        $this->app = (new AWApp())->getApp();
+        $this->app = (new SlimApp())->get_app();
     }
 
     protected function tearDown(): void

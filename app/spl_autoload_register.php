@@ -6,7 +6,7 @@
 spl_autoload_register(function ($class_name) {
     $class_map = [
 
-        'AWApp' => 'app/AWApp.php',
+        'SlimApp' => 'app/SlimApp.php',
 
         // Helpers
 
