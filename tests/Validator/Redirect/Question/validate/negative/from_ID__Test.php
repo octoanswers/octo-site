@@ -1,6 +1,6 @@
 <?php
 
-class Redirect_Validator__validate__negative__from_IDTest extends PHPUnit\Framework\TestCase
+class Validator_Redirect_Question__validate__negative__from_IDTest extends PHPUnit\Framework\TestCase
 {
     public function test__FromID_equal_zero()
     {

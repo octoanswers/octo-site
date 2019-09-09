@@ -1,6 +1,6 @@
 <?php
 
-class Redirect_Validator__validate__negative__to_titleTest extends PHPUnit\Framework\TestCase
+class Validator_Redirect_Question__validate__negative__to_titleTest extends PHPUnit\Framework\TestCase
 {
     public function test__Title_not_set()
     {
