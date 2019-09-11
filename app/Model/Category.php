@@ -2,8 +2,8 @@
 
 class Category_Model extends Abstract_Model
 {
-    use Category_Model_Trait;
-    use Category_URL_Trait;
+    use Init_Category_Model_Trait;
+    use URL_Category_Model_Trait;
 
     public $id; // int
     public $title; // string

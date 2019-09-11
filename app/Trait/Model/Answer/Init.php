@@ -1,6 +1,6 @@
 <?php
 
-trait Answer_Model_Trait
+trait Init_Answer_Model_Trait
 {
     public static function init_with_DB_state(array $state): self
     {

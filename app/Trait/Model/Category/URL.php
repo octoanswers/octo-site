@@ -1,6 +1,6 @@
 <?php
 
-trait Category_URL_Trait
+trait URL_Category_Model_Trait
 {
     public function get_URL(string $lang): string
     {

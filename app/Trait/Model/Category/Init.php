@@ -1,6 +1,6 @@
 <?php
 
-trait Category_Model_Trait
+trait Init_Category_Model_Trait
 {
     public static function init_with_title(string $title): self
     {

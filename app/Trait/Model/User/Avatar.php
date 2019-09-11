@@ -1,6 +1,6 @@
 <?php
 
-trait User_URL_Trait
+trait Avatar_User_Model_Trait
 {
     public function get_URL(string $lang): string
     {
