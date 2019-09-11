@@ -16,18 +16,6 @@ trait URL_Question_Model_Trait
         return SITE_URL . '/' . $lang . '/' . $this->id;
     }
 
-    // Image URLs
-
-    public function get_image_URL_large(string $lang): string
-    {
-        return SITE_URL . '/uploads/img/' . $lang . '/' . $this->id . '/' . $this->imageBaseName . '_lg.jpg';
-    }
-
-    public function get_image_URL_medium(string $lang): string
-    {
-        return SITE_URL . '/uploads/img/' . $lang . '/' . $this->id . '/' . $this->imageBaseName . '_md.jpg';
-    }
-
     // Some actions
 
     public function get_update_categories_URL(string $lang): string
