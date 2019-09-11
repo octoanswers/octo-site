@@ -1,6 +1,6 @@
 <?php
 
-trait Question_Trait
+trait Humanize_Question_Model_Trait
 {
     public function get_minutes_to_read(): int
     {

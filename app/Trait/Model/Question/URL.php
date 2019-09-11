@@ -1,6 +1,6 @@
 <?php
 
-trait Question_URL_Trait
+trait URL_Question_Model_Trait
 {
     public function get_URL(string $lang): string
     {

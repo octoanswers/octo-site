@@ -2,22 +2,9 @@
 
 class Answer_Model extends Abstract_Model
 {
+    use Answer_Model_Trait;
+
     public $id; // int
     public $text; // string
     public $updatedAt; // string
-
-    //
-    // Init methods
-    //
-
-    public static function init_with_DB_state(array $state): self
-    {
-        $answer = new self();
-
-        $answer->id = (int) $state['q_id'];
-        $answer->text = $state['a_text'];
-        $answer->updatedAt = $state['a_updated_at'];
-
-        return $answer;
-    }
 }

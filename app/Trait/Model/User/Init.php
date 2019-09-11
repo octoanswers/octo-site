@@ -1,25 +1,7 @@
 <?php
 
-class User_Model extends Abstract_Model
+trait Init_User_Model_Trait
 {
-    use Init_User_Model_Trait;
-    use User_URL_Trait;
-
-    public $id; // int
-    public $username; // string
-    public $name; // string
-    public $email; // string
-    public $signature; // string
-    public $site; // string
-    public $passwordHash; // string
-    public $apiKey; // string
-    public $is_avatar_uploaded = false; // bool
-    public $createdAt;
-
-    //
-    // Init methods
-    //
-
     public static function init_with_DB_state(array $state): self
     {
         $user = new self();
