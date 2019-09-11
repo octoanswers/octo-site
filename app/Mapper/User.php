@@ -48,7 +48,7 @@ class User_Mapper extends Abstract_Mapper
     {
         User_Validator::validate_exists($user);
 
-        $sql = 'UPDATE users SET u_username=:u_username, u_name=:u_name, u_email=:u_email, u_signature=:u_signature, u_site=:u_site, u_password_hash=:u_password_hash, u_api_key=:u_api_key WHERE u_id=:u_id';
+        $sql = 'UPDATE users SET u_username=:u_username, u_name=:u_name, u_email=:u_email, u_signature=:u_signature, u_site=:u_site, u_password_hash=:u_password_hash, u_api_key=:u_api_key, is_avatar_uploaded=:is_avatar_uploaded WHERE u_id=:u_id';
         $stmt = $this->pdo->prepare($sql);
 
         $stmt->bindParam(':u_id', $user->id, PDO::PARAM_INT);
@@ -59,6 +59,7 @@ class User_Mapper extends Abstract_Mapper
         $stmt->bindParam(':u_site', $user->site, PDO::PARAM_STR);
         $stmt->bindParam(':u_password_hash', $user->passwordHash, PDO::PARAM_STR);
         $stmt->bindParam(':u_api_key', $user->apiKey, PDO::PARAM_STR);
+        $stmt->bindParam(':is_avatar_uploaded', $user->is_avatar_uploaded, PDO::PARAM_INT);
 
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();

@@ -20,6 +20,7 @@ class CookieStorage
                     'u_signature'  => isset($_COOKIE['u_signature']) ? $_COOKIE['u_signature'] : null,
                     'u_site'       => isset($_COOKIE['u_site']) ? $_COOKIE['u_site'] : null,
                     'u_api_key'    => $_COOKIE['u_api_key'],
+                    'is_avatar_uploaded'    => $_COOKIE['is_avatar_uploaded'],
                     'u_created_at' => $_COOKIE['u_created_at'],
                 ]);
                 if (!User_Validator::validateAuthUser(static::$authUser)) {
@@ -51,6 +52,7 @@ class CookieStorage
         if ($user->site) {
             @setcookie('u_site', $user->site, $expire_time, '/');
         }
+        @setcookie('is_avatar_uploaded', $user->is_avatar_uploaded, $expire_time, '/');
         @setcookie('u_created_at', $user->createdAt, $expire_time, '/');
         if ($user->apiKey) {
             @setcookie('u_api_key', $user->apiKey, $expire_time, '/');
@@ -74,6 +76,7 @@ class CookieStorage
         @setcookie('u_signature', '', $time_in_past, '/');
         @setcookie('u_site', '', $time_in_past, '/');
         @setcookie('u_created_at', '', $time_in_past, '/');
+        @setcookie('is_avatar_uploaded', '', $time_in_past, '/');
         @setcookie('api_key', '', $time_in_past, '/');
 
         unset($_COOKIE['u_id']);
@@ -83,6 +86,7 @@ class CookieStorage
         unset($_COOKIE['u_signature']);
         unset($_COOKIE['u_site']);
         unset($_COOKIE['u_created_at']);
+        unset($_COOKIE['is_avatar_uploaded']);
         unset($_COOKIE['u_api_key']);
 
         static::$authUser = null;

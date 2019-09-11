@@ -14,6 +14,7 @@ trait Init_User_Model_Trait
         $user->site = isset($state['u_site']) ? $state['u_site'] : null;
         $user->passwordHash = isset($state['u_password_hash']) ? $state['u_password_hash'] : null;
         $user->apiKey = isset($state['u_api_key']) ? $state['u_api_key'] : null;
+        $user->is_avatar_uploaded = isset($state['is_avatar_uploaded']) ? (bool) $state['is_avatar_uploaded'] : false;
         $user->createdAt = $state['u_created_at'];
 
         return $user;

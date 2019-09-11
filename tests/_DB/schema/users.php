@@ -10,6 +10,7 @@ $pdo->exec(
         `u_site` varchar(255) DEFAULT NULL,
         `u_password_hash` text NOT NULL,
         `u_api_key` varchar(32) NOT NULL,
+        `is_avatar_uploaded` tinyint(1) NOT NULL DEFAULT "0",
         `u_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
         PRIMARY KEY (`u_id`)
     ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;'
