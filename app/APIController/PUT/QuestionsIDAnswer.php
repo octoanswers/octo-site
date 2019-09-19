@@ -31,7 +31,7 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             $old_answer_text = $answer->text;
 
-            $granularity = new \cogpowered\FineDiff\Granularity\Word;
+            $granularity = new \cogpowered\FineDiff\Granularity\Word();
             $fineDiff = new \cogpowered\FineDiff\Diff($granularity);
 
             $opcodes = (string) $fineDiff->getOpcodes($old_answer_text, $new_answer_text);
