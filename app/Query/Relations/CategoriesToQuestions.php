@@ -26,7 +26,7 @@ class CategoriesToQuestions_Relations_Query extends Abstract_Query
 
         $ERs = [];
         foreach ($rows as $row) {
-            $ERs[] = CategoriesToQuestions_Relation_Model::init_with_DB_state($row);
+            $ERs[] = \Model\Relation\CategoriesToQuestions::init_with_DB_state($row);
         }
 
         return $ERs;
@@ -51,7 +51,7 @@ class CategoriesToQuestions_Relations_Query extends Abstract_Query
             return;
         }
 
-        return CategoriesToQuestions_Relation_Model::init_with_DB_state($row);
+        return \Model\Relation\CategoriesToQuestions::init_with_DB_state($row);
     }
 
     public function find_by_category_title_and_question_ID(string $category_title, int $question_id)

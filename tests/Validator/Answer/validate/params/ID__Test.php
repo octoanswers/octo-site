@@ -4,7 +4,7 @@ class Validator_Answer__validate__params__IDTest extends PHPUnit\Framework\TestC
 {
     public function test__ID_equal_zero()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 0;
         $answer->text = 'Answer written at 08:04';
         $answer->updatedAt = '2016-03-19 06:47:41';
@@ -15,7 +15,7 @@ class Validator_Answer__validate__params__IDTest extends PHPUnit\Framework\TestC
 
     public function test__ID_below_zero()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = -1;
         $answer->text = 'Answer written at 08:04';
         $answer->updatedAt = '2016-03-19 06:47:41';

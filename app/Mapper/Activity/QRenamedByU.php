@@ -2,15 +2,15 @@
 
 class QRenamedByU_Activity_Mapper extends Abstract_Mapper
 {
-    public function create(Activity_Model $activity): Activity_Model
+    public function create(\Model\Activity $activity): \Model\Activity
     {
         $activity_type = $activity->type;
-        if ($activity_type != Activity_Model::Q_RENAMED_BY_U) {
+        if ($activity_type != \Model\Activity::Q_RENAMED_BY_U) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);
         }
 
         $question = $activity->subject;
-        if (!is_a($question, Question_Model::class)) {
+        if (!is_a($question, \Model\Question::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
         }
 
@@ -18,7 +18,7 @@ class QRenamedByU_Activity_Mapper extends Abstract_Mapper
             throw new Exception('Incorrect data param', 1);
         }
         $user = $activity->data['user'];
-        if (!is_a($user, User_Model::class)) {
+        if (!is_a($user, \Model\User::class)) {
             throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
         $old_title = $activity->data['old_title'];

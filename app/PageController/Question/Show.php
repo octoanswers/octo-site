@@ -36,7 +36,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         if ($this->question->isRedirect) {
             $redirect = (new Question_Redirects_Query($this->lang))->redirect_for_question_with_ID($this->question->id);
-            $this->questionRedirect = Question_Model::init_with_title($redirect->toTitle);
+            $this->questionRedirect = \Model\Question::init_with_title($redirect->toTitle);
 
             $need_stop_redirect = $request->getParam('no_redirect');
             if (!$need_stop_redirect) {
@@ -61,7 +61,7 @@ class Show_Question_PageController extends Abstract_PageController
         }
 
         if (isset($this->question->answer) && strlen($this->question->answer->text)) {
-            $parsedown = new ExtendedParsedown($this->lang);
+            $parsedown = new \Helper\ExtendedParsedown($this->lang);
             $this->formattedAnswerText = $parsedown->text($this->question->answer->text);
         }
 

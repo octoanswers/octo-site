@@ -6,7 +6,7 @@ class Mapper_Revisions__save__negative__comment__Test extends TestCase
 {
     public function testCommentNotString()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 19:33';
@@ -18,7 +18,7 @@ class Mapper_Revisions__save__negative__comment__Test extends TestCase
 
     public function testCommentIsEmpty()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 19:33';
@@ -30,7 +30,7 @@ class Mapper_Revisions__save__negative__comment__Test extends TestCase
 
     public function testCommentTooShort()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 19:33';

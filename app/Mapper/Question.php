@@ -2,7 +2,7 @@
 
 class Question_Mapper extends Abstract_Mapper
 {
-    public function create(Question_Model $question): Question_Model
+    public function create(\Model\Question $question): \Model\Question
     {
         Question_Validator::validate_new($question);
 
@@ -25,7 +25,7 @@ class Question_Mapper extends Abstract_Mapper
         return $question;
     }
 
-    public function update(Question_Model $question): Question_Model
+    public function update(\Model\Question $question): \Model\Question
     {
         Question_Validator::validate_exists($question);
 
@@ -48,7 +48,7 @@ class Question_Mapper extends Abstract_Mapper
         return $question;
     }
 
-    public function updateCategoriesCount(Question_Model $question): Question_Model
+    public function updateCategoriesCount(\Model\Question $question): \Model\Question
     {
         if ($question->categoriesCount == null) {
             $question->categoriesCount = 0;

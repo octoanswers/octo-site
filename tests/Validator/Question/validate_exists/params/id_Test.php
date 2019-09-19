@@ -4,7 +4,7 @@ class Validator_Question__validate_exists__params__IDTest extends PHPUnit\Framew
 {
     public function test__ID_equal_zero()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 0;
         $question->title = 'How iPhone 8 are charged?';
         $question->isRedirect = true;
@@ -15,7 +15,7 @@ class Validator_Question__validate_exists__params__IDTest extends PHPUnit\Framew
 
     public function test__ID_below_zero()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = -1;
         $question->title = 'How iPhone 8 are charged?';
         $question->isRedirect = true;

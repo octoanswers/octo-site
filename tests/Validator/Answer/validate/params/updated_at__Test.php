@@ -4,7 +4,7 @@ class Validator_Answer__validate__params__updated_atTest extends PHPUnit\Framewo
 {
     public function test__UpdatedAt_not_set()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 4;
         $answer->text = 'Answer written at 08:04';
 
@@ -13,7 +13,7 @@ class Validator_Answer__validate__params__updated_atTest extends PHPUnit\Framewo
 
     public function test_UpdatedAt_is_empty()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 4;
         $answer->text = 'Answer written at 08:04';
         $answer->updatedAt = '';

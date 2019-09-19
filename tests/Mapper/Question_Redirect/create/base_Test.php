@@ -6,7 +6,7 @@ class Question_Mapper_Redirect__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $redirect = new Question_Redirect_Model();
+        $redirect = new \Model\Redirect\Question();
         $redirect->fromID = 12;
         $redirect->toTitle = 'How iPhone 8 are charged?';
 

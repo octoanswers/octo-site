@@ -4,7 +4,7 @@ class Trait_Model_Redirect_Question__init_with_DB_stateTest extends PHPUnit\Fram
 {
     public function test__Base_params()
     {
-        $redirect = Question_Redirect_Model::init_with_DB_state([
+        $redirect = \Model\Redirect\Question::init_with_DB_state([
             'rd_from'  => 13,
             'rd_title' => 'This is question?',
         ]);

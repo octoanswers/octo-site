@@ -4,7 +4,7 @@ class Validator_Redirect_Category__validateTest extends PHPUnit\Framework\TestCa
 {
     public function test__Validate_exists_category_with_full_params()
     {
-        $redirect = new Category_Redirect_Model();
+        $redirect = new \Model\Redirect\Category();
         $redirect->from_ID = 12;
         $redirect->to_title = 'iPhone 8';
 

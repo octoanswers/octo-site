@@ -4,7 +4,7 @@ class Validator_Question__validate_new__params__titleTest extends PHPUnit\Framew
 {
     public function test__Title_not_set()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param null must be a string');
@@ -13,7 +13,7 @@ class Validator_Question__validate_new__params__titleTest extends PHPUnit\Framew
 
     public function test__Title_is_empty()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->title = '';
         $question->isRedirect = true;
 
@@ -23,7 +23,7 @@ class Validator_Question__validate_new__params__titleTest extends PHPUnit\Framew
 
     public function test__Comment_too_short()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->title = 'x';
         $question->isRedirect = true;
 
@@ -33,7 +33,7 @@ class Validator_Question__validate_new__params__titleTest extends PHPUnit\Framew
 
     public function test__Comment_too_long()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->title = 'Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42.';
         $question->isRedirect = true;
 

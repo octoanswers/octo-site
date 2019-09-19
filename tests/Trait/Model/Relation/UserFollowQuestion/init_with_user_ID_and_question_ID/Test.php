@@ -4,7 +4,7 @@ class Trait_Model_Relation_UserFollowQuestion__init_with_user_ID_and_question_ID
 {
     public function test__BaseParams()
     {
-        $rel = UserFollowQuestion_Relation_Model::init_with_user_ID_and_question_ID(3, 9);
+        $rel = \Model\Relation\UserFollowQuestion::init_with_user_ID_and_question_ID(3, 9);
 
         $this->assertEquals(null, $rel->id);
         $this->assertEquals(3, $rel->userID);

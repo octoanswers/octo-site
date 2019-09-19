@@ -14,7 +14,7 @@ class User_Query
         $this->pdo = null;
     }
 
-    public function user_with_API_key(string $apiKey): User_Model
+    public function user_with_API_key(string $apiKey): \Model\User
     {
         User_Validator::validateAPIKey($apiKey);
 
@@ -32,10 +32,10 @@ class User_Query
         //unset($row['u_password_hash']);
         //unset($row['u_api_key']);
 
-        return User_Model::init_with_DB_state($row);
+        return \Model\User::init_with_DB_state($row);
     }
 
-    public function user_with_ID(int $userID): User_Model
+    public function user_with_ID(int $userID): \Model\User
     {
         User_Validator::validateID($userID);
 
@@ -53,7 +53,7 @@ class User_Query
         unset($row['u_password_hash']);
         unset($row['u_api_key']);
 
-        return User_Model::init_with_DB_state($row);
+        return \Model\User::init_with_DB_state($row);
     }
 
     public function user_with_username(string $username)
@@ -74,7 +74,7 @@ class User_Query
         unset($row['u_password_hash']);
         unset($row['u_api_key']);
 
-        return User_Model::init_with_DB_state($row);
+        return \Model\User::init_with_DB_state($row);
     }
 
     public function user_with_email(string $email)
@@ -92,6 +92,6 @@ class User_Query
             return;
         }
 
-        return User_Model::init_with_DB_state($row);
+        return \Model\User::init_with_DB_state($row);
     }
 }

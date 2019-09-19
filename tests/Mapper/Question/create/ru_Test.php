@@ -6,7 +6,7 @@ class Mapper_Question__create__ru__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->title = 'This is question?';
         $question->isRedirect = true;
         $question->imageBaseName = '4_2013_05_09_123';
@@ -21,7 +21,7 @@ class Mapper_Question__create__ru__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithMinParams_Ok()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->title = 'Ready to work?';
 
         $question = (new Question_Mapper('ru'))->create($question);

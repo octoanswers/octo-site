@@ -4,7 +4,7 @@ class Validator_User__validate_existsTest extends PHPUnit\Framework\TestCase
 {
     public function test__Validate_with_full_params()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
@@ -20,7 +20,7 @@ class Validator_User__validate_existsTest extends PHPUnit\Framework\TestCase
 
     public function test__Validate_with_min_params()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';

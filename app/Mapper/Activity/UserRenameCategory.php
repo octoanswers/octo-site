@@ -2,15 +2,15 @@
 
 class UserRenameCategory_Activity_Mapper extends Abstract_Mapper
 {
-    public function create(Activity_Model $activity): Activity_Model
+    public function create(\Model\Activity $activity): \Model\Activity
     {
         $activity_type = $activity->type;
-        if ($activity_type != Activity_Model::USER_RENAME_CATEGORY) {
+        if ($activity_type != \Model\Activity::USER_RENAME_CATEGORY) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);
         }
 
         $user = $activity->subject;
-        if (!is_a($user, User_Model::class)) {
+        if (!is_a($user, \Model\User::class)) {
             throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
 
@@ -19,7 +19,7 @@ class UserRenameCategory_Activity_Mapper extends Abstract_Mapper
         }
         $category = $activity->data['category'];
         $old_title = $activity->data['old_title'];
-        if (!is_a($category, Category_Model::class)) {
+        if (!is_a($category, \Model\Category::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($category), 0);
         }
         if (!is_string($old_title)) {

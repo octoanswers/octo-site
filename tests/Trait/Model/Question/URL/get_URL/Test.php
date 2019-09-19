@@ -4,7 +4,7 @@ class Trait_Model_Question_URL__get_URLTest extends PHPUnit\Framework\TestCase
 {
     public function test__Base_URL()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 19;
         $question->title = 'How iPhone 8 are charged?';
 
@@ -13,7 +13,7 @@ class Trait_Model_Question_URL__get_URLTest extends PHPUnit\Framework\TestCase
 
     public function test__Base_RU_URL()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 18;
         $question->title = 'Нужны ли COOKIE?';
 

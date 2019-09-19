@@ -34,7 +34,7 @@ class Search_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::init_with_DB_state($row);
+            $questions[] = \Model\Question::init_with_DB_state($row);
         }
 
         return $questions;
@@ -67,7 +67,7 @@ class Search_Query extends Abstract_Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = Category_Model::init_with_DB_state($row);
+            $categories[] = \Model\Category::init_with_DB_state($row);
         }
 
         return $categories;
@@ -102,7 +102,7 @@ class Search_Query extends Abstract_Query
 
         $users = [];
         foreach ($rows as $row) {
-            $users[] = User_Model::init_with_DB_state($row);
+            $users[] = \Model\User::init_with_DB_state($row);
         }
 
         return $users;

@@ -2,7 +2,7 @@
 
 class UserFollowUser_Relation_Mapper extends Abstract_Mapper
 {
-    public function create(UserFollowUser_Relation_Model $relation): UserFollowUser_Relation_Model
+    public function create(\Model\Relation\UserFollowUser $relation): \Model\Relation\UserFollowUser
     {
         UserFollowUser_Relation_Validator::validate_new($relation);
 
@@ -24,12 +24,12 @@ class UserFollowUser_Relation_Mapper extends Abstract_Mapper
         return $relation;
     }
 
-    private function update(UserFollowUser_Relation_Model $relation)
+    private function update(\Model\Relation\UserFollowUser $relation)
     {
         throw new Exception('UserFollowUser relation "update" method not applicable', 0);
     }
 
-    public function delete_relation(UserFollowUser_Relation_Model $relation): bool
+    public function delete_relation(\Model\Relation\UserFollowUser $relation): bool
     {
         UserFollowUser_Relation_Validator::validate_exists($relation);
 

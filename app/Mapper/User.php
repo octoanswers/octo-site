@@ -12,7 +12,7 @@ class User_Mapper extends Abstract_Mapper
         $this->pdo = null;
     }
 
-    public function create(User_Model $user): User_Model
+    public function create(\Model\User $user): \Model\User
     {
         User_Validator::validate_new($user);
 
@@ -44,7 +44,7 @@ class User_Mapper extends Abstract_Mapper
         return $user;
     }
 
-    public function update(User_Model $user): User_Model
+    public function update(\Model\User $user): \Model\User
     {
         User_Validator::validate_exists($user);
 

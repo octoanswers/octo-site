@@ -17,7 +17,7 @@ class Revisions_Query extends Abstract_Query
             return;
         }
 
-        return Revision_Model::init_with_DB_state($row);
+        return \Model\Revision::init_with_DB_state($row);
     }
 
     public function revisions_for_answer_with_ID(int $questionID): array
@@ -44,7 +44,7 @@ class Revisions_Query extends Abstract_Query
 
         $revisions = [];
         foreach ($rows as $row) {
-            $revisions[] = Revision_Model::init_with_DB_state($row);
+            $revisions[] = \Model\Revision::init_with_DB_state($row);
         }
 
         return $revisions;
@@ -74,7 +74,7 @@ class Revisions_Query extends Abstract_Query
 
         $revisions = [];
         foreach ($rows as $row) {
-            $revisions[] = Revision_Model::init_with_DB_state($row);
+            $revisions[] = \Model\Revision::init_with_DB_state($row);
         }
 
         return $revisions;

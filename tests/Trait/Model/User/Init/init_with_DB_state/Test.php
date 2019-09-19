@@ -4,7 +4,7 @@ class Trait_Model_User__init_with_DB_state__Test extends PHPUnit\Framework\TestC
 {
     public function test_FullParams()
     {
-        $user = User_Model::init_with_DB_state([
+        $user = \Model\User::init_with_DB_state([
             'u_id'            => 13,
             'u_username'      => 'steve',
             'u_name'          => 'Steve Bo',
@@ -29,7 +29,7 @@ class Trait_Model_User__init_with_DB_state__Test extends PHPUnit\Framework\TestC
 
     public function test_MinParams()
     {
-        $user = User_Model::init_with_DB_state([
+        $user = \Model\User::init_with_DB_state([
             'u_id'         => 13,
             'u_username'   => 'steve',
             'u_name'       => 'Steve Bo',

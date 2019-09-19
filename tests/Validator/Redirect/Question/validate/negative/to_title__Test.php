@@ -4,7 +4,7 @@ class Validator_Redirect_Question__validate__negative__to_titleTest extends PHPU
 {
     public function test__Title_not_set()
     {
-        $redirect = new Question_Redirect_Model();
+        $redirect = new \Model\Redirect\Question();
         $redirect->fromID = 7;
 
         $this->expectExceptionMessage('Redirect "to_title" property null must be a string');
@@ -13,7 +13,7 @@ class Validator_Redirect_Question__validate__negative__to_titleTest extends PHPU
 
     public function test__Title_is_empty()
     {
-        $redirect = new Question_Redirect_Model();
+        $redirect = new \Model\Redirect\Question();
         $redirect->fromID = 7;
         $redirect->toTitle = '';
 
@@ -23,7 +23,7 @@ class Validator_Redirect_Question__validate__negative__to_titleTest extends PHPU
 
     public function test__Comment_too_short()
     {
-        $redirect = new Question_Redirect_Model();
+        $redirect = new \Model\Redirect\Question();
         $redirect->fromID = 12;
         $redirect->toTitle = 'x?';
 
@@ -33,7 +33,7 @@ class Validator_Redirect_Question__validate__negative__to_titleTest extends PHPU
 
     public function test__Comment_too_long()
     {
-        $redirect = new Question_Redirect_Model();
+        $redirect = new \Model\Redirect\Question();
         $redirect->fromID = 7;
         $redirect->toTitle = 'Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42.';
 

@@ -4,7 +4,7 @@ class UserFollowCategory_Relation_Validator__validate_newTest extends PHPUnit\Fr
 {
     public function test__Full_params()
     {
-        $relation = new UserFollowCategory_Relation_Model();
+        $relation = new \Model\Relation\UserFollowCategory();
         $relation->userID = 3;
         $relation->categoryID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
@@ -14,7 +14,7 @@ class UserFollowCategory_Relation_Validator__validate_newTest extends PHPUnit\Fr
 
     public function test__Min_params()
     {
-        $relation = new UserFollowCategory_Relation_Model();
+        $relation = new \Model\Relation\UserFollowCategory();
         $relation->userID = 3;
         $relation->categoryID = 9;
 

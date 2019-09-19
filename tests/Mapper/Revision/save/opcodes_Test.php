@@ -6,7 +6,7 @@ class Mapper_Revisions__save__opcodes__Test extends TestCase
 {
     public function test__OpcodesNotSet()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->baseText = 'Answer written at 19:33';
 
@@ -16,7 +16,7 @@ class Mapper_Revisions__save__opcodes__Test extends TestCase
 
     // public function test__OpcodesNotString()
     // {
-    //     $revision = new Revision_Model();
+    //     $revision = new \Model\Revision();
     //     $revision->answerID = 11;
     //     $revision->opcodes = 123;
     //     $revision->baseText = 'Answer written at 19:33';
@@ -27,7 +27,7 @@ class Mapper_Revisions__save__opcodes__Test extends TestCase
 
     public function test__OpcodesIsEmpty()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = '';
         $revision->baseText = 'Answer written at 19:33';
@@ -38,7 +38,7 @@ class Mapper_Revisions__save__opcodes__Test extends TestCase
 
     public function test__OpcodesTooShort()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 's';
         $revision->baseText = 'Answer written at 19:33';

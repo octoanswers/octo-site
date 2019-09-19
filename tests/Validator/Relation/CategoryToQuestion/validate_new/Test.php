@@ -4,7 +4,7 @@ class Validator_Relation_CategoryToQuestion__validate_newTest extends PHPUnit\Fr
 {
     public function test__Full_params()
     {
-        $rel = new CategoriesToQuestions_Relation_Model();
+        $rel = new \Model\Relation\CategoriesToQuestions();
         $rel->categoryID = 3;
         $rel->questionID = 9;
         $rel->createdAt = '2015-11-29 09:28:34';
@@ -14,7 +14,7 @@ class Validator_Relation_CategoryToQuestion__validate_newTest extends PHPUnit\Fr
 
     public function test__Min_params()
     {
-        $rel = new CategoriesToQuestions_Relation_Model();
+        $rel = new \Model\Relation\CategoriesToQuestions();
         $rel->categoryID = 3;
         $rel->questionID = 9;
 

@@ -4,7 +4,7 @@ class UserFollowCategory_Relation_Validator__validate_existsTest extends PHPUnit
 {
     public function test__Full_params()
     {
-        $relation = new UserFollowCategory_Relation_Model();
+        $relation = new \Model\Relation\UserFollowCategory();
         $relation->id = 13;
         $relation->userID = 3;
         $relation->categoryID = 9;
@@ -15,7 +15,7 @@ class UserFollowCategory_Relation_Validator__validate_existsTest extends PHPUnit
 
     public function test__Min_params()
     {
-        $relation = new UserFollowCategory_Relation_Model();
+        $relation = new \Model\Relation\UserFollowCategory();
         $relation->id = 13;
         $relation->userID = 3;
         $relation->categoryID = 9;

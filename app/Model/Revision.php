@@ -1,9 +1,11 @@
 <?php
 
-class Revision_Model extends Abstract_Model
+namespace Model;
+
+class Revision extends Model
 {
-    use Init_Revision_Model_Trait;
-    use Contribution_Revision_Model_Trait;
+    use \Init_Revision_Model_Trait;
+    use \Contribution_Revision_Model_Trait;
 
     public $id;
     public $answerID;

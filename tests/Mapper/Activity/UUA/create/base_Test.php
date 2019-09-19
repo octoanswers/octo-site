@@ -6,11 +6,11 @@ class Mapper_Activity_UUA__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $question = Question_Model::init_with_DB_state([
+        $question = \Model\Question::init_with_DB_state([
             'q_id'             => 13,
             'q_title'          => 'This is question?',
             'q_is_redirect'    => 1,
@@ -20,7 +20,7 @@ class Mapper_Activity_UUA__create__Test extends Abstract_DB_TestCase
             'count_categories' => 0,
         ]);
 
-        $revision = Revision_Model::init_with_DB_state([
+        $revision = \Model\Revision::init_with_DB_state([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',
@@ -31,14 +31,14 @@ class Mapper_Activity_UUA__create__Test extends Abstract_DB_TestCase
             'rev_created_at' => '2015-12-16 13:28:56',
         ]);
 
-        $activity = new Activity_Model();
-        $activity->type = Activity_Model::F_U_UPDATE_A;
+        $activity = new \Model\Activity();
+        $activity->type = \Model\Activity::F_U_UPDATE_A;
         $activity->subject = $user;
         $activity->data = ['question' => $question, 'revision' => $revision];
 
         $activity = (new UUpdateA_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
-        $this->assertEquals(Activity_Model::F_U_UPDATE_A, $activity->type);
+        $this->assertEquals(\Model\Activity::F_U_UPDATE_A, $activity->type);
     }
 }

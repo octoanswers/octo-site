@@ -6,7 +6,7 @@ class UserFollowUser_Relation_Mapper__create__Test extends Abstract_DB_TestCase
 
     public function test__FullParams__OK()
     {
-        $relation = new UserFollowUser_Relation_Model();
+        $relation = new \Model\Relation\UserFollowUser();
         $relation->userID = 3;
         $relation->followedUserID = 19;
 

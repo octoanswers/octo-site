@@ -6,7 +6,7 @@ class Mapper_Category_create__Test extends Abstract_DB_TestCase
 
     public function test_Create_category_with_one_word_name()
     {
-        $category = new Category_Model();
+        $category = new \Model\Category();
         $category->title = 'New';
 
         $category = (new Category_Mapper('ru'))->create($category);
@@ -17,7 +17,7 @@ class Mapper_Category_create__Test extends Abstract_DB_TestCase
 
     public function test_Create_category_with_two_word_name()
     {
-        $category = new Category_Model();
+        $category = new \Model\Category();
         $category->title = 'Foo Bar';
 
         $category = (new Category_Mapper('ru'))->create($category);
@@ -28,7 +28,7 @@ class Mapper_Category_create__Test extends Abstract_DB_TestCase
 
     public function test_Create_category_with_RU_title()
     {
-        $category = new Category_Model();
+        $category = new \Model\Category();
         $category->title = 'тема';
 
         $category = (new Category_Mapper('ru'))->create($category);

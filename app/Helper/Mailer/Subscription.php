@@ -2,7 +2,7 @@
 
 class SubscriptionMailer extends AbstractMailer
 {
-    public function sendEmail(string $to_email, Question_Model $question)
+    public function sendEmail(string $to_email, \Model\Question $question)
     {
         $subject = 'Вы подписались на вопрос «' . $question->title . '»';
 

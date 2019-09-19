@@ -14,7 +14,7 @@ class Question_Validator
     // Model validator
     //
 
-    public static function validate_exists(Question_Model $question)
+    public static function validate_exists(\Model\Question $question)
     {
         self::validateID($question->id);
         self::validate_new($question);
@@ -22,7 +22,7 @@ class Question_Validator
         return true;
     }
 
-    public static function validate_new(Question_Model $question)
+    public static function validate_new(\Model\Question $question)
     {
         self::validate_title($question->title);
         self::validateRedirect($question->isRedirect);

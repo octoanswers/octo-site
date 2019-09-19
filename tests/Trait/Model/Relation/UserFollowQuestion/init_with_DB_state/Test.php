@@ -4,7 +4,7 @@ class Trait_Model_Relation_UserFollowQuestion__init_with_DB_state__Test extends 
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = UserFollowQuestion_Relation_Model::init_with_DB_state([
+        $rel = \Model\Relation\UserFollowQuestion::init_with_DB_state([
             'id'          => 13,
             'user_id'     => 3,
             'question_id' => 9,
@@ -19,7 +19,7 @@ class Trait_Model_Relation_UserFollowQuestion__init_with_DB_state__Test extends 
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = UserFollowQuestion_Relation_Model::init_with_DB_state([
+        $rel = \Model\Relation\UserFollowQuestion::init_with_DB_state([
             'id'          => 13,
             'user_id'     => 3,
             'question_id' => 9,

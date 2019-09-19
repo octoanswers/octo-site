@@ -34,7 +34,7 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
             // Save subscription in DB
             //
 
-            $subscription = new Subscription_Model();
+            $subscription = new \Model\Subscription();
             $subscription->questionID = $question_id;
             $subscription->email = $email;
             $subscription = (new Subscription_Mapper($this->lang))->create($subscription);

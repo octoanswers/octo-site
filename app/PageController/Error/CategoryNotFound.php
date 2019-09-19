@@ -15,7 +15,7 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
 
         $this->categoryTitle = $this->_category_title_from_URI($category_URI);
 
-        $category = new Category_Model();
+        $category = new \Model\Category();
         $category->title = $this->categoryTitle;
 
         $this->template = 'error/category_not_found';

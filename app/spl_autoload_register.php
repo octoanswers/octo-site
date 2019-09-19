@@ -10,7 +10,6 @@ spl_autoload_register(function ($class_name) {
 
         // Helpers
 
-        'ExtendedParsedown' => 'app/Helper/ExtendedParsedown.php',
         'FineDiff'          => 'app/Helper/FineDiff/FineDiff.php',
         'PassHash'          => 'app/Helper/PassHash.php',
         'Lang'              => 'app/Helper/Lang.php',

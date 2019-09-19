@@ -2,7 +2,7 @@
 
 class Revision_Mapper extends Abstract_Mapper
 {
-    public function save(Revision_Model $revision): Revision_Model
+    public function save(\Model\Revision $revision): \Model\Revision
     {
         Revision_Validator::validate($revision);
 

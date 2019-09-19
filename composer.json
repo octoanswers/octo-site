@@ -15,5 +15,10 @@
     "respect/validation": "^1.1",
     "jblond/php-diff": "^1.12",
     "verot/class.upload.php": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "app/Model/Model.php"
+    ]
   }
 }

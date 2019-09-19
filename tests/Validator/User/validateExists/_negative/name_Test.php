@@ -4,7 +4,7 @@ class Validator_User__validate_exists__negative__nameTest extends PHPUnit\Framew
 {
     protected function setUp(): void
     {
-        $this->user = new User_Model();
+        $this->user = new \Model\User();
         $this->user->id = 13;
         $this->user->username = 'boris';
         $this->user->name = 'Boris Bro';

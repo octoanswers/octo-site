@@ -46,7 +46,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             foreach ($newCategoriesTitles as $category_title) {
                 $category = (new Category_Query($this->lang))->find_with_title($category_title);
                 if ($category === null) {
-                    $category = new Category_Model();
+                    $category = new \Model\Category();
                     $category->title = $category_title;
 
                     $category = (new Category_Mapper($this->lang))->create($category);
@@ -56,14 +56,14 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
 
                 $er = (new CategoriesToQuestions_Relations_Query($this->lang))->find_by_category_ID_and_question_ID($category->id, $question->id);
                 if ($er === null) {
-                    $er = new CategoriesToQuestions_Relation_Model();
+                    $er = new \Model\Relation\CategoriesToQuestions();
                     $er->categoryID = $category->id;
                     $er->questionID = $question->id;
                     $er = (new CategoryToQuestion_Relation_Mapper($this->lang))->create($er);
 
                     // create activity
-                    $activity = new Activity_Model();
-                    $activity->type = Activity_Model::CATEGORY_ADDED_QUESTION;
+                    $activity = new \Model\Activity();
+                    $activity->type = \Model\Activity::CATEGORY_ADDED_QUESTION;
                     $activity->subject = $category;
                     $activity->data = $question;
                     $activity = (new CAddedQ_Activity_Mapper($this->lang))->create($activity);
@@ -79,14 +79,14 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
 
             // Save activity
 
-            // $activity = new Activity_Model();
-            // $activity->type = Activity_Model::F_U_UPDATE_A;
+            // $activity = new \Model\Activity();
+            // $activity->type = \Model\Activity::F_U_UPDATE_A;
             // $activity->subject = $user;
             // $activity->data = ['question' => $question, 'revision' => $revision];
             // $activity = (new UUpdateA_Activity_Mapper($this->lang))->create($activity);
             //
-            // $activity = new Activity_Model();
-            // $activity->type = Activity_Model::F_Q_UPDATE_A;
+            // $activity = new \Model\Activity();
+            // $activity->type = \Model\Activity::F_Q_UPDATE_A;
             // $activity->subject = $question;
             // $activity->data = ['user' => $user, 'revision' => $revision];
             // $activity = (new QUpdateA_Activity_Mapper($this->lang))->create($activity);

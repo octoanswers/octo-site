@@ -6,7 +6,7 @@ class UserFollowCategory_Relation_Mapper__create__Test extends Abstract_DB_TestC
 
     public function test__FullParams__OK()
     {
-        $relation = new UserFollowCategory_Relation_Model();
+        $relation = new \Model\Relation\UserFollowCategory();
         $relation->userID = 3;
         $relation->categoryID = 19;
 

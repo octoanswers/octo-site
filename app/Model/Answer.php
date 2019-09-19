@@ -1,8 +1,10 @@
 <?php
 
-class Answer_Model extends Abstract_Model
+namespace Model;
+
+class Answer extends Model
 {
-    use Init_Answer_Model_Trait;
+    use \Init_Answer_Model_Trait;
 
     public $id; // int
     public $text; // string

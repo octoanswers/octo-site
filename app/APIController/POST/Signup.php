@@ -38,7 +38,7 @@ class Signup_POST_APIController extends Abstract_APIController
 
             $name = $username;
 
-            $user = new User_Model();
+            $user = new \Model\User();
             $user->username = $username;
             $user->name = $name;
             $user->email = $user_email;

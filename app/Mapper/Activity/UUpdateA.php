@@ -2,7 +2,7 @@
 
 class UUpdateA_Activity_Mapper extends Abstract_Mapper
 {
-    public function create(Activity_Model $activity): Activity_Model
+    public function create(\Model\Activity $activity): \Model\Activity
     {
         $activity_type = $activity->type;
         $user = $activity->subject;
@@ -14,16 +14,16 @@ class UUpdateA_Activity_Mapper extends Abstract_Mapper
         $question = $activity->data['question'];
         $revision = $activity->data['revision'];
 
-        if ($activity_type != Activity_Model::F_U_UPDATE_A) {
+        if ($activity_type != \Model\Activity::F_U_UPDATE_A) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);
         }
-        if (!is_a($user, User_Model::class)) {
+        if (!is_a($user, \Model\User::class)) {
             throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
-        if (!is_a($question, Question_Model::class)) {
+        if (!is_a($question, \Model\Question::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
         }
-        if (!is_a($revision, Revision_Model::class)) {
+        if (!is_a($revision, \Model\Revision::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($revision), 0);
         }
 

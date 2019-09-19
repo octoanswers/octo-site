@@ -36,7 +36,7 @@ class Categories_POST_APIController extends Abstract_APIController
                 $category_title = trim($category_title);
                 $category = (new Category_Query($this->lang))->find_with_title($category_title);
                 if ($category === null) {
-                    $category = new Category_Model();
+                    $category = new \Model\Category();
                     $category->title = $category_title;
                     $category = (new Category_Mapper($this->lang))->create($category);
 

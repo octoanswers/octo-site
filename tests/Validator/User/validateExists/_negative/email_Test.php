@@ -4,7 +4,7 @@ class Validator_User__validate_exists__negative__emailTest extends PHPUnit\Frame
 {
     public function test__Email_not_set()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
@@ -15,7 +15,7 @@ class Validator_User__validate_exists__negative__emailTest extends PHPUnit\Frame
 
     public function test__Incorrect_email()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';

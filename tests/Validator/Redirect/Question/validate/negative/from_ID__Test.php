@@ -4,7 +4,7 @@ class Validator_Redirect_Question__validate__negative__from_IDTest extends PHPUn
 {
     public function test__FromID_equal_zero()
     {
-        $redirect = new Question_Redirect_Model();
+        $redirect = new \Model\Redirect\Question();
         $redirect->fromID = 0;
         $redirect->toTitle = 'How iPhone 8 are charged?';
 
@@ -14,7 +14,7 @@ class Validator_Redirect_Question__validate__negative__from_IDTest extends PHPUn
 
     public function test__FromID_below_zero()
     {
-        $redirect = new Question_Redirect_Model();
+        $redirect = new \Model\Redirect\Question();
         $redirect->fromID = -1;
         $redirect->toTitle = 'How iPhone 8 are charged?';
 

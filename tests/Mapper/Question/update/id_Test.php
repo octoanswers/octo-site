@@ -6,7 +6,7 @@ class Mapper_Question__update__id__Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithNotExistsID_ThrowException()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 2215;
         $question->title = 'This is question?';
         $question->isRedirect = false;
@@ -17,7 +17,7 @@ class Mapper_Question__update__id__Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithIDEqualZero_ThrowException()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 0;
         $question->title = 'This is question?';
         $question->isRedirect = false;
@@ -28,7 +28,7 @@ class Mapper_Question__update__id__Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithIDBelowZero_ThrowException()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = -1;
         $question->title = 'This is question?';
         $question->isRedirect = true;

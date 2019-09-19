@@ -2,7 +2,7 @@
 
 class Question_Redirects_Query extends Abstract_Query
 {
-    public function redirect_for_question_with_ID(int $questionID): Question_Redirect_Model
+    public function redirect_for_question_with_ID(int $questionID): \Model\Redirect\Question
     {
         Question_Validator::validateID($questionID);
 
@@ -19,6 +19,6 @@ class Question_Redirects_Query extends Abstract_Query
             throw new Exception('Redirect for question with ID "' . $questionID . '" not exists', 1);
         }
 
-        return Question_Redirect_Model::init_with_DB_state($row);
+        return \Model\Redirect\Question::init_with_DB_state($row);
     }
 }

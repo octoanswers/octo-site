@@ -6,7 +6,7 @@ class Mapper_Subscription__create__Test extends Abstract_DB_TestCase
 
     public function test__FullParams__OK()
     {
-        $s = new Subscription_Model();
+        $s = new \Model\Subscription();
         $s->questionID = 9;
         $s->email = 'losh@adka.ru';
 

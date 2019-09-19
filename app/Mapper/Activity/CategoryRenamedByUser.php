@@ -2,15 +2,15 @@
 
 class CategoryRenamedByUser_Activity_Mapper extends Abstract_Mapper
 {
-    public function create(Activity_Model $activity): Activity_Model
+    public function create(\Model\Activity $activity): \Model\Activity
     {
         $activity_type = $activity->type;
-        if ($activity_type != Activity_Model::CATEGORY_RENAMED_BY_USER) {
+        if ($activity_type != \Model\Activity::CATEGORY_RENAMED_BY_USER) {
             throw new Exception("Incorrect activity type \"$activity_type\"", 0);
         }
 
         $category = $activity->subject;
-        if (!is_a($category, Category_Model::class)) {
+        if (!is_a($category, \Model\Category::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($category), 0);
         }
 
@@ -18,7 +18,7 @@ class CategoryRenamedByUser_Activity_Mapper extends Abstract_Mapper
             throw new Exception('Incorrect data param', 1);
         }
         $user = $activity->data['user'];
-        if (!is_a($user, User_Model::class)) {
+        if (!is_a($user, \Model\User::class)) {
             throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
         $old_title = $activity->data['old_title'];

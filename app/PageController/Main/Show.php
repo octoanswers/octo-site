@@ -21,7 +21,7 @@ class Show_Main_PageController extends Abstract_PageController
         // foreach ($this->recent_questions as $question) {
         //     $categoriesTitles = Category_Extractor_Helper::extractCategories($question->answer->text);
         //     foreach ($categoriesTitles as $title) {
-        //         $category = Category_Model::init_with_title($title);
+        //         $category = \Model\Category::init_with_title($title);
         //         $this->categories[$question->id][] = $category;
         //     }
         // }
@@ -33,7 +33,7 @@ class Show_Main_PageController extends Abstract_PageController
             }
         }
 
-        $this->parsedown = new ExtendedParsedown($this->lang);
+        $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
 
         $this->template = 'main';
         $this->pageTitle = $this->translator->get('answeropedia') . ' – ' . $this->translator->get('main', 'slogan');

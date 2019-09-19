@@ -6,7 +6,7 @@ class UserFollowQuestion_Relation_Mapper__create__Test extends Abstract_DB_TestC
 
     public function test__FullParams__OK()
     {
-        $er = new UserFollowQuestion_Relation_Model();
+        $er = new \Model\Relation\UserFollowQuestion();
         $er->userID = 3;
         $er->questionID = 19;
 

@@ -6,7 +6,7 @@ class Mapper_Answer__update__Test extends Abstract_DB_TestCase
 
     public function test_updateExists()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 4;
         $answer->text = 'Answer written at 20:54';
         $answer->updatedAt = '2016-03-19 06:47:41';

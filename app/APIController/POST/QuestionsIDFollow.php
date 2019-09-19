@@ -29,7 +29,7 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             // Save follow relation
             //
 
-            $relation = new UserFollowQuestion_Relation_Model();
+            $relation = new \Model\Relation\UserFollowQuestion();
             $relation->userID = $user->id;
             $relation->questionID = $question->id;
 
@@ -39,8 +39,8 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             // Create activity
             //
 
-            $activity = new Activity_Model();
-            $activity->type = Activity_Model::F_U_FOLLOW_Q;
+            $activity = new \Model\Activity();
+            $activity->type = \Model\Activity::F_U_FOLLOW_Q;
             $activity->subject = $user;
             $activity->data = $question;
 

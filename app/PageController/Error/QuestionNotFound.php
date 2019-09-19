@@ -15,7 +15,7 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
 
         $this->questionTitle = Title_Helper::title_from_question_URI($question_URI);
 
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->title = $this->questionTitle;
 
         $this->template = 'error/question_not_found';

@@ -28,13 +28,13 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
             if ($is_save_redirect) {
                 if (mb_strtolower($category_new_title) != mb_strtolower($old_title)) {
                     // create category record with OLD title & redirect flag
-                    $old_category = new Category_Model();
+                    $old_category = new \Model\Category();
                     $old_category->title = $old_title;
                     $old_category->isRedirect = true;
                     $old_category = (new Category_Mapper($this->lang))->create($old_category);
 
                     // create redirect record
-                    $this->redirect = new Category_Redirect_Model();
+                    $this->redirect = new \Model\Redirect\Category();
                     $this->redirect->from_ID = $old_category->id;
                     $this->redirect->to_title = $category->title;
                     $this->redirect = (new Category_Redirect_Mapper($this->lang))->create($this->redirect);
@@ -45,14 +45,14 @@ class CategoriesIDRename_PATCH_APIController extends Abstract_APIController
             // Create activities
             //
 
-            $activity = new Activity_Model();
-            $activity->type = Activity_Model::USER_RENAME_CATEGORY;
+            $activity = new \Model\Activity();
+            $activity->type = \Model\Activity::USER_RENAME_CATEGORY;
             $activity->subject = $user;
             $activity->data = ['category' => $category, 'old_title' => $old_title];
             $activity = (new UserRenameCategory_Activity_Mapper($this->lang))->create($activity);
 
-            $activity2 = new Activity_Model();
-            $activity2->type = Activity_Model::CATEGORY_RENAMED_BY_USER;
+            $activity2 = new \Model\Activity();
+            $activity2->type = \Model\Activity::CATEGORY_RENAMED_BY_USER;
             $activity2->subject = $category;
             $activity2->data = ['user' => $user, 'old_title' => $old_title];
             $activity2 = (new CategoryRenamedByUser_Activity_Mapper($this->lang))->create($activity2);

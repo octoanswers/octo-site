@@ -6,7 +6,7 @@ class Mapper_Revisions__save__negative__parent_ID__Test extends TestCase
 {
     public function testParentIDEqualZero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 14:22';
@@ -18,7 +18,7 @@ class Mapper_Revisions__save__negative__parent_ID__Test extends TestCase
 
     public function testParentIDBelowZero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 14:22';

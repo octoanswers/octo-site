@@ -4,7 +4,7 @@ class Validator_Revision__validate__negative__IDTest extends PHPUnit\Framework\T
 {
     public function test__ID_equal_zero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->id = 0;
         $revision->answerID = 11;
         $revision->baseText = 'Some answer.';
@@ -15,7 +15,7 @@ class Validator_Revision__validate__negative__IDTest extends PHPUnit\Framework\T
 
     public function test__ID_below_zero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->id = -1;
         $revision->answerID = 11;
         $revision->baseText = 'Answer written at 10:15.';

@@ -2,7 +2,7 @@
 
 class Question_Query extends Abstract_Query
 {
-    public function question_with_title(string $title): Question_Model
+    public function question_with_title(string $title): \Model\Question
     {
         Question_Validator::validate_title($title);
 
@@ -21,10 +21,10 @@ class Question_Query extends Abstract_Query
             throw new Exception('Question with lang "' . $this->lang . '" and title "' . $title . '" not exists', 1);
         }
 
-        return Question_Model::init_with_DB_state($row);
+        return \Model\Question::init_with_DB_state($row);
     }
 
-    public function question_with_ID(int $questionID): Question_Model
+    public function question_with_ID(int $questionID): \Model\Question
     {
         Question_Validator::validateID($questionID);
 
@@ -43,6 +43,6 @@ class Question_Query extends Abstract_Query
             throw new Exception('Question with ID "' . $questionID . '" not exists', 1);
         }
 
-        return Question_Model::init_with_DB_state($row);
+        return \Model\Question::init_with_DB_state($row);
     }
 }

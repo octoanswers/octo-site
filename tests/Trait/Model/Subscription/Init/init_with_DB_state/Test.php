@@ -4,7 +4,7 @@ class Trait_Model_Subscription__init_with_DB_state__Test extends PHPUnit\Framewo
 {
     public function test__FullParams()
     {
-        $s = Subscription_Model::init_with_DB_state([
+        $s = \Model\Subscription::init_with_DB_state([
             's_id'          => 13,
             's_question_id' => 9,
             's_email'       => 'wer@sio.ru',

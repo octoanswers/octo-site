@@ -4,7 +4,7 @@ class Validator_Question__validate_exists__params__is_redirectTest extends PHPUn
 {
     public function test__IsRedirect_not_set()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 13;
         $question->title = 'How iPhone 8 are charged?';
 

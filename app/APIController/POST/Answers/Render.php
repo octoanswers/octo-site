@@ -12,7 +12,7 @@ class Render_Answers_POST_APIController extends Abstract_APIController
 
             $text_MD = urldecode((string) $request->getParam('text'));
 
-            $parsedown = new ExtendedParsedown($lang);
+            $parsedown = new \Helper\ExtendedParsedown($lang);
             $text_HTML = $parsedown->text($text_MD);
 
             $output = [

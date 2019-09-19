@@ -4,7 +4,7 @@ class Validator_Category__validate_exists__negative__IDTest extends PHPUnit\Fram
 {
     public function test__Exception_when_category_ID_equal_zero()
     {
-        $category = new Category_Model();
+        $category = new \Model\Category();
         $category->id = 0;
         $category->title = 'iPhone 8';
 
@@ -14,7 +14,7 @@ class Validator_Category__validate_exists__negative__IDTest extends PHPUnit\Fram
 
     public function test__Exception_when_category_ID_below_zero()
     {
-        $category = new Category_Model();
+        $category = new \Model\Category();
         $category->id = -1;
         $category->title = 'iPhone 8';
 

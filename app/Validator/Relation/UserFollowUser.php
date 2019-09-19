@@ -9,7 +9,7 @@ class UserFollowUser_Relation_Validator
     // Model validator
     //
 
-    public static function validate_exists(UserFollowUser_Relation_Model $relation)
+    public static function validate_exists(\Model\Relation\UserFollowUser $relation)
     {
         self::validateID($relation->id);
         self::validate_new($relation);
@@ -17,7 +17,7 @@ class UserFollowUser_Relation_Validator
         return true;
     }
 
-    public static function validate_new(UserFollowUser_Relation_Model $relation)
+    public static function validate_new(\Model\Relation\UserFollowUser $relation)
     {
         self::validateUserID($relation->userID);
         self::validateFollowedUserID($relation->followedUserID);

@@ -4,7 +4,7 @@ class Trait_Model_User_URL__get_avatar_URL_mediumTest extends PHPUnit\Framework\
 {
     public function test__Default_avatar()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->name = 'Sasha';
 
@@ -13,7 +13,7 @@ class Trait_Model_User_URL__get_avatar_URL_mediumTest extends PHPUnit\Framework\
 
     public function test__Avatar_uploaded()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->name = 'Sasha';
         $user->is_avatar_uploaded = true;

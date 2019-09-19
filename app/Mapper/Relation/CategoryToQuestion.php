@@ -2,7 +2,7 @@
 
 class CategoryToQuestion_Relation_Mapper extends Abstract_Mapper
 {
-    public function create(CategoriesToQuestions_Relation_Model $er): CategoriesToQuestions_Relation_Model
+    public function create(\Model\Relation\CategoriesToQuestions $er): \Model\Relation\CategoriesToQuestions
     {
         CategoryToQuestion_Relation_Validator::validate_new($er);
 
@@ -24,13 +24,13 @@ class CategoryToQuestion_Relation_Mapper extends Abstract_Mapper
         return $er;
     }
 
-    private function update(CategoriesToQuestions_Relation_Model $er): CategoriesToQuestions_Relation_Model
+    private function update(\Model\Relation\CategoriesToQuestions $er): \Model\Relation\CategoriesToQuestions
     {
         // We don`t need to update ER
         return $er;
     }
 
-    public function delete(CategoriesToQuestions_Relation_Model $er): void
+    public function delete(\Model\Relation\CategoriesToQuestions $er): void
     {
         throw new Exception('CategoriesQuestions ER delete not realized', 1);
     }

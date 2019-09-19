@@ -50,7 +50,7 @@ class Users_Query
 
         $users = [];
         foreach ($rows as $row) {
-            $users[] = User_Model::init_with_DB_state($row);
+            $users[] = \Model\User::init_with_DB_state($row);
         }
 
         return $users;

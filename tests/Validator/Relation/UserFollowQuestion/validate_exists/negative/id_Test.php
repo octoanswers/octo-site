@@ -4,7 +4,7 @@ class UserFollowQuestion_Relation_Validator__validate_exists__negative__IDTest e
 {
     public function test__ID_equal_zero()
     {
-        $rel = new UserFollowQuestion_Relation_Model();
+        $rel = new \Model\Relation\UserFollowQuestion();
         $rel->id = 0;
         $rel->userID = 3;
         $rel->questionID = 9;
@@ -15,7 +15,7 @@ class UserFollowQuestion_Relation_Validator__validate_exists__negative__IDTest e
 
     public function test__ID_below_zero()
     {
-        $rel = new UserFollowQuestion_Relation_Model();
+        $rel = new \Model\Relation\UserFollowQuestion();
         $rel->id = -1;
         $rel->userID = 3;
         $rel->questionID = 9;

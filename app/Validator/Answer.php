@@ -5,7 +5,7 @@ use Respect\Validation\Validator as v;
 
 class Answer_Validator
 {
-    public static function validate(Answer_Model $answer)
+    public static function validate(\Model\Answer $answer)
     {
         self::validateID($answer->id);
         self::validateText($answer->text);

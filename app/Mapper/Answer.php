@@ -2,7 +2,7 @@
 
 class Answer_Mapper extends Abstract_Mapper
 {
-    public function update(Answer_Model $answer): Answer_Model
+    public function update(\Model\Answer $answer): \Model\Answer
     {
         Answer_Validator::validate($answer);
 

@@ -2,7 +2,7 @@
 
 class Subscription_Mapper extends Abstract_Mapper
 {
-    public function create(Subscription_Model $s): Subscription_Model
+    public function create(\Model\Subscription $s): \Model\Subscription
     {
         Subscription_Validator::validate_new($s);
 
@@ -24,12 +24,12 @@ class Subscription_Mapper extends Abstract_Mapper
         return $s;
     }
 
-    public function update(Subscription_Model $s): void
+    public function update(\Model\Subscription $s): void
     {
         throw new Exception('CategoriesQuestions ER update not realized', 1);
     }
 
-    public function delete(Subscription_Model $s): void
+    public function delete(\Model\Subscription $s): void
     {
         throw new Exception('CategoriesQuestions ER delete not realized', 1);
     }

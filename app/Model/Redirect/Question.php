@@ -1,8 +1,10 @@
 <?php
 
-class Question_Redirect_Model extends Abstract_Model
+namespace Model\Redirect;
+
+class Question extends \Model\Model
 {
-    use Question_Redirect_Model_Trait;
+    use \Question_Redirect_Model_Trait;
 
     public $fromID; // int
     public $toTitle; // string

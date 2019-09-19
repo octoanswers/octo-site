@@ -4,7 +4,7 @@ class Validator_Subscription__validate_exists__negative__idTest extends PHPUnit\
 {
     public function test__ID_equal_zero()
     {
-        $s = new Subscription_Model();
+        $s = new \Model\Subscription();
         $s->id = 0;
         $s->questionID = 10;
         $s->email = 'loz@ba.com';
@@ -15,7 +15,7 @@ class Validator_Subscription__validate_exists__negative__idTest extends PHPUnit\
 
     public function test__ID_below_zero()
     {
-        $s = new Subscription_Model();
+        $s = new \Model\Subscription();
         $s->id = -1;
         $s->questionID = 19;
         $s->email = 'loz@ba.com';

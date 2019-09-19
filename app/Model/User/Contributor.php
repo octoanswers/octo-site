@@ -1,6 +1,8 @@
 <?php
 
-class Contributor_Model extends User_Model
+namespace Model\User;
+
+class Contributor extends \Model\User
 {
     public $contribution; // int
     public $insertionsCount; // int

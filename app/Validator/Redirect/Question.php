@@ -12,7 +12,7 @@ class Question_Redirect_Validator
     // Model validator
     //
 
-    public static function validate(Question_Redirect_Model $redirect)
+    public static function validate(\Model\Redirect\Question $redirect)
     {
         self::validateFromID($redirect->fromID);
         self::validateToTitle($redirect->toTitle);

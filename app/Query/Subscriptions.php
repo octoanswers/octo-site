@@ -21,6 +21,6 @@ class Subscriptions_Query extends Abstract_Query
             return;
         }
 
-        return Subscription_Model::init_with_DB_state($row);
+        return \Model\Subscription::init_with_DB_state($row);
     }
 }

@@ -4,7 +4,7 @@ class Validator_Revision__validate__negative__answer_IDTest extends PHPUnit\Fram
 {
     public function test__Normal()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 4;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Answer written at 11:39.';
@@ -17,7 +17,7 @@ class Validator_Revision__validate__negative__answer_IDTest extends PHPUnit\Fram
 
     public function test__Answer_ID_equal_zero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 0;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Answer written at 11:39.';
@@ -29,7 +29,7 @@ class Validator_Revision__validate__negative__answer_IDTest extends PHPUnit\Fram
 
     public function test__Answer_ID_below_zero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = -1;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Answer written at 11:38.';

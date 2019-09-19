@@ -41,7 +41,7 @@ class Categories_Query extends Abstract_Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = Category_Model::init_with_DB_state($row);
+            $categories[] = \Model\Category::init_with_DB_state($row);
         }
 
         return array_reverse($categories);

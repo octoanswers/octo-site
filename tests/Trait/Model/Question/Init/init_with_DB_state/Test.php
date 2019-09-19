@@ -4,7 +4,7 @@ class Trait_Model_Question__init_with_DB_stateTest extends PHPUnit\Framework\Tes
 {
     public function test__EnFullParams()
     {
-        $question = Question_Model::init_with_DB_state([
+        $question = \Model\Question::init_with_DB_state([
             'q_id'              => 13,
             'q_title'           => 'This is question?',
             'q_is_redirect'     => 1,
@@ -25,7 +25,7 @@ class Trait_Model_Question__init_with_DB_stateTest extends PHPUnit\Framework\Tes
 
     public function test__RuFullParams()
     {
-        $question = Question_Model::init_with_DB_state([
+        $question = \Model\Question::init_with_DB_state([
             'q_id'             => 13,
             'q_title'          => 'Это вопрос?',
             'q_is_redirect'    => 1,

@@ -6,7 +6,7 @@ class Mapper_User_Create__Test extends Abstract_DB_TestCase
 
     public function test_CreateUserWithFullParams_Ok()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->username = 'steve';
         $user->name = 'Steve Bo';
         $user->signature = 'JS Dev';

@@ -18,7 +18,7 @@ class UsersFollowCategories_Relations_Query extends Abstract_Query
             return;
         }
 
-        return UserFollowCategory_Relation_Model::init_with_DB_state($row);
+        return \Model\Relation\UserFollowCategory::init_with_DB_state($row);
     }
 
     /**

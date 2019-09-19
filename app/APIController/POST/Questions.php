@@ -12,7 +12,7 @@ class Questions_POST_APIController extends Abstract_APIController
 
             $title = htmlspecialchars((string) $request->getParam('title'));
 
-            $question = Question_Model::init_with_title($title);
+            $question = \Model\Question::init_with_title($title);
 
             try {
                 $question = (new Question_Mapper($this->lang))->create($question);
@@ -24,8 +24,8 @@ class Questions_POST_APIController extends Abstract_APIController
 
             // save activity if user want that
 
-            // $activity = new Activity_Model();
-            // $activity->type = Activity_Model::F_U_ASKED_Q;
+            // $activity = new \Model\Activity();
+            // $activity->type = \Model\Activity::F_U_ASKED_Q;
             // $activity->subject = $user;
             // $activity->data = $question;
             //

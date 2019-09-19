@@ -12,7 +12,7 @@ class Revision_Validator
     // Model validator
     //
 
-    public static function validate(Revision_Model $revision)
+    public static function validate(\Model\Revision $revision)
     {
         try {
             v::optional(v::intType()->min(1, true))->assert($revision->id);

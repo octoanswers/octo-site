@@ -41,7 +41,7 @@ class Contributors_Query extends Abstract_Query
 
             $user = (new User_Query())->user_with_ID($userID);
 
-            $contributor = new Contributor_Model();
+            $contributor = new \Model\User\Contributor();
             $contributor->id = $user->id;
             $contributor->username = $user->username;
             $contributor->name = $user->name;

@@ -4,7 +4,7 @@ class Validator_Revision__validate__negative__parent_IDTest extends PHPUnit\Fram
 {
     public function test__Parent_ID_equal_zero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Ответ на вопрос про птиц.';
@@ -16,7 +16,7 @@ class Validator_Revision__validate__negative__parent_IDTest extends PHPUnit\Fram
 
     public function test__Parent_ID_below_zero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Ответ на вопрос про птиц.';

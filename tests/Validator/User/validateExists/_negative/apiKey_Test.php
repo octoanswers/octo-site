@@ -4,7 +4,7 @@ class Validator_User__validate_exists__negative__api_key_Test extends PHPUnit\Fr
 {
     public function test__API_key_not_set()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
@@ -18,7 +18,7 @@ class Validator_User__validate_exists__negative__api_key_Test extends PHPUnit\Fr
 
     public function test__API_key_is_empty()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
@@ -33,7 +33,7 @@ class Validator_User__validate_exists__negative__api_key_Test extends PHPUnit\Fr
 
     public function test__API_key_too_short()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
@@ -48,7 +48,7 @@ class Validator_User__validate_exists__negative__api_key_Test extends PHPUnit\Fr
 
     public function test__API_key_too_long()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';

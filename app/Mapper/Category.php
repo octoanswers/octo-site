@@ -2,7 +2,7 @@
 
 class Category_Mapper extends Abstract_Mapper
 {
-    public function create(Category_Model $category): Category_Model
+    public function create(\Model\Category $category): \Model\Category
     {
         Category_Validator::validate_new($category);
 
@@ -25,7 +25,7 @@ class Category_Mapper extends Abstract_Mapper
         return $category;
     }
 
-    public function update(Category_Model $category): Category_Model
+    public function update(\Model\Category $category): \Model\Category
     {
         Category_Validator::validate_exists($category);
 

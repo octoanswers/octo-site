@@ -4,7 +4,7 @@ class UserFollowCategory_Relation_Validator__validate_exists__negative__IDTest e
 {
     public function test__ID_equal_zero()
     {
-        $relation = new UserFollowCategory_Relation_Model();
+        $relation = new \Model\Relation\UserFollowCategory();
         $relation->id = 0;
         $relation->userID = 3;
         $relation->categoryID = 9;
@@ -15,7 +15,7 @@ class UserFollowCategory_Relation_Validator__validate_exists__negative__IDTest e
 
     public function test__ID_below_zero()
     {
-        $relation = new UserFollowCategory_Relation_Model();
+        $relation = new \Model\Relation\UserFollowCategory();
         $relation->id = -1;
         $relation->userID = 3;
         $relation->categoryID = 9;

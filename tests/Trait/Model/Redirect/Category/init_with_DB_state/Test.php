@@ -4,7 +4,7 @@ class Trait_Model_Redirect_Category__init_with_DB_stateTest extends PHPUnit\Fram
 {
     public function test__Base_params()
     {
-        $redirect = Category_Redirect_Model::init_with_DB_state([
+        $redirect = \Model\Redirect\Category::init_with_DB_state([
             'rd_from'  => 13,
             'rd_title' => 'Some category',
         ]);

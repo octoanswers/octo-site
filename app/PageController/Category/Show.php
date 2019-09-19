@@ -17,7 +17,7 @@ class Show_Category_PageController extends Abstract_PageController
             return (new CategoryNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->parsedown = new ExtendedParsedown($this->lang);
+        $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
 
         $human_date_time_zone = new DateTimeZone('UTC');
         $date_humanizer = new HumanDate($human_date_time_zone, $this->lang);
@@ -172,7 +172,7 @@ class Show_Category_PageController extends Abstract_PageController
         $related_categories = [];
         if (count($related_titles)) {
             foreach ($related_titles as $title) {
-                $category = Category_Model::init_with_title($title);
+                $category = \Model\Category::init_with_title($title);
                 $related_categories[] = $category;
             }
         } else {

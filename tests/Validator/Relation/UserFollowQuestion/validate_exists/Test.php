@@ -4,7 +4,7 @@ class UserFollowQuestion_Relation_Validator__validate_existsTest extends PHPUnit
 {
     public function test__Full_params()
     {
-        $rel = new UserFollowQuestion_Relation_Model();
+        $rel = new \Model\Relation\UserFollowQuestion();
         $rel->id = 13;
         $rel->userID = 3;
         $rel->questionID = 9;
@@ -15,7 +15,7 @@ class UserFollowQuestion_Relation_Validator__validate_existsTest extends PHPUnit
 
     public function test__Min_params()
     {
-        $rel = new UserFollowQuestion_Relation_Model();
+        $rel = new \Model\Relation\UserFollowQuestion();
         $rel->id = 13;
         $rel->userID = 3;
         $rel->questionID = 9;

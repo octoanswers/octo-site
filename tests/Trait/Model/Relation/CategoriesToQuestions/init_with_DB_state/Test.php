@@ -4,7 +4,7 @@ class Trait_Model_Relation_CategoriesToQuestions__init_with_DB_state__Test exten
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = CategoriesToQuestions_Relation_Model::init_with_DB_state([
+        $rel = \Model\Relation\CategoriesToQuestions::init_with_DB_state([
             'er_id'          => 13,
             'er_category_id' => 3,
             'er_question_id' => 9,
@@ -19,7 +19,7 @@ class Trait_Model_Relation_CategoriesToQuestions__init_with_DB_state__Test exten
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = CategoriesToQuestions_Relation_Model::init_with_DB_state([
+        $rel = \Model\Relation\CategoriesToQuestions::init_with_DB_state([
             'er_id'          => 13,
             'er_category_id' => 3,
             'er_question_id' => 9,

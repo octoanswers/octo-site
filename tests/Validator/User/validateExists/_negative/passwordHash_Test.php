@@ -4,7 +4,7 @@ class Validator_User__validate_exists__negative__password_hashTest extends PHPUn
 {
     public function test__Password_hash_not_set()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
@@ -18,7 +18,7 @@ class Validator_User__validate_exists__negative__password_hashTest extends PHPUn
 
     public function test__Password_hash_is_empty()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
@@ -32,7 +32,7 @@ class Validator_User__validate_exists__negative__password_hashTest extends PHPUn
 
     public function test__Password_hash_too_short()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';
@@ -46,7 +46,7 @@ class Validator_User__validate_exists__negative__password_hashTest extends PHPUn
 
     public function test__Password_hash_too_long()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->username = 'boris';
         $user->name = 'Boris Bro';

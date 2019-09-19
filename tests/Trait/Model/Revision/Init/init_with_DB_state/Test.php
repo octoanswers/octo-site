@@ -4,7 +4,7 @@ class Trait_Model_Revision__init_with_DB_state__Test extends PHPUnit\Framework\T
 {
     public function testFullParams()
     {
-        $revision = Revision_Model::init_with_DB_state([
+        $revision = \Model\Revision::init_with_DB_state([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',
@@ -27,7 +27,7 @@ class Trait_Model_Revision__init_with_DB_state__Test extends PHPUnit\Framework\T
 
     public function testMinParams()
     {
-        $revision = Revision_Model::init_with_DB_state([
+        $revision = \Model\Revision::init_with_DB_state([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',

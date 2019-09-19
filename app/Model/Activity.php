@@ -1,6 +1,8 @@
 <?php
 
-class Activity_Model extends Abstract_Model
+namespace Model;
+
+class Activity extends Model
 {
     // Activity types
 

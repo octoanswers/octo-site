@@ -6,7 +6,7 @@ class Mapper_ER_CategoriesQuestions__create__Test extends Abstract_DB_TestCase
 
     public function test__FullParams__OK()
     {
-        $er = new CategoriesToQuestions_Relation_Model();
+        $er = new \Model\Relation\CategoriesToQuestions();
         $er->categoryID = 3;
         $er->questionID = 9;
 
@@ -19,7 +19,7 @@ class Mapper_ER_CategoriesQuestions__create__Test extends Abstract_DB_TestCase
 
     public function test__MinParams__OK()
     {
-        $er = new CategoriesToQuestions_Relation_Model();
+        $er = new \Model\Relation\CategoriesToQuestions();
         $er->categoryID = 3;
         $er->questionID = 9;
 

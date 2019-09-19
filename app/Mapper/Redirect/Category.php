@@ -2,7 +2,7 @@
 
 class Category_Redirect_Mapper extends Abstract_Mapper
 {
-    public function create(Category_Redirect_Model $redirect): Category_Redirect_Model
+    public function create(\Model\Redirect\Category $redirect): \Model\Redirect\Category
     {
         Category_Redirect_Validator::validate($redirect);
 

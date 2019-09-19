@@ -30,7 +30,7 @@ class UsersIDFollow_POST_APIController extends Abstract_APIController
             // Create follow record
             //
 
-            $relation = new UserFollowUser_Relation_Model();
+            $relation = new \Model\Relation\UserFollowUser();
             $relation->userID = $user->id;
             $relation->followedUserID = $followed_user_ID;
 
@@ -38,8 +38,8 @@ class UsersIDFollow_POST_APIController extends Abstract_APIController
 
             // Create activity
 
-            $activity = new Activity_Model();
-            $activity->type = Activity_Model::F_U_FOLLOW_U;
+            $activity = new \Model\Activity();
+            $activity->type = \Model\Activity::F_U_FOLLOW_U;
             $activity->subject = $user;
             $activity->data = $followed_user;
 

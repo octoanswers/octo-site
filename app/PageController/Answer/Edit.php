@@ -23,7 +23,7 @@ class Edit_Answer_PageController extends Abstract_PageController
         $this->answer = (new Answers_Query($this->lang))->answer_with_ID($this->question->id);
 
         if ($this->answer == null) {
-            $answer = new Answer_Model();
+            $answer = new \Model\Answer();
             $answer->id = $this->question->id;
             $answer->text = null;
 

@@ -6,7 +6,7 @@ class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
 
     public function testSaveNewRevisionWithFullParams()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 14:22';
@@ -27,7 +27,7 @@ class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
 
     public function testSaveNewRevisionWithMinParams()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
         $revision->baseText = 'Answer written at 14:25';
@@ -44,7 +44,7 @@ class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
 
     public function testUpdateRevisionWithFullParams()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->id = 5;
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
@@ -66,7 +66,7 @@ class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
 
     public function testUpdateRevisionWithMinParams()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->id = 5;
         $revision->answerID = 11;
         $revision->opcodes = 'abc';

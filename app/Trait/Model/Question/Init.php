@@ -7,7 +7,7 @@ trait Init_Question_Model_Trait
         $question = new self();
         $question->title = $title;
 
-        $question->answer = new Answer_Model();
+        $question->answer = new \Model\Answer();
 
         return $question;
     }
@@ -21,7 +21,7 @@ trait Init_Question_Model_Trait
         $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
         $question->categoriesCount = (int) $state['count_categories'];
 
-        $question->answer = Answer_Model::init_with_DB_state($state);
+        $question->answer = \Model\Answer::init_with_DB_state($state);
 
         return $question;
     }

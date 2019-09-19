@@ -6,7 +6,7 @@ class Mapper_Answer__update__text__Test extends TestCase
 {
     public function test_TextNotSet_Ok()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 18;
         $answer->updatedAt = '2016-03-19 06:47:41';
 
@@ -16,7 +16,7 @@ class Mapper_Answer__update__text__Test extends TestCase
 
     public function test_TextIsEmpty_Ok()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 18;
         $answer->text = '';
         $answer->updatedAt = '2016-03-19 06:47:41';

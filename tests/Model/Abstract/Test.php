@@ -6,8 +6,9 @@ class Model_AbstractTest extends PHPUnit\Framework\TestCase
 
     protected function setUp(): void
     {
-        // Create a new instance from the Abstract_Model Class
-        $this->anonymous_class_from_abstract = new class() extends Abstract_Model {
+        // Create a new instance from the Abstract Model Class
+        $this->anonymous_class_from_abstract = new class () extends \Model\Model
+        {
             public $bar = 'bar!';
 
             // Just a sample public function that returns this anonymous instance

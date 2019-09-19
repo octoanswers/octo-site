@@ -6,7 +6,7 @@ class Helper_ExtendedParsedown__category_links__Test extends TestCase
 {
     protected function setUp(): void
     {
-        $this->pd = new ExtendedParsedown('ru');
+        $this->pd = new \Helper\ExtendedParsedown('ru');
     }
 
     protected function tearDown(): void

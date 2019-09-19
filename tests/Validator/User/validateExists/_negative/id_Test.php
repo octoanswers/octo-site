@@ -4,7 +4,7 @@ class Validator_User__validate_exists__negative__idTest extends PHPUnit\Framewor
 {
     public function test__ID_not_set()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';
@@ -16,7 +16,7 @@ class Validator_User__validate_exists__negative__idTest extends PHPUnit\Framewor
 
     public function test__ID_equal_zero()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 0;
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';
@@ -29,7 +29,7 @@ class Validator_User__validate_exists__negative__idTest extends PHPUnit\Framewor
 
     public function test__ID_below_zero()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = -1;
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';

@@ -4,7 +4,7 @@ class Validator_Subscription__validate_exists__negative__emailTest extends PHPUn
 {
     public function test__Email_not_set()
     {
-        $s = new Subscription_Model();
+        $s = new \Model\Subscription();
         $s->id = 18;
         $s->questionID = 22;
 
@@ -14,7 +14,7 @@ class Validator_Subscription__validate_exists__negative__emailTest extends PHPUn
 
     public function test__Incorrect_email()
     {
-        $s = new Subscription_Model();
+        $s = new \Model\Subscription();
         $s->id = 18;
         $s->questionID = 51;
         $s->email = 'loz_ba.com';

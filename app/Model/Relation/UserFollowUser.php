@@ -1,8 +1,10 @@
 <?php
 
-class UserFollowUser_Relation_Model extends Abstract_Model
+namespace Model\Relation;
+
+class UserFollowUser extends \Model\Model
 {
-    use UserFollowUser_Relation_Model_Trait;
+    use \UserFollowUser_Relation_Model_Trait;
 
     public $id;
     public $userID;

@@ -42,7 +42,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 
             // Create revision
 
-            $revision = new Revision_Model();
+            $revision = new \Model\Revision();
             $revision->answerID = $answer_id;
             $revision->opcodes = $opcodes;
             if ($old_answer_text) {
@@ -65,14 +65,14 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 
             // Save activity
 
-            $activity = new Activity_Model();
-            $activity->type = Activity_Model::F_U_UPDATE_A;
+            $activity = new \Model\Activity();
+            $activity->type = \Model\Activity::F_U_UPDATE_A;
             $activity->subject = $user;
             $activity->data = ['question' => $question, 'revision' => $revision];
             $activity = (new UUpdateA_Activity_Mapper($this->lang))->create($activity);
 
-            $activity = new Activity_Model();
-            $activity->type = Activity_Model::F_Q_UPDATE_A;
+            $activity = new \Model\Activity();
+            $activity->type = \Model\Activity::F_Q_UPDATE_A;
             $activity->subject = $question;
             $activity->data = ['user' => $user, 'revision' => $revision];
             $activity = (new QUpdateA_Activity_Mapper($this->lang))->create($activity);

@@ -6,20 +6,20 @@ class Mapper_Activity_URenameQ__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 46;
         $user->name = 'Steve Bo';
 
         $question = (new Question_Query('ru'))->question_with_ID(6);
 
-        $activity = new Activity_Model();
-        $activity->type = Activity_Model::U_RENAME_Q;
+        $activity = new \Model\Activity();
+        $activity->type = \Model\Activity::U_RENAME_Q;
         $activity->subject = $user;
         $activity->data = ['question' => $question, 'old_title' => 'Как ты?'];
 
         $activity = (new URenameQ_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
-        $this->assertEquals(Activity_Model::U_RENAME_Q, $activity->type);
+        $this->assertEquals(\Model\Activity::U_RENAME_Q, $activity->type);
     }
 }

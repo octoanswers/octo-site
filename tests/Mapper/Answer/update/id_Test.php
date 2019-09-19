@@ -6,7 +6,7 @@ class Mapper_Answer__update__id__Test extends Abstract_DB_TestCase
 
     public function test_updateNotExistsID()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 2035;
         $answer->text = 'Answer written at 20:54';
         $answer->updatedAt = '2016-03-19 06:47:41';
@@ -17,7 +17,7 @@ class Mapper_Answer__update__id__Test extends Abstract_DB_TestCase
 
     public function test_equalZero()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 0;
         $answer->text = 'Answer written at 20:54';
         $answer->updatedAt = '2016-03-19 06:47:41';
@@ -28,7 +28,7 @@ class Mapper_Answer__update__id__Test extends Abstract_DB_TestCase
 
     public function test_belowZero()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = -1;
         $answer->text = 'Answer written at 20:54';
         $answer->updatedAt = '2016-03-19 06:47:41';

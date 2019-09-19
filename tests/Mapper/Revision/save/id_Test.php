@@ -8,7 +8,7 @@ class Mapper_Revisions__save__negative__ID__Test extends TestCase
 
     public function testIDEqualZero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->id = 0;
         $revision->answerID = 11;
         $revision->opcodes = 'abc';
@@ -20,7 +20,7 @@ class Mapper_Revisions__save__negative__ID__Test extends TestCase
 
     public function testIDBelowZero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->id = -1;
         $revision->answerID = 11;
         $revision->opcodes = 'abc';

@@ -6,7 +6,7 @@ class Mapper_User_create__site__Test extends Abstract_DB_TestCase
 
     public function test_SiteNotSet()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';

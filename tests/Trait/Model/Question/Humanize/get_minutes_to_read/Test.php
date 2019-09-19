@@ -6,8 +6,8 @@ class Trait_Model_Question_URL__get_minutes_to_readTest extends PHPUnit\Framewor
 
     public function setUp(): void
     {
-        $this->question = new Question_Model();
-        $this->question->answer = new Answer_Model();
+        $this->question = new \Model\Question();
+        $this->question->answer = new \Model\Answer();
     }
 
     public function tearDown(): void

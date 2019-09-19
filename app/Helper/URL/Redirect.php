@@ -2,7 +2,7 @@
 
 class Redirect_URL_Helper
 {
-    public static function get_URL(string $lang, Question_Redirect_Model $redirect): string
+    public static function get_URL(string $lang, \Model\Redirect\Question $redirect): string
     {
         $uri = rtrim($redirect->toTitle, '?');
         $uri = str_replace('_', '__', $uri);

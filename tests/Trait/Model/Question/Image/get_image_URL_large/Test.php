@@ -4,7 +4,7 @@ class Trait_Model_Question_Image__get_image_URL_large__Test extends PHPUnit\Fram
 {
     public function test__Base_URL()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 19;
         $question->imageBaseName = 'foo23';
 
@@ -13,7 +13,7 @@ class Trait_Model_Question_Image__get_image_URL_large__Test extends PHPUnit\Fram
 
     public function test__Base_RU_URL()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 18;
         $question->imageBaseName = 'bar-12';
 

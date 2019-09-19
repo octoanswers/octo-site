@@ -6,7 +6,7 @@ class Mapper_Question__update__base__Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithFullParams_Ok()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 2;
         $question->title = 'This is question?';
         $question->isRedirect = true;
@@ -22,7 +22,7 @@ class Mapper_Question__update__base__Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithMinParams_Ok()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 4;
         $question->title = 'Ready to work?';
 

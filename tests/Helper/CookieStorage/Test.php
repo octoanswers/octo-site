@@ -6,7 +6,7 @@ class CookieStorage__Test extends TestCase
 {
     protected function setUp(): void
     {
-        $user = User_Model::init_with_DB_state([
+        $user = \Model\User::init_with_DB_state([
             'u_id'         => 13,
             'u_name'       => 'Joe Milk',
             'u_email'      => 'joe@answeropedia.org',

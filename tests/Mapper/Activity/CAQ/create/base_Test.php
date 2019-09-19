@@ -6,18 +6,18 @@ class Mapper_Activity_CAQ__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $category = Category_Model::init_with_title('tag1102');
+        $category = \Model\Category::init_with_title('tag1102');
 
-        $question = Question_Model::init_with_title('Когда закончится дождь?');
+        $question = \Model\Question::init_with_title('Когда закончится дождь?');
 
-        $activity = new Activity_Model();
-        $activity->type = Activity_Model::CATEGORY_ADDED_QUESTION;
+        $activity = new \Model\Activity();
+        $activity->type = \Model\Activity::CATEGORY_ADDED_QUESTION;
         $activity->subject = $category;
         $activity->data = $question;
 
         $activity = (new CAddedQ_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
-        $this->assertEquals(Activity_Model::CATEGORY_ADDED_QUESTION, $activity->type);
+        $this->assertEquals(\Model\Activity::CATEGORY_ADDED_QUESTION, $activity->type);
     }
 }

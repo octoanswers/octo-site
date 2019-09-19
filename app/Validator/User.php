@@ -20,7 +20,7 @@ class User_Validator
     // Model validator
     //
 
-    public static function validate_exists(User_Model $user)
+    public static function validate_exists(\Model\User $user)
     {
         self::validateID($user->id);
         self::validate_new($user);
@@ -28,7 +28,7 @@ class User_Validator
         return true;
     }
 
-    public static function validate_new(User_Model $user)
+    public static function validate_new(\Model\User $user)
     {
         self::validateUsername($user->username);
         self::validateName($user->name);
@@ -42,7 +42,7 @@ class User_Validator
         return true;
     }
 
-    public static function validateAuthUser(User_Model $user)
+    public static function validateAuthUser(\Model\User $user)
     {
         self::validateID($user->id);
         self::validateName($user->name);

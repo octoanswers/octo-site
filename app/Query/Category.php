@@ -2,7 +2,7 @@
 
 class Category_Query extends Abstract_Query
 {
-    public function category_with_title(string $categoryTitle): Category_Model
+    public function category_with_title(string $categoryTitle): \Model\Category
     {
         Category_Validator::validate_title($categoryTitle);
 
@@ -19,10 +19,10 @@ class Category_Query extends Abstract_Query
             throw new Exception('Category with lang "' . $this->lang . '" and title "' . $categoryTitle . '" not exists', 1);
         }
 
-        return Category_Model::init_with_DB_state($row);
+        return \Model\Category::init_with_DB_state($row);
     }
 
-    public function category_with_ID(int $categoryID): Category_Model
+    public function category_with_ID(int $categoryID): \Model\Category
     {
         Category_Validator::validateID($categoryID);
 
@@ -39,7 +39,7 @@ class Category_Query extends Abstract_Query
             throw new Exception('Category with ID "' . $categoryID . '" not exists', 1);
         }
 
-        return Category_Model::init_with_DB_state($row);
+        return \Model\Category::init_with_DB_state($row);
     }
 
     public function find_with_title(string $title)
@@ -59,6 +59,6 @@ class Category_Query extends Abstract_Query
             return;
         }
 
-        return Category_Model::init_with_DB_state($row);
+        return \Model\Category::init_with_DB_state($row);
     }
 }

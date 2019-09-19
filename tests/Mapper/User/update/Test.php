@@ -6,7 +6,7 @@ class Mapper_User__update__Test extends Abstract_DB_TestCase
 
     public function test_UpdateUserWithFullParams_Ok()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 11;
         $user->username = 'steve';
         $user->name = 'Steve Bo';

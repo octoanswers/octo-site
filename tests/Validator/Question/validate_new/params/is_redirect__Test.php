@@ -4,7 +4,7 @@ class Validator_Question__validate_new__params__is_redirectTest extends PHPUnit\
 {
     public function test__IsRedirect_not_set()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->title = 'How iPhone 8 are charged?';
 
         $this->assertEquals(false, $question->isRedirect);

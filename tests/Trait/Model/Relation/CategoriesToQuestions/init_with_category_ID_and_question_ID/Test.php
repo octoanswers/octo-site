@@ -4,7 +4,7 @@ class Trait_Model_Relation_CategoriesQuestions__init_with_category_ID_and_questi
 {
     public function test__BaseParams()
     {
-        $rel = CategoriesToQuestions_Relation_Model::init_with_category_ID_and_question_ID(3, 9);
+        $rel = \Model\Relation\CategoriesToQuestions::init_with_category_ID_and_question_ID(3, 9);
 
         $this->assertEquals(null, $rel->id);
         $this->assertEquals(3, $rel->categoryID);

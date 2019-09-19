@@ -4,7 +4,7 @@ class Validator_Relation_CategoryToQuestion__validate_exists__negative__IDTest e
 {
     public function test__ID_equal_zero()
     {
-        $rel = new CategoriesToQuestions_Relation_Model();
+        $rel = new \Model\Relation\CategoriesToQuestions();
         $rel->id = 0;
         $rel->categoryID = 3;
         $rel->questionID = 9;
@@ -15,7 +15,7 @@ class Validator_Relation_CategoryToQuestion__validate_exists__negative__IDTest e
 
     public function test__ID_below_zero()
     {
-        $rel = new CategoriesToQuestions_Relation_Model();
+        $rel = new \Model\Relation\CategoriesToQuestions();
         $rel->id = -1;
         $rel->categoryID = 3;
         $rel->questionID = 9;

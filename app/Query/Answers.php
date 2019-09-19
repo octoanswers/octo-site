@@ -19,6 +19,6 @@ class Answers_Query extends Abstract_Query
             return;
         }
 
-        return Answer_Model::init_with_DB_state($row);
+        return \Model\Answer::init_with_DB_state($row);
     }
 }

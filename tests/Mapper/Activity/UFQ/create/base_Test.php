@@ -6,20 +6,20 @@ class Mapper_Activity_UFQ__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $question = Question_Model::init_with_title('Когда закончится дождь?');
+        $question = \Model\Question::init_with_title('Когда закончится дождь?');
 
-        $activity = new Activity_Model();
-        $activity->type = Activity_Model::F_U_FOLLOW_Q;
+        $activity = new \Model\Activity();
+        $activity->type = \Model\Activity::F_U_FOLLOW_Q;
         $activity->subject = $user;
         $activity->data = $question;
 
         $activity = (new UFollowQ_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
-        $this->assertEquals(Activity_Model::F_U_FOLLOW_Q, $activity->type);
+        $this->assertEquals(\Model\Activity::F_U_FOLLOW_Q, $activity->type);
     }
 }

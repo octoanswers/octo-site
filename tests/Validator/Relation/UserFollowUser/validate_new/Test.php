@@ -4,7 +4,7 @@ class UserFollowUser_Relation_Validator__validate_newTest extends PHPUnit\Framew
 {
     public function test__Full_params()
     {
-        $relation = new UserFollowUser_Relation_Model();
+        $relation = new \Model\Relation\UserFollowUser();
         $relation->userID = 3;
         $relation->followedUserID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
@@ -14,7 +14,7 @@ class UserFollowUser_Relation_Validator__validate_newTest extends PHPUnit\Framew
 
     public function test__Min_params()
     {
-        $relation = new UserFollowUser_Relation_Model();
+        $relation = new \Model\Relation\UserFollowUser();
         $relation->userID = 3;
         $relation->followedUserID = 9;
 

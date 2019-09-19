@@ -12,7 +12,7 @@ class CookieStorage
 
         if (isset($_COOKIE['u_id'])) {
             try {
-                static::$authUser = User_Model::init_with_DB_state([
+                static::$authUser = \Model\User::init_with_DB_state([
                     'u_id'                  => $_COOKIE['u_id'],
                     'u_username'            => $_COOKIE['u_username'],
                     'u_name'                => $_COOKIE['u_name'],
@@ -38,7 +38,7 @@ class CookieStorage
         }
     }
 
-    public function save_user(User_Model $user)
+    public function save_user(\Model\User $user)
     {
         $expire_time = $this->_get_expire_time();
 

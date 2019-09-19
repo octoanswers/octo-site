@@ -4,7 +4,7 @@ class Validator_Revision__validate__negative__opcodesTest extends PHPUnit\Framew
 {
     public function test__Opcodes_equal_null()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->baseText = 'Answer about thunderbird 14-16.';
 
@@ -14,7 +14,7 @@ class Validator_Revision__validate__negative__opcodesTest extends PHPUnit\Framew
 
     public function test__Opcodes_is_empty()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = '';
         $revision->baseText = 'Answer about thunderbird 14-16.';
@@ -25,7 +25,7 @@ class Validator_Revision__validate__negative__opcodesTest extends PHPUnit\Framew
 
     public function test__Opcodes_too_hort()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'x';
         $revision->baseText = 'Answer about thunderbird 14-16.';

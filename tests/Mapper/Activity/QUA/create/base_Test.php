@@ -6,17 +6,17 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
 
     public function test_CreateWithFullParams_Ok()
     {
-        $question = Question_Model::init_with_title('Когда закончится дождь?');
+        $question = \Model\Question::init_with_title('Когда закончится дождь?');
 
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->text = 'Melody of my life.';
 
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 13;
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';
 
-        $revision = Revision_Model::init_with_DB_state([
+        $revision = \Model\Revision::init_with_DB_state([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',
@@ -27,14 +27,14 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
             'rev_created_at' => '2015-12-16 13:28:56',
         ]);
 
-        $activity = new Activity_Model();
-        $activity->type = Activity_Model::F_Q_UPDATE_A;
+        $activity = new \Model\Activity();
+        $activity->type = \Model\Activity::F_Q_UPDATE_A;
         $activity->subject = $question;
         $activity->data = ['user' => $user, 'revision' => $revision];
 
         $activity = (new QUpdateA_Activity_Mapper('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
-        $this->assertEquals(Activity_Model::F_Q_UPDATE_A, $activity->type);
+        $this->assertEquals(\Model\Activity::F_Q_UPDATE_A, $activity->type);
     }
 }

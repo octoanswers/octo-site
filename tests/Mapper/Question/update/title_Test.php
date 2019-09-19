@@ -4,7 +4,7 @@ class Mapper_Question__update__title__Test extends Abstract_DB_TestCase
 {
     public function test_UpdateWithEmptyTitle_throwException()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 2;
         $question->title = '';
         $question->isRedirect = true;
@@ -15,7 +15,7 @@ class Mapper_Question__update__title__Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithTooShortTitle_throwException()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 2;
         $question->title = 'F';
         $question->isRedirect = true;
@@ -26,7 +26,7 @@ class Mapper_Question__update__title__Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithTooLongTitle_throwException()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 2;
         $question->title = 'Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... ';
         $question->isRedirect = true;

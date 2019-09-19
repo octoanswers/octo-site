@@ -6,7 +6,7 @@ class Mapper_Question__update__isRedirect__Test extends Abstract_DB_TestCase
 
     public function test_UpdateWithIsRedirectParam_Ok()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 2;
         $question->title = 'This is question?';
         $question->isRedirect = true;

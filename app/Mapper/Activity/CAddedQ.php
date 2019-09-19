@@ -2,18 +2,18 @@
 
 class CAddedQ_Activity_Mapper extends Abstract_Mapper
 {
-    public function create(Activity_Model $activity): Activity_Model
+    public function create(\Model\Activity $activity): \Model\Activity
     {
         $category = $activity->subject;
         $question = $activity->data;
 
-        if ($activity->type != Activity_Model::CATEGORY_ADDED_QUESTION) {
+        if ($activity->type != \Model\Activity::CATEGORY_ADDED_QUESTION) {
             throw new Exception("Incorrect activity type \"$activity->type\"", 0);
         }
-        if (!is_a($category, Category_Model::class)) {
+        if (!is_a($category, \Model\Category::class)) {
             throw new Exception('Incorrect activity "subject" class type: ' . get_class($category), 0);
         }
-        if (!is_a($question, Question_Model::class)) {
+        if (!is_a($question, \Model\Question::class)) {
             throw new Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
         }
 

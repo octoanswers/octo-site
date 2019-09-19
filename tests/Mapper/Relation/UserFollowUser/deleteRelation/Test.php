@@ -7,7 +7,7 @@ class UserFollowUser_Relation_Mapper__delete_relation__Test extends Abstract_DB_
     public function test__FullParams__OK()
     {
         // Relation must be in DB
-        $relation = new UserFollowUser_Relation_Model();
+        $relation = new \Model\Relation\UserFollowUser();
         $relation->id = 3;
         $relation->userID = 4;
         $relation->followedUserID = 5;
@@ -21,7 +21,7 @@ class UserFollowUser_Relation_Mapper__delete_relation__Test extends Abstract_DB_
     public function test__RelationNotExists()
     {
         // Not exists relation
-        $relation = new UserFollowUser_Relation_Model();
+        $relation = new \Model\Relation\UserFollowUser();
         $relation->id = 6;
         $relation->userID = 22;
         $relation->followedUserID = 61;

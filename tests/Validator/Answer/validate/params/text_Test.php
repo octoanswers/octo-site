@@ -4,7 +4,7 @@ class Validator_Answer__validate__params__textTest extends PHPUnit\Framework\Tes
 {
     public function test__Text_is_empty()
     {
-        $answer = new Answer_Model();
+        $answer = new \Model\Answer();
         $answer->id = 4;
         $answer->text = '';
         $answer->updatedAt = '2016-03-19 06:47:41';

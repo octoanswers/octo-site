@@ -1,9 +1,11 @@
 <?php
 
-class User_Model extends Abstract_Model
+namespace Model;
+
+class User extends Model
 {
-    use Init_User_Model_Trait;
-    use Avatar_User_Model_Trait;
+    use \Init_User_Model_Trait;
+    use \Avatar_User_Model_Trait;
 
     public $id; // int
     public $username; // string

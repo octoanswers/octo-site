@@ -4,7 +4,7 @@ class Validator_Question__validate_exists__params__titleTest extends PHPUnit\Fra
 {
     public function test__Title_not_set()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 13;
         $question->isRedirect = true;
 
@@ -14,7 +14,7 @@ class Validator_Question__validate_exists__params__titleTest extends PHPUnit\Fra
 
     public function test__Title_is_empty()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 13;
         $question->title = '';
         $question->isRedirect = true;
@@ -25,7 +25,7 @@ class Validator_Question__validate_exists__params__titleTest extends PHPUnit\Fra
 
     public function test__Comment_too_short()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 13;
         $question->title = 'x';
         $question->isRedirect = true;
@@ -36,7 +36,7 @@ class Validator_Question__validate_exists__params__titleTest extends PHPUnit\Fra
 
     public function test__Comment_too_long()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 13;
         $question->title = 'Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42.';
         $question->isRedirect = true;

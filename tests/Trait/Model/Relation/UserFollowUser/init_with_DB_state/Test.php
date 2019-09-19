@@ -4,7 +4,7 @@ class Trait_Model_Relation_UserFollowUser__init_with_DB_state__Test extends PHPU
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = UserFollowUser_Relation_Model::init_with_DB_state([
+        $rel = \Model\Relation\UserFollowUser::init_with_DB_state([
             'id'               => 13,
             'user_id'          => 3,
             'followed_user_id' => 9,
@@ -19,7 +19,7 @@ class Trait_Model_Relation_UserFollowUser__init_with_DB_state__Test extends PHPU
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = UserFollowUser_Relation_Model::init_with_DB_state([
+        $rel = \Model\Relation\UserFollowUser::init_with_DB_state([
             'id'               => 13,
             'user_id'          => 3,
             'followed_user_id' => 9,

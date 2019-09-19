@@ -2,7 +2,7 @@
 
 class UserFollowCategory_Relation_Mapper extends Abstract_Mapper
 {
-    public function create(UserFollowCategory_Relation_Model $relation): UserFollowCategory_Relation_Model
+    public function create(\Model\Relation\UserFollowCategory $relation): \Model\Relation\UserFollowCategory
     {
         UserFollowCategory_Relation_Validator::validate_new($relation);
 
@@ -24,12 +24,12 @@ class UserFollowCategory_Relation_Mapper extends Abstract_Mapper
         return $relation;
     }
 
-    private function update(UserFollowCategory_Relation_Model $relation)
+    private function update(\Model\Relation\UserFollowCategory $relation)
     {
         throw new Exception('UserFollowCategory relation "update" method not applicable', 0);
     }
 
-    public function delete_relation(UserFollowCategory_Relation_Model $relation): bool
+    public function delete_relation(\Model\Relation\UserFollowCategory $relation): bool
     {
         UserFollowCategory_Relation_Validator::validate_exists($relation);
 

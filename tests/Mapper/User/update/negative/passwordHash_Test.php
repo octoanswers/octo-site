@@ -4,7 +4,7 @@ class Mapper_User__save__negative__password_hash__Test extends Abstract_DB_TestC
 {
     public function test_notSet()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
@@ -19,7 +19,7 @@ class Mapper_User__save__negative__password_hash__Test extends Abstract_DB_TestC
 
     public function test_isEmpty()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
@@ -35,7 +35,7 @@ class Mapper_User__save__negative__password_hash__Test extends Abstract_DB_TestC
 
     public function test_tooShort()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';
@@ -51,7 +51,7 @@ class Mapper_User__save__negative__password_hash__Test extends Abstract_DB_TestC
 
     public function test_tooLong()
     {
-        $user = new User_Model();
+        $user = new \Model\User();
         $user->id = 37;
         $user->username = 'steve';
         $user->name = 'Steve Bo';

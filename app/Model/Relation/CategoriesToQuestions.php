@@ -1,8 +1,10 @@
 <?php
 
-class CategoriesToQuestions_Relation_Model extends Abstract_Model
+namespace Model\Relation;
+
+class CategoriesToQuestions extends \Model\Model
 {
-    use CategoriesToQuestions_Relation_Model_Trait;
+    use \CategoriesToQuestions_Relation_Model_Trait;
 
     public $id;
     public $categoryID;

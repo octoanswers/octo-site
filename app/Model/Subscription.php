@@ -1,8 +1,10 @@
 <?php
 
-class Subscription_Model extends Abstract_Model
+namespace Model;
+
+class Subscription extends Model
 {
-    use Init_Subscription_Model_Trait;
+    use \Init_Subscription_Model_Trait;
 
     public $id;
     public $questionID;

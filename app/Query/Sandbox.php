@@ -26,7 +26,7 @@ class Sandbox_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::init_with_DB_state($row);
+            $questions[] = \Model\Question::init_with_DB_state($row);
         }
 
         return $questions;
@@ -56,7 +56,7 @@ class Sandbox_Query extends Abstract_Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = Question_Model::init_with_DB_state($row);
+            $questions[] = \Model\Question::init_with_DB_state($row);
         }
 
         return $questions;

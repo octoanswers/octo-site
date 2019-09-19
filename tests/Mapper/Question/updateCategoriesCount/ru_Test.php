@@ -6,7 +6,7 @@ class Mapper_Question__updateCategoriesCount__ru__Test extends Abstract_DB_TestC
 
     public function test__Base()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 13;
         $question->categoriesCount = 2;
 
@@ -20,7 +20,7 @@ class Mapper_Question__updateCategoriesCount__ru__Test extends Abstract_DB_TestC
 
     public function test__EmptyArray()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 13;
         $question->categoriesCount = 0;
 
@@ -34,7 +34,7 @@ class Mapper_Question__updateCategoriesCount__ru__Test extends Abstract_DB_TestC
 
     public function test__CategoriesNotSet()
     {
-        $question = new Question_Model();
+        $question = new \Model\Question();
         $question->id = 13;
 
         $question = (new Question_Mapper('ru'))->updateCategoriesCount($question);

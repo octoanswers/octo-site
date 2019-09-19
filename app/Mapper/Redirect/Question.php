@@ -2,7 +2,7 @@
 
 class Question_Redirect_Mapper extends Abstract_Mapper
 {
-    public function create(Question_Redirect_Model $redirect): Question_Redirect_Model
+    public function create(\Model\Redirect\Question $redirect): \Model\Redirect\Question
     {
         Question_Redirect_Validator::validate($redirect);
 

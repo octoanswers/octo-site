@@ -4,7 +4,7 @@ class Validator_Revision__validate__negative__created_atTest extends PHPUnit\Fra
 {
     public function test__Wrong_type()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Ответ на вопрос про птиц.';

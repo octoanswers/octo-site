@@ -4,7 +4,7 @@ class Validator_Revision__validate__negative__user_IDTest extends PHPUnit\Framew
 {
     public function test__User_ID_equal_zero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Ответ на вопрос про птиц.';
@@ -16,7 +16,7 @@ class Validator_Revision__validate__negative__user_IDTest extends PHPUnit\Framew
 
     public function test__User_ID_below_zero()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Ответ на вопрос про птиц.';

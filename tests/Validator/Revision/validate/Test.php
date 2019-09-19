@@ -4,7 +4,7 @@ class Validator_Revision__validateTest extends PHPUnit\Framework\TestCase
 {
     public function test__Revision_with_full_params()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->id = 13;
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
@@ -19,7 +19,7 @@ class Validator_Revision__validateTest extends PHPUnit\Framework\TestCase
 
     public function test__Revision_with_min_params()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Ответ на вопрос про птиц.';
@@ -39,7 +39,7 @@ class Validator_Revision__validateTest extends PHPUnit\Framework\TestCase
 
     public function test__BaseTextEqualNull()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->userID = 14;

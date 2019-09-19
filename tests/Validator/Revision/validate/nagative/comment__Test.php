@@ -4,7 +4,7 @@ class Validator_Revision__validate__negative__commentTest extends PHPUnit\Framew
 {
     public function test__Comment_is_empty()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Answer written at 11:41.';
@@ -16,7 +16,7 @@ class Validator_Revision__validate__negative__commentTest extends PHPUnit\Framew
 
     public function test__Comment_too_short()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Answer written at 11:41.';
@@ -28,7 +28,7 @@ class Validator_Revision__validate__negative__commentTest extends PHPUnit\Framew
 
     public function test__Comment_too_long()
     {
-        $revision = new Revision_Model();
+        $revision = new \Model\Revision();
         $revision->answerID = 11;
         $revision->opcodes = 'xyz';
         $revision->baseText = 'Answer written at 11:41.';
