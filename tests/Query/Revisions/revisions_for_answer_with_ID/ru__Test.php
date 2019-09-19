@@ -6,7 +6,7 @@ class Query_Revisions__revisions_for_answer_with_ID__ruTest extends Abstract_DB_
 
     public function test__Question_have_some_revisions()
     {
-        $revisions = (new Revisions_Query('ru'))->revisions_for_answer_with_ID(4);
+        $revisions = (new \Query\Revisions('ru'))->revisions_for_answer_with_ID(4);
 
         $this->assertEquals(4, $revisions[0]->id);
         $this->assertEquals(4, $revisions[0]->answerID);
@@ -26,7 +26,7 @@ class Query_Revisions__revisions_for_answer_with_ID__ruTest extends Abstract_DB_
 
     public function test_Question_dont_have_revisions()
     {
-        $actualResponse = (new Revisions_Query('ru'))->revisions_for_answer_with_ID(7);
+        $actualResponse = (new \Query\Revisions('ru'))->revisions_for_answer_with_ID(7);
 
         $this->assertEquals([], $actualResponse);
     }

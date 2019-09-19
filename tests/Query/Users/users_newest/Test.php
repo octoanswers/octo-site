@@ -6,7 +6,7 @@ class Query_Users__users_newestTest extends Abstract_DB_TestCase
 
     public function test__Query_with_no_params()
     {
-        $users = (new Users_Query())->users_newest();
+        $users = (new \Query\Users())->users_newest();
 
         $this->assertEquals(10, count($users));
 

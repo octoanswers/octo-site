@@ -8,7 +8,7 @@ class ShortURL_User_PageController extends Abstract_PageController
 
         $userID = $args['id'];
 
-        $user = (new User_Query())->user_with_ID($userID);
+        $user = (new \Query\User())->user_with_ID($userID);
 
         return $response->withRedirect($user->get_URL($this->lang), 301);
     }

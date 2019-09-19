@@ -18,14 +18,14 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
             // Validate params
             //
 
-            $question = (new Question_Query($this->lang))->question_with_ID($question_id);
+            $question = (new \Query\Question($this->lang))->question_with_ID($question_id);
             \Validator\User::validateEmail($email); // @TODO Need?
 
             //
             // Check already subscribed
             //
 
-            $s = (new Subscriptions_Query($this->lang))->find_with_question_ID_and_email($question_id, $email);
+            $s = (new \Query\Subscriptions($this->lang))->find_with_question_ID_and_email($question_id, $email);
             if ($s != null) {
                 throw new \Exception('Email "' . $email . '" already subscribed to question with ID ' . $question_id, 0);
             }

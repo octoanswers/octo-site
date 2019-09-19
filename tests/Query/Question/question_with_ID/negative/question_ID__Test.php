@@ -7,7 +7,7 @@ class Query_Question__question_with_ID__negative__question_IDTest extends Abstra
         $questionID = 0;
 
         $this->expectExceptionMessage('Question id param 0 must be greater than or equal to 1');
-        $question = (new Question_Query('ru'))->question_with_ID($questionID);
+        $question = (new \Query\Question('ru'))->question_with_ID($questionID);
     }
 
     public function test__Negative_question_ID()
@@ -15,6 +15,6 @@ class Query_Question__question_with_ID__negative__question_IDTest extends Abstra
         $questionID = -1;
 
         $this->expectExceptionMessage('Question id param -1 must be greater than or equal to 1');
-        $question = (new Question_Query('ru'))->question_with_ID($questionID);
+        $question = (new \Query\Question('ru'))->question_with_ID($questionID);
     }
 }

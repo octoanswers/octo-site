@@ -6,7 +6,7 @@ class Query_QuestionsCount__count_questions_without_answersTest extends Abstract
 
     public function test__Count_without_params()
     {
-        $count = (new QuestionsCount_Query('ru'))->count_questions_without_answers();
+        $count = (new \Query\QuestionsCount('ru'))->count_questions_without_answers();
         $this->assertEquals(19, $count);
     }
 }

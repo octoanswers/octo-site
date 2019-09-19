@@ -6,7 +6,7 @@ class Query_Categories__find_newest__enTest extends Abstract_DB_TestCase
 
     public function test__Find_without_params()
     {
-        $categories = (new Categories_Query('en'))->find_newest();
+        $categories = (new \Query\Categories('en'))->find_newest();
 
         $this->assertEquals(10, count($categories));
 

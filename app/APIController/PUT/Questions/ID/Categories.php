@@ -23,11 +23,11 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             // Validate params
             //
 
-            $user = (new User_Query())->user_with_API_key($api_key);
+            $user = (new \Query\User())->user_with_API_key($api_key);
 
-            $question = (new Question_Query($this->lang))->question_with_ID($question_id);
+            $question = (new \Query\Question($this->lang))->question_with_ID($question_id);
 
-            $old_categories_array = (new Categories_Query($this->lang))->categories_for_question_with_ID($question->id);
+            $old_categories_array = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
 
             $oldCategoriesTitles = [];
             foreach ($old_categories_array as $category) {
@@ -44,7 +44,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
 
             $newCategories = [];
             foreach ($newCategoriesTitles as $category_title) {
-                $category = (new Category_Query($this->lang))->find_with_title($category_title);
+                $category = (new \Query\Category($this->lang))->find_with_title($category_title);
                 if ($category === null) {
                     $category = new \Model\Category();
                     $category->title = $category_title;
@@ -54,7 +54,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
 
                 $newCategories[] = $category;
 
-                $er = (new CategoriesToQuestions_Relations_Query($this->lang))->find_by_category_ID_and_question_ID($category->id, $question->id);
+                $er = (new \Query\Relations\CategoriesToQuestions($this->lang))->find_by_category_ID_and_question_ID($category->id, $question->id);
                 if ($er === null) {
                     $er = new \Model\Relation\CategoriesToQuestions();
                     $er->categoryID = $category->id;

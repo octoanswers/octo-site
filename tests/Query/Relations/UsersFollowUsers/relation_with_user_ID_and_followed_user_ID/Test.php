@@ -6,7 +6,7 @@ class Query_Relations_UsersFollowUsers__relation_with_user_ID_and_followed_user_
 
     public function test__Relation_exists()
     {
-        $relation = (new UsersFollowUsers_Relations_Query('ru'))->relation_with_user_ID_and_followed_user_ID(4, 5);
+        $relation = (new \Query\Relations\UsersFollowUsers('ru'))->relation_with_user_ID_and_followed_user_ID(4, 5);
 
         $this->assertEquals(3, $relation->id);
         $this->assertEquals(4, $relation->userID);
@@ -16,7 +16,7 @@ class Query_Relations_UsersFollowUsers__relation_with_user_ID_and_followed_user_
 
     public function test__Relation_not_exists()
     {
-        $relation = (new UsersFollowUsers_Relations_Query('ru'))->relation_with_user_ID_and_followed_user_ID(3, 99);
+        $relation = (new \Query\Relations\UsersFollowUsers('ru'))->relation_with_user_ID_and_followed_user_ID(3, 99);
         $this->assertEquals(null, $relation);
     }
 }

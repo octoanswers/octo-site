@@ -15,12 +15,12 @@ class Edit_Answer_PageController extends Abstract_PageController
         $answer_ID = $args['id'];
 
         try {
-            $this->question = (new Question_Query($this->lang))->question_with_ID($answer_ID);
+            $this->question = (new \Query\Question($this->lang))->question_with_ID($answer_ID);
         } catch (Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->answer = (new Answers_Query($this->lang))->answer_with_ID($this->question->id);
+        $this->answer = (new \Query\Answers($this->lang))->answer_with_ID($this->question->id);
 
         if ($this->answer == null) {
             $answer = new \Model\Answer();
@@ -50,7 +50,7 @@ class Edit_Answer_PageController extends Abstract_PageController
     {
         try {
             $how_to_edit_question_ID = $this->translator->get('service_id', 'how_to_edit');
-            $how_to_edit_question = (new Question_Query($this->lang))->question_with_ID($how_to_edit_question_ID);
+            $how_to_edit_question = (new \Query\Question($this->lang))->question_with_ID($how_to_edit_question_ID);
         } catch (Throwable $e) {
             $how_to_edit_question = null;
         }

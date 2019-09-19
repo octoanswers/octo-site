@@ -10,10 +10,10 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $this->questions = (new Questions_Query($this->lang))->find_recently_updated($this->page - 1);
+        $this->questions = (new \Query\Questions($this->lang))->find_recently_updated($this->page - 1);
 
         // foreach ($this->questions as $question) {
-        //     $contributors_array = (new Contributors_Query($this->lang))->find_answer_contributors($question->id);
+        //     $contributors_array = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
         //     foreach ($contributors_array as $contributor) {
         //         $this->contributors[$question->id][] = $contributor;
         //     }

@@ -9,7 +9,7 @@ class Lang_SitemapXML_PageController extends Abstract_PageController
     {
         $this->lang = $args['lang'];
 
-        $questions = (new Questions_Query($this->lang))->find_newest(self::PAGE, self::QUESTIONS_PER_PAGE);
+        $questions = (new \Query\Questions($this->lang))->find_newest(self::PAGE, self::QUESTIONS_PER_PAGE);
 
         $output = '';
         $output .= '<?xml version="1.0" encoding="UTF-8"?>';

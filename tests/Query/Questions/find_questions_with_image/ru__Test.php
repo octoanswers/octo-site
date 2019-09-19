@@ -6,7 +6,7 @@ class Query_Questions__find_questions_with_image__ruTest extends Abstract_DB_Tes
 
     public function test__Find_without_params()
     {
-        $questions = (new Questions_Query('ru'))->find_questions_with_image(32);
+        $questions = (new \Query\Questions('ru'))->find_questions_with_image(32);
 
         $this->assertEquals(3, count($questions));
 
@@ -25,7 +25,7 @@ class Query_Questions__find_questions_with_image__ruTest extends Abstract_DB_Tes
 
     public function test__First_page()
     {
-        $questions = (new Questions_Query('ru'))->find_questions_with_image(27);
+        $questions = (new \Query\Questions('ru'))->find_questions_with_image(27);
 
         $this->assertEquals(3, count($questions));
 
@@ -44,7 +44,7 @@ class Query_Questions__find_questions_with_image__ruTest extends Abstract_DB_Tes
 
     public function test__Second_page()
     {
-        $questions = (new Questions_Query('ru'))->find_questions_with_image(2);
+        $questions = (new \Query\Questions('ru'))->find_questions_with_image(2);
 
         $this->assertEquals(0, count($questions));
     }

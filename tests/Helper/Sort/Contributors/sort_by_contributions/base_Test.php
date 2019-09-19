@@ -1,6 +1,6 @@
 <?php
 
-class Contributors_Sort_Helper__sort_by_contributions__Test extends PHPUnit\Framework\TestCase
+class Helper_Sort_Contributors__sort_by_contributions__Test extends PHPUnit\Framework\TestCase
 {
     public function testRevisionExists()
     {
@@ -10,7 +10,7 @@ class Contributors_Sort_Helper__sort_by_contributions__Test extends PHPUnit\Fram
             ['user' => 2,  'contribution' => 19],
         ];
 
-        $contributors = Contributors_Sort_Helper::sort_by_contributions($contributors);
+        $contributors = \Helper\Sort\Contributors::sort_by_contributions($contributors);
 
         $this->assertEquals(13, $contributors[0]['user']);
         $this->assertEquals(2, $contributors[1]['user']);
@@ -19,7 +19,7 @@ class Contributors_Sort_Helper__sort_by_contributions__Test extends PHPUnit\Fram
 
     public function test__EmptyParam()
     {
-        $contributors = Contributors_Sort_Helper::sort_by_contributions([]);
+        $contributors = \Helper\Sort\Contributors::sort_by_contributions([]);
 
         $this->assertEquals(0, count($contributors));
     }

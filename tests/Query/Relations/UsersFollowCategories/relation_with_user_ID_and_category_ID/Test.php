@@ -6,7 +6,7 @@ class Query_Relations_UsersFollowCategories__relation_with_user_ID_and_category_
 
     public function test__Relation_exists()
     {
-        $relation = (new UsersFollowCategories_Relations_Query('ru'))->relation_with_user_ID_and_category_ID(2, 16);
+        $relation = (new \Query\Relations\UsersFollowCategories('ru'))->relation_with_user_ID_and_category_ID(2, 16);
 
         $this->assertEquals(6, $relation->id);
         $this->assertEquals(2, $relation->userID);
@@ -16,7 +16,7 @@ class Query_Relations_UsersFollowCategories__relation_with_user_ID_and_category_
 
     public function test__Relation_not_exists()
     {
-        $relation = (new UsersFollowCategories_Relations_Query('ru'))->relation_with_user_ID_and_category_ID(3, 99);
+        $relation = (new \Query\Relations\UsersFollowCategories('ru'))->relation_with_user_ID_and_category_ID(3, 99);
 
         $this->assertEquals(null, $relation);
     }

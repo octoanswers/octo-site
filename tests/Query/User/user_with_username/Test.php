@@ -6,7 +6,7 @@ class Query_Users__user_with_usernameTest extends Abstract_DB_TestCase
 
     public function test__Base()
     {
-        $user = (new User_Query())->user_with_username('sasha');
+        $user = (new \Query\User())->user_with_username('sasha');
 
         $this->assertEquals(4, $user->id);
         $this->assertEquals('sasha', $user->username);

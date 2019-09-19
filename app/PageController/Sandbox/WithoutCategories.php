@@ -15,7 +15,7 @@ class WithoutCategories_Sandbox_PageController extends Abstract_PageController
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         try {
-            $this->questions = (new Sandbox_Query($this->lang))->questions_without_categories($this->page);
+            $this->questions = (new \Query\Sandbox($this->lang))->questions_without_categories($this->page);
         } catch (\Exception $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }

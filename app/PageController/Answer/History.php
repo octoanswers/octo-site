@@ -16,16 +16,16 @@ class History_Answer_PageController extends Abstract_PageController
         $answer_ID = $args['id'];
 
         try {
-            $this->question = (new Question_Query($this->lang))->question_with_ID($answer_ID);
+            $this->question = (new \Query\Question($this->lang))->question_with_ID($answer_ID);
         } catch (Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->revisions = (new Revisions_Query($this->lang))->revisions_for_answer_with_ID($answer_ID);
+        $this->revisions = (new \Query\Revisions($this->lang))->revisions_for_answer_with_ID($answer_ID);
 
         $this->users = [];
         foreach ($this->revisions as &$revision) {
-            $this->users[] = (new User_Query())->user_with_ID($revision->userID);
+            $this->users[] = (new \Query\User())->user_with_ID($revision->userID);
         }
 
         $this->template = 'answer_history';

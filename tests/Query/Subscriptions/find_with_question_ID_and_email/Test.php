@@ -6,7 +6,7 @@ class Query_Subscriptions__find_with_question_ID_and_emailTest extends Abstract_
 
     public function test__Basic_params()
     {
-        $s = (new Subscriptions_Query('ru'))->find_with_question_ID_and_email(236, 'data@test.ru');
+        $s = (new \Query\Subscriptions('ru'))->find_with_question_ID_and_email(236, 'data@test.ru');
 
         $this->assertEquals(2, $s->id);
         $this->assertEquals(236, $s->questionID);
@@ -16,7 +16,7 @@ class Query_Subscriptions__find_with_question_ID_and_emailTest extends Abstract_
 
     public function test__Subscription_not_found()
     {
-        $s = (new Subscriptions_Query('ru'))->find_with_question_ID_and_email(665, 'test@mail.ru');
+        $s = (new \Query\Subscriptions('ru'))->find_with_question_ID_and_email(665, 'test@mail.ru');
 
         $this->assertEquals(null, $s);
     }

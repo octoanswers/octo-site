@@ -6,7 +6,7 @@ class Query_Sandbox__questions_without_categoriesTest extends Abstract_DB_TestCa
 
     public function test__Without_params()
     {
-        $questions = (new Sandbox_Query('ru'))->questions_without_categories();
+        $questions = (new \Query\Sandbox('ru'))->questions_without_categories();
 
         $this->assertEquals(10, count($questions));
 
@@ -19,7 +19,7 @@ class Query_Sandbox__questions_without_categoriesTest extends Abstract_DB_TestCa
 
     public function test__First_page()
     {
-        $questions = (new Sandbox_Query('ru'))->questions_without_categories(1);
+        $questions = (new \Query\Sandbox('ru'))->questions_without_categories(1);
 
         $this->assertEquals(10, count($questions));
 
@@ -32,7 +32,7 @@ class Query_Sandbox__questions_without_categoriesTest extends Abstract_DB_TestCa
 
     public function test__Second_page()
     {
-        $questions = (new Sandbox_Query('ru'))->questions_without_categories(2);
+        $questions = (new \Query\Sandbox('ru'))->questions_without_categories(2);
 
         $this->assertEquals(10, count($questions));
 

@@ -13,7 +13,7 @@ class Show_Question_PageController extends Abstract_PageController
         $questionID = $args['id'];
 
         try {
-            $question = (new Question_Query($this->lang))->question_with_ID($questionID);
+            $question = (new \Query\Question($this->lang))->question_with_ID($questionID);
         } catch (Throwable $e) {
             return (new PageNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -29,13 +29,13 @@ class Show_Question_PageController extends Abstract_PageController
 
         try {
             $question_title = Title_Helper::title_from_question_URI($question_URI);
-            $this->question = (new Question_Query($this->lang))->question_with_title($question_title);
+            $this->question = (new \Query\Question($this->lang))->question_with_title($question_title);
         } catch (Throwable $e) {
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         if ($this->question->isRedirect) {
-            $redirect = (new Question_Redirects_Query($this->lang))->redirect_for_question_with_ID($this->question->id);
+            $redirect = (new \Query\Redirects\Question($this->lang))->redirect_for_question_with_ID($this->question->id);
             $this->questionRedirect = \Model\Question::init_with_title($redirect->toTitle);
 
             $need_stop_redirect = $request->getParam('no_redirect');
@@ -57,7 +57,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         $redirected_question_ID = $request->getParam('redirect_from_id') ? (int) $request->getParam('redirect_from_id') : null;
         if ($redirected_question_ID) {
-            $this->redirectedQuestion = (new Question_Query($this->lang))->question_with_ID($redirected_question_ID);
+            $this->redirectedQuestion = (new \Query\Question($this->lang))->question_with_ID($redirected_question_ID);
         }
 
         if (isset($this->question->answer) && strlen($this->question->answer->text)) {
@@ -67,7 +67,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         $this->_prepare_follow_button();
 
-        $this->contributors = (new Contributors_Query($this->lang))->find_answer_contributors($this->question->id);
+        $this->contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($this->question->id);
 
         if (count($this->contributors) > 3) {
             $this->contributors_top = array_slice($this->contributors, 0, 3);
@@ -75,7 +75,7 @@ class Show_Question_PageController extends Abstract_PageController
             $this->contributors_top = $this->contributors;
         }
 
-        $this->categories = (new Categories_Query($this->lang))->categories_for_question_with_ID($this->question->id);
+        $this->categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($this->question->id);
 
         if (count($this->categories)) {
             if (count($this->categories) > 2) {
@@ -133,7 +133,7 @@ class Show_Question_PageController extends Abstract_PageController
             $authUserID = $this->authUser->id;
             $question_id = $this->question->id;
 
-            $relation = (new UsersFollowQuestions_Relations_Query($this->lang))->relation_with_user_ID_and_question_ID($authUserID, $question_id);
+            $relation = (new \Query\Relations\UsersFollowQuestions($this->lang))->relation_with_user_ID_and_question_ID($authUserID, $question_id);
 
             $this->followed = $relation ? true : false;
         }
@@ -156,7 +156,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         foreach ($keys as $key) {
             try {
-                $question = (new Question_Query($this->lang))->question_with_ID((int) $key);
+                $question = (new \Query\Question($this->lang))->question_with_ID((int) $key);
                 $related_questions[] = $question;
             } catch (\Exception $e) {
                 // do nothing

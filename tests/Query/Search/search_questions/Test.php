@@ -6,7 +6,7 @@ class Query_Search__search_questionsTest extends Abstract_DB_TestCase
 
     public function test__Basic_search()
     {
-        $questions = (new Search_Query('ru'))->search_questions('птицы');
+        $questions = (new \Query\Search('ru'))->search_questions('птицы');
 
         $this->assertEquals(5, count($questions));
 

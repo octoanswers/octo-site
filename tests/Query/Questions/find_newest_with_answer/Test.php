@@ -6,7 +6,7 @@ class Query_Questions__find_newest_with_answerTest extends Abstract_DB_TestCase
 
     public function test__Find_without_params()
     {
-        $questions = (new Questions_Query('ru'))->find_newest_with_answer();
+        $questions = (new \Query\Questions('ru'))->find_newest_with_answer();
 
         $this->assertEquals(10, count($questions));
 
@@ -21,7 +21,7 @@ class Query_Questions__find_newest_with_answerTest extends Abstract_DB_TestCase
 
     public function test__First_page()
     {
-        $questions = (new Questions_Query('ru'))->find_newest_with_answer(1);
+        $questions = (new \Query\Questions('ru'))->find_newest_with_answer(1);
 
         $this->assertEquals(10, count($questions));
 
@@ -36,7 +36,7 @@ class Query_Questions__find_newest_with_answerTest extends Abstract_DB_TestCase
 
     public function test__Second_page()
     {
-        $questions = (new Questions_Query('ru'))->find_newest_with_answer(2);
+        $questions = (new \Query\Questions('ru'))->find_newest_with_answer(2);
 
         $this->assertEquals(1, count($questions));
     }

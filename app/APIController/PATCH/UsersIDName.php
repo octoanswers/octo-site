@@ -20,7 +20,7 @@ class UsersIDName_PATCH_APIController extends Abstract_APIController
                 throw new Exception('User "name" property null must be a string', 0);
             }
 
-            $user = (new User_Query())->user_with_API_key($api_key);
+            $user = (new \Query\User())->user_with_API_key($api_key);
             $old_name = $user->name;
 
             if ($user->id != $user_ID) {

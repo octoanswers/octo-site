@@ -6,7 +6,7 @@ class Query_Question__question_with_titleTest extends Abstract_DB_TestCase
 
     public function test__Question_with_answer()
     {
-        $question = (new Question_Query('ru'))->question_with_title('Как птицы помечают свою территорию?');
+        $question = (new \Query\Question('ru'))->question_with_title('Как птицы помечают свою территорию?');
 
         $this->assertEquals(6, $question->id);
         $this->assertEquals('Как птицы помечают свою территорию?', $question->title);
@@ -15,7 +15,7 @@ class Query_Question__question_with_titleTest extends Abstract_DB_TestCase
 
     public function test__Question_without_answer()
     {
-        $question = (new Question_Query('ru'))->question_with_title('В чем драматизм человека?');
+        $question = (new \Query\Question('ru'))->question_with_title('В чем драматизм человека?');
 
         $this->assertEquals(5, $question->id);
         $this->assertEquals('В чем драматизм человека?', $question->title);

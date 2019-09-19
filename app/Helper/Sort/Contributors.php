@@ -1,6 +1,8 @@
 <?php
 
-class Contributors_Sort_Helper
+namespace Helper\Sort;
+
+class Contributors
 {
     public static function sort_by_contributions(array $contributors): array
     {

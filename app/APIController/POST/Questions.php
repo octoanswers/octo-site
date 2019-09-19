@@ -18,7 +18,7 @@ class Questions_POST_APIController extends Abstract_APIController
                 $question = (new \Mapper\Question($this->lang))->create($question);
             } catch (\Exception $e) {
                 if ($e->getCode() == 23000) {
-                    $question = (new Question_Query($this->lang))->question_with_title($title);
+                    $question = (new \Query\Question($this->lang))->question_with_title($title);
                 }
             }
 

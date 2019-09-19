@@ -6,7 +6,7 @@ class Query_Questions__find_newest__abnormal__per_pageTest extends Abstract_DB_T
 
     public function test__Find_first_13_questions()
     {
-        $questions = (new Questions_Query('ru'))->find_newest(1, 13);
+        $questions = (new \Query\Questions('ru'))->find_newest(1, 13);
 
         $this->assertEquals(13, count($questions));
 

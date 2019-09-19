@@ -14,10 +14,10 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $this->questionsCount = (new QuestionsCount_Query($this->lang))->count_questions_without_answers();
+        $this->questionsCount = (new \Query\QuestionsCount($this->lang))->count_questions_without_answers();
 
         try {
-            $this->questions = (new Sandbox_Query($this->lang))->find_newest_without_answer($this->page);
+            $this->questions = (new \Query\Sandbox($this->lang))->find_newest_without_answer($this->page);
         } catch (\Exception $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }

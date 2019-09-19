@@ -6,7 +6,7 @@ class Query_Users__user_with_username__abnormal__IDTest extends Abstract_DB_Test
 
     public function test__ID_not_exists()
     {
-        $user = (new User_Query())->user_with_username('notexist667');
+        $user = (new \Query\User())->user_with_username('notexist667');
         $this->assertEquals(null, $user);
     }
 }

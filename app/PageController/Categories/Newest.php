@@ -10,9 +10,9 @@ class Newest_Categories_PageController extends Abstract_PageController
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $categories_count = (new Categories_Query($this->lang))->categories_last_ID();
+        $categories_count = (new \Query\Categories($this->lang))->categories_last_ID();
 
-        $this->categories = (new Categories_Query($this->lang))->find_newest($this->page);
+        $this->categories = (new \Query\Categories($this->lang))->find_newest($this->page);
 
         $this->template = 'categories';
         $this->pageTitle = $this->_get_page_title();

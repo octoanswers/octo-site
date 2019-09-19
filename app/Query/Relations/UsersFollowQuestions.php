@@ -1,20 +1,22 @@
 <?php
 
-class UsersFollowQuestions_Relations_Query extends Abstract_Query
+namespace Query\Relations;
+
+class UsersFollowQuestions extends \Query\Query
 {
     public function relation_with_user_ID_and_question_ID(int $userID, int $followedQuestionID)
     {
         $sql = 'SELECT * FROM er_users_follow_questions WHERE user_id=:user_id AND question_id=:question_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':user_id', $userID, PDO::PARAM_INT);
-        $stmt->bindParam(':question_id', $followedQuestionID, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $userID, \PDO::PARAM_INT);
+        $stmt->bindParam(':question_id', $followedQuestionID, \PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
 
-            throw new Exception($error[2], $error[1]);
+            throw new \Exception($error[2], $error[1]);
         }
 
-        if (!$row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        if (!$row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
             return;
         }
 
@@ -28,14 +30,14 @@ class UsersFollowQuestions_Relations_Query extends Abstract_Query
     {
         $sql = 'SELECT question_id FROM er_users_follow_questions WHERE (user_id=:user_id)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':user_id', $userID, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $userID, \PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
 
-            throw new Exception($error[2], $error[1]);
+            throw new \Exception($error[2], $error[1]);
         }
 
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         $follows_questions = [];
         foreach ($results as $row) {

@@ -14,9 +14,9 @@ class Newest_Users_PageController extends Abstract_PageController
         $this->list = 'newest';
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 0;
 
-        $usersCount = (new Users_Query())->users_last_ID();
+        $usersCount = (new \Query\Users())->users_last_ID();
 
-        $this->users = (new Users_Query())->users_newest();
+        $this->users = (new \Query\Users())->users_newest();
 
         $this->template = 'users';
         $this->pageTitle = $this->_get_page_title();

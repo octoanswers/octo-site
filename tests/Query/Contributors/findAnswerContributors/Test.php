@@ -6,7 +6,7 @@ class Query_Contributors__find_answer_contributorsTest extends Abstract_DB_TestC
 
     public function test__Contributors_exists()
     {
-        $contributors = (new Contributors_Query('ru'))->find_answer_contributors(4);
+        $contributors = (new \Query\Contributors('ru'))->find_answer_contributors(4);
 
         $this->assertEquals(4, $contributors[0]->id);
         $this->assertEquals('Известный писатель', $contributors[0]->signature);
@@ -25,7 +25,7 @@ class Query_Contributors__find_answer_contributorsTest extends Abstract_DB_TestC
 
     public function test__Contributors_not_exists()
     {
-        $contributors = (new Contributors_Query('ru'))->find_answer_contributors(28);
+        $contributors = (new \Query\Contributors('ru'))->find_answer_contributors(28);
 
         $this->assertEquals(0, count($contributors));
     }

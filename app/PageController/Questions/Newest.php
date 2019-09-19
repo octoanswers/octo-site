@@ -10,14 +10,14 @@ class Newest_Questions_PageController extends Abstract_PageController
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $questionsCount = (new QuestionsCount_Query($this->lang))->questions_last_ID();
+        $questionsCount = (new \Query\QuestionsCount($this->lang))->questions_last_ID();
 
-        $this->questions = (new Questions_Query($this->lang))->find_newest_with_answer($this->page);
+        $this->questions = (new \Query\Questions($this->lang))->find_newest_with_answer($this->page);
 
-        $this->questionsCount = (new QuestionsCount_Query($this->lang))->count_questions_with_answers();
+        $this->questionsCount = (new \Query\QuestionsCount($this->lang))->count_questions_with_answers();
 
         foreach ($this->questions as $question) {
-            $contributors_array = (new Contributors_Query($this->lang))->find_answer_contributors($question->id);
+            $contributors_array = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
             foreach ($contributors_array as $contributor) {
                 $this->contributors[$question->id][] = $contributor;
             }

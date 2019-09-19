@@ -17,11 +17,11 @@ class UsersIDFollow_POST_APIController extends Abstract_APIController
             // Validate params
             //
 
-            $user = (new User_Query())->user_with_API_key($api_key);
+            $user = (new \Query\User())->user_with_API_key($api_key);
 
-            $followed_user = (new User_Query())->user_with_ID($followed_user_ID);
+            $followed_user = (new \Query\User())->user_with_ID($followed_user_ID);
 
-            $relation = (new UsersFollowUsers_Relations_Query($this->lang))->relation_with_user_ID_and_followed_user_ID($user->id, $followed_user_ID);
+            $relation = (new \Query\Relations\UsersFollowUsers($this->lang))->relation_with_user_ID_and_followed_user_ID($user->id, $followed_user_ID);
             if ($relation) {
                 throw new Exception('User with ID "' . $followed_user_ID . '" already followed by user with ID "' . $user->id . '"', 0);
             }

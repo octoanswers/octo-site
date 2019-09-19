@@ -6,7 +6,7 @@ class Query_Relations_CategoriesToQuestions__find_by_category_title_and_question
 
     public function test__Relation_exists()
     {
-        $er = (new CategoriesToQuestions_Relations_Query('ru'))->find_by_category_title_and_question_ID('птицы', 22);
+        $er = (new \Query\Relations\CategoriesToQuestions('ru'))->find_by_category_title_and_question_ID('птицы', 22);
 
         $this->assertEquals(21, $er->id);
         $this->assertEquals(13, $er->categoryID);
@@ -15,7 +15,7 @@ class Query_Relations_CategoriesToQuestions__find_by_category_title_and_question
 
     public function test__Relation_not_exists()
     {
-        $er = (new CategoriesToQuestions_Relations_Query('ru'))->find_by_category_title_and_question_ID('tagnotexists', 12);
+        $er = (new \Query\Relations\CategoriesToQuestions('ru'))->find_by_category_title_and_question_ID('tagnotexists', 12);
 
         $this->assertEquals(null, $er);
     }

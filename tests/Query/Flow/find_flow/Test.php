@@ -6,7 +6,7 @@ class Query_Flow__find_flowTest extends Abstract_DB_TestCase
 
     public function test__First_page()
     {
-        $activities = (new Flow_Query('ru'))->find_flow();
+        $activities = (new \Query\Flow('ru'))->find_flow();
 
         $this->assertEquals(10, count($activities));
 

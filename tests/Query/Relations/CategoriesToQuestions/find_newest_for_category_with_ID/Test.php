@@ -6,7 +6,7 @@ class Query_Relations_CategoriesToQuestions__find_newest_for_category_with_IDTes
 
     public function test__Find_without_params()
     {
-        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->find_newest_for_category_with_ID(58);
+        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->find_newest_for_category_with_ID(58);
 
         $this->assertEquals(10, count($relations));
 
@@ -21,7 +21,7 @@ class Query_Relations_CategoriesToQuestions__find_newest_for_category_with_IDTes
 
     public function test__First_page()
     {
-        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->find_newest_for_category_with_ID(58, 1);
+        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->find_newest_for_category_with_ID(58, 1);
 
         $this->assertEquals(10, count($relations));
 
@@ -36,7 +36,7 @@ class Query_Relations_CategoriesToQuestions__find_newest_for_category_with_IDTes
 
     public function test__Second_page()
     {
-        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->find_newest_for_category_with_ID(58, 2);
+        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->find_newest_for_category_with_ID(58, 2);
 
         $this->assertEquals(5, count($relations));
 
@@ -51,7 +51,7 @@ class Query_Relations_CategoriesToQuestions__find_newest_for_category_with_IDTes
 
     public function test__Third_page()
     {
-        $relations = (new CategoriesToQuestions_Relations_Query('ru'))->find_newest_for_category_with_ID(58, 3);
+        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->find_newest_for_category_with_ID(58, 3);
 
         $this->assertEquals(0, count($relations));
     }

@@ -6,7 +6,7 @@ class Query_Categories__categories_for_question_with_ID__ruTest extends Abstract
 
     public function test__Question_have_two_categories()
     {
-        $categories = (new Categories_Query('ru'))->categories_for_question_with_ID(22);
+        $categories = (new \Query\Categories('ru'))->categories_for_question_with_ID(22);
 
         $this->assertEquals(2, count($categories));
 
@@ -19,7 +19,7 @@ class Query_Categories__categories_for_question_with_ID__ruTest extends Abstract
 
     public function test__Question_dont_havecategories()
     {
-        $categories = (new Categories_Query('ru'))->categories_for_question_with_ID(5);
+        $categories = (new \Query\Categories('ru'))->categories_for_question_with_ID(5);
 
         $this->assertEquals(0, count($categories));
     }

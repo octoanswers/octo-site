@@ -1,10 +1,12 @@
 <?php
 
-class Contributors_Query extends Abstract_Query
+namespace Query;
+
+class Contributors extends \Query\Query
 {
     public function find_answer_contributors(int $answerID): array
     {
-        $revisions = (new Revisions_Query($this->lang))->revisions_for_answer_with_ID($answerID);
+        $revisions = (new \Query\Revisions($this->lang))->revisions_for_answer_with_ID($answerID);
         $contributions = [];
 
         foreach ($revisions as $revision) {
@@ -30,7 +32,7 @@ class Contributors_Query extends Abstract_Query
             ];
         }
 
-        $sortedContributorsData = Contributors_Sort_Helper::sort_by_contributions($contributorsData);
+        $sortedContributorsData = \Helper\Sort\Contributors::sort_by_contributions($contributorsData);
 
         $contributors = [];
         foreach ($sortedContributorsData as $contributorData) {
@@ -39,7 +41,7 @@ class Contributors_Query extends Abstract_Query
             $insertionsCount = $contributorData['plus'];
             $deletionsCount = $contributorData['minus'];
 
-            $user = (new User_Query())->user_with_ID($userID);
+            $user = (new \Query\User())->user_with_ID($userID);
 
             $contributor = new \Model\User\Contributor();
             $contributor->id = $user->id;

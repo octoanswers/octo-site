@@ -15,13 +15,13 @@ class All_Sandbox_PageController extends Abstract_PageController
         $this->list = 'newest';
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
-        $questionsCount = (new QuestionsCount_Query($this->lang))->questions_last_ID();
+        $questionsCount = (new \Query\QuestionsCount($this->lang))->questions_last_ID();
 
-        $this->questions = (new Questions_Query($this->lang))->find_newest($this->page);
+        $this->questions = (new \Query\Questions($this->lang))->find_newest($this->page);
 
         foreach ($this->questions as $question) {
             if ($question->isRedirect) {
-                $redirect = (new Question_Redirects_Query($this->lang))->redirect_for_question_with_ID($question->id);
+                $redirect = (new \Query\Redirects\Question($this->lang))->redirect_for_question_with_ID($question->id);
                 $this->redirects[$question->id] = $redirect;
             }
         }

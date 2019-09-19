@@ -6,7 +6,7 @@ class Query_Users__user_with_emailTest extends Abstract_DB_TestCase
 
     public function test_Basic()
     {
-        $user = (new User_Query())->user_with_email('pushka@answeropedia.org');
+        $user = (new \Query\User())->user_with_email('pushka@answeropedia.org');
 
         $this->assertEquals(4, $user->id);
         $this->assertEquals('sasha', $user->username);

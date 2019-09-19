@@ -6,7 +6,7 @@ class Query_Questions__find_questions_with_image__enTest extends Abstract_DB_Tes
 
     public function test__Find_without_params()
     {
-        $questions = (new Questions_Query('en'))->find_questions_with_image(29);
+        $questions = (new \Query\Questions('en'))->find_questions_with_image(29);
 
         $this->assertEquals(1, count($questions));
 

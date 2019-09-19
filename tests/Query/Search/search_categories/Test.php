@@ -6,7 +6,7 @@ class Query_Search__search_categoriesTest extends Abstract_DB_TestCase
 
     public function test__Search_with_two_results()
     {
-        $categories = (new Search_Query('ru'))->search_categories('фото');
+        $categories = (new \Query\Search('ru'))->search_categories('фото');
 
         $this->assertEquals(2, count($categories));
 
@@ -19,7 +19,7 @@ class Query_Search__search_categoriesTest extends Abstract_DB_TestCase
 
     public function test__One_letter_search()
     {
-        $categories = (new Search_Query('ru'))->search_categories('а');
+        $categories = (new \Query\Search('ru'))->search_categories('а');
 
         $this->assertEquals(10, count($categories));
 

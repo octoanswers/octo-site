@@ -6,7 +6,7 @@ class Query_Search__search_usersTest extends Abstract_DB_TestCase
 
     public function test__Search_with_two_results()
     {
-        $users = (new Search_Query('users'))->search_users('сява');
+        $users = (new \Query\Search('users'))->search_users('сява');
 
         $this->assertEquals(1, count($users));
 

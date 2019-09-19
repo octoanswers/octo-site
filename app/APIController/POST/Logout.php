@@ -14,7 +14,7 @@ class Logout_POST_APIController extends Abstract_APIController
 
             \Validator\User::validateAPIKey($api_key);
 
-            $user = (new User_Query())->user_with_API_key($api_key);
+            $user = (new \Query\User())->user_with_API_key($api_key);
 
             $cookieStorage = new CookieStorage();
             $cookieStorage->clear();

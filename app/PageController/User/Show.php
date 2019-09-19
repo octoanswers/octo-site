@@ -14,16 +14,16 @@ class Show_User_PageController extends Abstract_PageController
 
         $this->username = $args['username'];
 
-        $this->user = (new User_Query())->user_with_username($this->username);
+        $this->user = (new \Query\User())->user_with_username($this->username);
         if (!$this->user) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->revisions = (new Revisions_Query($this->lang))->find_revisions_for_user_with_ID($this->user->id);
+        $this->revisions = (new \Query\Revisions($this->lang))->find_revisions_for_user_with_ID($this->user->id);
 
         $this->questions = [];
         foreach ($this->revisions as &$revision) {
-            $this->questions[] = (new Question_Query($this->lang))->question_with_ID($revision->answerID);
+            $this->questions[] = (new \Query\Question($this->lang))->question_with_ID($revision->answerID);
         }
 
         $this->_prepare_follow_button();
@@ -55,7 +55,7 @@ class Show_User_PageController extends Abstract_PageController
             $authUserID = $this->authUser->id;
             $followedUserID = $this->user->id;
 
-            $relation = (new UsersFollowUsers_Relations_Query($this->lang))->relation_with_user_ID_and_followed_user_ID($authUserID, $followedUserID);
+            $relation = (new \Query\Relations\UsersFollowUsers($this->lang))->relation_with_user_ID_and_followed_user_ID($authUserID, $followedUserID);
 
             $this->followed = $relation ? true : false;
             $this->includeJS[] = 'user/follow';

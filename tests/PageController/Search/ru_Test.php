@@ -4,7 +4,7 @@ class Questions_Search_PageController__ru__Test extends Abstract_Frontend_TestCa
 {
     protected $setUpDB = ['ru' => ['questions']];
 
-    public function test_BaseQueryString_Ok()
+    public function test__Base_query()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
@@ -26,7 +26,7 @@ class Questions_Search_PageController__ru__Test extends Abstract_Frontend_TestCa
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test_Search_QueryWithoutQuery_EmptyPage()
+    public function test_Empty_query_params()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',

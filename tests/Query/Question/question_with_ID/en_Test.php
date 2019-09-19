@@ -6,7 +6,7 @@ class Query_Question__question_with_ID__enTest extends Abstract_DB_TestCase
 
     public function test__Question_with_answer()
     {
-        $question = (new Question_Query('en'))->question_with_ID(6);
+        $question = (new \Query\Question('en'))->question_with_ID(6);
 
         $this->assertEquals(6, $question->id);
         $this->assertEquals('How birds are mark his territory?', $question->title);

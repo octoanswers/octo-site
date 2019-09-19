@@ -16,7 +16,7 @@ class Login_POST_APIController extends Abstract_APIController
             \Validator\User::validateEmail($user_email);
             \Validator\User::validatePassword($user_password);
 
-            $user = (new User_Query())->user_with_email($user_email);
+            $user = (new \Query\User())->user_with_email($user_email);
             if (!$user) {
                 throw new Exception('User with specific email not found', 1);
             }

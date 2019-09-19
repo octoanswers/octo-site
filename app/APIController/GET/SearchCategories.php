@@ -15,7 +15,7 @@ class SearchCategories_GET_APIController extends Abstract_APIController
             $output = [];
 
             if ($this->query && strlen($this->query)) {
-                $categories = (new Search_Query($this->lang))->search_categories($this->query);
+                $categories = (new \Query\Search($this->lang))->search_categories($this->query);
 
                 foreach ($categories as $category) {
                     $output[] = [

@@ -12,7 +12,7 @@ class Mapper_Question__updateCategoriesCount__ru__Test extends Abstract_DB_TestC
 
         $question = (new \Mapper\Question('ru'))->updateCategoriesCount($question);
 
-        $updatedQuestion = (new Question_Query('ru'))->question_with_ID(13);
+        $updatedQuestion = (new \Query\Question('ru'))->question_with_ID(13);
 
         $this->assertEquals(13, $updatedQuestion->id);
         $this->assertEquals(2, $updatedQuestion->categoriesCount);
@@ -26,7 +26,7 @@ class Mapper_Question__updateCategoriesCount__ru__Test extends Abstract_DB_TestC
 
         $question = (new \Mapper\Question('ru'))->updateCategoriesCount($question);
 
-        $updatedQuestion = (new Question_Query('ru'))->question_with_ID(13);
+        $updatedQuestion = (new \Query\Question('ru'))->question_with_ID(13);
 
         $this->assertEquals(13, $updatedQuestion->id);
         $this->assertEquals(0, $updatedQuestion->categoriesCount);

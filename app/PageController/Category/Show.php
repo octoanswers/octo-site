@@ -12,7 +12,7 @@ class Show_Category_PageController extends Abstract_PageController
 
         try {
             $category_title = $this->_category_title_from_URI($category_URI);
-            $this->category = (new Category_Query($this->lang))->category_with_title($category_title);
+            $this->category = (new \Query\Category($this->lang))->category_with_title($category_title);
         } catch (\Exception $e) {
             return (new CategoryNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -22,11 +22,11 @@ class Show_Category_PageController extends Abstract_PageController
         $human_date_time_zone = new \DateTimeZone('UTC');
         $date_humanizer = new \Humanizer\HumanDate\HumanDate($human_date_time_zone, $this->lang);
 
-        $category_questions = (new CategoriesToQuestions_Relations_Query($this->lang))->find_newest_for_category_with_ID($this->category->id);
+        $category_questions = (new \Query\Relations\CategoriesToQuestions($this->lang))->find_newest_for_category_with_ID($this->category->id);
         $this->category_questions = [];
 
         foreach ($category_questions as $category_question_er) {
-            $this->category_questions[] = (new Question_Query($this->lang))->question_with_ID($category_question_er->questionID);
+            $this->category_questions[] = (new \Query\Question($this->lang))->question_with_ID($category_question_er->questionID);
 
             //$question['date_humanized'] = $dateHumanizer->format($question->createdAt);
         }
@@ -91,7 +91,7 @@ class Show_Category_PageController extends Abstract_PageController
             $authUserID = $this->authUser->id;
             $categoryID = $this->category->id;
 
-            $relation = (new UsersFollowCategories_Relations_Query($this->lang))->relation_with_user_ID_and_category_ID($authUserID, $categoryID);
+            $relation = (new \Query\Relations\UsersFollowCategories($this->lang))->relation_with_user_ID_and_category_ID($authUserID, $categoryID);
 
             $this->followed = $relation ? true : false;
         }

@@ -1,6 +1,8 @@
 <?php
 
-class Flow_Query extends Abstract_Query
+namespace Query;
+
+class Flow extends \Query\Query
 {
     public function find_flow(): array
     {
@@ -10,9 +12,9 @@ class Flow_Query extends Abstract_Query
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
 
-            throw new Exception($error[2], $error[1]);
+            throw new \Exception($error[2], $error[1]);
         }
-        $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $activities = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         //$follows_questions = [];
         foreach ($activities as &$activity) {

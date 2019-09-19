@@ -16,7 +16,7 @@ class Show_Main_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $this->recent_questions = (new Questions_Query($this->lang))->find_newest_with_answer(1, 5);
+        $this->recent_questions = (new \Query\Questions($this->lang))->find_newest_with_answer(1, 5);
 
         // foreach ($this->recent_questions as $question) {
         //     $categoriesTitles = Category_Extractor_Helper::extractCategories($question->answer->text);
@@ -27,7 +27,7 @@ class Show_Main_PageController extends Abstract_PageController
         // }
 
         foreach ($this->recent_questions as $question) {
-            $contributors_array = (new Contributors_Query($this->lang))->find_answer_contributors($question->id);
+            $contributors_array = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
             foreach ($contributors_array as $contributor) {
                 $this->contributors[$question->id][] = $contributor;
             }

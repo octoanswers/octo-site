@@ -6,7 +6,7 @@ class Query_Relations_UsersFollowUsers__find_users_followed_by_userTest extends 
 
     public function test__Relation_exists()
     {
-        $followed = (new UsersFollowUsers_Relations_Query('ru'))->find_users_followed_by_user(4);
+        $followed = (new \Query\Relations\UsersFollowUsers('ru'))->find_users_followed_by_user(4);
 
         $this->assertEquals(1, $followed[0]);
         $this->assertEquals(5, $followed[1]);
@@ -17,7 +17,7 @@ class Query_Relations_UsersFollowUsers__find_users_followed_by_userTest extends 
 
     public function test__Relation_not_exists()
     {
-        $followed = (new UsersFollowUsers_Relations_Query('ru'))->find_users_followed_by_user(12);
+        $followed = (new \Query\Relations\UsersFollowUsers('ru'))->find_users_followed_by_user(12);
 
         $this->assertEquals(0, count($followed));
     }

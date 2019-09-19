@@ -14,7 +14,7 @@ class Show_Flow_PageController extends Abstract_PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $this->activities = (new Flow_Query($this->lang))->find_flow();
+        $this->activities = (new \Query\Flow($this->lang))->find_flow();
 
         $human_date_timezone = new \DateTimeZone('UTC');
         $date_humanizer = new \Humanizer\HumanDate\HumanDate($human_date_timezone, $this->lang);
