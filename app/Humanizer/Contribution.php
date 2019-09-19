@@ -1,9 +1,11 @@
 <?php
 
+namespace Humanizer;
+
 /**
  * I need to show a page views value in the format of 1K of equal to one thousand, or 1.1K, 1.2K, 1.9K etc,.
  */
-class Contribution_Humanizer
+class Contribution
 {
     public static function humanize_count(int $count): string
     {

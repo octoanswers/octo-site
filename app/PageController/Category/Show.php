@@ -19,8 +19,8 @@ class Show_Category_PageController extends Abstract_PageController
 
         $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
 
-        $human_date_time_zone = new DateTimeZone('UTC');
-        $date_humanizer = new HumanDate($human_date_time_zone, $this->lang);
+        $human_date_time_zone = new \DateTimeZone('UTC');
+        $date_humanizer = new \Humanizer\HumanDate\HumanDate($human_date_time_zone, $this->lang);
 
         $category_questions = (new CategoriesToQuestions_Relations_Query($this->lang))->find_newest_for_category_with_ID($this->category->id);
         $this->category_questions = [];

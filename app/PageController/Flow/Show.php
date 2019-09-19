@@ -16,8 +16,8 @@ class Show_Flow_PageController extends Abstract_PageController
 
         $this->activities = (new Flow_Query($this->lang))->find_flow();
 
-        $human_date_timezone = new DateTimeZone('UTC');
-        $date_humanizer = new HumanDate($human_date_timezone, $this->lang);
+        $human_date_timezone = new \DateTimeZone('UTC');
+        $date_humanizer = new \Humanizer\HumanDate\HumanDate($human_date_timezone, $this->lang);
 
         foreach ($this->activities as &$activity) {
             $activity['data'] = json_decode($activity['data'], true);

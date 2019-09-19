@@ -18,7 +18,7 @@
         </a>
 
         <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-        <?= $this->translator->get('Обновлено:') ?> <?= DateTime_Humanizer::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+        <?= $this->translator->get('Обновлено:') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
 
     </div>
 </div>

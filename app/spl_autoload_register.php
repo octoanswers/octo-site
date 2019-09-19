@@ -15,7 +15,6 @@ spl_autoload_register(function ($class_name) {
         'Lang'              => 'app/Helper/Lang.php',
         'PDOFactory'        => 'app/Helper/PDOFactory.php',
         'CookieStorage'     => 'app/Helper/CookieStorage.php',
-        'HumanDate'         => 'app/Humanizer/HumanDate/HumanDate.php',
         'Translator'        => 'app/Helper/Translator/Translator.php',
 
         // Mailer`s

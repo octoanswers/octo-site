@@ -25,7 +25,7 @@
                     </a>
 
                     <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
-                        <?= Contribution_Humanizer::humanize_count($contributor->contribution) ?>
+                        <?= \Humanizer\Contribution::humanize_count($contributor->contribution) ?>
                     </span>
 
                     <p class="small text-secondary mt-1 mb-0">

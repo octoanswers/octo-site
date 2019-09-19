@@ -1,5 +1,7 @@
 <?php
 
+namespace Humanizer\HumanDate;
+
 /**
  * Class for format date.
  */
@@ -19,8 +21,8 @@ class HumanDate
      */
     public function __construct($timezone = 'UTC', $lang = 'en')
     {
-        if (!($timezone instanceof DateTimeZone)) {
-            $this->timezone = new DateTimeZone($timezone);
+        if (!($timezone instanceof \DateTimeZone)) {
+            $this->timezone = new \DateTimeZone($timezone);
         } else {
             $this->timezone = $timezone;
         }
@@ -213,12 +215,12 @@ class HumanDate
      */
     protected function create_date($date)
     {
-        if (!($date instanceof DateTime)) {
+        if (!($date instanceof \DateTime)) {
             if (is_numeric($date)) {
-                $now = new DateTime('now', $this->timezone);
+                $now = new \DateTime('now', $this->timezone);
                 $date = $now->setTimestamp($date);
             } else {
-                $date = new DateTime($date, $this->timezone);
+                $date = new \DateTime($date, $this->timezone);
             }
         } else {
             $date = clone $date;

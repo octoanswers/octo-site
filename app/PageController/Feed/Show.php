@@ -18,8 +18,8 @@ class Show_Feed_PageController extends Abstract_PageController
         $res = (new Feeds_Query($this->lang))->find_feeds_for_user_with_ID($user_ID);
         $this->activities = $res['activities'];
 
-        $human_date_timezone = new DateTimeZone('UTC');
-        $date_humanizer = new HumanDate($human_date_timezone, $this->lang);
+        $human_date_timezone = new \DateTimeZone('UTC');
+        $date_humanizer = new \Humanizer\HumanDate\HumanDate($human_date_timezone, $this->lang);
 
         foreach ($this->activities as &$activity) {
             $activity['data'] = json_decode($activity['data'], true);

@@ -1,7 +1,5 @@
 <?php
 
-require_once 'app/Humanizer/HumanDate/HumanDate.php';
-
 class HumanDate_Humanizer__Test extends PHPUnit\Framework\TestCase
 {
     private $timezone;
@@ -10,10 +8,10 @@ class HumanDate_Humanizer__Test extends PHPUnit\Framework\TestCase
 
     public function setUp(): void
     {
-        $this->timezone = new DateTimeZone('UTC');
+        $this->timezone = new \DateTimeZone('UTC');
         $this->lang = 'en';
 
-        $this->humanDate = new HumanDate($this->timezone, $this->lang);
+        $this->humanDate = new \Humanizer\HumanDate\HumanDate($this->timezone, $this->lang);
     }
 
     /**
@@ -53,7 +51,7 @@ class HumanDate_Humanizer__Test extends PHPUnit\Framework\TestCase
     public function testWithoutTimezoneAndLanguage()
     {
         $date = new DateTime('-6 seconds');
-        $humanDate = new HumanDate();
+        $humanDate = new \Humanizer\HumanDate\HumanDate();
 
         $formattedDate = $humanDate->format($date);
         $expectedDate = '6 seconds ago';

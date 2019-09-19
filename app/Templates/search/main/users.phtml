@@ -11,7 +11,7 @@
                         <h4 class="h5 card-title"><?= $user->name ?></h4>
                     </a>
                     <h5 class="h6 card-subtitle mb-2 text-muted">
-                        <?= DateTime_Humanizer::humanize_timestamp($this->lang, $user->createdAt) ?>
+                        <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $user->createdAt) ?>
                     </h5>
                     <p class="card-text">Нет подписи</p>
                 </div>

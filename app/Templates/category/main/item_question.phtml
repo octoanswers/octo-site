@@ -41,7 +41,7 @@
             <span class="mx-1 text-muted font_weight_800">&middot;</span>
         <?php endif; ?>
 
-        <span class="semi-small"><?= DateTime_Humanizer::humanize_timestamp($this->lang, $question->answer->updatedAt) ?></span>
+        <span class="semi-small"><?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?></span>
     </div>
 </div>
 <!-- / question item -->

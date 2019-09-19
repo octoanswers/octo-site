@@ -14,7 +14,7 @@
                         Нет описания изменений
                     <?php endif; ?>
                     <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-                    <?= DateTime_Humanizer::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
+                    <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
                 </div>
             </div>
             <pre><?= FineDiff::renderDiffToHTMLFromOpcodes($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
