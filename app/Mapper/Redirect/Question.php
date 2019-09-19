@@ -4,7 +4,7 @@ class Question_Redirect_Mapper extends Abstract_Mapper
 {
     public function create(\Model\Redirect\Question $redirect): \Model\Redirect\Question
     {
-        Question_Redirect_Validator::validate($redirect);
+        \Validator\Redirect\Question::validate($redirect);
 
         $sql = 'INSERT INTO redirects_questions (rd_from, rd_title) VALUES (:rd_from, :rd_title)';
         $stmt = $this->pdo->prepare($sql);

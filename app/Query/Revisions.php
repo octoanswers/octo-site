@@ -22,9 +22,9 @@ class Revisions_Query extends Abstract_Query
 
     public function revisions_for_answer_with_ID(int $questionID): array
     {
-        Question_Validator::validateID($questionID);
-        $page = 1; //QuestionsList_Validator::validatePage($page);
-        $perPage = 10; //QuestionsList_Validator::validatePerPage($perPage);
+        \Validator\Question::validateID($questionID);
+        $page = 1; //\Validator\QuestionsList::validatePage($page);
+        $perPage = 10; //\Validator\QuestionsList::validatePerPage($perPage);
 
         $offset = $perPage * ($page - 1);
 
@@ -52,9 +52,9 @@ class Revisions_Query extends Abstract_Query
 
     public function find_revisions_for_user_with_ID(int $userID): array
     {
-        User_Validator::validateID($userID);
-        $page = 1; //QuestionsList_Validator::validatePage($page);
-        $perPage = 10; //QuestionsList_Validator::validatePerPage($perPage);
+        \Validator\User::validateID($userID);
+        $page = 1; //\Validator\QuestionsList::validatePage($page);
+        $perPage = 10; //\Validator\QuestionsList::validatePerPage($perPage);
 
         $offset = $perPage * ($page - 1);
 

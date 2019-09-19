@@ -13,8 +13,8 @@ class Login_POST_APIController extends Abstract_APIController
             $user_email = (string) $request->getParam('email');
             $user_password = (string) $request->getParam('password');
 
-            User_Validator::validateEmail($user_email);
-            User_Validator::validatePassword($user_password);
+            \Validator\User::validateEmail($user_email);
+            \Validator\User::validatePassword($user_password);
 
             $user = (new User_Query())->user_with_email($user_email);
             if (!$user) {

@@ -13,7 +13,7 @@ class Validator_User__validate_exists__negative__api_key_Test extends PHPUnit\Fr
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';
 
         $this->expectExceptionMessage('User "apiKey" property null must be a string');
-        $this->assertEquals(true, User_Validator::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validate_exists($user));
     }
 
     public function test__API_key_is_empty()
@@ -28,7 +28,7 @@ class Validator_User__validate_exists__negative__api_key_Test extends PHPUnit\Fr
         $user->apiKey = '';
 
         $this->expectExceptionMessage('User "apiKey" property "" must have a length between 25 and 45');
-        $this->assertEquals(true, User_Validator::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validate_exists($user));
     }
 
     public function test__API_key_too_short()
@@ -43,7 +43,7 @@ class Validator_User__validate_exists__negative__api_key_Test extends PHPUnit\Fr
         $user->apiKey = '4447';
 
         $this->expectExceptionMessage('User "apiKey" property "4447" must have a length between 25 and 45');
-        $this->assertEquals(true, User_Validator::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validate_exists($user));
     }
 
     public function test__API_key_too_long()
@@ -58,6 +58,6 @@ class Validator_User__validate_exists__negative__api_key_Test extends PHPUnit\Fr
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271+4447243e3e1766375d23b06bf6dd1271';
 
         $this->expectExceptionMessage('User "apiKey" property "4447243e3e1766375d23b06bf6dd1271+4447243e3e1766375d23b06bf6dd1271" must have a length between 25 and 45');
-        $this->assertEquals(true, User_Validator::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validate_exists($user));
     }
 }

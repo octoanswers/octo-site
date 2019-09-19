@@ -9,7 +9,7 @@ class Validator_Relation_CategoryToQuestion__validate_newTest extends PHPUnit\Fr
         $rel->questionID = 9;
         $rel->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, CategoryToQuestion_Relation_Validator::validate_new($rel));
+        $this->assertEquals(true, \Validator\Relation\CategoryToQuestion::validate_new($rel));
     }
 
     public function test__Min_params()
@@ -18,6 +18,6 @@ class Validator_Relation_CategoryToQuestion__validate_newTest extends PHPUnit\Fr
         $rel->categoryID = 3;
         $rel->questionID = 9;
 
-        $this->assertEquals(true, CategoryToQuestion_Relation_Validator::validate_new($rel));
+        $this->assertEquals(true, \Validator\Relation\CategoryToQuestion::validate_new($rel));
     }
 }

@@ -13,6 +13,6 @@ class Validator_Revision__validate__negative__created_atTest extends PHPUnit\Fra
 
         $this->expectExceptionMessage('Revision createdAt param 1234 must be a string');
 
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 }

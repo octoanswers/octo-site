@@ -4,7 +4,7 @@ class Answer_Mapper extends Abstract_Mapper
 {
     public function update(\Model\Answer $answer): \Model\Answer
     {
-        Answer_Validator::validate($answer);
+        \Validator\Answer::validate($answer);
 
         $anaswerLenght = mb_strlen($answer->text);
 

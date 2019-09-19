@@ -1,9 +1,11 @@
 <?php
 
+namespace Validator\Redirect;
+
 use Respect\Validation\Exceptions\NestedValidationException;
 use Respect\Validation\Validator as v;
 
-class Question_Redirect_Validator
+class Question
 {
     const TITLE_MIN_LENGHT = 3;
     const TITLE_MAX_LENGHT = 255;
@@ -29,7 +31,7 @@ class Question_Redirect_Validator
         try {
             v::intType()->min(1, true)->assert($fromID);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Redirect "fromID" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Redirect "fromID" property ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -44,7 +46,7 @@ class Question_Redirect_Validator
                 throw new NestedValidationException('must end with a question mark', 0);
             }
         } catch (NestedValidationException $exception) {
-            throw new Exception('Redirect "to_title" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Redirect "to_title" property ' . $exception->getMessages()[0], 0);
         }
     }
 }

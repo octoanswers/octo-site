@@ -14,7 +14,7 @@ class Validator_Revision__validateTest extends PHPUnit\Framework\TestCase
         $revision->userID = 14;
         $revision->createdAt = '2015-12-16 13:28:56';
 
-        $this->assertEquals(true, Revision_Validator::validate($revision));
+        $this->assertEquals(true, \Validator\Revision::validate($revision));
     }
 
     public function test__Revision_with_min_params()
@@ -25,7 +25,7 @@ class Validator_Revision__validateTest extends PHPUnit\Framework\TestCase
         $revision->baseText = 'Ответ на вопрос про птиц.';
         $revision->userID = 14;
 
-        $validator = new Revision_Validator();
+        $validator = new \Validator\Revision();
 
         $this->assertEquals(null, $revision->id);
         $this->assertEquals(11, $revision->answerID);
@@ -44,6 +44,6 @@ class Validator_Revision__validateTest extends PHPUnit\Framework\TestCase
         $revision->opcodes = 'xyz';
         $revision->userID = 14;
 
-        $this->assertEquals(true, Revision_Validator::validate($revision));
+        $this->assertEquals(true, \Validator\Revision::validate($revision));
     }
 }

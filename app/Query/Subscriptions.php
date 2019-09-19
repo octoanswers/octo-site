@@ -4,8 +4,8 @@ class Subscriptions_Query extends Abstract_Query
 {
     public function find_with_question_ID_and_email(int $question_id, string $email)
     {
-        Question_Validator::validateID($question_id);
-        User_Validator::validateEmail($email);
+        \Validator\Question::validateID($question_id);
+        \Validator\User::validateEmail($email);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions_subscriptions WHERE s_question_id=:s_question_id AND s_email=:s_email LIMIT 1');
         $stmt->bindParam(':s_question_id', $question_id, PDO::PARAM_INT);

@@ -8,6 +8,6 @@ class Validator_Redirect_Question__validateTest extends PHPUnit\Framework\TestCa
         $redirect->fromID = 12;
         $redirect->toTitle = 'How iPhone 8 are charged?';
 
-        $this->assertEquals(true, Question_Redirect_Validator::validate($redirect));
+        $this->assertEquals(true, \Validator\Redirect\Question::validate($redirect));
     }
 }

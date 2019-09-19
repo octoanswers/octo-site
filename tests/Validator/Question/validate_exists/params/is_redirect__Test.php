@@ -9,6 +9,6 @@ class Validator_Question__validate_exists__params__is_redirectTest extends PHPUn
         $question->title = 'How iPhone 8 are charged?';
 
         $this->assertEquals(false, $question->isRedirect);
-        $this->assertEquals(true, Question_Validator::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validate_exists($question));
     }
 }

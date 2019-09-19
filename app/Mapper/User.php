@@ -14,7 +14,7 @@ class User_Mapper extends Abstract_Mapper
 
     public function create(\Model\User $user): \Model\User
     {
-        User_Validator::validate_new($user);
+        \Validator\User::validate_new($user);
 
         $sql = 'INSERT INTO users (u_username, u_name, u_email, u_signature, u_site, u_password_hash, u_api_key) VALUES (:u_username, :u_name, :u_email, :u_signature, :u_site, :u_password_hash, :u_api_key)';
         $stmt = $this->pdo->prepare($sql);
@@ -46,7 +46,7 @@ class User_Mapper extends Abstract_Mapper
 
     public function update(\Model\User $user): \Model\User
     {
-        User_Validator::validate_exists($user);
+        \Validator\User::validate_exists($user);
 
         $sql = 'UPDATE users SET u_username=:u_username, u_name=:u_name, u_email=:u_email, u_signature=:u_signature, u_site=:u_site, u_password_hash=:u_password_hash, u_api_key=:u_api_key, is_avatar_uploaded=:is_avatar_uploaded WHERE u_id=:u_id';
         $stmt = $this->pdo->prepare($sql);

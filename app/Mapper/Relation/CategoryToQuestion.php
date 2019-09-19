@@ -4,7 +4,7 @@ class CategoryToQuestion_Relation_Mapper extends Abstract_Mapper
 {
     public function create(\Model\Relation\CategoriesToQuestions $er): \Model\Relation\CategoriesToQuestions
     {
-        CategoryToQuestion_Relation_Validator::validate_new($er);
+        \Validator\Relation\CategoryToQuestion::validate_new($er);
 
         $sql = 'INSERT INTO er_categories_questions (er_category_id, er_question_id) VALUES (:er_category_id, :er_question_id)';
         $stmt = $this->pdo->prepare($sql);

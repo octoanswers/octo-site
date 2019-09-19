@@ -1,9 +1,11 @@
 <?php
 
+namespace Validator;
+
 use Respect\Validation\Exceptions\NestedValidationException;
 use Respect\Validation\Validator as v;
 
-class List_Validator
+class SearchList
 {
     const PAGE_MIN = 1;
     const PAGE_MAX = 9999;

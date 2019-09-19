@@ -4,7 +4,7 @@ class Answers_Query extends Abstract_Query
 {
     public function answer_with_ID(int $answerID)
     {
-        Answer_Validator::validateID($answerID);
+        \Validator\Answer::validateID($answerID);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 

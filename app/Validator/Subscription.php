@@ -1,9 +1,11 @@
 <?php
 
+namespace Validator;
+
 use Respect\Validation\Exceptions\NestedValidationException;
 use Respect\Validation\Validator as v;
 
-class Subscription_Validator
+class Subscription
 {
     //
     // Model validator
@@ -35,7 +37,7 @@ class Subscription_Validator
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Subscription "id" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Subscription "id" property ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -44,7 +46,7 @@ class Subscription_Validator
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Subscription "questionID" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Subscription "questionID" property ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -53,7 +55,7 @@ class Subscription_Validator
         try {
             v::stringType()->email()->assert($email);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Subscription "email" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Subscription "email" property ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -62,7 +64,7 @@ class Subscription_Validator
         try {
             v::optional(v::stringType())->assert($createdAt);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Subscription "createdAt" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Subscription "createdAt" property ' . $exception->getMessages()[0], 0);
         }
     }
 }

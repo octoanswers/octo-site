@@ -9,7 +9,7 @@ class Validator_Redirect_Category__validate__negative__from_IDTest extends PHPUn
         $redirect->to_title = 'iPhone 8';
 
         $this->expectExceptionMessage('\Model\Redirect\Category property "fromID" 0 must be greater than or equal to 1');
-        Category_Redirect_Validator::validate($redirect);
+        \Validator\Redirect\Category::validate($redirect);
     }
 
     public function test__FromID_below_zero()
@@ -19,6 +19,6 @@ class Validator_Redirect_Category__validate__negative__from_IDTest extends PHPUn
         $redirect->to_title = 'iPhone 8';
 
         $this->expectExceptionMessage('\Model\Redirect\Category property "fromID" -1 must be greater than or equal to 1');
-        Category_Redirect_Validator::validate($redirect);
+        \Validator\Redirect\Category::validate($redirect);
     }
 }

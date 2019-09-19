@@ -10,7 +10,7 @@ class UserFollowUser_Relation_Validator__validate_existsTest extends PHPUnit\Fra
         $relation->followedUserID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, UserFollowUser_Relation_Validator::validate_exists($relation));
+        $this->assertEquals(true, \Validator\Relation\UserFollowUser::validate_exists($relation));
     }
 
     public function test__Min_params()
@@ -20,6 +20,6 @@ class UserFollowUser_Relation_Validator__validate_existsTest extends PHPUnit\Fra
         $relation->userID = 3;
         $relation->followedUserID = 9;
 
-        $this->assertEquals(true, UserFollowUser_Relation_Validator::validate_exists($relation));
+        $this->assertEquals(true, \Validator\Relation\UserFollowUser::validate_exists($relation));
     }
 }

@@ -7,7 +7,7 @@ class Validator_Category__validate_new__negative__titleTest extends PHPUnit\Fram
         $category = new \Model\Category();
 
         $this->expectExceptionMessage('Category title param null must be a string');
-        $this->assertEquals(true, Category_Validator::validate_new($category));
+        $this->assertEquals(true, \Validator\Category::validate_new($category));
     }
 
     public function test__Exception_when_title_is_empty()
@@ -16,7 +16,7 @@ class Validator_Category__validate_new__negative__titleTest extends PHPUnit\Fram
         $category->title = '';
 
         $this->expectExceptionMessage('Category title param "" must have a length between 2 and 127');
-        $this->assertEquals(true, Category_Validator::validate_new($category));
+        $this->assertEquals(true, \Validator\Category::validate_new($category));
     }
 
     public function test__Exception_when_title_too_long()
@@ -26,6 +26,6 @@ class Validator_Category__validate_new__negative__titleTest extends PHPUnit\Fram
         $category->title = 'title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title';
 
         $this->expectExceptionMessage('Category title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
-        $this->assertEquals(true, Category_Validator::validate_exists($category));
+        $this->assertEquals(true, \Validator\Category::validate_exists($category));
     }
 }

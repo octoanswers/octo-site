@@ -21,19 +21,19 @@ class Validator_User__validate_exists__negative__siteTest extends PHPUnit\Framew
     public function test__HTTP_site()
     {
         $this->user->site = 'http://example.com';
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__HTTPS_site()
     {
         $this->user->site = 'https://example.com';
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Site_with_URI()
     {
         $this->user->site = 'https://www.youtube.com/watch?v=6FOUqQt3Kg0';
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Site_without_protocol()
@@ -41,7 +41,7 @@ class Validator_User__validate_exists__negative__siteTest extends PHPUnit\Framew
         $this->user->site = 'example.com';
 
         $this->expectExceptionMessage('User "site" property "example.com" must be a URL');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Site_with_WWW()
@@ -49,7 +49,7 @@ class Validator_User__validate_exists__negative__siteTest extends PHPUnit\Framew
         $this->user->site = 'www.example.com';
 
         $this->expectExceptionMessage('User "site" property "www.example.com" must be a URL');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Site_is_not_URL()
@@ -57,7 +57,7 @@ class Validator_User__validate_exists__negative__siteTest extends PHPUnit\Framew
         $this->user->site = 'example_com';
 
         $this->expectExceptionMessage('User "site" property "example_com" must be a URL');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Site_URL_is_incorrect()
@@ -65,6 +65,6 @@ class Validator_User__validate_exists__negative__siteTest extends PHPUnit\Framew
         $this->user->site = 'http:/example.com';
 
         $this->expectExceptionMessage('User "site" property "http:/example.com" must be a URL');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 }

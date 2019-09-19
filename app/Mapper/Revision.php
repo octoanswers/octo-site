@@ -4,7 +4,7 @@ class Revision_Mapper extends Abstract_Mapper
 {
     public function save(\Model\Revision $revision): \Model\Revision
     {
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
 
         if (is_int($revision->id)) {
             $sql = 'UPDATE revisions SET rev_answer_id=:rev_answer_id, rev_opcodes=:rev_opcodes, rev_base_text=:rev_base_text, rev_comment=:rev_comment, rev_user_id=:rev_user_id, rev_parent_id=:rev_parent_id WHERE rev_id=:rev_id';

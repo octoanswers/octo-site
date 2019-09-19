@@ -9,7 +9,7 @@ class Validator_Subscription__validate_newTest extends PHPUnit\Framework\TestCas
         $s->email = 'loz@ba.com';
         $s->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, Subscription_Validator::validate_new($s));
+        $this->assertEquals(true, \Validator\Subscription::validate_new($s));
     }
 
     public function test__Min_params()
@@ -18,6 +18,6 @@ class Validator_Subscription__validate_newTest extends PHPUnit\Framework\TestCas
         $s->questionID = 9;
         $s->email = 'loz@ba.com';
 
-        $this->assertEquals(true, Subscription_Validator::validate_new($s));
+        $this->assertEquals(true, \Validator\Subscription::validate_new($s));
     }
 }

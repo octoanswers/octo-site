@@ -10,7 +10,7 @@ class UserFollowCategory_Relation_Validator__validate_exists__negative__IDTest e
         $relation->categoryID = 9;
 
         $this->expectExceptionMessage('UserFollowCategory relation "id" property 0 must be greater than or equal to 1');
-        UserFollowCategory_Relation_Validator::validate_exists($relation);
+        \Validator\Relation\UserFollowCategory::validate_exists($relation);
     }
 
     public function test__ID_below_zero()
@@ -21,6 +21,6 @@ class UserFollowCategory_Relation_Validator__validate_exists__negative__IDTest e
         $relation->categoryID = 9;
 
         $this->expectExceptionMessage('UserFollowCategory relation "id" property -1 must be greater than or equal to 1');
-        UserFollowCategory_Relation_Validator::validate_exists($relation);
+        \Validator\Relation\UserFollowCategory::validate_exists($relation);
     }
 }

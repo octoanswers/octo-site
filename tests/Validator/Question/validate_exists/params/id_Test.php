@@ -10,7 +10,7 @@ class Validator_Question__validate_exists__params__IDTest extends PHPUnit\Framew
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param 0 must be greater than or equal to 1');
-        Question_Validator::validate_exists($question);
+        \Validator\Question::validate_exists($question);
     }
 
     public function test__ID_below_zero()
@@ -21,6 +21,6 @@ class Validator_Question__validate_exists__params__IDTest extends PHPUnit\Framew
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param -1 must be greater than or equal to 1');
-        Question_Validator::validate_exists($question);
+        \Validator\Question::validate_exists($question);
     }
 }

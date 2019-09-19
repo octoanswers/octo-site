@@ -10,7 +10,7 @@ class Validator_Revision__validate__negative__answer_IDTest extends PHPUnit\Fram
         $revision->baseText = 'Answer written at 11:39.';
         $revision->userID = 14;
 
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
 
         $this->assertEquals(4, $revision->answerID);
     }
@@ -24,7 +24,7 @@ class Validator_Revision__validate__negative__answer_IDTest extends PHPUnit\Fram
         $revision->userID = 14;
 
         $this->expectExceptionMessage('Revision answerID param 0 must be greater than or equal to 1');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 
     public function test__Answer_ID_below_zero()
@@ -36,6 +36,6 @@ class Validator_Revision__validate__negative__answer_IDTest extends PHPUnit\Fram
         $revision->userID = 14;
 
         $this->expectExceptionMessage('Revision answerID param -1 must be greater than or equal to 1');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 }

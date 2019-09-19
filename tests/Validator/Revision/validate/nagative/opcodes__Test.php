@@ -9,7 +9,7 @@ class Validator_Revision__validate__negative__opcodesTest extends PHPUnit\Framew
         $revision->baseText = 'Answer about thunderbird 14-16.';
 
         $this->expectExceptionMessage('Revision opcodes param null must be a string');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 
     public function test__Opcodes_is_empty()
@@ -20,7 +20,7 @@ class Validator_Revision__validate__negative__opcodesTest extends PHPUnit\Framew
         $revision->baseText = 'Answer about thunderbird 14-16.';
 
         $this->expectExceptionMessage('Revision opcodes param "" must have a length greater than 2');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 
     public function test__Opcodes_too_hort()
@@ -31,6 +31,6 @@ class Validator_Revision__validate__negative__opcodesTest extends PHPUnit\Framew
         $revision->baseText = 'Answer about thunderbird 14-16.';
 
         $this->expectExceptionMessage('Revision opcodes param "x" must have a length greater than 2');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 }

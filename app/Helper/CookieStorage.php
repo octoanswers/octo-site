@@ -23,7 +23,7 @@ class CookieStorage
                     'is_avatar_uploaded'    => $_COOKIE['is_avatar_uploaded'],
                     'u_created_at'          => $_COOKIE['u_created_at'],
                 ]);
-                if (!User_Validator::validateAuthUser(static::$authUser)) {
+                if (!\Validator\User::validateAuthUser(static::$authUser)) {
                     $this->clear();
 
                     return;

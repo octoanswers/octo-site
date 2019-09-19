@@ -9,7 +9,7 @@ class Validator_Redirect_Question__validate__negative__from_IDTest extends PHPUn
         $redirect->toTitle = 'How iPhone 8 are charged?';
 
         $this->expectExceptionMessage('Redirect "fromID" property 0 must be greater than or equal to 1');
-        Question_Redirect_Validator::validate($redirect);
+        \Validator\Redirect\Question::validate($redirect);
     }
 
     public function test__FromID_below_zero()
@@ -19,6 +19,6 @@ class Validator_Redirect_Question__validate__negative__from_IDTest extends PHPUn
         $redirect->toTitle = 'How iPhone 8 are charged?';
 
         $this->expectExceptionMessage('Redirect "fromID" property -1 must be greater than or equal to 1');
-        Question_Redirect_Validator::validate($redirect);
+        \Validator\Redirect\Question::validate($redirect);
     }
 }

@@ -15,8 +15,8 @@ class Search_Query extends Abstract_Query
             throw new Exception('Search query param ' . $e->getMessages()[0], 0);
         }
 
-        List_Validator::validatePage($questionsPage);
-        List_Validator::validatePerPage($questionsPerPage);
+        \Validator\SearchList::validatePage($questionsPage);
+        \Validator\SearchList::validatePerPage($questionsPerPage);
 
         $id_offset = 0;
 
@@ -48,8 +48,8 @@ class Search_Query extends Abstract_Query
             throw new Exception('Search query param ' . $e->getMessages()[0], 0);
         }
 
-        List_Validator::validatePage($page);
-        List_Validator::validatePerPage($perPage);
+        \Validator\SearchList::validatePage($page);
+        \Validator\SearchList::validatePerPage($perPage);
 
         $id_offset = 0;
 
@@ -81,8 +81,8 @@ class Search_Query extends Abstract_Query
             throw new Exception('Search query param ' . $e->getMessages()[0], 0);
         }
 
-        List_Validator::validatePage($page);
-        List_Validator::validatePerPage($perPage);
+        \Validator\SearchList::validatePage($page);
+        \Validator\SearchList::validatePerPage($perPage);
 
         $id_offset = 0;
 

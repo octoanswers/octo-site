@@ -1,9 +1,11 @@
 <?php
 
+namespace Validator;
+
 use Respect\Validation\Exceptions\NestedValidationException;
 use Respect\Validation\Validator as v;
 
-class Answer_Validator
+class Answer
 {
     public static function validate(\Model\Answer $answer)
     {
@@ -14,7 +16,7 @@ class Answer_Validator
         try {
             v::optional(v::stringType())->assert($answer->updatedAt);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Answer timestamp param ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Answer timestamp param ' . $exception->getMessages()[0], 0);
         }
 
         return true;
@@ -25,7 +27,7 @@ class Answer_Validator
         try {
             v::intType()->min(1, true)->assert($answerID);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Answer id param ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Answer id param ' . $exception->getMessages()[0], 0);
         }
     }
 
@@ -34,7 +36,7 @@ class Answer_Validator
         try {
             v::stringType()->length(1, null)->assert($text);
         } catch (NestedValidationException $exception) {
-            throw new Exception('Answer text param ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Answer text param ' . $exception->getMessages()[0], 0);
         }
     }
 }

@@ -6,8 +6,8 @@ class Sandbox_Query extends Abstract_Query
 
     public function find_newest_without_answer($page = 1, $perPage = 10): array
     {
-        QuestionsList_Validator::validatePage($page);
-        QuestionsList_Validator::validatePerPage($perPage);
+        \Validator\QuestionsList::validatePage($page);
+        \Validator\QuestionsList::validatePerPage($perPage);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
@@ -34,8 +34,8 @@ class Sandbox_Query extends Abstract_Query
 
     public function questions_without_categories($page = 1, $perPage = 10): array
     {
-        QuestionsList_Validator::validatePage($page);
-        QuestionsList_Validator::validatePerPage($perPage);
+        \Validator\QuestionsList::validatePage($page);
+        \Validator\QuestionsList::validatePerPage($perPage);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 

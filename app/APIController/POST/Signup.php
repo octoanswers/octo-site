@@ -14,9 +14,9 @@ class Signup_POST_APIController extends Abstract_APIController
             $user_email = $request->getParam('email');
             $user_password = $request->getParam('password');
 
-            User_Validator::validateUsername($username);
-            User_Validator::validateEmail($user_email);
-            User_Validator::validatePassword($user_password);
+            \Validator\User::validateUsername($username);
+            \Validator\User::validateEmail($user_email);
+            \Validator\User::validatePassword($user_password);
 
             $user = (new User_Query())->user_with_email($user_email);
             if ($user) {

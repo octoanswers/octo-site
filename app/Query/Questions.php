@@ -9,8 +9,8 @@ class Questions_Query extends Abstract_Query
 
     public function find_newest($page = 1, $perPage = 10): array
     {
-        QuestionsList_Validator::validatePage($page);
-        QuestionsList_Validator::validatePerPage($perPage);
+        \Validator\QuestionsList::validatePage($page);
+        \Validator\QuestionsList::validatePerPage($perPage);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
@@ -39,8 +39,8 @@ class Questions_Query extends Abstract_Query
 
     public function find_recently_updated($page = 0, $perPage = 10): array
     {
-        //QuestionsList_Validator::validatePage($page);
-        QuestionsList_Validator::validatePerPage($perPage);
+        //\Validator\QuestionsList::validatePage($page);
+        \Validator\QuestionsList::validatePerPage($perPage);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
@@ -70,8 +70,8 @@ class Questions_Query extends Abstract_Query
     public function find_questions_with_image(int $offset = 0, int $limit = 3): array
     {
         // @TODO Check params
-        // QuestionsList_Validator::validatePage($page);
-        // QuestionsList_Validator::validatePerPage($perPage);
+        // \Validator\QuestionsList::validatePage($page);
+        // \Validator\QuestionsList::validatePerPage($perPage);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
@@ -97,8 +97,8 @@ class Questions_Query extends Abstract_Query
 
     public function find_newest_with_answer($page = 1, $perPage = 10): array
     {
-        QuestionsList_Validator::validatePage($page);
-        QuestionsList_Validator::validatePerPage($perPage);
+        \Validator\QuestionsList::validatePage($page);
+        \Validator\QuestionsList::validatePerPage($perPage);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
@@ -134,8 +134,8 @@ class Questions_Query extends Abstract_Query
             throw new Exception('Search query param ' . $e->getMessages()[0], 0);
         }
 
-        QuestionsList_Validator::validatePage($questionsPage);
-        QuestionsList_Validator::validatePerPage($questionsPerPage);
+        \Validator\QuestionsList::validatePage($questionsPage);
+        \Validator\QuestionsList::validatePerPage($questionsPerPage);
 
         $id_offset = 0;
 

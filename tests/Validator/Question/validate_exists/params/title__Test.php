@@ -9,7 +9,7 @@ class Validator_Question__validate_exists__params__titleTest extends PHPUnit\Fra
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param null must be a string');
-        $this->assertEquals(true, Question_Validator::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validate_exists($question));
     }
 
     public function test__Title_is_empty()
@@ -20,7 +20,7 @@ class Validator_Question__validate_exists__params__titleTest extends PHPUnit\Fra
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "" must have a length between 3 and 255');
-        $this->assertEquals(true, Question_Validator::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validate_exists($question));
     }
 
     public function test__Comment_too_short()
@@ -31,7 +31,7 @@ class Validator_Question__validate_exists__params__titleTest extends PHPUnit\Fra
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "x" must have a length between 3 and 255');
-        $this->assertEquals(true, Question_Validator::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validate_exists($question));
     }
 
     public function test__Comment_too_long()
@@ -42,6 +42,6 @@ class Validator_Question__validate_exists__params__titleTest extends PHPUnit\Fra
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42." must have a length between 3 and 255');
-        $this->assertEquals(true, Question_Validator::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validate_exists($question));
     }
 }

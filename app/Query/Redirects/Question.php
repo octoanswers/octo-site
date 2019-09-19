@@ -4,7 +4,7 @@ class Question_Redirects_Query extends Abstract_Query
 {
     public function redirect_for_question_with_ID(int $questionID): \Model\Redirect\Question
     {
-        Question_Validator::validateID($questionID);
+        \Validator\Question::validateID($questionID);
 
         $stmt = $this->pdo->prepare('SELECT * FROM redirects_questions WHERE rd_from=:rd_from LIMIT 1');
         $stmt->bindParam(':rd_from', $questionID, PDO::PARAM_INT);

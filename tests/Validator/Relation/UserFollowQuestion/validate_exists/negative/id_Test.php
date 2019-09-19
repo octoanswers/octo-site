@@ -10,7 +10,7 @@ class UserFollowQuestion_Relation_Validator__validate_exists__negative__IDTest e
         $rel->questionID = 9;
 
         $this->expectExceptionMessage('UserFollowQuestion relation "id" property 0 must be greater than or equal to 1');
-        UserFollowQuestion_Relation_Validator::validate_exists($rel);
+        \Validator\Relation\UserFollowQuestion::validate_exists($rel);
     }
 
     public function test__ID_below_zero()
@@ -21,6 +21,6 @@ class UserFollowQuestion_Relation_Validator__validate_exists__negative__IDTest e
         $rel->questionID = 9;
 
         $this->expectExceptionMessage('UserFollowQuestion relation "id" property -1 must be greater than or equal to 1');
-        UserFollowQuestion_Relation_Validator::validate_exists($rel);
+        \Validator\Relation\UserFollowQuestion::validate_exists($rel);
     }
 }

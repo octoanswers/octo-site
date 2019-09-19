@@ -11,7 +11,7 @@ class Validator_Revision__validate__negative__commentTest extends PHPUnit\Framew
         $revision->comment = '';
 
         $this->expectExceptionMessage('Revision comment param "" must have a length between 3 and 255');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 
     public function test__Comment_too_short()
@@ -23,7 +23,7 @@ class Validator_Revision__validate__negative__commentTest extends PHPUnit\Framew
         $revision->comment = 'xy';
 
         $this->expectExceptionMessage('Revision comment param "xy" must have a length between 3 and 255');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 
     public function test__Comment_too_long()
@@ -35,6 +35,6 @@ class Validator_Revision__validate__negative__commentTest extends PHPUnit\Framew
         $revision->comment = 'Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment.';
 
         $this->expectExceptionMessage('Revision comment param "Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment. Comment." must have a length between 3 and 255');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 }

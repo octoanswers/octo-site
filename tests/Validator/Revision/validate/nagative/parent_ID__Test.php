@@ -11,7 +11,7 @@ class Validator_Revision__validate__negative__parent_IDTest extends PHPUnit\Fram
         $revision->parentID = 0;
 
         $this->expectExceptionMessage('Revision parentID param 0 must be greater than or equal to 1');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 
     public function test__Parent_ID_below_zero()
@@ -23,6 +23,6 @@ class Validator_Revision__validate__negative__parent_IDTest extends PHPUnit\Fram
         $revision->parentID = -1;
 
         $this->expectExceptionMessage('Revision parentID param -1 must be greater than or equal to 1');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 }

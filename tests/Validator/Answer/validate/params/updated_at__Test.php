@@ -8,7 +8,7 @@ class Validator_Answer__validate__params__updated_atTest extends PHPUnit\Framewo
         $answer->id = 4;
         $answer->text = 'Answer written at 08:04';
 
-        $this->assertEquals(true, Answer_Validator::validate($answer));
+        $this->assertEquals(true, \Validator\Answer::validate($answer));
     }
 
     public function test_UpdatedAt_is_empty()
@@ -18,7 +18,7 @@ class Validator_Answer__validate__params__updated_atTest extends PHPUnit\Framewo
         $answer->text = 'Answer written at 08:04';
         $answer->updatedAt = '';
 
-        $this->assertEquals(true, Answer_Validator::validate($answer));
+        $this->assertEquals(true, \Validator\Answer::validate($answer));
         $this->assertEquals(null, $answer->updatedAt);
     }
 }

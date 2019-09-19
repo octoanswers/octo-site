@@ -51,7 +51,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             $revision->comment = $revision_comment;
             $revision->userID = $user->id;
 
-            Revision_Validator::validateComment($revision_comment);
+            \Validator\Revision::validateComment($revision_comment);
 
             $parentRevision = (new Revisions_Query($this->lang))->last_revision_for_answer_with_ID($answer_id);
             if ($parentRevision) {

@@ -25,7 +25,7 @@ class Validator_User__validate_exists__negative__usernameTest extends PHPUnit\Fr
         $this->user->username = null;
 
         $this->expectExceptionMessage('User "username" property null must be a string');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Username_сontain_whitespace()
@@ -33,7 +33,7 @@ class Validator_User__validate_exists__negative__usernameTest extends PHPUnit\Fr
         $this->user->username = 'foo bar';
 
         $this->expectExceptionMessage('User "username" property "foo bar" must not contain whitespace');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Username_include_not_allowed_symbols()
@@ -41,7 +41,7 @@ class Validator_User__validate_exists__negative__usernameTest extends PHPUnit\Fr
         $this->user->username = 'саша';
 
         $this->expectExceptionMessage('User "username" property "саша" must contain only letters (a-z) and digits (0-9)');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Username_is_empty()
@@ -49,7 +49,7 @@ class Validator_User__validate_exists__negative__usernameTest extends PHPUnit\Fr
         $this->user->username = '';
 
         $this->expectExceptionMessage('User "username" property "" must have a length between 3 and 64');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Username_too_short()
@@ -57,7 +57,7 @@ class Validator_User__validate_exists__negative__usernameTest extends PHPUnit\Fr
         $this->user->username = 'B';
 
         $this->expectExceptionMessage('User "username" property "B" must have a length between 3 and 64');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 
     public function test__Username_too_long()
@@ -65,6 +65,6 @@ class Validator_User__validate_exists__negative__usernameTest extends PHPUnit\Fr
         $this->user->username = 'mynamemynamemynamemynamemynamemynamemynamemynamemynamemynamemyname';
 
         $this->expectExceptionMessage('User "username" property "mynamemynamemynamemynamemynamemynamemynamemynamemynamemynamemyname" must have a length between 3 and 64');
-        $this->assertEquals(true, User_Validator::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
     }
 }

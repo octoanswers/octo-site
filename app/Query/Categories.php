@@ -21,8 +21,8 @@ class Categories_Query extends Abstract_Query
 
     public function find_newest($page = 1, $perPage = 10): array
     {
-        List_Validator::validatePage($page);
-        List_Validator::validatePerPage($perPage);
+        \Validator\SearchList::validatePage($page);
+        \Validator\SearchList::validatePerPage($perPage);
 
         $categories_last_ID = (new self($this->lang))->categories_last_ID();
 
@@ -49,7 +49,7 @@ class Categories_Query extends Abstract_Query
 
     public function categories_for_question_with_ID(int $questionID): array
     {
-        Question_Validator::validateID($questionID);
+        \Validator\Question::validateID($questionID);
 
         $stmt = $this->pdo->prepare('SELECT * FROM er_categories_questions WHERE er_question_id=:er_question_id');
         $stmt->bindParam(':er_question_id', $questionID, PDO::PARAM_INT);

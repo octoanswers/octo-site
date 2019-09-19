@@ -10,7 +10,7 @@ class Validator_Subscription__validate_exists__negative__question_idTest extends
         $s->email = 'loz@ba.com';
 
         $this->expectExceptionMessage('Subscription "questionID" property 0 must be greater than or equal to 1');
-        Subscription_Validator::validate_exists($s);
+        \Validator\Subscription::validate_exists($s);
     }
 
     public function test__Question_ID_below_zero()
@@ -21,6 +21,6 @@ class Validator_Subscription__validate_exists__negative__question_idTest extends
         $s->email = 'loz@ba.com';
 
         $this->expectExceptionMessage('Subscription "questionID" property -1 must be greater than or equal to 1');
-        Subscription_Validator::validate_exists($s);
+        \Validator\Subscription::validate_exists($s);
     }
 }

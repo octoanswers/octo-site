@@ -4,7 +4,7 @@ class Category_Mapper extends Abstract_Mapper
 {
     public function create(\Model\Category $category): \Model\Category
     {
-        Category_Validator::validate_new($category);
+        \Validator\Category::validate_new($category);
 
         $sql = 'INSERT INTO categories (c_title, cat_is_redirect) VALUES (:c_title, :cat_is_redirect)';
         $stmt = $this->pdo->prepare($sql);
@@ -27,7 +27,7 @@ class Category_Mapper extends Abstract_Mapper
 
     public function update(\Model\Category $category): \Model\Category
     {
-        Category_Validator::validate_exists($category);
+        \Validator\Category::validate_exists($category);
 
         $sql = 'UPDATE categories SET c_title=:c_title, cat_is_redirect=:cat_is_redirect WHERE c_id=:c_id';
         $stmt = $this->pdo->prepare($sql);

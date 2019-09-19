@@ -8,6 +8,6 @@ class Validator_Redirect_Category__validateTest extends PHPUnit\Framework\TestCa
         $redirect->from_ID = 12;
         $redirect->to_title = 'iPhone 8';
 
-        $this->assertEquals(true, Category_Redirect_Validator::validate($redirect));
+        $this->assertEquals(true, \Validator\Redirect\Category::validate($redirect));
     }
 }

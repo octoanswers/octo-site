@@ -12,11 +12,11 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
             $question_ID = (int) $args['id'];
             $question_title = (string) $request->getParam('question_title');
 
-            Question_Validator::validateID($question_ID);
+            \Validator\Question::validateID($question_ID);
 
             // check API-key
             // if ($check_api_key) {
-            //     $api_key = User_Validator::validateRequiredApiKey(@$args['api_key']);
+            //     $api_key = \Validator\User::validateRequiredApiKey(@$args['api_key']);
             //     $user = $api->get('users_api_key', ['api_key' => $api_key]);
             //
             //     // only moderators can modify questions data

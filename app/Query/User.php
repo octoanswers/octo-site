@@ -16,7 +16,7 @@ class User_Query
 
     public function user_with_API_key(string $apiKey): \Model\User
     {
-        User_Validator::validateAPIKey($apiKey);
+        \Validator\User::validateAPIKey($apiKey);
 
         $stmt = $this->pdo->prepare('SELECT * FROM users WHERE u_api_key=:u_api_key LIMIT 1');
         $stmt->bindParam(':u_api_key', $apiKey, PDO::PARAM_STR);
@@ -37,7 +37,7 @@ class User_Query
 
     public function user_with_ID(int $userID): \Model\User
     {
-        User_Validator::validateID($userID);
+        \Validator\User::validateID($userID);
 
         $stmt = $this->pdo->prepare('SELECT * FROM users WHERE u_id=:u_id LIMIT 1');
         $stmt->bindParam(':u_id', $userID, PDO::PARAM_INT);
@@ -58,7 +58,7 @@ class User_Query
 
     public function user_with_username(string $username)
     {
-        User_Validator::validateUsername($username);
+        \Validator\User::validateUsername($username);
 
         $stmt = $this->pdo->prepare('SELECT * FROM users WHERE u_username=:u_username LIMIT 1');
         $stmt->bindParam(':u_username', $username, PDO::PARAM_STR);
@@ -79,7 +79,7 @@ class User_Query
 
     public function user_with_email(string $email)
     {
-        User_Validator::validateEmail($email);
+        \Validator\User::validateEmail($email);
 
         $stmt = $this->pdo->prepare('SELECT * FROM users WHERE u_email = :u_email LIMIT 1');
         $stmt->bindParam(':u_email', $email);

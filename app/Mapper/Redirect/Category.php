@@ -4,7 +4,7 @@ class Category_Redirect_Mapper extends Abstract_Mapper
 {
     public function create(\Model\Redirect\Category $redirect): \Model\Redirect\Category
     {
-        Category_Redirect_Validator::validate($redirect);
+        \Validator\Redirect\Category::validate($redirect);
 
         $sql = 'INSERT INTO redirects_categories (rd_from, rd_title) VALUES (:rd_from, :rd_title)';
         $stmt = $this->pdo->prepare($sql);

@@ -19,7 +19,7 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
             //
 
             $question = (new Question_Query($this->lang))->question_with_ID($question_id);
-            User_Validator::validateEmail($email); // @TODO Need?
+            \Validator\User::validateEmail($email); // @TODO Need?
 
             //
             // Check already subscribed

@@ -4,7 +4,7 @@ class Question_Query extends Abstract_Query
 {
     public function question_with_title(string $title): \Model\Question
     {
-        Question_Validator::validate_title($title);
+        \Validator\Question::validate_title($title);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 
@@ -26,7 +26,7 @@ class Question_Query extends Abstract_Query
 
     public function question_with_ID(int $questionID): \Model\Question
     {
-        Question_Validator::validateID($questionID);
+        \Validator\Question::validateID($questionID);
 
         $this->pdo = PDOFactory::get_connection_to_lang_DB($this->lang);
 

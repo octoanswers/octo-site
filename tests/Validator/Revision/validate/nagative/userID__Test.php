@@ -11,7 +11,7 @@ class Validator_Revision__validate__negative__user_IDTest extends PHPUnit\Framew
         $revision->userID = 0;
 
         $this->expectExceptionMessage('Revision userID property 0 must be greater than or equal to 1');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 
     public function test__User_ID_below_zero()
@@ -23,6 +23,6 @@ class Validator_Revision__validate__negative__user_IDTest extends PHPUnit\Framew
         $revision->userID = -1;
 
         $this->expectExceptionMessage('Revision userID property -1 must be greater than or equal to 1');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 }

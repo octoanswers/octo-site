@@ -10,7 +10,7 @@ class Validator_Revision__validate__negative__IDTest extends PHPUnit\Framework\T
         $revision->baseText = 'Some answer.';
 
         $this->expectExceptionMessage('Revision id param 0 must be greater than or equal to 1');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 
     public function test__ID_below_zero()
@@ -21,6 +21,6 @@ class Validator_Revision__validate__negative__IDTest extends PHPUnit\Framework\T
         $revision->baseText = 'Answer written at 10:15.';
 
         $this->expectExceptionMessage('Revision id param -1 must be greater than or equal to 1');
-        Revision_Validator::validate($revision);
+        \Validator\Revision::validate($revision);
     }
 }

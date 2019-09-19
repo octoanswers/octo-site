@@ -9,7 +9,7 @@ class UserFollowUser_Relation_Validator__validate_newTest extends PHPUnit\Framew
         $relation->followedUserID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, UserFollowUser_Relation_Validator::validate_new($relation));
+        $this->assertEquals(true, \Validator\Relation\UserFollowUser::validate_new($relation));
     }
 
     public function test__Min_params()
@@ -18,6 +18,6 @@ class UserFollowUser_Relation_Validator__validate_newTest extends PHPUnit\Framew
         $relation->userID = 3;
         $relation->followedUserID = 9;
 
-        $this->assertEquals(true, UserFollowUser_Relation_Validator::validate_new($relation));
+        $this->assertEquals(true, \Validator\Relation\UserFollowUser::validate_new($relation));
     }
 }

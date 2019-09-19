@@ -4,7 +4,7 @@ class Question_Mapper extends Abstract_Mapper
 {
     public function create(\Model\Question $question): \Model\Question
     {
-        Question_Validator::validate_new($question);
+        \Validator\Question::validate_new($question);
 
         $sql = 'INSERT INTO questions (q_title, q_is_redirect, q_image_base_name) VALUES (:q_title, :q_is_redirect, :q_image_base_name)';
         $stmt = $this->pdo->prepare($sql);
@@ -27,7 +27,7 @@ class Question_Mapper extends Abstract_Mapper
 
     public function update(\Model\Question $question): \Model\Question
     {
-        Question_Validator::validate_exists($question);
+        \Validator\Question::validate_exists($question);
 
         $sql = 'UPDATE questions SET q_title=:q_title, q_is_redirect=:q_is_redirect, q_image_base_name=:q_image_base_name WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);
@@ -54,8 +54,8 @@ class Question_Mapper extends Abstract_Mapper
             $question->categoriesCount = 0;
         }
 
-        Question_Validator::validateID($question->id);
-        Question_Validator::validateCategoriesCount($question->categoriesCount);
+        \Validator\Question::validateID($question->id);
+        \Validator\Question::validateCategoriesCount($question->categoriesCount);
 
         $sql = 'UPDATE questions SET count_categories=:count_categories WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);
