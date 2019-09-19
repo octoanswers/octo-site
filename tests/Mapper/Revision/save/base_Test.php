@@ -14,7 +14,7 @@ class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
         $revision->parentID = 4;
         $revision->userID = 54;
 
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
 
         $this->assertEquals(8, $revision->id);
         $this->assertEquals(11, $revision->answerID);
@@ -33,7 +33,7 @@ class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
         $revision->baseText = 'Answer written at 14:25';
         $revision->userID = 54;
 
-        $actualResponse = (new Revision_Mapper('ru'))->save($revision);
+        $actualResponse = (new \Mapper\Revision('ru'))->save($revision);
 
         $this->assertEquals(8, $revision->id);
         $this->assertEquals(11, $revision->answerID);
@@ -53,7 +53,7 @@ class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
         $revision->parentID = 4;
         $revision->userID = 54;
 
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
 
         $this->assertEquals(5, $revision->id);
         $this->assertEquals(11, $revision->answerID);
@@ -73,7 +73,7 @@ class Mapper_Revisions__save__Test extends Abstract_DB_TestCase
         $revision->baseText = 'Answer written at 14:25';
         $revision->userID = 54;
 
-        $actualResponse = (new Revision_Mapper('ru'))->save($revision);
+        $actualResponse = (new \Mapper\Revision('ru'))->save($revision);
 
         $this->assertEquals(5, $revision->id);
         $this->assertEquals(11, $revision->answerID);

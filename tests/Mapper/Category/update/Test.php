@@ -10,7 +10,7 @@ class Mapper_Category__update__Test extends Abstract_DB_TestCase
         $category->id = 7;
         $category->title = 'newcategory';
 
-        $category = (new Category_Mapper('ru'))->update($category);
+        $category = (new \Mapper\Category('ru'))->update($category);
 
         $this->assertEquals(7, $category->id);
         $this->assertEquals('newcategory', $category->title);
@@ -22,7 +22,7 @@ class Mapper_Category__update__Test extends Abstract_DB_TestCase
         $category->id = 4;
         $category->title = 'новаятема';
 
-        $category = (new Category_Mapper('ru'))->update($category);
+        $category = (new \Mapper\Category('ru'))->update($category);
 
         $this->assertEquals(4, $category->id);
         $this->assertEquals('новаятема', $category->title);

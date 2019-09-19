@@ -30,7 +30,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             // Change user signature
 
             $user->signature = $signature;
-            $user = (new User_Mapper())->update($user);
+            $user = (new \Mapper\User())->update($user);
 
             // Create activity
 
@@ -38,7 +38,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             $activity->type = \Model\Activity::U_UPDATE_SIGNATURE;
             $activity->subject = $user;
             $activity->data = ['signature' => $signature];
-            $activity = (new UUpdateSignature_Activity_Mapper($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UUpdateSignature($this->lang))->create($activity);
 
             $output = [
                 'user' => [

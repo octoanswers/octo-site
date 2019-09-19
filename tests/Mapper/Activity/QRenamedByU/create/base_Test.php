@@ -17,7 +17,7 @@ class Mapper_Activity_QRenamedByU__create__Test extends Abstract_DB_TestCase
         $activity->subject = $question;
         $activity->data = ['user' => $user, 'old_title' => 'Как ты?'];
 
-        $activity = (new QRenamedByU_Activity_Mapper('ru'))->create($activity);
+        $activity = (new \Mapper\Activity\QRenamedByU('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
         $this->assertEquals(\Model\Activity::Q_RENAMED_BY_U, $activity->type);

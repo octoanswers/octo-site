@@ -10,7 +10,7 @@ class UserFollowCategory_Relation_Mapper__create__Test extends Abstract_DB_TestC
         $relation->userID = 3;
         $relation->categoryID = 19;
 
-        $relation = (new UserFollowCategory_Relation_Mapper('ru'))->create($relation);
+        $relation = (new \Mapper\Relation\UserFollowCategory('ru'))->create($relation);
 
         $this->assertEquals(12, $relation->id);
         $this->assertEquals(3, $relation->userID);

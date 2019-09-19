@@ -12,7 +12,7 @@ class Mapper_Question__update__id__Test extends Abstract_DB_TestCase
         $question->isRedirect = false;
 
         $this->expectExceptionMessage('Question with ID 2215 not exists');
-        $question = (new Question_Mapper('ru'))->update($question);
+        $question = (new \Mapper\Question('ru'))->update($question);
     }
 
     public function test_UpdateWithIDEqualZero_ThrowException()
@@ -23,7 +23,7 @@ class Mapper_Question__update__id__Test extends Abstract_DB_TestCase
         $question->isRedirect = false;
 
         $this->expectExceptionMessage('Question id param 0 must be greater than or equal to 1');
-        $question = (new Question_Mapper('ru'))->update($question);
+        $question = (new \Mapper\Question('ru'))->update($question);
     }
 
     public function test_UpdateWithIDBelowZero_ThrowException()
@@ -34,6 +34,6 @@ class Mapper_Question__update__id__Test extends Abstract_DB_TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param -1 must be greater than or equal to 1');
-        $question = (new Question_Mapper('ru'))->update($question);
+        $question = (new \Mapper\Question('ru'))->update($question);
     }
 }

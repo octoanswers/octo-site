@@ -34,7 +34,7 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
             $relation->userID = $user_ID;
             $relation->categoryID = $category_ID;
 
-            $relation = (new UserFollowCategory_Relation_Mapper($this->lang))->create($relation);
+            $relation = (new \Mapper\Relation\UserFollowCategory($this->lang))->create($relation);
 
             // Create activity
 
@@ -42,7 +42,7 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
             $activity->type = \Model\Activity::USER_FOLLOW_CATEGORY;
             $activity->subject = $user;
             $activity->data = $category;
-            $activity = (new UFollowC_Activity_Mapper($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UFollowC($this->lang))->create($activity);
             $output = [
                 'lang'                    => $this->lang,
                 'relation_id'             => $relation->id,

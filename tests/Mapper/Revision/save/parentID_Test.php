@@ -13,7 +13,7 @@ class Mapper_Revisions__save__negative__parent_ID__Test extends TestCase
         $revision->parentID = 0;
 
         $this->expectExceptionMessage('Revision parentID param 0 must be greater than or equal to 1');
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
     }
 
     public function testParentIDBelowZero()
@@ -25,6 +25,6 @@ class Mapper_Revisions__save__negative__parent_ID__Test extends TestCase
         $revision->parentID = -1;
 
         $this->expectExceptionMessage('Revision parentID param -1 must be greater than or equal to 1');
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
     }
 }

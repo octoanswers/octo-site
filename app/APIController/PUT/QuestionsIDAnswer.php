@@ -38,7 +38,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             $answer->text = $new_answer_text;
             $answer->updatedAt = $answerUpdatedAt;
 
-            $answer = (new Answer_Mapper($this->lang))->update($answer);
+            $answer = (new \Mapper\Answer($this->lang))->update($answer);
 
             // Create revision
 
@@ -58,7 +58,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
                 $revision->parentID = $parentRevision->id;
             }
 
-            $revision = (new Revision_Mapper($this->lang))->save($revision);
+            $revision = (new \Mapper\Revision($this->lang))->save($revision);
 
             // Read updated question
             $question = (new Question_Query($this->lang))->question_with_ID($answer_id);
@@ -69,13 +69,13 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             $activity->type = \Model\Activity::F_U_UPDATE_A;
             $activity->subject = $user;
             $activity->data = ['question' => $question, 'revision' => $revision];
-            $activity = (new UUpdateA_Activity_Mapper($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UUpdateA($this->lang))->create($activity);
 
             $activity = new \Model\Activity();
             $activity->type = \Model\Activity::F_Q_UPDATE_A;
             $activity->subject = $question;
             $activity->data = ['user' => $user, 'revision' => $revision];
-            $activity = (new QUpdateA_Activity_Mapper($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\QUpdateA($this->lang))->create($activity);
 
             $output = [
                 'question_id'        => $answer_id,

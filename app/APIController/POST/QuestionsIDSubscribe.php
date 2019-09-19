@@ -37,7 +37,7 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
             $subscription = new \Model\Subscription();
             $subscription->questionID = $question_id;
             $subscription->email = $email;
-            $subscription = (new Subscription_Mapper($this->lang))->create($subscription);
+            $subscription = (new \Mapper\Subscription($this->lang))->create($subscription);
 
             //
             // Send email

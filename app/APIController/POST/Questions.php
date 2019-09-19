@@ -15,7 +15,7 @@ class Questions_POST_APIController extends Abstract_APIController
             $question = \Model\Question::init_with_title($title);
 
             try {
-                $question = (new Question_Mapper($this->lang))->create($question);
+                $question = (new \Mapper\Question($this->lang))->create($question);
             } catch (\Exception $e) {
                 if ($e->getCode() == 23000) {
                     $question = (new Question_Query($this->lang))->question_with_title($title);
@@ -29,7 +29,7 @@ class Questions_POST_APIController extends Abstract_APIController
             // $activity->subject = $user;
             // $activity->data = $question;
             //
-            // $activity = (new UAskedQ_Activity_Mapper())->create($activity);
+            // $activity = (new \Mapper\Activity\UAskedQ())->create($activity);
 
             $output = [
                 'lang'  => $this->lang,

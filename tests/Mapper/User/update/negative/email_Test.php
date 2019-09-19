@@ -13,7 +13,7 @@ class Mapper_User__save__negative__email__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User "email" property null must be a string');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 
     public function test_incorrect()
@@ -28,6 +28,6 @@ class Mapper_User__save__negative__email__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User "email" property "steve_aw.org" must be valid email');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 }

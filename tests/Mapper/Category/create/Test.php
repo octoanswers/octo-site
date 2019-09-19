@@ -9,7 +9,7 @@ class Mapper_Category_create__Test extends Abstract_DB_TestCase
         $category = new \Model\Category();
         $category->title = 'New';
 
-        $category = (new Category_Mapper('ru'))->create($category);
+        $category = (new \Mapper\Category('ru'))->create($category);
 
         $this->assertEquals(19, $category->id);
         $this->assertEquals('New', $category->title);
@@ -20,7 +20,7 @@ class Mapper_Category_create__Test extends Abstract_DB_TestCase
         $category = new \Model\Category();
         $category->title = 'Foo Bar';
 
-        $category = (new Category_Mapper('ru'))->create($category);
+        $category = (new \Mapper\Category('ru'))->create($category);
 
         $this->assertEquals(19, $category->id);
         $this->assertEquals('Foo Bar', $category->title);
@@ -31,7 +31,7 @@ class Mapper_Category_create__Test extends Abstract_DB_TestCase
         $category = new \Model\Category();
         $category->title = 'тема';
 
-        $category = (new Category_Mapper('ru'))->create($category);
+        $category = (new \Mapper\Category('ru'))->create($category);
 
         $this->assertEquals(19, $category->id);
         $this->assertEquals('тема', $category->title);

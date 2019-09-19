@@ -1,6 +1,8 @@
 <?php
 
-class UAskedQ_Activity_Mapper extends Abstract_Mapper
+namespace Mapper\Activity;
+
+class UAskedQ extends \Mapper\Mapper
 {
     public function create(\Model\Activity $activity): \Model\Activity
     {
@@ -9,13 +11,13 @@ class UAskedQ_Activity_Mapper extends Abstract_Mapper
         $question = $activity->data;
 
         if ($activity_type != \Model\Activity::F_U_ASKED_Q) {
-            throw new Exception("Incorrect activity type \"$activity_type\"", 0);
+            throw new \Exception("Incorrect activity type \"$activity_type\"", 0);
         }
         if (!is_a($user, \Model\User::class)) {
-            throw new Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
+            throw new \Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
         if (!is_a($question, \Model\Question::class)) {
-            throw new Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
+            throw new \Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
         }
 
         $userID = $user->id;
@@ -34,18 +36,18 @@ class UAskedQ_Activity_Mapper extends Abstract_Mapper
 
         $sql = 'INSERT INTO activities (u_id, activity_type, data) VALUES (:user_id, :activity_type, :data)';
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':user_id', $userID, PDO::PARAM_INT);
-        $stmt->bindParam(':activity_type', $activity_type, PDO::PARAM_STR);
-        $stmt->bindParam(':data', $data, PDO::PARAM_STR);
+        $stmt->bindParam(':user_id', $userID, \PDO::PARAM_INT);
+        $stmt->bindParam(':activity_type', $activity_type, \PDO::PARAM_STR);
+        $stmt->bindParam(':data', $data, \PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
 
-            throw new Exception($error[2], $error[1]);
+            throw new \Exception($error[2], $error[1]);
         }
 
         $activity->id = (int) $this->pdo->lastInsertId();
         if ($activity->id === 0) {
-            throw new Exception('Activity not saved', 1);
+            throw new \Exception('Activity not saved', 1);
         }
 
         return $activity;

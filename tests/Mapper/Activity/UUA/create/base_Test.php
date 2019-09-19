@@ -36,7 +36,7 @@ class Mapper_Activity_UUA__create__Test extends Abstract_DB_TestCase
         $activity->subject = $user;
         $activity->data = ['question' => $question, 'revision' => $revision];
 
-        $activity = (new UUpdateA_Activity_Mapper('ru'))->create($activity);
+        $activity = (new \Mapper\Activity\UUpdateA('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
         $this->assertEquals(\Model\Activity::F_U_UPDATE_A, $activity->type);

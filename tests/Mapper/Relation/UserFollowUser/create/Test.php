@@ -10,7 +10,7 @@ class UserFollowUser_Relation_Mapper__create__Test extends Abstract_DB_TestCase
         $relation->userID = 3;
         $relation->followedUserID = 19;
 
-        $relation = (new UserFollowUser_Relation_Mapper('ru'))->create($relation);
+        $relation = (new \Mapper\Relation\UserFollowUser('ru'))->create($relation);
 
         $this->assertEquals(8, $relation->id);
         $this->assertEquals(3, $relation->userID);

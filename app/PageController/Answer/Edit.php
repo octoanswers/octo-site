@@ -27,7 +27,7 @@ class Edit_Answer_PageController extends Abstract_PageController
             $answer->id = $this->question->id;
             $answer->text = null;
 
-            $this->answer = (new Answer_Mapper($this->lang))->create($answer);
+            $this->answer = (new \Mapper\Answer($this->lang))->create($answer);
         }
 
         $this->question_how_to_edit = $this->_get_how_to_edit_question();

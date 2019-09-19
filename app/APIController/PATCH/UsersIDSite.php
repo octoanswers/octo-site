@@ -30,7 +30,7 @@ class UsersIDSite_PATCH_APIController extends Abstract_APIController
             // Change user signature
 
             $user->site = $new_site;
-            $user = (new User_Mapper())->update($user);
+            $user = (new \Mapper\User())->update($user);
 
             $output = [
                 'user' => [

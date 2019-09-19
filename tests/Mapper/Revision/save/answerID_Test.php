@@ -12,7 +12,7 @@ class Mapper_Revisions__save__negative__answer_ID__Test extends TestCase
         $revision->baseText = 'Answer written at 14:22';
 
         $this->expectExceptionMessage('Revision answerID param 0 must be greater than or equal to 1');
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
     }
 
     public function testAnswerIDBelowZero()
@@ -23,6 +23,6 @@ class Mapper_Revisions__save__negative__answer_ID__Test extends TestCase
         $revision->baseText = 'Answer written at 14:22';
 
         $this->expectExceptionMessage('Revision answerID param -1 must be greater than or equal to 1');
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
     }
 }

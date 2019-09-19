@@ -16,7 +16,7 @@ class Mapper_User__update__Test extends Abstract_DB_TestCase
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
 
         $this->assertEquals(11, $user->id);
         $this->assertEquals('steve', $user->username);

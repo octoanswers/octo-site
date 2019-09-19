@@ -10,7 +10,7 @@ class UserFollowQuestion_Relation_Mapper__create__Test extends Abstract_DB_TestC
         $er->userID = 3;
         $er->questionID = 19;
 
-        $er = (new UserFollowQuestion_Relation_Mapper('ru'))->create($er);
+        $er = (new \Mapper\Relation\UserFollowQuestion('ru'))->create($er);
 
         $this->assertEquals(9, $er->id);
         $this->assertEquals(3, $er->userID);

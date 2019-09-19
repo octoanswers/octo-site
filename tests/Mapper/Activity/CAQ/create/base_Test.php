@@ -15,7 +15,7 @@ class Mapper_Activity_CAQ__create__Test extends Abstract_DB_TestCase
         $activity->subject = $category;
         $activity->data = $question;
 
-        $activity = (new CAddedQ_Activity_Mapper('ru'))->create($activity);
+        $activity = (new \Mapper\Activity\CAddedQ('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
         $this->assertEquals(\Model\Activity::CATEGORY_ADDED_QUESTION, $activity->type);

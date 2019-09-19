@@ -14,7 +14,7 @@ class Mapper_User__save__negative__name__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User "name" property "" must have a length between 2 and 255');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 
     public function test_tooShort()
@@ -29,7 +29,7 @@ class Mapper_User__save__negative__name__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User "name" property "S" must have a length between 2 and 255');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 
     public function test_tooLong()
@@ -44,6 +44,6 @@ class Mapper_User__save__negative__name__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User "name" property "Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve... Steve..." must have a length between 2 and 255');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 }

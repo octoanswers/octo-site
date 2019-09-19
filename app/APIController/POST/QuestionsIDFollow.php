@@ -33,7 +33,7 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             $relation->userID = $user->id;
             $relation->questionID = $question->id;
 
-            $relation = (new UserFollowQuestion_Relation_Mapper($this->lang))->create($relation);
+            $relation = (new \Mapper\Relation\UserFollowQuestion($this->lang))->create($relation);
 
             //
             // Create activity
@@ -44,7 +44,7 @@ class QuestionsIDFollow_POST_APIController extends Abstract_APIController
             $activity->subject = $user;
             $activity->data = $question;
 
-            $activity = (new UFollowQ_Activity_Mapper($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UFollowQ($this->lang))->create($activity);
 
             $output = [
                 'lang'                    => $this->lang,

@@ -15,7 +15,7 @@ class Mapper_User__update__site__Test extends Abstract_DB_TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
         $user->createdAt = '2016-03-19 06:47:41';
 
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
         $this->assertEquals(null, $user->site);
     }
 }

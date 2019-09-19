@@ -32,7 +32,7 @@ class Mapper_Activity_QUA__create__Test extends Abstract_DB_TestCase
         $activity->subject = $question;
         $activity->data = ['user' => $user, 'revision' => $revision];
 
-        $activity = (new QUpdateA_Activity_Mapper('ru'))->create($activity);
+        $activity = (new \Mapper\Activity\QUpdateA('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
         $this->assertEquals(\Model\Activity::F_Q_UPDATE_A, $activity->type);

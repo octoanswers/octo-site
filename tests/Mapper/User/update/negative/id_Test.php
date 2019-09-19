@@ -16,7 +16,7 @@ class Mapper_User__update__id__Test extends Abstract_DB_TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
         $this->expectExceptionMessage('User with ID 1352 not updated');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 
     public function test_Updateuser_with_IDEqualZero_ThrowException()
@@ -32,7 +32,7 @@ class Mapper_User__update__id__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User id param 0 must be greater than or equal to 1');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 
     public function test_Updateuser_with_IDBelowZero_ThrowException()
@@ -48,6 +48,6 @@ class Mapper_User__update__id__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User id param -1 must be greater than or equal to 1');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 }

@@ -14,7 +14,7 @@ class Mapper_User_save__negative__api_key__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User "apiKey" property null must be a string');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 
     public function test_tooShort()
@@ -30,7 +30,7 @@ class Mapper_User_save__negative__api_key__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User "apiKey" property "123" must have a length between 25 and 45');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 
     public function test_tooLong()
@@ -46,6 +46,6 @@ class Mapper_User_save__negative__api_key__Test extends Abstract_DB_TestCase
         $user->createdAt = '2016-03-19 06:47:41';
 
         $this->expectExceptionMessage('User "apiKey" property "4447243e3e1766375d23b06bf6dd1271+4447243e3e1766375d23b06bf6dd1271" must have a length between 25 and 45');
-        $user = (new User_Mapper())->update($user);
+        $user = (new \Mapper\User())->update($user);
     }
 }

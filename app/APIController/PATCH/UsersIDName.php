@@ -30,7 +30,7 @@ class UsersIDName_PATCH_APIController extends Abstract_APIController
             // Change user signature
 
             $user->name = $name;
-            $user = (new User_Mapper())->update($user);
+            $user = (new \Mapper\User())->update($user);
 
             $output = [
                 'user' => [

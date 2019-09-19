@@ -34,7 +34,7 @@ class UsersIDFollow_POST_APIController extends Abstract_APIController
             $relation->userID = $user->id;
             $relation->followedUserID = $followed_user_ID;
 
-            $relation = (new UserFollowUser_Relation_Mapper($this->lang))->create($relation);
+            $relation = (new \Mapper\Relation\UserFollowUser($this->lang))->create($relation);
 
             // Create activity
 
@@ -43,7 +43,7 @@ class UsersIDFollow_POST_APIController extends Abstract_APIController
             $activity->subject = $user;
             $activity->data = $followed_user;
 
-            $activity = (new UFollowU_Activity_Mapper($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UFollowU($this->lang))->create($activity);
 
             $output = [
                 'relation_id'        => $relation->id,

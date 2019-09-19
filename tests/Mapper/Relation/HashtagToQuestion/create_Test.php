@@ -10,7 +10,7 @@ class Mapper_ER_CategoriesQuestions__create__Test extends Abstract_DB_TestCase
         $er->categoryID = 3;
         $er->questionID = 9;
 
-        $er = (new CategoryToQuestion_Relation_Mapper('ru'))->create($er);
+        $er = (new \Mapper\Relation\CategoryToQuestion('ru'))->create($er);
 
         $this->assertEquals(25, $er->id);
         $this->assertEquals(3, $er->categoryID);
@@ -23,7 +23,7 @@ class Mapper_ER_CategoriesQuestions__create__Test extends Abstract_DB_TestCase
         $er->categoryID = 3;
         $er->questionID = 9;
 
-        $er = (new CategoryToQuestion_Relation_Mapper('ru'))->create($er);
+        $er = (new \Mapper\Relation\CategoryToQuestion('ru'))->create($er);
 
         $this->assertEquals(25, $er->id);
         $this->assertEquals(3, $er->categoryID);

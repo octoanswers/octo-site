@@ -45,7 +45,7 @@ class Signup_POST_APIController extends Abstract_APIController
             $user->passwordHash = $user_password_hash;
             $user->apiKey = $apiKey;
 
-            $user = (new User_Mapper())->create($user);
+            $user = (new \Mapper\User())->create($user);
 
             $cookieStorage = new CookieStorage();
             $cookieStorage->save_user($user);

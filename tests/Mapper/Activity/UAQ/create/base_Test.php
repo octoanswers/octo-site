@@ -17,7 +17,7 @@ class Mapper_Activity_UAQ__create__Test extends Abstract_DB_TestCase
         $activity->subject = $user;
         $activity->data = $question;
 
-        $activity = (new UAskedQ_Activity_Mapper('ru'))->create($activity);
+        $activity = (new \Mapper\Activity\UAskedQ('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
         $this->assertEquals(\Model\Activity::F_U_ASKED_Q, $activity->type);

@@ -49,7 +49,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                     $category = new \Model\Category();
                     $category->title = $category_title;
 
-                    $category = (new Category_Mapper($this->lang))->create($category);
+                    $category = (new \Mapper\Category($this->lang))->create($category);
                 }
 
                 $newCategories[] = $category;
@@ -59,14 +59,14 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                     $er = new \Model\Relation\CategoriesToQuestions();
                     $er->categoryID = $category->id;
                     $er->questionID = $question->id;
-                    $er = (new CategoryToQuestion_Relation_Mapper($this->lang))->create($er);
+                    $er = (new \Mapper\Relation\CategoryToQuestion($this->lang))->create($er);
 
                     // create activity
                     $activity = new \Model\Activity();
                     $activity->type = \Model\Activity::CATEGORY_ADDED_QUESTION;
                     $activity->subject = $category;
                     $activity->data = $question;
-                    $activity = (new CAddedQ_Activity_Mapper($this->lang))->create($activity);
+                    $activity = (new \Mapper\Activity\CAddedQ($this->lang))->create($activity);
                 }
             }
 
@@ -75,7 +75,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             //
 
             $question->categoriesCount = count($newCategories);
-            $question = (new Question_Mapper($this->lang))->updateCategoriesCount($question);
+            $question = (new \Mapper\Question($this->lang))->updateCategoriesCount($question);
 
             // Save activity
 
@@ -83,13 +83,13 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
             // $activity->type = \Model\Activity::F_U_UPDATE_A;
             // $activity->subject = $user;
             // $activity->data = ['question' => $question, 'revision' => $revision];
-            // $activity = (new UUpdateA_Activity_Mapper($this->lang))->create($activity);
+            // $activity = (new \Mapper\Activity\UUpdateA($this->lang))->create($activity);
             //
             // $activity = new \Model\Activity();
             // $activity->type = \Model\Activity::F_Q_UPDATE_A;
             // $activity->subject = $question;
             // $activity->data = ['user' => $user, 'revision' => $revision];
-            // $activity = (new QUpdateA_Activity_Mapper($this->lang))->create($activity);
+            // $activity = (new \Mapper\Activity\QUpdateA($this->lang))->create($activity);
 
             $output = [
                 'lang'     => $this->lang,

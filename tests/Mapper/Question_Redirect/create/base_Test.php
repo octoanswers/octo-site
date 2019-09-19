@@ -10,7 +10,7 @@ class Question_Mapper_Redirect__create__Test extends Abstract_DB_TestCase
         $redirect->fromID = 12;
         $redirect->toTitle = 'How iPhone 8 are charged?';
 
-        $redirect = (new Question_Redirect_Mapper('ru'))->create($redirect);
+        $redirect = (new \Mapper\Redirect\Question('ru'))->create($redirect);
 
         $this->assertEquals(12, $redirect->fromID);
         $this->assertEquals('How iPhone 8 are charged?', $redirect->toTitle);

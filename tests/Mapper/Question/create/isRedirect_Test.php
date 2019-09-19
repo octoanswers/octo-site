@@ -10,7 +10,7 @@ class Mapper_Question__create__isRedirect__Test extends Abstract_DB_TestCase
         $question->title = 'This is question?';
         $question->isRedirect = true;
 
-        $question = (new Question_Mapper('ru'))->create($question);
+        $question = (new \Mapper\Question('ru'))->create($question);
         $this->assertEquals(34, $question->id);
         $this->assertEquals(true, $question->isRedirect);
     }

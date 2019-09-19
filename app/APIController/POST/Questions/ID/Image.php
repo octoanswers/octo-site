@@ -61,7 +61,7 @@ class Image_ID_Questions_POST_APIController extends Abstract_APIController
 
             // Update question image base name
             $this->question->image_base_bame = $image_base_bame;
-            $this->question = (new Question_Mapper($this->lang))->update($this->question);
+            $this->question = (new \Mapper\Question($this->lang))->update($this->question);
 
             $output = [
                 'lang'         => $this->lang,

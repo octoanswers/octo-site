@@ -30,7 +30,7 @@ class CategoriesIDFollow_DELETE_APIController extends Abstract_APIController
             // Delete follow record
             //
 
-            (new UserFollowCategory_Relation_Mapper($this->lang))->delete_relation($relation);
+            (new \Mapper\Relation\UserFollowCategory($this->lang))->delete_relation($relation);
 
             $output = [
                 'user_id'             => $user->id,

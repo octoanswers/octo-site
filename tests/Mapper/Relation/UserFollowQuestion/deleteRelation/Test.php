@@ -13,7 +13,7 @@ class UserFollowQuestion_Relation_Mapper__delete_relation__Test extends Abstract
         $relation->questionID = 23;
         $relation->createdAt = '2014-12-16 11:28:56';
 
-        $deleted = (new UserFollowQuestion_Relation_Mapper('ru'))->delete_relation($relation);
+        $deleted = (new \Mapper\Relation\UserFollowQuestion('ru'))->delete_relation($relation);
 
         $this->assertEquals(true, $deleted);
     }
@@ -28,6 +28,6 @@ class UserFollowQuestion_Relation_Mapper__delete_relation__Test extends Abstract
         $relation->createdAt = '2014-12-16 11:28:56';
 
         $this->expectExceptionMessage('UserFollowQuestion relation not deleted');
-        $deleted = (new UserFollowQuestion_Relation_Mapper('ru'))->delete_relation($relation);
+        $deleted = (new \Mapper\Relation\UserFollowQuestion('ru'))->delete_relation($relation);
     }
 }

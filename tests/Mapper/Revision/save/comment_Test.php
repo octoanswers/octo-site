@@ -13,7 +13,7 @@ class Mapper_Revisions__save__negative__comment__Test extends TestCase
         $revision->comment = 123;
 
         $this->expectExceptionMessage('Revision comment param 123 must be a string');
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
     }
 
     public function testCommentIsEmpty()
@@ -25,7 +25,7 @@ class Mapper_Revisions__save__negative__comment__Test extends TestCase
         $revision->comment = '';
 
         $this->expectExceptionMessage('Revision comment param "" must have a length between 3 and 255');
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
     }
 
     public function testCommentTooShort()
@@ -37,6 +37,6 @@ class Mapper_Revisions__save__negative__comment__Test extends TestCase
         $revision->comment = 's';
 
         $this->expectExceptionMessage('Revision comment param "s" must have a length between 3 and 255');
-        $revision = (new Revision_Mapper('ru'))->save($revision);
+        $revision = (new \Mapper\Revision('ru'))->save($revision);
     }
 }

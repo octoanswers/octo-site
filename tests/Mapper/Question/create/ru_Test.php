@@ -11,7 +11,7 @@ class Mapper_Question__create__ru__Test extends Abstract_DB_TestCase
         $question->isRedirect = true;
         $question->imageBaseName = '4_2013_05_09_123';
 
-        $question = (new Question_Mapper('ru'))->create($question);
+        $question = (new \Mapper\Question('ru'))->create($question);
 
         $this->assertEquals(34, $question->id);
         $this->assertEquals('This is question?', $question->title);
@@ -24,7 +24,7 @@ class Mapper_Question__create__ru__Test extends Abstract_DB_TestCase
         $question = new \Model\Question();
         $question->title = 'Ready to work?';
 
-        $question = (new Question_Mapper('ru'))->create($question);
+        $question = (new \Mapper\Question('ru'))->create($question);
 
         $this->assertEquals(34, $question->id);
         $this->assertEquals('Ready to work?', $question->title);

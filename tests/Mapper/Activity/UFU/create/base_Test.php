@@ -19,7 +19,7 @@ class Mapper_Activities__createUFU__Test extends Abstract_DB_TestCase
         $activity->subject = $user;
         $activity->data = $followedUser;
 
-        $activity = (new UFollowU_Activity_Mapper('ru'))->create($activity);
+        $activity = (new \Mapper\Activity\UFollowU('ru'))->create($activity);
 
         $this->assertEquals(13, $activity->id);
         $this->assertEquals(\Model\Activity::F_U_FOLLOW_U, $activity->type);

@@ -30,7 +30,7 @@ class UsersIDFollow_DELETE_APIController extends Abstract_APIController
             // Delete follow record
             //
 
-            (new UserFollowUser_Relation_Mapper($this->lang))->delete_relation($relation);
+            (new \Mapper\Relation\UserFollowUser($this->lang))->delete_relation($relation);
 
             $output = [
                 'user_id'            => $user->id,
