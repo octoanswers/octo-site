@@ -1,5 +1,7 @@
 <?php
 
+namespace Helper;
+
 /**
  * Simple translator without dependency.
  */
@@ -30,7 +32,7 @@ class Translator
         $fileWithMessages = $messagesDirectory . '/' . $lang . '.json';
 
         if (!file_exists($fileWithMessages)) {
-            throw new Exception('File with translated messages "' . $this->lang . '.json" not exists', 1);
+            throw new \Exception('File with translated messages "' . $this->lang . '.json" not exists', 1);
         }
 
         $string = file_get_contents($fileWithMessages);

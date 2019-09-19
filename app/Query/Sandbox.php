@@ -11,7 +11,7 @@ class Sandbox extends \Query\Query
         \Validator\QuestionsList::validatePage($page);
         \Validator\QuestionsList::validatePerPage($perPage);
 
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $offset = $perPage * ($page - 1);
 
@@ -39,7 +39,7 @@ class Sandbox extends \Query\Query
         \Validator\QuestionsList::validatePage($page);
         \Validator\QuestionsList::validatePerPage($perPage);
 
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $offset = $perPage * ($page - 1);
 

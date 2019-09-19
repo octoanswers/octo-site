@@ -29,6 +29,8 @@ class QUpdateA extends \Mapper\Mapper
             throw new \Exception('Incorrect activity "data" class type: ' . get_class($revision), 0);
         }
 
+        $fineDiffRender = new cogpowered\FineDiff\Render\Html;
+
         $questionID = $question->id;
         $data = json_encode([
             'question' => [
@@ -42,7 +44,7 @@ class QUpdateA extends \Mapper\Mapper
                 'avatar_xs_url' => $user->get_avatar_URL_small(),
             ],
             'revision' => [
-                'diff_text' => \FineDiff::renderDiffToHTMLFromOpcodes($revision->baseText, $revision->opcodes),
+                'diff_text' => $fineDiffRender->process($revision->baseText, $revision->opcodes),
                 'comment'   => $revision->comment,
             ],
         ], JSON_UNESCAPED_UNICODE);

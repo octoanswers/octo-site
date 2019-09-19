@@ -13,7 +13,7 @@ class CookieStorage__Test extends TestCase
             'u_created_at' => '2016-03-19 06:47:41',
         ]);
 
-        $this->storage = new CookieStorage();
+        $this->storage = new \Helper\CookieStorage();
         $this->storage->save_user($user);
     }
 
@@ -25,7 +25,7 @@ class CookieStorage__Test extends TestCase
 
     public function test__class()
     {
-        $this->assertInstanceOf('CookieStorage', $this->storage);
+        $this->assertInstanceOf('\Helper\CookieStorage', $this->storage);
     }
 
     public function testConstValues()

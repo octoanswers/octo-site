@@ -25,7 +25,7 @@ abstract class Abstract_PageController
     {
         $this->container = $container;
 
-        $cookieStorage = new CookieStorage(); // @TODO Вынести бы
+        $cookieStorage = new \Helper\CookieStorage(); // @TODO Вынести бы
         $this->authUser = $cookieStorage->get_auth_user();
 
         $this->_init_common_modals();
@@ -36,7 +36,7 @@ abstract class Abstract_PageController
     public function handleRequest($request, $response, $args)
     {
         $this->lang = $args['lang'];
-        $this->translator = new Translator($this->lang, ROOT_PATH . '/app/Lang');
+        $this->translator = new \Helper\Translator($this->lang, ROOT_PATH . '/app/Lang');
     }
 
     protected function render_page()

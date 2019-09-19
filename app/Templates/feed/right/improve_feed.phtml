@@ -16,7 +16,7 @@
 
         <div class="my-3">
             <?php if ($this->authUser->username == $this->authUser->name) : ?>
-                <a class="text-dark text-decoration-none" href="<?= Settings_URL_Helper::get_real_name_URL($this->lang) ?>">
+                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Settings::get_real_name_URL($this->lang) ?>">
                     <?= $this->translator->get('feed', 'set_real_name') ?>
                 </a>
             <?php else : ?>
@@ -31,7 +31,7 @@
 
         <div class="my-3">
             <?php if (strlen($this->authUser->signature) == 0) : ?>
-                <a class="text-dark text-decoration-none" href="<?= Settings_URL_Helper::get_signature_URL($this->lang) ?>">
+                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Settings::get_signature_URL($this->lang) ?>">
                     <?= $this->translator->get('feed', 'set_signature') ?>
                 </a>
             <?php else : ?>
@@ -46,7 +46,7 @@
 
         <div class="my-3">
             <?php if ($this->isShowCategoriesFollowLure) : ?>
-                <a class="text-dark text-decoration-none" href="<?= Categories_URL_Helper::get_newest_URL($this->lang) ?>">
+                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>">
                     <?= $this->translator->get('feed', 'follow_3_more_categories') ?>
                 </a>
             <?php else : ?>
@@ -61,7 +61,7 @@
 
         <div class="my-3">
             <?php if ($this->isShowQuestionsFollowLure) : ?>
-                <a class="text-dark text-decoration-none" href="<?= Questions_URL_Helper::get_newest_URL($this->lang) ?>">
+                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
                     <?= $this->translator->get('feed', 'follow_your_first_question') ?>
                 </a>
             <?php else : ?>
@@ -76,7 +76,7 @@
 
         <div class="my-3">
             <?php if ($this->isShowUsersFollowLure) : ?>
-                <a class="text-dark text-decoration-none" href="<?= Users_URL_Helper::get_newest_URL($this->lang) ?>">
+                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Users::get_newest_URL($this->lang) ?>">
                     <?= $this->translator->get('feed', 'find_your_friends') ?>
                 </a>
             <?php else : ?>

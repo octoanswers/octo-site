@@ -1,6 +1,8 @@
 <?php
 
-class Page_URL_Helper
+namespace Helper\URL;
+
+class Page
 {
     public static function get_main_URL(string $lang): string
     {

@@ -10,17 +10,7 @@ spl_autoload_register(function ($class_name) {
 
         // Helpers
 
-        'FineDiff'          => 'app/Helper/FineDiff/FineDiff.php',
-        'PassHash'          => 'app/Helper/PassHash.php',
         'Lang'              => 'app/Helper/Lang.php',
-        'PDOFactory'        => 'app/Helper/PDOFactory.php',
-        'CookieStorage'     => 'app/Helper/CookieStorage.php',
-        'Translator'        => 'app/Helper/Translator/Translator.php',
-
-        // Mailer`s
-
-        'AbstractMailer'     => 'app/Helper/Mailer/Abstract.php',
-        'SubscriptionMailer' => 'app/Helper/Mailer/Subscription.php',
 
     ];
 

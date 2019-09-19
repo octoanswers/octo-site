@@ -9,7 +9,7 @@
     <?php endif; ?>
 
     <?php if ($this->authUser && ($this->authUser->id == $this->user->id)) : ?>
-        <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= Settings_URL_Helper::get_settings_URL($this->lang) ?>">
+        <a rel="nofollow" class="btn btn-sm btn-outline-secondary mr-2 mb-3" href="<?= \Helper\URL\Settings::get_settings_URL($this->lang) ?>">
             <i class="material-icons md-18">settings</i>
             <?= $this->translator->get('user', 'settings') ?>
         </a>

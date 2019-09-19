@@ -20,7 +20,7 @@ class Newest_Categories_PageController extends Abstract_PageController
         $this->activeFilter = 'newest';
 
         if ((isset($this->categories[9])) && ($this->categories[9]->id > 1)) {
-            $this->nextPageURL = Categories_URL_Helper::get_newest_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Categories::get_newest_URL($this->lang, ($this->page + 1));
         }
 
         $output = $this->render_page();

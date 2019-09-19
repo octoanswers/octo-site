@@ -28,7 +28,11 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
             $answer = (new \Query\Answers($this->lang))->answer_with_ID($answer_id);
 
             $old_answer_text = $answer->text;
-            $opcodes = FineDiff::getDiffOpcodes($old_answer_text, $new_answer_text, FineDiff::$wordGranularity);
+
+            $granularity = new cogpowered\FineDiff\Granularity\Word;
+            $fineDiff = new cogpowered\FineDiff\Diff($granularity);
+
+            $opcodes = $fineDiff->getOpcodes($old_answer_text, $new_answer_text);
 
             // Update answer
 

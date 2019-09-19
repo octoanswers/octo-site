@@ -1,6 +1,8 @@
 <?php
 
-class SubscriptionMailer extends AbstractMailer
+namespace Helper\Mailer;
+
+class Subscription extends \Helper\Mailer\Mailer
 {
     public function sendEmail(string $to_email, \Model\Question $question)
     {

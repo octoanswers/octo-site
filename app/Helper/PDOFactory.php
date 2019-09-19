@@ -1,5 +1,7 @@
 <?php
 
+namespace Helper;
+
 /**
  * Handling database connection.
  */

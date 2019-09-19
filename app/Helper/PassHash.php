@@ -1,5 +1,7 @@
 <?php
 
+namespace Helper;
+
 /**
  * The best way to secure the user passwords is not store them as plain text, instead all the passwords should be  encrypted before storing in db. The following class takes care of encrypting the user password.
  */

@@ -25,7 +25,7 @@ class RecentlyUpdated_Questions_PageController extends Abstract_PageController
         $this->list = 'recently_updated';
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
-            $this->nextPageURL = Questions_URL_Helper::get_recently_updated_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Questions::get_recently_updated_URL($this->lang, ($this->page + 1));
         }
 
         $output = $this->render_page();

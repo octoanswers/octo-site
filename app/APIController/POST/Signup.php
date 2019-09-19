@@ -29,7 +29,7 @@ class Signup_POST_APIController extends Abstract_APIController
             }
 
             // Generating password hash
-            $password_hash = new PassHash();
+            $password_hash = new \Helper\PassHash();
             $user_password_hash = $password_hash->hash($user_password);
             $apiKey = $password_hash->generate_API_key();
 
@@ -47,7 +47,7 @@ class Signup_POST_APIController extends Abstract_APIController
 
             $user = (new \Mapper\User())->create($user);
 
-            $cookieStorage = new CookieStorage();
+            $cookieStorage = new \Helper\CookieStorage();
             $cookieStorage->save_user($user);
 
             $this->output = [
@@ -58,7 +58,7 @@ class Signup_POST_APIController extends Abstract_APIController
                 'api_key'         => $user->apiKey,
                 'created_at'      => date('Y-m-d H:i:s'),
                 'url'             => $user->get_URL($this->lang),
-                'destination_url' => Page_URL_Helper::get_main_URL($this->lang),
+                'destination_url' => \Helper\URL\Page::get_main_URL($this->lang),
             ];
 
             $this->_copyDefaultAvatar($user->id);

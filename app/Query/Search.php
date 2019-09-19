@@ -90,7 +90,7 @@ class Search extends \Query\Query
 
         $sql = "SELECT * FROM users WHERE (u_name LIKE '%" . $query . "%') LIMIT :id_offset, :per_page";
 
-        $this->pdo = \PDOFactory::get_connection_to_users_DB();
+        $this->pdo = \Helper\PDOFactory::get_connection_to_users_DB();
         $stmt = $this->pdo->prepare($sql);
 
         $stmt->bindParam(':id_offset', $id_offset, \PDO::PARAM_INT);

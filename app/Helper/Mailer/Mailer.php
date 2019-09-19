@@ -1,6 +1,8 @@
 <?php
 
-class AbstractMailer
+namespace Helper\Mailer;
+
+abstract class Mailer
 {
     private $moderator_email = 'alexander.gomzyakov@gmail.com';
 

@@ -33,7 +33,7 @@
 		</li>
 
 		<li>
-			<a rel="nofollow" target="_blank" href="<?= DDG_URL_Helper::get_search_URL($this->question->title) ?>">
+			<a rel="nofollow" target="_blank" href="<?= \Helper\URL\DDG::get_search_URL($this->question->title) ?>">
 				<i class="material-icons md-18 w-32px">link</i><?= $this->translator->get('question', 'search_in_ddg') ?>
 			</a>
 		</li>

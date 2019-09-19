@@ -11,7 +11,7 @@ class Index_SitemapXML_PageController extends Abstract_PageController
         $output .= '<url>';
         $output .= '<loc>' . SITE_URL . '</loc>';
         foreach ($supportedLangs as $lang) {
-            $url = Page_URL_Helper::get_main_URL($lang);
+            $url = \Helper\URL\Page::get_main_URL($lang);
             $output .= '<xhtml:link rel="alternate" hreflang="' . $lang . '" href="' . $url . '" />';
         }
         $output .= '</url>';

@@ -17,7 +17,10 @@
                     <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
                 </div>
             </div>
-            <pre><?= FineDiff::renderDiffToHTMLFromOpcodes($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
+
+            <?php $fineDiffRender = new cogpowered\FineDiff\Render\Html; ?>
+
+            <pre><?= $fineDiffRender->process($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
         </div>
     <?php endfor; ?>
 <?php else : ?>

@@ -1,6 +1,8 @@
 <?php
 
-class Sandbox_URL_Helper
+namespace Helper\URL;
+
+class Sandbox
 {
     public static function get_without_answers_URL(string $lang, int $page = 1): string
     {

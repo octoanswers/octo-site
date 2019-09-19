@@ -38,7 +38,7 @@ class Show_Main_PageController extends Abstract_PageController
         $this->template = 'main';
         $this->pageTitle = $this->translator->get('answeropedia') . ' – ' . $this->translator->get('main', 'slogan');
         $this->pageDescription = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
-        $this->canonicalURL = Page_URL_Helper::get_main_URL($this->lang);
+        $this->canonicalURL = \Helper\URL\Page::get_main_URL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 

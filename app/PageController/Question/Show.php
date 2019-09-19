@@ -28,7 +28,7 @@ class Show_Question_PageController extends Abstract_PageController
         $question_URI = $args['question_uri'];
 
         try {
-            $question_title = Title_Helper::title_from_question_URI($question_URI);
+            $question_title = \Helper\Title::title_from_question_URI($question_URI);
             $this->question = (new \Query\Question($this->lang))->question_with_title($question_title);
         } catch (Throwable $e) {
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
@@ -41,7 +41,7 @@ class Show_Question_PageController extends Abstract_PageController
             $need_stop_redirect = $request->getParam('no_redirect');
             if (!$need_stop_redirect) {
                 $redirectTitle = $this->questionRedirect->title;
-                $redirectURL = Redirect_URL_Helper::get_redirect_URL_for_title($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
+                $redirectURL = \Helper\URL\Redirect::get_redirect_URL_for_title($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
 
                 return $response->withRedirect($redirectURL, 301);
             }

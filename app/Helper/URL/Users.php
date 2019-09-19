@@ -1,6 +1,8 @@
 <?php
 
-class Users_URL_Helper
+namespace Helper\URL;
+
+class Users
 {
     public static function get_newest_URL(string $lang, int $page = 1): string
     {

@@ -44,7 +44,7 @@ class QuestionsIDSubscribe_POST_APIController extends Abstract_APIController
             //
 
             if ($is_send_email) {
-                $mailer = new SubscriptionMailer();
+                $mailer = new \Helper\Mailer\Subscription();
                 $mailer->sendEmail($email, $question);
             }
 

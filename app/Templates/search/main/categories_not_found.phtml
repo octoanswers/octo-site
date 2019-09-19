@@ -1,13 +1,13 @@
 <?php if ($this->list == 'categories' && count($this->categories) == 0 && strlen($this->query) > 0) : ?>
-<div class="alert alert-secondary my-4">
+    <div class="alert alert-secondary my-4">
 
-    <p class="font-weight-bold"><?= $this->translator->get('search', 'no_categories_found') ?></p>
-    <p>
-        <?= str_replace('%query%', $this->query, $this->translator->get('search', 'no_category_found_for_query')); ?>
-    </p>
+        <p class="font-weight-bold"><?= $this->translator->get('search', 'no_categories_found') ?></p>
+        <p>
+            <?= str_replace('%query%', $this->query, $this->translator->get('search', 'no_category_found_for_query')); ?>
+        </p>
 
-    <a class="btn btn-primary mb-2" href="<?= Categories_URL_Helper::get_newest_URL($this->lang) ?>" role="button">
-        <?= $this->translator->get('search', 'view_all_categories') ?>
-    </a>
-</div>
+        <a class="btn btn-primary mb-2" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>" role="button">
+            <?= $this->translator->get('search', 'view_all_categories') ?>
+        </a>
+    </div>
 <?php endif; ?>

@@ -22,12 +22,12 @@ class Login_POST_APIController extends Abstract_APIController
             }
 
             // check user password
-            $password_hash = new PassHash();
+            $password_hash = new \Helper\PassHash();
             if (!$password_hash->check_password($user->passwordHash, $user_password)) {
                 throw new Exception('WRONG_PASSWORD', 1);
             }
 
-            $cookieStorage = new CookieStorage();
+            $cookieStorage = new \Helper\CookieStorage();
             $cookieStorage->save_user($user);
 
             $output = [
@@ -38,7 +38,7 @@ class Login_POST_APIController extends Abstract_APIController
                 'api_key'         => $user->apiKey,
                 'created_at'      => $user->createdAt,
                 'url'             => $user->get_URL($this->lang),
-                'destination_url' => Page_URL_Helper::get_main_URL($this->lang),
+                'destination_url' => \Helper\URL\Page::get_main_URL($this->lang),
             ];
         } catch (Throwable $e) {
             $output = [

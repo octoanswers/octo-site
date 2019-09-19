@@ -39,7 +39,7 @@ class Lang
                 $lang = $default_language;
             }
 
-            $cookieStorage = new CookieStorage();
+            $cookieStorage = new \Helper\CookieStorage();
             $cookieStorage->set_lang($lang);
 
             return $lang;
@@ -62,7 +62,7 @@ class Lang
                 $lang = $default_language;
             }
 
-            $cookieStorage = new CookieStorage();
+            $cookieStorage = new \Helper\CookieStorage();
             $cookieStorage->set_lang($lang);
 
             return $lang;

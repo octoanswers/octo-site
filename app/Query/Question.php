@@ -8,7 +8,7 @@ class Question extends \Query\Query
     {
         \Validator\Question::validate_title($title);
 
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE q_title=:q_title LIMIT 1');
         $stmt->bindParam(':q_title', $title, \PDO::PARAM_STR);
@@ -30,7 +30,7 @@ class Question extends \Query\Query
     {
         \Validator\Question::validateID($questionID);
 
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE q_id=:q_id LIMIT 1');
         $stmt->bindParam(':q_id', $questionID, \PDO::PARAM_INT);

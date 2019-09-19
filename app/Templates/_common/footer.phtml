@@ -7,7 +7,7 @@
                 <div class="col-12 col-md-8">
                     <ul class="list-inline font-weight-bold semi-small mb-3">
                         <li class="list-inline-item">
-                            <a href="<?= Page_URL_Helper::get_main_URL($this->lang) ?>" class="text-black-50 text-decoration-none">
+                            <a href="<?= \Helper\URL\Page::get_main_URL($this->lang) ?>" class="text-black-50 text-decoration-none">
                                 <?= $this->translator->get('footer', 'nav', 'main_page') ?>
                             </a>
                         </li>
@@ -17,12 +17,12 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-black-50 text-decoration-none" href="<?= Questions_URL_Helper::get_newest_URL($this->lang) ?>">
+                            <a class="text-black-50 text-decoration-none" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
                                 <?= $this->translator->get('footer', 'nav', 'questions') ?>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-black-50 text-decoration-none" href="<?= Users_URL_Helper::get_newest_URL($this->lang) ?>">
+                            <a class="text-black-50 text-decoration-none" href="<?= \Helper\URL\Users::get_newest_URL($this->lang) ?>">
                                 <?= $this->translator->get('footer', 'nav', 'users') ?>
                             </a>
                         </li>

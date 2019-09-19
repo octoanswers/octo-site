@@ -1,6 +1,8 @@
 <?php
 
-class DDG_URL_Helper
+namespace Helper\URL;
+
+class DDG
 {
     public static function get_search_URL(string $query): string
     {

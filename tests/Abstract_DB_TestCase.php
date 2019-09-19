@@ -17,7 +17,7 @@ abstract class Abstract_DB_TestCase extends TestCase
     {
         if (count($this->setUpDB)) {
             foreach ($this->setUpDB as $database => $databaseTables) {
-                $pdo = PDOFactory::get_connection($database);
+                $pdo = Helper\PDOFactory::get_connection($database);
                 foreach ($databaseTables as $table) {
                     require "tests/_DB/schema/$table.php";
                     require "tests/_DB/data/$database/$table.php";
@@ -34,14 +34,14 @@ abstract class Abstract_DB_TestCase extends TestCase
         $this->arrayResponse = true;
         $this->complementaryActions = false;
 
-        $this->cookieStorageStub = $this->getMockBuilder('CookieStorage')->getMock();
+        $this->cookieStorageStub = $this->getMockBuilder('\Helper\CookieStorage')->getMock();
     }
 
     protected function tearDown(): void
     {
         if (count($this->setUpDB)) {
             foreach ($this->setUpDB as $database => $databaseTables) {
-                $pdo = PDOFactory::get_connection($database);
+                $pdo = Helper\PDOFactory::get_connection($database);
                 foreach ($databaseTables as $table) {
                     $pdo->exec("DROP TABLE IF EXISTS `$table`;");
                 }

@@ -1,6 +1,8 @@
 <?php
 
-class Settings_URL_Helper
+namespace Helper\URL;
+
+class Settings
 {
     public static function get_settings_URL(string $lang): string
     {

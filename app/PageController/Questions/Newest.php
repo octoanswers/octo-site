@@ -29,7 +29,7 @@ class Newest_Questions_PageController extends Abstract_PageController
         $this->list = 'with-answers';
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
-            $this->nextPageURL = Questions_URL_Helper::get_newest_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Questions::get_newest_URL($this->lang, ($this->page + 1));
         }
 
         $output = $this->render_page();

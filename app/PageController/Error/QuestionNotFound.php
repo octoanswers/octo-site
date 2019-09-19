@@ -9,11 +9,11 @@ class QuestionNotFound_Error_PageController extends Abstract_PageController
     {
         // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new Translator($this->lang, ROOT_PATH . '/app/Lang');
+        $this->translator = new \Helper\Translator($this->lang, ROOT_PATH . '/app/Lang');
 
         $question_URI = $args['question_uri'];
 
-        $this->questionTitle = Title_Helper::title_from_question_URI($question_URI);
+        $this->questionTitle = \Helper\Title::title_from_question_URI($question_URI);
 
         $question = new \Model\Question();
         $question->title = $this->questionTitle;

@@ -31,7 +31,7 @@ class Show_Flow_PageController extends Abstract_PageController
         $this->template = 'flow';
         $this->pageTitle = $this->translator->get('flow', 'page_title') . ' – ' . $this->translator->get('answeropedia');
         $this->pageDescription = $this->translator->get('flow', 'note');
-        $this->canonicalURL = Page_URL_Helper::get_flow_URL($this->lang);
+        $this->canonicalURL = \Helper\URL\Page::get_flow_URL($this->lang);
 
         $output = $this->render_page();
         $response->getBody()->write($output);

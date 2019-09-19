@@ -1,6 +1,8 @@
 <?php
 
-class Title_Helper
+namespace Helper;
+
+class Title
 {
     public static function title_from_question_URI(string $question_URI): string
     {

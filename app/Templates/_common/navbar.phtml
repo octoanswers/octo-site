@@ -3,11 +3,11 @@
 <header class="navbar sticky-top navbar-expand-lg navbar-light">
 	<div class="container">
 		<?php if ($this->authUser) : ?>
-			<a class="navbar-brand mr-0 mr-md-4" href="<?= Page_URL_Helper::get_feed_URL($this->lang) ?>">
+			<a class="navbar-brand mr-0 mr-md-4" href="<?= \Helper\URL\Page::get_feed_URL($this->lang) ?>">
 				<?= $this->translator->get('answeropedia') ?>
 			</a>
 		<?php else : ?>
-			<a class="navbar-brand mr-0 mr-md-4" href="<?= Page_URL_Helper::get_main_URL($this->lang) ?>">
+			<a class="navbar-brand mr-0 mr-md-4" href="<?= \Helper\URL\Page::get_main_URL($this->lang) ?>">
 				<?= $this->translator->get('answeropedia') ?>
 			</a>
 		<?php endif; ?>
@@ -22,13 +22,13 @@
 				<!-- Mobile links -->
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link" href="<?= Page_URL_Helper::get_flow_URL($this->lang) ?>">
+					<a class="nav-link" href="<?= \Helper\URL\Page::get_flow_URL($this->lang) ?>">
 						<?= $this->translator->get('navbar', 'recent_changes') ?>
 					</a>
 				</li>
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link" href="<?= Categories_URL_Helper::get_newest_URL($this->lang) ?>">
+					<a class="nav-link" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>">
 						<?= $this->translator->get('navbar', 'categories') ?>
 					</a>
 				</li>

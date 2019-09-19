@@ -11,7 +11,7 @@
             <div class="small text-muted mb-3">
                 <?= $this->translator->get('feed', 'write_the_first_answer', 'msg') ?>.
             </div>
-            <a class="btn btn-sm btn-outline-primary" href="<?= Sandbox_URL_Helper::get_without_answers_URL($this->lang) ?>">
+            <a class="btn btn-sm btn-outline-primary" href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>">
                 <?= $this->translator->get('feed', 'write_the_first_answer', 'action') ?>
             </a>
         </div>

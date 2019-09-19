@@ -11,7 +11,7 @@
             <div class="small text-muted mb-3">
                 <?= $this->translator->get('feed', 'set_signature', 'msg') ?>
             </div>
-            <a class="btn btn-sm btn-outline-primary" href="<?= Settings_URL_Helper::get_signature_URL($this->lang) ?>">
+            <a class="btn btn-sm btn-outline-primary" href="<?= \Helper\URL\Settings::get_signature_URL($this->lang) ?>">
                 <?= $this->translator->get('feed', 'set_signature', 'action') ?>
             </a>
         </div>

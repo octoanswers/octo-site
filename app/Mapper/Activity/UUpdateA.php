@@ -29,6 +29,8 @@ class UUpdateA extends \Mapper\Mapper
             throw new \Exception('Incorrect activity "data" class type: ' . get_class($revision), 0);
         }
 
+        $fineDiffRender = new cogpowered\FineDiff\Render\Html;
+
         $userID = $user->id;
         $data = json_encode([
             'user' => [
@@ -42,7 +44,7 @@ class UUpdateA extends \Mapper\Mapper
                 'url'   => $question->get_URL($this->lang),
             ],
             'revision' => [
-                'diff_text' => \FineDiff::renderDiffToHTMLFromOpcodes($revision->baseText, $revision->opcodes),
+                'diff_text' => $fineDiffRender->process($revision->baseText, $revision->opcodes),
                 'comment'   => $revision->comment,
             ],
         ], JSON_UNESCAPED_UNICODE);

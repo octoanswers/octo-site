@@ -9,7 +9,7 @@ class InternalServerError_Error_PageController extends Abstract_PageController
     {
         // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new Translator('en', ROOT_PATH . '/app/Lang');
+        $this->translator = new \Helper\Translator('en', ROOT_PATH . '/app/Lang');
 
         $this->template = 'error/500';
         $this->pageTitle = $this->translator->get('error_page', 'internal_server_error', 'page_title') . ' – ' . $this->translator->get('answeropedia');

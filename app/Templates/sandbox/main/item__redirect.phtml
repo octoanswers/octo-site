@@ -1,7 +1,7 @@
 <?php $redirect = $this->redirects[$question->id]; ?>
 
 <div class="my-4">
-    <a class="lead text-dark text-decoration-none" href="<?= Redirect_URL_Helper::get_URL($this->lang, $redirect) ?>">
+    <a class="lead text-dark text-decoration-none" href="<?= \Helper\URL\Redirect::get_URL($this->lang, $redirect) ?>">
         <span class="badge badge-warning mr-1">Redirect</span>
         <?= $redirect->toTitle ?>
     </a>

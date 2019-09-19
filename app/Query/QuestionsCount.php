@@ -8,7 +8,7 @@ class QuestionsCount extends \Query\Query
 
     public function questions_last_ID(): int
     {
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT MAX(q_id) FROM questions');
         if (!$stmt->execute()) {
@@ -27,7 +27,7 @@ class QuestionsCount extends \Query\Query
 
     public function count_questions_without_answers(): int
     {
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT COUNT(*) AS questionsCount FROM questions WHERE a_text IS NULL AND q_is_redirect = 0');
         if (!$stmt->execute()) {
@@ -46,7 +46,7 @@ class QuestionsCount extends \Query\Query
 
     public function count_questions_with_answers(): int
     {
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT COUNT(*) AS questionsCount FROM questions WHERE a_len > 0 AND q_is_redirect = 0');
         if (!$stmt->execute()) {

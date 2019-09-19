@@ -16,12 +16,12 @@ class Logout_POST_APIController extends Abstract_APIController
 
             $user = (new \Query\User())->user_with_API_key($api_key);
 
-            $cookieStorage = new CookieStorage();
+            $cookieStorage = new \Helper\CookieStorage();
             $cookieStorage->clear();
 
             $output = [
                 'message'         => 'User unlogged',
-                'destination_url' => Page_URL_Helper::get_main_URL($this->lang),
+                'destination_url' => \Helper\URL\Page::get_main_URL($this->lang),
             ];
         } catch (Throwable $e) {
             $output = [

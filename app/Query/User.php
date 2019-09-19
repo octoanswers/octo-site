@@ -8,7 +8,7 @@ class User
 
     public function __construct()
     {
-        $this->pdo = \PDOFactory::get_connection_to_users_DB();
+        $this->pdo = \Helper\PDOFactory::get_connection_to_users_DB();
     }
 
     public function __destruct()

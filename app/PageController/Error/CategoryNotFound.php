@@ -9,7 +9,7 @@ class CategoryNotFound_Error_PageController extends Abstract_PageController
     {
         // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new Translator($this->lang, ROOT_PATH . '/app/Lang');
+        $this->translator = new \Helper\Translator($this->lang, ROOT_PATH . '/app/Lang');
 
         $category_URI = $args['category_uri'];
 

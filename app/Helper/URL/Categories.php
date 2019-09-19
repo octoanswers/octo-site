@@ -1,6 +1,8 @@
 <?php
 
-class Categories_URL_Helper
+namespace Helper\URL;
+
+class Categories
 {
     public static function get_newest_URL(string $lang, int $page = 1): string
     {

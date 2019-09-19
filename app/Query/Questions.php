@@ -14,7 +14,7 @@ class Questions extends \Query\Query
         \Validator\QuestionsList::validatePage($page);
         \Validator\QuestionsList::validatePerPage($perPage);
 
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $questions_last_ID = (new \Query\QuestionsCount($this->lang))->questions_last_ID();
 
@@ -44,7 +44,7 @@ class Questions extends \Query\Query
         //\Validator\QuestionsList::validatePage($page);
         \Validator\QuestionsList::validatePerPage($perPage);
 
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $offset = $perPage * $page;
 
@@ -75,7 +75,7 @@ class Questions extends \Query\Query
         // \Validator\QuestionsList::validatePage($page);
         // \Validator\QuestionsList::validatePerPage($perPage);
 
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $query = 'SELECT * FROM `questions` WHERE (`q_id` < :id_offset AND q_image_base_name IS NOT NULL) ORDER BY q_id DESC LIMIT :limit_count';
         $stmt = $this->pdo->prepare($query);
@@ -102,7 +102,7 @@ class Questions extends \Query\Query
         \Validator\QuestionsList::validatePage($page);
         \Validator\QuestionsList::validatePerPage($perPage);
 
-        $this->pdo = \PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
 
         $offset = $perPage * ($page - 1);
 

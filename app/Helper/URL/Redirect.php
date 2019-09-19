@@ -1,6 +1,8 @@
 <?php
 
-class Redirect_URL_Helper
+namespace Helper\URL;
+
+class Redirect
 {
     public static function get_URL(string $lang, \Model\Redirect\Question $redirect): string
     {

@@ -1,5 +1,7 @@
 <?php
 
+namespace Helper;
+
 class CookieStorage
 {
     protected static $authUser = null;

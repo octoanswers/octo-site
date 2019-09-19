@@ -1,6 +1,8 @@
 <?php
 
-class Search_URL_Helper
+namespace Helper\URL;
+
+class Search
 {
     public static function get_search_questions_URL(string $lang, string $query = ''): string
     {
