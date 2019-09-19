@@ -6,7 +6,7 @@ class Differ__Test extends TestCase
 {
     public function setUp(): void
     {
-        $granularity = new \cogpowered\FineDiff\Granularity\Word;
+        $granularity = new \cogpowered\FineDiff\Granularity\Word();
         $this->diff = new \cogpowered\FineDiff\Diff($granularity);
     }
 
