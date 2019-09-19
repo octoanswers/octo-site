@@ -14,7 +14,7 @@ class Show_Question_PageController extends Abstract_PageController
 
         try {
             $question = (new \Query\Question($this->lang))->question_with_ID($questionID);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             return (new PageNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 
@@ -30,7 +30,7 @@ class Show_Question_PageController extends Abstract_PageController
         try {
             $question_title = \Helper\Title::title_from_question_URI($question_URI);
             $this->question = (new \Query\Question($this->lang))->question_with_title($question_title);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 

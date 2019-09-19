@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\PUT;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class QuestionsID_PUT_APIController extends Abstract_APIController
+class QuestionsID extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -35,7 +37,7 @@ class QuestionsID_PUT_APIController extends Abstract_APIController
                 'url'         => $question->get_URL($this->lang),
                 'is_redirect' => $question->isRedirect,
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

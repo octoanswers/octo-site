@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\PATCH;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class UsersIDSignature_PATCH_APIController extends Abstract_APIController
+class UsersIDSignature extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -17,7 +19,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
             // Validate params
 
             if (!$signature) {
-                throw new Exception('User "signature" property null must be a string', 0);
+                throw new \Exception('User "signature" property null must be a string', 0);
             }
 
             $user = (new \Query\User())->user_with_API_key($api_key);
@@ -49,7 +51,7 @@ class UsersIDSignature_PATCH_APIController extends Abstract_APIController
                 ],
                 'message' => 'Signature saved!',
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

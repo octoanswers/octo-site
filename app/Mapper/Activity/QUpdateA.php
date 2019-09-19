@@ -29,7 +29,7 @@ class QUpdateA extends \Mapper\Mapper
             throw new \Exception('Incorrect activity "data" class type: ' . get_class($revision), 0);
         }
 
-        $fineDiffRender = new cogpowered\FineDiff\Render\Html;
+        $fineDiffRender = new \cogpowered\FineDiff\Render\Html;
 
         $questionID = $question->id;
         $data = json_encode([

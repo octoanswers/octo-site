@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\POST;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Logout_POST_APIController extends Abstract_APIController
+class Logout extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -23,7 +25,7 @@ class Logout_POST_APIController extends Abstract_APIController
                 'message'         => 'User unlogged',
                 'destination_url' => \Helper\URL\Page::get_main_URL($this->lang),
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

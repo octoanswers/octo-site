@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\PUT\Questions\ID;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
+class Categories extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -103,7 +105,7 @@ class Categories_ID_Questions_PUT_APIController extends Abstract_APIController
                 'old_categories' => $oldCategoriesTitles,
                 'new_categories' => $newCategoriesTitles,
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

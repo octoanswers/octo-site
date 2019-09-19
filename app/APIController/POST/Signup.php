@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\POST;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Signup_POST_APIController extends Abstract_APIController
+class Signup extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -20,12 +22,12 @@ class Signup_POST_APIController extends Abstract_APIController
 
             $user = (new \Query\User())->user_with_email($user_email);
             if ($user) {
-                throw new Exception('User with specific email is already registered', 1);
+                throw new \Exception('User with specific email is already registered', 1);
             }
 
             $user = (new \Query\User())->user_with_username($username);
             if ($user) {
-                throw new Exception('User with username "' . $username . '" is already registered', 0);
+                throw new \Exception('User with username "' . $username . '" is already registered', 0);
             }
 
             // Generating password hash
@@ -62,7 +64,7 @@ class Signup_POST_APIController extends Abstract_APIController
             ];
 
             $this->_copyDefaultAvatar($user->id);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $this->output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

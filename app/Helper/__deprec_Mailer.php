@@ -26,7 +26,7 @@ class Mailer
     public function sendEmailToFollowedUser()
     {
         if (is_null($this->toEmail)) {
-            throw new Exception('Email is empty.');
+            throw new \Exception('Email is empty.');
         }
 
         $subject = 'Вас добавили в друзья на Answeropedia';
@@ -40,7 +40,7 @@ class Mailer
     public function sendEmailAboutNewAnswer()
     {
         if (is_null($this->toEmail)) {
-            throw new Exception('Email is empty.');
+            throw new \Exception('Email is empty.');
         }
 
         $subject = 'Вы получили новый ответ на Answeropedia';
@@ -56,7 +56,7 @@ class Mailer
     public function sendEmailToMentionedUser()
     {
         if (is_null($this->toEmail)) {
-            throw new Exception('Email is empty.');
+            throw new \Exception('Email is empty.');
         }
 
         $subject = 'Вам задали новый вопрос на Answeropedia';
@@ -81,7 +81,7 @@ class Mailer
         if (!$sent) {
             $errorMessage = "Server couldn't send the email.";
 
-            throw new Exception($errorMessage);
+            throw new \Exception($errorMessage);
         } else {
             return true;
         }

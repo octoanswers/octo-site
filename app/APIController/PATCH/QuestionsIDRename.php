@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\PATCH;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
+class QuestionsIDRename extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -86,7 +88,7 @@ class QuestionsIDRename_PATCH_APIController extends Abstract_APIController
                     'to_title' => $this->redirect->toTitle,
                 ];
             }
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

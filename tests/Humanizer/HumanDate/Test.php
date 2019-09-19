@@ -23,8 +23,8 @@ class HumanDate_Humanizer__Test extends PHPUnit\Framework\TestCase
      */
     public function assertDateToFormat($date, $now, $expectedDate)
     {
-        $dateObject = new DateTime($date, $this->timezone);
-        $nowObject = new DateTime($now, $this->timezone);
+        $dateObject = new \DateTime($date, $this->timezone);
+        $nowObject = new \DateTime($now, $this->timezone);
 
         $dateTimestamp = $dateObject->getTimestamp();
         $nowTimestamp = $nowObject->getTimestamp();
@@ -40,7 +40,7 @@ class HumanDate_Humanizer__Test extends PHPUnit\Framework\TestCase
 
     public function testWithoutSetNow()
     {
-        $date = new DateTime('-6 seconds');
+        $date = new \DateTime('-6 seconds');
 
         $formattedDate = $this->humanDate->format($date);
         $expectedDate = '6 seconds ago';
@@ -50,7 +50,7 @@ class HumanDate_Humanizer__Test extends PHPUnit\Framework\TestCase
 
     public function testWithoutTimezoneAndLanguage()
     {
-        $date = new DateTime('-6 seconds');
+        $date = new \DateTime('-6 seconds');
         $humanDate = new \Humanizer\HumanDate\HumanDate();
 
         $formattedDate = $humanDate->format($date);

@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\DELETE;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
+class QuestionsIDFollow extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -23,7 +25,7 @@ class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
 
             $relation = (new \Query\Relations\UsersFollowQuestions($this->lang))->relation_with_user_ID_and_question_ID($user->id, $question_ID);
             if (!$relation) {
-                throw new Exception('User with ID "' . $user->id . '" not followed question with ID "' . $question_ID . '"', 0);
+                throw new \Exception('User with ID "' . $user->id . '" not followed question with ID "' . $question_ID . '"', 0);
             }
 
             //
@@ -38,7 +40,7 @@ class QuestionsIDFollow_DELETE_APIController extends Abstract_APIController
                 'followed_question_id'    => $question->id,
                 'followed_question_title' => $question->title,
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

@@ -14,7 +14,7 @@ abstract class Mailer
 
         $sent = mail($to_email, $subject, $message, $header);
         if (!$sent) {
-            throw new Exception("Server couldn't send the email.", 0);
+            throw new \Exception("Server couldn't send the email.", 0);
         } else {
             return true;
         }

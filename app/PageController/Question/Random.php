@@ -15,7 +15,7 @@ class Random_Question_PageController extends Abstract_PageController
 
         try {
             $question = (new \Query\Question($this->lang))->question_with_ID($random_question_ID);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 

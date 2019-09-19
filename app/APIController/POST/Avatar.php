@@ -1,12 +1,14 @@
 <?php
 
+namespace APIController\POST;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 // @TODO So bad, but... https://www.verot.net/php_class_upload_forum.htm?php_class_upload_forum_id=4739&php_class_upload_forum_thread_id=4739&lang=en-GB
 require_once ROOT_PATH . '/vendor/verot/class.upload.php/src/class.upload.php';
 
-class Avatar_POST_APIController extends Abstract_APIController
+class Avatar extends \APIController\APIController
 {
     const JPEG_QUALITY = 90;
 
@@ -18,7 +20,7 @@ class Avatar_POST_APIController extends Abstract_APIController
     {
         try {
             if ($_FILES['new_avatar_file']['size'] == 0 || $_FILES['new_avatar_file']['name'] == '') {
-                throw new Exception('No file was selected for upload', 1);
+                throw new \Exception('No file was selected for upload', 1);
             }
 
             $API_key = $request->getParam('api_key');
@@ -33,7 +35,7 @@ class Avatar_POST_APIController extends Abstract_APIController
                 // delete the original uploaded file
                 $this->handle->clean();
             } else {
-                throw new Exception('Avatar don`t upload', 1);
+                throw new \Exception('Avatar don`t upload', 1);
             }
 
             $output = [
@@ -42,7 +44,7 @@ class Avatar_POST_APIController extends Abstract_APIController
                 'avatar_url_small'       => $user->get_avatar_URL_medium(),
                 'avatar_url_extra_small' => $user->get_avatar_URL_small(),
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

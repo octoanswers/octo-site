@@ -32,7 +32,7 @@ class CookieStorage
                 }
 
                 return static::$authUser;
-            } catch (Throwable $e) {
+            } catch (\Throwable $e) {
                 $this->clear();
 
                 return;

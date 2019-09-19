@@ -6,10 +6,10 @@ class FineDiff__renderToTextFromOpcodes__Test extends TestCase
 {
     public function setUp(): void
     {
-        $granularity = new cogpowered\FineDiff\Granularity\Word;
-        $this->diff = new cogpowered\FineDiff\Diff($granularity);
+        $granularity = new \cogpowered\FineDiff\Granularity\Word;
+        $this->diff = new \cogpowered\FineDiff\Diff($granularity);
 
-        $this->render = new cogpowered\FineDiff\Render\Text;
+        $this->render = new \cogpowered\FineDiff\Render\Text;
     }
 
     public function test__1_deletion()

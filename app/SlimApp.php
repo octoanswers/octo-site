@@ -39,39 +39,39 @@ class SlimApp
         $app->group('/api/v1' . URL_PART_LANG, function () {
 
             // GET
-            $this->get('/search/categories.json', 'SearchCategories_GET_APIController:handle');
+            $this->get('/search/categories.json', '\APIController\GET\SearchCategories:handle');
 
             // DELETE
-            $this->delete('/categories/{id}/follow.json', 'CategoriesIDFollow_DELETE_APIController:handle');
-            $this->delete('/questions/{id}/follow.json', 'QuestionsIDFollow_DELETE_APIController:handle');
-            $this->delete('/questions/{id}/subscribe.json', 'QuestionsIDSubscribe_DELETE_APIController:handle');
-            $this->delete('/users/{id}/follow.json', 'UsersIDFollow_DELETE_APIController:handle');
+            $this->delete('/categories/{id}/follow.json', '\APIController\DELETE\CategoriesIDFollow:handle');
+            $this->delete('/questions/{id}/follow.json', '\APIController\DELETE\QuestionsIDFollow:handle');
+            $this->delete('/questions/{id}/subscribe.json', '\APIController\DELETE\QuestionsIDSubscribe:handle');
+            $this->delete('/users/{id}/follow.json', '\APIController\DELETE\UsersIDFollow:handle');
 
             // PATCH
-            $this->patch('/categories/{id}/rename.json', 'CategoriesIDRename_PATCH_APIController:handle');
-            $this->patch('/questions/{id}/rename.json', 'QuestionsIDRename_PATCH_APIController:handle');
-            $this->patch('/users/{id}/signature.json', 'UsersIDSignature_PATCH_APIController:handle');
-            $this->patch('/users/{id}/site.json', 'UsersIDSite_PATCH_APIController:handle');
-            $this->patch('/users/{id}/name.json', 'UsersIDName_PATCH_APIController:handle');
+            $this->patch('/categories/{id}/rename.json', '\APIController\PATCH\CategoriesIDRename:handle');
+            $this->patch('/questions/{id}/rename.json', '\APIController\PATCH\QuestionsIDRename:handle');
+            $this->patch('/users/{id}/signature.json', '\APIController\PATCH\UsersIDSignature:handle');
+            $this->patch('/users/{id}/site.json', '\APIController\PATCH\UsersIDSite:handle');
+            $this->patch('/users/{id}/name.json', '\APIController\PATCH\UsersIDName:handle');
 
             // POST
-            $this->post('/answers/render.json', 'Render_Answers_POST_APIController:handle');
-            $this->post('/avatar.json', 'Avatar_POST_APIController:handle');
-            $this->post('/categories.json', 'Categories_POST_APIController:handle');
-            $this->post('/categories/{id}/follow.json', 'CategoriesIDFollow_POST_APIController:handle');
-            $this->post('/login.json', 'Login_POST_APIController:handle');
-            $this->post('/logout.json', 'Logout_POST_APIController:handle');
-            $this->post('/questions.json', 'Questions_POST_APIController:handle');
-            $this->post('/questions/{id}/image.json', 'Image_ID_Questions_POST_APIController:handle');
-            $this->post('/questions/{id}/follow.json', 'QuestionsIDFollow_POST_APIController:handle');
-            $this->post('/questions/{id}/subscribe.json', 'QuestionsIDSubscribe_POST_APIController:handle');
-            $this->post('/signup.json', 'Signup_POST_APIController:handle');
-            $this->post('/users/{id}/follow.json', 'UsersIDFollow_POST_APIController:handle');
+            $this->post('/answers/render.json', '\APIController\POST\Answers\Render:handle');
+            $this->post('/avatar.json', '\APIController\POST\Avatar:handle');
+            $this->post('/categories.json', '\APIController\POST\Categories:handle');
+            $this->post('/categories/{id}/follow.json', '\APIController\POST\CategoriesIDFollow:handle');
+            $this->post('/login.json', '\APIController\POST\Login:handle');
+            $this->post('/logout.json', '\APIController\POST\Logout:handle');
+            $this->post('/questions.json', '\APIController\POST\Questions:handle');
+            $this->post('/questions/{id}/image.json', '\APIController\POST\Questions\ID\Image:handle');
+            $this->post('/questions/{id}/follow.json', '\APIController\POST\QuestionsIDFollow:handle');
+            $this->post('/questions/{id}/subscribe.json', '\APIController\POST\QuestionsIDSubscribe:handle');
+            $this->post('/signup.json', '\APIController\POST\Signup:handle');
+            $this->post('/users/{id}/follow.json', '\APIController\POST\UsersIDFollow:handle');
 
             // PUT
-            $this->put('/questions/{id}.json', 'QuestionsID_PUT_APIController:handle');
-            $this->put('/questions/{id}/answer.json', 'QuestionsIDAnswer_PUT_APIController:handle');
-            $this->put('/questions/{id}/categories.json', 'Categories_ID_Questions_PUT_APIController:handle');
+            $this->put('/questions/{id}.json', '\APIController\PUT\QuestionsID:handle');
+            $this->put('/questions/{id}/answer.json', '\APIController\PUT\QuestionsIDAnswer:handle');
+            $this->put('/questions/{id}/categories.json', '\APIController\PUT\Questions\ID\Categories:handle');
         });
 
         // Publuc URI`s

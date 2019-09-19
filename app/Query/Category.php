@@ -16,7 +16,7 @@ class Category extends \Query\Query
             throw new \Exception($error[2], $error[1]);
         }
 
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
             throw new \Exception('Category with lang "' . $this->lang . '" and title "' . $categoryTitle . '" not exists', 1);
         }

@@ -67,7 +67,7 @@ class Show_Search_PageController extends Abstract_PageController
                 $placeholder = $this->translator->get('Search by contributors');
                 break;
             default:
-                throw new Exception('Incorrect list param', 0);
+                throw new \Exception('Incorrect list param', 0);
                 break;
         }
 

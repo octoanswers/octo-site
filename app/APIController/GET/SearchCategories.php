@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\GET;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class SearchCategories_GET_APIController extends Abstract_APIController
+class SearchCategories extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -25,7 +27,7 @@ class SearchCategories_GET_APIController extends Abstract_APIController
                     ];
                 }
             }
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

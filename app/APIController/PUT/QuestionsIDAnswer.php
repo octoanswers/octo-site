@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\PUT;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
+class QuestionsIDAnswer extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -29,14 +31,14 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
 
             $old_answer_text = $answer->text;
 
-            $granularity = new cogpowered\FineDiff\Granularity\Word;
-            $fineDiff = new cogpowered\FineDiff\Diff($granularity);
+            $granularity = new \cogpowered\FineDiff\Granularity\Word;
+            $fineDiff = new \cogpowered\FineDiff\Diff($granularity);
 
-            $opcodes = $fineDiff->getOpcodes($old_answer_text, $new_answer_text);
+            $opcodes = (string) $fineDiff->getOpcodes($old_answer_text, $new_answer_text);
 
             // Update answer
 
-            $answerUpdatedAt = (new DateTime('NOW'))->format('Y-m-d H:i:s');
+            $answerUpdatedAt = (new \DateTime('NOW'))->format('Y-m-d H:i:s');
 
             $answer->id = $answer_id;
             $answer->text = $new_answer_text;
@@ -95,7 +97,7 @@ class QuestionsIDAnswer_PUT_APIController extends Abstract_APIController
                     'name' => $user->name,
                 ],
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),

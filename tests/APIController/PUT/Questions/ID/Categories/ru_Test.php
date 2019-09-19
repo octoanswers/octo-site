@@ -46,7 +46,7 @@ class Categories_ID_Questions_PUT_APIController__ru__Test extends Abstract_Front
         $this->assertEquals(2, $question->categoriesCount);
     }
 
-    public function test__CategoriesParamNotSet()
+    public function test__Categories_param_not_set()
     {
         $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
         $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/7/categories.json', $query_string, true);

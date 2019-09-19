@@ -42,7 +42,7 @@ abstract class Abstract_PageController
     protected function render_page()
     {
         if (!$this->template) {
-            throw new Exception('Page template not set!', 1);
+            throw new \Exception('Page template not set!', 1);
         }
 
         $fullPage = TEMPLATE_PATH . '/' . $this->template . '/_page.phtml';

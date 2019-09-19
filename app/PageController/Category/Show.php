@@ -39,7 +39,7 @@ class Show_Category_PageController extends Abstract_PageController
             //     $categoryMapper = new CategoryMapper($pdo);
             //     $categoryMapper->saveCategory($category);
             // }
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             // do nothing
         }
 

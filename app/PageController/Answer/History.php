@@ -17,7 +17,7 @@ class History_Answer_PageController extends Abstract_PageController
 
         try {
             $this->question = (new \Query\Question($this->lang))->question_with_ID($answer_ID);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
         }
 

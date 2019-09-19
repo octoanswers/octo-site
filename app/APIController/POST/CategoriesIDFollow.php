@@ -1,9 +1,11 @@
 <?php
 
+namespace APIController\POST;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class CategoriesIDFollow_POST_APIController extends Abstract_APIController
+class CategoriesIDFollow extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -23,7 +25,7 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
 
             $relation = (new \Query\Relations\UsersFollowCategories($this->lang))->relation_with_user_ID_and_category_ID($user_ID, $category_ID);
             if ($relation) {
-                throw new Exception('User with ID "' . $user_ID . '" already followed category with ID "' . $category_ID . '"', 0);
+                throw new \Exception('User with ID "' . $user_ID . '" already followed category with ID "' . $category_ID . '"', 0);
             }
 
             //
@@ -51,7 +53,7 @@ class CategoriesIDFollow_POST_APIController extends Abstract_APIController
                 'followed_category_id'    => $category->id,
                 'followed_category_title' => $category->title,
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             $output = [
                 'error_code'    => $e->getCode(),
                 'error_message' => $e->getMessage(),
