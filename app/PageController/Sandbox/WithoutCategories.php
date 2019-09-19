@@ -1,6 +1,8 @@
 <?php
 
-class WithoutCategories_Sandbox_PageController extends Abstract_PageController
+namespace PageController\Sandbox;
+
+class WithoutCategories extends \PageController\PageController
 {
     const LIST_NEWEST = 'newest';
     const LIST_WITH_ANSWERS = 'with-answers';
@@ -17,7 +19,7 @@ class WithoutCategories_Sandbox_PageController extends Abstract_PageController
         try {
             $this->questions = (new \Query\Sandbox($this->lang))->questions_without_categories($this->page);
         } catch (\Exception $e) {
-            return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->template = 'sandbox';

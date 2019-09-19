@@ -1,6 +1,8 @@
 <?php
 
-class Newest_Categories_PageController extends Abstract_PageController
+namespace PageController\Categories;
+
+class Newest extends \PageController\PageController
 {
     const CATEGORIES_PER_PAGE = 10;
 

@@ -1,9 +1,11 @@
 <?php
 
+namespace PageController\Error;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class QuestionNotFound_Error_PageController extends Abstract_PageController
+class QuestionNotFound extends \PageController\PageController
 {
     public function handle(string $lang, Request $request, Response $response, $args): Response
     {

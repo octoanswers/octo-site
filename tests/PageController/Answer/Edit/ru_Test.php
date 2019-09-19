@@ -1,6 +1,6 @@
 <?php
 
-class Edit_Answer_PageController__ru__Test extends Abstract_Frontend_TestCase
+class PageController_Answer_Edit__ru__Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 

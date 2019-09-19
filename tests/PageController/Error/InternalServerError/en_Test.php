@@ -1,6 +1,6 @@
 <?php
 
-class InternalServerError_Error_PageController__en__Test extends Abstract_Frontend_TestCase
+class PageController_Error_InternalServerError__en__Test extends Abstract_Frontend_TestCase
 {
     public function test_Base()
     {

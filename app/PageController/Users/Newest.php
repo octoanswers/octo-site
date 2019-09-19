@@ -1,6 +1,8 @@
 <?php
 
-class Newest_Users_PageController extends Abstract_PageController
+namespace PageController\Users;
+
+class Newest extends \PageController\PageController
 {
     const LIST_NEWEST = 'newest';
     const LIST_POPULAR = 'popular';

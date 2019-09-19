@@ -1,6 +1,8 @@
 <?php
 
-class Lang_SitemapXML_PageController extends Abstract_PageController
+namespace PageController\SitemapXML;
+
+class Lang extends \PageController\PageController
 {
     const PAGE = 1;
     const QUESTIONS_PER_PAGE = 100;

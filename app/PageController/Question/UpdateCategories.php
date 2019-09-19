@@ -1,9 +1,11 @@
 <?php
 
+namespace PageController\Question;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class UpdateCategories_Question_PageController extends Abstract_PageController
+class UpdateCategories extends \PageController\PageController
 {
     protected $question;
 
@@ -16,7 +18,7 @@ class UpdateCategories_Question_PageController extends Abstract_PageController
         try {
             $this->question = (new \Query\Question($this->lang))->question_with_ID($question_ID);
         } catch (\Throwable $e) {
-            return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question_ID);

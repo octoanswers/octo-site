@@ -1,6 +1,8 @@
 <?php
 
-class All_Sandbox_PageController extends Abstract_PageController
+namespace PageController\Sandbox;
+
+class All extends \PageController\PageController
 {
     const LIST_NEWEST = 'newest';
     const LIST_WITH_ANSWERS = 'with-answers';

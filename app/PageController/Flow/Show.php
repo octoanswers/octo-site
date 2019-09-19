@@ -1,9 +1,11 @@
 <?php
 
+namespace PageController\Flow;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Show_Flow_PageController extends Abstract_PageController
+class Show extends \PageController\PageController
 {
     protected $recent_questions;
     protected $parsedown;

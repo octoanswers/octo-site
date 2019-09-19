@@ -1,6 +1,6 @@
 <?php
 
-class PageNotFound_Error_PageController__en__Test extends Abstract_Frontend_TestCase
+class PageController_Error_PageNotFound__en__Test extends Abstract_Frontend_TestCase
 {
     public function test_Base()
     {

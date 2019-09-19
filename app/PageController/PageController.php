@@ -1,6 +1,8 @@
 <?php
 
-abstract class Abstract_PageController
+namespace PageController;
+
+abstract class PageController
 {
     protected $lang;
     protected $l = null;
@@ -21,7 +23,7 @@ abstract class Abstract_PageController
 
     public $container;
 
-    public function __construct(Slim\Container $container)
+    public function __construct(\Slim\Container $container)
     {
         $this->container = $container;
 

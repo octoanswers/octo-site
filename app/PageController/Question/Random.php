@@ -1,9 +1,11 @@
 <?php
 
+namespace PageController\Question;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Random_Question_PageController extends Abstract_PageController
+class Random extends \PageController\PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
@@ -16,7 +18,7 @@ class Random_Question_PageController extends Abstract_PageController
         try {
             $question = (new \Query\Question($this->lang))->question_with_ID($random_question_ID);
         } catch (\Throwable $e) {
-            return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         return $response->withRedirect($question->get_URL($this->lang), 303);

@@ -1,6 +1,6 @@
 <?php
 
-class History_Answer_PageController__ru__Test extends Abstract_Frontend_TestCase
+class PageController_Answer_History__ru__Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'revisions'], 'users' => ['users']];
 

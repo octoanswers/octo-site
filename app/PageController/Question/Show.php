@@ -1,6 +1,8 @@
 <?php
 
-class Show_Question_PageController extends Abstract_PageController
+namespace PageController\Question;
+
+class Show extends \PageController\PageController
 {
     public $followed;
     public $firstTwoCategories = [];
@@ -15,7 +17,7 @@ class Show_Question_PageController extends Abstract_PageController
         try {
             $question = (new \Query\Question($this->lang))->question_with_ID($questionID);
         } catch (\Throwable $e) {
-            return (new PageNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\PageNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         return $response->withRedirect($question->get_URL($this->lang), 301);
@@ -31,7 +33,7 @@ class Show_Question_PageController extends Abstract_PageController
             $question_title = \Helper\Title::title_from_question_URI($question_URI);
             $this->question = (new \Query\Question($this->lang))->question_with_title($question_title);
         } catch (\Throwable $e) {
-            return (new QuestionNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\QuestionNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         if ($this->question->isRedirect) {

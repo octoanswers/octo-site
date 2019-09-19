@@ -1,9 +1,11 @@
 <?php
 
+namespace PageController\Answer;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Edit_Answer_PageController extends Abstract_PageController
+class Edit extends \PageController\PageController
 {
     protected $question;
     protected $answer;
@@ -17,7 +19,7 @@ class Edit_Answer_PageController extends Abstract_PageController
         try {
             $this->question = (new \Query\Question($this->lang))->question_with_ID($answer_ID);
         } catch (\Throwable $e) {
-            return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->answer = (new \Query\Answers($this->lang))->answer_with_ID($this->question->id);

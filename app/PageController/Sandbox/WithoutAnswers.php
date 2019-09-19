@@ -1,6 +1,8 @@
 <?php
 
-class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
+namespace PageController\Sandbox;
+
+class WithoutAnswers extends \PageController\PageController
 {
     const LIST_NEWEST = 'newest';
     const LIST_WITH_ANSWERS = 'with-answers';
@@ -19,7 +21,7 @@ class WithoutAnswers_Sandbox_PageController extends Abstract_PageController
         try {
             $this->questions = (new \Query\Sandbox($this->lang))->find_newest_without_answer($this->page);
         } catch (\Exception $e) {
-            return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->template = 'sandbox';

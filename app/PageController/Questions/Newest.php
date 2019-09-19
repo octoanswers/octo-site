@@ -1,6 +1,8 @@
 <?php
 
-class Newest_Questions_PageController extends Abstract_PageController
+namespace PageController\Questions;
+
+class Newest extends \PageController\PageController
 {
     const QUESTIONS_PER_PAGE = 10;
 

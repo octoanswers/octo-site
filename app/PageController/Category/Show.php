@@ -1,6 +1,8 @@
 <?php
 
-class Show_Category_PageController extends Abstract_PageController
+namespace PageController\Category;
+
+class Show extends \PageController\PageController
 {
     protected $category_questions;
 
@@ -14,7 +16,7 @@ class Show_Category_PageController extends Abstract_PageController
             $category_title = $this->_category_title_from_URI($category_URI);
             $this->category = (new \Query\Category($this->lang))->category_with_title($category_title);
         } catch (\Exception $e) {
-            return (new CategoryNotFound_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\CategoryNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->parsedown = new \Helper\ExtendedParsedown($this->lang);

@@ -22,7 +22,7 @@ class SlimApp
         $container['notFoundHandler'] = function ($c) {
             return function ($request, $response) use ($c) {
                 $lang = 'ru'; // @TODO Bad
-                return (new PageNotFound_Error_PageController($c))->handle($lang, $c['request'], $c['response'], []);
+                return (new \PageController\Error\PageNotFound($c))->handle($lang, $c['request'], $c['response'], []);
             };
         };
 
@@ -77,35 +77,35 @@ class SlimApp
         // Publuc URI`s
 
         $app->group(URL_PART_LANG, function () {
-            $this->get('', 'Show_Main_PageController:handle');
-            $this->get('/answer/{id}/edit', 'Edit_Answer_PageController:handle');
-            $this->get('/answer/{id}/history', 'History_Answer_PageController:handle');
-            $this->get('/feed', 'Show_Feed_PageController:handle');
-            $this->get('/flow', 'Show_Flow_PageController:handle');
-            $this->get('/category/{category_uri}', 'Show_Category_PageController:handle');
-            $this->get('/categories/newest', 'Newest_Categories_PageController:handle');
+            $this->get('', '\PageController\Main\Show:handle');
+            $this->get('/answer/{id}/edit', '\PageController\Answer\Edit:handle');
+            $this->get('/answer/{id}/history', '\PageController\Answer\History:handle');
+            $this->get('/feed', '\PageController\Feed\Show:handle');
+            $this->get('/flow', '\PageController\Flow\Show:handle');
+            $this->get('/category/{category_uri}', '\PageController\Category\Show:handle');
+            $this->get('/categories/newest', '\PageController\Categories\Newest:handle');
             // @NOTE To realize $this->get('/categories/popular', 'List_Categories_PageController:handle');
-            $this->get('/question/{id}/categories', 'UpdateCategories_Question_PageController:handle');
-            $this->get('/questions/newest', 'Newest_Questions_PageController:handle');
-            $this->get('/questions/recently-updated', 'RecentlyUpdated_Questions_PageController:handle');
-            $this->get('/random-question', 'Random_Question_PageController:handle');
-            $this->get('/sandbox/all', 'All_Sandbox_PageController:handle');
-            $this->get('/sandbox/without-answers', 'WithoutAnswers_Sandbox_PageController:handle');
-            $this->get('/sandbox/without-categories', 'WithoutCategories_Sandbox_PageController:handle');
-            $this->get('/search', 'Show_Search_PageController:handle');
-            $this->get('/settings', 'Show_Settings_PageController:handle');
-            $this->get('/sitemap.xml', 'Lang_SitemapXML_PageController:handle');
-            $this->get('/user/{id}', 'ShortURL_User_PageController:handle');
-            $this->get('/users/newest', 'Newest_Users_PageController:handle');
-            $this->get('/@{username}', 'Show_User_PageController:handle');
-            $this->get('/{question_uri}', 'Show_Question_PageController:handle');
-            $this->get('/{id:[0-9]+}[/{uri_slug}]', 'Show_Question_PageController:handleByID'); // @TODO Deprecated
+            $this->get('/question/{id}/categories', '\PageController\Question\UpdateCategories:handle');
+            $this->get('/questions/newest', '\PageController\Questions\Newest:handle');
+            $this->get('/questions/recently-updated', '\PageController\Questions\RecentlyUpdated:handle');
+            $this->get('/random-question', '\PageController\Question\Random:handle');
+            $this->get('/sandbox/all', '\PageController\Sandbox\All:handle');
+            $this->get('/sandbox/without-answers', '\PageController\Sandbox\WithoutAnswers:handle');
+            $this->get('/sandbox/without-categories', '\PageController\Sandbox\WithoutCategories:handle');
+            $this->get('/search', '\PageController\Search\Show:handle');
+            $this->get('/settings', '\PageController\Settings\Show:handle');
+            $this->get('/sitemap.xml', '\PageController\SitemapXML\Lang:handle');
+            $this->get('/user/{id}', '\PageController\User\ShortURL:handle');
+            $this->get('/users/newest', '\PageController\Users\Newest:handle');
+            $this->get('/@{username}', '\PageController\User\Show:handle');
+            $this->get('/{question_uri}', '\PageController\Question\Show:handle');
+            $this->get('/{id:[0-9]+}[/{uri_slug}]', '\PageController\Question\Show:handleByID'); // @TODO Deprecated
         });
 
         // Language-agnostic URLs
 
-        $app->get('/sitemap.xml', 'Index_SitemapXML_PageController:handle');
-        $app->get('/', 'Show_Root_PageController:handle');
+        $app->get('/sitemap.xml', '\PageController\SitemapXML\Index:handle');
+        $app->get('/', '\PageController\Root\Show:handle');
 
         $this->app = $app;
     }

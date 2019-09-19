@@ -1,14 +1,16 @@
 <?php
 
+namespace PageController\Root;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Show_Root_PageController extends Abstract_PageController
+class Show extends \PageController\PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
-        $supported_languages = Lang::get_supported_langs();
-        $default_language = Lang::get_default_lang();
+        $supported_languages = \Lang::get_supported_langs();
+        $default_language = \Lang::get_default_lang();
 
         $this->lang = $default_language;
         $this->translator = new \Helper\Translator($this->lang, ROOT_PATH . '/app/Lang');

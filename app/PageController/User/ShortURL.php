@@ -1,6 +1,8 @@
 <?php
 
-class ShortURL_User_PageController extends Abstract_PageController
+namespace PageController\User;
+
+class ShortURL extends \PageController\PageController
 {
     public function handle($request, $response, $args)
     {

@@ -1,9 +1,11 @@
 <?php
 
+namespace PageController\Settings;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Show_Settings_PageController extends Abstract_PageController
+class Show extends \PageController\PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {

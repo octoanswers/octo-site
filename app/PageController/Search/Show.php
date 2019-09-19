@@ -1,6 +1,8 @@
 <?php
 
-class Show_Search_PageController extends Abstract_PageController
+namespace PageController\Search;
+
+class Show extends \PageController\PageController
 {
     const LIST_QUESTIONS = 'questions';
     const LIST_CATEGORIES = 'categories';

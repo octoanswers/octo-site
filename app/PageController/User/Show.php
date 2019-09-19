@@ -1,6 +1,8 @@
 <?php
 
-class Show_User_PageController extends Abstract_PageController
+namespace PageController\User;
+
+class Show extends \PageController\PageController
 {
     protected $user;
     protected $revisions;
@@ -16,7 +18,7 @@ class Show_User_PageController extends Abstract_PageController
 
         $this->user = (new \Query\User())->user_with_username($this->username);
         if (!$this->user) {
-            return (new InternalServerError_Error_PageController($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->revisions = (new \Query\Revisions($this->lang))->find_revisions_for_user_with_ID($this->user->id);
