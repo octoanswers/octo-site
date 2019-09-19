@@ -1,6 +1,8 @@
 <?php
 
-trait Init_Revision_Model_Trait
+namespace Traits\Model\Revision;
+
+trait Init
 {
     public static function init_with_DB_state(array $state): self
     {

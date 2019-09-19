@@ -1,6 +1,8 @@
 <?php
 
-trait Humanize_Question_Model_Trait
+namespace Traits\Model\Question;
+
+trait Humanize
 {
     public function get_minutes_to_read(): int
     {

@@ -1,6 +1,8 @@
 <?php
 
-trait Init_User_Model_Trait
+namespace Traits\Model\User;
+
+trait Init
 {
     public static function init_with_DB_state(array $state): self
     {

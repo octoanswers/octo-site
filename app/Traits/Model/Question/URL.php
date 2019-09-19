@@ -1,6 +1,8 @@
 <?php
 
-trait URL_Question_Model_Trait
+namespace Traits\Model\Question;
+
+trait URL
 {
     public function get_URL(string $lang): string
     {

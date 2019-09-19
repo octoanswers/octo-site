@@ -1,6 +1,8 @@
 <?php
 
-trait Contribution_Revision_Model_Trait
+namespace Traits\Model\Revision;
+
+trait Contribution
 {
     public function get_user_contribution(): int
     {

@@ -4,8 +4,8 @@ namespace Model;
 
 class User extends Model
 {
-    use \Init_User_Model_Trait;
-    use \Avatar_User_Model_Trait;
+    use \Traits\Model\User\Init;
+    use \Traits\Model\User\Avatar;
 
     public $id; // int
     public $username; // string

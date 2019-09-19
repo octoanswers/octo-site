@@ -1,6 +1,8 @@
 <?php
 
-trait Image_Question_Model_Trait
+namespace Traits\Model\Question;
+
+trait Image
 {
     public function get_image_URL_large(string $lang): string
     {

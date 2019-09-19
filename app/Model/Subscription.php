@@ -4,7 +4,7 @@ namespace Model;
 
 class Subscription extends Model
 {
-    use \Init_Subscription_Model_Trait;
+    use \Traits\Model\Subscription\Init;
 
     public $id;
     public $questionID;

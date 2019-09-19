@@ -4,10 +4,10 @@ namespace Model;
 
 class Question extends Model
 {
-    use \Init_Question_Model_Trait;
-    use \Humanize_Question_Model_Trait;
-    use \URL_Question_Model_Trait;
-    use \Image_Question_Model_Trait;
+    use \Traits\Model\Question\Init;
+    use \Traits\Model\Question\Humanize;
+    use \Traits\Model\Question\URL;
+    use \Traits\Model\Question\Image;
 
     public $id; // int
     public $title; // string

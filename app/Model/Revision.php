@@ -4,8 +4,8 @@ namespace Model;
 
 class Revision extends Model
 {
-    use \Init_Revision_Model_Trait;
-    use \Contribution_Revision_Model_Trait;
+    use \Traits\Model\Revision\Init;
+    use \Traits\Model\Revision\Contribution;
 
     public $id;
     public $answerID;

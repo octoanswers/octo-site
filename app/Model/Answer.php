@@ -4,7 +4,7 @@ namespace Model;
 
 class Answer extends Model
 {
-    use \Init_Answer_Model_Trait;
+    use \Traits\Model\Answer\Init;
 
     public $id; // int
     public $text; // string

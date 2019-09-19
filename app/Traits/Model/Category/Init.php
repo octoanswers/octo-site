@@ -1,6 +1,8 @@
 <?php
 
-trait Init_Category_Model_Trait
+namespace Traits\Model\Category;
+
+trait Init
 {
     public static function init_with_title(string $title): self
     {
@@ -13,7 +15,7 @@ trait Init_Category_Model_Trait
     public static function init_with_DB_state(array $state): self
     {
         if (!isset($state['c_id']) || !isset($state['c_title'])) {
-            throw new Exception('Category init with empty state', 1);
+            throw new \Exception('Category init with empty state', 1);
         }
 
         $category = new self();

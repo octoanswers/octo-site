@@ -1,6 +1,8 @@
 <?php
 
-trait Init_Question_Model_Trait
+namespace Traits\Model\Question;
+
+trait Init
 {
     public static function init_with_title(string $title): self
     {

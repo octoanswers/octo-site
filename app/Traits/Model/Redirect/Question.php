@@ -1,6 +1,8 @@
 <?php
 
-trait Question_Redirect_Model_Trait
+namespace Traits\Model\Redirect;
+
+trait Question
 {
     public static function init_with_DB_state(array $state): self
     {

@@ -4,8 +4,8 @@ namespace Model;
 
 class Category extends Model
 {
-    use \Init_Category_Model_Trait;
-    use \URL_Category_Model_Trait;
+    use \Traits\Model\Category\Init;
+    use \Traits\Model\Category\URL;
 
     public $id; // int
     public $title; // string

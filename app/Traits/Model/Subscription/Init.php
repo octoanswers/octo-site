@@ -1,6 +1,8 @@
 <?php
 
-trait Init_Subscription_Model_Trait
+namespace Traits\Model\Subscription;
+
+trait Init
 {
     public static function init_with_DB_state(array $state): self
     {

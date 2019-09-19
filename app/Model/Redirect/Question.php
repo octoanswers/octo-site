@@ -4,7 +4,7 @@ namespace Model\Redirect;
 
 class Question extends \Model\Model
 {
-    use \Question_Redirect_Model_Trait;
+    use \Traits\Model\Redirect\Question;
 
     public $fromID; // int
     public $toTitle; // string
