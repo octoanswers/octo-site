@@ -1,6 +1,8 @@
 <?php
 
-trait CategoriesToQuestions_Relation_Model_Trait
+namespace Traits\Model\Relation;
+
+trait CategoriesToQuestions
 {
     public static function init_with_category_ID_and_question_ID(int $categoryID, int $questionID): self
     {

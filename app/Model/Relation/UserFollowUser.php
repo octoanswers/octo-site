@@ -4,7 +4,7 @@ namespace Model\Relation;
 
 class UserFollowUser extends \Model\Model
 {
-    use \UserFollowUser_Relation_Model_Trait;
+    use \Traits\Model\Relation\UserFollowUser;
 
     public $id;
     public $userID;

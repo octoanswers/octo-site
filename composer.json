@@ -17,6 +17,9 @@
     "verot/class.upload.php": "*"
   },
   "autoload": {
+    "psr-4": {
+      "": "app/"
+    },
     "classmap": [
       "app/Model/Model.php"
     ]

@@ -1,6 +1,8 @@
 <?php
 
-trait UserFollowQuestion_Relation_Model_Trait
+namespace Traits\Model\Relation;
+
+trait UserFollowQuestion
 {
     public static function init_with_user_ID_and_question_ID(int $userID, int $questionID): self
     {

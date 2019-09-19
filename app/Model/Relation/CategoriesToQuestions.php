@@ -4,7 +4,7 @@ namespace Model\Relation;
 
 class CategoriesToQuestions extends \Model\Model
 {
-    use \CategoriesToQuestions_Relation_Model_Trait;
+    use \Traits\Model\Relation\CategoriesToQuestions;
 
     public $id;
     public $categoryID;
