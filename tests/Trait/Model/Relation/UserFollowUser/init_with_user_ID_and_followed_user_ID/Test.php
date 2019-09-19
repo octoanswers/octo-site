@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowUser_Relation_Model__init_with_user_ID_and_followed_user_ID__Test extends PHPUnit\Framework\TestCase
+class Trait_Model_Relation_UserFollowUser__init_with_user_ID_and_followed_user_ID__Test extends PHPUnit\Framework\TestCase
 {
     public function test__BaseParams()
     {

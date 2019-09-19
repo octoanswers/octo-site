@@ -1,6 +1,6 @@
 <?php
 
-class Model_Question__init_with_DB_stateTest extends PHPUnit\Framework\TestCase
+class Trait_Model_Question__init_with_DB_stateTest extends PHPUnit\Framework\TestCase
 {
     public function test__EnFullParams()
     {

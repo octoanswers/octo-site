@@ -1,6 +1,6 @@
 <?php
 
-class Model_Category__init_with_titleTest extends PHPUnit\Framework\TestCase
+class Trait_Model_Category__init_with_titleTest extends PHPUnit\Framework\TestCase
 {
     public function test__Init_with_title()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class Model_ER_CategoriesQuestions__init_with_category_ID_and_question_ID__Test extends PHPUnit\Framework\TestCase
+class Trait_Model_Relation_CategoriesQuestions__init_with_category_ID_and_question_ID__Test extends PHPUnit\Framework\TestCase
 {
     public function test__BaseParams()
     {

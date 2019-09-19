@@ -1,6 +1,6 @@
 <?php
 
-class Model_Revision__get_user_contribution__Test extends PHPUnit\Framework\TestCase
+class Trait_Model_Revision__get_user_contribution__Test extends PHPUnit\Framework\TestCase
 {
     public function test__TwoInsertionAndOneDeletion()
     {
