@@ -1,6 +1,6 @@
 <?php
 
-namespace Helper;
+namespace Helper\Translator;
 
 /**
  * Simple translator without dependency.

@@ -13,7 +13,7 @@ class Show extends \PageController\PageController
         $default_language = \Lang::get_default_lang();
 
         $this->lang = $default_language;
-        $this->translator = new \Helper\Translator($this->lang, ROOT_PATH . '/app/Lang');
+        $this->translator = new \Helper\Translator\Translator($this->lang, ROOT_PATH . '/app/Lang');
 
         if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
             $this->lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);

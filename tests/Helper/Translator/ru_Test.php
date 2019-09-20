@@ -4,7 +4,7 @@ class Translator__RU_lang__Test extends PHPUnit\Framework\TestCase
 {
     protected function setUp(): void
     {
-        $this->translator = new \Helper\Translator('ru', ROOT_PATH . '/app/Lang');
+        $this->translator = new \Helper\Translator\Translator('ru', ROOT_PATH . '/app/Lang');
     }
 
     protected function tearDown(): void

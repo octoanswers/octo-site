@@ -16,7 +16,7 @@ Sample directory structure
 
 
 ```php
-$translator = new \Helper\Translator('ru', ROOT_PATH."/app/lang");
+$translator = new \Helper\Translator\Translator('ru', ROOT_PATH."/app/lang");
 ```
 
 https://laravel.com/docs/5.8/localization

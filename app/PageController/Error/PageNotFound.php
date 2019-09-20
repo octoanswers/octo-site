@@ -11,7 +11,7 @@ class PageNotFound extends \PageController\PageController
     {
         // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new \Helper\Translator($this->lang, ROOT_PATH . '/app/Lang');
+        $this->translator = new \Helper\Translator\Translator($this->lang, ROOT_PATH . '/app/Lang');
 
         $this->template = 'error/404';
         $this->pageTitle = $this->translator->get('page_not_found', 'page_title') . ' – ' . $this->translator->get('answeropedia');

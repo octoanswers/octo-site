@@ -4,7 +4,7 @@ class Translator__EN_lang__Test extends PHPUnit\Framework\TestCase
 {
     protected function setUp(): void
     {
-        $this->translator = new \Helper\Translator('en', ROOT_PATH . '/app/Lang');
+        $this->translator = new \Helper\Translator\Translator('en', ROOT_PATH . '/app/Lang');
     }
 
     protected function tearDown(): void
