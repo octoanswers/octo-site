@@ -3,23 +3,42 @@
     <img class="wh-6 rounded mb-4" src="<?= $this->user->get_avatar_URL_medium() ?>" alt="<?= $this->user->name ?>">
 
     <h1 class="mb-1"><?= $this->user->name ?></h1>
+
+    <?php if ($this->authUser && ($this->authUser->id == $this->user->id) && ($this->user->name == $this->user->username)) : ?>
+        <div class="alert alert-warning my-3" role="alert">
+            <p class="mb-2"><?= $this->translator->get('user', 'alert__name', 'msg') ?></p>
+            <a class="btn btn-sm btn-warning" href="<?= \Helper\URL\Settings::get_settings_URL($this->lang) ?>" role="button">
+                <?= $this->translator->get('user', 'alert__name', 'action') ?>
+            </a>
+        </div>
+    <?php endif; ?>
+
     <div class="mb-3 text-secondary small">
         @<?= $this->user->username ?>
     </div>
 
     <?php if ($this->user->signature) : ?>
-    <div class="text-muted">
-        <?= $this->user->signature ?>
-    </div>
+        <div class="text-muted">
+            <?= $this->user->signature ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($this->authUser && ($this->authUser->id == $this->user->id) && !$this->user->signature) : ?>
+        <div class="alert alert-warning my-3" role="alert">
+            <p class="mb-2"><?= $this->translator->get('user', 'alert__signature', 'msg') ?></p>
+            <a class="btn btn-sm btn-warning" href="<?= \Helper\URL\Settings::get_settings_URL($this->lang) ?>" role="button">
+                <?= $this->translator->get('user', 'alert__signature', 'action') ?>
+            </a>
+        </div>
     <?php endif; ?>
 
     <?php if ($this->user->site) : ?>
-    <div class="mt-2">
-        <i class="material-icons md-18 text-secondary">link</i>
-        <a href="<?= $this->user->site ?>">
-            <?= parse_url($this->user->site, PHP_URL_HOST) ?>
-        </a>
-    </div>
+        <div class="mt-2">
+            <i class="material-icons md-18 text-secondary">link</i>
+            <a href="<?= $this->user->site ?>">
+                <?= parse_url($this->user->site, PHP_URL_HOST) ?>
+            </a>
+        </div>
     <?php endif; ?>
 
 </div>

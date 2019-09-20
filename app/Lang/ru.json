@@ -387,10 +387,17 @@
 		"knows_about": "Знает о",
 		"logout": "Выйти",
 		"no_answers": {
-			"No answers": "Нет ответов",
-			"User has not written any answers yet": "Пользователь пока не написал ни одного ответа"
+			"msg": "Пользователь пока не написал ни одного ответа."
 		},
-		"settings": "Настройки"
+		"settings": "Настройки",
+		"alert__name": {
+			"msg": "Введите ваше реальное имя. Оно вызывает больше доверия и будет показываться рядом с вашими правками.",
+			"action": "Ввести имя"
+		},
+		"alert__signature": {
+			"msg": "Введите подпись, описывающую ваши профессиональные навыки и знания.",
+			"action": "Ввести подпись"
+		}
 	},
 	"users": {
 		"Answeropedia is a wiki-based site where users can ask questions, respond to them and supplement other people’s answers.": "Answeropedia — это основанный на вики-принципах сайт, где пользователи могут задавать вопросы, отвечать на них и дополнять чужие ответы.",

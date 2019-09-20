@@ -24,7 +24,7 @@
         </div>
     <?php endfor; ?>
 <?php else : ?>
-    <div class="alert alert-info mb-5" role="alert">
-        В настоящее время пользователь не написал ни одного ответа.
+    <div class="alert alert-secondary mt-4 mb-5" role="alert">
+        <?= $this->translator->get('user', 'no_answers', 'msg') ?>
     </div>
 <?php endif; ?>

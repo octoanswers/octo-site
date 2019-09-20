@@ -370,8 +370,15 @@
         "knows_about": "Knows about",
         "logout": "Log out",
         "no_answers": {
-            "No answers": "No answers",
-            "User has not written any answers yet": "This user has not yet written any answer"
+            "msg": "User has not written any answers yet."
+        },
+        "alert__name": {
+            "msg": "Enter your real name. It is more trustworthy and will appear next to your edits.",
+            "action": "Set real name"
+        },
+        "alert__signature": {
+            "msg": "Enter a signature describing your professional skills and knowledge.",
+            "action": "Set signature"
         },
         "settings": "Settings"
     },
