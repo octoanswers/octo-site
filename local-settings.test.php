@@ -1,7 +1,7 @@
 <?php
 
 // Protect against web entry
-if (!defined('ASKWIKI')) {
+if (!defined('ANSWEROPEDIA')) {
     exit('No web entry');
 }
 

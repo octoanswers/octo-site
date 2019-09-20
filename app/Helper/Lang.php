@@ -1,5 +1,7 @@
 <?php
 
+namespace Helper;
+
 /**
  * Determine language for UI.
  *

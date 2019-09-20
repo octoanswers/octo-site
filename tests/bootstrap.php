@@ -1,8 +1,6 @@
 <?php
 
-define('ASKWIKI', 'ASKWIKI');
-
-require_once './app/spl_autoload_register.php';
+define('ANSWEROPEDIA', 'ANSWEROPEDIA');
 
 require_once './local-settings.test.php';
 require_once 'tests/Abstract_DB_TestCase.php';
