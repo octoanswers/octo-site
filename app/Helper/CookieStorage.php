@@ -22,7 +22,7 @@ class CookieStorage
                     'u_signature'           => isset($_COOKIE['u_signature']) ? $_COOKIE['u_signature'] : null,
                     'u_site'                => isset($_COOKIE['u_site']) ? $_COOKIE['u_site'] : null,
                     'u_api_key'             => $_COOKIE['u_api_key'],
-                    'is_avatar_uploaded'    => $_COOKIE['is_avatar_uploaded'],
+                    'is_avatar_uploaded'    => isset($_COOKIE['is_avatar_uploaded']) ? $_COOKIE['is_avatar_uploaded'] : null,
                     'u_created_at'          => $_COOKIE['u_created_at'],
                 ]);
                 if (!\Validator\User::validateAuthUser(static::$authUser)) {
