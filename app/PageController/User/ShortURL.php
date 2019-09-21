@@ -8,9 +8,13 @@ class ShortURL extends \PageController\PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $userID = $args['id'];
+        $userID = (int) $args['id'];
 
-        $user = (new \Query\User())->user_with_ID($userID);
+        try {
+            $user = (new \Query\User())->user_with_ID($userID);
+        } catch (\Throwable $e) {
+            return (new \PageController\Error\PageNotFound($this->container))->handle($this->lang, $request, $response, $args);
+        }
 
         return $response->withRedirect($user->get_URL($this->lang), 301);
     }

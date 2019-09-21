@@ -68,6 +68,12 @@
 			"title": "Регистрация"
 		}
 	},
+	"page__404": {
+		"error_404": "Ошибка 404",
+		"btn_go_back": "Вернуться назад",
+		"page_title": "страница не найдена",
+		"title": "Страница не найдена"
+	},
 	"error_page": {
 		"category_not_found": {
 			"page_title": "Категория не найдена: ",
@@ -237,10 +243,6 @@
 		"title": "На других языках"
 	},
 	"page": "Страница",
-	"page_not_found": {
-		"Error 404": "Ошибка 404",
-		"page_title": "Ошибка 404"
-	},
 	"question": {
 		"actions": "Действия",
 		"actions_top": {

@@ -1,10 +1,16 @@
-<div class="mb-5">
+<div class="mb-5 mt-4">
 
-    <p class="lead text-muted mb-1">404</p>
-    <h1 class="mt-0">
-        <?= $this->translator->get('error_page', 'question_not_found', 'title') ?>
+    <p class="lead text-muted mb-1">
+        <?= $this->translator->get('page__404', 'error_404') ?>
+    </p>
+    <h1 class="mt-0 text-danger">
+        <?= $this->translator->get('page__404', 'title') ?>
     </h1>
 
-    <p class="mt-5">Go to <a href="<?= SITE_URL ?>">main page</a></p>
+    <div class="my-5">
+        <a class="btn btn-outline-secondary" href="#" role="button" onclick="window.history.go(-1); return false;">
+            <?= $this->translator->get('page__404', 'btn_go_back') ?>
+        </a>
+    </div>
 
 </div>
