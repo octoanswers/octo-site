@@ -69,6 +69,11 @@
             "title": "Sign up"
         }
     },
+    "page__user_not_found": {
+        "btn_go_back": "Go back",
+        "page_title": "User not found",
+        "title": "User not found"
+    },
     "page__404": {
         "error_404": "Error 404",
         "btn_go_back": "Go back",

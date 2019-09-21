@@ -1,0 +1,28 @@
+<?php
+
+namespace PageController\Error;
+
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+
+class UserNotFound extends \PageController\PageController
+{
+    public function handle(string $lang, Request $request, Response $response, $args): Response
+    {
+        // Don`t execute parent::handleRequest. Method have specific args.
+        $this->lang = $lang;
+        $this->translator = new \Helper\Translator\Translator($this->lang, ROOT_PATH . '/app/Lang');
+
+        $this->username = $args['username'];
+
+        $this->template = 'error/user_not_found';
+        $this->showFooter = false;
+        $this->pageTitle = $this->translator->get('page__user_not_found', 'page_title') . ' – ' . $this->username . ' – ' . $this->translator->get('answeropedia');
+        $this->pageDescription = $this->translator->get('page__user_not_found', 'page_title');
+
+        $output = $this->render_page();
+        $response->getBody()->write($output);
+
+        return $response->withStatus(404);
+    }
+}

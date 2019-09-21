@@ -18,7 +18,7 @@ class Show extends \PageController\PageController
 
         $this->user = (new \Query\User())->user_with_username($this->username);
         if (!$this->user) {
-            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\UserNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         $this->revisions = (new \Query\Revisions($this->lang))->find_revisions_for_user_with_ID($this->user->id);

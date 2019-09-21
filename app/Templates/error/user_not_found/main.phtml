@@ -1,0 +1,16 @@
+<div class="mb-5 mt-4">
+
+    <p class="lead font-weight-bold mb-1">
+        @<?= $this->username ?>
+    </p>
+    <h1 class="mt-0 text-danger">
+        <?= $this->translator->get('page__user_not_found', 'title') ?>
+    </h1>
+
+    <div class="my-5">
+        <a class="btn btn-outline-secondary" href="#" role="button" onclick="window.history.go(-1); return false;">
+            <?= $this->translator->get('page__user_not_found', 'btn_go_back') ?>
+        </a>
+    </div>
+
+</div>
