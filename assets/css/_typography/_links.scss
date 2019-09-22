@@ -7,7 +7,6 @@ a {
 }
 
 a.link-external:after {
-  content: url("http://images.answeropedia.org/images/external-link.png");
-  margin: 0 0 0 5px;
-  vertical-align: middle;
+  content: "🔗";
+  color: red;
 }
