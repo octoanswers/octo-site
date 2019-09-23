@@ -7,10 +7,10 @@ $user-avatar-size: 38px;
 .navbar {
   .navbar-brand {
     font-weight: 700;
-    //color: darken($color-primary, 5%);
+    color: $color-primary;
 
     &:hover {
-      color: darken($color-primary, 5%);
+      color: lighten($color-primary, 5%);
     }
   }
 
@@ -35,7 +35,7 @@ $user-avatar-size: 38px;
 
 .navbar-light {
   background-color: $color-white;
-  border-bottom: 1px solid lighten($color-secondary, 40%);
+  border-bottom: 1px solid $color-gray-sm;
 
   .navbar-toggler {
     border: 0;

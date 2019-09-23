@@ -1,6 +1,5 @@
-
-<?php if (isset($this->question->answer) && $this->question->answer->text): ?>
-    <div class="my-4">
+<?php if (isset($this->question->answer) && $this->question->answer->text) : ?>
+    <div class="box p-3 my-4">
         <?= $this->formattedAnswerText ?>
     </div>
 <?php endif; ?>

@@ -39,21 +39,21 @@ ul.list-links {
 ul.list-links li {
   padding: 0.25rem 0;
   font-size: 14px;
-  color: #6c757d;
+  color: #4488cc;
 }
 
 ul.list-links li a {
-  color: #6c757d;
+  color: #4488cc;
   text-decoration: none;
 }
 
 ul.list-links li a:hover {
-  color: #545b62;
+  color: #2f6fae;
 }
 
 ul.list-links li a.active {
   font-weight: 600;
-  color: #6c757d;
+  color: #4488cc;
 }
 
 .nav-pills .nav-item {
@@ -61,23 +61,24 @@ ul.list-links li a.active {
 }
 
 .nav-pills .nav-link {
-  color: #6c757d;
-  border: 1px solid #6c757d;
+  color: #4488cc;
+  border: 1px solid #4488cc;
   line-height: 1;
   padding-top: 0.8rem;
   padding-bottom: 0.75rem;
 }
 
 .nav-pills .nav-link.active {
-  border: 1px solid #0366d6;
+  border: 1px solid #f34949;
 }
 
 .navbar .navbar-brand {
   font-weight: 700;
+  color: #f34949;
 }
 
 .navbar .navbar-brand:hover {
-  color: #035abd;
+  color: #f56161;
 }
 
 .navbar a.user-avatar {
@@ -100,7 +101,7 @@ ul.list-links li a.active {
 
 .navbar-light {
   background-color: #ffffff;
-  border-bottom: 1px solid #d8dbdd;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .navbar-light .navbar-toggler {
@@ -108,25 +109,25 @@ ul.list-links li a.active {
 }
 
 .navbar-light .navbar-toggler .navbar-toggler-icon {
-  color: #02428b;
+  color: #e10f0f;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #6c757d;
+  color: #4488cc;
 }
 
 .navbar-subnav {
-  border-bottom: 1px solid #d8dbdd;
-  background-color: #f9f9fa;
+  border-bottom: 1px solid #e4eef8;
+  background-color: white;
   top: 57px;
 }
 
 .navbar-subnav a {
-  color: #6c757d;
+  color: #4488cc;
 }
 
 .navbar-subnav a:hover {
-  color: #494f54;
+  color: #2a629a;
 }
 
 .CodeMirror .CodeMirror-code .cm-header-1 {
@@ -594,11 +595,11 @@ table:not([class]) td {
 }
 
 a {
-  color: #0366d6;
+  color: #f34949;
 }
 
 a:hover {
-  color: #024ea4;
+  color: #f01919;
 }
 
 a.link-external:after {
@@ -668,7 +669,7 @@ h6,
 .h6 {
   font-weight: 600;
   font-size: 1rem;
-  color: #6c757d;
+  color: #4488cc;
 }
 
 del,
@@ -694,7 +695,7 @@ ul {
 
 pre {
   padding: 1rem;
-  background-color: #f3f4f5;
+  background-color: white;
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;
@@ -710,9 +711,9 @@ pre {
 blockquote,
 .blockquote {
   background-color: #ffffff;
-  border-left: 4px solid #6c757d;
+  border-left: 4px solid #4488cc;
   padding-left: 1rem;
-  color: #6c757d;
+  color: #4488cc;
   margin-bottom: 0 !important;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -732,10 +733,20 @@ blockquote p:last-child,
 }
 
 .text-primary {
-  color: #0366d6 !important;
+  color: #f34949 !important;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.box {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
 }
 
 .main-page-jumbotron {
+  background-color: #ffffff;
   background: url(https://answeropedia.org/assets/img/main-page-bg.png);
   background-size: cover;
   background-position: center;
@@ -743,11 +754,15 @@ blockquote p:last-child,
 }
 
 .form-control-outline-secondary {
-  border-color: #6c757d;
+  border-color: #4488cc;
+}
+
+.border {
+  border: 1px solid #eaeaea !important;
 }
 
 .border-bottom-primary {
-  border-bottom: 1px solid #daebfe;
+  border-bottom: 1px solid white;
 }
 
 .jumbotron-title {
@@ -771,6 +786,6 @@ blockquote p:last-child,
 }
 
 .bg-secondary-lightest {
-  background-color: #f3f4f5;
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */

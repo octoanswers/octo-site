@@ -160,6 +160,9 @@
         }
     },
     "main": {
+        "sections": {
+            "title": "Sections"
+        },
         "how_it_works": {
             "step_1_msg": "You ask a question about any category of interest to you.",
             "step_1_title": "You ask a question",
