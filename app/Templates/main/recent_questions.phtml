@@ -1,27 +1,96 @@
-<?php if (isset($this->recent_questions) && count($this->recent_questions)) : ?>
-    <div class="mb-5">
+<?php if (isset($this->topQuestions) && count($this->topQuestions)) : ?>
 
-        <div class="text-uppercase text-secondary mb-4">
-            <?= $this->translator->get('main', 'recent_questions', 'title') ?>
-        </div>
+    <div class="border p-3 bg-white">
+        <?= $this->translator->get('main', 'top_content', 'title') ?>
+        <a class="float-right text-black-50 text-decoration-none" href="#">
+            <?= $this->translator->get('main', 'top_content', 'view_all') ?>
+        </a>
+    </div>
 
-        <?php foreach ($this->recent_questions as $question) : ?>
-            <div class="my-3">
-                <a class="h4 text-dark text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+
+    <?php foreach ($this->topQuestions as $topQuestion) : ?>
+
+        <?php $question = $topQuestion['question'] ?>
+        <?php $categories = $topQuestion['categories'] ?>
+
+        <!-- question item -->
+        <div class="border rounded bg-white p-3 my-4">
+
+            <?php if (count($categories)) : ?>
+                <?php foreach ($categories as $category) : ?>
+                    <a class="small text-black-50 text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
+                        <?= $category->title ?>
+                    </a>
+                    <span class="semi-small text-black-50">
+                        &middot;
+                    </span>
+                <?php endforeach; ?>
+                <a class="small text-black-50 text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+                    <?= $this->translator->get('main', 'item__top_question', 'more') ?>
+                </a>
+            <?php endif; ?>
+
+            <div class="mb-2">
+                <a class="lead text-dark font-weight-bold text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
                     <?= $question->title ?>
                 </a>
-                <div class="small text-secondary">
-                    <?= $this->translator->get('question', 'answer_updated') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
-
-                    <?php if (strlen($question->answer->text) == 0) : ?>
-                        <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-                        <a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
-                            <?= $this->translator->get('Write first answer') ?>
-                        </a>
-                    <?php endif; ?>
-                </div>
             </div>
-        <?php endforeach; ?>
 
-    </div>
+            <?php if ($question->imageBaseName) : ?>
+                <a class="d-block max-width-240px" href="<?= $question->get_URL($this->lang) ?>">
+                    <img class="max-width-240px" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
+                </a>
+            <?php endif; ?>
+
+            <div class="mt-2 text-secondary">
+                <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60 * 60 * 24)) : ?>
+                    <span class="badge badge-primary mr-3">New</span>
+                <?php endif; ?>
+
+                <?php if (strlen($question->answer->text) == 0) : ?>
+                    <a class="badge badge-primary mr-3" href="<?= $question->get_edit_URL($this->lang) ?>" rel="nofollow">
+                        <?= $this->translator->get('Write first answer') ?>
+                    </a>
+                <?php endif; ?>
+
+                <?php if ($question->categoriesCount == 0) : ?>
+                    <a class="text-success semi-small mr-3" href="<?= $question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+                        <i class="material-icons md-18">bubble_chart</i>
+                        <?= $this->translator->get('categories', 'add_categories') ?>
+                    </a>
+                <?php endif; ?>
+
+                <?php if (strlen($question->answer->text)) : ?>
+                    <i class="material-icons md-18">people_alt</i>
+                    <span class="semi-small">2</span>
+                    <span class="mx-1 text-muted font_weight_800">&middot;</span>
+                    <i class="material-icons md-14">access_time</i>
+                    <span class="semi-small" title="<?= $this->translator->get('Minutes to read') ?>">
+                        <?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
+                    </span>
+                    <span class="mx-1 text-muted font_weight_800">&middot;</span>
+                <?php endif; ?>
+
+                <span class="semi-small"><?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?></span>
+            </div>
+        </div>
+        <!-- / question item -->
+
+
+        <div class="my-3">
+
+            <div class="small text-secondary">
+                <?= $this->translator->get('question', 'answer_updated') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+
+                <?php if (strlen($question->answer->text) == 0) : ?>
+                    <span class="mx-1 text-dark font-weight-bold">&middot;</span>
+                    <a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
+                        <?= $this->translator->get('Write first answer') ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
+
+
 <?php endif; ?>

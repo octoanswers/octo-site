@@ -7,7 +7,6 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Show extends \PageController\PageController
 {
-    protected $recent_questions;
     protected $parsedown;
     protected $contributors;
     protected $activities;
@@ -18,22 +17,30 @@ class Show extends \PageController\PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $this->recent_questions = (new \Query\Questions($this->lang))->find_newest_with_answer(1, 5);
+        $questions = (new \Query\Questions($this->lang))->find_newest_with_answer(1, 5);
 
-        // foreach ($this->recent_questions as $question) {
-        //     $categoriesTitles = Category_Extractor_Helper::extractCategories($question->answer->text);
-        //     foreach ($categoriesTitles as $title) {
-        //         $category = \Model\Category::init_with_title($title);
-        //         $this->categories[$question->id][] = $category;
-        //     }
-        // }
 
-        foreach ($this->recent_questions as $question) {
+        foreach ($questions as $question) {
+
             $contributors_array = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
             foreach ($contributors_array as $contributor) {
                 $this->contributors[$question->id][] = $contributor;
             }
+
+            $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
+            if (count($categories) > 2) {
+                $categories = array_slice($categories, 0, 2);
+            }
+
+
+
+            $this->topQuestions[] = [
+                'question' => $question,
+                'categories' => $categories
+            ];
         }
+
+
 
         $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
 
