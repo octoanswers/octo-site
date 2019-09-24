@@ -41,7 +41,6 @@ class Show extends \PageController\PageController
         return $response;
     }
 
-
     protected function _get_top_questions(): array
     {
         $top_questions = [];
@@ -49,7 +48,6 @@ class Show extends \PageController\PageController
         $questions = (new \Query\Questions($this->lang))->find_newest_with_answer(1, 5);
 
         foreach ($questions as $question) {
-
             $contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
             $last_contributor = (new \Query\Contributor($this->lang))->find_answer_last_editor($question->id);
 
@@ -59,10 +57,10 @@ class Show extends \PageController\PageController
             }
 
             $top_questions[] = [
-                'question' => $question,
-                'categories' => $categories,
-                'contributors' => $contributors,
-                'last_contributor' => $last_contributor
+                'question'         => $question,
+                'categories'       => $categories,
+                'contributors'     => $contributors,
+                'last_contributor' => $last_contributor,
             ];
         }
 
