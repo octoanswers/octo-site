@@ -745,6 +745,10 @@ body {
   border: 1px solid #eaeaea;
 }
 
+.text-secondary {
+  color: #4488cc !important;
+}
+
 .main-page-jumbotron {
   background-color: #ffffff;
   background: url(https://answeropedia.org/assets/img/main-page-bg.png);

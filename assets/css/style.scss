@@ -25,6 +25,10 @@ body {
   border: 1px solid $color-gray-sm;
 }
 
+.text-secondary {
+  color: $color-secondary !important;
+}
+
 .main-page-jumbotron {
   background-color: $color-white;
   background: url(https://answeropedia.org/assets/img/main-page-bg.png);

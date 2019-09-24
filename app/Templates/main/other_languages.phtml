@@ -1,22 +1,23 @@
 <!-- sidebar other_languages -->
 
-<nav class="mb-4">
-	<div class="text-uppercase text-secondary mb-3">
+<nav class="my-5">
+	<div class="semi-small font-weight-bold text-uppercase text-primary mb-3">
 		<?= $this->translator->get('other_languages', 'title') ?>
 	</div>
-	<ul class="list-links">
-		<li>
-			<a data-lang="ru" href="<?= \Helper\URL\Page::get_main_URL('en') ?>">
+
+	<ul class="list-unstyled semi-small">
+		<li class="my-2">
+			<a class="text-dark text-decoration-none" data-lang="ru" href="<?= \Helper\URL\Page::get_main_URL('en') ?>">
 				<?= $this->translator->get('other_languages', 'english') ?>
 			</a>
 		</li>
-		<li>
-			<a data-lang="ru" href="<?= \Helper\URL\Page::get_main_URL('ru') ?>">
+		<li class="my-2">
+			<a class="text-dark text-decoration-none" data-lang="ru" href="<?= \Helper\URL\Page::get_main_URL('ru') ?>">
 				<?= $this->translator->get('other_languages', 'russian') ?>
 			</a>
 		</li>
-		<li class="font-weight-bold">
-			<a href="<?= SITE_URL ?>">
+		<li class="my-2">
+			<a class="text-secondary text-decoration-none" href="<?= SITE_URL ?>">
 				<?= $this->translator->get('other_languages', 'all_languages') ?>
 			</a>
 		</li>

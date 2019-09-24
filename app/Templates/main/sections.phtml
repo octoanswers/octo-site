@@ -17,14 +17,14 @@
     </li>
 
     <li class="my-3">
-        <a href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>" class="text-dark text-decoration-none">
-            <?= $this->translator->get('navbar_subnav', 'sandbox') ?>
+        <a href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>" class="text-dark text-decoration-none">
+            <?= $this->translator->get('navbar_subnav', 'popular_categories') ?>
         </a>
     </li>
 
     <li class="my-3">
-        <a href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>" class="text-dark text-decoration-none">
-            <?= $this->translator->get('navbar_subnav', 'popular_categories') ?>
+        <a href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>" class="text-dark text-decoration-none">
+            <?= $this->translator->get('navbar_subnav', 'sandbox') ?>
         </a>
     </li>
 

@@ -160,6 +160,10 @@
         }
     },
     "main": {
+        "top_content": {
+            "title": "Top content on Answeropedia",
+            "view_all": "View all"
+        },
         "sections": {
             "title": "Sections"
         },

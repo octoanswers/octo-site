@@ -51,7 +51,6 @@ class Image extends \APIController\APIController
             $this->verot_upload = new \verot\Upload\Upload($_FILES['upload_image_form__image_file']);
             if ($this->verot_upload->uploaded) {
                 $image_base_name = $this->_get_image_base_name();
-                //throw new \Exception('Name ' . $image_base_name, 0);
 
                 $this->_make_user_avatar_with_size($image_base_name . '_lg', self::WIDTH_LG);
                 $this->_make_user_avatar_with_size($image_base_name . '_md', self::WIDTH_MD);
