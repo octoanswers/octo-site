@@ -1,49 +1,27 @@
 <!-- how_it_works -->
-<div class="container my-3">
-	<div class="row">
-		<div class="col-12 col-lg-10 mx-auto">
-			<h2 class="h2 mb-4 mb-md-5 mt-3 mt-md-5 text-md-center">
-				<?= $this->translator->get('main', 'how_it_works', 'title') ?>
-			</h2>
-		</div>
+<div class="border p-3 pt-2 bg-white">
+
+	<div class="font-size-125 mb-3">
+		<?= $this->translator->get('main', 'how_it_works', 'title') ?>
 	</div>
-	<div class="row">
-		<div class="col-12 col-md-3 mb-4 pb-5 border-bottom ml-auto">
-			<div class="d-none d-md-block mx-auto text-primary font-weight-bold pl-5">1</div>
-			<div class="item__how_it_works text-center mb-3 mb-md-4 mx-md-auto">
-				<i class="material-icons md-64 text-primary" style="margin-top:10px!important;">perm_identity</i>
-			</div>
-			<div class="text-md-center">
-				<h5 class="lead"><?= $this->translator->get('main', 'how_it_works', 'step_1_title') ?></h5>
-				<p class="text-muted">
-					<?= $this->translator->get('main', 'how_it_works', 'step_1_msg') ?>
-				</p>
-			</div>
-		</div>
-		<div class="col-12 col-md-3 mb-4 pb-5 border-bottom">
-			<div class="d-none d-md-block mx-auto text-primary font-weight-bold pl-5">2</div>
-			<div class="item__how_it_works text-center mb-3 mb-md-4 mx-md-auto">
-				<i class="material-icons md-64 text-primary" style="margin-top:10px!important;">compare_arrows</i>
-			</div>
-			<div class="text-md-center">
-				<h5 class="lead"><?= $this->translator->get('main', 'how_it_works', 'step_2_title') ?></h5>
-				<p class="text-muted">
-					<?= $this->translator->get('main', 'how_it_works', 'step_2_msg') ?>
-				</p>
-			</div>
-		</div>
-		<div class="col-12 col-md-3 mb-4 pb-5 border-bottom mr-auto">
-			<div class="d-none d-md-block mx-auto text-primary font-weight-bold pl-5">3</div>
-			<div class="item__how_it_works text-center mb-3 mb-md-4 mx-md-auto">
-				<i class="material-icons md-64 text-primary" style="margin-top:10px!important;">spellcheck</i>
-			</div>
-			<div class="text-md-center">
-				<h5 class="lead"><?= $this->translator->get('main', 'how_it_works', 'step_3_title') ?></h5>
-				<p class="text-muted">
-					<?= $this->translator->get('main', 'how_it_works', 'step_3_msg') ?>
-				</p>
-			</div>
-		</div>
-	</div>
+
+	<p class="text-muted semi-small mb-3">
+		<span class="text-dark font-weight-bold">1.</span>
+		<?= $this->translator->get('main', 'how_it_works', 'step_1_msg') ?>
+	</p>
+
+	<p class="text-muted semi-small mb-3">
+		<span class="text-dark font-weight-bold">2.</span>
+		<?= $this->translator->get('main', 'how_it_works', 'step_2_msg') ?>
+	</p>
+
+	<p class="text-muted semi-small mb-3">
+		<span class="text-dark font-weight-bold">3.</span>
+		<?= $this->translator->get('main', 'how_it_works', 'step_3_msg') ?>
+	</p>
+
+	<a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target="#modal_signup">
+		<?= $this->translator->get('question', 'lure_first_answer', 'signup') ?>
+	</a>
 </div>
 <!-- / how_it_works -->
