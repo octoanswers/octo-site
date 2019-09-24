@@ -25,6 +25,18 @@ body {
   border: 1px solid $color-gray-sm;
 }
 
+.margin-left-minus-8px {
+  margin-left: -8px;
+}
+
+.margin-left-minus-12px {
+  margin-left: -12px;
+}
+
+.btn-outline-secondary {
+  color: #5a5a5a;
+  border-color: #dedede;
+}
 .text-secondary {
   color: $color-secondary !important;
 }

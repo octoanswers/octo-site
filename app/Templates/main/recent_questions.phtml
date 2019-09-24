@@ -90,19 +90,25 @@
 
             <div class="mt-2 text-secondary">
 
-                <?php if (count($contributors)) : ?>
-                    <?php foreach ($contributors as $contributor) : ?>
-                        <a class="wh-28px rounded-circle" href="<?= $contributor->get_URL($this->lang) ?>"><img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-28px rounded-circle" alt="<?= $contributor->name ?>" title="<?= $contributor->name ?>"></a>
-                    <?php endforeach; ?>
-                    <!-- <a class="semi-small text-black-50" href="#">
+                <button type="button" class="btn btn-sm btn-outline-secondary mr-3">
+                    <i class="material-icons md-14">thumb_up</i>
+                    Upvote
+                </button>
+
+                <?php if (count($contributors) > 1) : ?>
+                    <span class="mr-3">
+                        <?php foreach ($contributors as $contributor) : ?>
+                            <a class="wh-24px rounded-circle" href="<?= $contributor->get_URL($this->lang) ?>"><img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-28px rounded-circle" alt="<?= $contributor->name ?>" title="<?= $contributor->name ?>"></a>
+                        <?php endforeach; ?>
+                        <!-- <a class="semi-small text-black-50" href="#">
                         +2
                     </a> -->
-
+                    </span>
                 <?php endif; ?>
 
 
 
-                <span class="mx-1 text-muted ">&middot;</span>
+
 
 
                 <!-- time to read -->
