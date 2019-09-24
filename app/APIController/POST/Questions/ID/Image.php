@@ -48,12 +48,13 @@ class Image extends \APIController\APIController
 
             // Upload image
 
-            $this->verot_upload = new upload($_FILES['upload_image_form__image_file']);
+            $this->verot_upload = new \verot\Upload\Upload($_FILES['upload_image_form__image_file']);
             if ($this->verot_upload->uploaded) {
-                $image_base_bame = $this->_get_image_base_bame();
+                $image_base_name = $this->_get_image_base_name();
+                //throw new \Exception('Name ' . $image_base_name, 0);
 
-                $this->_make_user_avatar_with_size($image_base_bame . '_lg', self::WIDTH_LG);
-                $this->_make_user_avatar_with_size($image_base_bame . '_md', self::WIDTH_MD);
+                $this->_make_user_avatar_with_size($image_base_name . '_lg', self::WIDTH_LG);
+                $this->_make_user_avatar_with_size($image_base_name . '_md', self::WIDTH_MD);
 
                 // delete the original uploaded file
                 $this->verot_upload->clean();
@@ -62,7 +63,7 @@ class Image extends \APIController\APIController
             }
 
             // Update question image base name
-            $this->question->image_base_bame = $image_base_bame;
+            $this->question->imageBaseName = $image_base_name;
             $this->question = (new \Mapper\Question($this->lang))->update($this->question);
 
             $output = [
@@ -105,7 +106,7 @@ class Image extends \APIController\APIController
         }
     }
 
-    protected function _get_image_base_bame()
+    protected function _get_image_base_name()
     {
         $dateChunk = date('Ymj');
         $rand = mt_rand(1, 999);
