@@ -168,6 +168,7 @@
 		},
 		"item__top_question": {
 			"more": "Ещё",
+			"upvote": "Нравится",
 			"read_more": "Читать далее",
 			"updated_answer": "Обновил ответ"
 		},

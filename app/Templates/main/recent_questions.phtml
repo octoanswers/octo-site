@@ -92,7 +92,7 @@
 
                 <button type="button" class="btn btn-sm btn-outline-secondary mr-3">
                     <i class="material-icons md-14">thumb_up</i>
-                    Upvote
+                    <?= $this->translator->get('main', 'item__top_question', 'upvote') ?>
                 </button>
 
                 <?php if (count($contributors) > 1) : ?>
@@ -105,11 +105,6 @@
                     </a> -->
                     </span>
                 <?php endif; ?>
-
-
-
-
-
 
                 <!-- time to read -->
                 <?php if (strlen($question->answer->text)) : ?>
