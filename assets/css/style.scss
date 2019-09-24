@@ -33,10 +33,21 @@ body {
   margin-left: -12px;
 }
 
+.btn-secondary {
+  background-color: $color-secondary;
+  border-color: $color-secondary;
+}
+
 .btn-outline-secondary {
   color: #5a5a5a;
   border-color: #dedede;
 }
+
+.btn-outline-gray {
+  color: #5a5a5a;
+  border-color: #dedede;
+}
+
 .text-secondary {
   color: $color-secondary !important;
 }

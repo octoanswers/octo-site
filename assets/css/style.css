@@ -773,7 +773,17 @@ body {
   margin-left: -12px;
 }
 
+.btn-secondary {
+  background-color: #4488cc;
+  border-color: #4488cc;
+}
+
 .btn-outline-secondary {
+  color: #5a5a5a;
+  border-color: #dedede;
+}
+
+.btn-outline-gray {
   color: #5a5a5a;
   border-color: #dedede;
 }
