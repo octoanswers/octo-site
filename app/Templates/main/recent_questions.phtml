@@ -1,4 +1,4 @@
-<?php if (isset($this->topQuestions) && count($this->topQuestions)) : ?>
+<?php if (isset($this->top_questions) && count($this->top_questions)) : ?>
 
     <div class="border p-3 bg-white">
         <?= $this->translator->get('main', 'top_content', 'title') ?>
@@ -7,8 +7,7 @@
         </a>
     </div>
 
-
-    <?php foreach ($this->topQuestions as $topQuestion) : ?>
+    <?php foreach ($this->top_questions as $topQuestion) : ?>
 
         <?php $question = $topQuestion['question'] ?>
         <?php $categories = $topQuestion['categories'] ?>
@@ -63,7 +62,7 @@
 
 
                         <div class="small text-black-50 mt-2">
-                            <?= $this->translator->get('main', 'item__top_question', 'updated_answer') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+                            <?= $this->translator->get('main', 'item__top_question', 'updated_answer') ?>: <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
                         </div>
                     </div>
                 </div>
@@ -75,18 +74,25 @@
                 </a>
             <?php endif; ?>
 
+            <!-- answer text -->
+            <?php if (mb_strlen($question->answer->text)) : ?>
+                <div class="my-3">
+                    <?= mb_substr($question->answer->text, 0, 150) ?><?= (mb_strlen($question->answer->text) > 150) ? '&hellip;' : '' ?>
+                    <?php if (mb_strlen($question->answer->text) > 150) : ?>
+                        <a class="text-secondary semi-small my-3" href="<?= $question->get_URL($this->lang) ?>">
+                            (<?= $this->translator->get('main', 'item__top_question', 'read_more') ?>)
+                        </a>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <!-- / answer text -->
+
             <div class="mt-2 text-secondary">
 
 
-                <?php if (strlen($question->answer->text) == 0) : ?>
-                    <a class="badge badge-primary mr-3" href="<?= $question->get_edit_URL($this->lang) ?>" rel="nofollow">
-                        <?= $this->translator->get('Write first answer') ?>
-                    </a>
-                <?php endif; ?>
-
                 <?php if (strlen($question->answer->text)) : ?>
                     <i class="material-icons md-18">people_alt</i>
-                    <span class="semi-small">2</span>
+                    <span class="semi-small">X</span>
                     <span class="mx-1 text-muted font_weight_800">&middot;</span>
                     <i class="material-icons md-14">access_time</i>
                     <span class="semi-small" title="<?= $this->translator->get('Minutes to read') ?>">

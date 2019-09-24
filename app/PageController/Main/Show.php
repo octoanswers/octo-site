@@ -17,33 +17,7 @@ class Show extends \PageController\PageController
     {
         parent::handleRequest($request, $response, $args);
 
-        $questions = (new \Query\Questions($this->lang))->find_newest_with_answer(1, 5);
-
-
-        foreach ($questions as $question) {
-
-            $contributors_array = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
-            foreach ($contributors_array as $contributor) {
-                $this->contributors[$question->id][] = $contributor;
-            }
-
-            $last_contributor = (new \Query\Contributor($this->lang))->find_answer_last_editor($question->id);
-
-            $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
-            if (count($categories) > 2) {
-                $categories = array_slice($categories, 0, 2);
-            }
-
-
-
-            $this->topQuestions[] = [
-                'question' => $question,
-                'categories' => $categories,
-                'last_contributor' => $last_contributor
-            ];
-        }
-
-
+        $this->top_questions = $this->_get_top_questions();
 
         $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
 
@@ -65,6 +39,34 @@ class Show extends \PageController\PageController
         $response->getBody()->write($output);
 
         return $response;
+    }
+
+
+    protected function _get_top_questions(): array
+    {
+        $top_questions = [];
+
+        $questions = (new \Query\Questions($this->lang))->find_newest_with_answer(1, 5);
+
+        foreach ($questions as $question) {
+
+            $contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
+            $last_contributor = (new \Query\Contributor($this->lang))->find_answer_last_editor($question->id);
+
+            $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
+            if (count($categories) > 2) {
+                $categories = array_slice($categories, 0, 2);
+            }
+
+            $top_questions[] = [
+                'question' => $question,
+                'categories' => $categories,
+                'contributors' => $contributors,
+                'last_contributor' => $last_contributor
+            ];
+        }
+
+        return $top_questions;
     }
 
     protected function _get_open_graph()

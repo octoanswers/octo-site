@@ -169,6 +169,7 @@
         },
         "item__top_question": {
             "more": "More",
+            "read_more": "Read more",
             "updated_answer": "Updated answer"
         },
         "how_it_works": {
