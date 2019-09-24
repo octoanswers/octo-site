@@ -19,9 +19,7 @@ class Show extends \PageController\PageController
 
         $questions = (new \Query\Questions($this->lang))->find_newest_with_answer(1, 5);
 
-
         foreach ($questions as $question) {
-
             $contributors_array = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
             foreach ($contributors_array as $contributor) {
                 $this->contributors[$question->id][] = $contributor;
@@ -34,16 +32,12 @@ class Show extends \PageController\PageController
                 $categories = array_slice($categories, 0, 2);
             }
 
-
-
             $this->topQuestions[] = [
-                'question' => $question,
-                'categories' => $categories,
-                'last_contributor' => $last_contributor
+                'question'         => $question,
+                'categories'       => $categories,
+                'last_contributor' => $last_contributor,
             ];
         }
-
-
 
         $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
 
