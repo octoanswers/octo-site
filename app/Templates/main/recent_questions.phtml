@@ -18,20 +18,22 @@
         <div class="border rounded bg-white p-3 my-4">
 
             <?php if (count($categories)) : ?>
-                <?php foreach ($categories as $category) : ?>
-                    <a class="small text-black-50 text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
-                        <?= $category->title ?>
+                <div class="mb-2">
+                    <?php foreach ($categories as $category) : ?>
+                        <a class="small text-black-50 text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
+                            <?= $category->title ?>
+                        </a>
+                        <span class="semi-small text-black-50">
+                            &middot;
+                        </span>
+                    <?php endforeach; ?>
+                    <a class="small text-black-50 text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+                        <?= $this->translator->get('main', 'item__top_question', 'more') ?>
                     </a>
-                    <span class="semi-small text-black-50">
-                        &middot;
-                    </span>
-                <?php endforeach; ?>
-                <a class="small text-black-50 text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
-                    <?= $this->translator->get('main', 'item__top_question', 'more') ?>
-                </a>
+                </div>
             <?php endif; ?>
 
-            <div class="mb-2">
+            <div class="mb-3">
                 <a class="font-size-140 line-height-13 text-dark font-weight-bold text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
                     <?= $question->title ?>
                 </a>
