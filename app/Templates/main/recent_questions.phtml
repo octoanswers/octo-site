@@ -12,6 +12,7 @@
 
         <?php $question = $topQuestion['question'] ?>
         <?php $categories = $topQuestion['categories'] ?>
+        <?php $last_contributor = $topQuestion['last_contributor'] ?>
 
         <!-- question item -->
         <div class="border rounded bg-white p-3 my-4">
@@ -31,32 +32,55 @@
             <?php endif; ?>
 
             <div class="mb-2">
-                <a class="lead text-dark font-weight-bold text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+                <a class="font-size-140 line-height-13 text-dark font-weight-bold text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
                     <?= $question->title ?>
                 </a>
             </div>
 
+            <!-- last_contributor -->
+            <?php if (isset($last_contributor)) : ?>
+
+                <div class="media position-relative">
+                    <a class="wh-3 mt-1 mr-3 rounded-circle" href="<?= $last_contributor->get_URL($this->lang) ?>">
+                        <img src="<?= $last_contributor->get_avatar_URL_medium() ?>" class="wh-3 rounded-circle" alt="<?= $last_contributor->name ?>">
+                    </a>
+                    <div class="media-body line-height-12">
+                        <a class="semi-small text-secondary text-decoration-none" href="<?= $last_contributor->get_URL($this->lang) ?>"><?= $last_contributor->name ?></a>
+
+                        <span class="semi-small text-black-50">
+                            &middot;
+                        </span>
+
+                        <?php if ($last_contributor->signature) : ?>
+                            <span class="semi-small">
+                                <?= $last_contributor->signature ?>
+                            </span>
+                        <?php else : ?>
+                            <span class="semi-small text-black-50">
+                                @<?= $last_contributor->username ?>
+                            </span>
+                        <?php endif; ?>
+
+
+                        <div class="small text-black-50 mt-2">
+                            <?= $this->translator->get('main', 'item__top_question', 'updated_answer') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+
             <?php if ($question->imageBaseName) : ?>
-                <a class="d-block max-width-240px" href="<?= $question->get_URL($this->lang) ?>">
-                    <img class="max-width-240px" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
+                <a class="d-block my-3" href="<?= $question->get_URL($this->lang) ?>">
+                    <img class="img-fluid" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
                 </a>
             <?php endif; ?>
 
             <div class="mt-2 text-secondary">
-                <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60 * 60 * 24)) : ?>
-                    <span class="badge badge-primary mr-3">New</span>
-                <?php endif; ?>
+
 
                 <?php if (strlen($question->answer->text) == 0) : ?>
                     <a class="badge badge-primary mr-3" href="<?= $question->get_edit_URL($this->lang) ?>" rel="nofollow">
                         <?= $this->translator->get('Write first answer') ?>
-                    </a>
-                <?php endif; ?>
-
-                <?php if ($question->categoriesCount == 0) : ?>
-                    <a class="text-success semi-small mr-3" href="<?= $question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
-                        <i class="material-icons md-18">bubble_chart</i>
-                        <?= $this->translator->get('categories', 'add_categories') ?>
                     </a>
                 <?php endif; ?>
 
@@ -71,7 +95,7 @@
                     <span class="mx-1 text-muted font_weight_800">&middot;</span>
                 <?php endif; ?>
 
-                <span class="semi-small"><?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?></span>
+
             </div>
         </div>
         <!-- / question item -->
@@ -79,16 +103,14 @@
 
         <div class="my-3">
 
-            <div class="small text-secondary">
-                <?= $this->translator->get('question', 'answer_updated') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
 
-                <?php if (strlen($question->answer->text) == 0) : ?>
-                    <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-                    <a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
-                        <?= $this->translator->get('Write first answer') ?>
-                    </a>
-                <?php endif; ?>
-            </div>
+
+            <?php if (strlen($question->answer->text) == 0) : ?>
+                <span class="mx-1 text-dark font-weight-bold">&middot;</span>
+                <a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
+                    <?= $this->translator->get('Write first answer') ?>
+                </a>
+            <?php endif; ?>
         </div>
     <?php endforeach; ?>
 

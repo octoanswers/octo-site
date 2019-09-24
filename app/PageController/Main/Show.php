@@ -27,6 +27,8 @@ class Show extends \PageController\PageController
                 $this->contributors[$question->id][] = $contributor;
             }
 
+            $last_contributor = (new \Query\Contributor($this->lang))->find_answer_last_editor($question->id);
+
             $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
             if (count($categories) > 2) {
                 $categories = array_slice($categories, 0, 2);
@@ -36,7 +38,8 @@ class Show extends \PageController\PageController
 
             $this->topQuestions[] = [
                 'question' => $question,
-                'categories' => $categories
+                'categories' => $categories,
+                'last_contributor' => $last_contributor
             ];
         }
 

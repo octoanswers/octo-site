@@ -1,54 +1,54 @@
 // Width-height sizes
 
 @for $i from 1 through 6 {
-    .wh-#{$i} {
-        width: $i + rem;
-        height: $i + rem;
-    }
+  .wh-#{$i} {
+    width: $i + rem;
+    height: $i + rem;
+  }
 }
 
 @for $i from 1 through 12 {
-    .wh-#{$i * 4 + px} {
-        width: $i * 4 + px;
-        height: $i * 4 + px;
-    }
+  .wh-#{$i * 4 + px} {
+    width: $i * 4 + px;
+    height: $i * 4 + px;
+  }
 }
 
 // Width
 
 @for $i from 1 through 6 {
-    .w-#{$i} {
-        width: $i + rem;
-    }
+  .w-#{$i} {
+    width: $i + rem;
+  }
 }
 
 @for $i from 4 through 20 {
-    .w-#{$i * 4 + px} {
-        width: $i * 4 + px;
-    }
+  .w-#{$i * 4 + px} {
+    width: $i * 4 + px;
+  }
 }
 
 // Max Width
-
+// @deprecated
 @for $i from 1 through 6 {
-    .max-width-#{$i * 40 + px} {
-        width: 100%;
-        max-width: $i * 40 + px;
-    }
+  .max-width-#{$i * 40 + px} {
+    width: 100%;
+    max-width: $i * 40 + px;
+  }
 }
 
 // Relative sizes
 
 .size-sm-8 {
-    @media (min-width: $breakpoint_sm) {
-        width: 4rem !important;
-        height: 4rem !important;
-    }
+  @media (min-width: $breakpoint_sm) {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
 }
 
 .width-md-100 {
-    @media (min-width: $breakpoint_md) {
-        width: 100% !important;
-        height: auto !important;
-    }
+  @media (min-width: $breakpoint_md) {
+    width: 100% !important;
+    height: auto !important;
+  }
 }

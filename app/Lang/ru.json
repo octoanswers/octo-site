@@ -167,7 +167,8 @@
 			"title": "Разделы"
 		},
 		"item__top_question": {
-			"more": "Ещё"
+			"more": "Ещё",
+			"updated_answer": "Обновил ответ"
 		},
 		"how_it_works": {
 			"step_1_msg": "Вы задаете вопрос на любую интересующую вас тему.",

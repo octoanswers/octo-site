@@ -168,7 +168,8 @@
             "title": "Sections"
         },
         "item__top_question": {
-            "more": "More"
+            "more": "More",
+            "updated_answer": "Updated answer"
         },
         "how_it_works": {
             "step_1_msg": "You ask a question about any category of interest to you.",

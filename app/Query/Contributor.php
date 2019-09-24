@@ -4,10 +4,7 @@ namespace Query;
 
 class Contributor extends \Query\Query
 {
-    /**
-     * @return User_Model|null
-     */
-    public function find_answer_last_editor(int $answerID)
+    public function find_answer_last_editor(int $answerID): ?\Model\User
     {
         \Validator\Answer::validateID($answerID);
 
@@ -22,7 +19,7 @@ class Contributor extends \Query\Query
 
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
-            return;
+            return null;
         }
 
         $userID = $row['rev_user_id'];
