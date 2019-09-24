@@ -14,46 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-2">
-                <div class="semi-small font-weight-bold text-uppercase text-primary mb-3">
-                    <?= $this->translator->get('main', 'sections', 'title') ?>
-                </div>
-
-                <ul class="list-unstyled mb-0 semi-small">
-
-                    <li class="my-1 mr-3">
-                        <a href="<?= SITE_URL . '/' . $this->lang . '/' . $this->translator->get('service_id', 'about_answeropedia') ?>" class="text-decoration-none">
-                            <?= $this->translator->get('navbar_subnav', 'how_it_works') ?>
-                        </a>
-                    </li>
-
-                    <li class="my-1 mr-3">
-                        <a href="<?= \Helper\URL\Page::get_flow_URL($this->lang) ?>" class="text-decoration-none">
-                            <?= $this->translator->get('navbar_subnav', 'recent_changes') ?>
-                        </a>
-                    </li>
-
-                    <li class="my-3">
-                        <a href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>" class="text-decoration-none">
-                            <?= $this->translator->get('navbar_subnav', 'sandbox') ?>
-                        </a>
-                    </li>
-
-                    <li class="my-1 mr-3">
-                        <a href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>" class="text-decoration-none">
-                            <i class="material-icons md-18 w-20px">bubble_chart</i><?= $this->translator->get('navbar_subnav', 'popular_categories') ?>
-                        </a>
-                    </li>
-
-                    <li class="my-1">
-                        <a href="<?= SITE_URL . '/' . $this->lang . '/random-question' ?>" class="text-decoration-none">
-                            <?= $this->translator->get('navbar_subnav', 'random_question') ?>
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="border p-3 bg-white">
-                    Top content on Answeropedia
-                </div>
+                <?php require_once __DIR__ . '/sections.phtml' ?>
             </div>
             <div class="col-12 col-lg-7">
 
