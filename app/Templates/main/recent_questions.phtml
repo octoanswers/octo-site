@@ -11,6 +11,7 @@
 
         <?php $question = $topQuestion['question'] ?>
         <?php $categories = $topQuestion['categories'] ?>
+        <?php $contributors = $topQuestion['contributors'] ?>
         <?php $last_contributor = $topQuestion['last_contributor'] ?>
 
         <!-- question item -->
@@ -89,36 +90,34 @@
 
             <div class="mt-2 text-secondary">
 
+                <?php if (count($contributors)) : ?>
+                    <?php foreach ($contributors as $contributor) : ?>
+                        <a class="wh-28px rounded-circle" href="<?= $contributor->get_URL($this->lang) ?>"><img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-28px rounded-circle" alt="<?= $contributor->name ?>" title="<?= $contributor->name ?>"></a>
+                    <?php endforeach; ?>
+                    <!-- <a class="semi-small text-black-50" href="#">
+                        +2
+                    </a> -->
 
-                <?php if (strlen($question->answer->text)) : ?>
-                    <i class="material-icons md-18">people_alt</i>
-                    <span class="semi-small">X</span>
-                    <span class="mx-1 text-muted font_weight_800">&middot;</span>
-                    <i class="material-icons md-14">access_time</i>
-                    <span class="semi-small" title="<?= $this->translator->get('Minutes to read') ?>">
-                        <?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
-                    </span>
-                    <span class="mx-1 text-muted font_weight_800">&middot;</span>
                 <?php endif; ?>
 
+
+
+                <span class="mx-1 text-muted ">&middot;</span>
+
+
+                <!-- time to read -->
+                <?php if (strlen($question->answer->text)) : ?>
+                    <span class="semi-small text-black-50" title="<?= $this->translator->get('Minutes to read') ?>">
+                        <i class="material-icons md-14">access_time</i>
+                        <?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
+                    </span>
+                <?php endif; ?>
+                <!-- / time to read -->
 
             </div>
         </div>
         <!-- / question item -->
 
-
-        <div class="my-3">
-
-
-
-            <?php if (strlen($question->answer->text) == 0) : ?>
-                <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-                <a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
-                    <?= $this->translator->get('Write first answer') ?>
-                </a>
-            <?php endif; ?>
-        </div>
     <?php endforeach; ?>
-
 
 <?php endif; ?>
