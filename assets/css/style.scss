@@ -56,17 +56,25 @@ body {
 }
 
 .btn-outline-secondary {
-  color: #5a5a5a;
-  border-color: #dedede;
+  color: $color-secondary;
+  border-color: $color-secondary;
 }
 
 .btn-outline-gray {
   color: #5a5a5a;
-  border-color: #dedede;
+  border-color: $color-gray-sm;
+
+  &:hover {
+    background-color: $color-gray-sm;
+  }
 }
 
 .text-secondary {
   color: $color-secondary !important;
+}
+
+.form-control {
+  border-color: $color-gray-sm;
 }
 
 .main-page-jumbotron {

@@ -13,24 +13,6 @@ $user-avatar-size: 38px;
       color: lighten($color-primary, 5%);
     }
   }
-
-  a.user-avatar {
-    display: inline-block;
-    width: $user-avatar-size;
-    height: $user-avatar-size;
-    border: 1px solid $color-white;
-    border-radius: 3px;
-
-    img {
-      width: $user-avatar-size - 2;
-      height: $user-avatar-size - 2;
-      border-radius: 3px;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
 }
 
 .navbar-light {

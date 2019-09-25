@@ -55,36 +55,34 @@
 					</form>
 				</li>
 
+				<li class="nav-item">
+					<button class="btn btn-outline-gray d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
+						<i class="material-icons md-18 font-weight-bold">add</i>
+						<?= $this->translator->get('navbar', 'btn_ask') ?>
+					</button>
+				</li>
+
 			</ul>
 
 			<ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
 
 				<?php if (!$this->authUser) : ?>
 					<li class="nav-item">
-						<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_login">
-							<?= $this->translator->get('navbar', 'login') ?>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signup">
-							<?= $this->translator->get('navbar', 'signup') ?>
-						</a>
+						<a class="text-primary text-decoration-none" href="#" data-toggle="modal" data-target="#modal_login"><?= $this->translator->get('navbar', 'login') ?></a>
+						<span class="text-primary mx-1">/</span>
+						<a class="text-primary text-decoration-none" href="#" data-toggle="modal" data-target="#modal_signup"><?= $this->translator->get('navbar', 'signup') ?></a>
 					</li>
 				<?php endif; ?>
 
 				<?php if ($this->authUser) : ?>
 					<li class="nav-item">
-						<a class="user-avatar d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->get_URL($this->lang) ?>">
-							<img src="<?= $this->authUser->get_avatar_URL_small() ?>" alt="<?= $this->authUser->name ?>">
+						<a class="user-avatar wh-36px rounded-circle d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->get_URL($this->lang) ?>">
+							<img class="wh-36px rounded-circle" src="<?= $this->authUser->get_avatar_URL_small() ?>" alt="<?= $this->authUser->name ?>">
 						</a>
 					</li>
 				<?php endif; ?>
 
-				<li class="nav-item">
-					<button class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
-						<?= $this->translator->get('navbar', 'btn_ask') ?>
-					</button>
-				</li>
+
 
 			</ul>
 		</div>

@@ -81,24 +81,6 @@ ul.list-links li a.active {
   color: #f56161;
 }
 
-.navbar a.user-avatar {
-  display: inline-block;
-  width: 38px;
-  height: 38px;
-  border: 1px solid #ffffff;
-  border-radius: 3px;
-}
-
-.navbar a.user-avatar img {
-  width: 36px;
-  height: 36px;
-  border-radius: 3px;
-}
-
-.navbar a.user-avatar img:hover {
-  opacity: 0.8;
-}
-
 .navbar-light {
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
@@ -796,17 +778,25 @@ body {
 }
 
 .btn-outline-secondary {
-  color: #5a5a5a;
-  border-color: #dedede;
+  color: #4488cc;
+  border-color: #4488cc;
 }
 
 .btn-outline-gray {
   color: #5a5a5a;
-  border-color: #dedede;
+  border-color: #eaeaea;
+}
+
+.btn-outline-gray:hover {
+  background-color: #eaeaea;
 }
 
 .text-secondary {
   color: #4488cc !important;
+}
+
+.form-control {
+  border-color: #eaeaea;
 }
 
 .main-page-jumbotron {

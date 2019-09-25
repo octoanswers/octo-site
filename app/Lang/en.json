@@ -217,14 +217,14 @@
     },
     "navbar": {
         "about_answeropedia": "About&nbsp;project",
-        "btn_ask": "Ask a question",
+        "btn_ask": "Ask Question",
         "categories": "Categories",
         "flow": "Flow",
         "login": "Log in",
         "questions": "Questions",
         "recent_changes": "Recent&nbsp;changes",
         "sandbox": "Sandbox",
-        "search_placeholder": "Search questions…",
+        "search_placeholder": "Search…",
         "signup": "Sign up"
     },
     "navbar_subnav": {
