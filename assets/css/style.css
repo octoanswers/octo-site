@@ -773,6 +773,23 @@ body {
   margin-left: -12px;
 }
 
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.btn-primary {
+  background-color: #f34949;
+  border-color: #f34949;
+}
+
+.btn-primary:hover {
+  background-color: #e10f0f;
+  border-color: #e10f0f;
+}
+
 .btn-secondary {
   background-color: #4488cc;
   border-color: #4488cc;

@@ -33,6 +33,23 @@ body {
   margin-left: -12px;
 }
 
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  border-color: $color-primary;
+
+  &:hover {
+    background-color: darken($color-primary, 15%);
+    border-color: darken($color-primary, 15%);
+  }
+}
+
 .btn-secondary {
   background-color: $color-secondary;
   border-color: $color-secondary;

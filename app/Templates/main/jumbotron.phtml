@@ -5,25 +5,20 @@
         <div class="col-12 py-3 py-md-5">
 
             <h1 class="jumbotron-title text-md-center my-4">
-                <span class="font-weight-light"><?= $this->translator->get('main', 'jumbotron', 'header_1') ?></span><br>
-                <?= $this->translator->get('main', 'jumbotron', 'header_2') ?>
+                <?= $this->translator->get('main', 'jumbotron', 'header_1') ?><br>
+                <span class="font-weight-light"><?= $this->translator->get('main', 'jumbotron', 'header_2') ?></span>
             </h1>
 
-            <div class="lead d-none d-md-block text-md-center text-dark my-3 py-md-2">
+            <div class="lead d-none d-md-block text-md-center text-black-50 my-3 py-md-2">
                 <?= $this->translator->get('main', 'jumbotron', 'text') ?>
             </div>
 
-            <div class="semi-small ml-1 text-md-center mr-5">
-                <a class="text-muted" href="#how-it-works" data-toggle="modal" data-target="#modal_ask">
-                    <?= $this->translator->get('main', 'jumbotron', 'how_it_works') ?>
+            <div class="text-md-center mr-5">
+                <a class="btn btn-lg btn-primary mr-4" href="#" data-toggle="modal" data-target="#modal_signup">
+                    <?= $this->translator->get('main', 'jumbotron', 'btn_get_started') ?>
                 </a>
-                <span class="mx-1 text-muted">&middot;</span>
-                <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_signup">
-                    <?= $this->translator->get('main', 'jumbotron', 'signup') ?>
-                </a>
-                <span class="mx-1 text-muted">&middot;</span>
-                <a class="text-muted" href="#" data-toggle="modal" data-target="#modal_login">
-                    <?= $this->translator->get('main', 'jumbotron', 'login') ?>
+                <a class="text-dark" href="#">
+                    <?= $this->translator->get('main', 'jumbotron', 'btn_learn_more') ?>
                 </a>
             </div>
         </div>

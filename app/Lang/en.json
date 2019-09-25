@@ -152,7 +152,7 @@
         "how_it_works": {
             "step_1_msg": "You ask a question about any category of interest to you.",
             "step_2_msg": "We find a specialist who can give a competent answer.",
-            "step_3_msg": "You receive an answer to the email.",
+            "step_3_msg": "You receive one complete, comprehensive and competent answer.",
             "title": "How it works"
         },
         "item__top_question": {
@@ -162,15 +162,11 @@
             "upvote": "Upvote"
         },
         "jumbotron": {
-            "ask": "Ask a Question",
-            "btn_ask": "Ask",
-            "header_1": "Ask a question on any topic and get",
-            "header_2": "one complete &amp; competent answer",
-            "how_it_works": "How it works",
-            "login": "Log in",
-            "search_placeholder": "What is your question?",
-            "signup": "Sign up",
-            "text": "Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community."
+            "btn_get_started": "Get Started!",
+            "btn_learn_more": "Learn More",
+            "header_1": "One complete &amp; competent answer",
+            "header_2": "to any question.",
+            "text": "Answeropedia is like Wikipedia, only for questions and answers."
         },
         "sections": {
             "title": "Sections"
