@@ -71,7 +71,7 @@ body {
 
 .main-page-jumbotron {
   background-color: $color-white;
-  background: url(https://answeropedia.org/assets/img/main-page-bg.png);
+  background: url(https://answeropedia.org/assets/img/bg-jumbotron.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -95,7 +95,7 @@ body {
 
 .jumbotron-title {
   font-weight: 600;
-  font-size: 2.1rem;
+  font-size: 2.25rem;
 
   @include sm-and-down {
     font-size: 1.25rem;
