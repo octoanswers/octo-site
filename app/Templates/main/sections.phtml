@@ -5,7 +5,7 @@
 <ul class="list-unstyled semi-small mb-0">
 
     <li class="my-2">
-        <a href="<?= SITE_URL . '/' . $this->lang . '/' . $this->translator->get('service_id', 'about_answeropedia') ?>" class="text-dark text-decoration-none">
+        <a href="<?= $this->question_about_answeropedia->get_URL($this->lang) ?>" class="text-dark text-decoration-none">
             <?= $this->translator->get('navbar_subnav', 'how_it_works') ?>
         </a>
     </li>

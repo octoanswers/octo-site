@@ -21,6 +21,8 @@ class Show extends \PageController\PageController
 
         $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
 
+        $this->question_about_answeropedia = $this->_get_about_answeropedia_question();
+
         $this->template = 'main';
         $this->pageTitle = $this->translator->get('answeropedia') . ' – ' . $this->translator->get('main', 'slogan');
         $this->pageDescription = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
@@ -79,5 +81,17 @@ class Show extends \PageController\PageController
         ];
 
         return $og;
+    }
+
+    private function _get_about_answeropedia_question(): ?\Model\Question
+    {
+        try {
+            $about_answeropedia_question_ID = $this->translator->get('service_id', 'about_answeropedia');
+            $about_answeropedia_question = (new \Query\Question($this->lang))->question_with_ID($about_answeropedia_question_ID);
+        } catch (\Throwable $e) {
+            $about_answeropedia_question = null;
+        }
+
+        return $about_answeropedia_question;
     }
 }
