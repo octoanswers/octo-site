@@ -25,9 +25,11 @@
                     <a class="btn btn-lg btn-primary mr-3 mr-lg-4" href="#" data-toggle="modal" data-target="#modal_signup">
                         <?= $this->translator->get('main', 'jumbotron', 'btn_get_started') ?>
                     </a>
-                    <a class="text-dark" href="<?= $this->question_about_answeropedia->get_URL($this->lang) ?>">
-                        <?= $this->translator->get('main', 'jumbotron', 'btn_learn_more') ?>
-                    </a>
+                    <?php if ($this->question_about_answeropedia) : ?>
+                        <a class="text-dark" href="<?= $this->question_about_answeropedia->get_URL($this->lang) ?>">
+                            <?= $this->translator->get('main', 'jumbotron', 'btn_learn_more') ?>
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
