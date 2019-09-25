@@ -107,3 +107,8 @@ body {
 .bg-secondary-lightest {
   background-color: lighten($color-secondary, 50%);
 }
+
+.alert-heading {
+  text-transform: uppercase;
+  font-size: $font-size-semi-small;
+}

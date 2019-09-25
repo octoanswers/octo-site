@@ -843,4 +843,9 @@ body {
 .bg-secondary-lightest {
   background-color: white;
 }
+
+.alert-heading {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
 /*# sourceMappingURL=style.css.map */
