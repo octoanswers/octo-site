@@ -17,37 +17,29 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbar-supported-content">
-			<ul class="navbar-nav">
+			<ul class="navbar-nav pt-3 pt-lg-0">
 
 				<!-- Mobile links -->
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link" href="<?= \Helper\URL\Page::get_flow_URL($this->lang) ?>">
+					<a class="nav-link text-dark" href="<?= \Helper\URL\Page::get_flow_URL($this->lang) ?>">
 						<?= $this->translator->get('navbar', 'recent_changes') ?>
 					</a>
 				</li>
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>">
+					<a class="nav-link text-dark" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>">
 						<?= $this->translator->get('navbar', 'categories') ?>
 					</a>
 				</li>
 
-				<li class="nav-item d-lg-none">
-					<a class="nav-link d-inline-block" href="#" data-toggle="modal" data-target="#modal_login">
-						<?= $this->translator->get('navbar', 'login') ?>
-					</a>
-					&middot;
-					<a class="nav-link d-inline-block" href="#" data-toggle="modal" data-target="#modal_signup">
-						<?= $this->translator->get('navbar', 'signup') ?>
-					</a>
-				</li>
-
-				<li class="nav-item my-3 d-lg-none">
-					<button class="btn btn-outline-primary btn-block" role="button" data-toggle="modal" data-target="#modal_ask">
-						<?= $this->translator->get('navbar', 'btn_ask') ?>
-					</button>
-				</li>
+				<?php if (!$this->authUser) : ?>
+					<li class="nav-item d-lg-none my-2 my-lg-0">
+						<a class="text-dark text-decoration-none" href="#" data-toggle="modal" data-target="#modal_login"><?= $this->translator->get('navbar', 'login') ?></a>
+						<span class="text-black-50 mx-1">/</span>
+						<a class="text-dark text-decoration-none" href="#" data-toggle="modal" data-target="#modal_signup"><?= $this->translator->get('navbar', 'signup') ?></a>
+					</li>
+				<?php endif; ?>
 
 				<li class="nav-item d-none d-lg-block">
 					<form class="form-inline" action="<?= SITE_URL . '/' . $this->lang . '/search' ?>" method="GET">
@@ -55,8 +47,8 @@
 					</form>
 				</li>
 
-				<li class="nav-item">
-					<button class="btn btn-outline-gray d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
+				<li class="nav-item mt-4 mt-lg-0 mb-3 mb-lg-0">
+					<button class="btn btn-outline-gray ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
 						<i class="material-icons md-18 font-weight-bold">add</i>
 						<?= $this->translator->get('navbar', 'btn_ask') ?>
 					</button>
