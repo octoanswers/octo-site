@@ -4,17 +4,25 @@
         <div class="col-12">
             <div class="bg-white main-page-jumbotron border rounded pl-3 py-3 py-lg-5 pr-lg-5">
 
-                <h1 class="jumbotron-title text-md-center my-lg-4">
-                    <?= $this->translator->get('main', 'jumbotron', 'header_1') ?><br>
+                <!-- / H1 for mobile -->
+                <h1 class="jumbotron-title d-lg-none mb-4">
+                    <?= $this->translator->get('main', 'jumbotron', 'header_1') ?> <span class="font-weight-light"><?= $this->translator->get('main', 'jumbotron', 'header_2') ?></span>
+                </h1>
+                <!-- / H1 for mobile -->
+
+                <!-- H1 for desktop -->
+                <h1 class="jumbotron-title d-none d-lg-block text-center my-4">
+                    <?= $this->translator->get('main', 'jumbotron', 'header_1') ?><br />
                     <span class="font-weight-light"><?= $this->translator->get('main', 'jumbotron', 'header_2') ?></span>
                 </h1>
+                <!-- / H1 for desktop -->
 
                 <div class="lead d-none d-md-block text-md-center text-black-50 mt-5 mb-3 py-md-2">
                     <?= $this->translator->get('main', 'jumbotron', 'text') ?>
                 </div>
 
                 <div class="text-md-center mr-5">
-                    <a class="btn btn-lg btn-primary mr-4" href="#" data-toggle="modal" data-target="#modal_signup">
+                    <a class="btn btn-lg btn-primary mr-3 mr-lg-4" href="#" data-toggle="modal" data-target="#modal_signup">
                         <?= $this->translator->get('main', 'jumbotron', 'btn_get_started') ?>
                     </a>
                     <a class="text-dark" href="<?= $this->question_about_answeropedia->get_URL($this->lang) ?>">
