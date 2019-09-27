@@ -71,31 +71,6 @@ img.cover-height-16 {
      object-fit: cover;
 }
 
-ul.list-links {
-  padding-left: 0;
-  list-style: none;
-}
-
-ul.list-links li {
-  padding: 0.25rem 0;
-  font-size: 14px;
-  color: #4488cc;
-}
-
-ul.list-links li a {
-  color: #4488cc;
-  text-decoration: none;
-}
-
-ul.list-links li a:hover {
-  color: #2f6fae;
-}
-
-ul.list-links li a.active {
-  font-weight: 600;
-  color: #4488cc;
-}
-
 .nav-pills .nav-item {
   margin-right: 0.75rem;
 }
@@ -150,41 +125,6 @@ ul.list-links li a.active {
 
 .navbar-subnav a:hover {
   color: #2a629a;
-}
-
-.CodeMirror .CodeMirror-code .cm-header-1 {
-  font-size: 1.5rem !important;
-  line-height: 1.2 !important;
-}
-
-.CodeMirror .CodeMirror-code .cm-header-2 {
-  font-size: 1.4rem !important;
-  line-height: 1.2 !important;
-}
-
-.CodeMirror .CodeMirror-code .cm-header-3 {
-  font-size: 1.3rem !important;
-  line-height: 1.2 !important;
-}
-
-.CodeMirror .CodeMirror-code .cm-header-4 {
-  font-size: 1.2rem !important;
-  line-height: 1.2 !important;
-}
-
-.CodeMirror .CodeMirror-code .cm-header-5 {
-  font-size: 1.2rem !important;
-  line-height: 1.2 !important;
-}
-
-.CodeMirror .CodeMirror-code .cm-header-6 {
-  font-size: 1.2rem !important;
-  line-height: 1.2 !important;
-}
-
-.cm-header,
-.cm-strong {
-  font-weight: 500 !important;
 }
 
 .wh-1 {
@@ -442,8 +382,22 @@ a.link-external:after {
 }
 
 h1,
-.h1 {
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-weight: 600;
+}
+
+h1,
+.h1 {
   font-size: 2.1rem;
 }
 
@@ -456,7 +410,6 @@ h1,
 
 h2,
 .h2 {
-  font-weight: 600;
   font-size: 1.6rem;
 }
 
@@ -469,7 +422,6 @@ h2,
 
 h3,
 .h3 {
-  font-weight: 600;
   font-size: 1.4rem;
 }
 
@@ -482,7 +434,6 @@ h3,
 
 h4,
 .h4 {
-  font-weight: 600;
   font-size: 1.2rem;
 }
 
@@ -495,13 +446,11 @@ h4,
 
 h5,
 .h5 {
-  font-weight: 600;
   font-size: 1rem;
 }
 
 h6,
 .h6 {
-  font-weight: 600;
   font-size: 1rem;
   color: #4488cc;
 }

@@ -1,19 +1,14 @@
 @import "variables";
 
-@import "_components/_buttons";
-@import "_components/_image";
-@import "_components/_list-links";
-@import "_components/_nav-pills";
-@import "_components/_nav-tabs";
-@import "_components/_navbar";
-@import "_components/_simplemde";
-@import "_components/_size";
-@import "_components/_table";
-
-@import "_utilities/_borders";
-
-@import "_typography/_links";
-@import "_typography/_other";
+@import "_borders";
+@import "_buttons";
+@import "_images";
+@import "_nav";
+@import "_navbar";
+@import "_sizing";
+@import "_tables";
+@import "_text";
+@import "_type";
 
 body {
   background-color: $color-gray-xs;
