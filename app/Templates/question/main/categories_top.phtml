@@ -1,12 +1,11 @@
 <!-- categories_top -->
-<?php if (count($this->first_two_categories)) : ?>
+<?php if (isset($this->first_two_categories) && count($this->first_two_categories)) : ?>
 	<div class="mb-2">
 
 		<?php foreach ($this->first_two_categories as $category) : ?>
 			<a class="badge badge-light text-black-50 font-weight-normal text-decoration-none mr-1" href="<?= $category->get_URL($this->lang) ?>">
 				<?= $category->title ?>
 			</a>
-
 		<?php endforeach; ?>
 
 		<?php if (count($this->categories) > count($this->first_two_categories)) : ?>
@@ -14,7 +13,6 @@
 				+<?= count($this->categories) - 2 ?>
 			</a>
 		<?php endif; ?>
-
 
 	</div>
 <?php endif; ?>

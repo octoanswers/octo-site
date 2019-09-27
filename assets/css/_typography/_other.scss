@@ -74,7 +74,7 @@ ul {
 
 pre {
   padding: 1rem;
-  background-color: lighten($color-secondary, 50%);
+  background-color: $color-gray-sm;
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;
@@ -116,6 +116,10 @@ blockquote,
 
 .font-size-140 {
   font-size: 1.4rem !important;
+}
+
+.font-size-15 {
+  font-size: 1.5rem !important;
 }
 
 .line-height-11 {

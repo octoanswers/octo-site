@@ -1,0 +1,7 @@
+<?php if ($this->question->imageBaseName) : ?>
+	<div class="mb-3">
+
+		<img id="question_image" class="w-100 border" src="<?= $this->question->get_image_URL_medium($this->lang) ?>" alt="<?= $this->question->title ?>">
+
+	</div>
+<?php endif; ?>

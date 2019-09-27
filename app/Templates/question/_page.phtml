@@ -21,8 +21,10 @@
                 <?php require_once TEMPLATE_PATH . '/question/main/redirected.phtml'; ?>
 
                 <div class="border rounded bg-white p-3">
-                    <?php require_once TEMPLATE_PATH . '/question/main/categories_top.phtml'; ?>
-                    <?php require_once TEMPLATE_PATH . '/question/main/title.phtml'; ?>
+                    <?php require_once __DIR__ . '/main/categories_top.phtml'; ?>
+                    <?php require_once __DIR__ . '/main/title.phtml'; ?>
+                    <?php require_once __DIR__ . '/main/image.phtml' ?>
+
                     <?php require_once TEMPLATE_PATH . '/question/main/actions_top.phtml' ?>
                     <?php require_once TEMPLATE_PATH . '/question/main/lure_be_first_contributor.phtml' ?>
                     <?php require_once TEMPLATE_PATH . '/question/main/answer.phtml' ?>
@@ -37,7 +39,6 @@
             <!-- / main_column -->
 
             <div class="d-none d-md-block col-lg-3">
-                <?php require_once __DIR__ . '/right/image.phtml' ?>
 
                 <?php if (!$this->authUser) : ?>
                     <?php require_once TEMPLATE_PATH . '/_common/right/about_answeropedia.phtml'; ?>
