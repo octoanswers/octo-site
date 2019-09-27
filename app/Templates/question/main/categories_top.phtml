@@ -1,19 +1,21 @@
 <!-- categories_top -->
-<div>
-	<?php if (count($this->firstTwoCategories)) : ?>
+<?php if (count($this->first_two_categories)) : ?>
+	<div class="mb-2">
 
-	<?php foreach ($this->firstTwoCategories as $category) : ?>
-	<a class="text-info semi-small text-decoration-none mb-2 mr-2" href="<?= $category->get_URL($this->lang) ?>">
-		<?= $category->title ?>
-	</a>
-	<?php endforeach; ?>
+		<?php foreach ($this->first_two_categories as $category) : ?>
+			<a class="badge badge-light text-black-50 font-weight-normal text-decoration-none mr-1" href="<?= $category->get_URL($this->lang) ?>">
+				<?= $category->title ?>
+			</a>
 
-	<?php if (count($this->categories) > count($this->firstTwoCategories)) : ?>
-	<a class="text-secondary semi-small text-decoration-none" data-scroll href="#question_categories_list">
-		<?= $this->translator->get('question', 'block__categories_top', 'more_btn') ?>
-	</a>
-	<?php endif; ?>
+		<?php endforeach; ?>
 
-	<?php endif; ?>
-</div>
+		<?php if (count($this->categories) > count($this->first_two_categories)) : ?>
+			<a class="badge badge-light text-black-50 font-weight-normal text-decoration-none" href="#question_categories_list">
+				+<?= count($this->categories) - 2 ?>
+			</a>
+		<?php endif; ?>
+
+
+	</div>
+<?php endif; ?>
 <!-- / categories_top -->

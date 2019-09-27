@@ -8,42 +8,45 @@
 <body <?= isset($this->bodyAttr) ? ' ' . $this->bodyAttr : '' ?>>
 
     <?php require_once TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
-    <?php require_once TEMPLATE_PATH . '/_common/navbar_subnav.phtml'; ?>
 
-
-    <!-- <div class="container">
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-12 col-lg-7 py-3 py-md-4 ml-auto">
-                
+            <div class="d-none d-lg-block col-12 col-lg-2">
+                <?php require_once TEMPLATE_PATH . '/_common/left/sections.phtml'; ?>
+
             </div>
-            <div class="d-none d-md-block col-lg-2 py-md-3 mr-auto">
-                
-            </div>
-        </div>
-    </div> -->
-
-
-
-    <div class="container">
-        <div class="row">
 
             <!-- main_column -->
-            <main class="col-12 col-lg-8 py-3 py-md-4">
-                <?php require TEMPLATE_PATH . '/' . $this->template . '/main.phtml'; ?>
-            </main>
+            <div class="col-12 col-lg-7">
+                <?php require_once TEMPLATE_PATH . '/question/main/redirected.phtml'; ?>
+
+                <div class="border rounded bg-white p-3">
+                    <?php require_once TEMPLATE_PATH . '/question/main/categories_top.phtml'; ?>
+                    <?php require_once TEMPLATE_PATH . '/question/main/title.phtml'; ?>
+                    <?php require_once TEMPLATE_PATH . '/question/main/actions_top.phtml' ?>
+                    <?php require_once TEMPLATE_PATH . '/question/main/lure_be_first_contributor.phtml' ?>
+                    <?php require_once TEMPLATE_PATH . '/question/main/answer.phtml' ?>
+                </div>
+
+                <?php require_once TEMPLATE_PATH . '/question/main/categories.phtml' ?>
+                <?php require_once TEMPLATE_PATH . '/question/main/subscribe.phtml'; ?>
+                <?php require_once TEMPLATE_PATH . '/question/main/contributors_full.phtml'; ?>
+                <?php require_once TEMPLATE_PATH . '/question/main/related_questions.phtml'; ?>
+                <?php require_once TEMPLATE_PATH . '/question/main/share.phtml' ?>
+            </div>
             <!-- / main_column -->
 
-            <!-- right_sidebar -->
-            <div class="d-none d-md-block col-lg-4 py-md-3">
+            <div class="d-none d-md-block col-lg-3">
+                <?php require_once __DIR__ . '/right/image.phtml' ?>
 
-                <?php if (file_exists(TEMPLATE_PATH . '/' . $this->template . '/right.phtml')) : ?>
-                    <?php require TEMPLATE_PATH . '/' . $this->template . '/right.phtml'; ?>
+                <?php if (!$this->authUser) : ?>
+                    <?php require_once TEMPLATE_PATH . '/_common/right/about_answeropedia.phtml'; ?>
                 <?php endif; ?>
 
+                <?php require_once __DIR__ . '/right/contributors_top.phtml'; ?>
+                <?php require_once __DIR__ . '/right/actions.phtml'; ?>
+                <?php require_once __DIR__ . '/right/info_about_question.phtml'; ?>
             </div>
-            <!-- / right_sidebar -->
-
-
         </div>
     </div>
 

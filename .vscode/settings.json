@@ -5,5 +5,10 @@
     "editor.formatOnSave": true,
     "editor.rulers": [
         120
-    ]
+    ],
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.wordWrap": "on",
+    "explorer.openEditors.visible": 0,
+    "workbench.tree.indent": 24
 }

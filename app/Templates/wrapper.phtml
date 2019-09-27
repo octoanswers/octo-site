@@ -8,7 +8,6 @@
 <body <?= isset($this->bodyAttr) ? ' ' . $this->bodyAttr : '' ?>>
 
 	<?php require_once __DIR__ . '/_common/navbar.phtml'; ?>
-	<?php require_once __DIR__ . '/_common/navbar_subnav.phtml'; ?>
 
 	<div class="container">
 		<div class="row">
@@ -23,7 +22,7 @@
 			<div class="d-none d-md-block col-lg-4 py-md-3">
 
 				<?php if (file_exists(TEMPLATE_PATH . '/' . $this->template . '/right.phtml')) : ?>
-				<?php require TEMPLATE_PATH . '/' . $this->template . '/right.phtml'; ?>
+					<?php require TEMPLATE_PATH . '/' . $this->template . '/right.phtml'; ?>
 				<?php endif; ?>
 
 			</div>

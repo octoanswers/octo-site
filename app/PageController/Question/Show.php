@@ -5,7 +5,6 @@ namespace PageController\Question;
 class Show extends \PageController\PageController
 {
     public $followed;
-    public $firstTwoCategories = [];
 
     // @TODO Deprecated
     public function handleByID($request, $response, $args)
@@ -81,9 +80,9 @@ class Show extends \PageController\PageController
 
         if (count($this->categories)) {
             if (count($this->categories) > 2) {
-                $this->firstTwoCategories = array_slice($this->categories, 0, 2);
+                $this->first_two_categories = array_slice($this->categories, 0, 2);
             } else {
-                $this->firstTwoCategories = $this->categories;
+                $this->first_two_categories = $this->categories;
             }
         }
 

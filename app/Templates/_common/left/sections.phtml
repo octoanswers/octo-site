@@ -4,14 +4,6 @@
 
 <ul class="list-unstyled semi-small mb-0">
 
-    <?php if ($this->question_about_answeropedia) : ?>
-        <li class="my-2">
-            <a href="<?= $this->question_about_answeropedia->get_URL($this->lang) ?>" class="text-dark text-decoration-none">
-                <?= $this->translator->get('navbar_subnav', 'how_it_works') ?>
-            </a>
-        </li>
-    <?php endif; ?>
-
     <li class="my-2">
         <a href="<?= \Helper\URL\Page::get_flow_URL($this->lang) ?>" class="text-dark text-decoration-none">
             <?= $this->translator->get('navbar_subnav', 'recent_changes') ?>
