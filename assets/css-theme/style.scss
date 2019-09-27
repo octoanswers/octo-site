@@ -1,5 +1,6 @@
 @import "variables";
 
+@import "_components/_buttons";
 @import "_components/_image";
 @import "_components/_list-links";
 @import "_components/_nav-pills";
@@ -9,9 +10,7 @@
 @import "_components/_size";
 @import "_components/_table";
 
-@import "_vendor/_twitter-typeahead";
-@import "_vendor/_material-icons";
-@import "_vendor/_bootstrap-tagsinput";
+@import "_utilities/_borders";
 
 @import "_typography/_links";
 @import "_typography/_other";
@@ -31,42 +30,6 @@ body {
 
 .margin-left-minus-12px {
   margin-left: -12px;
-}
-
-.btn-lg {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-}
-
-.btn-primary {
-  background-color: $color-primary;
-  border-color: $color-primary;
-
-  &:hover {
-    background-color: darken($color-primary, 15%);
-    border-color: darken($color-primary, 15%);
-  }
-}
-
-.btn-secondary {
-  background-color: $color-secondary;
-  border-color: $color-secondary;
-}
-
-.btn-outline-secondary {
-  color: $color-secondary;
-  border-color: $color-secondary;
-}
-
-.btn-outline-gray {
-  color: #5a5a5a;
-  border-color: $color-gray-sm;
-
-  &:hover {
-    background-color: $color-gray-sm;
-  }
 }
 
 .text-secondary {
@@ -94,11 +57,11 @@ body {
 // Light-blue borders
 
 .border {
-  border: 1px solid $color-gray-sm !important;
+  border: 1px solid $color-border !important;
 }
 
-.border-bottom-primary {
-  border-bottom: 1px solid lighten($color-primary, 50%);
+.border-bottom {
+  border-bottom: 1px solid $color-border;
 }
 
 .jumbotron-title {

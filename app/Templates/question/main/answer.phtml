@@ -1,5 +1,7 @@
 <?php if (isset($this->question->answer) && $this->question->answer->text) : ?>
-    <?= $this->formattedAnswerText ?>
+    <div class="mt-4">
+        <?= $this->formattedAnswerText ?>
+    </div>
 <?php endif; ?>
 
 <div class="mt-2 text-secondary">

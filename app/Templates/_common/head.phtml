@@ -4,11 +4,11 @@
 <title><?= $this->pageTitle ?></title>
 
 <?php if ($this->pageDescription) : ?>
-<meta name="description" content="<?= $this->pageDescription ?>">
+    <meta name="description" content="<?= $this->pageDescription ?>">
 <?php endif; ?>
 
 <?php if (isset($this->canonicalURL)) : ?>
-<link rel="canonical" href="<?= $this->canonicalURL ?>" />
+    <link rel="canonical" href="<?= $this->canonicalURL ?>" />
 <?php endif; ?>
 
 <!-- Favicons -->
@@ -22,18 +22,21 @@
 <link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-180.png" sizes="180x180">
 
 <!-- Material Icons -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<!-- Stylesheet -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" rel="stylesheet">
-<link rel="stylesheet" href="https://answeropedia.org/assets/css/style.css?v=8">
+<!-- Bootstrap Stylesheet -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" href="https://answeropedia.org/assets/css-theme/style.css">
+<link rel="stylesheet" href="https://answeropedia.org/assets/css-vendors/style.css">
 
 <?php if (count($this->includeCSS)) : ?>
-<!-- Additional CSS -->
-<?php foreach ($this->includeCSS as $linkToCSS) : ?>
-<link rel="stylesheet" href="<?= $linkToCSS ?>">
-<?php endforeach; ?>
-<!-- / Additional CSS -->
+    <!-- Additional CSS -->
+    <?php foreach ($this->includeCSS as $linkToCSS) : ?>
+        <link rel="stylesheet" href="<?= $linkToCSS ?>">
+    <?php endforeach; ?>
+    <!-- / Additional CSS -->
 <?php endif; ?>
 
 <!-- Open Graph tags -->

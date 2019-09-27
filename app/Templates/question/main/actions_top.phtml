@@ -1,6 +1,20 @@
 <!-- actions_top -->
 
-<div class="mt-3 mb-4">
+<div class="my-3">
+
+    <!-- edit answer -->
+    <?php if ($this->authUser) : ?>
+        <a class="btn btn-sm btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_edit_URL($this->lang) ?>">
+            <i class="material-icons md-18">edit</i>
+            <?= $this->translator->get('question', 'actions_top', 'edit_answer') ?>
+        </a>
+    <?php else : ?>
+        <a class="btn btn-sm btn-outline-primary mb-2 mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
+            <?= $this->translator->get('question', 'actions_top', 'edit_answer') ?>
+        </a>
+        <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/edit_answer.phtml' ?>
+    <?php endif; ?>
+    <!-- / edit answer -->
 
     <?php if ($this->authUser) : ?>
         <button class="btn btn-sm follow_question_button mb-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
@@ -18,18 +32,7 @@
         <!-- / fake follow_btn -->
     <?php endif; ?>
 
-    <!-- edit answer -->
-    <?php if ($this->authUser) : ?>
-        <a class="btn btn-sm btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_edit_URL($this->lang) ?>">
-            <?= $this->translator->get('question', 'actions_top', 'edit_answer') ?>
-        </a>
-    <?php else : ?>
-        <a class="btn btn-sm btn-outline-primary mb-2 mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
-            <?= $this->translator->get('question', 'actions_top', 'edit_answer') ?>
-        </a>
-        <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/edit_answer.phtml' ?>
-    <?php endif; ?>
-    <!-- / edit answer -->
+
 
     <?php if (mb_strlen($this->question->answer->text) > 0) : ?>
         <!-- btn history -->

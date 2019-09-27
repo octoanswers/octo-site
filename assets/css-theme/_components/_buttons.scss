@@ -1,0 +1,46 @@
+// Button Size
+
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+// Filled Buttons
+
+.btn-primary {
+  background-color: $color-primary;
+  border-color: $color-primary;
+
+  &:hover {
+    background-color: darken($color-primary, 15%);
+    border-color: darken($color-primary, 15%);
+  }
+}
+
+.btn-secondary {
+  background-color: $color-secondary;
+  border-color: $color-secondary;
+}
+
+// Outline Buttons
+
+.btn-outline-primary {
+  color: $color-primary;
+  border-color: $color-primary;
+}
+
+.btn-outline-secondary {
+  color: $color-secondary;
+  border-color: $color-secondary;
+}
+
+.btn-outline-gray {
+  color: #5a5a5a;
+  border-color: $color-gray-sm;
+
+  &:hover {
+    background-color: $color-gray-sm;
+  }
+}
