@@ -1,12 +1,14 @@
 a {
-  color: $color-primary;
+  color: $color-secondary;
 
   &:hover {
-    color: darken($color-primary, 10%);
+    color: darken($color-secondary, 10%);
   }
 }
 
 a.link-external:after {
-  content: "🔗";
-  color: red;
+  font-family: "Material Icons";
+  content: "open_in_new";
+  color: $color-secondary;
+  padding-left: 2px;
 }

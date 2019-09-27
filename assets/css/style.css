@@ -577,16 +577,18 @@ table:not([class]) td {
 }
 
 a {
-  color: #f34949;
+  color: #4488cc;
 }
 
 a:hover {
-  color: #f01919;
+  color: #2f6fae;
 }
 
 a.link-external:after {
-  content: "🔗";
-  color: red;
+  font-family: "Material Icons";
+  content: "open_in_new";
+  color: #4488cc;
+  padding-left: 2px;
 }
 
 h1,
