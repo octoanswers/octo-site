@@ -1,10 +1,16 @@
 <?php if ($this->showFooter) : ?>
 
     <!-- footer -->
-    <footer class="ml-2 mt-4 pt-3 border-top bg-secondary-lightest">
+    <footer class="mt-4 pt-4 border-top bg-white">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-8">
+
+                <div class="d-none d-lg-block col-12 col-lg-2">
+                    <?php require_once TEMPLATE_PATH . '/_common/left/sections.phtml'; ?>
+                </div>
+
+                <div class="col-12 col-lg-7">
+
                     <ul class="list-inline font-weight-bold semi-small mb-3">
                         <li class="list-inline-item">
                             <a href="<?= \Helper\URL\Page::get_main_URL($this->lang) ?>" class="text-black-50 text-decoration-none">
@@ -32,9 +38,19 @@
                             </a>
                         </li>
                     </ul>
+
+                    <div class="">
+                        <p class="small text-black-50 mb-1">
+                            <?= $this->translator->get('footer', 'note', 'designed_and_built') ?>
+                        </p>
+                        <p class="small text-black-50 mb-4">
+                            <?= $this->translator->get('footer', 'note', 'code_licensed') ?>
+                        </p>
+                    </div>
                 </div>
-                <div class="col-4 d-none d-md-block text-right">
-                    <ul class="list-inline font-weight-bold semi-small mb-3">
+
+                <div class="d-none d-md-block col-lg-3 text-right">
+                    <ul class="list-inline semi-small mb-3">
                         <li class="list-inline-item">
                             <a class="text-black-50 text-decoration-none" href="https://www.facebook.com/hello.answeropedia" target="_blank" rel="noopener">
                                 Facebook
@@ -47,18 +63,9 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <p class="small text-black-50 mb-1">
-                        <?= $this->translator->get('footer', 'note', 'designed_and_built') ?>
-                    </p>
-                    <p class="small text-black-50 mb-4">
-                        <?= $this->translator->get('footer', 'note', 'code_licensed') ?>
-                    </p>
 
-                </div>
             </div>
+
         </div>
     </footer>
     <!-- / footer -->
