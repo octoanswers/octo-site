@@ -259,8 +259,7 @@
 			"rename_question": "Переименовать вопрос",
 			"share__copy_link": "Копировать ссылку",
 			"share__title": "Поделиться ссылкой",
-			"talk": "Обсуждение",
-			"talk_tooltip": "Обсуждение ответа"
+			"discuss_a_question": "Обсудить вопрос"
 		},
 		"add_picture": "Добавить картинку",
 		"answer_contributors": "Авторы ответа",

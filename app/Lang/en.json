@@ -261,8 +261,7 @@
             "rename_question": "Rename question",
             "share__copy_link": "Copy link",
             "share__title": "Share link",
-            "talk": "Talk",
-            "talk_tooltip": "Discussion about the answer"
+            "discuss_a_question": "Discuss a question"
         },
         "add_picture": "Add picture",
         "answer_contributors": "Answer contributors",
