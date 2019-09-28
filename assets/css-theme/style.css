@@ -1,3 +1,15 @@
+.border {
+  border: 1px solid #eaeaea !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #eaeaea !important;
+}
+
+.border-top {
+  border-top: 1px solid #eaeaea !important;
+}
+
 .btn-lg {
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -578,14 +590,6 @@ body {
 
 .form-control-outline-secondary {
   border-color: #4488cc;
-}
-
-.border {
-  border: 1px solid #eaeaea !important;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #eaeaea;
 }
 
 .jumbotron-title {

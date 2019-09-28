@@ -257,6 +257,8 @@
 			"edit_answer": "Править ответ",
 			"history": "История",
 			"rename_question": "Переименовать вопрос",
+			"share__copy_link": "Копировать ссылку",
+			"share__title": "Поделиться ссылкой",
 			"talk": "Обсуждение",
 			"talk_tooltip": "Обсуждение ответа"
 		},
@@ -301,7 +303,6 @@
 		"rename_question": "Переименовать вопрос",
 		"report": "Пожаловаться",
 		"search_in_ddg": "Поискать в DuckDuckGo",
-		"share_link": "Поделиться ссылкой",
 		"share_link__description": "Вики-ответы на Ваши вопросы на answeropedia.org",
 		"short_answer_title": "Короткий ответ",
 		"subscription_title": "Подписка на вопрос",

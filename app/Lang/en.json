@@ -259,6 +259,8 @@
             "edit_answer": "Edit answer",
             "history": "History",
             "rename_question": "Rename question",
+            "share__copy_link": "Copy link",
+            "share__title": "Share link",
             "talk": "Talk",
             "talk_tooltip": "Discussion about the answer"
         },
@@ -306,7 +308,6 @@
         "rename_question": "Rename question",
         "report": "Report",
         "search_in_ddg": "Search in DuckDuckGo",
-        "share_link": "Share link",
         "share_link__description": "Wiki-answers to your questions on Answeropedia",
         "subscription_title": "Subscription to the question",
         "thanks_for_the_feedback": "Thanks for the feedback!",

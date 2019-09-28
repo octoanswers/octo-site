@@ -1,0 +1,106 @@
+<!-- actions_top -->
+
+<div class="my-3">
+
+    <!-- edit answer -->
+    <?php if ($this->authUser) : ?>
+        <a class="btn btn-sm btn-outline-gray mr-2" href="<?= $this->question->get_edit_URL($this->lang) ?>">
+            <i class="material-icons md-18">edit</i>
+            <?= $this->translator->get('question', 'actions_top', 'edit_answer') ?>
+        </a>
+    <?php else : ?>
+        <a class="btn btn-sm btn-outline-gray mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
+            <?= $this->translator->get('question', 'actions_top', 'edit_answer') ?>
+        </a>
+        <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/edit_answer.phtml' ?>
+    <?php endif; ?>
+    <!-- / edit answer -->
+
+    <?php if ($this->authUser) : ?>
+        <button class="btn btn-sm follow_question_button mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-gray'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
+            <i class="material-icons md-18">bookmark_border</i>
+            <?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?>
+        </button>
+    <?php endif; ?>
+
+    <?php if (!$this->authUser) : ?>
+        <!-- fake follow_btn -->
+        <button type="button" class="btn btn-sm btn-gray mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
+            <?= $this->translator->get('btn', 'follow'); ?>
+        </button>
+        <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/follow_question.phtml' ?>
+        <!-- / fake follow_btn -->
+    <?php endif; ?>
+
+    <?php if (mb_strlen($this->question->answer->text) > 0) : ?>
+        <!-- btn history -->
+        <a class="d-inline-block semi-small text-black-50 mr-2" href="<?= $this->question->get_history_URL($this->lang) ?>">
+            <?= $this->translator->get('question', 'actions_top', 'history') ?>
+        </a>
+        <!-- btn history -->
+    <?php endif; ?>
+
+    <!-- more dropdown -->
+    <div class="dropdown d-inline">
+        <a href="#" class="text-black-50 mt-1 ml-3 float-right" id="dropdown-menu-more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons md-18">more_horiz</i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-menu-more">
+            <a class="dropdown-item" href="#">
+                <?= $this->translator->get('question', 'actions_top', 'talk') ?>
+            </a>
+            <!-- <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a> -->
+        </div>
+    </div>
+    <!-- / more dropdown -->
+
+    <!-- share dropdown -->
+    <div class="dropdown d-inline">
+        <a href="#" class="text-black-50 mt-1 float-right" id="dropdown-menu-share" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons md-18">share</i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-menu-share">
+            <p class="dropdown-header"><?= $this->translator->get('question', 'actions_top', 'share__title') ?></p>
+
+            <script src="https://yastatic.net/share2/share.js"></script>
+
+
+            <div id="my-share" class="ya-share2" style="min-height: 24px;" data-services="facebook,twitter,vkontakte,pinterest,digg,reddit,pocket,delicious"></div>
+
+            <script>
+                var share = Ya.share2('my-share', {
+                    content: {
+                        url: '<?= $this->share_link['url'] ?>',
+                        title: '<?= $this->share_link['title'] ?>',
+                        description: '<?= $this->share_link['description'] ?>',
+                        image: '<?= $this->share_link['image'] ?>'
+                    },
+                    theme: {
+                        lang: 'en',
+                        size: 'm',
+                        bare: false,
+                        copy: 'last',
+                        direction: 'vertical'
+                    }
+                });
+            </script>
+
+            <style>
+                .ya-share2__link {
+                    margin-top: 8px;
+                    padding-left: 24px;
+                }
+            </style>
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item semi-small" href="#">
+                <?= $this->translator->get('question', 'actions_top', 'share__copy_link') ?>
+            </a>
+        </div>
+    </div>
+    <!-- / share dropdown -->
+
+</div>
+
+<!-- / actions_top -->

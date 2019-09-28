@@ -49,16 +49,6 @@ body {
   border-color: $color-secondary;
 }
 
-// Light-blue borders
-
-.border {
-  border: 1px solid $color-border !important;
-}
-
-.border-bottom {
-  border-bottom: 1px solid $color-border;
-}
-
 .jumbotron-title {
   font-weight: 600;
   font-size: 2.25rem;
