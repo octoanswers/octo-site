@@ -34,7 +34,7 @@
 
     <?php if (mb_strlen($this->question->answer->text) > 0) : ?>
         <!-- btn history -->
-        <a class="d-inline-block semi-small text-black-50 mr-2" href="<?= $this->question->get_history_URL($this->lang) ?>">
+        <a class="d-inline-block semi-small text-black-50 ml-2" href="<?= $this->question->get_history_URL($this->lang) ?>">
             <?= $this->translator->get('question', 'actions_top', 'history') ?>
         </a>
         <!-- btn history -->

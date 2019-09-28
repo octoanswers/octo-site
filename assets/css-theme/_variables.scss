@@ -24,6 +24,8 @@ $breakpoint-xl: 1200px;
 // Custom Theme Colors
 //
 
+$color-body-background: #fafafa;
+
 $color-primary: #f34949;
 $color-secondary: #4488cc;
 
@@ -31,10 +33,20 @@ $color-success: #44bb88;
 $color-warning: #facf5a;
 
 $color-white: #ffffff;
+$color-gray-1: #eaeaea;
+$color-gray-2: #cecece;
+$color-gray-3: #b2b2b2;
+$color-gray-4: #989898;
+$color-gray-5: #7e7e7e;
+$color-gray-6: #656565;
+$color-gray-7: #4d4d4d;
+$color-gray-8: #363636;
+$color-gray-9: #212121;
+$color-black: #000000;
 
-$color-gray-sm: #eaeaea;
+$color-gray-sm: $color-gray-1;
 $color-border: $color-gray-sm;
 
-$color-gray-xs: #fafafa;
+// Fonts
 
 $font-size-semi-small: 0.9rem;

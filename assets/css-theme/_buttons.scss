@@ -37,10 +37,10 @@
 }
 
 .btn-outline-gray {
-  color: #5a5a5a;
-  border-color: $color-gray-sm;
+  color: $color-gray-7;
+  border-color: $color-gray-1;
 
   &:hover {
-    background-color: $color-gray-sm;
+    background-color: $color-gray-1;
   }
 }

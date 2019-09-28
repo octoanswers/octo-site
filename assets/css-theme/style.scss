@@ -11,12 +11,12 @@
 @import "_type";
 
 body {
-  background-color: $color-gray-xs;
+  background-color: $color-body-background;
 }
 
 .box {
   background-color: $color-white;
-  border: 1px solid $color-gray-sm;
+  border: 1px solid $color-gray-1;
 }
 
 .margin-left-minus-8px {
@@ -32,7 +32,7 @@ body {
 }
 
 .form-control {
-  border-color: $color-gray-sm;
+  border-color: $color-gray-1;
 }
 
 .main-page-jumbotron {
