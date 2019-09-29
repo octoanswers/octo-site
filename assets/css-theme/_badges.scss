@@ -1,0 +1,17 @@
+.badge {
+  border-radius: 3px;
+}
+
+// Contextual variations
+
+.badge-light {
+  color: $color-gray-5;
+}
+
+// badge sizes
+
+.badge-lg {
+  color: $color-gray-5;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}

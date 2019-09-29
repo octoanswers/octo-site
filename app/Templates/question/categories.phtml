@@ -1,39 +1,35 @@
-<?php if (count($this->categories)) : ?>
-
 <!-- categories -->
-<div class="my-5" id="question_categories_list">
-	<div class="text-uppercase mb-3 text-secondary">
+<div class="border rounded bg-white p-3 my-4" id="question_categories_list">
+	<div class="semi-small font-weight-bold text-uppercase text-black mb-3">
 		<?= $this->translator->get('question', 'categories_block', 'title') ?>
 	</div>
 
-	<?php foreach ($this->categories as $category) : ?>
-	<a class="btn btn-sm btn-outline-info mb-3 mr-2" href="<?= $category->get_URL($this->lang) ?>">
-		<?= $category->title ?>
-	</a>
-	<?php endforeach; ?>
+	<?php if (count($this->categories)) : ?>
 
-	<?php if ($this->authUser) : ?>
-	<a class="btn btn-sm btn-outline-secondary mb-3" href="<?= $this->question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
-		<i class="material-icons md-18">edit</i>&nbsp;<?= $this->translator->get('question', 'categories_block', 'categories_change') ?>
-	</a>
+		<?php foreach ($this->categories as $category) : ?>
+			<a class="badge badge-lg badge-light font-weight-normal text-decoration-none mb-2 mr-1" href="<?= $category->get_URL($this->lang) ?>">
+				<?= $category->title ?>
+			</a>
+		<?php endforeach; ?>
+
+		<?php if ($this->authUser) : ?>
+			<a class="badge badge-lg badge-light text-black-50 font-weight-normal text-decoration-none mr-1" href="<?= $this->question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+				<i class="material-icons md-14">edit</i>&nbsp;<?= $this->translator->get('question', 'categories_block', 'categories_change') ?>
+			</a>
+		<?php endif; ?>
+
+	<?php else : ?>
+
+		<?php if ($this->authUser) : ?>
+
+
+			<a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
+				<i class="material-icons md-18">add</i>
+				<?= $this->translator->get('question', 'categories_block', 'categories_add') ?>
+			</a>
+
+		<?php endif; ?>
+
 	<?php endif; ?>
-
 </div>
 <!-- / categories -->
-
-<?php else : ?>
-
-<?php if ($this->authUser) : ?>
-<div class="my-5" id="question_categories_list">
-	<div class="text-uppercase semi-small mb-3 text-secondary">
-		<?= $this->translator->get('question', 'categories_block', 'title') ?>
-	</div>
-
-	<a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
-		<i class="material-icons md-18">add</i>
-		<?= $this->translator->get('question', 'categories_block', 'categories_add') ?>
-	</a>
-</div>
-<?php endif; ?>
-
-<?php endif; ?>
