@@ -1,19 +1,19 @@
 <?php if (count($this->contributors)) : ?>
-<!-- contributors_full -->
-<div class="my-5" id="contributors_full_list">
+	<!-- contributors_full -->
+	<div class="border rounded bg-white p-3 my-4" id="contributors_full_list">
+		<div class="semi-small font-weight-bold text-uppercase text-black mb-3">
+			<?= $this->translator->get('question', 'answer_contributors') ?>
+		</div>
 
-	<div class="text-uppercase text-secondary mb-3">
-		<?= $this->translator->get('question', 'answer_contributors') ?>
-		<span class="text-muted">
-			<span class="ml-3"><?= count($this->contributors) ?></span> <i class="material-icons md-18 w-32px">people</i>
-		</span>
+		<?php foreach ($this->contributors as $contributor) : ?>
+			<a class="d-inline-block wh-4 mr-2 mb-2" href="<?= $contributor->get_URL($this->lang) ?>">
+				<img class="wh-4 rounded-circle" src="<?= $contributor->get_avatar_URL_medium() ?>" alt="<?= $contributor->name ?>">
+			</a>
+		<?php endforeach; ?>
+
+		<div class="small text-muted mt-3">
+			<?= $this->translator->get('question', 'total_contributors') ?>: <?= count($this->contributors) ?>
+		</div>
 	</div>
-
-	<?php foreach ($this->contributors as $contributor) : ?>
-	<a class="wh-4 mr-2 mb-2" href="<?= $contributor->get_URL($this->lang) ?>">
-		<img class="wh-4 rounded" src="<?= $contributor->get_avatar_URL_medium() ?>" alt="<?= $contributor->name ?>">
-	</a>
-	<?php endforeach; ?>
-</div>
-<!-- / contributors tail -->
+	<!-- / contributors tail -->
 <?php endif; ?>

@@ -254,16 +254,23 @@
 	"question": {
 		"actions": "Действия",
 		"actions_top": {
+			"discuss_a_question": "Обсудить вопрос",
 			"edit_answer": "Править ответ",
 			"history": "История",
 			"rename_question": "Переименовать вопрос",
 			"share__copy_link": "Копировать ссылку",
-			"share__title": "Поделиться ссылкой",
-			"discuss_a_question": "Обсудить вопрос"
+			"share__title": "Поделиться ссылкой"
 		},
 		"add_picture": "Добавить картинку",
 		"answer_contributors": "Авторы ответа",
 		"answer_updated": "Ответ обновлен",
+		"block__categories": {
+			"categories_add": "Добавить категории",
+			"categories_change": "Изменить категории",
+			"login_to_add_categories": "Войти и добавить категории",
+			"no_categories": "Вопрос пока не имеет категорий.",
+			"title": "Категории вопроса"
+		},
 		"block__categories_top": {
 			"more_btn": "ещё…"
 		},
@@ -274,13 +281,6 @@
 			"title": "Информация о вопросе"
 		},
 		"categories": "Категории",
-		"block__categories": {
-			"categories_add": "Добавить категории",
-			"categories_change": "Изменить категории",
-			"title": "Категории вопроса",
-			"no_categories": "Вопрос пока не имеет категорий.",
-			"login_to_add_categories": "Войти и добавить категории"
-		},
 		"email_notification_msg": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
 		"lure_be_first_contributor": {
 			"btn_write": "Написать первый ответ",
@@ -309,6 +309,7 @@
 		"subscription_title": "Подписка на вопрос",
 		"thanks_for_the_feedback": "Спасибо за отзыв!",
 		"top_contributors": "Топ авторов",
+		"total_contributors": "Всего авторов",
 		"update_picture": "Обновить картинку",
 		"user_contribution": "Вклад пользователя",
 		"your_email": "Ваш email"
