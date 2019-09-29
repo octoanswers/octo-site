@@ -274,9 +274,9 @@
 			"title": "Информация о вопросе"
 		},
 		"categories": "Категории",
-		"categories_block": {
+		"block__categories": {
 			"categories_add": "Добавить категории",
-			"categories_change": "Изменить",
+			"categories_change": "Изменить категории",
 			"title": "Категории вопроса"
 		},
 		"email_notification_msg": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",

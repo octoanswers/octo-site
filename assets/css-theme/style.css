@@ -407,6 +407,10 @@ a.link-external:after {
   padding-left: 2px;
 }
 
+a.link-dashed {
+  border-bottom: 1px dashed;
+}
+
 h1,
 h2,
 h3,

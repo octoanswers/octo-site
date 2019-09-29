@@ -1,16 +1,17 @@
 <?php if (isset($this->related_questions) && count($this->related_questions)) : ?>
-	<div class="my-5">
-		<!-- related questions -->
-		<div class="text-uppercase semi-small mb-2 text-secondary">
+	<!-- related questions -->
+	<div class="border rounded bg-white p-3 my-4">
+		<div class="semi-small font-weight-bold text-uppercase text-black mb-3">
 			<?= $this->translator->get('question', 'block__related_questions', 'title') ?>
 		</div>
 
+
 		<?php foreach ($this->related_questions as $question) : ?>
-			<div class="my-3">
-				<a class="h4 text-dark text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+			<div class="my-2">
+				<a class="text-dark text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
 					<?= $question->title ?>
 				</a>
-				<div class="small text-secondary">
+				<!-- <div class="small text-secondary">
 					<?= $this->translator->get('question', 'answer_updated') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
 
 					<?php if (strlen($question->answer->text) == 0) : ?>
@@ -19,9 +20,10 @@
 							<?= $this->translator->get('Write first answer') ?>
 						</a>
 					<?php endif; ?>
-				</div>
+				</div> -->
 			</div>
 		<?php endforeach; ?>
-		<!-- / related questions -->
+
 	</div>
+	<!-- / related questions -->
 <?php endif; ?>

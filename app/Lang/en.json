@@ -267,8 +267,8 @@
         "answer_contributors": "Answer contributors",
         "answer_updated": "Answer updated",
         "block__categories": {
-            "categories_add": "Add categories",
-            "categories_change": "Change",
+            "categories_add": "Add category",
+            "categories_change": "Change categories",
             "title": "Categories"
         },
         "block__categories_top": {
@@ -279,11 +279,6 @@
         },
         "block_info": {
             "title": "Question Information"
-        },
-        "categories_block": {
-            "categories_add": "Add category",
-            "categories_change": "Change",
-            "title": "Categories"
         },
         "email_notification_msg": "Enter your email address to get notified about the answer as soon as it appears",
         "lure_be_first_contributor": {

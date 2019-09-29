@@ -1,21 +1,21 @@
 <!-- categories -->
 <div class="border rounded bg-white p-3 my-4" id="question_categories_list">
 	<div class="semi-small font-weight-bold text-uppercase text-black mb-3">
-		<?= $this->translator->get('question', 'categories_block', 'title') ?>
+		<?= $this->translator->get('question', 'block__categories', 'title') ?>
 	</div>
 
 	<?php if (count($this->categories)) : ?>
 
 		<?php foreach ($this->categories as $category) : ?>
-			<a class="badge badge-lg badge-light font-weight-normal text-decoration-none mb-2 mr-1" href="<?= $category->get_URL($this->lang) ?>">
-				<?= $category->title ?>
-			</a>
+			<a class="d-inline-block link-dashed text-secondary line-height-12 text-decoration-none mb-2 mr-2" href="<?= $category->get_URL($this->lang) ?>"><?= $category->title ?></a>
 		<?php endforeach; ?>
 
 		<?php if ($this->authUser) : ?>
-			<a class="badge badge-lg badge-light text-black-50 font-weight-normal text-decoration-none mr-1" href="<?= $this->question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
-				<i class="material-icons md-14">edit</i>&nbsp;<?= $this->translator->get('question', 'categories_block', 'categories_change') ?>
-			</a>
+			<div class="mt-2">
+				<a class="btn btn-sm btn-outline-gray mr-1" href="<?= $this->question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+					<i class="material-icons md-14">edit</i>&nbsp;<?= $this->translator->get('question', 'block__categories', 'categories_change') ?>
+				</a>
+			</div>
 		<?php endif; ?>
 
 	<?php else : ?>
@@ -25,7 +25,7 @@
 
 			<a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
 				<i class="material-icons md-18">add</i>
-				<?= $this->translator->get('question', 'categories_block', 'categories_add') ?>
+				<?= $this->translator->get('question', 'block__categories', 'categories_add') ?>
 			</a>
 
 		<?php endif; ?>

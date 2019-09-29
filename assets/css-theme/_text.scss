@@ -12,3 +12,7 @@ a.link-external:after {
   color: $color-secondary;
   padding-left: 2px;
 }
+
+a.link-dashed {
+  border-bottom: 1px dashed;
+}
