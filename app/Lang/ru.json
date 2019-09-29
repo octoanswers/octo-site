@@ -277,7 +277,9 @@
 		"block__categories": {
 			"categories_add": "Добавить категории",
 			"categories_change": "Изменить категории",
-			"title": "Категории вопроса"
+			"title": "Категории вопроса",
+			"no_categories": "Вопрос пока не имеет категорий.",
+			"login_to_add_categories": "Войти и добавить категории"
 		},
 		"email_notification_msg": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
 		"lure_be_first_contributor": {

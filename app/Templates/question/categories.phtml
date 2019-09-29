@@ -12,7 +12,7 @@
 
 		<?php if ($this->authUser) : ?>
 			<div class="mt-2">
-				<a class="btn btn-sm btn-outline-gray mr-1" href="<?= $this->question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+				<a class="btn btn-sm btn-outline-gray" href="<?= $this->question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
 					<i class="material-icons md-14">edit</i>&nbsp;<?= $this->translator->get('question', 'block__categories', 'categories_change') ?>
 				</a>
 			</div>
@@ -20,14 +20,18 @@
 
 	<?php else : ?>
 
+		<p><?= $this->translator->get('question', 'block__categories', 'no_categories') ?></p>
+
 		<?php if ($this->authUser) : ?>
-
-
-			<a class="btn btn-outline-primary mb-2 mr-2" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
+			<a class="btn btn-sm btn-outline-gray" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
 				<i class="material-icons md-18">add</i>
 				<?= $this->translator->get('question', 'block__categories', 'categories_add') ?>
 			</a>
-
+		<?php else : ?>
+			<a class="btn btn-sm btn-outline-gray" href="#">
+				<i class="material-icons md-18">add</i>
+				<?= $this->translator->get('question', 'block__categories', 'login_to_add_categories') ?>
+			</a>
 		<?php endif; ?>
 
 	<?php endif; ?>
