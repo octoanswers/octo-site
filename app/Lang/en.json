@@ -156,11 +156,11 @@
             "title": "How it works"
         },
         "item__top_question": {
+            "downvote": "Downvote",
             "more": "More",
             "read_more": "Read more",
             "updated_answer": "Updated answer",
-            "upvote": "Upvote",
-            "downvote": "Downvote"
+            "upvote": "Upvote"
         },
         "jumbotron": {
             "btn_get_started": "Get Started!",
@@ -267,8 +267,8 @@
         "add_picture": "Add picture",
         "answer_contributors": "Answer contributors",
         "block__about_question": {
-            "title": "About question",
-            "answer_updated": "Answer updated"
+            "answer_updated": "Answer updated",
+            "title": "About question"
         },
         "block__categories": {
             "categories_add": "Add category",
@@ -355,6 +355,7 @@
         "without_categories": "Without categories"
     },
     "search": {
+        "answer_updated": "Answer updated",
         "filters": {
             "categories": "Categories",
             "questions": "Questions",

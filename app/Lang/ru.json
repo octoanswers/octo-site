@@ -368,6 +368,7 @@
 		"without_categories": "Без тем"
 	},
 	"search": {
+		"answer_updated": "Ответ обновлен",
 		"filters": {
 			"categories": "Категории",
 			"questions": "Вопросы",
