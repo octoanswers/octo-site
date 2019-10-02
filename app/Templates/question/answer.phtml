@@ -3,34 +3,3 @@
         <?= $this->formattedAnswerText ?>
     </div>
 <?php endif; ?>
-
-<!-- actions_bottom -->
-<div class="mt-2 pt-1 border-top text-secondary">
-
-    <!-- edit answer -->
-    <?php if ($this->authUser) : ?>
-        <a class="btn btn-sm btn-outline-gray mt-2 mr-2" href="<?= $this->question->get_edit_URL($this->lang) ?>">
-            <i class="material-icons md-14">edit</i>
-            <?= $this->translator->get('question', 'actions_top', 'edit_answer') ?>
-        </a>
-    <?php else : ?>
-        <a class="btn btn-sm btn-outline-gray mt-2 mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
-            <i class="material-icons md-14">edit</i>
-            <?= $this->translator->get('question', 'actions_top', 'edit_answer') ?>
-        </a>
-        <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/edit_answer.phtml' ?>
-    <?php endif; ?>
-    <!-- / edit answer -->
-
-    <div class="btn-group btn-group-sm mt-2 mr-3" role="group" aria-label="goo-bad-answer">
-        <button type="button" class="btn btn-outline-gray">
-            <i class="material-icons md-14">thumb_up</i>
-            <?= $this->translator->get('main', 'item__top_question', 'upvote') ?>
-        </button>
-        <button type="button" class="btn btn-outline-gray text-black-50">
-            <?= $this->translator->get('main', 'item__top_question', 'downvote') ?>
-        </button>
-    </div>
-
-</div>
-<!-- / actions_bottom -->
