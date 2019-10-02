@@ -323,6 +323,9 @@
         "update_picture": "Update picture",
         "your_email": "Your email"
     },
+    "question_discussion": {
+        "page_prefix": "Discussion of the answer:"
+    },
     "questions": {
         "btn_add_categories": "Add categories",
         "more_questions": "More questions",

@@ -34,4 +34,9 @@ trait URL
     {
         return SITE_URL . '/' . $lang . '/answer/' . $this->id . '/edit';
     }
+
+    public function get_discussion_URL(string $lang): string
+    {
+        return SITE_URL . '/' . $lang . '/question/' . $this->id . '/discussion';
+    }
 }

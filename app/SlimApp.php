@@ -86,6 +86,7 @@ class SlimApp
             $this->get('/categories/newest', '\PageController\Categories\Newest:handle');
             // @NOTE To realize $this->get('/categories/popular', 'List_Categories_PageController:handle');
             $this->get('/question/{id}/categories', '\PageController\Question\UpdateCategories:handle');
+            $this->get('/question/{id}/discussion', '\PageController\Question\Discussion:handle');
             $this->get('/questions/newest', '\PageController\Questions\Newest:handle');
             $this->get('/questions/recently-updated', '\PageController\Questions\RecentlyUpdated:handle');
             $this->get('/random-question', '\PageController\Question\Random:handle');
