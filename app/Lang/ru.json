@@ -158,7 +158,8 @@
 			"more": "Ещё",
 			"read_more": "Читать далее",
 			"updated_answer": "Обновил ответ",
-			"upvote": "Нравится"
+			"upvote": "Хороший ответ",
+			"downvote": "Плохой"
 		},
 		"jumbotron": {
 			"btn_get_started": "Давайте начнём!",

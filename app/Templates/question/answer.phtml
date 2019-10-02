@@ -21,10 +21,15 @@
     <?php endif; ?>
     <!-- / edit answer -->
 
-    <button type="button" class="btn btn-sm btn-outline-gray mr-3">
-        <i class="material-icons md-14">thumb_up</i>
-        <?= $this->translator->get('main', 'item__top_question', 'upvote') ?>
-    </button>
+    <div class="btn-group btn-group-sm mr-3" role="group" aria-label="goo-bad-answer">
+        <button type="button" class="btn btn-outline-gray">
+            <i class="material-icons md-14">thumb_up</i>
+            <?= $this->translator->get('main', 'item__top_question', 'upvote') ?>
+        </button>
+        <button type="button" class="btn btn-outline-gray text-black-50">
+            <?= $this->translator->get('main', 'item__top_question', 'downvote') ?>
+        </button>
+    </div>
 
     <!-- updated_at -->
     <?php if (strlen($this->question->answer->text)) : ?>

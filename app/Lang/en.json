@@ -159,7 +159,8 @@
             "more": "More",
             "read_more": "Read more",
             "updated_answer": "Updated answer",
-            "upvote": "Upvote"
+            "upvote": "Upvote",
+            "downvote": "Downvote"
         },
         "jumbotron": {
             "btn_get_started": "Get Started!",
