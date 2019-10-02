@@ -12,19 +12,15 @@
         <?php foreach ($this->contributors_top as $contributor) : ?>
 
             <div class="media position-relative mb-4">
-                <a class="wh-3 mt-1 mr-3 rounded" href="<?= $contributor->get_URL($this->lang) ?>">
-                    <img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-3 rounded" alt="<?= $contributor->name ?>">
+                <a class="wh-40px mt-1 mr-3 rounded" href="<?= $contributor->get_URL($this->lang) ?>">
+                    <img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-40px rounded-circle" alt="<?= $contributor->name ?>">
                 </a>
                 <div class="media-body">
                     <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->get_URL($this->lang) ?>">
                         <?= $contributor->name ?>
                     </a>
 
-                    <span class="badge badge-light" data-toggle="tooltip" data-placement="top" title="<?= $this->translator->get('question', 'user_contribution') ?>">
-                        <?= \Humanizer\Contribution::humanize_count($contributor->contribution) ?>
-                    </span>
-
-                    <p class="small text-secondary mt-1 mb-0">
+                    <p class="small text-black-50 mb-0">
                         <?= $contributor->signature ? $contributor->signature : $contributor->username ?>
                         <?php if ($contributor->site) : ?>
                             <a href="<?= $contributor->site ?>">
@@ -39,9 +35,9 @@
     </div>
     <!-- / top contributors @ sidebar -->
 
-    <a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
+    <!-- <a class="float-right text-black-50 text-decoration-none" data-scroll href="#contributors_full_list">
         All
-    </a>
+    </a> -->
 
     <!--googleon: index -->
     <!--/noindex-->
