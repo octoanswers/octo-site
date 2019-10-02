@@ -32,6 +32,7 @@ class UpdateCategories extends \PageController\PageController
         $this->template = 'question_update_categories';
         $this->pageTitle = str_replace('%question%', $this->question->title, $this->translator->get('Update categories for question "%question%" - Answeropedia'));
         $this->pageDescription = str_replace('%question%', $this->question->title, $this->translator->get('Update categories for question "%question%"'));
+        $this->showFooter = false;
 
         $this->includeJS[] = SITE_URL . '/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.js';
         $this->includeJS[] = SITE_URL . '/assets/_vendor/twitter/typeahead.js/bloodhound.js';
