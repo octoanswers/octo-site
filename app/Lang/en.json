@@ -276,12 +276,19 @@
         "block__categories_top": {
             "more_btn": "more…"
         },
+        "block__contributors": {
+            "link__change_categories": "Change categories",
+            "link__edit_answer": "Edit answer",
+            "link__what_is_a_contribution": "What is a contribution?",
+            "msg": "Authors of the answer are users who wrote the first or added to an existing answer. Other types of contributions to answering questions are also taken into account."
+        },
         "block__related_questions": {
             "title": "Related questions"
         },
         "block_info": {
             "title": "Question Information"
         },
+        "btn__change_related_answers": "Change related answers",
         "email_notification_msg": "Enter your email address to get notified about the answer as soon as it appears",
         "lure_be_first_contributor": {
             "btn_write": "Write first answer",

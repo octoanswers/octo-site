@@ -8,7 +8,7 @@
 
 		<?php foreach ($this->related_questions as $question) : ?>
 			<div class="my-2">
-				<span class="text-black-50">&mdash;</span> <a class="text-black-50 text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+				<a class="semi-small text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
 					<?= $question->title ?>
 				</a>
 				<!-- <div class="small text-secondary">
@@ -23,6 +23,15 @@
 				</div> -->
 			</div>
 		<?php endforeach; ?>
+
+		<div class="mt-3">
+			<!-- change related answers -->
+			<a class="btn btn-sm btn-outline-gray mr-2" href="#">
+				<i class="material-icons md-14">edit</i>
+				<?= $this->translator->get('question', 'btn__change_related_answers') ?>
+			</a>
+			<!-- / change related answers -->
+		</div>
 
 	</div>
 	<!-- / related questions -->

@@ -274,12 +274,19 @@
 		"block__categories_top": {
 			"more_btn": "ещё…"
 		},
+		"block__contributors": {
+			"link__change_categories": "Изменить категории",
+			"link__edit_answer": "Править ответ",
+			"link__what_is_a_contribution": "Что такое вклад?",
+			"msg": "Авторы ответа &mdash; это пользователи, которые написаkи первый или дополнили уже существующий ответ. Также учитываются и другие виды вклада в ответ."
+		},
 		"block__related_questions": {
 			"title": "Похожие вопросы"
 		},
 		"block_info": {
 			"title": "Информация о вопросе"
 		},
+		"btn__change_related_answers": "Изменить связанные вопросы",
 		"categories": "Категории",
 		"email_notification_msg": "Укажите адрес электронной почты и мы сообщим об ответе, как только он появится",
 		"lure_be_first_contributor": {

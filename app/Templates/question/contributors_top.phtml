@@ -4,11 +4,9 @@
 
     <!-- top contributors @ sidebar -->
     <div class="mb-5">
-        <div class="mb-3">
 
-            <div class="text-uppercase semi-small text-secondary">
-                <?= $this->translator->get('question', 'top_contributors') ?>
-            </div>
+        <div class="semi-small font-weight-bold text-uppercase text-primary mt-2 mb-3">
+            <?= $this->translator->get('question', 'top_contributors') ?>
         </div>
 
         <?php foreach ($this->contributors_top as $contributor) : ?>

@@ -24,12 +24,12 @@
 
 		<?php if ($this->authUser) : ?>
 			<a class="btn btn-sm btn-outline-gray" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
-				<i class="material-icons md-18">add</i>
+				<i class="material-icons md-14">add</i>
 				<?= $this->translator->get('question', 'block__categories', 'categories_add') ?>
 			</a>
 		<?php else : ?>
 			<a class="btn btn-sm btn-outline-gray" href="#">
-				<i class="material-icons md-18">add</i>
+				<i class="material-icons md-14">add</i>
 				<?= $this->translator->get('question', 'block__categories', 'login_to_add_categories') ?>
 			</a>
 		<?php endif; ?>
