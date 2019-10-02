@@ -222,6 +222,7 @@
         "signup": "Sign up"
     },
     "navbar_subnav": {
+        "questions": "New questions",
         "feed": "Feed",
         "how_it_works": "How it works",
         "popular_categories": "Categories",

@@ -5,10 +5,11 @@
 <ul class="list-unstyled semi-small mb-0">
 
     <li class="my-2">
-        <a href="<?= \Helper\URL\Page::get_flow_URL($this->lang) ?>" class="text-dark text-decoration-none">
-            <?= $this->translator->get('navbar_subnav', 'recent_changes') ?>
+        <a href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>" class="text-dark text-decoration-none">
+            <?= $this->translator->get('navbar_subnav', 'questions') ?>
         </a>
     </li>
+
 
     <li class="my-2">
         <a href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>" class="text-dark text-decoration-none">
@@ -19,6 +20,13 @@
     <li class="my-2">
         <a href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>" class="text-dark text-decoration-none">
             <?= $this->translator->get('navbar_subnav', 'sandbox') ?>
+            <i class="material-icons md-18">bubble_chart</i>
+        </a>
+    </li>
+
+    <li class="my-2">
+        <a href="<?= \Helper\URL\Page::get_flow_URL($this->lang) ?>" class="text-dark text-decoration-none">
+            <?= $this->translator->get('navbar_subnav', 'recent_changes') ?>
         </a>
     </li>
 

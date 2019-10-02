@@ -220,6 +220,7 @@
 		"signup": "Регистрация"
 	},
 	"navbar_subnav": {
+		"questions": "Новые вопросы",
 		"feed": "Подписки",
 		"how_it_works": "Как это работает",
 		"popular_categories": "Категории",
