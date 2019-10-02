@@ -11,13 +11,6 @@
         "renamed_question": "renamed the question"
     },
     "answer_edit": {
-        "block__how_to_edit": {
-            "item_1": "Fix grammatical or spelling errors",
-            "item_2": "Add related resources or links",
-            "item_3": "Always respect the original author",
-            "more_about_editing": "More about editing:",
-            "title": "How to Edit"
-        },
         "description_of_changes": "Description of changes",
         "page_title": "Edit answer",
         "title": "Edit answer"
