@@ -39,6 +39,14 @@
             <div class="d-none d-md-block col-lg-3">
                 <?php require_once __DIR__ . '/contributors_top.phtml'; ?>
                 <?php require_once __DIR__ . '/about_answeropedia.phtml'; ?>
+
+                <!-- updated_at -->
+                <?php if (strlen($this->question->answer->text)) : ?>
+                    <div class="small text-black-50">
+                        <?= $this->translator->get('question', 'answer_updated') . ': ' . \Humanizer\DateTime::humanize_timestamp($this->lang, $this->question->answer->updatedAt) ?>
+                    </div>
+                <?php endif; ?>
+                <!-- / updated_at -->
             </div>
 
         </div>
