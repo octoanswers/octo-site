@@ -21,7 +21,7 @@
                     </a>
 
                     <p class="small text-black-50 mb-0">
-                        <?= $contributor->signature ? $contributor->signature : $contributor->username ?>
+                        <?= $contributor->signature ? $contributor->get_short_signature() : $contributor->username ?>
                         <?php if ($contributor->site) : ?>
                             <a href="<?= $contributor->site ?>">
                                 <?= parse_url($contributor->site, PHP_URL_HOST) ?>

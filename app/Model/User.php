@@ -6,6 +6,7 @@ class User extends Model
 {
     use \Traits\Model\User\Init;
     use \Traits\Model\User\Avatar;
+    use \Traits\Model\User\Signature;
 
     public $id; // int
     public $username; // string
