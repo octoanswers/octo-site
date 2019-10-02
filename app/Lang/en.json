@@ -266,7 +266,10 @@
         },
         "add_picture": "Add picture",
         "answer_contributors": "Answer contributors",
-        "answer_updated": "Answer updated",
+        "block__about_question": {
+            "title": "About question",
+            "answer_updated": "Answer updated"
+        },
         "block__categories": {
             "categories_add": "Add category",
             "categories_change": "Change categories",

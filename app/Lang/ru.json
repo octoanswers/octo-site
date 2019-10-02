@@ -155,11 +155,11 @@
 			"title": "Как это работает"
 		},
 		"item__top_question": {
+			"downvote": "Плохой",
 			"more": "Ещё",
 			"read_more": "Читать далее",
 			"updated_answer": "Обновил ответ",
-			"upvote": "Хороший ответ",
-			"downvote": "Плохой"
+			"upvote": "Хороший ответ"
 		},
 		"jumbotron": {
 			"btn_get_started": "Давайте начнём!",
@@ -264,7 +264,6 @@
 		},
 		"add_picture": "Добавить картинку",
 		"answer_contributors": "Авторы ответа",
-		"answer_updated": "Ответ обновлен",
 		"block__categories": {
 			"categories_add": "Добавить категории",
 			"categories_change": "Изменить категории",
@@ -283,6 +282,10 @@
 		},
 		"block__related_questions": {
 			"title": "Похожие вопросы"
+		},
+		"block__about_question": {
+			"answer_updated": "Ответ обновлен",
+			"title": "О вопросе"
 		},
 		"block_info": {
 			"title": "Информация о вопросе"
