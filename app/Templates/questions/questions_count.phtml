@@ -1,10 +1,11 @@
+<?php if (isset($this->questionsCount)) : ?>
+	<div class="border rounded p-3 pt-2 bg-white">
 
+		<div class="semi-small font-weight-bold text-uppercase text-black mb-3">
+			<?= $this->translator->get('questions', 'questions_count') ?>
+		</div>
 
-<div class="mb-4">
-	<?php if (isset($this->questionsCount)): ?>
-			<p class="h1 mb-0"><?= $this->questionsCount ?></p>
-			<p class="text-secondary semi-small mb-2">
-				<?= $this->translator->get('questions', 'questions_count') ?> 
-			</p>
-		<?php endif; ?>
-</div>
+		<p class="h1 text-primary mb-2"><?= $this->questionsCount ?></p>
+
+	</div>
+<?php endif; ?>

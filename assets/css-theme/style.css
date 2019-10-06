@@ -590,6 +590,10 @@ body {
   margin-left: -12px;
 }
 
+.text-primary {
+  color: #f34949 !important;
+}
+
 .text-secondary {
   color: #4488cc !important;
 }
