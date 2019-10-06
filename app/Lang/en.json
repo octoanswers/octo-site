@@ -323,14 +323,19 @@
     "questions": {
         "btn_add_categories": "Add categories",
         "more_questions": "More questions",
-        "nav": {
+        "filters": {
+            "title": "Filters",
             "newest": "New questions",
             "popular": "Popular",
             "recently_updated": "Recently updated"
         },
         "new": "New",
         "newest_questions": "Newest questions",
-        "questions_count": "questions with answers"
+        "statistics": {
+            "title": "Statistics",
+            "questions_with_answers": "Questions",
+            "in_sandbox": "In sandbox"
+        }
     },
     "sandbox": {
         "about_block": {

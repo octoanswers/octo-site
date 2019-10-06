@@ -333,14 +333,19 @@
 	"questions": {
 		"btn_add_categories": "Добавить категории",
 		"more_questions": "Больше вопросов",
-		"nav": {
+		"filters": {
+			"title": "Фильтры",
 			"newest": "Новые вопросы",
 			"popular": "Популярные",
 			"recently_updated": "Недавно обновленные"
 		},
 		"new": "Новый",
 		"newest_questions": "Новые вопросы",
-		"questions_count": "вопросов с ответами"
+		"statistics": {
+			"title": "Статистика",
+			"questions_with_answers": "Вопросов",
+			"in_sandbox": "В песочнице"
+		}
 	},
 	"root": {
 		"Questions and Answers": "Вопросы и ответы"

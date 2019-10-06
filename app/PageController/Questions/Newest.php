@@ -11,13 +11,11 @@ class Newest extends \PageController\PageController
         parent::handleRequest($request, $response, $args);
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
-        //        var_dump($this->page);
-
 
         $this->questions = $this->_get_questions();
 
-        $this->questionsCount = (new \Query\QuestionsCount($this->lang))->count_questions_with_answers();
-
+        $this->count_questions_with_answers = (new \Query\QuestionsCount($this->lang))->count_questions_with_answers();
+        $this->count_questions_without_answers = (new \Query\QuestionsCount($this->lang))->count_questions_without_answers();
 
         $this->template = 'questions';
         $this->pageTitle = $this->_get_page_title();

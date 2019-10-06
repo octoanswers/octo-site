@@ -1,0 +1,18 @@
+<!-- questions statistics -->
+<div class="mb-5">
+
+	<div class="semi-small font-weight-bold text-uppercase text-primary mt-2 mb-3">
+		<?= $this->translator->get('questions', 'statistics', 'title') ?>
+	</div>
+
+	<ul class="list-unstyled semi-small">
+		<li class="my-2 text-black-50">
+			<?= $this->translator->get('questions', 'statistics', 'questions_with_answers') . ' &middot; ' . $this->count_questions_with_answers ?>
+		</li>
+		<li class="my-2 text-black-50">
+			<?= $this->translator->get('questions', 'statistics', 'in_sandbox') . ' &middot; ' . $this->count_questions_without_answers ?>
+		</li>
+	</ul>
+
+</div>
+<!-- / questions statistics -->

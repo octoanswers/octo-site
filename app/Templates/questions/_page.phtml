@@ -18,20 +18,19 @@
 
             <!-- main_column -->
             <div class="col-12 col-lg-7">
-                <?php require_once __DIR__ . '/nav.phtml' ?>
+                <?php require_once __DIR__ . '/top_ask.phtml'; ?>
                 <?php require_once __DIR__ . '/questions.phtml'; ?>
                 <?php require_once __DIR__ . '/next_page.phtml'; ?>
             </div>
             <!-- / main_column -->
 
             <div class="d-none d-md-block col-lg-3">
-                <?php require_once __DIR__ . '/questions_count.phtml' ?>
+                <?php require_once __DIR__ . '/filter.phtml' ?>
+                <?php require_once __DIR__ . '/statistics.phtml' ?>
             </div>
 
         </div>
     </div>
-
-    <?php require TEMPLATE_PATH . '/_common/footer.phtml'; ?>
 
     <?php require TEMPLATE_PATH . '/_common/modals.phtml'; ?>
     <?php require TEMPLATE_PATH . '/_common/js.phtml'; ?>
