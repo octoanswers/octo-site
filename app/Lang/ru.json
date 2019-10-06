@@ -39,9 +39,11 @@
 		"title": "Категории"
 	},
 	"category": {
-		"actions_right": {
+		"actions": {
 			"rename_category": "Переименовать категорию",
-			"title": "Действия"
+			"report": "Пожаловаться",
+			"discuss_a_category": "Обсудить категорию",
+			"follow_lure": "Зарегистрируйтесь или войдите, и вы можете подписаться на эту категорию."
 		},
 		"page_title": "Категория: ",
 		"questions_with_category": "Вопросы в категории",

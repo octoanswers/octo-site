@@ -1,68 +1,90 @@
-<!-- actions -->
-<div class="mt-4">
+<!-- actions_top -->
+<div class="mt-2">
 
+    <!-- follow_btn -->
     <?php if ($this->authUser) : ?>
-        <button class="btn follow_category_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>" data-category-id="<?= $this->category->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
-            <i class="material-icons md-18">bookmark</i>
-            <span>
-                <?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?>
-            </span>
+        <button class="btn btn-sm follow_category_button mt-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>" data-category-id="<?= $this->category->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
+            <?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?>
+        </button>
+    <?php else : ?>
+        <button type="button" class="btn btn-sm btn-outline-gray mt-2 mr-2" data-container="body" data-toggle="popover" data-placement="top" data-content="<?= $this->translator->get('category', 'actions', 'follow_lure') ?>" data-trigger="focus">
+            <?= $this->translator->get('btn', 'follow'); ?>
         </button>
     <?php endif; ?>
+    <!-- / follow_btn -->
 
-    <?php if (false) : ?>
-        <!-- fake follow category button -->
-        <button type="button" class="btn btn-primary mr-2 mb-3" data-toggle="modal" data-target="#fake-follow-category-modal">
-            <?= $this->translator->get('btn', 'follow') ?>
-        </button>
-        <!-- fake follow category modal -->
-        <div class="modal fade" id="fake-follow-category-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            <?= $this->translator->get('Register or sign in and you can subscribe to this question.') ?>?
-                        </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <a href="#" data-toggle="modal" data-target="#modal_login">Log in</a> or <a href="#" data-toggle="modal" data-target="#modal_signup">signup</a> to follow this category and get notifications when new questions will be added!
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= $this->translator->get('btn', 'cancel') ?></button>
-                        <a href="#" data-toggle="modal" data-target="#modal_signup" type="button" class="btn btn-primary"><?= $this->translator->get('Signup') ?></a>
-                    </div>
-                </div>
-            </div>
+    <!-- more dropdown -->
+    <div class="dropdown d-inline">
+        <a href="#" class="text-black-50 my-2 ml-3 float-lg-right" id="dropdown-menu-more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons md-18">more_horiz</i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-menu-more">
+
+            <?php if ($this->authUser) : ?>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_rename_category">
+                    <?= $this->translator->get('category', 'actions', 'rename_category') ?>
+                </a>
+            <?php endif; ?>
+
+            <a href="#" class="dropdown-item disabled" rel="nofollow">
+                <?= $this->translator->get('category', 'actions', 'report') ?>
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item disabled" target="_blank" href="#">
+                <?= $this->translator->get('category', 'actions', 'discuss_a_category') ?>
+            </a>
+
         </div>
-    <?php endif; ?>
+    </div>
+    <!-- / more dropdown -->
+
+    <!-- share dropdown -->
+    <div class="dropdown d-none d-lg-inline">
+        <a href="#" class="text-black-50 my-2 float-right" id="dropdown-menu-share" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons md-18">share</i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-menu-share">
+            <p class="dropdown-header"><?= $this->translator->get('question', 'actions_top', 'share__title') ?></p>
+
+            <script src="https://yastatic.net/share2/share.js"></script>
+
+
+            <div id="my-share" class="ya-share2" style="min-height: 24px;" data-services="facebook,twitter,vkontakte,pinterest,digg,reddit,pocket,delicious"></div>
+
+            <script>
+                var share = Ya.share2('my-share', {
+                    content: {
+                        url: '<?= $this->share_link['url'] ?>',
+                        title: '<?= $this->share_link['title'] ?>',
+                        description: '<?= $this->share_link['description'] ?>',
+                        image: '<?= $this->share_link['image'] ?>'
+                    },
+                    theme: {
+                        lang: 'en',
+                        size: 'm',
+                        bare: false,
+                        copy: 'last',
+                        direction: 'vertical'
+                    }
+                });
+            </script>
+
+            <style>
+                .ya-share2__link {
+                    margin-top: 8px;
+                    padding-left: 24px;
+                }
+            </style>
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item semi-small" href="#">
+                <?= $this->translator->get('question', 'actions_top', 'share__copy_link') ?>
+            </a>
+        </div>
+    </div>
+    <!-- / share dropdown -->
 
 </div>
-<!-- / actions -->
-
-
-
-<!-- right_actions -->
-
-<nav class="mb-4">
-    <div class="text-uppercase semi-small mb-2 text-secondary">
-        <?= $this->translator->get('category', 'actions_right', 'title') ?>
-    </div>
-    <ul class="list-unstyled">
-
-        <?php if ($this->authUser) : ?>
-            <!-- rename_category -->
-            <li>
-                <a href="#" data-toggle="modal" data-target="#modal_rename_category">
-                    <i class="material-icons md-18">edit</i>&nbsp;<?= $this->translator->get('category', 'actions_right', 'rename_category') ?>
-                </a>
-            </li>
-            <!-- / rename_category -->
-        <?php endif; ?>
-
-    </ul>
-</nav>
-
-<!-- / right_actions -->
+<!-- / actions_top -->

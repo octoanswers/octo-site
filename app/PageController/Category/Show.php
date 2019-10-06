@@ -43,7 +43,11 @@ class Show extends \PageController\PageController
         $this->nextPageURL = null;
 
         $this->open_graph = $this->_get_open_graph();
-        $this->share = $this->_get_open_graph();
+
+        $this->share_link['title'] = $this->_get_page_title();
+        $this->share_link['description'] = $this->_get_page_description();
+        $this->share_link['url'] = $this->category->get_URL($this->lang);
+        $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
         $output = $this->render_page();
         $response->getBody()->write($output);

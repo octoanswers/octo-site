@@ -39,9 +39,11 @@
         "title": "Categories"
     },
     "category": {
-        "actions_right": {
+        "actions": {
             "rename_category": "Rename category",
-            "title": "Actions"
+            "report": "Report",
+            "discuss_a_category": "Discuss a category",
+            "follow_lure": "Register or sign in and you can subscribe to this category."
         },
         "more_categories": "More categories",
         "page_title": "Category: ",
