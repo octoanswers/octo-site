@@ -45,6 +45,11 @@
             "discuss_a_category": "Discuss a category",
             "follow_lure": "Register or sign in and you can subscribe to this category."
         },
+        "nav": {
+            "questions": "Questions",
+            "related_categories": "Related categories",
+            "followers": "Followers"
+        },
         "more_categories": "More categories",
         "page_title": "Category: ",
         "questions_with_category": "Questions with category",

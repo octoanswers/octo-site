@@ -107,7 +107,7 @@ img.cover-height-16 {
 }
 
 .nav-tabs .nav-item .nav-link {
-  padding: 0.25rem 0 0.25rem 0;
+  padding: 0.25rem 0 0.125rem 0;
   color: #4488cc;
   border: none;
   border-bottom: 3px solid transparent;

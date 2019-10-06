@@ -1,13 +1,19 @@
-<div class="my-3 ml-1 pl-3">
+<div class="mb-3 mt-4 ml-1 pl-3">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" href="#">Questions</a>
+            <a class="nav-link active" href="#">
+                <?= $this->translator->get('category', 'nav', 'questions') ?>
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Followers</a>
+            <a class="nav-link" href="#">
+                <?= $this->translator->get('category', 'nav', 'followers') ?>
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link disabled" href="#">Related categories</a>
+            <a class="nav-link disabled" href="#">
+                <?= $this->translator->get('category', 'nav', 'related_categories') ?>
+            </a>
         </li>
     </ul>
 </div>
