@@ -4,8 +4,6 @@ namespace PageController\Category;
 
 class Show extends \PageController\PageController
 {
-    protected $category_questions;
-
     public function handle($request, $response, $args)
     {
         parent::handleRequest($request, $response, $args);

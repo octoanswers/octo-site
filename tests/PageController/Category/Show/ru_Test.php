@@ -1,10 +1,12 @@
 <?php
 
-class Show_Category_PageController__ru__Test extends Abstract_Frontend_TestCase
-{
-    protected $setUpDB = ['ru' => ['questions', 'categories', 'er_categories_questions', 'er_users_follow_categories']];
+namespace Test\PageController\Category\Show;
 
-    public function test__ShowPage()
+class ru_Test extends \Abstract_Frontend_TestCase
+{
+    protected $setUpDB = ['ru' => ['questions', 'categories', 'revisions', 'er_categories_questions', 'er_users_follow_categories']];
+
+    public function test__Show_page()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
