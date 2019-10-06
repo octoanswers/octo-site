@@ -10,6 +10,8 @@ class Show extends \PageController\PageController
     {
         parent::handleRequest($request, $response, $args);
 
+        $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
+
         $category_URI = $args['category_uri'];
 
         try {
@@ -19,49 +21,18 @@ class Show extends \PageController\PageController
             return (new \PageController\Error\CategoryNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
+        $this->questions = $this->_get_questions();
 
-        $human_date_time_zone = new \DateTimeZone('UTC');
-        $date_humanizer = new \Humanizer\HumanDate\HumanDate($human_date_time_zone, $this->lang);
-
-        $category_questions = (new \Query\Relations\CategoriesToQuestions($this->lang))->find_newest_for_category_with_ID($this->category->id);
-        $this->category_questions = [];
-
-        foreach ($category_questions as $category_question_er) {
-            $this->category_questions[] = (new \Query\Question($this->lang))->question_with_ID($category_question_er->questionID);
-
-            //$question['date_humanized'] = $dateHumanizer->format($question->createdAt);
-        }
-
-        // recount questions count if GET-param on 20% random
-        try {
-            // if ((mt_rand(0, 10) > 7) || isset($_GET['upd'])) {
-            //     $questionsCount = api_v1_get_categories_ID_questions_count($args['category_id']);
-            //     $category->setQuestionsCount($questionsCount);
-            //     $categoryMapper = new CategoryMapper($pdo);
-            //     $categoryMapper->saveCategory($category);
-            // }
-        } catch (\Throwable $e) {
-            // do nothing
-        }
-
-        if (is_array($this->category_questions) && count($this->category_questions) == 10) {
+        if (is_array($this->questions) && count($this->questions) == 10) {
             $data['next_page_button'] = [
                 'title' => $this->translator->get('category', 'more_categories'),
                 'url'   => '#',
             ];
         }
 
-        //$data['alternate_url_prefix'] = $category['url'].'?';
-
         //$data['most_viewed_writers'] = $this->_get_most_viewed_writers();
 
-        if (is_array($this->category_questions)) {
-            //    $this->related_categories = $this->_get_related_categories($this->category_questions);
-        }
-        //} else {
         $this->related_categories = [];
-        //}
 
         $this->_prepare_follow_button();
         $this->_prepare_additional_JS();
@@ -126,9 +97,32 @@ class Show extends \PageController\PageController
         return $title;
     }
 
-    /**
-     * Get most_viewed_writers.
-     */
+    protected function _get_questions(): array
+    {
+        $top_questions = [];
+
+        $category_question_relations = (new \Query\Relations\CategoriesToQuestions($this->lang))->find_newest_for_category_with_ID($this->category->id, $this->page);
+
+        foreach ($category_question_relations as $category_question_er) {
+            $question = (new \Query\Question($this->lang))->question_with_ID($category_question_er->questionID);
+
+            $contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
+
+            $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
+            if (count($categories) > 2) {
+                $categories = array_slice($categories, 0, 2);
+            }
+
+            $top_questions[] = [
+                'question'         => $question,
+                'categories'       => $categories,
+                'contributors'     => $contributors
+            ];
+        }
+
+        return $top_questions;
+    }
+
     public function _get_most_viewed_writers()
     {
         $most_viewed_writers = [
