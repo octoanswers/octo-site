@@ -74,13 +74,11 @@
 
 				<?php if ($this->authUser) : ?>
 					<li class="nav-item">
-						<a class="user-avatar wh-36px rounded-circle d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->get_URL($this->lang) ?>">
-							<img class="wh-36px rounded-circle" src="<?= $this->authUser->get_avatar_URL_small() ?>" alt="<?= $this->authUser->name ?>">
+						<a class="user-avatar wh-36px rounded d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->get_URL($this->lang) ?>">
+							<img class="wh-36px rounded" src="<?= $this->authUser->get_avatar_URL_small() ?>" alt="<?= $this->authUser->name ?>">
 						</a>
 					</li>
 				<?php endif; ?>
-
-
 
 			</ul>
 		</div>

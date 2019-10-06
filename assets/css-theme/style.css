@@ -139,20 +139,6 @@ img.cover-height-16 {
   color: #4488cc;
 }
 
-.navbar-subnav {
-  border-bottom: 1px solid #e4eef8;
-  background-color: white;
-  top: 57px;
-}
-
-.navbar-subnav a {
-  color: #4488cc;
-}
-
-.navbar-subnav a:hover {
-  color: #2a629a;
-}
-
 .wh-1 {
   width: 1rem;
   height: 1rem;
@@ -557,6 +543,10 @@ blockquote p:last-child,
   font-size: 1.5rem !important;
 }
 
+.line-height-10 {
+  line-height: 1;
+}
+
 .line-height-11 {
   line-height: 1.1;
 }
@@ -600,6 +590,10 @@ body {
 
 .form-control {
   border-color: #eaeaea;
+}
+
+.rounded {
+  border-radius: 3px !important;
 }
 
 .main-page-jumbotron {

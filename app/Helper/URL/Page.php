@@ -18,4 +18,9 @@ class Page
     {
         return SITE_URL . '/' . $lang . '/flow';
     }
+
+    public static function get_ask_URL(string $lang): string
+    {
+        return SITE_URL . '/' . $lang . '/ask';
+    }
 }
