@@ -7,26 +7,26 @@
 
 <body>
 
-    <?php require_once TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
+    <?php require TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
 
     <div class="container mt-4">
         <div class="row">
 
             <div class="d-none d-lg-block col-12 col-lg-2">
-                <?php require_once TEMPLATE_PATH . '/_common/left/sections.phtml'; ?>
+                <?php require TEMPLATE_PATH . '/_common/left/sections.phtml'; ?>
             </div>
 
             <!-- main_column -->
             <div class="col-12 col-lg-7">
-                <?php require_once __DIR__ . '/top_ask.phtml'; ?>
-                <?php require_once __DIR__ . '/questions.phtml'; ?>
-                <?php require_once __DIR__ . '/next_page.phtml'; ?>
+                <?php require __DIR__ . '/top_ask.phtml'; ?>
+                <?php require __DIR__ . '/questions.phtml'; ?>
+                <?php require __DIR__ . '/next_page.phtml'; ?>
             </div>
             <!-- / main_column -->
 
             <div class="d-none d-md-block col-lg-3">
-                <?php require_once __DIR__ . '/filter.phtml' ?>
-                <?php require_once __DIR__ . '/statistics.phtml' ?>
+                <?php require __DIR__ . '/filter.phtml' ?>
+                <?php require __DIR__ . '/statistics.phtml' ?>
             </div>
 
         </div>

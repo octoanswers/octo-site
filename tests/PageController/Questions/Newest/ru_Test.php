@@ -2,7 +2,7 @@
 
 class Newest_Questions_PageController__ru__Test extends Abstract_Frontend_TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'categories', 'revisions'], 'users' => ['users']];
+    protected $setUpDB = ['ru' => ['questions', 'categories', 'revisions', 'er_categories_questions'], 'users' => ['users']];
 
     public function testBase()
     {
@@ -15,7 +15,8 @@ class Newest_Questions_PageController__ru__Test extends Abstract_Frontend_TestCa
 
         $response = $this->app->run(true);
         $response_body = (string) $response->getBody();
-
+        // echo $response_body;
+        // exit;
         $this->assertStringContainsString('Новые вопросы – Страница 1 – Answeropedia', $response_body);
         $this->assertStringContainsString('Птицы играют в игры?', $response_body);
 
