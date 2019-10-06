@@ -1,16 +1,16 @@
 <!-- category header -->
 <div class="mb-3">
 
-
     <p class="mb-0 text-muted mb-0">
         <?= $this->translator->get('category', 'title') ?>
     </p>
-    <h1 class="font-size-15 line-height-13 text-dark font-weight-bold">
+
+    <h1 class="font-size-15 line-height-13 text-dark font-weight-bold mb-1">
         <?= $this->category->title ?>
     </h1>
 
-    <div class="mb-0 text-secondary">
-        <?= $this->translator->get('category', 'total_questions') ?>: <?= count($this->questions) ?>
+    <div class="mb-0 text-black-50">
+        <?= $this->translator->get('category', 'total_questions') ?> &middot; <?= count($this->questions) ?>
     </div>
 </div>
 <!-- / category header -->
