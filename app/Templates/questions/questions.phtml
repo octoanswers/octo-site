@@ -5,7 +5,6 @@
         <?php $question = $question_item['question'] ?>
         <?php $categories = $question_item['categories'] ?>
         <?php $contributors = $question_item['contributors'] ?>
-        <?php $last_contributor = $question_item['last_contributor'] ?>
 
         <!-- question item -->
         <div class="border rounded bg-white p-3 my-4">
@@ -32,43 +31,13 @@
                 </a>
             </div>
 
-            <!-- last_contributor -->
-            <?php if (isset($last_contributor)) : ?>
-
-                <div class="media position-relative">
-                    <a class="wh-40px mt-1 mr-3 rounded-circle" href="<?= $last_contributor->get_URL($this->lang) ?>">
-                        <img src="<?= $last_contributor->get_avatar_URL_medium() ?>" class="wh-40px rounded-circle" alt="<?= $last_contributor->name ?>">
-                    </a>
-                    <div class="media-body line-height-12">
-                        <a class="semi-small text-secondary text-decoration-none" href="<?= $last_contributor->get_URL($this->lang) ?>"><?= $last_contributor->name ?></a>
-
-                        <span class="semi-small text-black-50">
-                            &middot;
-                        </span>
-
-                        <?php if ($last_contributor->signature) : ?>
-                            <span class="semi-small">
-                                <?= $last_contributor->signature ?>
-                            </span>
-                        <?php else : ?>
-                            <span class="semi-small text-black-50">
-                                @<?= $last_contributor->username ?>
-                            </span>
-                        <?php endif; ?>
-
-
-                        <div class="small text-black-50 mt-2">
-                            <?= $this->translator->get('main', 'item__top_question', 'updated_answer') ?>: <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
-                        </div>
-                    </div>
-                </div>
-            <?php endif; ?>
-
+            <!-- question image -->
             <?php if ($question->imageBaseName) : ?>
                 <a class="d-block my-3" href="<?= $question->get_URL($this->lang) ?>">
                     <img class="img-fluid" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
                 </a>
             <?php endif; ?>
+            <!-- / question image -->
 
             <!-- answer text -->
             <?php if (mb_strlen($question->answer->text)) : ?>
@@ -83,15 +52,10 @@
             <?php endif; ?>
             <!-- / answer text -->
 
-            <div class="mt-2 text-secondary">
+            <div class="mt-2 border-top pt-3 text-secondary">
 
-                <button type="button" class="btn btn-sm btn-outline-gray mr-3">
-                    <i class="material-icons md-14">thumb_up</i>
-                    <?= $this->translator->get('main', 'item__top_question', 'upvote') ?>
-                </button>
-
-                <?php if (count($contributors) > 1) : ?>
-                    <span class="mr-3">
+                <?php if (count($contributors)) : ?>
+                    <span class="mr-2">
                         <?php foreach ($contributors as $contributor) : ?>
                             <a class="wh-24px rounded-circle" href="<?= $contributor->get_URL($this->lang) ?>"><img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-28px rounded-circle" alt="<?= $contributor->name ?>" title="<?= $contributor->name ?>"></a>
                         <?php endforeach; ?>

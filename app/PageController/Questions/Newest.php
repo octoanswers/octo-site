@@ -56,7 +56,6 @@ class Newest extends \PageController\PageController
 
         foreach ($questions as $question) {
             $contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
-            $last_contributor = (new \Query\Contributor($this->lang))->find_answer_last_editor($question->id);
 
             $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
             if (count($categories) > 2) {
@@ -66,8 +65,7 @@ class Newest extends \PageController\PageController
             $top_questions[] = [
                 'question'         => $question,
                 'categories'       => $categories,
-                'contributors'     => $contributors,
-                'last_contributor' => $last_contributor,
+                'contributors'     => $contributors
             ];
         }
 
