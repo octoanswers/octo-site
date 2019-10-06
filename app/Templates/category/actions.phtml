@@ -1,0 +1,68 @@
+<!-- actions -->
+<div class="mt-4">
+
+    <?php if ($this->authUser) : ?>
+        <button class="btn follow_category_button mr-2 mb-3 <?= $this->followed ? 'followed btn-success' : 'btn-primary'; ?>" data-category-id="<?= $this->category->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
+            <i class="material-icons md-18">bookmark</i>
+            <span>
+                <?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?>
+            </span>
+        </button>
+    <?php endif; ?>
+
+    <?php if (false) : ?>
+        <!-- fake follow category button -->
+        <button type="button" class="btn btn-primary mr-2 mb-3" data-toggle="modal" data-target="#fake-follow-category-modal">
+            <?= $this->translator->get('btn', 'follow') ?>
+        </button>
+        <!-- fake follow category modal -->
+        <div class="modal fade" id="fake-follow-category-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            <?= $this->translator->get('Register or sign in and you can subscribe to this question.') ?>?
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <a href="#" data-toggle="modal" data-target="#modal_login">Log in</a> or <a href="#" data-toggle="modal" data-target="#modal_signup">signup</a> to follow this category and get notifications when new questions will be added!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= $this->translator->get('btn', 'cancel') ?></button>
+                        <a href="#" data-toggle="modal" data-target="#modal_signup" type="button" class="btn btn-primary"><?= $this->translator->get('Signup') ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+</div>
+<!-- / actions -->
+
+
+
+<!-- right_actions -->
+
+<nav class="mb-4">
+    <div class="text-uppercase semi-small mb-2 text-secondary">
+        <?= $this->translator->get('category', 'actions_right', 'title') ?>
+    </div>
+    <ul class="list-unstyled">
+
+        <?php if ($this->authUser) : ?>
+            <!-- rename_category -->
+            <li>
+                <a href="#" data-toggle="modal" data-target="#modal_rename_category">
+                    <i class="material-icons md-18">edit</i>&nbsp;<?= $this->translator->get('category', 'actions_right', 'rename_category') ?>
+                </a>
+            </li>
+            <!-- / rename_category -->
+        <?php endif; ?>
+
+    </ul>
+</nav>
+
+<!-- / right_actions -->
