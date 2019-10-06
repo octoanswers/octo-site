@@ -116,7 +116,7 @@ class Show extends \PageController\PageController
             $top_questions[] = [
                 'question'         => $question,
                 'categories'       => $categories,
-                'contributors'     => $contributors
+                'contributors'     => $contributors,
             ];
         }
 
