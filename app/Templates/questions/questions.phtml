@@ -55,7 +55,7 @@
             <div class="mt-3">
 
                 <?php if (count($contributors)) : ?>
-                    <span class="mr-2">
+                    <span class="mr-3">
                         <?php foreach ($contributors as $contributor) : ?>
                             <a class="wh-24px rounded-circle" href="<?= $contributor->get_URL($this->lang) ?>"><img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-28px rounded-circle" alt="<?= $contributor->name ?>" title="<?= $contributor->name ?>"></a>
                         <?php endforeach; ?>
@@ -67,12 +67,19 @@
 
                 <!-- time to read -->
                 <?php if (strlen($question->answer->text)) : ?>
-                    <span class="semi-small text-black-50" title="<?= $this->translator->get('Minutes to read') ?>">
-                        <i class="material-icons md-14">access_time</i>
+                    <span class="semi-small text-black-50">
+                        <i class="material-icons md-14">subject</i>
                         <?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
                     </span>
                 <?php endif; ?>
                 <!-- / time to read -->
+
+                <span class="mx-1">&middot;</span>
+
+                <span class="semi-small text-black-50">
+                    <i class="material-icons md-14">edit</i>
+                    <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+                </span>
 
             </div>
         </div>
