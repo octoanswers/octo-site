@@ -11,19 +11,13 @@ class Newest extends \PageController\PageController
         parent::handleRequest($request, $response, $args);
 
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
+        //        var_dump($this->page);
 
-        $questionsCount = (new \Query\QuestionsCount($this->lang))->questions_last_ID();
 
-        $this->questions = (new \Query\Questions($this->lang))->find_newest_with_answer($this->page);
+        $this->questions = $this->_get_questions();
 
         $this->questionsCount = (new \Query\QuestionsCount($this->lang))->count_questions_with_answers();
 
-        foreach ($this->questions as $question) {
-            $contributors_array = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
-            foreach ($contributors_array as $contributor) {
-                $this->contributors[$question->id][] = $contributor;
-            }
-        }
 
         $this->template = 'questions';
         $this->pageTitle = $this->_get_page_title();
@@ -54,5 +48,31 @@ class Newest extends \PageController\PageController
         $description = $this->translator->get('questions', 'newest_questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
 
         return $description;
+    }
+
+    protected function _get_questions(): array
+    {
+        $top_questions = [];
+
+        $questions = (new \Query\Questions($this->lang))->find_newest_with_answer($this->page);
+
+        foreach ($questions as $question) {
+            $contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
+            $last_contributor = (new \Query\Contributor($this->lang))->find_answer_last_editor($question->id);
+
+            $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
+            if (count($categories) > 2) {
+                $categories = array_slice($categories, 0, 2);
+            }
+
+            $top_questions[] = [
+                'question'         => $question,
+                'categories'       => $categories,
+                'contributors'     => $contributors,
+                'last_contributor' => $last_contributor,
+            ];
+        }
+
+        return $top_questions;
     }
 }

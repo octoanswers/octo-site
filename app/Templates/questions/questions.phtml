@@ -1,52 +1,118 @@
 <!-- question item -->
 <?php if (count($this->questions)) : ?>
-    <?php foreach ($this->questions as $question) : ?>
+    <?php foreach ($this->questions as $question_item) : ?>
 
+        <?php $question = $question_item['question'] ?>
+        <?php $categories = $question_item['categories'] ?>
+        <?php $contributors = $question_item['contributors'] ?>
+        <?php $last_contributor = $question_item['last_contributor'] ?>
 
-        <div class="my-4">
+        <!-- question item -->
+        <div class="border rounded bg-white p-3 my-4">
 
-            <div class="mb-2">
-                <a class="lead text-dark text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+            <?php if (count($categories)) : ?>
+                <div class="mb-2">
+                    <?php foreach ($categories as $category) : ?>
+                        <a class="small text-black-50 text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
+                            <?= $category->title ?>
+                        </a>
+                        <span class="semi-small text-black-50">
+                            &middot;
+                        </span>
+                    <?php endforeach; ?>
+                    <a class="small text-black-50 text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+                        <?= $this->translator->get('main', 'item__top_question', 'more') ?>
+                    </a>
+                </div>
+            <?php endif; ?>
+
+            <div class="mb-3">
+                <a class="font-size-140 line-height-13 text-dark font-weight-bold text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
                     <?= $question->title ?>
                 </a>
             </div>
 
-            <?php if (false) : ?>
-                <div class="text-muted my-2">
-                    <?= 'short_answer' ?>
+            <!-- last_contributor -->
+            <?php if (isset($last_contributor)) : ?>
+
+                <div class="media position-relative">
+                    <a class="wh-40px mt-1 mr-3 rounded-circle" href="<?= $last_contributor->get_URL($this->lang) ?>">
+                        <img src="<?= $last_contributor->get_avatar_URL_medium() ?>" class="wh-40px rounded-circle" alt="<?= $last_contributor->name ?>">
+                    </a>
+                    <div class="media-body line-height-12">
+                        <a class="semi-small text-secondary text-decoration-none" href="<?= $last_contributor->get_URL($this->lang) ?>"><?= $last_contributor->name ?></a>
+
+                        <span class="semi-small text-black-50">
+                            &middot;
+                        </span>
+
+                        <?php if ($last_contributor->signature) : ?>
+                            <span class="semi-small">
+                                <?= $last_contributor->signature ?>
+                            </span>
+                        <?php else : ?>
+                            <span class="semi-small text-black-50">
+                                @<?= $last_contributor->username ?>
+                            </span>
+                        <?php endif; ?>
+
+
+                        <div class="small text-black-50 mt-2">
+                            <?= $this->translator->get('main', 'item__top_question', 'updated_answer') ?>: <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+                        </div>
+                    </div>
                 </div>
             <?php endif; ?>
 
             <?php if ($question->imageBaseName) : ?>
-                <a class="d-block max-width-240px" href="<?= $question->get_URL($this->lang) ?>">
-                    <img class="max-width-240px" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
+                <a class="d-block my-3" href="<?= $question->get_URL($this->lang) ?>">
+                    <img class="img-fluid" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
                 </a>
             <?php endif; ?>
 
-            <div class="mt-2">
-                <?php if ((strtotime("now") - strtotime($question->answer->updatedAt)) < (60 * 60 * 24)) : ?>
-                    <span class="badge badge-primary mr-2">
-                        <?= $this->translator->get('questions', 'new') ?>
+            <!-- answer text -->
+            <?php if (mb_strlen($question->answer->text)) : ?>
+                <div class="my-3">
+                    <?= mb_substr($question->answer->text, 0, 150) ?><?= (mb_strlen($question->answer->text) > 150) ? '&hellip;' : '' ?>
+                    <?php if (mb_strlen($question->answer->text) > 150) : ?>
+                        <a class="text-secondary semi-small my-3" href="<?= $question->get_URL($this->lang) ?>">
+                            (<?= $this->translator->get('main', 'item__top_question', 'read_more') ?>)
+                        </a>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <!-- / answer text -->
+
+            <div class="mt-2 text-secondary">
+
+                <button type="button" class="btn btn-sm btn-outline-gray mr-3">
+                    <i class="material-icons md-14">thumb_up</i>
+                    <?= $this->translator->get('main', 'item__top_question', 'upvote') ?>
+                </button>
+
+                <?php if (count($contributors) > 1) : ?>
+                    <span class="mr-3">
+                        <?php foreach ($contributors as $contributor) : ?>
+                            <a class="wh-24px rounded-circle" href="<?= $contributor->get_URL($this->lang) ?>"><img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-28px rounded-circle" alt="<?= $contributor->name ?>" title="<?= $contributor->name ?>"></a>
+                        <?php endforeach; ?>
+                        <!-- <a class="semi-small text-black-50" href="#">
+                        +2
+                    </a> -->
                     </span>
                 <?php endif; ?>
 
-                <?php if ($question->categoriesCount == 0) : ?>
-                    <a class="badge badge-success mr-2" href="<?= $question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
-                        <?= $this->translator->get('questions', 'btn_add_categories') ?>
-                    </a>
-                <?php endif; ?>
-
+                <!-- time to read -->
                 <?php if (strlen($question->answer->text)) : ?>
-                    <span class="small text-secondary">2 автора</a>
-                        <span class="mx-1 text-muted font_weight_800">&middot;</span>
+                    <span class="semi-small text-black-50" title="<?= $this->translator->get('Minutes to read') ?>">
                         <i class="material-icons md-14">access_time</i>
-                        <span class="small text-secondary"><?= $question->get_minutes_to_read() ?></span>
-                        <span class="mx-1 text-muted font_weight_800">&middot;</span>
-                    <?php endif; ?>
+                        <?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
+                    </span>
+                <?php endif; ?>
+                <!-- / time to read -->
 
-                    <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
             </div>
         </div>
+        <!-- / question item -->
 
     <?php endforeach; ?>
 <?php endif; ?>
