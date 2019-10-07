@@ -5,12 +5,12 @@
 
     <ul class="list-unstyled semi-small">
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= ($this->list == 'with-answers') ? 'text-secondary' : '' ?>" data-lang="ru" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
+            <a class="text-dark text-decoration-none <?= ($this->list == 'with-answers') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
                 <?= $this->translator->get('questions', 'filters', 'newest') ?>
             </a>
         </li>
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= ($this->list == 'recently_updated') ? 'text-secondary' : '' ?>" data-lang="ru" href="<?= \Helper\URL\Questions::get_recently_updated_URL($this->lang) ?>">
+            <a class="text-dark text-decoration-none <?= ($this->list == 'recently_updated') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Questions::get_recently_updated_URL($this->lang) ?>">
                 <?= $this->translator->get('questions', 'filters', 'recently_updated') ?>
             </a>
         </li>

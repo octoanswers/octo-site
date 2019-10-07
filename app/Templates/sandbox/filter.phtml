@@ -1,23 +1,25 @@
-<!-- sandbox_nav -->
+<!-- filter -->
+<nav class="mt-2 mb-4">
+    <div class="semi-small font-weight-bold text-uppercase text-primary mb-3">
+        <?= $this->translator->get('questions', 'filters', 'title') ?>
+    </div>
 
-<nav class="ml-2 my-4">
-    <ul class="list-unstyled">
-        <li>
-            <a href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>" class="<?= ($this->list == 'without-answers') ? 'active' : '' ?>">
+    <ul class="list-unstyled semi-small">
+        <li class="my-2">
+            <a class="text-dark text-decoration-none <?= ($this->list == 'without-answers') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>">
                 <?= $this->translator->get('sandbox', 'questions_without_answers') ?>
             </a>
         </li>
-        <li>
-            <a href="<?= \Helper\URL\Sandbox::get_without_categories_URL($this->lang) ?>" class="<?= ($this->list == 'without_categories') ? 'active' : '' ?>">
+        <li class="my-2">
+            <a class="text-dark text-decoration-none <?= ($this->list == 'without_categories') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_without_categories_URL($this->lang) ?>">
                 <?= $this->translator->get('sandbox', 'without_categories') ?>
             </a>
         </li>
-        <li>
-            <a href="<?= \Helper\URL\Sandbox::get_all_URL($this->lang) ?>" class="<?= ($this->list == 'newest') ? 'active' : '' ?>">
+        <li class="my-2">
+            <a class="text-dark text-decoration-none <?= ($this->list == 'newest') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_all_URL($this->lang) ?>">
                 <?= $this->translator->get('sandbox', 'all_questions') ?>
             </a>
         </li>
     </ul>
 </nav>
-
-<!-- / sandbox_nav -->
+<!-- / filter -->

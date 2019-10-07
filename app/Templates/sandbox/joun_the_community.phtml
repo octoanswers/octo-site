@@ -1,9 +1,7 @@
-<div class="mt-2 d-none d-lg-block">
-
-	<?php if (!$this->authUser) : ?>
+<?php if (!$this->authUser) : ?>
+	<div class="mt-2 mb-4 pb-2 d-none d-lg-block">
 		<button role="button" data-toggle="modal" data-target="#modal_signup" class="btn btn-danger btn-block">
 			<?= $this->translator->get('sandbox', 'about_block', 'btn_action') ?>
 		</button>
-	<?php endif; ?>
-
-</div>
+	</div>
+<?php endif; ?>
