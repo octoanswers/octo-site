@@ -367,9 +367,8 @@
 			"title": "Что такое Песочница"
 		},
 		"all_questions": "Все вопросы",
-		"answer_updated": "Ответ обновлен",
 		"btn_add_categories": "Добавить категории",
-		"btn_write_answer": "Написать ответ",
+		"btn_write_first_answer": "Написать первый ответ",
 		"questions_without_answers": "Вопросы без ответа",
 		"title": "Песочница",
 		"without_categories": "Без тем"

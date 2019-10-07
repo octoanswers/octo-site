@@ -354,9 +354,8 @@
             "title": "What is a «sandbox»?"
         },
         "all_questions": "All questions",
-        "answer_updated": "Answer updated",
         "btn_add_categories": "Add categories",
-        "btn_write_answer": "Write answer",
+        "btn_write_first_answer": "Write first answer",
         "questions_without_answers": "Questions without answers",
         "title": "Sandbox",
         "without_categories": "Without categories"
