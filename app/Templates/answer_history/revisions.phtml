@@ -2,17 +2,17 @@
     <?php for ($i = 0; $i < count($this->revisions); $i++) : ?>
         <?php $user = $this->users[$i]; ?>
 
-        <div class="my-5">
+        <div class="border rounded bg-white p-2 my-4">
 
-            <div class="media">
-                <a class="d-block wh-3 mr-3 mb-3" href="<?= ($this->users[$i])->get_URL($this->lang) ?>">
+            <div class="media p-2 mb-3">
+                <a class="d-block wh-3 mr-3" href="<?= ($this->users[$i])->get_URL($this->lang) ?>">
                     <img class="wh-3 mr-3 rounded" src="<?= ($this->users[$i])->get_avatar_URL_small() ?>">
                 </a>
                 <div class="media-body">
                     <a class="h5 text-dark text-decoration-none" href="<?= ($this->users[$i])->get_URL($this->lang) ?>">
                         <?= $this->users[$i]->name ?>
                     </a>
-                    <div class="small text-secondary">
+                    <div class="small text-black-50">
                         <?= $this->translator->get('answer_history', 'change_ID') ?> #<?= $this->revisions[$i]->id ?>
                         <span class="text-dark font_weight_800">&middot;</span>
                         <?php if ($this->revisions[$i]->comment) : ?>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <?php $fineDiffRender = new \cogpowered\FineDiff\Render\Html; ?>
-            <pre><?= $fineDiffRender->process($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
+            <pre class="bg-color-body-background p-2 mb-0"><?= $fineDiffRender->process($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
         </div>
     <?php endfor; ?>
 <?php else : ?>
