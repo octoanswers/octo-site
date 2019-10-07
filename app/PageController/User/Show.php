@@ -37,6 +37,11 @@ class Show extends \PageController\PageController
 
         $this->open_graph = $this->_get_open_graph();
 
+        $this->share_link['title'] = $this->user->name;
+        $this->share_link['description'] = $this->user->name . ' ' . $this->translator->get('user', 'answers_on_answeropedia');
+        $this->share_link['url'] = $this->user->get_URL($this->lang);
+        $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
+
         // prepare 'logout' button
         if (($this->authUser != null) && ($this->authUser->id == $this->user->id)) {
             $this->includeJS[] = 'user/logout';

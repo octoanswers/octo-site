@@ -10,7 +10,6 @@
         </div>
 
         <?php foreach ($this->contributors_top as $contributor) : ?>
-
             <div class="media position-relative mb-4">
                 <a class="wh-40px mt-1 mr-3 rounded" href="<?= $contributor->get_URL($this->lang) ?>">
                     <img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-40px rounded-circle" alt="<?= $contributor->name ?>">

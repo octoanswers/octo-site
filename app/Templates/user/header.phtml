@@ -1,34 +1,20 @@
 <div class="mb-4">
 
-    <img class="wh-6 rounded mb-4" src="<?= $this->user->get_avatar_URL_medium() ?>" alt="<?= $this->user->name ?>">
-
-    <h1 class="mb-1"><?= $this->user->name ?></h1>
-
-    <?php if ($this->authUser && ($this->authUser->id == $this->user->id) && ($this->user->name == $this->user->username)) : ?>
-        <div class="alert alert-warning my-3" role="alert">
-            <p class="mb-2"><?= $this->translator->get('user', 'alert__name', 'msg') ?></p>
-            <a class="btn btn-sm btn-warning" href="<?= \Helper\URL\Settings::get_settings_URL($this->lang) ?>" role="button">
-                <?= $this->translator->get('user', 'alert__name', 'action') ?>
-            </a>
+    <!-- avatar + name + username -->
+    <div class="media position-relative mb-4">
+        <img src="<?= $this->user->get_avatar_URL_medium() ?>" class="wh-48px rounded mr-3" alt="<?= $this->user->name ?>">
+        <div class="media-body">
+            <h1 class="mb-0"><?= $this->user->name ?></h1>
+            <div class="text-black small">
+                @<?= $this->user->username ?>
+            </div>
         </div>
-    <?php endif; ?>
-
-    <div class="mb-3 text-secondary small">
-        @<?= $this->user->username ?>
     </div>
+    <!-- / avatar + name + username -->
 
     <?php if ($this->user->signature) : ?>
         <div class="text-muted">
             <?= $this->user->signature ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($this->authUser && ($this->authUser->id == $this->user->id) && !$this->user->signature) : ?>
-        <div class="alert alert-warning my-3" role="alert">
-            <p class="mb-2"><?= $this->translator->get('user', 'alert__signature', 'msg') ?></p>
-            <a class="btn btn-sm btn-warning" href="<?= \Helper\URL\Settings::get_settings_URL($this->lang) ?>" role="button">
-                <?= $this->translator->get('user', 'alert__signature', 'action') ?>
-            </a>
         </div>
     <?php endif; ?>
 

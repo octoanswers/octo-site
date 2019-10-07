@@ -408,6 +408,11 @@
             "action": "Set signature",
             "msg": "Enter a signature describing your professional skills and knowledge."
         },
+        "actions": {
+            "ask": "Ask question",
+            "follow_lure": "Register or sign in and you can subscribe to this user.",
+            "report": "Report"
+        },
         "answers_on_answeropedia": "Wiki-answers on Answeropedia",
         "knows_about": "Knows about",
         "logout": "Log out",
