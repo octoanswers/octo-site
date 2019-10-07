@@ -1,0 +1,37 @@
+<?php if (count($this->revisions)) : ?>
+    <?php for ($i = 0; $i < count($this->revisions); $i++) : ?>
+        <?php $user = $this->users[$i]; ?>
+
+        <div class="my-5">
+
+            <div class="media">
+                <a class="d-block wh-3 mr-3 mb-3" href="<?= ($this->users[$i])->get_URL($this->lang) ?>">
+                    <img class="wh-3 mr-3 rounded" src="<?= ($this->users[$i])->get_avatar_URL_small() ?>">
+                </a>
+                <div class="media-body">
+                    <a class="h5 text-dark text-decoration-none" href="<?= ($this->users[$i])->get_URL($this->lang) ?>">
+                        <?= $this->users[$i]->name ?>
+                    </a>
+                    <div class="small text-secondary">
+                        <?= $this->translator->get('answer_history', 'change_ID') ?> #<?= $this->revisions[$i]->id ?>
+                        <span class="text-dark font_weight_800">&middot;</span>
+                        <?php if ($this->revisions[$i]->comment) : ?>
+                            <?= $this->translator->get('answer_history', 'description_of_changes') ?>: <?= $this->revisions[$i]->comment ?>
+                        <?php else : ?>
+                            <?= $this->translator->get('answer_history', 'no_description_of_changes') ?>
+                        <?php endif; ?>
+                        <span class="text-dark font_weight_800">&middot;</span>
+                        <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
+                    </div>
+
+                </div>
+            </div>
+            <?php $fineDiffRender = new \cogpowered\FineDiff\Render\Html; ?>
+            <pre><?= $fineDiffRender->process($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
+        </div>
+    <?php endfor; ?>
+<?php else : ?>
+    <div class="alert alert-info mt-5" role="alert">
+        В настоящее время ответ не имеет правок.
+    </div>
+<?php endif; ?>

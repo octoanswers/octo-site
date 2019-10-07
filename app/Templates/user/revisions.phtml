@@ -1,7 +1,7 @@
 <?php if (count($this->revisions)) : ?>
     <?php for ($i = 0; $i < count($this->revisions); $i++) : ?>
-        <div class="border rounded bg-white p-3 my-4">
-            <div class="mb-3">
+        <div class="border rounded bg-white p-2 my-4">
+            <div class="mb-3 p-2">
                 <a class="h5 text-dark text-decoration-none" href="<?= ($this->questions[$i])->get_URL($this->lang) ?>">
                     <?= $this->questions[$i]->title ?>
                 </a>
