@@ -1,23 +1,22 @@
-
 <ul class="nav nav-tabs my-3">
     <li class="nav-item">
         <a class="nav-link active" href="#">
-            Правки
+            <?= $this->translator->get('user', 'nav', 'revisions') ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" href="#">
-            Вопросы
+            <?= $this->translator->get('user', 'nav', 'questions') ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" href="#">
-            Подписки
+            <?= $this->translator->get('user', 'nav', 'followed') ?>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" href="#">
-            Подписчики
+            <?= $this->translator->get('user', 'nav', 'followers') ?>
         </a>
     </li>
 </ul>

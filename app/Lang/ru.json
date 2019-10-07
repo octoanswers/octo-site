@@ -40,15 +40,15 @@
 	},
 	"category": {
 		"actions": {
-			"rename_category": "Переименовать категорию",
-			"report": "Пожаловаться",
 			"discuss_a_category": "Обсудить категорию",
-			"follow_lure": "Зарегистрируйтесь или войдите, и вы можете подписаться на эту категорию."
+			"follow_lure": "Зарегистрируйтесь или войдите, и вы можете подписаться на эту категорию.",
+			"rename_category": "Переименовать категорию",
+			"report": "Пожаловаться"
 		},
 		"nav": {
+			"followers": "Подписчики",
 			"questions": "Вопросы",
-			"related_categories": "Похожие категории",
-			"followers": "Подписчики"
+			"related_categories": "Похожие категории"
 		},
 		"page_title": "Категория: ",
 		"questions_with_category": "Вопросы в категории",
@@ -227,10 +227,10 @@
 		"signup": "Регистрация"
 	},
 	"navbar_subnav": {
-		"questions": "Новые вопросы",
 		"feed": "Подписки",
 		"how_it_works": "Как это работает",
 		"popular_categories": "Категории",
+		"questions": "Новые вопросы",
 		"random_question": "Случайный вопрос",
 		"recent_changes": "Свежие правки",
 		"sandbox": "Песочница"
@@ -265,6 +265,10 @@
 		},
 		"add_picture": "Добавить картинку",
 		"answer_contributors": "Авторы ответа",
+		"block__about_question": {
+			"answer_updated": "Ответ обновлен",
+			"title": "О вопросе"
+		},
 		"block__categories": {
 			"categories_add": "Добавить категории",
 			"categories_change": "Изменить категории",
@@ -283,10 +287,6 @@
 		},
 		"block__related_questions": {
 			"title": "Похожие вопросы"
-		},
-		"block__about_question": {
-			"answer_updated": "Ответ обновлен",
-			"title": "О вопросе"
 		},
 		"block_info": {
 			"title": "Информация о вопросе"
@@ -339,21 +339,21 @@
 	},
 	"questions": {
 		"btn_add_categories": "Добавить категории",
-		"more_questions": "Больше вопросов",
 		"filters": {
-			"title": "Фильтры",
 			"newest": "Новые вопросы",
 			"popular": "Популярные",
-			"recently_updated": "Недавно обновленные"
+			"recently_updated": "Недавно обновленные",
+			"title": "Фильтры"
 		},
+		"more_questions": "Больше вопросов",
 		"new": "Новый",
 		"newest_questions": "Новые вопросы",
-		"what_is_your_question": "Какой у вас вопрос",
 		"statistics": {
-			"title": "Статистика",
+			"in_sandbox": "В песочнице",
 			"questions_with_answers": "Вопросов",
-			"in_sandbox": "В песочнице"
-		}
+			"title": "Статистика"
+		},
+		"what_is_your_question": "Какой у вас вопрос"
 	},
 	"root": {
 		"Questions and Answers": "Вопросы и ответы"
@@ -429,11 +429,17 @@
 		"answers_on_answeropedia": "Вики-ответы на Answeropedia",
 		"knows_about": "Знает о",
 		"logout": "Выйти",
+		"nav": {
+			"followed": "Подписки",
+			"followers": "Подписчики",
+			"questions": "Вопросы",
+			"revisions": "Правки"
+		},
 		"no_answers": {
 			"msg": "Пользователь пока не написал ни одного ответа."
 		},
-		"revision": "Правка",
 		"no_description_of_changes": "Нет описания изменений",
+		"revision": "Правка",
 		"settings": "Настройки"
 	},
 	"users": {

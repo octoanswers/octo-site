@@ -40,17 +40,17 @@
     },
     "category": {
         "actions": {
-            "rename_category": "Rename category",
-            "report": "Report",
             "discuss_a_category": "Discuss a category",
-            "follow_lure": "Register or sign in and you can subscribe to this category."
-        },
-        "nav": {
-            "questions": "Questions",
-            "related_categories": "Related categories",
-            "followers": "Followers"
+            "follow_lure": "Register or sign in and you can subscribe to this category.",
+            "rename_category": "Rename category",
+            "report": "Report"
         },
         "more_categories": "More categories",
+        "nav": {
+            "followers": "Followers",
+            "questions": "Questions",
+            "related_categories": "Related categories"
+        },
         "page_title": "Category: ",
         "questions_with_category": "Questions with category",
         "title": "Category",
@@ -229,10 +229,10 @@
         "signup": "Sign up"
     },
     "navbar_subnav": {
-        "questions": "New questions",
         "feed": "Feed",
         "how_it_works": "How it works",
         "popular_categories": "Categories",
+        "questions": "New questions",
         "random_question": "Random question",
         "recent_changes": "Recent changes",
         "sandbox": "Sandbox"
@@ -329,21 +329,21 @@
     },
     "questions": {
         "btn_add_categories": "Add categories",
-        "more_questions": "More questions",
         "filters": {
-            "title": "Filters",
             "newest": "New questions",
             "popular": "Popular",
-            "recently_updated": "Recently updated"
+            "recently_updated": "Recently updated",
+            "title": "Filters"
         },
+        "more_questions": "More questions",
         "new": "New",
         "newest_questions": "Newest questions",
-        "what_is_your_question": "What is your question",
         "statistics": {
-            "title": "Statistics",
+            "in_sandbox": "In sandbox",
             "questions_with_answers": "Questions",
-            "in_sandbox": "In sandbox"
-        }
+            "title": "Statistics"
+        },
+        "what_is_your_question": "What is your question"
     },
     "sandbox": {
         "about_block": {
@@ -411,11 +411,17 @@
         "answers_on_answeropedia": "Wiki-answers on Answeropedia",
         "knows_about": "Knows about",
         "logout": "Log out",
-        "revision": "Revision",
-        "no_description_of_changes": "No description of changes",
+        "nav": {
+            "followed": "Followed",
+            "followers": "Followers",
+            "questions": "Questions",
+            "revisions": "Revisions"
+        },
         "no_answers": {
             "msg": "User has not written any answers yet."
         },
+        "no_description_of_changes": "No description of changes",
+        "revision": "Revision",
         "settings": "Settings"
     },
     "users": {
