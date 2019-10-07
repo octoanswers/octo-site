@@ -1,0 +1,23 @@
+<nav class="mt-2 mb-5">
+    <div class="semi-small font-weight-bold text-uppercase text-primary mb-3">
+        <?= $this->translator->get('questions', 'filters', 'title') ?>
+    </div>
+
+    <ul class="list-unstyled semi-small">
+        <li class="my-2">
+            <a class="text-dark text-decoration-none <?= $this->list == 'questions' ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Search::get_search_questions_URL($this->lang, $this->query) ?>">
+                <?= $this->translator->get('search', 'filters', 'questions'); ?>
+            </a>
+        </li>
+        <li class="my-2">
+            <a class="text-dark text-decoration-none <?= $this->list == 'categories' ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Search::get_search_categories_URL($this->lang, $this->query) ?>">
+                <?= $this->translator->get('search', 'filters', 'categories'); ?>
+            </a>
+        </li>
+        <li class="my-2">
+            <a class="text-dark text-decoration-none <?= $this->list == 'users' ? 'text-secondary' : '' ?>" href="\Helper\URL\Search::get_search_users_URL($this->lang, $this->query)">
+                <?= $this->translator->get('search', 'filters', 'users'); ?>
+            </a>
+        </li>
+    </ul>
+</nav>
