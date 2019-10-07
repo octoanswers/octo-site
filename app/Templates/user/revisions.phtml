@@ -1,26 +1,30 @@
 <?php if (count($this->revisions)) : ?>
     <?php for ($i = 0; $i < count($this->revisions); $i++) : ?>
-        <div class="my-4">
+        <div class="border rounded bg-white p-3 my-4">
             <div class="mb-3">
                 <a class="h5 text-dark text-decoration-none" href="<?= ($this->questions[$i])->get_URL($this->lang) ?>">
                     <?= $this->questions[$i]->title ?>
                 </a>
-                <div class="small text-secondary">
-                    Правка #<?= $this->revisions[$i]->id ?>
+                <div class="small text-black-50">
+                    <?= $this->translator->get('user', 'revision') ?> #<?= $this->revisions[$i]->id ?>
+
                     <span class="mx-1 text-dark font-weight-bold">&middot;</span>
+
                     <?php if ($this->revisions[$i]->comment) : ?>
                         <strong><?= $this->revisions[$i]->comment ?></strong>
                     <?php else : ?>
-                        Нет описания изменений
+                        <?= $this->translator->get('user', 'no_description_of_changes') ?>
                     <?php endif; ?>
+
                     <span class="mx-1 text-dark font-weight-bold">&middot;</span>
+
                     <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
                 </div>
             </div>
 
             <?php $fineDiffRender = new \cogpowered\FineDiff\Render\Html; ?>
 
-            <pre><?= $fineDiffRender->process($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
+            <pre class="bg-color-body-background p-2 mb-0"><?= $fineDiffRender->process($this->revisions[$i]->baseText, $this->revisions[$i]->opcodes) ?></pre>
         </div>
     <?php endfor; ?>
 <?php else : ?>

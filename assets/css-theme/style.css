@@ -633,8 +633,20 @@ body {
   }
 }
 
-.bg-secondary-lightest {
-  background-color: white;
+.bg-color-body-background {
+  background-color: #fafafa;
+}
+
+.bg-color-gray-1 {
+  background-color: #eaeaea;
+}
+
+.bg-color-gray-2 {
+  background-color: #cecece;
+}
+
+.bg-color-gray-3 {
+  background-color: #b2b2b2;
 }
 
 .alert-heading {

@@ -69,8 +69,20 @@ body {
 
 // Background Colors
 
-.bg-secondary-lightest {
-  background-color: lighten($color-secondary, 50%);
+.bg-color-body-background {
+  background-color: $color-body-background;
+}
+
+.bg-color-gray-1 {
+  background-color: $color-gray-1;
+}
+
+.bg-color-gray-2 {
+  background-color: $color-gray-2;
+}
+
+.bg-color-gray-3 {
+  background-color: $color-gray-3;
 }
 
 .alert-heading {
