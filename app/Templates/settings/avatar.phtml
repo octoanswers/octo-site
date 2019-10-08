@@ -12,7 +12,9 @@
             <div class="input-group my-2">
                 <div class="custom-file">
                     <input type="file" name="new_avatar_file" class="custom-file-input" id="upload-avatar-file">
-                    <label class="custom-file-label" for="upload-avatar-file" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    <label class="custom-file-label" for="upload-avatar-file" aria-describedby="inputGroupFileAddon02">
+                        <?= $this->translator->get('settings', 'choose_file') ?>&hellip;
+                    </label>
                 </div>
             </div>
             <label class="semi-small text-muted" for="form__update_name__name">

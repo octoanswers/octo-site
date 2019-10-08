@@ -385,6 +385,7 @@
         "how_to_edit": "2"
     },
     "settings": {
+        "choose_file": "Choose file",
         "avatar__btn_upload": "Upload avatar",
         "avatar__note": "It is advisable to use your real photo as an avatar - this causes more confidence among users.",
         "avatar__title": "Avatar",
