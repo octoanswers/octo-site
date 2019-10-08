@@ -1,22 +1,31 @@
+<!-- categories -->
 <?php if (count($this->categories)) : ?>
-    <!-- categories_table -->
     <?php foreach ($this->categories as $category) : ?>
-        <div class="my-4">
-            <a class="h3 text-dark text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
-                <?= $category->title ?>
-            </a>
-            <div class="small mt-1 text-secondary">
+        <div class="border rounded bg-white p-3 my-4">
 
-                <a rel="nofollow" href="#">
-                    Подписаться
+            <div class="media position-relative">
+                <a class="wh-40px mt-1 mr-3 rounded" href="<?= $category->get_URL($this->lang) ?>">
+                    <img src="<?= $category->get_avatar_URL_small() ?>" class="wh-40px rounded" alt="<?= $category->title ?>">
                 </a>
-                <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-                X вопрос
-                <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-                X подписчика
+                <div class="media-body">
+                    <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
+                        <?= $category->title ?>
+                    </a>
+                    <div class="small text-black-50 mb-0">
+                        X вопрос
+                        <span class="mx-1 font-weight-bold">&middot;</span>
+                        X подписчика
+                    </div>
+                    <div class="small text-black-50 mt-1">
+                        <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="#">
+                            Подписаться
+                        </a>
 
+                    </div>
+                </div>
             </div>
+
         </div>
     <?php endforeach; ?>
-    <!-- / categories_table -->
 <?php endif; ?>
+<!-- / categories -->

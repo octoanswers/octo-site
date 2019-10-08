@@ -4,6 +4,7 @@ namespace Model;
 
 class Category extends Model
 {
+    use \Traits\Model\Category\Avatar;
     use \Traits\Model\Category\Init;
     use \Traits\Model\Category\URL;
 
