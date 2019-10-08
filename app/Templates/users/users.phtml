@@ -1,48 +1,31 @@
-<?php if (count($this->users)) : ?>
-
-	<?php foreach ($this->users as $user) : ?>
-		<div class="media mb-4">
-			<a class="d-block wh-3 mr-3" href="<?= $user->get_URL($this->lang) ?>">
-				<img class="wh-3 mr-3 rounded" src="<?= $user->get_avatar_URL_small() ?>">
-			</a>
-			<div class="media-body">
-				<a class="h5 text-dark text-decoration-none" href="<?= $user->get_URL($this->lang) ?>">
-					<?= $user->name ?>
-				</a>
-
-				<div class="semi-small text-secondary">
-					<?php if ($user->signature) : ?>
-						<?= $user->signature ?>
-					<?php else : ?>
-						@<?= $user->username ?>
-					<?php endif; ?>
-
-					<?php if ($user->site) : ?>
-						<span class="font-weight-bold mx-1 text-dark">&middot;</span>
-						<a href="<?= $user->site ?>">
-							<?= parse_url($user->site, PHP_URL_HOST) ?>
-						</a>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-	<?php endforeach; ?>
-
-<?php endif; ?>
-
 <!-- categories -->
-<?php if (count($this->categories)) : ?>
-	<?php foreach ($this->categories as $category) : ?>
+<?php if (count($this->users)) : ?>
+	<?php foreach ($this->users as $user) : ?>
 		<div class="border rounded bg-white p-3 my-4">
 
 			<div class="media position-relative">
-				<a class="wh-48px mt-1 mr-3 rounded" href="<?= $category->get_URL($this->lang) ?>">
-					<img src="<?= $category->get_avatar_URL_small() ?>" class="wh-48px rounded" alt="<?= $category->title ?>">
+				<a class="wh-48px mt-1 mr-3 rounded" href="<?= $user->get_URL($this->lang) ?>">
+					<img src="<?= $user->get_avatar_URL_small() ?>" class="wh-48px rounded" alt="<?= $user->name ?>">
 				</a>
 				<div class="media-body">
-					<a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
-						<?= $category->title ?>
+					<a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $user->get_URL($this->lang) ?>">
+						<?= $user->name ?>
 					</a>
+
+					<div class="semi-small text-black-50 mt-1">
+						<?php if ($user->signature) : ?>
+							<?= $user->signature ?>
+						<?php else : ?>
+							@<?= $user->username ?>
+						<?php endif; ?>
+
+						<?php if ($user->site) : ?>
+							<span class="font-weight-bold mx-1 text-dark">&middot;</span>
+							<a href="<?= $user->site ?>">
+								<?= parse_url($user->site, PHP_URL_HOST) ?>
+							</a>
+						<?php endif; ?>
+					</div>
 
 					<div class="small text-black-50 mt-2">
 						<a class="btn btn-sm btn-outline-gray mr-2" rel="nofollow" href="#">
