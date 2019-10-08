@@ -4,6 +4,7 @@ Disallow: /*/answer/*/edit
 Disallow: /*/answer/*/history
 Disallow: /*/question/*/rename
 Disallow: /*/question/*/categories
+Disallow: /*/question/*/discussion
 Disallow: /*/sandbox/*
 Disallow: /*/settings/*
 Disallow: /*/search*
