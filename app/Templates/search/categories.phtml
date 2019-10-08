@@ -1,17 +1,29 @@
-<?php if ($this->list == 'categories'&& count($this->categories)): ?>
-    <?php foreach ($this->categories as $category): ?>
-        <div class="mt-5">
-            <div class="" style="display: inline-block; max-width: 78%; flex: 1;">
-                <a class="link-inverted text-decoration-none lead" href="<?= $category->get_URL($this->lang) ?>"><?= $category->title ?></a>
-                <div>
-                    <span class="text-muted">
-                        X вопросов
-                    </span>
+<!-- categories -->
+<?php if ($this->list == 'categories' && count($this->categories)) : ?>
+    <?php foreach ($this->categories as $category) : ?>
+        <div class="border rounded bg-white p-3 my-4">
+
+            <div class="media position-relative">
+                <a class="wh-48px mt-1 mr-3 rounded" href="<?= $category->get_URL($this->lang) ?>">
+                    <img src="<?= $category->get_avatar_URL_small() ?>" class="wh-48px rounded" alt="<?= $category->title ?>">
+                </a>
+                <div class="media-body">
+                    <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
+                        <?= $category->title ?>
+                    </a>
+
+                    <div class="small text-black-50 mt-2">
+                        <a class="btn btn-sm btn-outline-gray mr-2" rel="nofollow" href="#">
+                            Follow
+                        </a>
+                        <!-- X вопросов
+                        <span class="mx-1 font-weight-bold">&middot;</span>
+                        X подписчиков -->
+                    </div>
                 </div>
             </div>
-            <span class="text-muted float-right">
-                    22 декабря 2016 <!-- $category->answer->getHumanizedUpdatedAt() -->
-            </span>
+
         </div>
     <?php endforeach; ?>
 <?php endif; ?>
+<!-- / categories -->
