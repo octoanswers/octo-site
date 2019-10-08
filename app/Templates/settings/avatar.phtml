@@ -5,7 +5,7 @@
         <?= $this->translator->get('settings', 'avatar__title') ?>
     </div>
 
-    <img class="rounded wh-80px mb-3" id="settings_pg__user_avatar" src="<?= $this->authUser->get_avatar_URL_medium() ?>" />
+    <img class="border rounded wh-80px mb-3" id="settings_pg__user_avatar" src="<?= $this->authUser->get_avatar_URL_medium() ?>" />
 
     <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data">
         <div class="form-group mb-2">
@@ -17,6 +17,7 @@
 
 
         <!-- <div class="input-group my-3">
+
             <div class="custom-file">
                 <input type="file" name="new_avatar_file" class="custom-file-input" id="upload-avatar-file">
                 <label class="custom-file-label" for="upload-avatar-file" aria-describedby="inputGroupFileAddon02">Choose file</label>

@@ -5,9 +5,6 @@ namespace APIController\POST;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-// @TODO So bad, but... https://www.verot.net/php_class_upload_forum.htm?php_class_upload_forum_id=4739&php_class_upload_forum_thread_id=4739&lang=en-GB
-require_once ROOT_PATH . '/vendor/verot/class.upload.php/src/class.upload.php';
-
 class Avatar extends \APIController\APIController
 {
     const JPEG_QUALITY = 90;
@@ -26,11 +23,22 @@ class Avatar extends \APIController\APIController
             $API_key = $request->getParam('api_key');
             $user = (new \Query\User())->user_with_API_key($API_key);
 
-            $this->handle = new upload($_FILES['new_avatar_file']);
+            $this->handle = new \Verot\Upload\Upload($_FILES['new_avatar_file']);
             if ($this->handle->uploaded) {
                 $medium_avatar_file = $this->_make_user_avatar_with_size($user->id, 400);
                 $small_avatar_file = $this->_make_user_avatar_with_size($user->id, 200);
                 $extra_small_avatar_file = $this->_make_user_avatar_with_size($user->id, 100);
+
+                // Save flag is_avatar_uploaded
+                $user->is_avatar_uploaded = true;
+
+                $user_mapper = new \Mapper\User();
+                $user = $user_mapper->update($user);
+                $user_mapper = null;
+
+                // Update avatar URL in cookies
+                $cookie_storage = new \Helper\CookieStorage();
+                $cookie_storage->save_user($user);
 
                 // delete the original uploaded file
                 $this->handle->clean();
@@ -43,6 +51,9 @@ class Avatar extends \APIController\APIController
                 'avatar_url_medium'      => $user->get_avatar_URL_large(),
                 'avatar_url_small'       => $user->get_avatar_URL_medium(),
                 'avatar_url_extra_small' => $user->get_avatar_URL_small(),
+                'avatar_file_medium'      => $medium_avatar_file,
+                'avatar_file_small'       => $small_avatar_file,
+                'avatar_file_extra_small' => $extra_small_avatar_file,
             ];
         } catch (\Throwable $e) {
             $output = [

@@ -69,9 +69,11 @@ class User extends \Mapper\Mapper
             throw new \Exception($error[2], $error[1]);
         }
 
-        if ($stmt->rowCount() == 0) {
-            throw new \Exception('User with ID ' . $user->id . ' not updated', 0);
-        }
+        // @NOTE Если повторно загружаем аватар -- ничего не меняется и выпадаем в Exception.
+        // Либо совсем убираем эту проверку, либо вводим поле updated_at.
+        // if ($stmt->rowCount() == 0) {
+        //     throw new \Exception('User with ID ' . $user->id . ' not updated', 0);
+        // }
 
         return $user;
     }
