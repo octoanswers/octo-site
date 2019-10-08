@@ -22,15 +22,11 @@
 
                 <?php if (count($this->questions)) : ?>
                     <?php foreach ($this->questions as $question) : ?>
-                        <?php
-                                if (isset($this->redirects[$question->id])) {
-                                    require __DIR__ . '/item__redirect.phtml';
-                                    continue;
-                                } else {
-                                    require __DIR__ . '/item__question_without_answer.phtml';
-                                    continue;
-                                }
-                                ?>
+                        <?php if (isset($this->redirects[$question->id])) : ?>
+                            <?php require __DIR__ . '/item__redirect.phtml'; ?>
+                        <?php else : ?>
+                            <?php require __DIR__ . '/item__question_without_answer.phtml'; ?>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
 
