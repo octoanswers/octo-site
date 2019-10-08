@@ -47,10 +47,10 @@ class Avatar extends \APIController\APIController
             }
 
             $output = [
-                'user_id'                => true,
-                'avatar_url_medium'      => $user->get_avatar_URL_large(),
-                'avatar_url_small'       => $user->get_avatar_URL_medium(),
-                'avatar_url_extra_small' => $user->get_avatar_URL_small(),
+                'user_id'                 => true,
+                'avatar_url_medium'       => $user->get_avatar_URL_large(),
+                'avatar_url_small'        => $user->get_avatar_URL_medium(),
+                'avatar_url_extra_small'  => $user->get_avatar_URL_small(),
                 'avatar_file_medium'      => $medium_avatar_file,
                 'avatar_file_small'       => $small_avatar_file,
                 'avatar_file_extra_small' => $extra_small_avatar_file,
