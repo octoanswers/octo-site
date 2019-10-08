@@ -4,23 +4,21 @@
         <div class="border rounded bg-white p-3 my-4">
 
             <div class="media position-relative">
-                <a class="wh-40px mt-1 mr-3 rounded" href="<?= $category->get_URL($this->lang) ?>">
-                    <img src="<?= $category->get_avatar_URL_small() ?>" class="wh-40px rounded" alt="<?= $category->title ?>">
+                <a class="wh-48px mt-1 mr-3 rounded" href="<?= $category->get_URL($this->lang) ?>">
+                    <img src="<?= $category->get_avatar_URL_small() ?>" class="wh-48px rounded" alt="<?= $category->title ?>">
                 </a>
                 <div class="media-body">
                     <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
                         <?= $category->title ?>
                     </a>
-                    <div class="small text-black-50 mb-0">
-                        X вопрос
-                        <span class="mx-1 font-weight-bold">&middot;</span>
-                        X подписчика
-                    </div>
-                    <div class="small text-black-50 mt-1">
-                        <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="#">
+
+                    <div class="small text-black-50 mt-2">
+                        <a class="btn btn-sm btn-outline-gray mr-2" rel="nofollow" href="#">
                             Подписаться
                         </a>
-
+                        X вопросов
+                        <span class="mx-1 font-weight-bold">&middot;</span>
+                        X подписчиков
                     </div>
                 </div>
             </div>

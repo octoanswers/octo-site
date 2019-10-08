@@ -1,9 +1,8 @@
-
-<?php if (isset($this->nextPageURL)): ?>
+<?php if (isset($this->nextPageURL)) : ?>
     <!-- more_categories -->
     <div class="my-4">
-        <a class="btn btn-primary mx-auto" href="<?= $this->nextPageURL ?>">
-            <?= $this->translator->get('categories', 'more_categories') ?> 
+        <a class="btn btn-primary btn-block" href="<?= $this->nextPageURL ?>">
+            <?= $this->translator->get('categories', 'more_categories') ?>
         </a>
     </div>
     <!-- / more_categories -->
