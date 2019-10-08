@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+
+<head>
+    <?php require TEMPLATE_PATH . '/_common/head.phtml'; ?>
+</head>
+
+<body>
+
+    <?php require TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
+
+    <div class="container mt-4">
+        <div class="row">
+
+            <div class="d-none d-lg-block col-12 col-lg-2">
+                <?php require TEMPLATE_PATH . '/_common/left/sections.phtml'; ?>
+            </div>
+
+            <!-- main_column -->
+            <div class="col-12 col-lg-7">
+                <?php require __DIR__ . '/header.phtml'; ?>
+
+                <?php require __DIR__ . '/avatar.phtml'; ?>
+                <?php require __DIR__ . '/real_name.phtml'; ?>
+                <?php require __DIR__ . '/signature.phtml'; ?>
+                <?php require __DIR__ . '/site.phtml'; ?>
+            </div>
+            <!-- / main_column -->
+
+            <div class="d-none d-md-block col-lg-3">
+                <!-- x -->
+            </div>
+
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH . '/_common/modals.phtml'; ?>
+    <?php require TEMPLATE_PATH . '/_common/js.phtml'; ?>
+
+</body>
+
+</html>
