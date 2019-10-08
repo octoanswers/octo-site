@@ -29,11 +29,9 @@
 
 					<div class="small text-black-50 mt-2">
 						<a class="btn btn-sm btn-outline-gray mr-2" rel="nofollow" href="#">
-							Подписаться
+							Follow
 						</a>
-						X вопросов
-						<span class="mx-1 font-weight-bold">&middot;</span>
-						X подписчиков
+						<?= \Humanizer\DateTime::humanize_timestamp($this->lang, $user->createdAt) ?>
 					</div>
 				</div>
 			</div>

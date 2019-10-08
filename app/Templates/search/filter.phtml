@@ -15,7 +15,7 @@
             </a>
         </li>
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= $this->list == 'users' ? 'text-secondary' : '' ?>" href="\Helper\URL\Search::get_search_users_URL($this->lang, $this->query)">
+            <a class="text-dark text-decoration-none <?= $this->list == 'users' ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Search::get_search_users_URL($this->lang, $this->query) ?>">
                 <?= $this->translator->get('search', 'filters', 'users'); ?>
             </a>
         </li>
