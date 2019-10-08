@@ -50,6 +50,9 @@ class User extends \Mapper\Mapper
     {
         \Validator\User::validate_exists($user);
 
+        // Throw exception, if user not exists
+        (new \Query\User())->user_with_ID($user->id);
+
         $sql = 'UPDATE users SET u_username=:u_username, u_name=:u_name, u_email=:u_email, u_signature=:u_signature, u_site=:u_site, u_password_hash=:u_password_hash, u_api_key=:u_api_key, is_avatar_uploaded=:is_avatar_uploaded WHERE u_id=:u_id';
         $stmt = $this->pdo->prepare($sql);
 

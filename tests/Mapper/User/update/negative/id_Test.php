@@ -4,7 +4,7 @@ class Mapper_User__update__id__Test extends Abstract_DB_TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function test_UpdateUserWithNotExistsID_ThrowException()
+    public function test_Update_user_with_not_exists_ID()
     {
         $user = new \Model\User();
         $user->id = 1352;
@@ -15,7 +15,7 @@ class Mapper_User__update__id__Test extends Abstract_DB_TestCase
         $user->passwordHash = '$2a$10$3f6bd68f206c46e04c8ecOVlP228zJXYjSbuVRiEMhoIWxjWkzcvy';
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
-        $this->expectExceptionMessage('User with ID 1352 not updated');
+        $this->expectExceptionMessage('User not found');
         $user = (new \Mapper\User())->update($user);
     }
 
