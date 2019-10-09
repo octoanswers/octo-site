@@ -1,24 +1,34 @@
-<!-- activity f_u_rename_q -->
-<div class="d-flex border-bottom py-3">
-    <div class="mr-3 d-none d-sm-block">
-        <a class="d-block wh-2 mt-1" href="<?= $data['user']['profile_url'] ?>">
-            <img class="wh-2 rounded" src="<?= $data['user']['avatar_xs_url'] ?>">
+<!-- f_u_rename_q -->
+<div class="border align-middle rounded bg-white p-3 my-4">
+    <div class="media position-relative">
+        <a class="wh-40px mt-1 mr-3 rounded" href="<?= $data['user']['profile_url'] ?>">
+            <img src="<?= $data['user']['avatar_xs_url'] ?>" class="wh-40px rounded" alt="<?= $contributor->name ?>">
         </a>
-    </div>
-    <div class="width-full">
-        <div class="text-muted">
-            <a class="text-dark font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
-            <?= $this->translator->get('activity', 'renamed_question') ?>
-            <span class="text-dark font-weight-bold"><?= $data['question']['title_old'] ?></span>
-        </div>
-        <div class="my-1">
-            <a class="h3 text-dark text-decoration-none" href="<?= $data['question']['url'] ?>">
-                <?= $data['question']['title_new'] ?>
-            </a>
-        </div>
-        <div class="small text-secondary">
-            <?= $activity['created_at__humanized'] ?>
+        <div class="media-body">
+            <div class="mb-1">
+                <a class="font-weight-bold text-dark text-decoration-none" href="<?= $data['user']['profile_url'] ?>">
+                    <?= $data['user']['name'] ?>
+                </a>
+                <span class="semi-small text-black-50">&middot;</span>
+                <span class="semi-small text-black-50">
+                    <?= $this->translator->get('activity', 'renamed_question') ?>
+                </span>
+            </div>
+            <div class="my-1">
+                <div class="small text-black-50">
+                    <?= $data['question']['title_old'] ?>
+                    <i class="material-icons md-18">
+                        arrow_right_alt
+                    </i>
+                </div>
+                <a class="font-size-140 line-height-13 text-dark font-weight-bold text-decoration-none" href="<?= $data['question']['url'] ?>">
+                    <?= $data['question']['title_new'] ?>
+                </a>
+            </div>
+            <div class="small text-black-50">
+                <?= $activity['created_at__humanized'] ?>
+            </div>
         </div>
     </div>
 </div>
-<!-- / activity f_u_rename_q -->
+<!-- / f_u_rename_q -->
