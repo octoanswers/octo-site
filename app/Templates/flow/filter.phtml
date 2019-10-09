@@ -1,39 +1,4 @@
 <!-- flow_filter -->
-<nav class="mb-4">
-    <ul class="list-unstyled">
-        <!-- <li>
-            <a href="#">
-                <?= $this->translator->get('flow', 'new_categories') ?>
-                Все события
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <?= $this->translator->get('flow', 'new_categories') ?>Новые вопросы
-            </a>
-        </li> -->
-        <li>
-            <a href="#">
-                <?= $this->translator->get('flow', 'new_categories') ?>
-            </a>
-        </li>
-        <!-- <li>
-            <a href="#">
-                <?= $this->translator->get('flow', 'new_categories') ?>
-                Правки ответов
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <?= $this->translator->get('flow', 'new_categories') ?>
-                Добавление в друзья
-            </a>
-        </li> -->
-    </ul>
-</nav>
-<!-- / flow_filter -->
-
-<!-- filter -->
 <nav class="mt-2 mb-4">
     <div class="semi-small font-weight-bold text-uppercase text-primary mb-3">
         <?= $this->translator->get('questions', 'filters', 'title') ?>
@@ -41,20 +6,30 @@
 
     <ul class="list-unstyled semi-small">
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= ($this->list == 'without-answers') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>">
-                <?= $this->translator->get('sandbox', 'questions_without_answers') ?>
+            <a class="text-dark font-weight-bold text-decoration-none" href="#">
+                <?= $this->translator->get('flow', 'all_activities') ?>
             </a>
         </li>
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= ($this->list == 'without_categories') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_without_categories_URL($this->lang) ?>">
-                <?= $this->translator->get('sandbox', 'without_categories') ?>
+            <a class="text-dark text-decoration-none" href="#">
+                <?= $this->translator->get('flow', 'new_questions') ?>
             </a>
         </li>
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= ($this->list == 'newest') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_all_URL($this->lang) ?>">
-                <?= $this->translator->get('sandbox', 'all_questions') ?>
+            <a class="text-dark text-decoration-none" href="#">
+                <?= $this->translator->get('flow', 'editing_answers') ?>
+            </a>
+        </li>
+        <li class="my-2">
+            <a class="text-dark text-decoration-none" href="#">
+                <?= $this->translator->get('flow', 'add_to_friends') ?>
+            </a>
+        </li>
+        <li class="my-2">
+            <a class="text-dark text-decoration-none" href="#">
+                <?= $this->translator->get('flow', 'new_categories') ?>
             </a>
         </li>
     </ul>
 </nav>
-<!-- / filter -->
+<!-- / flow_filter -->

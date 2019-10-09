@@ -2,14 +2,14 @@
     "activity": {
         "category_added_question": "question added to category",
         "change_answer": "updated answer",
-        "user_rename_category": "user rename category",
         "change_signature": "changed the signature",
         "follow_category": "subscribed to a category",
         "follow_question": "subscribed to a question",
         "follow_user": "subscribed to user",
         "question_renamed": "the question is renamed",
         "question_updated_answer": "updated answer",
-        "renamed_question": "renamed the question"
+        "renamed_question": "renamed the question",
+        "user_rename_category": "user rename category"
     },
     "answer_edit": {
         "description_of_changes": "Description of changes",
@@ -127,7 +127,11 @@
         }
     },
     "flow": {
+        "add_to_friends": "Add to friends",
+        "all_activities": "Все события",
+        "editing_answers": "Editing answers",
         "new_categories": "New categories",
+        "new_questions": "Новые вопросы",
         "note": "Questions and answers flow on Answeropedia.",
         "page_title": "Flow"
     },
@@ -382,10 +386,10 @@
         "how_to_edit": "2"
     },
     "settings": {
-        "choose_file": "Choose file",
         "avatar__btn_upload": "Upload avatar",
         "avatar__note": "It is advisable to use your real photo as an avatar - this causes more confidence among users.",
         "avatar__title": "Avatar",
+        "choose_file": "Choose file",
         "real_name_note": "The real name causes more trust than @username. It will be shown next to your edits and in the Top authors.",
         "real_name_title": "Real name",
         "save": "Save",
@@ -397,6 +401,11 @@
         "title": "Settings"
     },
     "user": {
+        "actions": {
+            "ask": "Ask question",
+            "follow_lure": "Register or sign in and you can subscribe to this user.",
+            "report": "Report"
+        },
         "alert__name": {
             "action": "Set real name",
             "msg": "Enter your real name. It is more trustworthy and will appear next to your edits."
@@ -404,11 +413,6 @@
         "alert__signature": {
             "action": "Set signature",
             "msg": "Enter a signature describing your professional skills and knowledge."
-        },
-        "actions": {
-            "ask": "Ask question",
-            "follow_lure": "Register or sign in and you can subscribe to this user.",
-            "report": "Report"
         },
         "answers_on_answeropedia": "Wiki-answers on Answeropedia",
         "knows_about": "Knows about",
