@@ -89,16 +89,6 @@
         "page_title": "Feed",
         "answer_a_question": "Answer a question",
         "ask_your_first_question": "Ask your first question",
-        "find_your_first_friends": {
-            "action": "View users",
-            "msg": "Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.",
-            "title": "Find your first friends"
-        },
-        "follow_some_questions": {
-            "action": "Views a questions",
-            "msg": "By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.",
-            "title": "Follow some questions"
-        },
         "improve_your_feed": {
             "follow_3_more_categories": "Follow 3 more categories",
             "follow_your_first_question": "Follow your first question",
@@ -112,11 +102,6 @@
             "action": "View popular categories",
             "msg": "Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.",
             "title": "Subscribe to several categories"
-        },
-        "write_the_first_answer": {
-            "action": "View questions in the sandbox",
-            "msg": "Look at the questions that no one else has written an answer and become the first author.",
-            "title": "Write the first answer"
         }
     },
     "flow": {
