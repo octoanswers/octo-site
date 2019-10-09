@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Flow\Show;
 
-class en__Test extends \Abstract_Frontend_TestCase
+class en_Test extends \Abstract_Frontend_TestCase
 {
     protected $setUpDB = ['en' => ['activities']];
 
