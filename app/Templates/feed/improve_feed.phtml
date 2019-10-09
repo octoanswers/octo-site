@@ -6,32 +6,84 @@
     </div>
 
     <ul class="list-unstyled semi-small">
-        <li class="my-2">
+
+        <li class="my-3">
             <i class="material-icons md-18 mr-1 text-success">check</i>
             <span class="text-black-50">
                 <?= $this->translator->get('feed', 'improve_your_feed', 'visit_your_feed') ?>
             </span>
         </li>
-        <li class="my-2">
-            <a class="text-dark text-decoration-none" href="#">
-                <?= $this->translator->get('flow', 'new_questions') ?>
-            </a>
+
+        <li class="my-3">
+            <?php if ($this->authUser->username == $this->authUser->name) : ?>
+                <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Settings::get_real_name_URL($this->lang) ?>">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'set_real_name') ?>
+                </a>
+            <?php else : ?>
+                <i class="material-icons md-18 mr-1 text-success">check</i>
+                <span class="text-black-50">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'set_real_name') ?>
+                </span>
+            <?php endif; ?>
         </li>
-        <li class="my-2">
-            <a class="text-dark text-decoration-none" href="#">
-                <?= $this->translator->get('flow', 'editing_answers') ?>
-            </a>
+
+        <li class="my-3">
+            <?php if (strlen($this->authUser->signature) == 0) : ?>
+                <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Settings::get_signature_URL($this->lang) ?>">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'set_signature') ?>
+                </a>
+            <?php else : ?>
+                <i class="material-icons md-18 mr-1 text-success">check</i>
+                <span class="text-black-50">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'set_signature') ?>
+                </span>
+            <?php endif; ?>
         </li>
-        <li class="my-2">
-            <a class="text-dark text-decoration-none" href="#">
-                <?= $this->translator->get('flow', 'add_to_friends') ?>
-            </a>
+
+        <li class="my-3">
+            <?php if ($this->isShowCategoriesFollowLure) : ?>
+                <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'follow_3_more_categories') ?>
+                </a>
+            <?php else : ?>
+                <i class="material-icons md-18 mr-1 text-success">check</i>
+                <span class="text-black-50">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'follow_3_more_categories') ?>
+                </span>
+            <?php endif; ?>
         </li>
-        <li class="my-2">
-            <a class="text-dark text-decoration-none" href="#">
-                <?= $this->translator->get('flow', 'new_categories') ?>
-            </a>
+
+        <li class="my-3">
+            <?php if ($this->isShowQuestionsFollowLure) : ?>
+                <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'follow_your_first_question') ?>
+                </a>
+            <?php else : ?>
+                <i class="material-icons md-18 mr-1 text-success">check</i>
+                <span class="text-black-50">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'follow_your_first_question') ?>
+                </span>
+            <?php endif; ?>
         </li>
+
+        <li class="my-3">
+            <?php if ($this->isShowUsersFollowLure) : ?>
+                <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Users::get_newest_URL($this->lang) ?>">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'find_your_friends') ?>
+                </a>
+            <?php else : ?>
+                <i class="material-icons md-18 mr-1 text-success">check</i>
+                <span class="text-black-50">
+                    <?= $this->translator->get('feed', 'improve_your_feed', 'find_your_friends') ?>
+                </span>
+            <?php endif; ?>
+        </li>
+
     </ul>
 </nav>
 <!-- / flow_filter -->
@@ -44,97 +96,23 @@
 
 
         <div class="my-3">
-            <?php if ($this->authUser->username == $this->authUser->name) : ?>
-                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Settings::get_real_name_URL($this->lang) ?>">
-                    <?= $this->translator->get('feed', 'improve_your_feed', 'set_real_name') ?>
-                </a>
-            <?php else : ?>
-                <i class="material-icons md-18 w-28px color-success">check</i>
-                <span class="text-secondary">
-                    <s>
-                        <?= $this->translator->get('feed', 'improve_your_feed', 'set_real_name') ?>
-                    </s>
-                </span>
-            <?php endif; ?>
+
         </div>
 
         <div class="my-3">
-            <?php if (strlen($this->authUser->signature) == 0) : ?>
-                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Settings::get_signature_URL($this->lang) ?>">
-                    <?= $this->translator->get('feed', 'improve_your_feed', 'set_signature') ?>
-                </a>
-            <?php else : ?>
-                <i class="material-icons md-18 w-28px color-success">check</i>
-                <span class="text-secondary">
-                    <s>
-                        <?= $this->translator->get('feed', 'improve_your_feed', 'set_signature') ?>
-                    </s>
-                </span>
-            <?php endif; ?>
+
         </div>
 
         <div class="my-3">
-            <?php if ($this->isShowCategoriesFollowLure) : ?>
-                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>">
-                    <?= $this->translator->get('feed', 'improve_your_feed', 'follow_3_more_categories') ?>
-                </a>
-            <?php else : ?>
-                <i class="material-icons md-18 w-28px color-success">check</i>
-                <span class="text-secondary">
-                    <s>
-                        <?= $this->translator->get('feed', 'improve_your_feed', 'follow_3_more_categories') ?>
-                    </s>
-                </span>
-            <?php endif; ?>
+
         </div>
 
         <div class="my-3">
-            <?php if ($this->isShowQuestionsFollowLure) : ?>
-                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
-                    <?= $this->translator->get('feed', 'improve_your_feed', 'follow_your_first_question') ?>
-                </a>
-            <?php else : ?>
-                <i class="material-icons md-18 w-28px color-success">check</i>
-                <span class="text-secondary">
-                    <s>
-                        <?= $this->translator->get('feed', 'improve_your_feed', 'follow_your_first_question') ?>
-                    </s>
-                </span>
-            <?php endif; ?>
+
         </div>
 
-        <div class="my-3">
-            <?php if ($this->isShowUsersFollowLure) : ?>
-                <a class="text-dark text-decoration-none" href="<?= \Helper\URL\Users::get_newest_URL($this->lang) ?>">
-                    <?= $this->translator->get('feed', 'improve_your_feed', 'find_your_friends') ?>
-                </a>
-            <?php else : ?>
-                <i class="material-icons md-18 w-28px color-success">check</i>
-                <span class="text-secondary">
-                    <s>
-                        <?= $this->translator->get('feed', 'improve_your_feed', 'find_your_friends') ?>
-                    </s>
-                </span>
-            <?php endif; ?>
-        </div>
-
-        <!-- <div class="my-3">
-            <i class="material-icons md-18 w-28px color-success">check</i>
-            <span class="text-secondary">
-                <s>
-                    <?= $this->translator->get('feed', 'ask_your_first_question') ?>
-                </s>
-            </span>
-        </div>
-
-        <div class="my-3">
-            <i class="material-icons md-18 w-28px color-success">check</i>
-            <span class="text-secondary">
-                <s>
-                    <?= $this->translator->get('feed', 'answer_a_question') ?>
-                </s>
-            </span>
-        </div> -->
+        <!-- <?= $this->translator->get('feed', 'ask_your_first_question') ?> -->
+        <!-- <?= $this->translator->get('feed', 'answer_a_question') ?> -->
 
     </div>
 </div>
