@@ -1,5 +1,20 @@
 <?php
 
+// @TODO Вынести require_once и инициализацию illuminate_translation
+
+require_once __DIR__ . '/functions.php';
+
+// Get lang code from URL
+$GLOBALS['lang_code'] = \Helper\Lang::get_lang_code_from_URI();
+
+// Prepare the FileLoader
+$file_system = new \Illuminate\Filesystem\Filesystem();
+$loader = new \Illuminate\Translation\FileLoader($file_system, ROOT_PATH . '/lang');
+
+// Register the English translator
+$GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
+
+
 class SlimApp
 {
     /**

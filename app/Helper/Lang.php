@@ -24,6 +24,22 @@ class Lang
         return 'en';
     }
 
+    public static function get_lang_code_from_URI()
+    {
+        $url = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
+
+        $url_parts = explode('/', $url);
+        $lang_code = $url_parts[1];
+
+        $supported_languages = self::get_supported_langs();
+
+        if (!in_array($lang_code, $supported_languages)) {
+            $lang_code = self::get_default_lang();
+        }
+
+        return $lang_code;
+    }
+
     public static function get()
     {
         return self::detect($_GET, $_COOKIE, $_SERVER);
