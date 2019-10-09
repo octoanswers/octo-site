@@ -18,7 +18,7 @@
 
             <!-- main_column -->
             <div class="col-12 col-lg-7">
-                <?php require __DIR__ . '/header.phtml'; ?>
+                <?php require __DIR__ . '/top_ask.phtml'; ?>
 
                 <?php if (isset($this->activities)) : ?>
                     <?php foreach ($this->activities as $activity) :
@@ -31,6 +31,7 @@
                                 case 'USER_RENAME_CATEGORY':
                                 case 'USER_FOLLOW_CATEGORY':
                                 case 'CATEGORY_ADDED_QUESTION':
+                                case 'U_UPDATE_SIGNATURE':
                                     //case 'followed_U_asked_Q':
                                     //case 'followed_U_repost_Q':
                                     //case 'followed_H_got_achievement':
