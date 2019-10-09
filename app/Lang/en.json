@@ -86,6 +86,7 @@
         }
     },
     "feed": {
+        "page_title": "Feed",
         "answer_a_question": "Answer a question",
         "ask_your_first_question": "Ask your first question",
         "find_your_first_friends": {
@@ -93,33 +94,25 @@
             "msg": "Find and subscribe to three interesting users. Questions, answers and other activities of these users will appear in your news feed.",
             "title": "Find your first friends"
         },
-        "find_your_friends": "Find your friends",
-        "follow_3_more_categories": "Follow 3 more categories",
         "follow_some_questions": {
             "action": "Views a questions",
             "msg": "By subscribing to interesting questions, you can follow their edits. Find and subscribe to three or more questions.",
             "title": "Follow some questions"
         },
-        "follow_your_first_question": "Follow your first question",
         "improve_your_feed": {
+            "follow_3_more_categories": "Follow 3 more categories",
+            "follow_your_first_question": "Follow your first question",
+            "visit_your_feed": "Visit your feed",
+            "find_your_friends": "Find your friends",
+            "set_real_name": "Set real name",
+            "set_signature": "Set signature",
             "title": "Improve your feed"
-        },
-        "set_real_name": {
-            "action": "Set real name",
-            "msg": "A real name is more credible than <strong> @username </strong>. It will be shown next to your edits and in the TOP authors.",
-            "title": "Set real name"
-        },
-        "set_signature": {
-            "action": "Set signature",
-            "msg": "The signature describes your professional skills and knowledge. It will appear next to the edits of the answers you make.",
-            "title": "Set signature"
         },
         "subscribe_to_several_categories": {
             "action": "View popular categories",
             "msg": "Select and subscribe to three topics close to you. Questions on these topics will appear in your news feed.",
             "title": "Subscribe to several categories"
         },
-        "visit_your_feed": "Visit your feed",
         "write_the_first_answer": {
             "action": "View questions in the sandbox",
             "msg": "Look at the questions that no one else has written an answer and become the first author.",

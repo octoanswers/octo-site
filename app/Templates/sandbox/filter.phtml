@@ -6,17 +6,17 @@
 
     <ul class="list-unstyled semi-small">
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= ($this->list == 'without-answers') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>">
+            <a class="text-dark text-decoration-none <?= ($this->list == 'without-answers') ? 'font-weight-bold' : '' ?>" href="<?= \Helper\URL\Sandbox::get_without_answers_URL($this->lang) ?>">
                 <?= $this->translator->get('sandbox', 'questions_without_answers') ?>
             </a>
         </li>
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= ($this->list == 'without_categories') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_without_categories_URL($this->lang) ?>">
+            <a class="text-dark text-decoration-none <?= ($this->list == 'without_categories') ? 'font-weight-bold' : '' ?>" href="<?= \Helper\URL\Sandbox::get_without_categories_URL($this->lang) ?>">
                 <?= $this->translator->get('sandbox', 'without_categories') ?>
             </a>
         </li>
         <li class="my-2">
-            <a class="text-dark text-decoration-none <?= ($this->list == 'newest') ? 'text-secondary' : '' ?>" href="<?= \Helper\URL\Sandbox::get_all_URL($this->lang) ?>">
+            <a class="text-dark text-decoration-none <?= ($this->list == 'newest') ? 'font-weight-bold' : '' ?>" href="<?= \Helper\URL\Sandbox::get_all_URL($this->lang) ?>">
                 <?= $this->translator->get('sandbox', 'all_questions') ?>
             </a>
         </li>
