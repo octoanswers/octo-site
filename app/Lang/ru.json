@@ -1,14 +1,14 @@
 {
 	"activity": {
-		"category_added_question": "вопрос добавлен в категорию",
-		"change_answer": "обновил ответ",
-		"change_signature": "поменял подпись",
-		"follow_category": "подписался на категорию",
-		"follow_question": "подписался на вопрос",
-		"follow_user": "подписался на пользователя",
-		"question_renamed": "вопрос переименован",
-		"question_updated_answer": "обновлен ответ",
-		"renamed_question": "переименовал вопрос"
+		"category_added_question": "Вопрос добавлен в категорию",
+		"change_answer": "Обновил ответ",
+		"change_signature": "Обновил подпись",
+		"follow_category": "Подписался на категорию",
+		"follow_question": "Подписался на вопрос",
+		"follow_user": "Подписался на пользователя",
+		"question_renamed": "Вопрос переименован",
+		"question_updated_answer": "Обновлен ответ",
+		"renamed_question": "Переименовал вопрос"
 	},
 	"answer_edit": {
 		"description_of_changes": "Описание изменений",

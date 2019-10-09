@@ -1,20 +1,26 @@
+<!-- U_UPDATE_SIGNATURE -->
 <div class="border align-middle rounded bg-white p-3 my-4">
-
     <div class="media position-relative">
         <a class="wh-40px mt-1 mr-3 rounded" href="<?= $data['user']['profile_url'] ?>">
             <img src="<?= $data['user']['avatar_xs_url'] ?>" class="wh-40px rounded" alt="<?= $contributor->name ?>">
         </a>
         <div class="media-body">
-            <a class="font-weight-bold text-dark text-decoration-none" href="<?= $data['user']['profile_url'] ?>">
-                <?= $data['user']['name'] ?>
-            </a>
-            <span class="semi-small text-black-50">
-                обновил подпись:
-            </span>
-
-            <p class="text-black mb-0">
+            <div class="mb-1">
+                <a class="font-weight-bold text-dark text-decoration-none" href="<?= $data['user']['profile_url'] ?>">
+                    <?= $data['user']['name'] ?>
+                </a>
+                <span class="semi-small text-black-50">&middot;</span>
+                <span class="semi-small text-black-50">
+                    <?= $this->translator->get('activity', 'change_signature') ?>
+                </span>
+            </div>
+            <p class="text-black my-1">
                 <?= $data['signature'] ?>
             </p>
+            <div class="small text-black-50">
+                <?= $activity['created_at__humanized'] ?>
+            </div>
         </div>
     </div>
 </div>
+<!-- / U_UPDATE_SIGNATURE -->
