@@ -1,24 +1,29 @@
-<!-- activity f_u_update_a -->
-<div class="d-flex border-bottom py-3">
-    <div class="mr-3 d-none d-sm-block">
-        <a class="d-block wh-2 mt-1" href="<?= $data['user']['profile_url'] ?>">
-            <img class="wh-2 rounded" src="<?= $data['user']['avatar_xs_url'] ?>">
+<!-- f_u_update_a -->
+<div class="border align-middle rounded bg-white p-3 my-4">
+    <div class="media position-relative">
+        <a class="wh-40px mt-1 mr-3 rounded" href="<?= $data['user']['profile_url'] ?>">
+            <img src="<?= $data['user']['avatar_xs_url'] ?>" class="wh-40px rounded" alt="<?= $contributor->name ?>">
         </a>
-    </div>
-    <div class="width-full">
-        <div class="text-muted mb-3">
-            <a class="text-dark font-weight-bold" href="<?= $data['user']['profile_url'] ?>"><?= $data['user']['name'] ?></a>
-            <?= $this->translator->get('activity', 'change_answer') ?>
-            <a class="text-dark font-weight-bold" href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
+        <div class="media-body">
+            <div class="mb-1">
+                <a class="font-weight-bold text-dark text-decoration-none" href="<?= $data['user']['profile_url'] ?>">
+                    <?= $data['user']['name'] ?>
+                </a>
+                <span class="semi-small text-black-50">&middot;</span>
+                <span class="semi-small text-black-50">
+                    <?= $this->translator->get('activity', 'change_answer') ?>
+                </span>
+            </div>
+            <div class="small text-black-50">
+                <?= $activity['created_at__humanized'] ?>
+            </div>
         </div>
-        <pre><?= $data['revision']['diff_text'] ?></pre>
-        <div class="small text-secondary">
-            <?php if (strlen($data['revision']['comment'])) : ?>
-                <?= $data['revision']['comment'] ?>
-                <span class="mx-1 text-muted font-weight-bold">&middot;</span>
-            <?php endif; ?>
-            <?= $activity['created_at__humanized'] ?>
-        </div>
     </div>
+    <pre class="mt-3 mb-0 bg-color-body-background p-2"><?= $data['revision']['diff_text'] ?></pre>
+    <?php if (strlen($data['revision']['comment'])) : ?>
+        <div class="small text-black-50 mt-3">
+            <?= $data['revision']['comment'] ?>
+        </div>
+    <?php endif; ?>
 </div>
-<!-- / activity f_u_update_a -->
+<!-- / f_u_update_a -->
