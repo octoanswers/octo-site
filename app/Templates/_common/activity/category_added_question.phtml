@@ -1,28 +1,37 @@
-<!-- activity CATEGORY_ADDED_QUESTION -->
-<div class="d-flex border-bottom py-3">
-    <div class="mr-3 d-none d-sm-block">
-        <a class="d-block wh-2 mt-1" href="#">
-            <img class="wh-2 rounded" src="https://answeropedia.org/uploads/avatar/0_100.jpg">
-        </a>
-    </div>
-    <div class="width-full">
-        <div class="text-muted">
-            <?= $this->translator->get('activity', 'category_added_question') ?>:
+<!-- CATEGORY_ADDED_QUESTION -->
+<div class="border align-middle rounded bg-white p-3 my-4">
+    <div class="media position-relative">
+        <i class="material-icons text-secondary wh-40px mt-1 mr-3" style="font-size: 40px;">
+            bubble_chart
+        </i>
+        <div class="media-body">
+            <div class="mb-1">
+                <?php if (isset($data['category'])) : ?>
+                    <a class="font-weight-bold text-dark text-decoration-none" href="<?= $data['category']['url'] ?>">
+                        <?= $data['category']['title'] ?>
+                    </a>
+                <?php elseif (isset($data['topic'])) : ?>
+                    <a class="font-weight-bold text-dark text-decoration-none" href="<?= $data['topic']['url'] ?>">
+                        <?= $data['topic']['title'] ?>
+                    </a>
+                <?php endif; ?>
 
-            <?php if (isset($data['category'])) : ?>
-                <a class="text-dark font-weight-bold" href="<?= $data['category']['url'] ?>"><?= $data['category']['title'] ?></a>
-            <?php elseif (isset($data['topic'])) : ?>
-                <a class="text-dark font-weight-bold" href="<?= $data['topic']['url'] ?>"><?= $data['topic']['title'] ?></a>
-            <?php endif; ?>
-        </div>
-        <div class="my-1">
-            <a class="h3 text-dark text-decoration-none" href="<?= $data['question']['url'] ?>">
-                <?= $data['question']['title'] ?>
-            </a>
-        </div>
-        <div class="small text-secondary">
-            <?= $activity['created_at__humanized'] ?>
+
+                <span class="semi-small text-black-50">&middot;</span>
+                <span class="semi-small text-black-50">
+                    <?= $this->translator->get('activity', 'category_added_question') ?>
+                </span>
+            </div>
+            <div class="my-1">
+
+                <a class="font-size-140 line-height-13 text-dark font-weight-bold text-decoration-none" href="<?= $data['question']['url'] ?>">
+                    <?= $data['question']['title'] ?>
+                </a>
+            </div>
+            <div class="small text-black-50">
+                <?= $activity['created_at__humanized'] ?>
+            </div>
         </div>
     </div>
 </div>
-<!-- / activity CATEGORY_ADDED_QUESTION -->
+<!-- / CATEGORY_ADDED_QUESTION -->
