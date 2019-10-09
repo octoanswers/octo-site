@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="<?= $this->lang ?>">
+
+<head>
+    <?php require TEMPLATE_PATH . '/_common/head.phtml'; ?>
+</head>
+
+<body>
+
+    <?php require TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
+
+    <div class="container mt-4">
+        <div class="row">
+
+            <div class="d-none d-lg-block col-12 col-lg-2">
+                <?php require TEMPLATE_PATH . '/_common/left/sections.phtml'; ?>
+            </div>
+
+            <!-- main_column -->
+            <div class="col-12 col-lg-7">
+                <?php require __DIR__ . '/header.phtml'; ?>
+
+                <?php if (isset($this->activities)) : ?>
+                    <?php foreach ($this->activities as $activity) :
+                            switch ($activity['activity_type']) {
+                                case 'F_U_UPDATE_A':
+                                case 'F_U_FOLLOW_Q':
+                                case 'F_U_FOLLOW_U':
+                                case 'Q_RENAMED_BY_U':
+                                case 'U_RENAME_Q':
+                                case 'USER_RENAME_CATEGORY':
+                                case 'USER_FOLLOW_CATEGORY':
+                                case 'CATEGORY_ADDED_QUESTION':
+                                    //case 'followed_U_asked_Q':
+                                    //case 'followed_U_repost_Q':
+                                    //case 'followed_H_got_achievement':
+                                    $data = $activity['data'];
+                                    require TEMPLATE_PATH . '/_common/activity/' . strtolower($activity['activity_type']) . '.phtml';
+                                    break;
+                                    // Don`t show some activities
+                                case 'F_Q_UPDATE_A':
+                                case 'CATEGORY_RENAMED_BY_USER': // Doublicate of USER_RENAME_CATEGORY
+                                    echo "<!-- Not show: " . $activity['activity_type'] . " -->";
+                                    break;
+                                default:
+                                    require TEMPLATE_PATH . '/_common/activity/not_found.phtml';
+                                    break;
+                            };
+                        endforeach; ?>
+                    <?php endif; ?>
+
+                    <?php require_once __DIR__ . '/more_activities.phtml'; ?>
+            </div>
+            <!-- / main_column -->
+
+            <div class="d-none d-md-block col-lg-3">
+                <?php // require __DIR__ . '/filter.phtml'; 
+                ?>
+            </div>
+
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH . '/_common/modals.phtml'; ?>
+    <?php require TEMPLATE_PATH . '/_common/js.phtml'; ?>
+
+</body>
+
+</html>
