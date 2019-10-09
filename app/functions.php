@@ -1,6 +1,6 @@
 <?php
 
-// Helper Functions 
+// Helper Functions
 
 if (!function_exists('lang')) {
     function lang()
@@ -16,9 +16,10 @@ if (!function_exists('trans')) {
     /**
      * Translate the given message.
      *
-     * @param  string|null  $key
-     * @param  array   $replace
-     * @param  string|null  $locale
+     * @param string|null $key
+     * @param array       $replace
+     * @param string|null $locale
+     *
      * @return \Illuminate\Contracts\Translation\Translator|string|array|null
      */
     function trans($key = null, $replace = [], $locale = null)
@@ -26,6 +27,7 @@ if (!function_exists('trans')) {
         if (is_null($key)) {
             return $GLOBALS['illuminate_translation'];
         }
+
         return $GLOBALS['illuminate_translation']->trans($key, $replace, $locale);
     }
 }
@@ -34,10 +36,11 @@ if (!function_exists('trans_choice')) {
     /**
      * Translates the given message based on a count.
      *
-     * @param  string  $key
-     * @param  int|array|\Countable  $number
-     * @param  array   $replace
-     * @param  string|null  $locale
+     * @param string               $key
+     * @param int|array|\Countable $number
+     * @param array                $replace
+     * @param string|null          $locale
+     *
      * @return string
      */
     function trans_choice($key, $number, array $replace = [], $locale = null)
@@ -50,9 +53,10 @@ if (!function_exists('__')) {
     /**
      * Translate the given message.
      *
-     * @param  string  $key
-     * @param  array  $replace
-     * @param  string|null  $locale
+     * @param string      $key
+     * @param array       $replace
+     * @param string|null $locale
+     *
      * @return string|array|null
      */
     function __($key, $replace = [], $locale = null)
