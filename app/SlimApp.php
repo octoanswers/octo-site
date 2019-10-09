@@ -14,7 +14,6 @@ $loader = new \Illuminate\Translation\FileLoader($file_system, ROOT_PATH . '/lan
 // Register the English translator
 $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
 
-
 class SlimApp
 {
     /**
