@@ -7,7 +7,7 @@ class UFollowU extends \Mapper\Mapper
     public function create(\Model\Activity $activity): \Model\Activity
     {
         $user = $activity->subject;
-        $followedUser = $activity->data;
+        $followed_user = $activity->data;
 
         if ($activity->type != \Model\Activity::F_U_FOLLOW_U) {
             throw new \Exception('Incorrect activity type: ' . $activity->type, 0);
@@ -15,8 +15,8 @@ class UFollowU extends \Mapper\Mapper
         if (!is_a($user, \Model\User::class)) {
             throw new \Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
         }
-        if (!is_a($followedUser, \Model\User::class)) {
-            throw new \Exception('Incorrect activity "data" class type: ' . get_class($followedUser), 0);
+        if (!is_a($followed_user, \Model\User::class)) {
+            throw new \Exception('Incorrect activity "data" class type: ' . get_class($followed_user), 0);
         }
 
         $userID = $user->id;
@@ -29,10 +29,11 @@ class UFollowU extends \Mapper\Mapper
                 'avatar_xs_url' => $user->get_avatar_URL_small(),
             ],
             'followed_user' => [
-                'id'            => $followedUser->id,
-                'name'          => $followedUser->name,
-                'profile_url'   => $user->get_URL($this->lang),
-                'avatar_xs_url' => $user->get_avatar_URL_small(),
+                'id'            => $followed_user->id,
+                'name'          => $followed_user->name,
+                'signature'     => (string) $followed_user->signature,
+                'profile_url'   => $followed_user->get_URL($this->lang),
+                'avatar_xs_url' => $followed_user->get_avatar_URL_small(),
             ],
         ], JSON_UNESCAPED_UNICODE);
 
