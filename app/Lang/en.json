@@ -2,6 +2,7 @@
     "activity": {
         "category_added_question": "question added to category",
         "change_answer": "updated answer",
+        "user_rename_category": "user rename category",
         "change_signature": "changed the signature",
         "follow_category": "subscribed to a category",
         "follow_question": "subscribed to a question",
@@ -126,10 +127,6 @@
         }
     },
     "flow": {
-        "action": {
-            "user_rename_category": "user rename category",
-            "user_rename_category_before": "Before:"
-        },
         "new_categories": "New categories",
         "note": "Questions and answers flow on Answeropedia.",
         "page_title": "Flow"

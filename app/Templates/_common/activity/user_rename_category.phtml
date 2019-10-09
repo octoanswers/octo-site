@@ -1,31 +1,34 @@
-<!-- activity user_rename_category -->
-<div class="my-4">
-
-    <div class="media">
-        <a class="d-block wh-44px mr-3 mb-3 rounded-circle" href="<?= $data['user']['profile_url'] ?>">
-            <img class="wh-44px mr-3 rounded-circle" src="<?= $data['user']['avatar_xs_url'] ?>">
+<!-- user_rename_category -->
+<div class="border align-middle rounded bg-white p-3 my-4">
+    <div class="media position-relative">
+        <a class="wh-40px mt-1 mr-3 rounded" href="<?= $data['user']['profile_url'] ?>">
+            <img src="<?= $data['user']['avatar_xs_url'] ?>" class="wh-40px rounded" alt="<?= $contributor->name ?>">
         </a>
         <div class="media-body">
-            <a class="h5 text-dark text-decoration-none" href="<?= $data['user']['profile_url'] ?>">
-                <?= $data['user']['name'] ?>
-            </a>
-
-            <div class="semi-small text-secondary">
+            <div class="mb-1">
+                <a class="font-weight-bold text-dark text-decoration-none" href="<?= $data['user']['profile_url'] ?>">
+                    <?= $data['user']['name'] ?>
+                </a>
+                <span class="semi-small text-black-50">&middot;</span>
+                <span class="semi-small text-black-50">
+                    <?= $this->translator->get('activity', 'user_rename_category') ?>
+                </span>
+            </div>
+            <div class="my-1">
+                <div class="small text-black-50">
+                    <?= $data['category']['title_old'] ?>
+                    <i class="material-icons md-18">
+                        arrow_right_alt
+                    </i>
+                </div>
+                <a class="font-size-140 line-height-13 text-dark font-weight-bold text-decoration-none" href="<?= $data['category']['url'] ?>">
+                    <?= $data['category']['title_new'] ?>
+                </a>
+            </div>
+            <div class="small text-black-50">
                 <?= $activity['created_at__humanized'] ?>
-
             </div>
         </div>
     </div>
-
-    <?= $this->translator->get('flow', 'action', 'user_rename_category') ?>
-    <div>
-        <a class="h3 text-decoration-none text-dark" href="<?= $data['category']['url'] ?>">
-            <?= $data['category']['title_new'] ?>
-        </a>
-        <div class="small mt-1 text-secondary">
-            <?= $this->translator->get('flow', 'action', 'user_rename_category_before') ?><?= $data['category']['title_old'] ?>
-        </div>
-    </div>
-
 </div>
-<!-- / activity user_rename_category -->
+<!-- / user_rename_category -->

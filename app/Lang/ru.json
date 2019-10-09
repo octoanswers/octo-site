@@ -8,6 +8,7 @@
 		"follow_user": "Подписался на пользователя",
 		"question_renamed": "Вопрос переименован",
 		"question_updated_answer": "Обновлен ответ",
+		"user_rename_category": "Переименовал категорию",
 		"renamed_question": "Переименовал вопрос"
 	},
 	"answer_edit": {
@@ -125,10 +126,6 @@
 		}
 	},
 	"flow": {
-		"action": {
-			"user_rename_category": "Переименовал категорию",
-			"user_rename_category_before": "Ранее:"
-		},
 		"new_categories": "Новые категории",
 		"note": "Поток вопросов и ответов на Answeropedia.",
 		"page_title": "Поток"
