@@ -2,19 +2,19 @@
 <div class="border rounded p-3 pt-2 bg-white my-4">
 
     <div class="semi-small font-weight-bold text-uppercase text-black mb-3">
-        <?= $this->translator->get('settings', 'site_title') ?>
+        <?= __('page_settings.site_title') ?>
     </div>
 
     <form id="frm__update_site" data-user-id="<?= $this->authUser->id ?>">
         <div class="form-group">
             <label class="semi-small text-muted" for="frm__update_site__site">
-                <?= $this->translator->get('settings', 'site_note') ?>
+                <?= __('page_settings.site_note') ?>
             </label>
             <input id="frm__update_site__site" type="text" class="form-control" value="<?= @$this->authUser->site ?>">
         </div>
         <div class="form-group mb-0">
             <button type="submit" id="frm__update_site__submit" class="btn btn-sm btn-primary">
-                <?= $this->translator->get('settings', 'save') ?>
+                <?= __('page_settings.save') ?>
             </button>
         </div>
     </form>

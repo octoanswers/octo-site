@@ -2,19 +2,19 @@
 <div class="border rounded p-3 pt-2 bg-white my-4">
 
     <div class="semi-small font-weight-bold text-uppercase text-black mb-3">
-        <?= $this->translator->get('settings', 'signature_title') ?>
+        <?= __('page_settings.signature_title') ?>
     </div>
 
     <form id="form__update_signature" data-user-id="<?= $this->authUser->id ?>">
         <div class="form-group">
             <label class="semi-small text-muted" for="form__update_signature__signature">
-                <?= $this->translator->get('settings', 'signature_note') ?>
+                <?= __('page_settings.signature_note') ?>
             </label>
-            <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->signature ?>" placeholder="<?= $this->translator->get('settings', 'signature_placeholder') ?>">
+            <input id="form__update_signature__signature" type="text" class="form-control" value="<?= @$this->authUser->signature ?>" placeholder="<?= __('page_settings.signature_placeholder') ?>">
         </div>
         <div class="form-group mb-0 mt-3">
             <button type="submit" id="form__update_signature__submit" class="btn btn-sm btn-primary">
-                <?= $this->translator->get('settings', 'save') ?>
+                <?= __('page_settings.save') ?>
             </button>
         </div>
     </form>

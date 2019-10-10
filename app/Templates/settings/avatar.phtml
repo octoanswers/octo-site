@@ -2,7 +2,7 @@
 <div class="border rounded p-3 pt-2 bg-white">
 
     <div class="semi-small font-weight-bold text-uppercase text-black mb-3">
-        <?= $this->translator->get('settings', 'avatar__title') ?>
+        <?= __('page_settings.avatar__title') ?>
     </div>
 
     <img class="border rounded wh-80px mb-3" id="settings_pg__user_avatar" src="<?= $this->authUser->get_avatar_URL_medium() ?>" />
@@ -13,17 +13,17 @@
                 <div class="custom-file">
                     <input type="file" name="new_avatar_file" class="custom-file-input" id="upload-avatar-file">
                     <label class="custom-file-label" for="upload-avatar-file" aria-describedby="inputGroupFileAddon02">
-                        <?= $this->translator->get('settings', 'choose_file') ?>&hellip;
+                        <?= __('page_settings.choose_file') ?>&hellip;
                     </label>
                 </div>
             </div>
             <label class="semi-small text-muted" for="form__update_name__name">
-                <?= $this->translator->get('settings', 'avatar__note') ?>
+                <?= __('page_settings.avatar__note') ?>
             </label>
         </div>
         <div class="form-group mb-0">
             <button type="submit" id="form__upload_avatar__submit_btn" class="btn btn-primary btn-sm submit_button">
-                <?= $this->translator->get('settings', 'avatar__btn_upload') ?>
+                <?= __('page_settings.avatar__btn_upload') ?>
             </button>
         </div>
     </form>
