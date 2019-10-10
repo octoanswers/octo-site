@@ -24,7 +24,7 @@
                 <form id="form__update_answer" data-answer-id="<?= $this->answer->id ?>">
                     <div class="form-group">
                         <textarea id="form__update_answer__answer_text" name="answer_text" class="form-control" rows="10"><?= $this->answer->text ?></textarea>
-                        <label class="mt-0 small text-muted"><?= $this->translator->get('answer_edit', 'description_of_changes') ?></label>
+                        <label class="mt-0 small text-muted"><?= __('page_answer_edit.description_of_changes') ?></label>
                         <input id="form__update_answer__changes_comment" type="text" class="form-control">
                     </div>
                     <div class="form-group mt-4">

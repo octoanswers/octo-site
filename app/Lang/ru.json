@@ -11,11 +11,6 @@
 		"renamed_question": "Переименовал вопрос",
 		"user_rename_category": "Переименовал категорию"
 	},
-	"answer_edit": {
-		"description_of_changes": "Описание изменений",
-		"page_title": "Править ответ",
-		"title": "Редактирование ответа"
-	},
 	"answer_history": {
 		"change_ID": "Правка",
 		"description_of_changes": "Описание изменений",

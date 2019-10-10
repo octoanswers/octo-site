@@ -11,11 +11,6 @@
         "renamed_question": "renamed the question",
         "user_rename_category": "user rename category"
     },
-    "answer_edit": {
-        "description_of_changes": "Description of changes",
-        "page_title": "Edit answer",
-        "title": "Edit answer"
-    },
     "answer_history": {
         "change_ID": "Change ID",
         "description_of_changes": "Description of changes",
