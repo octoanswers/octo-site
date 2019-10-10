@@ -43,7 +43,7 @@ class Show extends \PageController\PageController
 
         $this->template = 'feed';
         $this->showFooter = false;
-        $this->pageTitle = $this->translator->get('feed', 'page_title') . ' – ' . __('common.answeropedia');
+        $this->pageTitle = __('page_feed.page_title') . ' – ' . __('common.answeropedia');
         $this->canonicalURL = SITE_URL;
 
         $output = $this->render_page();
