@@ -256,9 +256,6 @@
 		"user_contribution": "Вклад пользователя",
 		"your_email": "Ваш email"
 	},
-	"question_discussion": {
-		"page_prefix": "Обсуждение ответа:"
-	},
 	"question_redirect": {
 		"redirect_to": " — перенаправлено на:"
 	},
