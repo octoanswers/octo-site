@@ -4,12 +4,6 @@ namespace PageController\User;
 
 class Show extends \PageController\PageController
 {
-    protected $user;
-    protected $revisions;
-    protected $questions;
-
-    protected $followed;
-
     public function handle($request, $response, $args)
     {
         parent::handleRequest($request, $response, $args);
@@ -31,14 +25,14 @@ class Show extends \PageController\PageController
         $this->_prepare_follow_button();
 
         $this->template = 'user';
-        $this->pageTitle = $this->user->name . ' ' . $this->translator->get('user', 'answers_on_answeropedia');
-        $this->pageDescription = $this->user->name . ' ' . $this->translator->get('user', 'answers_on_answeropedia');
+        $this->pageTitle = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
+        $this->pageDescription = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
         $this->canonicalURL = $this->user->get_URL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 
         $this->share_link['title'] = $this->user->name;
-        $this->share_link['description'] = $this->user->name . ' ' . $this->translator->get('user', 'answers_on_answeropedia');
+        $this->share_link['description'] = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
         $this->share_link['url'] = $this->user->get_URL($this->lang);
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
@@ -75,7 +69,7 @@ class Show extends \PageController\PageController
             'url'         => $this->user->get_URL($this->lang),
             'type'        => 'website',
             'title'       => $this->user->name,
-            'description' => $this->user->name . ' ' . $this->translator->get('user', 'answers_on_answeropedia'),
+            'description' => $this->user->name . ' ' . __('page_user.answers_on_answeropedia'),
             'locale'      => $this->lang,
             'image'       => IMAGE_URL . '/og-image.png',
         ];

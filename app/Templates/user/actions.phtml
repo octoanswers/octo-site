@@ -14,14 +14,14 @@
     <?php if ($this->authUser && $this->authUser->id == $this->user->id) : ?>
         <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="<?= \Helper\URL\Settings::get_settings_URL($this->lang) ?>">
             <i class="material-icons md-14 mr-2">settings</i>
-            <?= $this->translator->get('user', 'settings') ?>
+            <?= __('page_user.settings') ?>
         </a>
     <?php endif; ?>
     <!-- / settings btn -->
 
     <!-- follow_btn -->
     <?php if (!$this->authUser) : ?>
-        <button type="button" class="btn btn-sm btn-outline-gray mt-2 mr-2" data-container="body" data-toggle="popover" data-placement="top" data-content="<?= $this->translator->get('user', 'actions', 'follow_lure') ?>" data-trigger="focus">
+        <button type="button" class="btn btn-sm btn-outline-gray mt-2 mr-2" data-container="body" data-toggle="popover" data-placement="top" data-content="<?= __('page_user.actions.follow_lure') ?>" data-trigger="focus">
             <?= $this->translator->get('btn', 'follow'); ?>
         </button>
     <?php endif; ?>
@@ -35,7 +35,7 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-menu-more">
 
             <a href="#" class="dropdown-item disabled" rel="nofollow">
-                <?= $this->translator->get('user', 'actions', 'report') ?>
+                <?= __('page_user.actions.report') ?>
             </a>
 
             <div class="dropdown-divider"></div>
@@ -47,7 +47,7 @@
                 <!-- logout btn -->
                 <a class="dropdown-item" rel="nofollow" href="#" data-toggle="modal" data-target="#modal__logout">
                     <i class="material-icons md-14 mr-2">exit_to_app</i>
-                    <?= $this->translator->get('user', 'logout') ?>
+                    <?= __('page_user.logout') ?>
                 </a>
                 <!-- / logout btn -->
 

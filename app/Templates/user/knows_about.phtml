@@ -1,6 +1,6 @@
 <?php if (isset($data['categories']) && count($data['categories']) > 0) : ?>
 
-    <h3 class="mb-4 size_16 gray_54"><?= $this->translator->get('user', 'knows_about') ?></h3>
+    <h3 class="mb-4 size_16 gray_54"><?= __('page_user.knows_about') ?></h3>
 
     <?php foreach ($data['categories'] as $category) : ?>
         <a class="btn btn-outline-primary btn-sm mb-1" href="<?= $category['url'] ?>"><?= $category['name'] ?></a>

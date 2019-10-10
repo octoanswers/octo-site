@@ -6,14 +6,14 @@
                     <?= $this->questions[$i]->title ?>
                 </a>
                 <div class="small text-black-50">
-                    <?= $this->translator->get('user', 'revision') ?> #<?= $this->revisions[$i]->id ?>
+                    <?= __('page_user.revision') ?> #<?= $this->revisions[$i]->id ?>
 
                     <span class="mx-1 text-dark font-weight-bold">&middot;</span>
 
                     <?php if ($this->revisions[$i]->comment) : ?>
                         <strong><?= $this->revisions[$i]->comment ?></strong>
                     <?php else : ?>
-                        <?= $this->translator->get('user', 'no_description_of_changes') ?>
+                        <?= __('page_user.no_description_of_changes') ?>
                     <?php endif; ?>
 
                     <span class="mx-1 text-dark font-weight-bold">&middot;</span>
@@ -29,6 +29,6 @@
     <?php endfor; ?>
 <?php else : ?>
     <div class="alert alert-secondary mt-4 mb-5" role="alert">
-        <?= $this->translator->get('user', 'no_answers', 'msg') ?>
+        <?= __('page_user.no_answers.msg') ?>
     </div>
 <?php endif; ?>
