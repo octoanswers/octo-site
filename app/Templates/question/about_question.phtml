@@ -2,13 +2,13 @@
 <div class="mb-5">
 
     <div class="semi-small font-weight-bold text-uppercase text-primary mt-2 mb-3">
-        <?= $this->translator->get('question', 'block__about_question', 'title') ?>
+        <?= __('page_question.block__about_question.title') ?>
     </div>
 
     <!-- updated_at -->
     <?php if (strlen($this->question->answer->text)) : ?>
         <div class="small text-black-50">
-            <?= $this->translator->get('question', 'block__about_question', 'answer_updated') . ': ' . \Humanizer\DateTime::humanize_timestamp($this->lang, $this->question->answer->updatedAt) ?>
+            <?= __('page_question.block__about_question.answer_updated') . ': ' . \Humanizer\DateTime::humanize_timestamp($this->lang, $this->question->answer->updatedAt) ?>
         </div>
     <?php endif; ?>
     <!-- / updated_at -->

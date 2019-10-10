@@ -2,9 +2,8 @@
 	<!-- related questions -->
 	<div class="border rounded bg-white p-3 my-4">
 		<div class="semi-small font-weight-bold text-uppercase text-black mb-3">
-			<?= $this->translator->get('question', 'block__related_questions', 'title') ?>
+			<?= __('page_question.block__related_questions', 'title') ?>
 		</div>
-
 
 		<?php foreach ($this->related_questions as $question) : ?>
 			<div class="my-2">
@@ -12,7 +11,7 @@
 					<?= $question->title ?>
 				</a>
 				<!-- <div class="small text-secondary">
-					<?= $this->translator->get('question', 'answer_updated') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+					<?= __('page_question.answer_updated') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
 
 					<?php if (strlen($question->answer->text) == 0) : ?>
 						<span class="mx-1 text-dark font-weight-bold">&middot;</span>
@@ -28,7 +27,7 @@
 			<!-- change related answers -->
 			<a class="btn btn-sm btn-outline-gray mr-2" href="#">
 				<i class="material-icons md-14">edit</i>
-				<?= $this->translator->get('question', 'btn__change_related_answers') ?>
+				<?= __('page_question.btn__change_related_answers') ?>
 			</a>
 			<!-- / change related answers -->
 		</div>

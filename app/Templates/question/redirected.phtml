@@ -1,6 +1,6 @@
-<?php if (isset($this->redirectedQuestion)): ?>
+<?php if (isset($this->redirectedQuestion)) : ?>
     <div class="alert alert-warning" role="alert">
-        <?= $this->translator->get('question', 'redirected_from') ?> 
+        <?= __('page_question.redirected_from') ?>
         <a class="alert-link" href="<?= $this->redirectedQuestion->get_URL($this->lang) ?>?no_redirect=1">
             <?= $this->redirectedQuestion->title ?>
         </a>

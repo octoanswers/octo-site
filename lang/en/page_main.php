@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'description' => 'Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.',
     'how_it_works' => [
         'step_1_msg' => 'You ask a question about any category of interest to you.',
         'step_2_msg' => 'We find a specialist who can give a competent answer.',

@@ -31,8 +31,8 @@ class Show extends \PageController\PageController
         }
 
         $this->template = 'flow';
-        $this->pageTitle = $this->translator->get('flow', 'page_title') . ' – ' . __('common.answeropedia');
-        $this->pageDescription = $this->translator->get('flow', 'note');
+        $this->pageTitle = __('page_flow.page_title') . ' – ' . __('common.answeropedia');
+        $this->pageDescription = __('page_flow.note');
         $this->canonicalURL = \Helper\URL\Page::get_flow_URL($this->lang);
 
         $output = $this->render_page();
@@ -46,8 +46,8 @@ class Show extends \PageController\PageController
         $og = [
             'url'         => SITE_URL,
             'type'        => 'website',
-            'title'       => $this->translator->get('flow', 'page_title') . ' – ' . __('common.answeropedia'),
-            'description' => $this->translator->get('flow', 'note'),
+            'title'       => __('page_flow.page_title') . ' – ' . __('common.answeropedia'),
+            'description' => __('page_flow.note'),
             'locale'      => $this->lang,
             'image'       => IMAGE_URL . '/og-image.png',
         ];

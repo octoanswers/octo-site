@@ -75,7 +75,7 @@ class Show extends \PageController\PageController
             'url'         => SITE_URL,
             'type'        => 'website',
             'title'       => __('common.answeropedia') . ' – ' . __('page_main.slogan'),
-            'description' => $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.'),
+            'description' => __('page_main.description'),
             'locale'      => $this->lang,
             'image'       => IMAGE_URL . '/og-image.png',
         ];

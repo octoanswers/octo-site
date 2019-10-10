@@ -2,7 +2,7 @@
 
 	<div class="border rounded bg-white p-3 my-4" id="contributors_full_list">
 		<div class="semi-small font-weight-bold text-uppercase text-black mb-3">
-			<?= $this->translator->get('question', 'answer_contributors') ?>
+			<?= __('page_question.answer_contributors') ?>
 		</div>
 
 		<?php foreach ($this->contributors as $contributor) : ?>
@@ -12,27 +12,27 @@
 		<?php endforeach; ?>
 
 		<!-- <div class="small text-muted mt-3">
-			<?= $this->translator->get('question', 'total_contributors') ?>: <?= count($this->contributors) ?>
+			<?= __('page_question.total_contributors') ?>: <?= count($this->contributors) ?>
 		</div> -->
 
 		<div class="mt-3">
 			<div class="semi-small text-black-50">
-				<?= $this->translator->get('question', 'block__contributors', 'msg') ?>
+				<?= __('page_question.block__contributors.msg') ?>
 			</div>
 			<ul class="list-inline semi-small mt-2 mb-0">
 				<li class="list-inline-item">
 					<a class="text-dark" href="<?= $this->question->get_edit_URL($this->lang) ?>">
-						<?= $this->translator->get('question', 'block__contributors', 'link__edit_answer') ?>
+						<?= __('page_question.block__contributors.link__edit_answer') ?>
 					</a>
 				</li>
 				<li class="list-inline-item">
 					<a class="text-dark" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
-						<?= $this->translator->get('question', 'block__contributors', 'link__change_categories') ?>
+						<?= __('page_question.block__contributors.link__change_categories') ?>
 					</a>
 				</li>
 				<li class="list-inline-item">
 					<a href="#" target="_blank">
-						<?= $this->translator->get('question', 'block__contributors', 'link__what_is_a_contribution') ?>
+						<?= __('page_question.block__contributors.link__what_is_a_contribution') ?>
 					</a>
 				</li>
 			</ul>

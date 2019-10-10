@@ -1,32 +1,32 @@
 <?php if (isset($this->question->answer) && !$this->question->answer->text && !$this->authUser) : ?>
 
-<!-- lure subscribe -->
-<div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-4">
-    <div class="mr-3 d-none d-sm-block">
-        <p class="h1 text-center mx-auto">
-            <i class="material-icons md-24">email</i>
-        </p>
-    </div>
-    <div class="width-full">
-        <div class="text-dark font-weight-bold mb-2">
-            <?= $this->translator->get('question', 'subscription_title') ?>
+    <!-- lure subscribe -->
+    <div class="d-flex box px-2 px-sm-3 py-2 py-sm-3 my-4">
+        <div class="mr-3 d-none d-sm-block">
+            <p class="h1 text-center mx-auto">
+                <i class="material-icons md-24">email</i>
+            </p>
         </div>
-        <div class="small text-muted mb-3">
-            <?= $this->translator->get('question', 'email_notification_msg') ?>
-        </div>
-
-        <form id="form__question_subscribe">
-            <div class="input-group input-group-sm">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                </div>
-                <input type="hidden" id="question_id" value="<?= $this->question->id; ?>">
-                <input type="email" id="email" class="form-control" placeholder="<?= $this->translator->get('question', 'your_email') ?>">
+        <div class="width-full">
+            <div class="text-dark font-weight-bold mb-2">
+                <?= __('page_question.subscription_title') ?>
             </div>
-        </form>
+            <div class="small text-muted mb-3">
+                <?= __('page_question.email_notification_msg') ?>
+            </div>
 
+            <form id="form__question_subscribe">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="hidden" id="question_id" value="<?= $this->question->id; ?>">
+                    <input type="email" id="email" class="form-control" placeholder="<?= __('page_question.your_email') ?>">
+                </div>
+            </form>
+
+        </div>
     </div>
-</div>
-<!-- / lure subscribe -->
+    <!-- / lure subscribe -->
 
 <?php endif; ?>

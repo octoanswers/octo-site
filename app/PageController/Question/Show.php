@@ -98,7 +98,7 @@ class Show extends \PageController\PageController
         $this->open_graph = $this->_get_open_graph();
 
         $this->share_link['title'] = $this->question->title;
-        $this->share_link['description'] = $this->translator->get('question', 'share_link__description');
+        $this->share_link['description'] = __('page_question.share_link__description');
         $this->share_link['url'] = $this->question->get_URL($this->lang);
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
@@ -169,7 +169,7 @@ class Show extends \PageController\PageController
 
     protected function _get_page_description()
     {
-        $page_description = str_replace('%question%', $this->question->title, $this->translator->get('question', 'page_description'));
+        $page_description = str_replace('%question%', $this->question->title, __('page_question.page_description'));
 
         return $page_description;
     }
