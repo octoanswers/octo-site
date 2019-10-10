@@ -267,24 +267,6 @@
 		"page_title": "",
 		"title": "Редактирование категорий"
 	},
-	"questions": {
-		"btn_add_categories": "Добавить категории",
-		"filters": {
-			"newest": "Новые вопросы",
-			"popular": "Популярные",
-			"recently_updated": "Недавно обновленные",
-			"title": "Фильтры"
-		},
-		"more_questions": "Больше вопросов",
-		"new": "Новый",
-		"newest_questions": "Новые вопросы",
-		"statistics": {
-			"in_sandbox": "В песочнице",
-			"questions_with_answers": "Вопросов",
-			"title": "Статистика"
-		},
-		"what_is_your_question": "Какой у вас вопрос"
-	},
 	"root": {
 		"Questions and Answers": "Вопросы и ответы"
 	},

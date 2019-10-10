@@ -1,10 +1,16 @@
 <?php
 
-class Newest_Questions_PageController__en__Test extends Abstract_Frontend_TestCase
-{
-    protected $setUpDB = ['en' => ['questions', 'categories', 'revisions', 'er_categories_questions'], 'users' => ['users']];
+namespace Tests\PageController\Questions\Newest;
 
-    public function testBase()
+class Test extends \Abstract_Frontend_TestCase
+{
+    protected $setUpDB = [
+        'en' => ['questions', 'categories', 'revisions', 'er_categories_questions'],
+        'ru' => ['questions', 'categories', 'revisions', 'er_categories_questions'],
+        'users' => ['users']
+    ];
+
+    public function test__Questions_page()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
@@ -19,9 +25,22 @@ class Newest_Questions_PageController__en__Test extends Abstract_Frontend_TestCa
         $this->assertStringContainsString('Newest questions – Page 1 – Answeropedia', $response_body);
         $this->assertStringContainsString('What is main president daily function?', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
+
+        $this->assertSame(200, $response->getStatusCode());
+    }
+
+    public function test__That_RU_page_is_exists()
+    {
+        $environment = \Slim\Http\Environment::mock([
+            'REQUEST_METHOD' => 'GET',
+            'REQUEST_URI'    => '/ru/questions/newest',
+        ]);
+        $request = \Slim\Http\Request::createFromEnvironment($environment);
+        $this->app->getContainer()['request'] = $request;
+
+        $response = $this->app->run(true);
 
         $this->assertSame(200, $response->getStatusCode());
     }

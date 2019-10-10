@@ -38,12 +38,12 @@ class Newest extends \PageController\PageController
 
     public function _get_page_title()
     {
-        return $this->translator->get('questions', 'newest_questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
+        return __('page_questions.newest_questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
     }
 
     public function _get_page_description(): string
     {
-        $description = $this->translator->get('questions', 'newest_questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
+        $description = __('page_questions.newest_questions') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
 
         return $description;
     }
