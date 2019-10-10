@@ -5,9 +5,9 @@ namespace Tests\PageController\Questions\Newest;
 class Test extends \Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
-        'en' => ['questions', 'categories', 'revisions', 'er_categories_questions'],
-        'ru' => ['questions', 'categories', 'revisions', 'er_categories_questions'],
-        'users' => ['users']
+        'en'    => ['questions', 'categories', 'revisions', 'er_categories_questions'],
+        'ru'    => ['questions', 'categories', 'revisions', 'er_categories_questions'],
+        'users' => ['users'],
     ];
 
     public function test__Questions_page()
