@@ -6,7 +6,7 @@ class Test extends \Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
         'en' => ['questions'],
-        'ru' => ['questions']
+        'ru' => ['questions'],
     ];
 
     public function testBase()

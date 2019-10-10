@@ -6,7 +6,7 @@ class Test extends \Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
         'en' => ['questions', 'categories', 'revisions', 'redirects_questions'],
-        'ru' => ['questions', 'categories', 'revisions', 'redirects_questions'], 'users' => ['users']
+        'ru' => ['questions', 'categories', 'revisions', 'redirects_questions'], 'users' => ['users'],
     ];
 
     public function test__Show_EN_page()

@@ -3,9 +3,9 @@
 class Show_User_PageController__en__Test extends Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
-        'en' => ['questions', 'revisions', 'er_users_follow_users'],
-        'ru' => ['questions', 'revisions', 'er_users_follow_users'],
-        'users' => ['users']
+        'en'    => ['questions', 'revisions', 'er_users_follow_users'],
+        'ru'    => ['questions', 'revisions', 'er_users_follow_users'],
+        'users' => ['users'],
     ];
 
     public function test__Show_EN_page()
