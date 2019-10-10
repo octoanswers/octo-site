@@ -30,8 +30,8 @@ class UpdateCategories extends \PageController\PageController
         $this->categories_string = count($this->category_names) ? implode(',', $this->category_names) : '';
 
         $this->template = 'question_update_categories';
-        $this->pageTitle = str_replace('%question%', $this->question->title, $this->translator->get('Update categories for question "%question%" - Answeropedia'));
-        $this->pageDescription = str_replace('%question%', $this->question->title, $this->translator->get('Update categories for question "%question%"'));
+        $this->pageTitle = __('page_question_update_categories.page.title') . ': ' . $this->question->title . ' - ' . __('common.answeropedia');
+        $this->pageDescription = __('page_question_update_categories.page.title') . ': ' . $this->question->title . ' - ' . __('common.answeropedia');
         $this->showFooter = false;
 
         $this->includeJS[] = SITE_URL . '/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.js';
