@@ -5,8 +5,8 @@ namespace Tests\PageController\Root\Show;
 class Test extends \Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'revisions', 'categories'],
-        'users' => ['users']
+        'ru'    => ['questions', 'revisions', 'categories'],
+        'users' => ['users'],
     ];
 
     public function testBase()
