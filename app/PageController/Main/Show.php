@@ -25,13 +25,13 @@ class Show extends \PageController\PageController
 
         $this->template = 'main';
         $this->pageTitle = __('common.answeropedia') . ' – ' . __('page_main.slogan');
-        $this->pageDescription = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
+        $this->pageDescription = __('page_main.description');
         $this->canonicalURL = \Helper\URL\Page::get_main_URL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 
         $this->share_link['title'] = __('page_main.slogan') . ' – ' . __('common.answeropedia');
-        $this->share_link['description'] = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
+        $this->share_link['description'] = __('page_main.description');
         $this->share_link['url'] = SITE_URL;
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
@@ -86,7 +86,7 @@ class Show extends \PageController\PageController
     private function _get_about_answeropedia_question(): ?\Model\Question
     {
         try {
-            $about_answeropedia_question_ID = $this->translator->get('service_id', 'about_answeropedia');
+            $about_answeropedia_question_ID = (int) __('service_id.about_answeropedia');
             $about_answeropedia_question = (new \Query\Question($this->lang))->question_with_ID($about_answeropedia_question_ID);
         } catch (\Throwable $e) {
             $about_answeropedia_question = null;

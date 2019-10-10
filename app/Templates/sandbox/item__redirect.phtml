@@ -7,18 +7,19 @@
     </a>
     <div class="small pt-1 text-secondary">
 
-        Было:
+        <?= __('Before:') ?>
+
         <a rel="nofollow" class="text-secondary" href="<?= $question->get_URL($this->lang) ?>">
             <?= $question->title ?>
         </a>
 
         <span class="mx-1 text-dark font-weight-bold">&middot;</span>
         <a rel="nofollow" class="text-secondary" href="<?= $question->get_URL($this->lang) ?>?no_redirect=1">
-            Redirect page
+            <?= __('Redirect page') ?>
         </a>
 
         <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-        <?= $this->translator->get('Обновлено:') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+        <?= __('Updated:') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
 
     </div>
 </div>

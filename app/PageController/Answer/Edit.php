@@ -51,7 +51,7 @@ class Edit extends \PageController\PageController
     private function _get_how_to_edit_question()
     {
         try {
-            $how_to_edit_question_ID = $this->translator->get('service_id', 'how_to_edit');
+            $how_to_edit_question_ID = (int) __('service_id.how_to_edit');
             $how_to_edit_question = (new \Query\Question($this->lang))->question_with_ID($how_to_edit_question_ID);
         } catch (\Throwable $e) {
             $how_to_edit_question = null;

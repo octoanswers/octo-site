@@ -25,7 +25,6 @@ class WithoutCategories extends \PageController\PageController
         $this->template = 'sandbox';
         $this->pageTitle = $this->_get_page_title();
         $this->pageDescription = $this->_get_page_description();
-        $this->activeFilter = $this->translator->get('Without answers');
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
             $this->nextPageURL = \Helper\URL\Sandbox::get_without_answers_URL($this->lang, ($this->page + 1));

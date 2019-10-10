@@ -38,7 +38,7 @@ class Newest extends \PageController\PageController
 
     public function _get_active_filter_name(): string
     {
-        $filterName = $this->translator->get('Newest');
+        $filterName = __('Newest');
 
         return $filterName;
     }
