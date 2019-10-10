@@ -11,12 +11,6 @@
 		"renamed_question": "Переименовал вопрос",
 		"user_rename_category": "Переименовал категорию"
 	},
-	"answer_history": {
-		"change_ID": "Правка",
-		"description_of_changes": "Описание изменений",
-		"no_description_of_changes": "Нет описания изменений",
-		"page_title": "История изменений ответа"
-	},
 	"answeropedia": "Answeropedia",
 	"btn": {
 		"cancel": "Отмена",

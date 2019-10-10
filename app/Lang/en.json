@@ -11,12 +11,6 @@
         "renamed_question": "renamed the question",
         "user_rename_category": "user rename category"
     },
-    "answer_history": {
-        "change_ID": "Change ID",
-        "description_of_changes": "Description of changes",
-        "no_description_of_changes": "No description of changes",
-        "page_title": "Answer history"
-    },
     "answeropedia": "Answeropedia",
     "btn": {
         "cancel": "Cancel",

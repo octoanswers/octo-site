@@ -31,8 +31,8 @@ class History extends \PageController\PageController
         }
 
         $this->template = 'answer_history';
-        $this->pageTitle = $this->translator->get('answer_history', 'page_title') . ': ' . $this->question->title . ' – ' . __('common.answeropedia');
-        $this->pageDescription = $this->translator->get('answer_history', 'page_title');
+        $this->pageTitle = __('page_answer_history.page_title') . ': ' . $this->question->title . ' – ' . __('common.answeropedia');
+        $this->pageDescription = __('page_answer_history.page_title');
 
         $output = $this->render_page();
         $response->getBody()->write($output);

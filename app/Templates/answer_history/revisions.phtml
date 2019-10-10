@@ -13,12 +13,12 @@
                         <?= $this->users[$i]->name ?>
                     </a>
                     <div class="small text-black-50">
-                        <?= $this->translator->get('answer_history', 'change_ID') ?> #<?= $this->revisions[$i]->id ?>
+                        <?= __('page_answer_history.change_ID') ?> #<?= $this->revisions[$i]->id ?>
                         <span class="text-dark font_weight_800">&middot;</span>
                         <?php if ($this->revisions[$i]->comment) : ?>
-                            <?= $this->translator->get('answer_history', 'description_of_changes') ?>: <?= $this->revisions[$i]->comment ?>
+                            <?= __('page_answer_history.description_of_changes') ?>: <?= $this->revisions[$i]->comment ?>
                         <?php else : ?>
-                            <?= $this->translator->get('answer_history', 'no_description_of_changes') ?>
+                            <?= __('page_answer_history.no_description_of_changes') ?>
                         <?php endif; ?>
                         <span class="text-dark font_weight_800">&middot;</span>
                         <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
