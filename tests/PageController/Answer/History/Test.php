@@ -24,7 +24,6 @@ class Test extends \Abstract_Frontend_TestCase
 
         $this->assertStringContainsString('Answer history: How to cry? – Answeropedia', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 

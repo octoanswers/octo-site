@@ -22,7 +22,6 @@ class Show_User_PageController__en__Test extends Abstract_Frontend_TestCase
 
         $this->assertStringContainsString('Виталий Козлов Wiki-answers on Answeropedia', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 

@@ -23,7 +23,6 @@ class Test extends \Abstract_Frontend_TestCase
 
         $this->assertStringContainsString('New categories – Page 1 – Answeropedia', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 

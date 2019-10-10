@@ -16,7 +16,6 @@ class PageController_Error_InternalServerError__en__Test extends Abstract_Fronte
 
         $this->assertStringContainsString('Error 500 – Answeropedia', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 

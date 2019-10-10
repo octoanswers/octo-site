@@ -24,7 +24,6 @@ class Test extends \Abstract_Frontend_TestCase
         $this->assertStringContainsString('Questions without answers – Page 1 – Answeropedia', $response_body);
         $this->assertStringContainsString('Do you like iPhone 6?', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 
@@ -46,7 +45,6 @@ class Test extends \Abstract_Frontend_TestCase
         $this->assertStringContainsString('Вопросы без ответа – Страница 1 – Answeropedia', $response_body);
         $this->assertStringContainsString('Какая сейчас погода?', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 

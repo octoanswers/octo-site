@@ -24,7 +24,6 @@ class Test extends \Abstract_Frontend_TestCase
         $this->assertStringContainsString('Sandbox – Page 1 – Answeropedia', $response_body);
         $this->assertStringContainsString('What is main president daily function?', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 

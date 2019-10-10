@@ -16,7 +16,6 @@ class PageController_Error_PageNotFound__en__Test extends Abstract_Frontend_Test
 
         $this->assertStringContainsString('Страница не найдена – Answeropedia', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 

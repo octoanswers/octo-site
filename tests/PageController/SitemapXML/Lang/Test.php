@@ -24,7 +24,6 @@ class Test extends \Abstract_Frontend_TestCase
 
         $this->assertStringContainsString('https://answeropedia.org/en/How_developers_made_interesting_games', $response_body);
 
-        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 
