@@ -25,7 +25,7 @@ class Show extends \PageController\PageController
         $this->_get_search_results();
 
         $this->template = 'search';
-        $this->pageTitle = $this->translator->get('search', 'page_title') . ': ' . $this->query . ' – ' . $this->translator->get('answeropedia');
+        $this->pageTitle = $this->translator->get('search', 'page_title') . ': ' . $this->query . ' – ' . __('common.answeropedia');
 
         $this->searchPlaceholder = $this->_get_search_placeholder($this->list);
         $this->showFooter = false;

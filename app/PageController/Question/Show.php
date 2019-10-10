@@ -48,7 +48,7 @@ class Show extends \PageController\PageController
             }
 
             $this->template = 'question_redirect';
-            $this->pageTitle = 'Redirect page: ' . $this->question->title . ' – ' . $this->translator->get('answeropedia');
+            $this->pageTitle = 'Redirect page: ' . $this->question->title . ' – ' . __('common.answeropedia');
 
             $output = $this->render_page();
             $response->getBody()->write($output);
@@ -89,7 +89,7 @@ class Show extends \PageController\PageController
         $this->template = 'question';
         $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
-        $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answeropedia');
+        $this->pageTitle = $this->question->title . ' – ' . __('common.answeropedia');
         $this->pageDescription = $this->_get_page_description();
         $this->canonicalURL = $this->question->get_URL($this->lang);
 

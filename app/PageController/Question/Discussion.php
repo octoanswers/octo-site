@@ -20,7 +20,7 @@ class Discussion extends \PageController\PageController
         }
 
         $this->template = 'question_discussion';
-        $this->pageTitle = $this->translator->get('question_discussion', 'page_prefix') . ' ' . $this->question->title . $this->translator->get('Answeropedia');
+        $this->pageTitle = $this->translator->get('question_discussion', 'page_prefix') . ' ' . $this->question->title . __('common.answeropedia');
         $this->pageDescription = $this->pageTitle;
         $this->showFooter = false;
 

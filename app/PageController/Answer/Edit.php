@@ -36,7 +36,7 @@ class Edit extends \PageController\PageController
 
         $this->template = 'answer_edit';
         $this->showFooter = false;
-        $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answer_edit', 'page_title') . ' – ' . $this->translator->get('answeropedia');
+        $this->pageTitle = $this->question->title . ' – ' . $this->translator->get('answer_edit', 'page_title') . ' – ' . __('common.answeropedia');
         $this->pageDescription = $this->translator->get('answer_edit', 'page_title');
 
         $this->includeJS[] = 'answer/update.js?v=1';

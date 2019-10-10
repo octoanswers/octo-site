@@ -37,6 +37,6 @@ class Newest extends \PageController\PageController
 
     public function _get_page_title()
     {
-        return $this->translator->get('categories', 'new_categories') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
+        return $this->translator->get('categories', 'new_categories') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
     }
 }

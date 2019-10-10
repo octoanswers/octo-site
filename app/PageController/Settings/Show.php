@@ -18,7 +18,7 @@ class Show extends \PageController\PageController
         parent::handleRequest($request, $response, $args);
 
         $this->template = 'settings';
-        $this->pageTitle = $this->translator->get('Settings') . ' – ' . $this->translator->get('answeropedia');
+        $this->pageTitle = $this->translator->get('Settings') . ' – ' . __('common.answeropedia');
 
         $this->includeJS[] = 'user/upload_avatar';
         $this->includeJS[] = 'user/update_name';

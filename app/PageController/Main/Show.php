@@ -24,13 +24,13 @@ class Show extends \PageController\PageController
         $this->question_about_answeropedia = $this->_get_about_answeropedia_question();
 
         $this->template = 'main';
-        $this->pageTitle = $this->translator->get('answeropedia') . ' – ' . __('page_main.slogan');
+        $this->pageTitle = __('common.answeropedia') . ' – ' . __('page_main.slogan');
         $this->pageDescription = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
         $this->canonicalURL = \Helper\URL\Page::get_main_URL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 
-        $this->share_link['title'] = __('page_main.slogan') . ' – ' . $this->translator->get('answeropedia');
+        $this->share_link['title'] = __('page_main.slogan') . ' – ' . __('common.answeropedia');
         $this->share_link['description'] = $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.');
         $this->share_link['url'] = SITE_URL;
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
@@ -74,7 +74,7 @@ class Show extends \PageController\PageController
         $og = [
             'url'         => SITE_URL,
             'type'        => 'website',
-            'title'       => $this->translator->get('answeropedia') . ' – ' . __('page_main.slogan'),
+            'title'       => __('common.answeropedia') . ' – ' . __('page_main.slogan'),
             'description' => $this->translator->get('Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.'),
             'locale'      => $this->lang,
             'image'       => IMAGE_URL . '/og-image.png',

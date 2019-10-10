@@ -45,12 +45,12 @@ class WithoutCategories extends \PageController\PageController
 
     public function _get_page_title()
     {
-        return $this->translator->get('sandbox', 'without_categories') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
+        return $this->translator->get('sandbox', 'without_categories') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
     }
 
     public function _get_page_description(): string
     {
-        $description = $this->translator->get('sandbox', 'without_categories') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . $this->translator->get('answeropedia');
+        $description = $this->translator->get('sandbox', 'without_categories') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
 
         return $description;
     }

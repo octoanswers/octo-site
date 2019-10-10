@@ -38,7 +38,7 @@ class Show extends \PageController\PageController
 
         $this->template = 'category';
         $this->pageTitle = $this->_get_page_title();
-        //str_replace('%category%', , $this->translator->get('Category - Page title')).' • '.$this->translator->get('answeropedia');
+        //str_replace('%category%', , $this->translator->get('Category - Page title')).' • '.__('common.answeropedia');
         $this->pageDescription = $this->_get_page_description();
         $this->nextPageURL = null;
 
@@ -57,7 +57,7 @@ class Show extends \PageController\PageController
 
     protected function _get_page_title()
     {
-        return $this->translator->get('category', 'page_title') . $this->category->title . ' – ' . $this->translator->get('answeropedia');
+        return $this->translator->get('category', 'page_title') . $this->category->title . ' – ' . __('common.answeropedia');
     }
 
     protected function _prepare_follow_button()
@@ -87,7 +87,7 @@ class Show extends \PageController\PageController
 
     protected function _get_page_description()
     {
-        return $this->translator->get('category', 'questions_with_category') . ' ' . $this->category->title . ' – ' . $this->translator->get('answeropedia');
+        return $this->translator->get('category', 'questions_with_category') . ' ' . $this->category->title . ' – ' . __('common.answeropedia');
     }
 
     private function _category_title_from_URI(string $uri): string

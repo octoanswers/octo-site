@@ -42,12 +42,12 @@ class RecentlyUpdated extends \PageController\PageController
 
     public function _get_page_title()
     {
-        return $this->translator->get('Recently updated') . ' &middot; ' . $this->translator->get('page') . ' ' . $this->page . ' &middot; ' . $this->translator->get('answeropedia');
+        return $this->translator->get('Recently updated') . ' &middot; ' . $this->translator->get('page') . ' ' . $this->page . ' &middot; ' . __('common.answeropedia');
     }
 
     public function _get_page_description(): string
     {
-        $description = $this->translator->get('Recently updated') . ' &middot; ' . $this->translator->get('page') . ' ' . $this->page . ' &middot; ' . $this->translator->get('answeropedia');
+        $description = $this->translator->get('Recently updated') . ' &middot; ' . $this->translator->get('page') . ' ' . $this->page . ' &middot; ' . __('common.answeropedia');
 
         return $description;
     }
