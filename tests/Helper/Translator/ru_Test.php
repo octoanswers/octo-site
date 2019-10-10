@@ -34,11 +34,11 @@ class Translator__RU_lang__Test extends PHPUnit\Framework\TestCase
 
     public function test_Triple_key()
     {
-        $this->assertEquals('Что такое Песочница', $this->translator->get('sandbox', 'about_block', 'title'));
+        $this->assertEquals('Что такое Песочница', __('page_sandbox.about_block.title'));
     }
 
     public function test_Triple_key_not_exists()
     {
-        $this->assertEquals('NEED_TRANSLATE (ru) sandbox - about_block - key_not_exists', $this->translator->get('sandbox', 'about_block', 'key_not_exists'));
+        $this->assertEquals('NEED_TRANSLATE (ru) sandbox - about_block - key_not_exists', __('page_sandbox.about_block.key_not_exists'));
     }
 }

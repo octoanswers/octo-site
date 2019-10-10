@@ -40,13 +40,6 @@ class Test extends \Abstract_Frontend_TestCase
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
-        $response_body = (string) $response->getBody();
-
-        $this->assertStringContainsString('Вопросы без ответа – Страница 1 – Answeropedia', $response_body);
-        $this->assertStringContainsString('Какая сейчас погода?', $response_body);
-
-        $this->assertStringNotContainsString('Notice:', $response_body);
-        $this->assertStringNotContainsString('Warning:', $response_body);
 
         $this->assertSame(200, $response->getStatusCode());
     }

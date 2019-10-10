@@ -17,7 +17,7 @@
         <?php if (strlen($question->answer->text) == 0) : ?>
             <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
                 <i class="material-icons md-14">edit</i>
-                <?= $this->translator->get('sandbox', 'btn_write_first_answer') ?>
+                <?= __('page_sandbox.btn_write_first_answer') ?>
             </a>
         <?php endif; ?>
         <!-- / edit answer -->
@@ -26,7 +26,7 @@
         <?php if ($question->categoriesCount == 0) : ?>
             <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="<?= $question->get_update_categories_URL($this->lang) ?>">
                 <i class="material-icons md-14">bubble_chart</i>
-                <?= $this->translator->get('sandbox', 'btn_add_categories') ?>
+                <?= __('page_sandbox.btn_add_categories') ?>
             </a>
         <?php endif; ?>
         <!-- / add categories -->

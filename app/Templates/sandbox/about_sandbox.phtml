@@ -1,16 +1,16 @@
 <!-- about_sandbox -->
 <div class="alert alert-warning p-3" role="alert">
 	<h4 class="alert-heading mb-3">
-		<?= $this->translator->get('sandbox', 'about_block', 'title') ?>
+		<?= __('page_sandbox.about_block.title') ?>
 	</h4>
 
-	<p class="semi-small mb-2"><?= $this->translator->get('sandbox', 'about_block', 'msg_1') ?></p>
-	<p class="semi-small mb-2"><?= $this->translator->get('sandbox', 'about_block', 'msg_2') ?></p>
+	<p class="semi-small mb-2"><?= __('page_sandbox.about_block.msg_1') ?></p>
+	<p class="semi-small mb-2"><?= __('page_sandbox.about_block.msg_2') ?></p>
 
 	<?php if (isset($this->questionsCount)) : ?>
 		<hr>
 		<p class="semi-small mb-0">
-			<?= $this->translator->get('sandbox', 'about_block', 'now_in_the_sandbox') ?>
+			<?= __('page_sandbox.about_block.now_in_the_sandbox') ?>
 			&middot;
 			<?= $this->questionsCount ?>
 		</p>

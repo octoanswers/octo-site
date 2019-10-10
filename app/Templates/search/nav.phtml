@@ -2,17 +2,17 @@
     <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link <?= $this->list == 'questions' ? 'active' : '' ?>" href="<?= \Helper\URL\Search::get_search_questions_URL($this->lang, $this->query) ?>">
-                <?= $this->translator->get('search', 'filters', 'questions'); ?>
+                <?= __('page_search.filters.questions'); ?>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link <?= $this->list == 'categories' ? 'active' : '' ?>" href="<?= \Helper\URL\Search::get_search_categories_URL($this->lang, $this->query) ?>">
-                <?= $this->translator->get('search', 'filters', 'categories'); ?>
+                <?= __('page_search.filters.categories'); ?>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link <?= $this->list == 'users' ? 'active' : '' ?>" href="<?= \Helper\URL\Search::get_search_users_URL($this->lang, $this->query) ?>">
-                <?= $this->translator->get('search', 'filters', 'users'); ?>
+                <?= __('page_search.filters.users'); ?>
             </a>
         </li>
     </ul>

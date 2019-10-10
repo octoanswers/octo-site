@@ -120,41 +120,6 @@
         "page_title": "User not found",
         "title": "User not found"
     },
-    "sandbox": {
-        "about_block": {
-            "btn_action": "Join the community",
-            "msg_1": "The sandbox is a place to get new questions that have not yet been answered.",
-            "msg_2": "As soon as the question has a comprehensive answer and several categories, it is transferred to the main list.",
-            "now_in_the_sandbox": "Now in the sandbox",
-            "title": "What is a «sandbox»?"
-        },
-        "all_questions": "All questions",
-        "btn_add_categories": "Add categories",
-        "btn_write_first_answer": "Write first answer",
-        "questions_without_answers": "Questions without answers",
-        "title": "Sandbox",
-        "without_categories": "Without categories"
-    },
-    "search": {
-        "answer_updated": "Answer updated",
-        "filters": {
-            "categories": "Categories",
-            "questions": "Questions",
-            "users": "Users"
-        },
-        "no_categories_found": "No categories found",
-        "no_category_found_for_query": "No category found for \"%query%\"",
-        "no_questions_found": "No questions found",
-        "no_questions_found_msg": "On request \"%query%\" could not find any questions",
-        "no_users_found": {
-            "msg": "On request \"%query%\" could not find any users",
-            "title": "No users found",
-            "view_all_users": "View all users"
-        },
-        "page_title": "Search",
-        "view_all_categories": "View all categories",
-        "view_all_questions": "View all questions"
-    },
     "service_id": {
         "about_answeropedia": "14803",
         "how_to_edit": "2"

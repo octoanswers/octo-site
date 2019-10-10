@@ -25,7 +25,7 @@ class Show extends \PageController\PageController
         $this->_get_search_results();
 
         $this->template = 'search';
-        $this->pageTitle = $this->translator->get('search', 'page_title') . ': ' . $this->query . ' – ' . __('common.answeropedia');
+        $this->pageTitle = __('page_search.page_title') . ': ' . $this->query . ' – ' . __('common.answeropedia');
 
         $this->searchPlaceholder = $this->_get_search_placeholder($this->list);
         $this->showFooter = false;
@@ -60,13 +60,13 @@ class Show extends \PageController\PageController
     {
         switch ($list) {
             case self::LIST_QUESTIONS:
-                $placeholder = $this->translator->get('Search by questions');
+                $placeholder = __('page_search.placeholder.search_by_questions');
                 break;
             case self::LIST_CATEGORIES:
-                $placeholder = $this->translator->get('Search by categories');
+                $placeholder = __('page_search.placeholder.search_by_categories');
                 break;
             case self::LIST_USERS:
-                $placeholder = $this->translator->get('Search by contributors');
+                $placeholder = __('page_search.placeholder.search_by_contributors');
                 break;
             default:
                 throw new \Exception('Incorrect list param', 0);

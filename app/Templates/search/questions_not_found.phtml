@@ -1,11 +1,11 @@
 <?php if ($this->list == 'questions' && count($this->questions) == 0 && strlen($this->query) > 0) : ?>
     <div class="alert alert-secondary my-4">
 
-        <p class="font-weight-bold"><?= $this->translator->get('search', 'no_questions_found') ?></p>
-        <p><?= str_replace('%query%', $this->query, $this->translator->get('search', 'no_questions_found_msg')); ?></p>
+        <p class="font-weight-bold"><?= __('page_search.no_questions_found') ?></p>
+        <p><?= str_replace('%query%', $this->query, __('page_search.no_questions_found_msg')); ?></p>
 
         <a class="btn btn-primary mb-2" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>" role="button">
-            <?= $this->translator->get('search', 'view_all_questions') ?>
+            <?= __('page_search.view_all_questions') ?>
         </a>
     </div>
 <?php endif; ?>
