@@ -20,7 +20,7 @@
                         </span>
                     <?php endforeach; ?>
                     <a class="small text-black-50 text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
-                        <?= $this->translator->get('main', 'item__top_question', 'more') ?>
+                        <?= __('page_main.item__top_question.more') ?>
                     </a>
                 </div>
             <?php endif; ?>
@@ -45,7 +45,7 @@
                     <?= mb_substr($question->answer->text, 0, 150) ?><?= (mb_strlen($question->answer->text) > 150) ? '&hellip;' : '' ?>
                     <?php if (mb_strlen($question->answer->text) > 150) : ?>
                         <a class="text-secondary semi-small my-3" href="<?= $question->get_URL($this->lang) ?>">
-                            (<?= $this->translator->get('main', 'item__top_question', 'read_more') ?>)
+                            (<?= __('page_main.item__top_question.read_more') ?>)
                         </a>
                     <?php endif; ?>
                 </div>
