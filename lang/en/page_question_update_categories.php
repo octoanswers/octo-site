@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "page" => [
-        "title" => "Update categories",
+    'page' => [
+        'title' => 'Update categories',
     ],
 ];
