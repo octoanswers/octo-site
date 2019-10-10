@@ -1,5 +1,5 @@
 <?php
 
 return [
-    "page_prefix" => "Discussion of the answer:",
+    'page_prefix' => 'Discussion of the answer:',
 ];
