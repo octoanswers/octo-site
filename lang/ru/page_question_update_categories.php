@@ -4,5 +4,5 @@ return [
     'page' => [
         'title' => 'Обновление категорий',
     ],
-    "btn_update_categories" => "Обновить категории",
+    'btn_update_categories' => 'Обновить категории',
 ];
