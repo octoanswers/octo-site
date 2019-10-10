@@ -18,7 +18,7 @@ class Newest extends \PageController\PageController
 
         $this->template = 'categories';
         $this->pageTitle = $this->_get_page_title();
-        $this->pageDescription = $this->translator->get('categories', 'page_description');
+        $this->pageDescription = __('page_categories.page_description');
         $this->activeFilter = 'newest';
 
         if ((isset($this->categories[9])) && ($this->categories[9]->id > 1)) {
@@ -37,6 +37,6 @@ class Newest extends \PageController\PageController
 
     public function _get_page_title()
     {
-        return $this->translator->get('categories', 'new_categories') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
+        return __('page_categories.new_categories') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
     }
 }

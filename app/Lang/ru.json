@@ -20,14 +20,6 @@
 		"save": "Сохранить",
 		"unfollow": "Отписаться"
 	},
-	"categories": {
-		"add_categories": "Добавить категорию",
-		"more_categories": "Больше тем",
-		"new_categories": "Новые категории",
-		"page_description": "Вопросы по категориям",
-		"search_placeholder": "Поиск категорий",
-		"title": "Категории"
-	},
 	"category": {
 		"actions": {
 			"discuss_a_category": "Обсудить категорию",
