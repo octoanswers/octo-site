@@ -7,7 +7,7 @@
             <?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?>
         </button>
     <?php else : ?>
-        <button type="button" class="btn btn-sm btn-outline-gray mt-2 mr-2" data-container="body" data-toggle="popover" data-placement="top" data-content="<?= $this->translator->get('category', 'actions', 'follow_lure') ?>" data-trigger="focus">
+        <button type="button" class="btn btn-sm btn-outline-gray mt-2 mr-2" data-container="body" data-toggle="popover" data-placement="top" data-content="<?= __('category.actions.follow_lure') ?>" data-trigger="focus">
             <?= $this->translator->get('btn', 'follow'); ?>
         </button>
     <?php endif; ?>
@@ -22,18 +22,18 @@
 
             <?php if ($this->authUser) : ?>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_rename_category">
-                    <?= $this->translator->get('category', 'actions', 'rename_category') ?>
+                    <?= __('page_category.actions.rename_category') ?>
                 </a>
             <?php endif; ?>
 
             <a href="#" class="dropdown-item disabled" rel="nofollow">
-                <?= $this->translator->get('category', 'actions', 'report') ?>
+                <?= __('page_category.actions.report') ?>
             </a>
 
             <div class="dropdown-divider"></div>
 
             <a class="dropdown-item disabled" target="_blank" href="#">
-                <?= $this->translator->get('category', 'actions', 'discuss_a_category') ?>
+                <?= __('page_category.actions.discuss_a_category') ?>
             </a>
 
         </div>
