@@ -1,5 +1,5 @@
 <?php
 
 return [
-    "redirect_to" => " — redirect to:"
+    'redirect_to' => ' — redirect to:',
 ];
