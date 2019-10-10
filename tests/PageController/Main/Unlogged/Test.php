@@ -5,9 +5,9 @@ namespace Tests\PageController\Main\Unlogged;
 class Test extends \Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
-        'en' => ['questions', 'revisions', 'categories', 'er_categories_questions'],
-        'ru' => ['questions', 'revisions', 'categories', 'er_categories_questions'],
-        'users' => ['users']
+        'en'    => ['questions', 'revisions', 'categories', 'er_categories_questions'],
+        'ru'    => ['questions', 'revisions', 'categories', 'er_categories_questions'],
+        'users' => ['users'],
     ];
 
     public function test__Main_page()
