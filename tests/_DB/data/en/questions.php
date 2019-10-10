@@ -28,7 +28,7 @@ $pdo->query(
     (24, 'How to be project manager?', 0, NULL, 'Hmm, it`s a long-long story...', 30, '2015-11-29 09:28:34', 0),
     (25, 'What`s iPhone 6 price?', 0, NULL, 'Это второй ответ длинна которого составляет более 50 символов.', 62, '2015-11-29 09:28:34', 0),
     (26, 'What is the biggest ID number in MySQL?', 0, NULL, NULL, 0, '2015-11-29 09:28:34', 0),
-    (27, 'Atheism or humanism?', 0, NULL, NULL, 0, '2015-11-29 09:28:34', 0),
+    (27, 'What does FILE_NAME mean?', 0, NULL, NULL, 0, '2015-11-29 09:28:34', 0),
     (28, 'Do you like iPhone 6?', 0, NULL, NULL, 0, '2015-11-29 09:28:34', 0),
     (29, 'What is main president daily function?', 0, NULL, 'Oh, he make some work.', 22, '2015-11-29 09:28:34', 0);"
 );

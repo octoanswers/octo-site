@@ -1,20 +1,17 @@
 <?php
 
-namespace Tests\PageController\Main\Unlogged;
+namespace Tests\PageController\Search;
 
 class Test extends \Abstract_Frontend_TestCase
 {
-    protected $setUpDB = [
-        'en'    => ['questions', 'revisions', 'categories', 'er_categories_questions'],
-        'ru'    => ['questions', 'revisions', 'categories', 'er_categories_questions'],
-        'users' => ['users'],
-    ];
+    protected $setUpDB = ['en' => ['questions']];
 
-    public function test__Show_main_page()
+    public function test__Base_query()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en',
+            'REQUEST_URI'    => '/en/search',
+            'QUERY_STRING'   => 'q=Apple',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
@@ -22,24 +19,32 @@ class Test extends \Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Answeropedia – Ask a question and get one complete answer', $response_body);
+        $this->assertStringContainsString('Search: Apple – Answeropedia', $response_body);
 
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
 
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__That_RU_page_is_exists()
+    public function test__Empty_query_params()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru',
+            'REQUEST_URI'    => '/en/search',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
 
         $response = $this->app->run(true);
+        $response_body = (string) $response->getBody();
+
+        $this->assertStringContainsString('Search:  – Answeropedia', $response_body);
+
+        $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
+        $this->assertStringNotContainsString('Notice:', $response_body);
+        $this->assertStringNotContainsString('Warning:', $response_body);
 
         $this->assertSame(200, $response->getStatusCode());
     }

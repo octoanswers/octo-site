@@ -1,20 +1,19 @@
 <?php
 
-namespace Tests\PageController\Main\Unlogged;
+namespace Test\PageController\Category\Show;
 
 class Test extends \Abstract_Frontend_TestCase
 {
     protected $setUpDB = [
-        'en'    => ['questions', 'revisions', 'categories', 'er_categories_questions'],
-        'ru'    => ['questions', 'revisions', 'categories', 'er_categories_questions'],
-        'users' => ['users'],
+        'en' => ['questions', 'categories', 'revisions', 'er_categories_questions', 'er_users_follow_categories'],
+        'ru' => ['questions', 'categories', 'revisions', 'er_categories_questions', 'er_users_follow_categories']
     ];
 
-    public function test__Show_main_page()
+    public function test__Show_EN_page()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en',
+            'REQUEST_URI'    => '/en/category/Cashmere',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
@@ -22,7 +21,7 @@ class Test extends \Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Answeropedia – Ask a question and get one complete answer', $response_body);
+        $this->assertStringContainsString('Category: Cashmere – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);
@@ -30,11 +29,11 @@ class Test extends \Abstract_Frontend_TestCase
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__That_RU_page_is_exists()
+    public function test__Show_RU_page()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru',
+            'REQUEST_URI'    => '/ru/category/Птицы',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;

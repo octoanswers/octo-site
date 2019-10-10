@@ -10,7 +10,7 @@ class Test extends \Abstract_Frontend_TestCase
         'users' => ['users']
     ];
 
-    public function test__Questions_page()
+    public function test__Show_questions_page()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',

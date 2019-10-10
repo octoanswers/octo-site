@@ -1,14 +1,19 @@
 <?php
 
-class Show_User_PageController__Test extends Abstract_Frontend_TestCase
-{
-    protected $setUpDB = ['ru' => ['questions', 'revisions', 'er_users_follow_users'], 'users' => ['users']];
+namespace Tests\PageController\Root\Show;
 
-    public function test__RuPage()
+class Test extends \Abstract_Frontend_TestCase
+{
+    protected $setUpDB = [
+        'ru' => ['questions', 'revisions', 'categories'],
+        'users' => ['users']
+    ];
+
+    public function testBase()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/@kozel',
+            'REQUEST_URI'    => '/',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
@@ -16,7 +21,7 @@ class Show_User_PageController__Test extends Abstract_Frontend_TestCase
         $response = $this->app->run(true);
         $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Виталий Козлов Вики-ответы на Answeropedia', $response_body);
+        $this->assertStringContainsString('Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('NEED_TRANSLATE', $response_body);
         $this->assertStringNotContainsString('Notice:', $response_body);
