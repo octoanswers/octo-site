@@ -126,40 +126,6 @@
 			"designed_and_built": "Сайт разработан с ♥ командой <a class=\"text-dark\" href=\"https://github.com/orgs/answeropedia/people\">Ансверопедии</a>, при поддержке <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/graphs/contributors\">контрибъюторов</a>."
 		}
 	},
-	"main": {
-		"how_it_works": {
-			"step_1_msg": "Вы задаете вопрос на любую интересующую вас тему.",
-			"step_2_msg": "Мы находим специалистов, которые могут написать компетентный ответ.",
-			"step_3_msg": "Вы получаете один полный и исчерпывающий ответ.",
-			"title": "Как это работает"
-		},
-		"item__top_question": {
-			"downvote": "Плохой",
-			"more": "Ещё",
-			"read_more": "Читать далее",
-			"updated_answer": "Обновил ответ",
-			"upvote": "Хороший ответ"
-		},
-		"jumbotron": {
-			"btn_get_started": "Давайте начнём!",
-			"btn_learn_more": "Узнать больше",
-			"header_1": "Компетентный и полный ответ",
-			"header_2": "на любой ваш вопрос.",
-			"text": "Answeropedia — это как Википедия, только для вопросов и ответов."
-		},
-		"sections": {
-			"title": "Разделы"
-		},
-		"share_link": {
-			"note": "Вы можете помочь проекту Answeropedia, просто поделившись со своими друзьями ссылкой на него.",
-			"title": "Поделиться ссылкой"
-		},
-		"slogan": "Задайте вопрос и получите один исчерпывающий ответ",
-		"top_content": {
-			"title": "Избранные вопросы на Ансверопедии",
-			"view_all": "Посмотреть все"
-		}
-	},
 	"modal": {
 		"ask": {
 			"btn_ask": "Задать вопрос",
@@ -204,21 +170,6 @@
 		"sandbox": "Песочница",
 		"search_placeholder": "Поиск…",
 		"signup": "Регистрация"
-	},
-	"navbar_subnav": {
-		"feed": "Подписки",
-		"how_it_works": "Как это работает",
-		"popular_categories": "Категории",
-		"questions": "Новые вопросы",
-		"random_question": "Случайный вопрос",
-		"recent_changes": "Свежие правки",
-		"sandbox": "Песочница"
-	},
-	"other_languages": {
-		"all_languages": "Все языки",
-		"english": "Английский",
-		"russian": "Русский",
-		"title": "На других языках"
 	},
 	"page": "Страница",
 	"page__404": {

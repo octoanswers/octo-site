@@ -1,11 +1,10 @@
 <?php if (isset($this->top_questions) && count($this->top_questions)) : ?>
 
     <div class="border rounded p-3 bg-white">
-        <?= $this->translator->get('main', 'top_content', 'title') ?>
-        <?= __('common.answeropedia'); ?>
+        <?= __('page_main.top_content.title') ?>
 
         <a class="float-right text-black-50 text-decoration-none" href="#">
-            <?= $this->translator->get('main', 'top_content', 'view_all') ?>
+            <?= __('page_main.top_content.view_all') ?>
         </a>
     </div>
 
@@ -30,7 +29,7 @@
                         </span>
                     <?php endforeach; ?>
                     <a class="small text-black-50 text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
-                        <?= $this->translator->get('main', 'item__top_question', 'more') ?>
+                        <?= __('page_main.item__top_question.more') ?>
                     </a>
                 </div>
             <?php endif; ?>
@@ -67,7 +66,7 @@
 
 
                         <div class="small text-black-50 mt-2">
-                            <?= $this->translator->get('main', 'item__top_question', 'updated_answer') ?>: <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+                            <?= __('page_main.item__top_question.updated_answer') ?>: <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
                         </div>
                     </div>
                 </div>
@@ -85,7 +84,7 @@
                     <?= mb_substr($question->answer->text, 0, 150) ?><?= (mb_strlen($question->answer->text) > 150) ? '&hellip;' : '' ?>
                     <?php if (mb_strlen($question->answer->text) > 150) : ?>
                         <a class="text-secondary semi-small my-3" href="<?= $question->get_URL($this->lang) ?>">
-                            (<?= $this->translator->get('main', 'item__top_question', 'read_more') ?>)
+                            (<?= __('page_main.item__top_question.read_more') ?>)
                         </a>
                     <?php endif; ?>
                 </div>
@@ -96,7 +95,7 @@
 
                 <button type="button" class="btn btn-sm btn-outline-gray mr-3">
                     <i class="material-icons md-14">thumb_up</i>
-                    <?= $this->translator->get('main', 'item__top_question', 'upvote') ?>
+                    <?= __('page_main.item__top_question.upvote') ?>
                 </button>
 
                 <?php if (count($contributors) > 1) : ?>
@@ -112,9 +111,10 @@
 
                 <!-- time to read -->
                 <?php if (strlen($question->answer->text)) : ?>
-                    <span class="semi-small text-black-50" title="<?= $this->translator->get('Minutes to read') ?>">
+                    <span class="semi-small text-black-50">
                         <i class="material-icons md-14">access_time</i>
-                        <?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
+                        <?= $question->get_minutes_to_read() ?>&nbsp;<?= trans_choice('common.minutes_choice', $question->get_minutes_to_read()); ?>
+
                     </span>
                 <?php endif; ?>
                 <!-- / time to read -->

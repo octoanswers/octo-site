@@ -6,28 +6,28 @@
 
                 <!-- / H1 for mobile -->
                 <h1 class="jumbotron-title d-lg-none mb-4">
-                    <?= $this->translator->get('main', 'jumbotron', 'header_1') ?> <span class="font-weight-light"><?= $this->translator->get('main', 'jumbotron', 'header_2') ?></span>
+                    <?= __('page_main.jumbotron.header_1') ?> <span class="font-weight-light"><?= __('page_main.jumbotron.header_2') ?></span>
                 </h1>
                 <!-- / H1 for mobile -->
 
                 <!-- H1 for desktop -->
                 <h1 class="jumbotron-title d-none d-lg-block text-center my-4">
-                    <?= $this->translator->get('main', 'jumbotron', 'header_1') ?><br />
-                    <span class="font-weight-light"><?= $this->translator->get('main', 'jumbotron', 'header_2') ?></span>
+                    <?= __('page_main.jumbotron.header_1') ?><br />
+                    <span class="font-weight-light"><?= __('page_main.jumbotron.header_2') ?></span>
                 </h1>
                 <!-- / H1 for desktop -->
 
                 <div class="lead d-none d-md-block text-md-center text-black mt-5 mb-3 py-md-2">
-                    <?= $this->translator->get('main', 'jumbotron', 'text') ?>
+                    <?= __('page_main.jumbotron.text') ?>
                 </div>
 
                 <div class="text-md-center mr-5">
                     <a class="btn btn-lg btn-primary mr-3 mr-lg-4" href="#" data-toggle="modal" data-target="#modal_signup">
-                        <?= $this->translator->get('main', 'jumbotron', 'btn_get_started') ?>
+                        <?= __('page_main.jumbotron.btn_get_started') ?>
                     </a>
                     <?php if ($this->question_about_answeropedia) : ?>
                         <a class="text-dark" href="<?= $this->question_about_answeropedia->get_URL($this->lang) ?>">
-                            <?= $this->translator->get('main', 'jumbotron', 'btn_learn_more') ?>
+                            <?= __('page_main.jumbotron.btn_learn_more') ?>
                         </a>
                     <?php endif; ?>
                 </div>

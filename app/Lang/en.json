@@ -127,40 +127,6 @@
             "designed_and_built": "Designed and built with ♥ by the <a class=\"text-dark\" href=\"https://github.com/orgs/answeropedia/people\">Answeropedia team</a> with the help of <a class=\"text-dark\" href=\"https://github.com/answeropedia/answeropedia/graphs/contributors\">our contributors</a>."
         }
     },
-    "main": {
-        "how_it_works": {
-            "step_1_msg": "You ask a question about any category of interest to you.",
-            "step_2_msg": "We find a specialist who can give a competent answer.",
-            "step_3_msg": "You receive one complete, comprehensive and competent answer.",
-            "title": "How it works"
-        },
-        "item__top_question": {
-            "downvote": "Downvote",
-            "more": "More",
-            "read_more": "Read more",
-            "updated_answer": "Updated answer",
-            "upvote": "Upvote"
-        },
-        "jumbotron": {
-            "btn_get_started": "Get Started!",
-            "btn_learn_more": "Learn More",
-            "header_1": "One complete &amp; competent answer",
-            "header_2": "to any question.",
-            "text": "Answeropedia is like Wikipedia, only for questions and answers."
-        },
-        "sections": {
-            "title": "Sections"
-        },
-        "share_link": {
-            "note": "You can help the Answeropedia project by simply sharing your link with your friends.",
-            "title": "Share link"
-        },
-        "slogan": "Ask a question and get one complete answer",
-        "top_content": {
-            "title": "Top content on Answeropedia",
-            "view_all": "View all"
-        }
-    },
     "modal": {
         "ask": {
             "btn_ask": "Ask a question",
@@ -206,21 +172,6 @@
         "sandbox": "Sandbox",
         "search_placeholder": "Search…",
         "signup": "Sign up"
-    },
-    "navbar_subnav": {
-        "feed": "Feed",
-        "how_it_works": "How it works",
-        "popular_categories": "Categories",
-        "questions": "New questions",
-        "random_question": "Random question",
-        "recent_changes": "Recent changes",
-        "sandbox": "Sandbox"
-    },
-    "other_languages": {
-        "all_languages": "All languages",
-        "english": "English",
-        "russian": "Russian",
-        "title": "Languages"
     },
     "page": "Page",
     "page__404": {

@@ -38,7 +38,7 @@
 				<?php if (strlen($question->answer->text)) : ?>
 					<span class="semi-small text-black-50">
 						<i class="material-icons md-14">subject</i>
-						<?= $question->get_minutes_to_read() ?>&nbsp;<?= $this->translator->get('min') ?>
+						<?= $question->get_minutes_to_read() ?>&nbsp;<?= trans_choice('common.minutes_choice', $question->get_minutes_to_read()); ?>
 					</span>
 				<?php endif; ?>
 				<!-- / time to read -->
