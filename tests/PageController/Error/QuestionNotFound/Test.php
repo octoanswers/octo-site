@@ -1,12 +1,14 @@
 <?php
 
-class PageController_Error_PageNotFound__en__Test extends Abstract_Frontend_TestCase
+class PageController_QuestionNotFound_base_Test extends Abstract_Frontend_TestCase
 {
+    protected $setUpDB = ['ru' => ['questions']];
+
     public function test_Base()
     {
         $environment = \Slim\Http\Environment::mock([
             'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/settings/some_unfounded_page',
+            'REQUEST_URI'    => '/en/Some_unfounded_question',
         ]);
         $request = \Slim\Http\Request::createFromEnvironment($environment);
         $this->app->getContainer()['request'] = $request;
@@ -14,7 +16,7 @@ class PageController_Error_PageNotFound__en__Test extends Abstract_Frontend_Test
         $response = $this->app->run(true);
         $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Страница не найдена – Answeropedia', $response_body);
+        $this->assertStringContainsString('Question not found – Some unfounded question? – Answeropedia', $response_body);
 
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);

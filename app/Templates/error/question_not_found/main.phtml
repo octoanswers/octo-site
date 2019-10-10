@@ -1,16 +1,16 @@
 <div class="mb-5 mt-4">
 
-    <p class="lead font-weight-bold text-danger mb-1"><?= $this->translator->get('error_page', 'question_not_found', 'title') ?>!</p>
+    <p class="lead font-weight-bold text-danger mb-1"><?= __('page_error.question_not_found.title') ?>!</p>
     <h1 class="mt-0">
         <?= $this->questionTitle ?>
     </h1>
 
     <div class="my-5">
         <a rel="nofollow" class="btn btn-primary" href="#" role="button">
-            <?= $this->translator->get('error_page', 'question_not_found', 'btn_ask') ?>
+            <?= __('page_error.question_not_found.btn_ask') ?>
         </a>
         <a class="btn btn-outline-secondary" href="#" role="button" onclick="window.history.go(-1); return false;">
-            <?= $this->translator->get('error_page', 'question_not_found', 'btn_go_back') ?>
+            <?= __('page_error.question_not_found.btn_go_back') ?>
         </a>
     </div>
 

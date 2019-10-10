@@ -14,37 +14,37 @@
                     <ul class="list-inline font-weight-bold semi-small mb-3">
                         <li class="list-inline-item">
                             <a href="<?= \Helper\URL\Page::get_main_URL($this->lang) ?>" class="text-black-50 text-decoration-none">
-                                <?= $this->translator->get('footer', 'nav', 'main_page') ?>
+                                <?= __('footer.nav.main_page') ?>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="text-black-50 text-decoration-none" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
-                                <?= $this->translator->get('footer', 'nav', 'questions') ?>
+                                <?= __('footer.nav.questions') ?>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="text-black-50 text-decoration-none" href="<?= \Helper\URL\Users::get_newest_URL($this->lang) ?>">
-                                <?= $this->translator->get('footer', 'nav', 'users') ?>
+                                <?= __('footer.nav.users') ?>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="text-black-50 text-decoration-none" href="<?= SITE_URL . '/' . $this->lang . '/2' ?>">
-                                <?= $this->translator->get('footer', 'nav', 'rules') ?>
+                                <?= __('footer.nav.rules') ?>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="text-black-50 text-decoration-none" rel="nofollow" target="_blank" href="https://github.com/answeropedia/feedback">
-                                <?= $this->translator->get('footer', 'nav', 'support') ?>
+                                <?= __('footer.nav.support') ?>
                             </a>
                         </li>
                     </ul>
 
                     <div class="">
                         <p class="small text-black-50 mb-1">
-                            <?= $this->translator->get('footer', 'note', 'designed_and_built') ?>
+                            <?= __('footer.note.designed_and_built') ?>
                         </p>
                         <p class="small text-black-50 mb-4">
-                            <?= $this->translator->get('footer', 'note', 'code_licensed') ?>
+                            <?= __('footer.note.code_licensed') ?>
                         </p>
                     </div>
                 </div>

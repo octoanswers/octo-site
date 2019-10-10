@@ -1,8 +1,7 @@
-
 <div class="mb-5">
     <p class="lead text-muted mb-1">
-        <strong><?= $this->question->title ?></strong> 
-        <?= $this->translator->get('question_redirect', 'redirect_to') ?>
+        <strong><?= $this->question->title ?></strong>
+        <?= __('page_question_redirect.redirect_to') ?>
     </p>
     <h1 class="mt-0">
         <a class="text-decoration-none" href="<?= $this->questionRedirect->get_URL($this->lang) ?>">
@@ -10,5 +9,3 @@
         </a>
     </h1>
 </div>
-
-

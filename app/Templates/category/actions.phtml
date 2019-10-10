@@ -3,12 +3,12 @@
 
     <!-- follow_btn -->
     <?php if ($this->authUser) : ?>
-        <button class="btn btn-sm follow_category_button mt-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>" data-category-id="<?= $this->category->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
-            <?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?>
+        <button class="btn btn-sm follow_category_button mt-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-primary'; ?>" data-category-id="<?= $this->category->id ?>" data-follow-title="<?= __('common.btn.follow') ?>" data-followed-title="<?= __('common.btn.followed') ?>" data-unfollow-title="<?= __('common.btn.unfollow') ?>" type="button">
+            <?= $this->followed ? __('common.btn.followed') : __('common.btn.follow'); ?>
         </button>
     <?php else : ?>
         <button type="button" class="btn btn-sm btn-outline-gray mt-2 mr-2" data-container="body" data-toggle="popover" data-placement="top" data-content="<?= __('category.actions.follow_lure') ?>" data-trigger="focus">
-            <?= $this->translator->get('btn', 'follow'); ?>
+            <?= __('common.btn.follow'); ?>
         </button>
     <?php endif; ?>
     <!-- / follow_btn -->

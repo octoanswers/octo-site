@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= $this->translator->get('modal', 'question_rename', 'title') ?>
+                    <?= __('modals.question_rename.title') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -14,7 +14,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label class="semi-small text-secondary mb-3">
-                            <?= $this->translator->get('modal', 'question_rename', 'note') ?>
+                            <?= __('modals.question_rename.note') ?>
                         </label>
                         <input id="new_title" class="form-control" type="text" value="<?= $this->question->title ?>">
                     </div>
@@ -22,14 +22,14 @@
                         <label class="form-check-label mt-1">
                             <input id="save_redirect" type="checkbox" class="form-check-input" checked>
                             <span class="semi-small text-secondary">
-                                <?= $this->translator->get('modal', 'question_rename', 'leave_redirect') ?>
+                                <?= __('modals.question_rename.leave_redirect') ?>
                             </span>
                         </label>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="form__rename_question__submit" class="btn btn-primary">
-                        <?= $this->translator->get('modal', 'question_rename', 'btn_action') ?>
+                        <?= __('modals.question_rename.btn_action') ?>
                     </button>
                 </div>
             </form>

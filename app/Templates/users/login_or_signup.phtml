@@ -1,15 +1,15 @@
 <?php if (!$this->authUser) : ?>
     <div class="alert alert-warning mt-2 p-3">
-        <p class="alert-heading"><strong><?= $this->translator->get('common_blocks', 'sign_up', 'title') ?></strong></p>
+        <p class="alert-heading"><strong><?= __('common.sign_up.title') ?></strong></p>
 
-        <p class="semi-small"><?= $this->translator->get('common_blocks', 'sign_up', 'text') ?></p>
+        <p class="semi-small"><?= __('common.sign_up.text') ?></p>
 
         <div class="mt-4">
             <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal_login">
-                <?= $this->translator->get('common_blocks', 'sign_up', 'btn_log_in') ?>
+                <?= __('common.sign_up.btn_log_in') ?>
             </a>
             <a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#modal_signup">
-                <?= $this->translator->get('common_blocks', 'sign_up', 'btn_sign_up') ?>
+                <?= __('common.sign_up.btn_sign_up') ?>
             </a>
         </div>
     </div>

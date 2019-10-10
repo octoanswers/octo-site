@@ -7,7 +7,7 @@
     </div>
     <div class="width-full">
         <div class="text-muted mb-3">
-            <?= $this->translator->get('activity', 'question_updated_answer') ?>:
+            <?= __('item_activity.question_updated_answer') ?>:
             <a class="text-dark font-weight-bold" href="<?= $data['question']['url'] ?>"><?= $data['question']['title'] ?></a>
         </div>
         <pre><?= $data['revision']['diff_text'] ?></pre>

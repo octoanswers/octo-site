@@ -1,15 +1,15 @@
 <div class="mb-5 mt-4">
 
     <p class="lead text-muted mb-1">
-        <?= $this->translator->get('page__404', 'error_404') ?>
+        <?= __('page_error.404.error_404') ?>
     </p>
     <h1 class="mt-0 text-danger">
-        <?= $this->translator->get('page__404', 'title') ?>
+        <?= __('page_error.404.title') ?>
     </h1>
 
     <div class="my-5">
         <a class="btn btn-outline-secondary" href="#" role="button" onclick="window.history.go(-1); return false;">
-            <?= $this->translator->get('page__404', 'btn_go_back') ?>
+            <?= __('page_error.404.btn_go_back') ?>
         </a>
     </div>
 

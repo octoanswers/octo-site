@@ -18,12 +18,12 @@
 
     <!-- follow_btn -->
     <?php if ($this->authUser) : ?>
-        <button class="btn btn-sm follow_question_button my-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-gray'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= $this->translator->get('btn', 'follow') ?>" data-followed-title="<?= $this->translator->get('btn', 'followed') ?>" data-unfollow-title="<?= $this->translator->get('btn', 'unfollow') ?>" type="button">
-            <?= $this->followed ? $this->translator->get('btn', 'followed') : $this->translator->get('btn', 'follow'); ?>
+        <button class="btn btn-sm follow_question_button my-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-gray'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= __('common.btn.follow') ?>" data-followed-title="<?= __('common.btn.followed') ?>" data-unfollow-title="<?= __('common.btn.unfollow') ?>" type="button">
+            <?= $this->followed ? __('common.btn.followed') : __('common.btn.follow'); ?>
         </button>
     <?php else : ?>
         <button type="button" class="btn btn-sm btn-outline-gray my-2 mr-2" data-toggle="modal" data-target="#modal__follow_question_lure">
-            <?= $this->translator->get('btn', 'follow'); ?>
+            <?= __('common.btn.follow'); ?>
         </button>
         <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/follow_question.phtml' ?>
     <?php endif; ?>

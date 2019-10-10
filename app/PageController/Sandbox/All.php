@@ -48,12 +48,12 @@ class All extends \PageController\PageController
 
     public function _get_page_title()
     {
-        return __('page_sandbox.title') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
+        return __('page_sandbox.title') . ' – ' . __('common.page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
     }
 
     public function _get_page_description(): string
     {
-        $description = __('page_sandbox.title') . ' – ' . $this->translator->get('page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
+        $description = __('page_sandbox.title') . ' – ' . __('common.page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
 
         return $description;
     }

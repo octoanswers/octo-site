@@ -1,34 +1,33 @@
-
 <!-- Modal -->
 <div class="modal fade" id="modal_rename_category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <?= $this->translator->get('modal', 'category_rename', 'title') ?>
+                    <?= __('modals.category_rename.title') ?>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div> 
+            </div>
             <form id="form__rename_category" data-category-id="<?= $this->category->id ?>">
                 <div class="modal-body">
                     <div class="form-group">
                         <label>
-                            <?= $this->translator->get('modal', 'category_rename', 'note') ?>
+                            <?= __('modals.category_rename.note') ?>
                         </label>
                         <input class="form-control" id="new_title" rows="6" value="<?= $this->category->title ?>">
                     </div>
                     <div class="form-check">
                         <label class="form-check-label mt-1">
                             <input id="save_redirect" type="checkbox" class="form-check-input" checked>
-                            <?= $this->translator->get('modal', 'category_rename', 'leave_redirect') ?>
+                            <?= __('modals.category_rename.leave_redirect') ?>
                         </label>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="form__rename_category__submit" class="btn btn-primary">
-                        <?= $this->translator->get('modal', 'category_rename', 'btn_rename_category') ?>
+                        <?= __('modals.category_rename.btn_rename_category') ?>
                     </button>
                 </div>
             </form>
