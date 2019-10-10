@@ -173,10 +173,5 @@
         "site_note": "Enter the address of your website or page on the social network.",
         "site_title": "Site",
         "title": "Settings"
-    },
-    "users": {
-        "new_users_msg": "New users from around the world",
-        "search_placeholder": "Search contributors",
-        "title": "Contributors"
     }
 }
