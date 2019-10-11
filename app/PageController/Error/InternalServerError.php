@@ -9,9 +9,7 @@ class InternalServerError extends \PageController\PageController
 {
     public function handle(string $lang, Request $request, Response $response, $args): Response
     {
-        // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new \Helper\Translator\Translator('en', ROOT_PATH . '/app/Lang');
 
         $this->template = 'error/500';
         $this->pageTitle = __('page_error.internal_server_error.page_title') . ' – ' . __('common.answeropedia');

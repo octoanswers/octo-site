@@ -9,9 +9,7 @@ class QuestionNotFound extends \PageController\PageController
 {
     public function handle(string $lang, Request $request, Response $response, $args): Response
     {
-        // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
-        $this->translator = new \Helper\Translator\Translator($this->lang, ROOT_PATH . '/app/Lang');
 
         $question_URI = $args['question_uri'];
 
