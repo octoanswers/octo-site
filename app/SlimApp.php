@@ -11,7 +11,7 @@ $GLOBALS['lang_code'] = \Helper\Lang::get_lang_code_from_URI();
 $file_system = new \Illuminate\Filesystem\Filesystem();
 $loader = new \Illuminate\Translation\FileLoader($file_system, ROOT_PATH . '/lang');
 
-// Register the English translator
+// Register the Translator
 $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
 
 class SlimApp
