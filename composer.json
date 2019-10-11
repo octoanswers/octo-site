@@ -14,9 +14,9 @@
     "erusev/parsedown": "^1.6",
     "respect/validation": "^1.1",
     "jblond/php-diff": "^1.12",
-    "verot/class.upload.php": "^2.0.2",
+    "verot/class.upload.php": "^2.0",
     "cogpowered/finediff": "^0.3.1",
-    "illuminate/translation": "^5.5"
+    "illuminate/translation": "^6.2"
   },
   "autoload": {
     "psr-4": {

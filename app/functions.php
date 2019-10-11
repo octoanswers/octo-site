@@ -24,11 +24,7 @@ if (!function_exists('trans')) {
      */
     function trans($key = null, $replace = [], $locale = null)
     {
-        if (is_null($key)) {
-            return $GLOBALS['illuminate_translation'];
-        }
-
-        return $GLOBALS['illuminate_translation']->trans($key, $replace, $locale);
+        return $GLOBALS['illuminate_translation']->get($key, $replace, $locale);
     }
 }
 
@@ -45,7 +41,7 @@ if (!function_exists('trans_choice')) {
      */
     function trans_choice($key, $number, array $replace = [], $locale = null)
     {
-        return $GLOBALS['illuminate_translation']->transChoice($key, $number, $replace, $locale);
+        return $GLOBALS['illuminate_translation']->choice($key, $number, $replace, $locale);
     }
 }
 
@@ -61,6 +57,6 @@ if (!function_exists('__')) {
      */
     function __($key, $replace = [], $locale = null)
     {
-        return $GLOBALS['illuminate_translation']->getFromJson($key, $replace, $locale);
+        return $GLOBALS['illuminate_translation']->get($key, $replace, $locale);
     }
 }
