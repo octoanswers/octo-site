@@ -12,8 +12,7 @@ class WithoutAnswers extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        parent::handleRequest($request, $response, $args);
-
+        $this->lang = $args['lang'];
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 
         $this->questionsCount = (new \Query\QuestionsCount($this->lang))->count_questions_without_answers();

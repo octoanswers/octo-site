@@ -9,7 +9,7 @@ class Show extends \PageController\PageController
     // @TODO Deprecated
     public function handleByID($request, $response, $args)
     {
-        parent::handleRequest($request, $response, $args);
+        $this->lang = $args['lang'];
 
         $questionID = $args['id'];
 
@@ -24,7 +24,7 @@ class Show extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        parent::handleRequest($request, $response, $args);
+        $this->lang = $args['lang'];
 
         $question_URI = $args['question_uri'];
 

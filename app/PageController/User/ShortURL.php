@@ -6,12 +6,11 @@ class ShortURL extends \PageController\PageController
 {
     public function handle($request, $response, $args)
     {
-        parent::handleRequest($request, $response, $args);
-
-        $userID = (int) $args['id'];
+        $this->lang = $args['lang'];
+        $this->user_ID = (int) $args['id'];
 
         try {
-            $user = (new \Query\User())->user_with_ID($userID);
+            $user = (new \Query\User())->user_with_ID($this->user_ID);
         } catch (\Throwable $e) {
             return (new \PageController\Error\PageNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }

@@ -6,8 +6,7 @@ class Show extends \PageController\PageController
 {
     public function handle($request, $response, $args)
     {
-        parent::handleRequest($request, $response, $args);
-
+        $this->lang = $args['lang'];
         $this->username = $args['username'];
 
         $this->user = (new \Query\User())->user_with_username($this->username);

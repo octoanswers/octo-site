@@ -15,10 +15,8 @@ class Show extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        parent::handleRequest($request, $response, $args);
-
+        $this->lang = $args['lang'];
         $this->query = (string) $request->getParam('q');
-
         $this->list = (string) $request->getParam('list');
         $this->list = $this->_normalize_list($this->list);
 

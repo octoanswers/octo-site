@@ -12,8 +12,7 @@ class All extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        parent::handleRequest($request, $response, $args);
-
+        $this->lang = $args['lang'];
         $this->list = 'newest';
         $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 1;
 

@@ -9,7 +9,6 @@ class PageNotFound extends \PageController\PageController
 {
     public function handle(string $lang, Request $request, Response $response, $args): Response
     {
-        // Don`t execute parent::handleRequest. Method have specific args.
         $this->lang = $lang;
 
         $this->template = 'error/404';

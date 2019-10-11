@@ -34,12 +34,6 @@ abstract class PageController
         $this->_init_common_JS();
     }
 
-    // handleRequest name set by Slim framework
-    public function handleRequest($request, $response, $args)
-    {
-        $this->lang = $args['lang'];
-    }
-
     protected function render_page()
     {
         if (!$this->template) {

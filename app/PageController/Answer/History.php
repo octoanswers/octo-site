@@ -13,7 +13,7 @@ class History extends \PageController\PageController
 
     public function handle(Request $request, Response $response, $args): Response
     {
-        parent::handleRequest($request, $response, $args);
+        $this->lang = $args['lang'];
 
         $answer_ID = $args['id'];
 
