@@ -4,7 +4,7 @@ namespace Renderer;
 
 class Page
 {
-    public function render(string $template, \DTO\ViewData\Basic $view_data): string
+    public static function render(string $template, \DTO\ViewData\Basic $view_data): string
     {
         if (!$template) {
             throw new \Exception('Page template not set!', 1);
