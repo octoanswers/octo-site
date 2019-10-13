@@ -3,8 +3,8 @@
 class CategoriesIDFollow_POST_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
-        'ru' => ['activities', 'categories', 'er_users_follow_categories'],
-        'users' => ['users']
+        'ru'    => ['activities', 'categories', 'er_users_follow_categories'],
+        'users' => ['users'],
     ];
 
     public function test__Category_followed()

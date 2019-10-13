@@ -3,8 +3,8 @@
 class APIController_POST_Categories__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'categories', 'activities', 'er_categories_questions'],
-        'users' => ['users']
+        'ru'    => ['questions', 'categories', 'activities', 'er_categories_questions'],
+        'users' => ['users'],
     ];
 
     public function test__Post_one_category()

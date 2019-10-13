@@ -5,8 +5,8 @@ namespace Tests\PageController\Sandbox\All;
 class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
-        'en' => ['questions', 'categories', 'revisions', 'redirects_questions'],
-        'ru' => ['questions', 'categories', 'revisions', 'redirects_questions'],
+        'en'    => ['questions', 'categories', 'revisions', 'redirects_questions'],
+        'ru'    => ['questions', 'categories', 'revisions', 'redirects_questions'],
         'users' => ['users'],
     ];
 

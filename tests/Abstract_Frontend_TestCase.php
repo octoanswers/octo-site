@@ -9,9 +9,9 @@ use Psr\Http\Message\UriInterface;
 use Slim\Psr7\Factory\ServerRequestFactory;
 
 /**
- * Inspired by https://github.com/odan/slim4-skeleton/blob/master/tests/TestCase/HttpTestTrait.php
+ * Inspired by https://github.com/odan/slim4-skeleton/blob/master/tests/TestCase/HttpTestTrait.php.
  */
-abstract class TestCase extends \Tests\DB\TestCase
+abstract class Abstract_Frontend_TestCase extends \Tests\DB\TestCase
 {
     protected $app;
 
@@ -32,9 +32,9 @@ abstract class TestCase extends \Tests\DB\TestCase
     /**
      * Create a server request.
      *
-     * @param string $method The HTTP method
-     * @param string|UriInterface $uri The URI
-     * @param array $serverParams The server parameters
+     * @param string              $method       The HTTP method
+     * @param string|UriInterface $uri          The URI
+     * @param array               $serverParams The server parameters
      *
      * @return ServerRequestInterface
      */
@@ -43,12 +43,13 @@ abstract class TestCase extends \Tests\DB\TestCase
         // A phpunit fix #3026
         if (!isset($_SERVER['REQUEST_URI'])) {
             $_SERVER = [
-                'SCRIPT_NAME' => '/public/index.php',
+                'SCRIPT_NAME'        => '/public/index.php',
                 'REQUEST_TIME_FLOAT' => microtime(true),
-                'REQUEST_TIME' => (int) microtime(true),
+                'REQUEST_TIME'       => (int) microtime(true),
             ];
         }
         $factory = new ServerRequestFactory();
+
         return $factory->createServerRequest($method, $uri, $serverParams);
     }
 
@@ -56,7 +57,7 @@ abstract class TestCase extends \Tests\DB\TestCase
      * Add post data.
      *
      * @param ServerRequestInterface $request The request
-     * @param mixed[] $data The data
+     * @param mixed[]                $data    The data
      *
      * @return ServerRequestInterface
      */
@@ -65,6 +66,7 @@ abstract class TestCase extends \Tests\DB\TestCase
         if (!empty($data)) {
             $request = $request->withParsedBody($data);
         }
+
         return $request->withHeader('Content-Type', 'application/x-www-form-urlencoded');
     }
 
@@ -72,7 +74,7 @@ abstract class TestCase extends \Tests\DB\TestCase
      * Add Json data.
      *
      * @param ServerRequestInterface $request The request
-     * @param mixed[] $data The data
+     * @param mixed[]                $data    The data
      *
      * @return ServerRequestInterface
      */
@@ -80,6 +82,7 @@ abstract class TestCase extends \Tests\DB\TestCase
     {
         $request = $request->withParsedBody($data);
         $request = $request->withHeader('Content-Type', 'application/json');
+
         return $request;
     }
 
