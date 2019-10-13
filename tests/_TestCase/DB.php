@@ -2,7 +2,7 @@
 
 namespace Tests\DB;
 
-abstract class Abstract_DB_TestCase extends \PHPUnit\Framework\TestCase
+abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     protected $setUpDB = [];
 

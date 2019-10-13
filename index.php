@@ -11,7 +11,7 @@ define('ANSWEROPEDIA', 'ANSWEROPEDIA');
 require_once 'local-settings.php';
 require_once 'vendor/autoload.php';
 
-session_start(); // deprecate?
+session_start(); // @TODO deprecate?
 
 require_once __DIR__ . '/app/functions.php';
 
@@ -26,14 +26,5 @@ require_once __DIR__ . '/app/functions.php';
 // $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
 
 $app = (new SlimApp())->get_app();
-
-// $app->add(function ($req, $res, $next) {
-//     $response = $next($req, $res);
-
-//     return $response
-//         ->withHeader('Access-Control-Allow-Origin', 'https://upload.answeropedia.org')
-//         ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-//         ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-// });
 
 $app->run();

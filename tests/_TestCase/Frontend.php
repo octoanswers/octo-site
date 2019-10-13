@@ -11,7 +11,7 @@ use Slim\Psr7\Factory\ServerRequestFactory;
 /**
  * Inspired by https://github.com/odan/slim4-skeleton/blob/master/tests/TestCase/HttpTestTrait.php.
  */
-abstract class Abstract_Frontend_TestCase extends \Tests\DB\TestCase
+abstract class TestCase extends \Tests\DB\TestCase
 {
     protected $app;
 
