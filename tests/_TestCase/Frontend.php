@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Frontend;
+namespace Tests\Frontend\TestCase;
 
 use Exception;
 use Psr\Http\Message\ResponseInterface;
