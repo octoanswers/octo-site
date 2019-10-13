@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_User_create__site__Test extends \Tests\DB\TestCase
+class Mapper_User_create__site__Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['users' => ['users']];
 

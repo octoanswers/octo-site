@@ -1,6 +1,6 @@
 <?php
 
-class Signup_POST_APIController__negative__password__Test extends \Tests\Frontend\TestCase
+class Signup_POST_APIController__negative__password__Test extends \Test\TestCase\Frontend
 {
     public function test__Password_too_short()
     {

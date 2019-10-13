@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Frontend\TestCase;
+namespace Test\TestCase;
 
 use Exception;
 use Psr\Http\Message\ResponseInterface;
@@ -11,7 +11,7 @@ use Slim\Psr7\Factory\ServerRequestFactory;
 /**
  * Inspired by https://github.com/odan/slim4-skeleton/blob/master/tests/TestCase/HttpTestTrait.php.
  */
-abstract class TestCase extends \Tests\DB\TestCase
+abstract class Frontend extends \Test\TestCase\DB
 {
     protected $app;
 

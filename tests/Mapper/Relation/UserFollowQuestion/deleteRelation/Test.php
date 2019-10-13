@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowQuestion_Relation_Mapper__delete_relation__Test extends \Tests\DB\TestCase
+class UserFollowQuestion_Relation_Mapper__delete_relation__Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_questions']];
 

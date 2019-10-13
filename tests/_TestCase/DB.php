@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\DB\TestCase;
+namespace Test\TestCase;
 
-abstract class TestCase extends \PHPUnit\Framework\TestCase
+abstract class DB extends \PHPUnit\Framework\TestCase
 {
     protected $setUpDB = [];
 

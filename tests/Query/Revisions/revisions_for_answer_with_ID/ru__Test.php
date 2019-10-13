@@ -1,6 +1,6 @@
 <?php
 
-class Query_Revisions__revisions_for_answer_with_ID__ruTest extends \Tests\DB\TestCase
+class Query_Revisions__revisions_for_answer_with_ID__ruTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['revisions', 'questions']];
 

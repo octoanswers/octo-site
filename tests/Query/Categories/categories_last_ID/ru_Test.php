@@ -1,6 +1,6 @@
 <?php
 
-class Categories_Query__categories_last_ID__ruTest extends \Tests\DB\TestCase
+class Categories_Query__categories_last_ID__ruTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['categories']];
 

@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Activity_CAQ__create__Test extends \Tests\DB\TestCase
+class Mapper_Activity_CAQ__create__Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['activities']];
 

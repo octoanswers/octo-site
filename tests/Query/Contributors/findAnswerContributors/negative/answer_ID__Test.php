@@ -1,6 +1,6 @@
 <?php
 
-class Query_Contributors__find_answer_contributors__param__answer_IDTest extends \Tests\DB\TestCase
+class Query_Contributors__find_answer_contributors__param__answer_IDTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['revisions', 'questions']];
 

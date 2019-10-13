@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Question__create__title__Test extends \Tests\DB\TestCase
+class Mapper_Question__create__title__Test extends \Test\TestCase\DB
 {
     public function test_CreateWithEmptyTitle_throwException()
     {

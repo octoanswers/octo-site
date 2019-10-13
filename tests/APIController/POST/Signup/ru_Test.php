@@ -1,6 +1,6 @@
 <?php
 
-class Signup_POST_APIController__ru__Test extends \Tests\Frontend\TestCase
+class Signup_POST_APIController__ru__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 

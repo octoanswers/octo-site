@@ -1,6 +1,6 @@
 <?php
 
-class Query_Categories__find_newest__enTest extends \Tests\DB\TestCase
+class Query_Categories__find_newest__enTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['en' => ['categories']];
 

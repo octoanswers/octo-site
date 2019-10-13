@@ -1,6 +1,6 @@
 <?php
 
-class Logout_POST_APIController__Test extends \Tests\Frontend\TestCase
+class Logout_POST_APIController__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 

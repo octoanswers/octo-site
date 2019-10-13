@@ -1,6 +1,6 @@
 <?php
 
-class QuestionsID_PUT_APIController__negative__id__Test extends \Tests\Frontend\TestCase
+class QuestionsID_PUT_APIController__negative__id__Test extends \Test\TestCase\Frontend
 {
     public function testQuestionIDEqualZero()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class QuestionsIDSubscribe_DELETE_APIController__email__Test extends \Tests\Frontend\TestCase
+class QuestionsIDSubscribe_DELETE_APIController__email__Test extends \Test\TestCase\Frontend
 {
     public function test__Incorrect_email()
     {

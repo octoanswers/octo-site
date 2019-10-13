@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\User\ShortURL;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'en'    => ['questions', 'revisions', 'er_users_follow_users'],

@@ -1,6 +1,6 @@
 <?php
 
-class Query_Categories__categories_for_question_with_ID__enTest extends \Tests\DB\TestCase
+class Query_Categories__categories_for_question_with_ID__enTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['en' => ['categories', 'er_categories_questions']];
 

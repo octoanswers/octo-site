@@ -1,6 +1,6 @@
 <?php
 
-class Query_Users__user_with_ID__negative__IDTest extends \Tests\DB\TestCase
+class Query_Users__user_with_ID__negative__IDTest extends \Test\TestCase\DB
 {
     public function test__ID_equal_zero()
     {

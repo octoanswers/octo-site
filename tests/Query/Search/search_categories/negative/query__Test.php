@@ -1,6 +1,6 @@
 <?php
 
-class Query_Search__search_categories_Query__negative__queryTest extends \Tests\DB\TestCase
+class Query_Search__search_categories_Query__negative__queryTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['categories']];
 

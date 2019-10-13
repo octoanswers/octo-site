@@ -1,6 +1,6 @@
 <?php
 
-class QuestionsIDAnswer_PUT_APIController__answerID_Test extends \Tests\Frontend\TestCase
+class QuestionsIDAnswer_PUT_APIController__answerID_Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 

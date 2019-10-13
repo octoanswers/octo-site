@@ -1,6 +1,6 @@
 <?php
 
-class UsersIDFollow_DELETE_APIController__ru__Test extends \Tests\Frontend\TestCase
+class UsersIDFollow_DELETE_APIController__ru__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'ru'    => ['er_users_follow_users'],

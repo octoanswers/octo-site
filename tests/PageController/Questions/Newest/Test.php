@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Questions\Newest;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'en'    => ['questions', 'categories', 'revisions', 'er_categories_questions'],

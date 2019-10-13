@@ -1,6 +1,6 @@
 <?php
 
-class Query_Questions__find_questions_with_image__ruTest extends \Tests\DB\TestCase
+class Query_Questions__find_questions_with_image__ruTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 

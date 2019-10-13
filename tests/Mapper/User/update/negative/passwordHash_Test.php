@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_User__save__negative__password_hash__Test extends \Tests\DB\TestCase
+class Mapper_User__save__negative__password_hash__Test extends \Test\TestCase\DB
 {
     public function test_notSet()
     {

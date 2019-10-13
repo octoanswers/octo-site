@@ -1,6 +1,6 @@
 <?php
 
-class UsersIDFollow_POST_APIController__ru__Test extends \Tests\Frontend\TestCase
+class UsersIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities', 'er_users_follow_users'], 'users' => ['users']];
 

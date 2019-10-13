@@ -1,6 +1,6 @@
 <?php
 
-class Query_Answers__answer_with_ID__negative__answer_IDTest extends \Tests\DB\TestCase
+class Query_Answers__answer_with_ID__negative__answer_IDTest extends \Test\TestCase\DB
 {
     public function test__Answer_ID_equal_zero()
     {

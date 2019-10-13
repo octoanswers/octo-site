@@ -1,6 +1,6 @@
 <?php
 
-class Render_Answers_POST_APIController__Test extends \Tests\Frontend\TestCase
+class Render_Answers_POST_APIController__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['categories']];
 

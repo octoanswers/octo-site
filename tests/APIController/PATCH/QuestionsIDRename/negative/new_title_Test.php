@@ -1,6 +1,6 @@
 <?php
 
-class QuestionsIDRename_PATCH_APIController__new_title__Test extends \Tests\Frontend\TestCase
+class QuestionsIDRename_PATCH_APIController__new_title__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
 

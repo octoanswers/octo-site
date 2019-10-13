@@ -1,6 +1,6 @@
 <?php
 
-class QuestionsIDSubscribe_POST_APIController__Test extends \Tests\Frontend\TestCase
+class QuestionsIDSubscribe_POST_APIController__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'questions_subscriptions']];
 

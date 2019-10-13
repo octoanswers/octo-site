@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Settings;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     public function test__Error_for_unlogged_user()
     {

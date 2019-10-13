@@ -1,6 +1,6 @@
 <?php
 
-class Query_Redirects_Question__redirect_for_question_with_ID__enTest extends \Tests\DB\TestCase
+class Query_Redirects_Question__redirect_for_question_with_ID__enTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['en' => ['redirects_questions']];
 

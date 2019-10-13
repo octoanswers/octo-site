@@ -1,6 +1,6 @@
 <?php
 
-class Query_Search__search_questionsTest extends \Tests\DB\TestCase
+class Query_Search__search_questionsTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 

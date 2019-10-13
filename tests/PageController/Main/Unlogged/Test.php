@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Main\Unlogged;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'en'    => ['questions', 'revisions', 'categories', 'er_categories_questions'],

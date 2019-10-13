@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Search;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['en' => ['questions']];
 

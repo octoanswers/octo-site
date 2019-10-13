@@ -1,6 +1,6 @@
 <?php
 
-class APIController_POST_Categories__Test extends \Tests\Frontend\TestCase
+class APIController_POST_Categories__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'ru'    => ['questions', 'categories', 'activities', 'er_categories_questions'],

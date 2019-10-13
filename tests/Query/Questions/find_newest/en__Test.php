@@ -1,6 +1,6 @@
 <?php
 
-class Query_Questions__find_newest__enTest extends \Tests\DB\TestCase
+class Query_Questions__find_newest__enTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['en' => ['questions']];
 

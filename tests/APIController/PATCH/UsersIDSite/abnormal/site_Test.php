@@ -1,6 +1,6 @@
 <?php
 
-class UsersIDSite_PATCH_APIController__abnormal__site__Test extends \Tests\Frontend\TestCase
+class UsersIDSite_PATCH_APIController__abnormal__site__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 

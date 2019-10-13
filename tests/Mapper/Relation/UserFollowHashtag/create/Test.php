@@ -1,6 +1,6 @@
 <?php
 
-class UserFollowCategory_Relation_Mapper__create__Test extends \Tests\DB\TestCase
+class UserFollowCategory_Relation_Mapper__create__Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_categories']];
 

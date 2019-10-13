@@ -2,7 +2,7 @@
 
 namespace APIController\DELETE\QuestionsIDFollow;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'ru'    => ['questions', 'er_users_follow_questions'],

@@ -2,7 +2,7 @@
 
 namespace Tests\Controller\Users\Newest;
 
-class Test extends \Tests\DB\TestCase
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['users' => ['users']];
 

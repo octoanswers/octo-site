@@ -1,6 +1,6 @@
 <?php
 
-class Query_Search__search_categories__negative__queryTest extends \Tests\DB\TestCase
+class Query_Search__search_categories__negative__queryTest extends \Test\TestCase\DB
 {
     public function test__PerPage_param_equal_zero()
     {

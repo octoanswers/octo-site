@@ -1,6 +1,6 @@
 <?php
 
-class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Tests\Frontend\TestCase
+class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'revisions', 'activities'], 'users' => ['users']];
 

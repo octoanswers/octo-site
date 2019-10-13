@@ -1,6 +1,6 @@
 <?php
 
-class APIController_GET_SearchCategories__ru__Test extends \Tests\Frontend\TestCase
+class APIController_GET_SearchCategories__ru__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['categories']];
 

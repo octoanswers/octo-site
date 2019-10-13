@@ -1,6 +1,6 @@
 <?php
 
-class Query_Questions__find_newest__negative__per_pageTest extends \Tests\DB\TestCase
+class Query_Questions__find_newest__negative__per_pageTest extends \Test\TestCase\DB
 {
     public function test__PerPage_param_equal_zero()
     {

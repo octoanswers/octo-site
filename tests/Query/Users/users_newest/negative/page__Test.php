@@ -1,6 +1,6 @@
 <?php
 
-class Query_Users__users_newest__negative__pageTest extends \Tests\DB\TestCase
+class Query_Users__users_newest__negative__pageTest extends \Test\TestCase\DB
 {
     public function test__Page_param_below_zero()
     {

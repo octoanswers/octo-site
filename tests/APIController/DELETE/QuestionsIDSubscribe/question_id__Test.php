@@ -1,6 +1,6 @@
 <?php
 
-class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends \Tests\Frontend\TestCase
+class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends \Test\TestCase\Frontend
 {
     public function test__Question_ID_equal_zero()
     {

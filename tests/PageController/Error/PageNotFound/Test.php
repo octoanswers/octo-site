@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Error\PageNotFound;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     public function test_Base()
     {

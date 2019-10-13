@@ -1,6 +1,6 @@
 <?php
 
-class Query_QuestionsCount__count_questions_without_answersTest extends \Tests\DB\TestCase
+class Query_QuestionsCount__count_questions_without_answersTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 

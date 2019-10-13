@@ -1,6 +1,6 @@
 <?php
 
-class Query_Revisions__revisions_for_answer_with_ID__negative__question_IDTest extends \Tests\DB\TestCase
+class Query_Revisions__revisions_for_answer_with_ID__negative__question_IDTest extends \Test\TestCase\DB
 {
     public function test__Question_ID_equal_zero()
     {

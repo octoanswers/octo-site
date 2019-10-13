@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Sandbox\WithoutAnswers;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'en' => ['questions', 'categories', 'revisions'],

@@ -1,6 +1,6 @@
 <?php
 
-class UsersIDSignature_PATCH_APIController__id__Test extends \Tests\Frontend\TestCase
+class UsersIDSignature_PATCH_APIController__id__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 

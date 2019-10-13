@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Root\Show;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'ru'    => ['questions', 'revisions', 'categories'],

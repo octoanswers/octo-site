@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Error\QuestionNotFound;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['en' => ['questions']];
 

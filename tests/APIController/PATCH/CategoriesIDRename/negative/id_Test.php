@@ -1,6 +1,6 @@
 <?php
 
-class CategoriesIDRename_PATCH_APIController__negative__ID__Test extends \Tests\Frontend\TestCase
+class CategoriesIDRename_PATCH_APIController__negative__ID__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['categories', 'activities', 'redirects_categories'], 'users' => ['users']];
 

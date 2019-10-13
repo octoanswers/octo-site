@@ -1,6 +1,6 @@
 <?php
 
-class CategoriesIDFollow_POST_APIController__ru__Test extends \Tests\Frontend\TestCase
+class CategoriesIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'ru'    => ['activities', 'categories', 'er_users_follow_categories'],

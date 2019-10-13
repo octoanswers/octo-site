@@ -1,6 +1,6 @@
 <?php
 
-class Query_Contributor__find_answer_last_editorTest extends \Tests\DB\TestCase
+class Query_Contributor__find_answer_last_editorTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['revisions', 'questions'], 'users' => ['users']];
 

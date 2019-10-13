@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Activities__createUFU__Test extends \Tests\DB\TestCase
+class Mapper_Activities__createUFU__Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['activities']];
 

@@ -1,6 +1,6 @@
 <?php
 
-class Query_Category__find_with_title__ruTest extends \Tests\DB\TestCase
+class Query_Category__find_with_title__ruTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['categories']];
 

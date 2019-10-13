@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\SitemapXML\Index;
 
-class Test extends \Tests\Frontend\TestCase
+class Test extends \Test\TestCase\Frontend
 {
     public function test__Base()
     {

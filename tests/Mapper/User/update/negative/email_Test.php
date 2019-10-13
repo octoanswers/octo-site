@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_User__save__negative__email__Test extends \Tests\DB\TestCase
+class Mapper_User__save__negative__email__Test extends \Test\TestCase\DB
 {
     public function test_notSet()
     {
