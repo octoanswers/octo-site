@@ -2,11 +2,11 @@
 
 namespace APIController\DELETE\CategoriesIDFollow;
 
-class Test extends \Tests\Frontend\TestCase
+class ru_Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
-        'ru' => ['categories', 'er_users_follow_categories'],
-        'users' => ['users']
+        'ru'    => ['categories', 'er_users_follow_categories'],
+        'users' => ['users'],
     ];
 
     public function test__Base_unfollow()

@@ -1,6 +1,5 @@
 <?php
 
-use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 
@@ -26,7 +25,6 @@ class SlimApp
 
         // Define Custom Error Handler
         $default_error_handler = function (Request $request, \Throwable $exception, bool $displayErrorDetails, bool $logErrors, bool $logErrorDetails) use ($app) {
-
             $response = $app->getResponseFactory()->createResponse();
             $response->getBody()->write('Page not found');
 
@@ -47,13 +45,13 @@ class SlimApp
 
         $beforeMiddleware = function (Request $request, RequestHandler $handler) {
             $response = $handler->handle($request);
+
             return $response
                 ->withHeader('Access-Control-Allow-Origin', 'https://avatars.answeropedia.org')
                 ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
                 ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
         };
         $app->add($beforeMiddleware);
-
 
         // Set supported array on languages
 

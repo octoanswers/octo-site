@@ -5,8 +5,8 @@ namespace APIController\DELETE\QuestionsIDFollow;
 class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'er_users_follow_questions'],
-        'users' => ['users']
+        'ru'    => ['questions', 'er_users_follow_questions'],
+        'users' => ['users'],
     ];
 
     public function test__Base_unfollow()

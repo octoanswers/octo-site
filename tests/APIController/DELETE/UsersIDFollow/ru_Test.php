@@ -3,8 +3,8 @@
 class UsersIDFollow_DELETE_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
-        'ru' => ['er_users_follow_users'],
-        'users' => ['users']
+        'ru'    => ['er_users_follow_users'],
+        'users' => ['users'],
     ];
 
     public function test__Base_unfollow()
