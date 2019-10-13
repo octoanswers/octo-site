@@ -1,42 +1,38 @@
 <?php
 
-class QuestionsID_PUT_APIController__negative__id__Test extends Abstract_Frontend_TestCase
+class QuestionsID_PUT_APIController__negative__id__Test extends \Tests\Frontend\TestCase
 {
-    public function testQuestionIDEqualZero()
-    {
-        $queryString = 'lang=en&question_title=' . urlencode('Where is my answers for Q12?');
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/0.json', $queryString, true);
+  public function testQuestionIDEqualZero()
+  {
+    $queryString = '/api/v1/ru/questions/0.json?lang=en&question_title=' . urlencode('Where is my answers for Q12?');
 
-        $this->app->getContainer()['request'] = $request;
+    $request = $this->createRequest('PUT', $queryString);
+    $response = $this->request($request);
+    $responseBody = (string) $response->getBody();
 
-        $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
-
-        $expectedResponse = [
+    $expectedResponse = [
       'error_code'    => 0,
       'error_message' => 'Question id param 0 must be greater than or equal to 1',
     ];
 
-        $this->assertSame(200, $response->getStatusCode());
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
-    }
+    $this->assertSame(200, $response->getStatusCode());
+    $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+  }
 
-    public function testQuestionIDBelowZero()
-    {
-        $queryString = 'lang=en&question_title=' . urlencode('Where is my answers for Q12?');
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/-1.json', $queryString, true);
+  public function testQuestionIDBelowZero()
+  {
+    $queryString = '/api/v1/ru/questions/-1.json?lang=en&question_title=' . urlencode('Where is my answers for Q12?');
 
-        $this->app->getContainer()['request'] = $request;
+    $request = $this->createRequest('PUT', $queryString);
+    $response = $this->request($request);
+    $responseBody = (string) $response->getBody();
 
-        $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
-
-        $expectedResponse = [
+    $expectedResponse = [
       'error_code'    => 0,
       'error_message' => 'Question id param -1 must be greater than or equal to 1',
     ];
 
-        $this->assertSame(200, $response->getStatusCode());
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
-    }
+    $this->assertSame(200, $response->getStatusCode());
+    $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+  }
 }

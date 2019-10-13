@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Questions\Newest;
 
-class Test extends \Abstract_Frontend_TestCase
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
         'en'    => ['questions', 'categories', 'revisions', 'er_categories_questions'],
@@ -12,14 +12,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__Show_questions_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/questions/newest',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/questions/newest');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Newest questions – Page 1 – Answeropedia', $response_body);
@@ -33,14 +27,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__That_RU_page_is_exists()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/questions/newest',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/ru/questions/newest');
+        $response = $this->request($request);
 
         $this->assertSame(200, $response->getStatusCode());
     }

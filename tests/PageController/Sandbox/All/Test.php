@@ -2,23 +2,18 @@
 
 namespace Tests\PageController\Sandbox\All;
 
-class Test extends \Abstract_Frontend_TestCase
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
         'en' => ['questions', 'categories', 'revisions', 'redirects_questions'],
-        'ru' => ['questions', 'categories', 'revisions', 'redirects_questions'], 'users' => ['users'],
+        'ru' => ['questions', 'categories', 'revisions', 'redirects_questions'],
+        'users' => ['users'],
     ];
 
     public function test__Show_EN_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/sandbox/all',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/sandbox/all');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Sandbox – Page 1 – Answeropedia', $response_body);
@@ -32,14 +27,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__Show_RU_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/sandbox/all',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/ru/sandbox/all');
+        $response = $this->request($request);
 
         $this->assertSame(200, $response->getStatusCode());
     }

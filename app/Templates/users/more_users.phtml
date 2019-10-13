@@ -1,7 +1,7 @@
-<?php if (isset($this->nextPageURL)) : ?>
+<?php if (isset($view_data->next_page_URL)) : ?>
     <div class="my-4">
-        <a class="btn btn-primary btn-block" href="<?= $this->nextPageURL ?>">
-            More users
+        <a class="btn btn-primary btn-block" href="<?= $view_data->next_page_URL ?>">
+            <?= __('More users') ?>
         </a>
     </div>
 <?php endif; ?>

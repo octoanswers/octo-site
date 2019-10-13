@@ -1,6 +1,6 @@
 <?php
 
-class Query_Flow__find_flowTest extends Abstract_DB_TestCase
+class Query_Flow__find_flowTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['activities', 'questions', 'er_users_follow_users', 'er_users_follow_categories', 'er_users_follow_questions'], 'users' => ['users']];
 

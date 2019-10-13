@@ -12,8 +12,10 @@ class QuestionsIDRename extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
             $question_ID = (int) $args['id'];
-            $api_key = (string) $request->getParam('api_key');
-            $question_new_title = (string) $request->getParam('new_title');
+
+            $query_params = $request->getQueryParams();
+            $api_key = (string) $query_params['api_key'];
+            $question_new_title = (string) @$query_params['new_title'];
 
             // Validate params
 
@@ -26,7 +28,7 @@ class QuestionsIDRename extends \APIController\APIController
             $question->title = $question_new_title;
             $question = (new \Mapper\Question($this->lang))->update($question);
 
-            $is_save_redirect = (bool) $request->getParam('save_redirect');
+            $is_save_redirect = (bool) @$query_params['save_redirect'];
             if ($is_save_redirect) {
                 if (mb_strtolower($question_new_title) != mb_strtolower($old_title)) {
                     // create question record with OLD title & redirect flag

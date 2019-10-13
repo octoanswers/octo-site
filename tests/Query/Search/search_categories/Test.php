@@ -1,6 +1,6 @@
 <?php
 
-class Query_Search__search_categoriesTest extends Abstract_DB_TestCase
+class Query_Search__search_categoriesTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 

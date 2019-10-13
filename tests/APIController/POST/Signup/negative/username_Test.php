@@ -1,16 +1,18 @@
 <?php
 
-class Signup_POST_APIController__negative__username__Test extends Abstract_Frontend_TestCase
+class Signup_POST_APIController__negative__username__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function test_UsernameAlreadyExists()
+    public function test__Username_already_exists()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'username=kozel&email=new@answeropedia.org&password=jd754fJGFD99', true);
+        $uri = '/api/v1/ru/signup.json';
+        $post_data = ['username' => 'kozel', 'email' => 'new@answeropedia.org', 'password' => 'jd754fJGFD99'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -22,13 +24,15 @@ class Signup_POST_APIController__negative__username__Test extends Abstract_Front
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function testNameTooShort()
+    public function test__Username_too_short()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=new@answeropedia.org&password=jd754fJGFD99&username=J', true);
+        $uri = '/api/v1/ru/signup.json';
+        $post_data = ['username' => 'J', 'email' => 'new@answeropedia.org', 'password' => 'jd754fJGFD99'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

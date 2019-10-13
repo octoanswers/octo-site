@@ -1,17 +1,18 @@
 <?php
 
-class QuestionsIDSubscribe_POST_APIController__Test extends Abstract_Frontend_TestCase
+class QuestionsIDSubscribe_POST_APIController__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'questions_subscriptions']];
 
-    public function test__BaseSubscription()
+    public function test__Base_subscription()
     {
-        $query_string = 'email=' . urlencode('data@test.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/questions/17/subscribe.json', $query_string, true);
+        $uri = '/api/v1/ru/questions/17/subscribe.json';
+        $post_data = ['email' => 'data@test.ru', 'no_email' => 1];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -27,14 +28,15 @@ class QuestionsIDSubscribe_POST_APIController__Test extends Abstract_Frontend_Te
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__AlreadySubscribed()
+    public function test__Already_subscribed()
     {
-        $query_string = 'email=' . urlencode('data@test.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/questions/7/subscribe.json', $query_string, true);
+        $uri = '/api/v1/ru/questions/7/subscribe.json';
+        $post_data = ['email' => 'data@test.ru', 'no_email' => 1];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

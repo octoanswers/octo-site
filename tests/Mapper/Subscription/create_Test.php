@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Subscription__create__Test extends Abstract_DB_TestCase
+class Mapper_Subscription__create__Test extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['questions_subscriptions']];
 

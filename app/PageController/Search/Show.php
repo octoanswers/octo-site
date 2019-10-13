@@ -2,6 +2,9 @@
 
 namespace PageController\Search;
 
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+
 class Show extends \PageController\PageController
 {
     const LIST_QUESTIONS = 'questions';
@@ -13,11 +16,14 @@ class Show extends \PageController\PageController
     protected $list;
     protected $questions;
 
-    public function handle($request, $response, $args)
+    public function handle(Request $request, Response $response, $args)
     {
+        $query_params = $request->getQueryParams();
+
         $this->lang = $args['lang'];
-        $this->query = (string) $request->getParam('q');
-        $this->list = (string) $request->getParam('list');
+
+        $this->query = (string) @$query_params['q'];
+        $this->list = (string) @$query_params['list'];
         $this->list = $this->_normalize_list($this->list);
 
         $this->_get_search_results();

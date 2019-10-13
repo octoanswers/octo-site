@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Answer__update__Test extends Abstract_DB_TestCase
+class Mapper_Answer__update__Test extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 

@@ -1,17 +1,18 @@
 <?php
 
-class UsersIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_TestCase
+class UsersIDFollow_POST_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['activities', 'er_users_follow_users'], 'users' => ['users']];
 
-    public function test__BaseFollow()
+    public function test__Base_follow()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/users/4/follow.json', $query_string, true);
+        $uri = '/api/v1/ru/users/4/follow.json';
+        $post_data = ['api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -26,14 +27,15 @@ class UsersIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_TestC
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__AlreadyFollowed()
+    public function test__User_already_followed()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/users/7/follow.json', $query_string, true);
+        $uri = '/api/v1/ru/users/7/follow.json';
+        $post_data = ['api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

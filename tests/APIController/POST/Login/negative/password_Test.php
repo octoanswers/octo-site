@@ -1,21 +1,18 @@
 <?php
 
-class Login_POST_APIController__negative__password__Test extends Abstract_Frontend_TestCase
+class Login_POST_APIController__negative__password__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function testPasswordTooShort()
+    public function test__Password_too_short()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'POST',
-            'REQUEST_URI'    => '/api/v1/ru/login.json',
-            'QUERY_STRING'   => 'email=admin@answeropedia.org&password=foo',
-            'CONTENT_TYPE'   => 'application/json;charset=utf8',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
+        $uri = '/api/v1/ru/login.json';
+        $form_data = ['email' => 'admin@answeropedia.org', 'password' => 'foo'];
 
-        $response = $this->app->run(true);
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $form_data);
+
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -27,18 +24,15 @@ class Login_POST_APIController__negative__password__Test extends Abstract_Fronte
         $this->assertEquals($expectedResponse, json_decode($responseBody, true));
     }
 
-    public function testPasswordIsIncorrect()
+    public function test__Password_is_incorrect()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'POST',
-            'REQUEST_URI'    => '/api/v1/ru/login.json',
-            'QUERY_STRING'   => 'email=admin@answeropedia.org&password=123456789',
-            'CONTENT_TYPE'   => 'application/json;charset=utf8',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
+        $uri = '/api/v1/ru/login.json';
+        $form_data = ['email' => 'admin@answeropedia.org', 'password' => '123456789'];
 
-        $response = $this->app->run(true);
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $form_data);
+
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

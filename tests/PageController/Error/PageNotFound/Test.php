@@ -1,20 +1,16 @@
 <?php
 
-class PageController_Error_PageNotFound__en__Test extends Abstract_Frontend_TestCase
+namespace Tests\PageController\Error\PageNotFound;
+
+class Test extends \Tests\Frontend\TestCase
 {
     public function test_Base()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/settings/some_unfounded_page',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/settings/some_unfounded_page');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
-        $this->assertStringContainsString('Page not found – Answeropedia', $response_body);
+        $this->assertStringContainsString('Page not found', $response_body);
 
         $this->assertStringNotContainsString('Notice:', $response_body);
         $this->assertStringNotContainsString('Warning:', $response_body);

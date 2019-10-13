@@ -1,17 +1,15 @@
 <?php
 
-class QuestionsID_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
+class QuestionsID_PUT_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'revisions', 'activities'], 'users' => ['users']];
 
     public function testFullParams()
     {
-        $queryString = 'question_title=' . urlencode('Где мой новый ответ?');
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/12.json', $queryString, true);
+        $queryString = '/api/v1/ru/questions/12.json?question_title=' . urlencode('Где мой новый ответ?');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PUT', $queryString);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

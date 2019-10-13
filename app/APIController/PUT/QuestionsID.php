@@ -10,9 +10,11 @@ class QuestionsID extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
+            $query_params = $request->getQueryParams();
+
             $this->lang = $args['lang'];
             $question_ID = (int) $args['id'];
-            $question_title = (string) $request->getParam('question_title');
+            $question_title = (string) $query_params['question_title'];
 
             \Validator\Question::validateID($question_ID);
 

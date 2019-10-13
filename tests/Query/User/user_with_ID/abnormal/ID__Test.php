@@ -1,6 +1,6 @@
 <?php
 
-class Query_Users__user_with_ID__abnormal__IDTest extends Abstract_DB_TestCase
+class Query_Users__user_with_ID__abnormal__IDTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 

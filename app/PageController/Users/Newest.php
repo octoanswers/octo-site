@@ -2,60 +2,24 @@
 
 namespace PageController\Users;
 
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+
 class Newest extends \PageController\PageController
 {
-    const LIST_NEWEST = 'newest';
-    const LIST_POPULAR = 'popular';
-
-    const USERS_PER_PAGE = 10;
-
-    public function handle($request, $response, $args)
+    public function handle(Request $request, Response $response, $args)
     {
-        $this->lang = $args['lang'];
-        $this->list = 'newest';
-        $this->page = @$request->getParam('page') ? (int) $request->getParam('page') : 0;
+        $query_params = $request->getQueryParams();
 
-        $usersCount = (new \Query\Users())->users_last_ID();
+        $lang = (string) $args['lang'];
+        $page = (int) @$query_params['page'];
 
-        $this->users = (new \Query\Users())->users_newest();
+        $controller = new \Controller\Users\Newest($lang);
+        $view_data = $controller->get_data('newest', $page);
+        $html = \Renderer\Page::render('users', $view_data);
 
-        $this->template = 'users';
-        $this->pageTitle = $this->_get_page_title();
-        $this->activeFilter = $this->_get_active_filter_name();
+        $response->getBody()->write($html);
 
-        $this->nextPageURL = $this->_next_page_URL();
-
-        $output = $this->render_page();
-        $response->getBody()->write($output);
-
-        return $response;
-    }
-
-    //
-    // Helper methods
-    //
-
-    public function _get_active_filter_name(): string
-    {
-        $filterName = __('Newest');
-
-        return $filterName;
-    }
-
-    public function _get_page_title()
-    {
-        return __('page_users.new_users_msg') . ' – ' . __('common.page') . ' ' . $this->page . ' – ' . __('common.answeropedia');
-    }
-
-    public function _next_page_URL()
-    {
-        $nextPageURL = null;
-
-        if (count($this->users) == self::USERS_PER_PAGE) {
-            $postfix = '?page=' . ($this->page + 1);
-            $nextPageURL = SITE_URL . '/' . $this->lang . '/users/' . $this->list . $postfix;
-        }
-
-        return $nextPageURL;
+        return $response->withHeader('Content-Type', 'text/html');
     }
 }

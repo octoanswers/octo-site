@@ -1,0 +1,9 @@
+<!-- modal windows -->
+
+<?php if (count($view_data->include_modals)) : ?>
+    <?php foreach ($view_data->include_modals as $modal_filename) : ?>
+        <?php require_once TEMPLATE_PATH . '/_modal/' . $modal_filename . '.phtml' ?>
+    <?php endforeach; ?>
+<?php endif; ?>
+
+<!-- / modal windows -->

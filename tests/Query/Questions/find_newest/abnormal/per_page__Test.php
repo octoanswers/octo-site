@@ -1,6 +1,6 @@
 <?php
 
-class Query_Questions__find_newest__abnormal__per_pageTest extends Abstract_DB_TestCase
+class Query_Questions__find_newest__abnormal__per_pageTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 

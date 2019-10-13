@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Sandbox\WithoutAnswers;
 
-class Test extends \Abstract_Frontend_TestCase
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
         'en' => ['questions', 'categories', 'revisions'],
@@ -11,14 +11,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__Show_EN_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/sandbox/without-answers',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/sandbox/without-answers');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Questions without answers – Page 1 – Answeropedia', $response_body);
@@ -32,14 +26,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__Check_RU_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/sandbox/without-answers',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/ru/sandbox/without-answers');
+        $response = $this->request($request);
 
         $this->assertSame(200, $response->getStatusCode());
     }

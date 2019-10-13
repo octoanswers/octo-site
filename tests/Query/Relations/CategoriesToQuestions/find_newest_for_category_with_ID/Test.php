@@ -1,6 +1,6 @@
 <?php
 
-class Query_Relations_CategoriesToQuestions__find_newest_for_category_with_IDTest extends Abstract_DB_TestCase
+class Query_Relations_CategoriesToQuestions__find_newest_for_category_with_IDTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['er_categories_questions']];
 

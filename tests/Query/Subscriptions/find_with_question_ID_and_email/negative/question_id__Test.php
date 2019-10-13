@@ -1,6 +1,6 @@
 <?php
 
-class Query_Subscriptions__find_with_question_ID_and_email__negative__question_idTest extends Abstract_DB_TestCase
+class Query_Subscriptions__find_with_question_ID_and_email__negative__question_idTest extends \Tests\DB\TestCase
 {
     public function test__Question_ID_equal_zero()
     {

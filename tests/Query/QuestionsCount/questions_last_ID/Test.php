@@ -1,6 +1,6 @@
 <?php
 
-class Query_QuestionsCount__questions_last_IDTest extends Abstract_DB_TestCase
+class Query_QuestionsCount__questions_last_IDTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 

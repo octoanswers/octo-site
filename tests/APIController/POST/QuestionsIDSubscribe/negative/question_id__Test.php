@@ -1,17 +1,18 @@
 <?php
 
-class QuestionsIDSubscribe_POST_APIController__negative__question_id__Test extends Abstract_Frontend_TestCase
+class QuestionsIDSubscribe_POST_APIController__negative__question_id__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'questions_subscriptions']];
 
-    public function test__QuestionNotExists()
+    public function test__Question_not_exists()
     {
-        $query_string = 'email=' . urlencode('data@test.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/questions/236/subscribe.json', $query_string, true);
+        $uri = '/api/v1/ru/questions/236/subscribe.json';
+        $post_data = ['email' => urlencode('data@test.ru'), 'no_email' => 1];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -23,14 +24,15 @@ class QuestionsIDSubscribe_POST_APIController__negative__question_id__Test exten
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__QuestionIDEqualZero()
+    public function test__Question_ID_equal_zero()
     {
-        $query_string = 'email=' . urlencode('test@mail.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/questions/0/subscribe.json', $query_string, true);
+        $uri = '/api/v1/ru/questions/0/subscribe.json';
+        $post_data = ['email' => urlencode('test@mail.ru'), 'no_email' => 1];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -42,14 +44,15 @@ class QuestionsIDSubscribe_POST_APIController__negative__question_id__Test exten
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__QuestionIDBelowZero()
+    public function test__Question_ID_below_zero()
     {
-        $query_string = 'email=' . urlencode('test@mail.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/questions/-1/subscribe.json', $query_string, true);
+        $uri = '/api/v1/ru/questions/-1/subscribe.json';
+        $post_data = ['email' => urlencode('test@mail.ru'), 'no_email' => 1];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

@@ -1,6 +1,6 @@
 <?php
 
-class Query_Questions__find_newest_with_answerTest extends Abstract_DB_TestCase
+class Query_Questions__find_newest_with_answerTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['questions'], 'en' => ['questions']];
 

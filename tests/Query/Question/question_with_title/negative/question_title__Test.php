@@ -1,6 +1,6 @@
 <?php
 
-class Query_Question__question_with_title__negative__question_titleTest extends Abstract_DB_TestCase
+class Query_Question__question_with_title__negative__question_titleTest extends \Tests\DB\TestCase
 {
     public function test__Question_title_is_empty()
     {

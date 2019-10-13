@@ -2,40 +2,25 @@
 
 namespace Tests\PageController\Users\Newest;
 
-class Test extends \Abstract_Frontend_TestCase
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function test__Show_EN_page()
+    public function test__Get_EN_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/users/newest',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/users/newest');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('New users from around the world – Page 0 – Answeropedia', $response_body);
-
-        $this->assertStringNotContainsString('Notice:', $response_body);
-        $this->assertStringNotContainsString('Warning:', $response_body);
 
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test__Check_RU_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/users/newest',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/ru/users/newest');
+        $response = $this->request($request);
 
         $this->assertSame(200, $response->getStatusCode());
     }

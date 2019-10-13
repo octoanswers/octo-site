@@ -1,17 +1,21 @@
 <?php
 
-class CategoriesIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_TestCase
+class CategoriesIDFollow_POST_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
-    protected $setUpDB = ['ru' => ['activities', 'categories', 'er_users_follow_categories'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['activities', 'categories', 'er_users_follow_categories'],
+        'users' => ['users']
+    ];
 
-    public function test__CategoryFollowed()
+    public function test__Category_followed()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/categories/4/follow.json', $query_string, true);
+        $uri = '/api/v1/ru/categories/4/follow.json';
+        $post_data = ['api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -27,14 +31,15 @@ class CategoriesIDFollow_POST_APIController__ru__Test extends Abstract_Frontend_
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__CategoryAlreadyFollowed()
+    public function test__Category_already_followed()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/categories/7/follow.json', $query_string, true);
+        $uri = '/api/v1/ru/categories/7/follow.json';
+        $post_data = ['api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

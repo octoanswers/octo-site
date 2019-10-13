@@ -1,17 +1,15 @@
 <?php
 
-class UsersIDName_PATCH_APIController__name__Test extends Abstract_Frontend_TestCase
+class UsersIDName_PATCH_APIController__name__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 
     public function test_SignatureNotSet()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'foo_name=' . urlencode('Sasha');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/name.json', $queryString, true);
+        $query_string = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'foo_name=' . urlencode('Sasha');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -25,12 +23,10 @@ class UsersIDName_PATCH_APIController__name__Test extends Abstract_Frontend_Test
 
     public function test_SignatureTooShort()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Fo');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/name.json', $queryString, true);
+        $query_string = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Fo');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

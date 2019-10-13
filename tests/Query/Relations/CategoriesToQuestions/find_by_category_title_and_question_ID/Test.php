@@ -1,6 +1,6 @@
 <?php
 
-class Query_Relations_CategoriesToQuestions__find_by_category_title_and_question_IDTest extends Abstract_DB_TestCase
+class Query_Relations_CategoriesToQuestions__find_by_category_title_and_question_IDTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['categories', 'er_categories_questions']];
 

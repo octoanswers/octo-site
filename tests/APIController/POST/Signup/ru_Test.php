@@ -1,16 +1,18 @@
 <?php
 
-class Signup_POST_APIController__ru__Test extends Abstract_Frontend_TestCase
+class Signup_POST_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
     public function testCorrectSignup()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'username=jasonborn&email=new@answeropedia.org&password=jd754fJGFD99', true);
+        $uri = '/api/v1/ru/signup.json';
+        $post_data = ['username' => 'jasonborn', 'email' => 'new@answeropedia.org', 'password' => 'jd754fJGFD99'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

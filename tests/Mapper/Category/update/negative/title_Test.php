@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_Category__update__negative__title__Test extends Abstract_DB_TestCase
+class Mapper_Category__update__negative__title__Test extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 

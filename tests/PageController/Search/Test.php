@@ -2,21 +2,14 @@
 
 namespace Tests\PageController\Search;
 
-class Test extends \Abstract_Frontend_TestCase
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['en' => ['questions']];
 
     public function test__Base_query()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/search',
-            'QUERY_STRING'   => 'q=Apple',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/search?q=Apple');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Search: Apple – Answeropedia', $response_body);
@@ -29,14 +22,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__Empty_query_params()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/search',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/search');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Search:  – Answeropedia', $response_body);

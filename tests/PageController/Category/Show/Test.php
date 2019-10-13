@@ -2,7 +2,7 @@
 
 namespace Test\PageController\Category\Show;
 
-class Test extends \Abstract_Frontend_TestCase
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
         'en' => ['questions', 'categories', 'revisions', 'er_categories_questions', 'er_users_follow_categories'],
@@ -11,14 +11,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__Show_EN_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/category/Cashmere',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/category/Cashmere');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Category: Cashmere – Answeropedia', $response_body);
@@ -31,14 +25,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__Show_RU_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/category/Птицы',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/ru/category/Птицы');
+        $response = $this->request($request);
 
         $this->assertSame(200, $response->getStatusCode());
     }

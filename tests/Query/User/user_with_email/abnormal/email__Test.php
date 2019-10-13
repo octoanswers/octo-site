@@ -1,6 +1,6 @@
 <?php
 
-class Query_Users__user_with_email__abnormal__emailTest extends Abstract_DB_TestCase
+class Query_Users__user_with_email__abnormal__emailTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 

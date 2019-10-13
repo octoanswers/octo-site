@@ -20,7 +20,9 @@ class Avatar extends \APIController\APIController
                 throw new \Exception('No file was selected for upload', 1);
             }
 
-            $API_key = $request->getParam('api_key');
+            $post_params = $request->getParsedBody();
+
+            $API_key = $post_params['api_key'];
             $user = (new \Query\User())->user_with_API_key($API_key);
 
             $this->handle = new \Verot\Upload\Upload($_FILES['new_avatar_file']);

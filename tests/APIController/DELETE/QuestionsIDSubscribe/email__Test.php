@@ -1,15 +1,13 @@
 <?php
 
-class QuestionsIDSubscribe_DELETE_APIController__email__Test extends Abstract_Frontend_TestCase
+class QuestionsIDSubscribe_DELETE_APIController__email__Test extends \Tests\Frontend\TestCase
 {
     public function test__Incorrect_email()
     {
-        $query_string = 'email=' . urlencode('test_mail.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/12/subscribe.json', $query_string, true);
+        $query_string = '/api/v1/ru/questions/12/subscribe.json?email=' . urlencode('test_mail.ru') . '&no_email=1';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('DELETE', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

@@ -1,6 +1,6 @@
 <?php
 
-class Query_Revisions__revisions_for_answer_with_ID__abnormal__question_IDTest extends Abstract_DB_TestCase
+class Query_Revisions__revisions_for_answer_with_ID__abnormal__question_IDTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['revisions', 'questions']];
 

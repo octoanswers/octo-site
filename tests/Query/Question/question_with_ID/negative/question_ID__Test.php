@@ -1,6 +1,6 @@
 <?php
 
-class Query_Question__question_with_ID__negative__question_IDTest extends Abstract_DB_TestCase
+class Query_Question__question_with_ID__negative__question_IDTest extends \Tests\DB\TestCase
 {
     public function test__Question_ID_equal_zero()
     {

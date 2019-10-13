@@ -12,7 +12,8 @@ class UsersIDFollow extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
 
-            $api_key = (string) $request->getParam('api_key');
+            $post_params = $request->getParsedBody();
+            $api_key = (string) $post_params['api_key'];
             $followed_user_ID = (int) $args['id'];
 
             //

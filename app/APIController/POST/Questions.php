@@ -12,7 +12,8 @@ class Questions extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
 
-            $title = htmlspecialchars((string) $request->getParam('title'));
+            $post_params = $request->getParsedBody();
+            $title = htmlspecialchars((string) $post_params['title']);
 
             $question = \Model\Question::init_with_title($title);
 

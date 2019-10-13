@@ -12,9 +12,10 @@ class Signup extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
 
-            $username = $request->getParam('username');
-            $user_email = $request->getParam('email');
-            $user_password = $request->getParam('password');
+            $post_params = $request->getParsedBody();
+            $username = $post_params['username'];
+            $user_email = $post_params['email'];
+            $user_password = $post_params['password'];
 
             \Validator\User::validateUsername($username);
             \Validator\User::validateEmail($user_email);

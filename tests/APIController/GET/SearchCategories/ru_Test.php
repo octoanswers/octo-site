@@ -1,17 +1,15 @@
 <?php
 
-class APIController_GET_SearchCategories__ru__Test extends Abstract_Frontend_TestCase
+class APIController_GET_SearchCategories__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 
-    public function test_One_char_query()
+    public function test__One_char_query()
     {
-        $queryString = 'query=' . urlencode('а');
-        $request = $this->__getTestRequest('GET', '/api/v1/ru/search/categories.json', $queryString, true);
+        $uri = '/api/v1/ru/search/categories.json?query=' . urlencode('а');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', $uri);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponseZeroItem = [
@@ -26,14 +24,12 @@ class APIController_GET_SearchCategories__ru__Test extends Abstract_Frontend_Tes
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test_Two_char_query()
+    public function test__Two_char_query()
     {
-        $queryString = 'query=' . urlencode('авто');
-        $request = $this->__getTestRequest('GET', '/api/v1/ru/search/categories.json', $queryString, true);
+        $uri = '/api/v1/ru/search/categories.json?query=' . urlencode('авто');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', $uri);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -53,14 +49,12 @@ class APIController_GET_SearchCategories__ru__Test extends Abstract_Frontend_Tes
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test_Search_empty_query()
+    public function test__Search_empty_query()
     {
-        $queryString = 'query=' . urlencode('');
-        $request = $this->__getTestRequest('GET', '/api/v1/ru/search/categories.json', $queryString, true);
+        $uri = '/api/v1/ru/search/categories.json?query=' . urlencode('');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', $uri);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [];

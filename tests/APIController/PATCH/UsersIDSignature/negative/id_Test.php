@@ -1,17 +1,15 @@
 <?php
 
-class UsersIDSignature_PATCH_APIController__id__Test extends Abstract_Frontend_TestCase
+class UsersIDSignature_PATCH_APIController__id__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 
     public function test_UserIDEqualZero_Error()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&signature=' . urlencode('Enterpreneur, writer.');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/0/signature.json', $queryString, true);
+        $query_string = '/api/v1/ru/users/0/signature.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&signature=' . urlencode('Enterpreneur, writer.');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -25,12 +23,10 @@ class UsersIDSignature_PATCH_APIController__id__Test extends Abstract_Frontend_T
 
     public function test_UserIDBelowZero_Error()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&signature=' . urlencode('Enterpreneur, writer.');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/-1/signature.json', $queryString, true);
+        $query_string = '/api/v1/ru/users/-1/signature.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&signature=' . urlencode('Enterpreneur, writer.');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

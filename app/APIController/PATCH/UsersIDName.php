@@ -12,9 +12,10 @@ class UsersIDName extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
 
-            $api_key = (string) $request->getParam('api_key');
+            $query_params = $request->getQueryParams();
+            $api_key = (string) $query_params['api_key'];
             $user_ID = (int) $args['id'];
-            $name = $request->getParam('name');
+            $name = @$query_params['name'];
 
             // Validate params
 

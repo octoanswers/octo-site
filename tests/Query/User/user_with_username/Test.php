@@ -1,6 +1,6 @@
 <?php
 
-class Query_Users__user_with_usernameTest extends Abstract_DB_TestCase
+class Query_Users__user_with_usernameTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 

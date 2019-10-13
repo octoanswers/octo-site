@@ -1,0 +1,42 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- JS Helpers -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.0/smooth-scroll.min.js" integrity="sha256-/k5n1rmutzb2PSqvtV77T+xHa9plhfEjb/mpn1RpMzA=" crossorigin="anonymous"></script>
+<!-- / JS Helpers -->
+
+<script>
+    // Popovers are opt-in for performance reasons, so you must initialize them yourself.
+    // Enable popovers everywhere
+    $(function() {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+
+<script>
+    // Init smooth-scroll
+    var scroll = new SmoothScroll('a[href*="#"]');
+
+    // Enable tooltips everywhere
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+<!-- Additional JS -->
+<?php
+if (count($view_data->include_JS)) {
+    foreach ($view_data->include_JS as $link_to_JS) {
+        if (filter_var($link_to_JS, FILTER_VALIDATE_URL)) {
+            echo '<script src="' . $link_to_JS . '" type="text/javascript"></script>' . "\n";
+        } else {
+            echo '<script src="' . JS_URL . '/' . $link_to_JS . '.js" type="text/javascript"></script>' . "\n";
+        }
+    }
+}
+?>
+<!-- / Additional JS -->
+
+<?php require_once __DIR__ . '/counter/yandex_metrika.html' ?>

@@ -1,6 +1,6 @@
 <?php
 
-class Query_Questions__find_recently_updated__enTest extends Abstract_DB_TestCase
+class Query_Questions__find_recently_updated__enTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['en' => ['questions']];
 

@@ -1,17 +1,15 @@
 <?php
 
-class UsersIDName_PATCH_APIController__ru__Test extends Abstract_Frontend_TestCase
+class UsersIDName_PATCH_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 
     public function test_RenameWithSaveRedirect_Ok()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Вова Малышов');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/users/3/name.json', $queryString, true);
+        $query_string = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Вова Малышов');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

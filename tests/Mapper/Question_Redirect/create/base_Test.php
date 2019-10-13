@@ -1,6 +1,6 @@
 <?php
 
-class Question_Mapper_Redirect__create__Test extends Abstract_DB_TestCase
+class Question_Mapper_Redirect__create__Test extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['redirects_questions']];
 

@@ -1,6 +1,6 @@
 <?php
 
-class Query_Contributor__find_answer_first_editorTest extends Abstract_DB_TestCase
+class Query_Contributor__find_answer_first_editorTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['revisions', 'questions'], 'users' => ['users']];
 

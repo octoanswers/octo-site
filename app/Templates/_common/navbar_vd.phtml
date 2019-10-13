@@ -1,0 +1,87 @@
+<!-- navbar -->
+
+<header class="navbar sticky-top navbar-expand-lg navbar-light">
+	<div class="container">
+		<?php if ($view_data->auth_user) : ?>
+			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::get_feed_URL($view_data->lang) ?>">
+				<?= __('common.answeropedia') ?>
+			</a>
+		<?php else : ?>
+			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::get_main_URL($view_data->lang) ?>">
+				<?= __('common.answeropedia') ?>
+			</a>
+		<?php endif; ?>
+
+		<sup class="d-none d-lg-block text-uppercase mr-0 mr-md-4">
+			<a class="small text-black-50 text-decoration-none" href="<?= \Helper\URL\Page::get_main_URL($view_data->lang) ?>">
+				<?= $view_data->lang ?>
+			</a>
+		</sup>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbar-supported-content">
+			<ul class="navbar-nav pt-3 pt-lg-0">
+
+				<!-- Mobile links -->
+
+				<li class="nav-item d-lg-none">
+					<a class="nav-link text-dark" href="<?= \Helper\URL\Page::get_flow_URL($view_data->lang) ?>">
+						<?= __('navbar.recent_changes') ?>
+					</a>
+				</li>
+
+				<li class="nav-item d-lg-none">
+					<a class="nav-link text-dark" href="<?= \Helper\URL\Categories::get_newest_URL($view_data->lang) ?>">
+						<?= __('navbar.categories') ?>
+					</a>
+				</li>
+
+				<?php if (!$view_data->auth_user) : ?>
+					<li class="nav-item d-lg-none my-2 my-lg-0">
+						<a class="text-dark text-decoration-none" href="#" data-toggle="modal" data-target="#modal_login"><?= __('navbar.login') ?></a>
+						<span class="text-black-50 mx-1">/</span>
+						<a class="text-dark text-decoration-none" href="#" data-toggle="modal" data-target="#modal_signup"><?= __('navbar.signup') ?></a>
+					</li>
+				<?php endif; ?>
+
+				<li class="nav-item d-none d-lg-block">
+					<form class="form-inline" action="<?= SITE_URL . '/' . $view_data->lang . '/search' ?>" method="GET">
+						<input name="q" class="form-control" type="search" placeholder="<?= __('navbar.search_placeholder') ?>" aria-label="Search">
+					</form>
+				</li>
+
+				<li class="nav-item mt-4 mt-lg-0 mb-3 mb-lg-0">
+					<button class="btn btn-outline-gray ml-md-3" role="button" data-toggle="modal" data-target="#modal_ask">
+						<i class="material-icons md-18 font-weight-bold">add</i>
+						<?= __('navbar.btn_ask') ?>
+					</button>
+				</li>
+
+			</ul>
+
+			<ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+
+				<?php if (!$view_data->auth_user) : ?>
+					<li class="nav-item">
+						<a class="text-primary text-decoration-none" href="#" data-toggle="modal" data-target="#modal_login"><?= __('navbar.login') ?></a>
+						<span class="text-primary mx-1">/</span>
+						<a class="text-primary text-decoration-none" href="#" data-toggle="modal" data-target="#modal_signup"><?= __('navbar.signup') ?></a>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($view_data->auth_user) : ?>
+					<li class="nav-item">
+						<a class="user-avatar wh-36px rounded d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $view_data->auth_user->get_URL($view_data->lang) ?>">
+							<img class="wh-36px rounded" src="<?= $view_data->auth_user->get_avatar_URL_small() ?>" alt="<?= $view_data->auth_user->name ?>">
+						</a>
+					</li>
+				<?php endif; ?>
+
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- / navbar -->

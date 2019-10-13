@@ -24,6 +24,8 @@ class Image extends \APIController\APIController
                 throw new \Exception('No file was selected for upload', 1);
             }
 
+            $post_params = $request->getParsedBody();
+
             $this->lang = $args['lang'];
 
             $question_id = (int) $args['id'];
@@ -33,7 +35,7 @@ class Image extends \APIController\APIController
                 throw new \Exception('No QUESTION', 0);
             }
 
-            $API_key = $request->getParam('api_key');
+            $API_key = $post_params['api_key'];
             $this->user = (new \Query\User())->user_with_API_key($API_key);
 
             if (!$this->user) {

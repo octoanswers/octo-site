@@ -1,6 +1,6 @@
 <?php
 
-class Query_Subscriptions__find_with_question_ID_and_emailTest extends Abstract_DB_TestCase
+class Query_Subscriptions__find_with_question_ID_and_emailTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['questions_subscriptions']];
 

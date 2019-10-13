@@ -11,10 +11,11 @@ class QuestionsIDSubscribe extends \APIController\APIController
     {
         try {
             $this->lang = $args['lang'];
-
             $question_id = (int) $args['id'];
-            $email = (string) $request->getParam('email');
-            $is_send_email = $request->getParam('no_email') ? false : true;
+
+            $post_params = $request->getParsedBody();
+            $email = (string) $post_params['email'];
+            $is_send_email = $post_params['no_email'] ? false : true;
 
             //
             // Validate params

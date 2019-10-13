@@ -1,6 +1,6 @@
 <?php
 
-class Query_Sandbox__find_newest_without_answer__abnormal__pageTest extends Abstract_DB_TestCase
+class Query_Sandbox__find_newest_without_answer__abnormal__pageTest extends \Tests\DB\TestCase
 {
     public function test__Page_param_equal_zero()
     {

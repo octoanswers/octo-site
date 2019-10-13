@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_ER_CategoriesQuestions__create__Test extends Abstract_DB_TestCase
+class Mapper_ER_CategoriesQuestions__create__Test extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['er_categories_questions']];
 

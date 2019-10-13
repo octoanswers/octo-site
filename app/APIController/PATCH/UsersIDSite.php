@@ -11,10 +11,11 @@ class UsersIDSite extends \APIController\APIController
     {
         try {
             $this->lang = $args['lang'];
-
             $user_ID = (int) $args['id'];
-            $api_key = (string) $request->getParam('api_key');
-            $new_site = $request->getParam('site');
+
+            $query_params = $request->getQueryParams();
+            $api_key = (string) $query_params['api_key'];
+            $new_site = @$query_params['site'];
 
             // Validate params
 

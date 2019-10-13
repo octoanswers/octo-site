@@ -12,8 +12,10 @@ class Login extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
 
-            $user_email = (string) $request->getParam('email');
-            $user_password = (string) $request->getParam('password');
+            $post_params = $request->getParsedBody();
+
+            $user_email = (string) $post_params['email'];
+            $user_password = (string) $post_params['password'];
 
             \Validator\User::validateEmail($user_email);
             \Validator\User::validatePassword($user_password);

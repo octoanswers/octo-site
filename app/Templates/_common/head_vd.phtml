@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title><?= $view_data->page_title ?></title>
+
+<?php if ($view_data->page_description) : ?>
+    <meta name="description" content="<?= $view_data->page_description ?>">
+<?php endif; ?>
+
+<?php if ($view_data->canonical_URL) : ?>
+    <link rel="canonical" href="<?= $view_data->canonical_URL ?>" />
+<?php endif; ?>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="https://answeropedia.org/assets/img/favicon/favicon-196.png" sizes="196x196">
+<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-120.png">
+<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-152.png" sizes="152x152">
+<link rel="apple-touch-icon" href="https://answeropedia.org/assets/img/favicon/apple-touch-icon-180.png" sizes="180x180">
+
+<!-- Material Icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<!-- Bootstrap Stylesheet -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" href="https://answeropedia.org/assets/css-theme/style.css">
+<link rel="stylesheet" href="https://answeropedia.org/assets/css-vendors/style.css">
+
+<?php if (count($view_data->include_CSS)) : ?>
+    <!-- Additional CSS -->
+    <?php foreach ($view_data->include_CSS as $link_to_CSS) : ?>
+        <link rel="stylesheet" href="<?= $link_to_CSS ?>">
+    <?php endforeach; ?>
+    <!-- / Additional CSS -->
+<?php endif; ?>
+
+<!-- Open Graph tags -->
+<?php
+if (isset($view_data->open_graph) && count($view_data->open_graph)) {
+    foreach ($view_data->open_graph as $key => $value) {
+        echo '<meta property="og:' . $key . '" content="' . $value . '"' . "\n";
+    }
+} ?>
+
+<?php require_once __DIR__ . '/counter/google_analytics.html' ?>

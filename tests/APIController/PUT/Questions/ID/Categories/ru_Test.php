@@ -1,17 +1,15 @@
 <?php
 
-class Categories_ID_Questions_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
+class Categories_ID_Questions_PUT_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'categories', 'activities', 'er_categories_questions'], 'users' => ['users']];
 
     public function test_Add_one_category()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_categories=' . urlencode('Медицина,Гинекология');
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/22/categories.json', $query_string, true);
+        $query_string = '/api/v1/ru/questions/22/categories.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_categories=' . urlencode('Медицина,Гинекология');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PUT', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -48,12 +46,10 @@ class Categories_ID_Questions_PUT_APIController__ru__Test extends Abstract_Front
 
     public function test__Categories_param_not_set()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/7/categories.json', $query_string, true);
+        $query_string = '/api/v1/ru/questions/7/categories.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PUT', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

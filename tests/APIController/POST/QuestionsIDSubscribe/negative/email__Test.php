@@ -1,17 +1,18 @@
 <?php
 
-class QuestionsIDSubscribe_POST_APIController__negative__email__Test extends Abstract_Frontend_TestCase
+class QuestionsIDSubscribe_POST_APIController__negative__email__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'questions_subscriptions']];
 
     public function test__IncorrectEmail()
     {
-        $query_string = 'email=' . urlencode('test_mail.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/questions/12/subscribe.json', $query_string, true);
+        $uri = '/api/v1/ru/questions/12/subscribe.json';
+        $post_data = ['email' => urlencode('test_mail.ru'), 'no_email' => 1];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

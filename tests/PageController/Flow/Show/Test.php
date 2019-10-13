@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\Flow\Show;
 
-class Test extends \Abstract_Frontend_TestCase
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
         'en' => ['activities'],
@@ -11,14 +11,8 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__Show_EN_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/flow',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/flow');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Flow – Answeropedia', $response_body);
@@ -29,16 +23,10 @@ class Test extends \Abstract_Frontend_TestCase
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__Show_RU_page()
+    public function test__Check_that_RU_page_is_exists()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/flow',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/ru/flow');
+        $response = $this->request($request);
 
         $this->assertSame(200, $response->getStatusCode());
     }

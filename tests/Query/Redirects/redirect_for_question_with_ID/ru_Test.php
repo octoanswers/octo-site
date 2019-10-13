@@ -1,6 +1,6 @@
 <?php
 
-class Query_Redirects_Question__redirect_for_question_with_ID__ruTest extends Abstract_DB_TestCase
+class Query_Redirects_Question__redirect_for_question_with_ID__ruTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['redirects_questions']];
 

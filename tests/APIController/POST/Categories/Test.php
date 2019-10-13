@@ -1,17 +1,21 @@
 <?php
 
-class APIController_POST_Categories__Test extends Abstract_Frontend_TestCase
+class APIController_POST_Categories__Test extends \Tests\Frontend\TestCase
 {
-    protected $setUpDB = ['ru' => ['questions', 'categories', 'activities', 'er_categories_questions'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['questions', 'categories', 'activities', 'er_categories_questions'],
+        'users' => ['users']
+    ];
 
-    public function test_Post_one_category()
+    public function test__Post_one_category()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories=' . urlencode('Apple');
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/categories.json', $query_string, true);
+        $uri = '/api/v1/ru/categories.json';
+        $post_data = ['api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e', 'categories' => 'Apple'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expected_response = [
@@ -35,14 +39,15 @@ class APIController_POST_Categories__Test extends Abstract_Frontend_TestCase
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test_Post_multiple_categories()
+    public function test__Post_multiple_categories()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories=' . urlencode('Apple,Косметика');
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/categories.json', $query_string, true);
+        $uri = '/api/v1/ru/categories.json';
+        $post_data = ['api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e', 'categories' => 'Apple,Косметика'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expected_response = [
@@ -70,12 +75,13 @@ class APIController_POST_Categories__Test extends Abstract_Frontend_TestCase
 
     public function test_Categories_not_set()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&categories=' . urlencode('');
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/categories.json', $query_string, true);
+        $uri = '/api/v1/ru/categories.json';
+        $post_data = ['api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e', 'categories' => ''];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expected_response = [
@@ -87,14 +93,15 @@ class APIController_POST_Categories__Test extends Abstract_Frontend_TestCase
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test_Incorrect_API_key()
+    public function test__Incorrect_API_key()
     {
-        $query_string = 'api_key=XXX1ebdbec3d4e396043c96b6ab44a6e&categories=' . urlencode('Hello');
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/categories.json', $query_string, true);
+        $uri = '/api/v1/ru/categories.json';
+        $post_data = ['api_key' => 'XXX1ebdbec3d4e396043c96b6ab44a6e', 'categories' => 'Hello'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expected_response = [

@@ -1,14 +1,16 @@
 <?php
 
-class Signup_POST_APIController__negative__password__Test extends Abstract_Frontend_TestCase
+class Signup_POST_APIController__negative__password__Test extends \Tests\Frontend\TestCase
 {
-    public function testPasswordTooShort()
+    public function test__Password_too_short()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=new@answeropedia.org&password=1234&username=ivanivanov', true);
+        $uri = '/api/v1/ru/signup.json';
+        $post_data = ['username' => 'kozel', 'email' => 'new@answeropedia.org', 'password' => '1234'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

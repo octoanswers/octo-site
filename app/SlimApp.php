@@ -1,46 +1,59 @@
 <?php
 
-// @TODO Вынести require_once и инициализацию illuminate_translation
-
-require_once __DIR__ . '/functions.php';
-
-// Get lang code from URL
-$GLOBALS['lang_code'] = \Helper\Lang::get_lang_code_from_URI();
-
-// Prepare the FileLoader
-$file_system = new \Illuminate\Filesystem\Filesystem();
-$loader = new \Illuminate\Translation\FileLoader($file_system, ROOT_PATH . '/lang');
-
-// Register the Translator
-$GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 
 class SlimApp
 {
     /**
      * Stores an instance of the Slim application.
      *
-     * @var \Slim\App
+     * @var App
      */
     private $app;
 
     public function __construct()
     {
-        $configuration = [
-            'settings' => [
-                'displayErrorDetails' => true,
-            ],
-        ];
+        // Instantiate App
 
-        $container = new \Slim\Container($configuration);
+        $app = Slim\Factory\AppFactory::create();
 
-        $container['notFoundHandler'] = function ($c) {
-            return function ($request, $response) use ($c) {
-                $lang = 'ru'; // @TODO Bad
-                return (new \PageController\Error\PageNotFound($c))->handle($lang, $c['request'], $c['response'], []);
-            };
+        // The routing middleware should be added earlier than the ErrorMiddleware
+        // Otherwise exceptions thrown from it will not be handled by the middleware
+
+        $app->addRoutingMiddleware();
+
+        // Define Custom Error Handler
+        $default_error_handler = function (Request $request, \Throwable $exception, bool $displayErrorDetails, bool $logErrors, bool $logErrorDetails) use ($app) {
+
+            $response = $app->getResponseFactory()->createResponse();
+            $response->getBody()->write('Page not found');
+
+            return $response->withStatus(404);
         };
 
-        $app = new \Slim\App($container);
+        // Add Error Middleware
+        $errorMiddleware = $app->addErrorMiddleware(true, true, true);
+        $errorMiddleware->setDefaultErrorHandler($default_error_handler);
+
+        // @TODO Get the default error handler and register my custom error renderer.
+        // $errorHandler = $errorMiddleware->getDefaultErrorHandler();
+        // $errorHandler->registerErrorRenderer('text/html', \Renderer\Error\Basic::class);
+        // $errorMiddleware->setDefaultErrorHandler($errorHandler);
+
+        // Add Middleware for CORS
+        // @NOTE: Move to separate class https://www.slimframework.com/docs/v4/concepts/middleware.html
+
+        $beforeMiddleware = function (Request $request, RequestHandler $handler) {
+            $response = $handler->handle($request);
+            return $response
+                ->withHeader('Access-Control-Allow-Origin', 'https://avatars.answeropedia.org')
+                ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+                ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+        };
+        $app->add($beforeMiddleware);
+
 
         // Set supported array on languages
 
@@ -50,71 +63,71 @@ class SlimApp
 
         // API v1
 
-        $app->group('/api/v1' . URL_PART_LANG, function () {
+        $app->group('/api/v1' . URL_PART_LANG, function (\Slim\Routing\RouteCollectorProxy $group) {
 
             // GET
-            $this->get('/search/categories.json', '\APIController\GET\SearchCategories:handle');
+            $group->get('/search/categories.json', '\APIController\GET\SearchCategories:handle');
 
             // DELETE
-            $this->delete('/categories/{id}/follow.json', '\APIController\DELETE\CategoriesIDFollow:handle');
-            $this->delete('/questions/{id}/follow.json', '\APIController\DELETE\QuestionsIDFollow:handle');
-            $this->delete('/questions/{id}/subscribe.json', '\APIController\DELETE\QuestionsIDSubscribe:handle');
-            $this->delete('/users/{id}/follow.json', '\APIController\DELETE\UsersIDFollow:handle');
+            $group->delete('/categories/{id}/follow.json', '\APIController\DELETE\CategoriesIDFollow:handle');
+            $group->delete('/questions/{id}/follow.json', '\APIController\DELETE\QuestionsIDFollow:handle');
+            $group->delete('/questions/{id}/subscribe.json', '\APIController\DELETE\QuestionsIDSubscribe:handle');
+            $group->delete('/users/{id}/follow.json', '\APIController\DELETE\UsersIDFollow:handle');
 
             // PATCH
-            $this->patch('/categories/{id}/rename.json', '\APIController\PATCH\CategoriesIDRename:handle');
-            $this->patch('/questions/{id}/rename.json', '\APIController\PATCH\QuestionsIDRename:handle');
-            $this->patch('/users/{id}/signature.json', '\APIController\PATCH\UsersIDSignature:handle');
-            $this->patch('/users/{id}/site.json', '\APIController\PATCH\UsersIDSite:handle');
-            $this->patch('/users/{id}/name.json', '\APIController\PATCH\UsersIDName:handle');
+            $group->patch('/categories/{id}/rename.json', '\APIController\PATCH\CategoriesIDRename:handle');
+            $group->patch('/questions/{id}/rename.json', '\APIController\PATCH\QuestionsIDRename:handle');
+            $group->patch('/users/{id}/signature.json', '\APIController\PATCH\UsersIDSignature:handle');
+            $group->patch('/users/{id}/site.json', '\APIController\PATCH\UsersIDSite:handle');
+            $group->patch('/users/{id}/name.json', '\APIController\PATCH\UsersIDName:handle');
 
             // POST
-            $this->post('/answers/render.json', '\APIController\POST\Answers\Render:handle');
-            $this->post('/avatar.json', '\APIController\POST\Avatar:handle');
-            $this->post('/categories.json', '\APIController\POST\Categories:handle');
-            $this->post('/categories/{id}/follow.json', '\APIController\POST\CategoriesIDFollow:handle');
-            $this->post('/login.json', '\APIController\POST\Login:handle');
-            $this->post('/logout.json', '\APIController\POST\Logout:handle');
-            $this->post('/questions.json', '\APIController\POST\Questions:handle');
-            $this->post('/questions/{id}/image.json', '\APIController\POST\Questions\ID\Image:handle');
-            $this->post('/questions/{id}/follow.json', '\APIController\POST\QuestionsIDFollow:handle');
-            $this->post('/questions/{id}/subscribe.json', '\APIController\POST\QuestionsIDSubscribe:handle');
-            $this->post('/signup.json', '\APIController\POST\Signup:handle');
-            $this->post('/users/{id}/follow.json', '\APIController\POST\UsersIDFollow:handle');
+            $group->post('/answers/render.json', '\APIController\POST\Answers\Render:handle');
+            $group->post('/avatar.json', '\APIController\POST\Avatar:handle');
+            $group->post('/categories.json', '\APIController\POST\Categories:handle');
+            $group->post('/categories/{id}/follow.json', '\APIController\POST\CategoriesIDFollow:handle');
+            $group->post('/login.json', '\APIController\POST\Login:handle');
+            $group->post('/logout.json', '\APIController\POST\Logout:handle');
+            $group->post('/questions.json', '\APIController\POST\Questions:handle');
+            $group->post('/questions/{id}/image.json', '\APIController\POST\Questions\ID\Image:handle');
+            $group->post('/questions/{id}/follow.json', '\APIController\POST\QuestionsIDFollow:handle');
+            $group->post('/questions/{id}/subscribe.json', '\APIController\POST\QuestionsIDSubscribe:handle');
+            $group->post('/signup.json', '\APIController\POST\Signup:handle');
+            $group->post('/users/{id}/follow.json', '\APIController\POST\UsersIDFollow:handle');
 
             // PUT
-            $this->put('/questions/{id}.json', '\APIController\PUT\QuestionsID:handle');
-            $this->put('/questions/{id}/answer.json', '\APIController\PUT\QuestionsIDAnswer:handle');
-            $this->put('/questions/{id}/categories.json', '\APIController\PUT\Questions\ID\Categories:handle');
+            $group->put('/questions/{id}.json', '\APIController\PUT\QuestionsID:handle');
+            $group->put('/questions/{id}/answer.json', '\APIController\PUT\QuestionsIDAnswer:handle');
+            $group->put('/questions/{id}/categories.json', '\APIController\PUT\Questions\ID\Categories:handle');
         });
 
         // Publuc URI`s
 
-        $app->group(URL_PART_LANG, function () {
-            $this->get('', '\PageController\Main\Show:handle');
-            $this->get('/answer/{id}/edit', '\PageController\Answer\Edit:handle');
-            $this->get('/answer/{id}/history', '\PageController\Answer\History:handle');
-            $this->get('/feed', '\PageController\Feed\Show:handle');
-            $this->get('/flow', '\PageController\Flow\Show:handle');
-            $this->get('/category/{category_uri}', '\PageController\Category\Show:handle');
-            $this->get('/categories/newest', '\PageController\Categories\Newest:handle');
+        $app->group(URL_PART_LANG, function (\Slim\Routing\RouteCollectorProxy $group) {
+            $group->get('', '\PageController\Main\Show:handle');
+            $group->get('/answer/{id}/edit', '\PageController\Answer\Edit:handle');
+            $group->get('/answer/{id}/history', '\PageController\Answer\History:handle');
+            $group->get('/feed', '\PageController\Feed\Show:handle');
+            $group->get('/flow', '\PageController\Flow\Show:handle');
+            $group->get('/category/{category_uri}', '\PageController\Category\Show:handle');
+            $group->get('/categories/newest', '\PageController\Categories\Newest:handle');
             // @NOTE To realize $this->get('/categories/popular', 'List_Categories_PageController:handle');
-            $this->get('/question/{id}/categories', '\PageController\Question\UpdateCategories:handle');
-            $this->get('/question/{id}/discussion', '\PageController\Question\Discussion:handle');
-            $this->get('/questions/newest', '\PageController\Questions\Newest:handle');
-            $this->get('/questions/recently-updated', '\PageController\Questions\RecentlyUpdated:handle');
-            $this->get('/random-question', '\PageController\Question\Random:handle');
-            $this->get('/sandbox/all', '\PageController\Sandbox\All:handle');
-            $this->get('/sandbox/without-answers', '\PageController\Sandbox\WithoutAnswers:handle');
-            $this->get('/sandbox/without-categories', '\PageController\Sandbox\WithoutCategories:handle');
-            $this->get('/search', '\PageController\Search\Show:handle');
-            $this->get('/settings', '\PageController\Settings\Show:handle');
-            $this->get('/sitemap.xml', '\PageController\SitemapXML\Lang:handle');
-            $this->get('/user/{id}', '\PageController\User\ShortURL:handle');
-            $this->get('/users/newest', '\PageController\Users\Newest:handle');
-            $this->get('/@{username}', '\PageController\User\Show:handle');
-            $this->get('/{question_uri}', '\PageController\Question\Show:handle');
-            $this->get('/{id:[0-9]+}[/{uri_slug}]', '\PageController\Question\Show:handleByID'); // @TODO Deprecated
+            $group->get('/question/{id}/categories', '\PageController\Question\UpdateCategories:handle');
+            $group->get('/question/{id}/discussion', '\PageController\Question\Discussion:handle');
+            $group->get('/questions/newest', '\PageController\Questions\Newest:handle');
+            $group->get('/questions/recently-updated', '\PageController\Questions\RecentlyUpdated:handle');
+            $group->get('/random-question', '\PageController\Question\Random:handle');
+            $group->get('/sandbox/all', '\PageController\Sandbox\All:handle');
+            $group->get('/sandbox/without-answers', '\PageController\Sandbox\WithoutAnswers:handle');
+            $group->get('/sandbox/without-categories', '\PageController\Sandbox\WithoutCategories:handle');
+            $group->get('/search', '\PageController\Search\Show:handle');
+            $group->get('/settings', '\PageController\Settings\Show:handle');
+            $group->get('/sitemap.xml', '\PageController\SitemapXML\Lang:handle');
+            $group->get('/user/{id}', \PageController\User\ShortURL::class . ':handle');
+            $group->get('/users/newest', \PageController\Users\Newest::class . ':handle');
+            $group->get('/@{username}', '\PageController\User\Show:handle');
+            $group->get('/{question_uri}', '\PageController\Question\Show:handle');
+            $group->get('/{id:[0-9]+}[/{uri_slug}]', '\PageController\Question\Show:handleByID'); // @TODO Deprecated
         });
 
         // Language-agnostic URLs
@@ -128,7 +141,7 @@ class SlimApp
     /**
      * Get an instance of the application.
      *
-     * @return \Slim\App
+     * @return App
      */
     public function get_app()
     {

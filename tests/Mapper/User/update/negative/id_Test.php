@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_User__update__id__Test extends Abstract_DB_TestCase
+class Mapper_User__update__id__Test extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 

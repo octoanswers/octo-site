@@ -2,7 +2,7 @@
 
 namespace Tests\PageController\User\ShortURL;
 
-class Test extends \Abstract_Frontend_TestCase
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
         'en'    => ['questions', 'revisions', 'er_users_follow_users'],
@@ -12,28 +12,16 @@ class Test extends \Abstract_Frontend_TestCase
 
     public function test__EnPage()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/user/4',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/user/4');
+        $response = $this->request($request);
 
         $this->assertSame(301, $response->getStatusCode());
     }
 
     public function test__Check_short_RU_URL()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/user/4',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/ru/user/4');
+        $response = $this->request($request);
 
         $this->assertSame(301, $response->getStatusCode());
     }

@@ -1,6 +1,6 @@
 <?php
 
-class Query_Questions__find_questions_with_image__enTest extends Abstract_DB_TestCase
+class Query_Questions__find_questions_with_image__enTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['en' => ['questions']];
 

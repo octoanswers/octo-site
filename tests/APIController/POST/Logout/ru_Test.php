@@ -1,21 +1,18 @@
 <?php
 
-class Logout_POST_APIController__Test extends Abstract_Frontend_TestCase
+class Logout_POST_APIController__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
     public function testCorrectLogout()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'POST',
-            'REQUEST_URI'    => '/api/v1/ru/logout.json',
-            'QUERY_STRING'   => 'api_key=9447243e3e1706375d23b06bf6dd1271',
-            'CONTENT_TYPE'   => 'application/json;charset=utf8',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
+        $uri = '/api/v1/ru/logout.json';
+        $form_data = ['api_key' => '9447243e3e1706375d23b06bf6dd1271'];
 
-        $response = $this->app->run(true);
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $form_data);
+
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

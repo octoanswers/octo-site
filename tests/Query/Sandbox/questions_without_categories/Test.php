@@ -1,6 +1,6 @@
 <?php
 
-class Query_Sandbox__questions_without_categoriesTest extends Abstract_DB_TestCase
+class Query_Sandbox__questions_without_categoriesTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['questions'], 'en' => ['questions']];
 

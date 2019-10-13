@@ -12,7 +12,8 @@ class QuestionsIDFollow extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
 
-            $api_key = (string) $request->getParam('api_key');
+            $query_params = $request->getQueryParams();
+            $api_key = (string) $query_params['api_key'];
             $question_ID = (int) $args['id'];
 
             //

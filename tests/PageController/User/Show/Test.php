@@ -1,6 +1,8 @@
 <?php
 
-class Show_User_PageController__en__Test extends Abstract_Frontend_TestCase
+namespace Tests\PageController\User\Show;
+
+class Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = [
         'en'    => ['questions', 'revisions', 'er_users_follow_users'],
@@ -10,14 +12,8 @@ class Show_User_PageController__en__Test extends Abstract_Frontend_TestCase
 
     public function test__Show_EN_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/@kozel',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/@kozel');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Виталий Козлов Wiki-answers on Answeropedia', $response_body);
@@ -30,14 +26,8 @@ class Show_User_PageController__en__Test extends Abstract_Frontend_TestCase
 
     public function test__Check_RU_page()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/ru/@kozel',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/ru/@kozel');
+        $response = $this->request($request);
 
         $this->assertSame(200, $response->getStatusCode());
     }

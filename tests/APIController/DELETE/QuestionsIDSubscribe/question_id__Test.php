@@ -1,15 +1,13 @@
 <?php
 
-class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends Abstract_Frontend_TestCase
+class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends \Tests\Frontend\TestCase
 {
     public function test__Question_ID_equal_zero()
     {
-        $query_string = 'email=' . urlencode('test@mail.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/0/subscribe.json', $query_string, true);
+        $query_string = '/api/v1/ru/questions/0/subscribe.json?email=' . urlencode('test@mail.ru') . '&no_email=1';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('DELETE', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -23,12 +21,10 @@ class QuestionsIDSubscribe_DELETE_APIController__question_id__Test extends Abstr
 
     public function test__Question_ID_below_zero()
     {
-        $query_string = 'email=' . urlencode('test@mail.ru') . '&no_email=1';
-        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/questions/-1/subscribe.json', $query_string, true);
+        $query_string = '/api/v1/ru/questions/-1/subscribe.json?email=' . urlencode('test@mail.ru') . '&no_email=1';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('DELETE', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

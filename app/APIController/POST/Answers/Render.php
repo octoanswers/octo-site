@@ -10,9 +10,11 @@ class Render extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
+            $post_params = $request->getParsedBody();
+
             $lang = $args['lang'];
 
-            $text_MD = urldecode((string) $request->getParam('text'));
+            $text_MD = urldecode((string) $post_params['text']);
 
             $parsedown = new \Helper\ExtendedParsedown($lang);
             $text_HTML = $parsedown->text($text_MD);

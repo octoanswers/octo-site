@@ -1,16 +1,18 @@
 <?php
 
-class Signup_POST_APIController__negative__email__Test extends Abstract_Frontend_TestCase
+class Signup_POST_APIController__negative__email__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function testEmailIsIncorrect()
+    public function test__Email_is_incorrect()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=foo_answeropedia.org&password=jd754fJGFD99&username=ivanivanov', true);
+        $uri = '/api/v1/ru/signup.json';
+        $post_data = ['username' => 'ivanivanov', 'email' => 'foo_answeropedia.org', 'password' => 'jd754fJGFD99'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -22,13 +24,15 @@ class Signup_POST_APIController__negative__email__Test extends Abstract_Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function testEmailAlreadyRegistered()
+    public function test__Email_already_registered()
     {
-        $request = $this->__getTestRequest('POST', '/api/v1/ru/signup.json', 'email=admin@answeropedia.org&password=jd754fJGFD99&username=ivanivanov', true);
+        $uri = '/api/v1/ru/signup.json';
+        $post_data = ['username' => 'ivanivanov', 'email' => 'admin@answeropedia.org', 'password' => 'jd754fJGFD99'];
 
-        $this->app->getContainer()['request'] = $request;
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $post_data);
 
-        $response = $this->app->run(true);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

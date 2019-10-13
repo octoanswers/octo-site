@@ -1,14 +1,14 @@
 <!-- categories -->
-<?php if (count($this->users)) : ?>
-	<?php foreach ($this->users as $user) : ?>
+<?php if (count($view_data->users)) : ?>
+	<?php foreach ($view_data->users as $user) : ?>
 		<div class="border rounded bg-white p-3 my-4">
 
 			<div class="media position-relative">
-				<a class="wh-48px mt-1 mr-3 rounded" href="<?= $user->get_URL($this->lang) ?>">
+				<a class="wh-48px mt-1 mr-3 rounded" href="<?= $user->get_URL($view_data->lang) ?>">
 					<img src="<?= $user->get_avatar_URL_small() ?>" class="wh-48px rounded" alt="<?= $user->name ?>">
 				</a>
 				<div class="media-body">
-					<a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $user->get_URL($this->lang) ?>">
+					<a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $user->get_URL($view_data->lang) ?>">
 						<?= $user->name ?>
 					</a>
 
@@ -29,9 +29,9 @@
 
 					<div class="small text-black-50 mt-2">
 						<a class="btn btn-sm btn-outline-gray mr-2" rel="nofollow" href="#">
-							Follow
+							<?= __('Follow') ?>
 						</a>
-						<?= \Humanizer\DateTime::humanize_timestamp($this->lang, $user->createdAt) ?>
+						<?= \Humanizer\DateTime::humanize_timestamp($view_data->lang, $user->createdAt) ?>
 					</div>
 				</div>
 			</div>

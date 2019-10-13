@@ -1,17 +1,15 @@
 <?php
 
-class QuestionsIDRename_PATCH_APIController__rename__id__Test extends Abstract_Frontend_TestCase
+class QuestionsIDRename_PATCH_APIController__rename__id__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
 
     public function test_QuestionIDEqualZero_Error()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/0/rename.json', $queryString, true);
+        $query_string = '/api/v1/ru/questions/0/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -25,12 +23,10 @@ class QuestionsIDRename_PATCH_APIController__rename__id__Test extends Abstract_F
 
     public function test_QuestionIDBelowZero_Error()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/questions/-1/rename.json', $queryString, true);
+        $query_string = '/api/v1/ru/questions/-1/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

@@ -10,7 +10,9 @@
     }
   ],
   "require": {
-    "slim/slim": "^3.8",
+    "slim/slim": "^4.2",
+    "slim/psr7": "^0.4",
+    "slim/http": "^0.7",
     "erusev/parsedown": "^1.6",
     "respect/validation": "^1.1",
     "jblond/php-diff": "^1.12",

@@ -1,21 +1,18 @@
 <?php
 
-class Login_POST_APIController__Test extends Abstract_Frontend_TestCase
+class Login_POST_APIController__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function testCorrectLogin()
+    public function test__Correct_login()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'POST',
-            'REQUEST_URI'    => '/api/v1/ru/login.json',
-            'QUERY_STRING'   => 'email=admin@answeropedia.org&password=jd754fJGFD99',
-            'CONTENT_TYPE'   => 'application/json;charset=utf8',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
+        $uri = '/api/v1/ru/login.json';
+        $form_data = ['email' => 'admin@answeropedia.org', 'password' => 'jd754fJGFD99'];
 
-        $response = $this->app->run(true);
+        $request = $this->createRequest('POST', $uri);
+        $request = $this->withFormData($request, $form_data);
+
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

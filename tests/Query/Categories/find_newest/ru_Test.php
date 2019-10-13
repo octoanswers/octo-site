@@ -1,6 +1,6 @@
 <?php
 
-class Query_Categories__find_newest__ruTest extends Abstract_DB_TestCase
+class Query_Categories__find_newest__ruTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['categories']];
 

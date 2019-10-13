@@ -1,17 +1,20 @@
 <?php
 
-class CategoriesIDFollow_DELETE_APIController__ru__Test extends Abstract_Frontend_TestCase
+namespace APIController\DELETE\CategoriesIDFollow;
+
+class Test extends \Tests\Frontend\TestCase
 {
-    protected $setUpDB = ['ru' => ['categories', 'er_users_follow_categories'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['categories', 'er_users_follow_categories'],
+        'users' => ['users']
+    ];
 
     public function test__Base_unfollow()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/categories/7/follow.json', $query_string, true);
+        $query_string = '/api/v1/ru/categories/7/follow.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('DELETE', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -29,12 +32,10 @@ class CategoriesIDFollow_DELETE_APIController__ru__Test extends Abstract_Fronten
 
     public function test__Not_followed()
     {
-        $query_string = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
-        $request = $this->__getTestRequest('DELETE', '/api/v1/ru/categories/4/follow.json', $query_string, true);
+        $query_string = '/api/v1/ru/categories/4/follow.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('DELETE', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

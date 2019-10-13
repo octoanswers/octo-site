@@ -10,15 +10,17 @@ class QuestionsIDAnswer extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
+            $query_params = $request->getQueryParams();
+
             $this->lang = $args['lang'];
 
             $answer_id = (int) $args['id'];
-            $new_answer_text = (string) $request->getParam('answer_text');
+            $new_answer_text = (string) $query_params['answer_text'];
 
-            $revision_comment = (string) $request->getParam('changes_comment');
+            $revision_comment = (string) @$query_params['changes_comment'];
             $revision_comment = strlen($revision_comment) ? $revision_comment : null;
 
-            $user_api_key = (string) $request->getParam('user_api_key');
+            $user_api_key = (string) $query_params['user_api_key'];
 
             // Check user
 

@@ -1,6 +1,6 @@
 <?php
 
-class Query_Question__question_with_titleTest extends Abstract_DB_TestCase
+class Query_Question__question_with_titleTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['ru' => ['questions']];
 

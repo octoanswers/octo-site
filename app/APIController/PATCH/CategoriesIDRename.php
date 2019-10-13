@@ -12,8 +12,10 @@ class CategoriesIDRename extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
             $category_ID = (int) $args['id'];
-            $api_key = (string) $request->getParam('api_key');
-            $category_new_title = (string) $request->getParam('new_title');
+
+            $query_params = $request->getQueryParams();
+            $api_key = (string) $query_params['api_key'];
+            $category_new_title = (string) @$query_params['new_title'];
 
             // Validate params
 
@@ -26,7 +28,7 @@ class CategoriesIDRename extends \APIController\APIController
             $category->title = $category_new_title;
             $category = (new \Mapper\Category($this->lang))->update($category);
 
-            $is_save_redirect = (bool) $request->getParam('save_redirect');
+            $is_save_redirect = (bool) @$query_params['save_redirect'];
             if ($is_save_redirect) {
                 if (mb_strtolower($category_new_title) != mb_strtolower($old_title)) {
                     // create category record with OLD title & redirect flag

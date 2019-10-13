@@ -1,17 +1,15 @@
 <?php
 
-class CategoriesIDRename_PATCH_APIController__negative__ID__Test extends Abstract_Frontend_TestCase
+class CategoriesIDRename_PATCH_APIController__negative__ID__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['categories', 'activities', 'redirects_categories'], 'users' => ['users']];
 
     public function test_Error_when_category_ID_equal_zero()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/0/rename.json', $queryString, true);
+        $query_string = '/api/v1/ru/categories/0/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -25,12 +23,10 @@ class CategoriesIDRename_PATCH_APIController__negative__ID__Test extends Abstrac
 
     public function test_Error_when_category_ID_below_zero()
     {
-        $queryString = 'api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
-        $request = $this->__getTestRequest('PATCH', '/api/v1/ru/categories/-1/rename.json', $queryString, true);
+        $query_string = '/api/v1/ru/categories/-1/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PATCH', $query_string);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [

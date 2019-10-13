@@ -1,6 +1,6 @@
 <?php
 
-class Mapper_User__save__negative__name__Test extends Abstract_DB_TestCase
+class Mapper_User__save__negative__name__Test extends \Tests\DB\TestCase
 {
     public function test_empty()
     {

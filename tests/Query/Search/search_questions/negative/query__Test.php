@@ -1,6 +1,6 @@
 <?php
 
-class Query_Search__search_questions__negative__queryTest extends Abstract_DB_TestCase
+class Query_Search__search_questions__negative__queryTest extends \Tests\DB\TestCase
 {
     public function test__Query_string_is_empty()
     {

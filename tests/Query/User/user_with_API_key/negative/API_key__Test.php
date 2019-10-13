@@ -1,6 +1,6 @@
 <?php
 
-class Query_Users__user_with_API_key__negative__API_keyTest extends Abstract_DB_TestCase
+class Query_Users__user_with_API_key__negative__API_keyTest extends \Tests\DB\TestCase
 {
     protected $setUpDB = ['users' => ['users']];
 

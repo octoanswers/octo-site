@@ -1,19 +1,15 @@
 <?php
 
-class PageController_QuestionNotFound_base_Test extends Abstract_Frontend_TestCase
+namespace Tests\PageController\Error\QuestionNotFound;
+
+class Test extends \Tests\Frontend\TestCase
 {
-    protected $setUpDB = ['ru' => ['questions']];
+    protected $setUpDB = ['en' => ['questions']];
 
-    public function test_Base()
+    public function test__Get_some_unfounded_question()
     {
-        $environment = \Slim\Http\Environment::mock([
-            'REQUEST_METHOD' => 'GET',
-            'REQUEST_URI'    => '/en/Some_unfounded_question',
-        ]);
-        $request = \Slim\Http\Request::createFromEnvironment($environment);
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('GET', '/en/Some_unfounded_question');
+        $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $this->assertStringContainsString('Question not found – Some unfounded question? – Answeropedia', $response_body);

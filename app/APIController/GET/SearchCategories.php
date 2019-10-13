@@ -12,7 +12,8 @@ class SearchCategories extends \APIController\APIController
         try {
             $this->lang = $args['lang'];
 
-            $this->query = urldecode((string) $request->getParam('query'));
+            $query_params = $request->getQueryParams();
+            $this->query = urldecode((string) $query_params['query']);
 
             $output = [];
 

@@ -1,18 +1,16 @@
 <?php
 
-class QuestionsIDAnswer_PUT_APIController__ru__Test extends Abstract_Frontend_TestCase
+class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Tests\Frontend\TestCase
 {
     protected $setUpDB = ['ru' => ['questions', 'revisions', 'activities'], 'users' => ['users']];
 
     public function test__NewAnswerWithFullParams__Ok()
     {
-        $queryString = 'answer_text=' . urlencode('В Екатеринбурге.') . '&changes_comment=' . urlencode('Правка сделана в 09-28') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/15/answer.json', $queryString, true);
+        $query_URI = '/api/v1/ru/questions/15/answer.json?answer_text=' . urlencode('В Екатеринбурге.') . '&changes_comment=' . urlencode('Правка сделана в 09-28') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
-        $responseBody = (string) $response->getBody();
+        $request = $this->createRequest('PUT', $query_URI);
+        $response = $this->request($request);
+        $response_body = (string) $response->getBody();
 
         $expectedResponse = [
             'question_id'        => 15,
@@ -29,18 +27,16 @@ class QuestionsIDAnswer_PUT_APIController__ru__Test extends Abstract_Frontend_Te
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expectedResponse, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test__ReplaceAnswerWithFullParams__Ok()
     {
-        $queryString = 'answer_text=' . urlencode('Нет, птицы не делают игры.') . '&changes_comment=' . urlencode('Some fixes for Q15') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/21/answer.json', $queryString, true);
+        $queryString = '/api/v1/ru/questions/21/answer.json?answer_text=' . urlencode('Нет, птицы не делают игры.') . '&changes_comment=' . urlencode('Some fixes for Q15') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PUT', $queryString);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
@@ -64,12 +60,10 @@ class QuestionsIDAnswer_PUT_APIController__ru__Test extends Abstract_Frontend_Te
 
     public function test_NewAnswerWithoutRevisionComment()
     {
-        $queryString = 'answer_text=' . urlencode('В Краснодаре.') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
-        $request = $this->__getTestRequest('PUT', '/api/v1/ru/questions/15/answer.json', $queryString, true);
+        $queryString = '/api/v1/ru/questions/15/answer.json?answer_text=' . urlencode('В Краснодаре.') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
 
-        $this->app->getContainer()['request'] = $request;
-
-        $response = $this->app->run(true);
+        $request = $this->createRequest('PUT', $queryString);
+        $response = $this->request($request);
         $responseBody = (string) $response->getBody();
 
         $expectedResponse = [
