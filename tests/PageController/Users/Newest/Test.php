@@ -2,26 +2,23 @@
 
 namespace Tests\PageController\Users\Newest;
 
-class Test extends \Test\TestCase\Frontend
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function test__Get_EN_page()
+    public function test__Get_EN_page_data()
     {
-        $request = $this->createRequest('GET', '/en/users/newest');
-        $response = $this->request($request);
-        $response_body = (string) $response->getBody();
+        $controller = new \PageController\Users\Newest('en');
+        $view_data = $controller->get_data('newest', 0);
 
-        $this->assertStringContainsString('New users from around the world – Page 0 – Answeropedia', $response_body);
-
-        $this->assertSame(200, $response->getStatusCode());
+        $this->assertEquals('New users from around the world – Page 0 – Answeropedia', $view_data->page_title);
     }
 
-    public function test__Check_RU_page()
+    public function test__Get_RU_page_data()
     {
-        $request = $this->createRequest('GET', '/ru/users/newest');
-        $response = $this->request($request);
+        $controller = new \PageController\Users\Newest('ru');
+        $view_data = $controller->get_data('newest', 0);
 
-        $this->assertSame(200, $response->getStatusCode());
+        $this->assertEquals('Новые пользователи со всего мира – Страница 0 – Ансверопедия', $view_data->page_title);
     }
 }

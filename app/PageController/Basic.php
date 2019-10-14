@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace PageController;
 
 abstract class Basic
 {

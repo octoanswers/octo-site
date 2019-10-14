@@ -122,7 +122,7 @@ class SlimApp
             $group->get('/settings', '\PageController\Settings\Show:handle');
             $group->get('/sitemap.xml', '\PageController\SitemapXML\Lang:handle');
             $group->get('/user/{id}', \PageController\User\ShortURL::class . ':handle');
-            $group->get('/users/newest', \PageController\Users\Newest::class . ':handle');
+            $group->get('/users/newest', \Front\Page\Users\Newest::class . ':handle');
             $group->get('/@{username}', '\PageController\User\Show:handle');
             $group->get('/{question_uri}', '\PageController\Question\Show:handle');
             $group->get('/{id:[0-9]+}[/{uri_slug}]', '\PageController\Question\Show:handleByID'); // @TODO Deprecated
