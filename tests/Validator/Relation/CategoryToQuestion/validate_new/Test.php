@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Relation_CategoryToQuestion__validate_newTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Relation\CategoryToQuestion\validate_new;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Full_params()
     {

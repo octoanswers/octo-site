@@ -1,6 +1,8 @@
 <?php
 
-class Query_Sandbox__questions_without_categoriesTest extends \Test\TestCase\DB
+namespace Test\Query\Sandbox\questions_without_categories;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions'], 'en' => ['questions']];
 

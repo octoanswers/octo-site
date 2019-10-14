@@ -2,7 +2,7 @@
 
 namespace APIController\DELETE\CategoriesIDFollow;
 
-class ru_Test extends \Test\TestCase\Frontend
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'ru'    => ['categories', 'er_users_follow_categories'],

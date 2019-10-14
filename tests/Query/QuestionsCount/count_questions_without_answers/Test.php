@@ -1,6 +1,8 @@
 <?php
 
-class Query_QuestionsCount__count_questions_without_answersTest extends \Test\TestCase\DB
+namespace Test\Query\QuestionsCount\count_questions_without_answers;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 

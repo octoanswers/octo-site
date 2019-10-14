@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Question__validate_newTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Question\validate_new;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__New_question_with_full_params()
     {

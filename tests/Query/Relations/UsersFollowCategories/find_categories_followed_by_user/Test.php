@@ -1,6 +1,8 @@
 <?php
 
-class Query_Relations_UsersFollowCategories__find_categories_followed_by_userTest extends \Test\TestCase\DB
+namespace Test\Query\Relations\UsersFollowCategories\find_categories_followed_by_user;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_categories']];
 

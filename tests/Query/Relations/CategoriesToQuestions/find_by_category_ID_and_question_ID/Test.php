@@ -1,6 +1,8 @@
 <?php
 
-class Query_Relations_CategoriesToQuestions__find_by_category_ID_and_question_IDTest extends \Test\TestCase\DB
+namespace Test\Query\Relations\CategoriesToQuestions\find_by_category_ID_and_question_ID;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_categories_questions']];
 

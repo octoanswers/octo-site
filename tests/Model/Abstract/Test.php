@@ -1,13 +1,16 @@
 <?php
 
-class Model_AbstractTest extends PHPUnit\Framework\TestCase
+namespace Test\Model;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     protected $anonymous_class_from_abstract;
 
     protected function setUp(): void
     {
         // Create a new instance from the Abstract Model Class
-        $this->anonymous_class_from_abstract = new class() extends \Model\Model {
+        $this->anonymous_class_from_abstract = new class () extends \Model\Model
+        {
             public $bar = 'bar!';
 
             // Just a sample public function that returns this anonymous instance

@@ -1,6 +1,8 @@
 <?php
 
-class Mapper_User_Create__Test extends \Test\TestCase\DB
+namespace Test\Mapper\User\create;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['users' => ['users']];
 

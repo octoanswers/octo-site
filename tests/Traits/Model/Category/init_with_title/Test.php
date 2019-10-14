@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Category__init_with_titleTest extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Category\init_with_title;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Init_with_title()
     {

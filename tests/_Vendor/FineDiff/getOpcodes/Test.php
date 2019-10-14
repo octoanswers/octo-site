@@ -1,8 +1,10 @@
 <?php
 
+namespace Test\Vendor\FineDiff\getOpcodes;
+
 use PHPUnit\Framework\TestCase;
 
-class Differ__Test extends TestCase
+class Test extends TestCase
 {
     public function setUp(): void
     {

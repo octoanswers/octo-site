@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Question__validate_image_base_nameTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Question\validate_image_base_name;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Image_base_name_not_set()
     {

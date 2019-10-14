@@ -1,6 +1,8 @@
 <?php
 
-class Page_URL_Helper__get_flow_URL__Test extends PHPUnit\Framework\TestCase
+namespace Test\Helper\URL\Page\get_flow_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test_en()
     {

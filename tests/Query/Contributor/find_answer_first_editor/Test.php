@@ -1,6 +1,8 @@
 <?php
 
-class Query_Contributor__find_answer_first_editorTest extends \Test\TestCase\DB
+namespace Test\Query\Contributor\find_answer_first_editor;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['revisions', 'questions'], 'users' => ['users']];
 

@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Redirect_Question__validateTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Redirect\Question\validate;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Validate_exists_question_with_full_params()
     {

@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Revision__validateTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Revision\validate;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Revision_with_full_params()
     {

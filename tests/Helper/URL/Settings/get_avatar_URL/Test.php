@@ -1,6 +1,8 @@
 <?php
 
-class Settings_URL_Helper__get_avatar_URL__Test extends PHPUnit\Framework\TestCase
+namespace Test\Helper\URL\Settings\get_avatar_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test_en()
     {

@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Relation_UserFollowQuestion__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Relation\UserFollowQuestion\init_with_DB_state;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__EnFullParams_ReturnObject()
     {

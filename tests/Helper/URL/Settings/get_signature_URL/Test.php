@@ -1,6 +1,8 @@
 <?php
 
-class Settings_URL_Helper__get_signature_URL__Test extends PHPUnit\Framework\TestCase
+namespace Test\Helper\URL\Settings\get_signature_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test_en()
     {

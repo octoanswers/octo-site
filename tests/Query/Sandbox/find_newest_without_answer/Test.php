@@ -1,6 +1,8 @@
 <?php
 
-class Query_Sandbox__find_newest_without_answerTest extends \Test\TestCase\DB
+namespace Test\Query\Sandbox\find_newest_without_answer;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions'], 'en' => ['questions']];
 

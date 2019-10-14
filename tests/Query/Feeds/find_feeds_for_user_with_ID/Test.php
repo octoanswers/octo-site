@@ -1,6 +1,8 @@
 <?php
 
-class Query_Feeds__find_feeds_for_user_with_IDTest extends \Test\TestCase\DB
+namespace Test\Query\Feeds\find_feeds_for_user_with_ID;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['activities', 'questions', 'er_users_follow_users', 'er_users_follow_categories', 'er_users_follow_questions'], 'users' => ['users']];
 

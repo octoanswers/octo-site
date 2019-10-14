@@ -1,6 +1,8 @@
 <?php
 
-class Query_Subscriptions__find_with_question_ID_and_emailTest extends \Test\TestCase\DB
+namespace Test\Query\Subscriptions\find_with_question_ID_and_email;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions_subscriptions']];
 

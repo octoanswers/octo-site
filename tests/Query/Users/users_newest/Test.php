@@ -1,6 +1,8 @@
 <?php
 
-class Query_Users__users_newestTest extends \Test\TestCase\DB
+namespace Test\Query\Users\users_newest;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['users' => ['users']];
 

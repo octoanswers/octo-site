@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Question__init_with_titleTest extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Question\Init\init_with_title;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Full_params()
     {

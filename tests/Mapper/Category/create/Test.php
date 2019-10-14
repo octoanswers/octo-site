@@ -1,6 +1,8 @@
 <?php
 
-class Mapper_Category_create__Test extends \Test\TestCase\DB
+namespace Test\Mapper\Category\create;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['categories']];
 

@@ -1,8 +1,10 @@
 <?php
 
+namespace Test\Helper\CookieStorage;
+
 use PHPUnit\Framework\TestCase;
 
-class CookieStorage__Test extends TestCase
+class Test extends TestCase
 {
     protected function setUp(): void
     {

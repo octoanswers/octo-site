@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Redirect_Question__init_with_DB_stateTest extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Redirect\Question\init_with_DB_state;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Base_params()
     {

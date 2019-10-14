@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Subscription__validate_existsTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Subscription\validate_exists;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Full_params()
     {

@@ -1,6 +1,8 @@
 <?php
 
-class UserFollowQuestion_Relation_Mapper__create__Test extends \Test\TestCase\DB
+namespace Test\Mapper\Relation\UserFollowQuestion\create;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_questions']];
 

@@ -1,6 +1,8 @@
 <?php
 
-class Sandbox_URL_Helper__get_all_URL__Test extends PHPUnit\Framework\TestCase
+namespace Test\Helper\URL\Sandbox\get_all_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test_withoutPage()
     {

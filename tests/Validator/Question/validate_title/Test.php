@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Question__validate_titleTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Question\validate_title;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Validate_RU_title()
     {

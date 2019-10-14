@@ -1,6 +1,8 @@
 <?php
 
-class Mapper_User__update__Test extends \Test\TestCase\DB
+namespace Test\Mapper\User\update;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['users' => ['users']];
 

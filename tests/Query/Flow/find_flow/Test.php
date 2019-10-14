@@ -1,6 +1,8 @@
 <?php
 
-class Query_Flow__find_flowTest extends \Test\TestCase\DB
+namespace Test\Query\Flow\find_flow;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['activities', 'questions', 'er_users_follow_users', 'er_users_follow_categories', 'er_users_follow_questions'], 'users' => ['users']];
 

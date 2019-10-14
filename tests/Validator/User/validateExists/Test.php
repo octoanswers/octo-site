@@ -1,6 +1,8 @@
 <?php
 
-class Validator_User__validate_existsTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\User\validate_exists;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Validate_with_full_params()
     {

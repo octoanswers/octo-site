@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Redirect_Category__validateTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Redirect\Category\validate;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Validate_exists_category_with_full_params()
     {

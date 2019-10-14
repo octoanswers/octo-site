@@ -1,0 +1,14 @@
+<?php
+
+namespace Test\Query\User\user_with_username;
+
+class IDTest extends \Test\TestCase\DB
+{
+    protected $setUpDB = ['users' => ['users']];
+
+    public function test__ID_not_exists()
+    {
+        $user = (new \Query\User())->user_with_username('notexist667');
+        $this->assertEquals(null, $user);
+    }
+}

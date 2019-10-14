@@ -1,6 +1,8 @@
 <?php
 
-class Redirect_URL_Helper__get_redirect_URL_for_title__Test extends PHPUnit\Framework\TestCase
+namespace Test\Helper\URL\Redirect\get_redirect_URL_for_title;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test_baseURI()
     {

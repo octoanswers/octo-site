@@ -32,7 +32,7 @@ class Contributors extends \Query\Query
             ];
         }
 
-        $sortedContributorsData = \Helper\Sort\Contributors::sort_by_contributions($contributorsData);
+        $sortedContributorsData = \Helper\Sort\Contributors::sortByContributions($contributorsData);
 
         $contributors = [];
         foreach ($sortedContributorsData as $contributorData) {

@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Question_URL__get_URLTest extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Question\URL\get_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Base_URL()
     {

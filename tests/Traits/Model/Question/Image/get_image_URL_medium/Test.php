@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Question_Image__get_image_URL_medium__Test extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Question\Image\get_image_URL_medium;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Base_URL()
     {

@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\PATCH\QuestionsIDRename;
 
-class new_title__Test extends \Test\TestCase\Frontend
+class NewTitleTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
 

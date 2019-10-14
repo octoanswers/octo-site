@@ -1,6 +1,8 @@
 <?php
 
-class Query_Relations_UsersFollowQuestions__relation_with_user_ID_and_question_IDTest extends \Test\TestCase\DB
+namespace Test\Query\Relations\UsersFollowQuestions\relation_with_user_ID_and_question_ID;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_questions']];
 

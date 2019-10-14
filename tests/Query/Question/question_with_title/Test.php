@@ -1,6 +1,8 @@
 <?php
 
-class Query_Question__question_with_titleTest extends \Test\TestCase\DB
+namespace Test\Query\Question\question_with_title;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 

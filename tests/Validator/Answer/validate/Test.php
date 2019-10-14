@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Answer__validateTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Answer\validate;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Full_params()
     {

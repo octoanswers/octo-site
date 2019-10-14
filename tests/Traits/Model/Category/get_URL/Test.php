@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Category_URL__get_URLTest extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Category\get_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__URL_for_simple_category()
     {

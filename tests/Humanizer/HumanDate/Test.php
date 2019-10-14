@@ -1,6 +1,8 @@
 <?php
 
-class HumanDate_Humanizer__Test extends PHPUnit\Framework\TestCase
+namespace Test\Humanizer\HumanDate;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     private $timezone;
     private $lang;

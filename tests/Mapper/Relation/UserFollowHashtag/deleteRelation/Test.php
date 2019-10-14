@@ -1,6 +1,8 @@
 <?php
 
-class UserFollowCategory_Relation_Mapper__delete_relation__Test extends \Test\TestCase\DB
+namespace Test\Mapper\Relation\UserFollowCategory\delete_relation;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_categories']];
 

@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Question_URL__get_history_URLTest extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Question\URL\get_history_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__EN_history_URL()
     {

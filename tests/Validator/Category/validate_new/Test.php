@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Category__validate_newTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Category\validate_new;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__One_word_category()
     {

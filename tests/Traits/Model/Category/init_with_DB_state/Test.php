@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Category__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Category\init_with_DB_state;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Init_category_with_DB_state()
     {

@@ -1,6 +1,8 @@
 <?php
 
-class Query_Relations_UsersFollowUsers__find_users_followed_by_userTest extends \Test\TestCase\DB
+namespace Test\Query\Relations\UsersFollowUsers\find_users_followed_by_user;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_users']];
 

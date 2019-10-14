@@ -1,6 +1,8 @@
 <?php
 
-class Query_Relations_CategoriesToQuestions__find_newest_for_category_with_IDTest extends \Test\TestCase\DB
+namespace Test\Query\Relations\CategoriesToQuestions\find_newest_for_category_with_ID;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_categories_questions']];
 

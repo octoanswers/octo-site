@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Category__validate_existsTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Category\validate_exists;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Exception_when_category_title_not_set()
     {

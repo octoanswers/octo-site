@@ -1,6 +1,8 @@
 <?php
 
-class Validator_Question__validate_existsTest extends PHPUnit\Framework\TestCase
+namespace Test\Validator\Question\validate_exists;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Exists_question_with_full_params()
     {

@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_User_URL__get_URLTest extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\User\URL\get_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__EN_URL()
     {

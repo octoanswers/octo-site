@@ -1,6 +1,8 @@
 <?php
 
-class Questions_URL_Helper__get_newest_URL__Test extends PHPUnit\Framework\TestCase
+namespace Test\Helper\URL\Questions\get_newest_URL;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test_withoutPage()
     {

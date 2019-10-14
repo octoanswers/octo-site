@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_Question_URL__get_minutes_to_readTest extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\Question\Humanize\get_minutes_to_read;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     protected $question;
 

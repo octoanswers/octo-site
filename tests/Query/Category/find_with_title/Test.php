@@ -1,0 +1,23 @@
+<?php
+
+namespace Test\Query\Category\find_with_title;
+
+class Test extends \Test\TestCase\DB
+{
+    protected $setUpDB = ['ru' => ['categories']];
+
+    public function test__Category_exists()
+    {
+        $category = (new \Query\Category('ru'))->find_with_title('парфюмерия');
+
+        $this->assertEquals(8, $category->id);
+        $this->assertEquals('Парфюмерия', $category->title);
+    }
+
+    public function test__Category_not_exists()
+    {
+        $category = (new \Query\Category('ru'))->find_with_title('notexists');
+
+        $this->assertEquals(null, $category);
+    }
+}

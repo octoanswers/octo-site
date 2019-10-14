@@ -1,6 +1,8 @@
 <?php
 
-class Trait_Model_User__init_with_DB_state__Test extends PHPUnit\Framework\TestCase
+namespace Test\Traits\Model\User\Init\init_with_DB_state;
+
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test_FullParams()
     {

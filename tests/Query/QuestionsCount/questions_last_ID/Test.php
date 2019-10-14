@@ -1,6 +1,8 @@
 <?php
 
-class Query_QuestionsCount__questions_last_IDTest extends \Test\TestCase\DB
+namespace Test\Query\QuestionsCount\questions_last_ID;
+
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 
