@@ -123,8 +123,8 @@ class AnsweropediaApp
             $group->get('/user/{id}', \PageController\User\ShortURL::class . ':handle');
             $group->get('/users/newest', \Front\Page\Users\Newest::class . ':handle');
             $group->get('/@{username}', \PageController\User\Show::class . ':handle');
+            $group->get('/{id:[0-9]+}', \PageController\Question\Show::class . ':handleByID');
             $group->get('/{question_uri}', \PageController\Question\Show::class . ':handle');
-            $group->get('/{id:[0-9]+}[/{uri_slug}]', \PageController\Question\Show::class . ':handleByID'); // @TODO Deprecated
         });
 
         // Language-agnostic URLs

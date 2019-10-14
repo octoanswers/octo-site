@@ -45,12 +45,4 @@ class Test extends \Test\TestCase\Frontend
 
         $this->assertSame(200, $response->getStatusCode());
     }
-
-    public function test__Get_page_by_old_URL()
-    {
-        $request = $this->createRequest('GET', '/ru/10/kak-otrastit-borodu');
-        $response = $this->request($request);
-
-        $this->assertSame(301, $response->getStatusCode());
-    }
 }
