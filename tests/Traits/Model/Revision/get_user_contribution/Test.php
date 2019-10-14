@@ -2,7 +2,7 @@
 
 namespace Test\Traits\Model\Revision\get_user_contribution;
 
-class Trait_Model_Revision__get_user_contribution__Test extends \PHPUnit\Framework\TestCase
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__TwoInsertionAndOneDeletion()
     {
