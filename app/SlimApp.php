@@ -64,74 +64,73 @@ class SlimApp
         $app->group('/api/v1' . URL_PART_LANG, function (\Slim\Routing\RouteCollectorProxy $group) {
 
             // GET
-            $group->get('/search/categories.json', '\APIController\GET\SearchCategories:handle');
+            $group->get('/search/categories.json', \APIController\GET\SearchCategories::class . ':handle');
 
             // DELETE
-            $group->delete('/categories/{id}/follow.json', '\APIController\DELETE\CategoriesIDFollow:handle');
-            $group->delete('/questions/{id}/follow.json', '\APIController\DELETE\QuestionsIDFollow:handle');
-            $group->delete('/questions/{id}/subscribe.json', '\APIController\DELETE\QuestionsIDSubscribe:handle');
-            $group->delete('/users/{id}/follow.json', '\APIController\DELETE\UsersIDFollow:handle');
+            $group->delete('/categories/{id}/follow.json', \APIController\DELETE\CategoriesIDFollow::class . ':handle');
+            $group->delete('/questions/{id}/follow.json', \APIController\DELETE\QuestionsIDFollow::class . ':handle');
+            $group->delete('/questions/{id}/subscribe.json', \APIController\DELETE\QuestionsIDSubscribe::class . ':handle');
+            $group->delete('/users/{id}/follow.json', \APIController\DELETE\UsersIDFollow::class . ':handle');
 
             // PATCH
-            $group->patch('/categories/{id}/rename.json', '\APIController\PATCH\CategoriesIDRename:handle');
-            $group->patch('/questions/{id}/rename.json', '\APIController\PATCH\QuestionsIDRename:handle');
-            $group->patch('/users/{id}/signature.json', '\APIController\PATCH\UsersIDSignature:handle');
-            $group->patch('/users/{id}/site.json', '\APIController\PATCH\UsersIDSite:handle');
-            $group->patch('/users/{id}/name.json', '\APIController\PATCH\UsersIDName:handle');
+            $group->patch('/categories/{id}/rename.json', \APIController\PATCH\CategoriesIDRename::class . ':handle');
+            $group->patch('/questions/{id}/rename.json', \APIController\PATCH\QuestionsIDRename::class . ':handle');
+            $group->patch('/users/{id}/signature.json', \APIController\PATCH\UsersIDSignature::class . ':handle');
+            $group->patch('/users/{id}/site.json', \APIController\PATCH\UsersIDSite::class . ':handle');
+            $group->patch('/users/{id}/name.json', \APIController\PATCH\UsersIDName::class . ':handle');
 
             // POST
-            $group->post('/answers/render.json', '\APIController\POST\Answers\Render:handle');
-            $group->post('/avatar.json', '\APIController\POST\Avatar:handle');
-            $group->post('/categories.json', '\APIController\POST\Categories:handle');
-            $group->post('/categories/{id}/follow.json', '\APIController\POST\CategoriesIDFollow:handle');
-            $group->post('/login.json', '\APIController\POST\Login:handle');
-            $group->post('/logout.json', '\APIController\POST\Logout:handle');
-            $group->post('/questions.json', '\APIController\POST\Questions:handle');
-            $group->post('/questions/{id}/image.json', '\APIController\POST\Questions\ID\Image:handle');
-            $group->post('/questions/{id}/follow.json', '\APIController\POST\QuestionsIDFollow:handle');
-            $group->post('/questions/{id}/subscribe.json', '\APIController\POST\QuestionsIDSubscribe:handle');
-            $group->post('/signup.json', '\APIController\POST\Signup:handle');
-            $group->post('/users/{id}/follow.json', '\APIController\POST\UsersIDFollow:handle');
+            $group->post('/answers/render.json', \APIController\POST\Answers\Render::class . ':handle');
+            $group->post('/avatar.json', \APIController\POST\Avatar::class . ':handle');
+            $group->post('/categories.json', \APIController\POST\Categories::class . ':handle');
+            $group->post('/categories/{id}/follow.json', \APIController\POST\CategoriesIDFollow::class . ':handle');
+            $group->post('/login.json', \APIController\POST\Login::class . ':handle');
+            $group->post('/logout.json', \APIController\POST\Logout::class . ':handle');
+            $group->post('/questions.json', \APIController\POST\Questions::class . ':handle');
+            $group->post('/questions/{id}/image.json', \APIController\POST\Questions\ID\Image::class . ':handle');
+            $group->post('/questions/{id}/follow.json', \APIController\POST\QuestionsIDFollow::class . ':handle');
+            $group->post('/questions/{id}/subscribe.json', \APIController\POST\QuestionsIDSubscribe::class . ':handle');
+            $group->post('/signup.json', \APIController\POST\Signup::class . ':handle');
+            $group->post('/users/{id}/follow.json', \APIController\POST\UsersIDFollow::class . ':handle');
 
             // PUT
-            $group->put('/questions/{id}.json', '\APIController\PUT\QuestionsID:handle');
-            $group->put('/questions/{id}/answer.json', '\APIController\PUT\QuestionsIDAnswer:handle');
-            $group->put('/questions/{id}/categories.json', '\APIController\PUT\Questions\ID\Categories:handle');
+            $group->put('/questions/{id}.json', \APIController\PUT\QuestionsID::class . ':handle');
+            $group->put('/questions/{id}/answer.json', \APIController\PUT\QuestionsIDAnswer::class . ':handle');
+            $group->put('/questions/{id}/categories.json', \APIController\PUT\Questions\ID\Categories::class . ':handle');
         });
 
         // Publuc URI`s
 
         $app->group(URL_PART_LANG, function (\Slim\Routing\RouteCollectorProxy $group) {
-            $group->get('', '\PageController\Main\Show:handle');
-            $group->get('/answer/{id}/edit', '\PageController\Answer\Edit:handle');
-            $group->get('/answer/{id}/history', '\PageController\Answer\History:handle');
-            $group->get('/feed', '\PageController\Feed\Show:handle');
-            $group->get('/flow', '\PageController\Flow\Show:handle');
-            $group->get('/category/{category_uri}', '\PageController\Category\Show:handle');
-            $group->get('/categories/newest', '\PageController\Categories\Newest:handle');
-            // @NOTE To realize $this->get('/categories/popular', 'List_Categories_PageController:handle');
-            $group->get('/question/{id}/categories', '\PageController\Question\UpdateCategories:handle');
-            $group->get('/question/{id}/discussion', '\PageController\Question\Discussion:handle');
-            $group->get('/questions/newest', '\PageController\Questions\Newest:handle');
-            $group->get('/questions/recently-updated', '\PageController\Questions\RecentlyUpdated:handle');
-            $group->get('/random-question', '\PageController\Question\Random:handle');
-            $group->get('/sandbox/all', '\PageController\Sandbox\All:handle');
-            $group->get('/sandbox/without-answers', '\PageController\Sandbox\WithoutAnswers:handle');
-            $group->get('/sandbox/without-categories', '\PageController\Sandbox\WithoutCategories:handle');
-            $group->get('/search', '\PageController\Search\Show:handle');
-            $group->get('/settings', '\PageController\Settings\Show:handle');
-            $group->get('/sitemap.xml', '\PageController\SitemapXML\Lang:handle');
+            $group->get('', \PageController\Main\Show::class . ':handle');
+            $group->get('/answer/{id}/edit', \PageController\Answer\Edit::class . ':handle');
+            $group->get('/answer/{id}/history', \PageController\Answer\History::class . ':handle');
+            $group->get('/feed', \PageController\Feed\Show::class . ':handle');
+            $group->get('/flow', \PageController\Flow\Show::class . ':handle');
+            $group->get('/category/{category_uri}', \PageController\Category\Show::class . ':handle');
+            $group->get('/categories/newest', \PageController\Categories\Newest::class . ':handle');
+            $group->get('/question/{id}/categories', \PageController\Question\UpdateCategories::class . ':handle');
+            $group->get('/question/{id}/discussion', \PageController\Question\Discussion::class . ':handle');
+            $group->get('/questions/newest', \PageController\Questions\Newest::class . ':handle');
+            $group->get('/questions/recently-updated', \PageController\Questions\RecentlyUpdated::class . ':handle');
+            $group->get('/random-question', \PageController\Question\Random::class . ':handle');
+            $group->get('/sandbox/all', \PageController\Sandbox\All::class . ':handle');
+            $group->get('/sandbox/without-answers', \PageController\Sandbox\WithoutAnswers::class . ':handle');
+            $group->get('/sandbox/without-categories', \PageController\Sandbox\WithoutCategories::class . ':handle');
+            $group->get('/search', \PageController\Search\Show::class . ':handle');
+            $group->get('/settings', \PageController\Settings\Show::class . ':handle');
+            $group->get('/sitemap.xml', \PageController\SitemapXML\Lang::class . ':handle');
             $group->get('/user/{id}', \PageController\User\ShortURL::class . ':handle');
             $group->get('/users/newest', \Front\Page\Users\Newest::class . ':handle');
-            $group->get('/@{username}', '\PageController\User\Show:handle');
-            $group->get('/{question_uri}', '\PageController\Question\Show:handle');
-            $group->get('/{id:[0-9]+}[/{uri_slug}]', '\PageController\Question\Show:handleByID'); // @TODO Deprecated
+            $group->get('/@{username}', \PageController\User\Show::class . ':handle');
+            $group->get('/{question_uri}', \PageController\Question\Show::class . ':handle');
+            $group->get('/{id:[0-9]+}[/{uri_slug}]', \PageController\Question\Show::class . ':handleByID'); // @TODO Deprecated
         });
 
         // Language-agnostic URLs
 
-        $app->get('/sitemap.xml', '\PageController\SitemapXML\Index:handle');
-        $app->get('/', '\PageController\Root\Show:handle');
+        $app->get('/sitemap.xml', \PageController\SitemapXML\Index::class . ':handle');
+        $app->get('/', \PageController\Root\Show::class . ':handle');
 
         $this->app = $app;
     }
