@@ -10,12 +10,14 @@ class UsersIDSignature extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
+            $userID = (int) $request->getAttribute('id');
 
             $query_params = $request->getQueryParams();
             $api_key = (string) $query_params['api_key'];
-            $user_ID = (int) $args['id'];
             $signature = @$query_params['signature'];
+
+            $this->lang = $lang;
 
             // Validate params
 
@@ -26,7 +28,7 @@ class UsersIDSignature extends \APIController\APIController
             $user = (new \Query\User())->userWithAPIKey($api_key);
             $old_signature = $user->signature;
 
-            if ($user->id != $user_ID) {
+            if ($user->id != $userID) {
                 throw new \Exception('Incorrect user id or API-key', 0);
             }
 

@@ -10,17 +10,19 @@ class QuestionsID extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $query_params = $request->getQueryParams();
+            $lang = $request->getAttribute('lang');
+            $question_ID = (int) $request->getAttribute('id');
 
-            $this->lang = $args['lang'];
-            $question_ID = (int) $args['id'];
+            $query_params = $request->getQueryParams();
             $question_title = (string) $query_params['question_title'];
+
+            $this->lang = $lang;
 
             \Validator\Question::validateID($question_ID);
 
             // check API-key
             // if ($check_api_key) {
-            //     $api_key = \Validator\User::validateRequiredApiKey(@$args['api_key']);
+            //     $api_key = \Validator\User::validateRequiredApiKey(@$request->getAttribute('api_key'));
             //     $user = $api->get('users_api_key', ['api_key' => $api_key]);
             //
             //     // only moderators can modify questions data

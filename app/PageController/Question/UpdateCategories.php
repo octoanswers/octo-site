@@ -7,13 +7,12 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UpdateCategories extends \PageController\PageController
 {
-    protected $question;
-
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+        $question_ID = $request->getAttribute('id');
 
-        $question_ID = $args['id'];
+        $this->lang = $lang;
 
         try {
             $this->question = (new \Query\Question($this->lang))->questionWithID($question_ID);

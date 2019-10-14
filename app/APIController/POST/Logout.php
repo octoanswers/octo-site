@@ -10,10 +10,12 @@ class Logout extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
 
             $post_params = $request->getParsedBody();
             $api_key = (string) $post_params['api_key'];
+
+            $this->lang = $lang;
 
             \Validator\User::validateAPIKey($api_key);
 

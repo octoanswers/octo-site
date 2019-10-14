@@ -10,7 +10,7 @@ class Categories extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
 
             $post_params = $request->getParsedBody();
             $api_key = (string) $post_params['api_key'];
@@ -19,6 +19,8 @@ class Categories extends \APIController\APIController
             if (strlen($categories_string) == 0) {
                 throw new \Exception('Categories param not set', 0);
             }
+
+            $this->lang = $lang;
 
             //
             // Validate params

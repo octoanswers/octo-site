@@ -10,12 +10,14 @@ class Signup extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
 
             $post_params = $request->getParsedBody();
             $username = $post_params['username'];
             $user_email = $post_params['email'];
             $user_password = $post_params['password'];
+
+            $this->lang = $lang;
 
             \Validator\User::validateUsername($username);
             \Validator\User::validateEmail($user_email);

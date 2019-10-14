@@ -10,11 +10,13 @@ class CategoriesIDFollow extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
+            $category_ID = (int) $request->getAttribute('id');
 
             $query_params = $request->getQueryParams();
             $api_key = (string) $query_params['api_key'];
-            $category_ID = (int) $args['id'];
+
+            $this->lang = $lang;
 
             //
             // Validate params

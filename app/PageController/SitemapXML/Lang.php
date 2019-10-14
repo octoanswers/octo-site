@@ -9,7 +9,9 @@ class Lang extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+
+        $this->lang = $lang;
 
         $questions = (new \Query\Questions($this->lang))->findNewest(self::PAGE, self::QUESTIONS_PER_PAGE);
 

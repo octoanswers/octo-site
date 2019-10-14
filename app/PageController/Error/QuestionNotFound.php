@@ -11,7 +11,7 @@ class QuestionNotFound extends \PageController\PageController
     {
         $this->lang = $lang;
 
-        $question_URI = $args['question_uri'];
+        $question_URI = $request->getAttribute('question_uri');
 
         $this->questionTitle = \Helper\Title::titleFromQuestionURI($question_URI);
 

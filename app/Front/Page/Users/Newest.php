@@ -10,9 +10,9 @@ class Newest extends \PageController\PageController
 {
     public function handle(Request $request, Response $response, $args)
     {
-        $query_params = $request->getQueryParams();
+        $lang = (string) $request->getAttribute('lang');
 
-        $lang = (string) $args['lang'];
+        $query_params = $request->getQueryParams();
         $page = (int) @$query_params['page'];
 
         $controller = new \PageController\Users\Newest($lang);

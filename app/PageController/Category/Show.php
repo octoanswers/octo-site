@@ -6,12 +6,14 @@ class Show extends \PageController\PageController
 {
     public function handle($request, $response, $args)
     {
-        $query_params = $request->getQueryParams();
+        $lang = $request->getAttribute('lang');
 
-        $this->lang = $args['lang'];
+        $query_params = $request->getQueryParams();
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
 
-        $category_URI = $args['category_uri'];
+        $category_URI = $request->getAttribute('category_uri');
+
+        $this->lang = $lang;
 
         try {
             $category_title = $this->_category_title_from_URI($category_URI);

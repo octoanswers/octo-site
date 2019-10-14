@@ -12,10 +12,12 @@ class WithoutCategories extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        $query_params = $request->getQueryParams();
+        $lang = $request->getAttribute('lang');
 
-        $this->lang = $args['lang'];
+        $query_params = $request->getQueryParams();
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
+
+        $this->lang = $lang;
 
         try {
             $this->questions = (new \Query\Sandbox($this->lang))->questionsWithoutCategories($this->page);

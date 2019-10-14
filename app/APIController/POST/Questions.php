@@ -10,10 +10,12 @@ class Questions extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
 
             $post_params = $request->getParsedBody();
             $title = htmlspecialchars((string) $post_params['title']);
+
+            $this->lang = $lang;
 
             $question = \Model\Question::initWithTitle($title);
 

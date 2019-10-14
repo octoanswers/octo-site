@@ -9,7 +9,9 @@ class Show extends \PageController\PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+
+        $this->lang = $lang;
 
         if (!$this->authUser) {
             exit('Not logged!');

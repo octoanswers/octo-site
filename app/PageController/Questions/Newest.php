@@ -8,10 +8,12 @@ class Newest extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        $query_params = $request->getQueryParams();
+        $lang = $request->getAttribute('lang');
 
-        $this->lang = $args['lang'];
+        $query_params = $request->getQueryParams();
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
+
+        $this->lang = $lang;
 
         $this->questions = $this->_get_questions();
 

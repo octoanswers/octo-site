@@ -10,11 +10,13 @@ class UsersIDFollow extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
 
             $post_params = $request->getParsedBody();
             $api_key = (string) $post_params['api_key'];
-            $followed_user_ID = (int) $args['id'];
+            $followed_user_ID = (int) $request->getAttribute('id');
+
+            $this->lang = $lang;
 
             //
             // Validate params

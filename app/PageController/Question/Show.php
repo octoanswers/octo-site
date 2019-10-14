@@ -6,12 +6,12 @@ class Show extends \PageController\PageController
 {
     public $followed;
 
-    // @TODO Deprecated
-    public function handleByID($request, $response, $args)
+    public function handleShortURL($request, $response, $args)
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+        $questionID = $request->getAttribute('id');
 
-        $questionID = $args['id'];
+        $this->lang = $lang;
 
         try {
             $question = (new \Query\Question($this->lang))->questionWithID($questionID);
@@ -24,13 +24,14 @@ class Show extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
-        $this->query_params = $request->getQueryParams();
+        $lang = $request->getAttribute('lang');
+        $questionURI = $request->getAttribute('question_uri');
+        $query_params = $request->getQueryParams();
 
-        $question_URI = $args['question_uri'];
+        $this->lang = $lang;
 
         try {
-            $question_title = \Helper\Title::titleFromQuestionURI($question_URI);
+            $question_title = \Helper\Title::titleFromQuestionURI($questionURI);
             $this->question = (new \Query\Question($this->lang))->questionWithTitle($question_title);
         } catch (\Throwable $e) {
             return (new \PageController\Error\QuestionNotFound($this->container))->handle($this->lang, $request, $response, $args);
@@ -40,7 +41,7 @@ class Show extends \PageController\PageController
             $redirect = (new \Query\Redirects\Question($this->lang))->redirectForQuestionWithID($this->question->id);
             $this->questionRedirect = \Model\Question::initWithTitle($redirect->toTitle);
 
-            $need_stop_redirect = $this->query_params['no_redirect'];
+            $need_stop_redirect = $query_params['no_redirect'];
             if (!$need_stop_redirect) {
                 $redirectTitle = $this->questionRedirect->title;
                 $redirectURL = \Helper\URL\Redirect::getRedirectURLForTitle($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
@@ -57,7 +58,7 @@ class Show extends \PageController\PageController
             return $response;
         }
 
-        $redirected_question_ID = isset($this->query_params['redirect_from_id']) ? (int) $this->query_params['redirect_from_id'] : null;
+        $redirected_question_ID = isset($query_params['redirect_from_id']) ? (int) $query_params['redirect_from_id'] : null;
         if ($redirected_question_ID) {
             $this->redirectedQuestion = (new \Query\Question($this->lang))->questionWithID($redirected_question_ID);
         }

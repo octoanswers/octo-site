@@ -8,10 +8,12 @@ class RecentlyUpdated extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
-        $query_params = $request->getQueryParams();
+        $lang = $request->getAttribute('lang');
 
-        $this->lang = $args['lang'];
+        $query_params = $request->getQueryParams();
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
+
+        $this->lang = $lang;
 
         $this->questions = (new \Query\Questions($this->lang))->findRecentlyUpdated($this->page - 1);
 

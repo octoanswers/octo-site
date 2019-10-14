@@ -10,12 +10,14 @@ class QuestionsIDRename extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
-            $question_ID = (int) $args['id'];
+            $lang = $request->getAttribute('lang');
+            $questionID = (int) $request->getAttribute('id');
 
             $query_params = $request->getQueryParams();
             $api_key = (string) $query_params['api_key'];
             $question_new_title = (string) @$query_params['new_title'];
+
+            $this->lang = $lang;
 
             // Validate params
 
@@ -23,7 +25,7 @@ class QuestionsIDRename extends \APIController\APIController
 
             // change question title
 
-            $question = (new \Query\Question($this->lang))->questionWithID($question_ID);
+            $question = (new \Query\Question($this->lang))->questionWithID($questionID);
             $old_title = $question->title;
             $question->title = $question_new_title;
             $question = (new \Mapper\Question($this->lang))->update($question);

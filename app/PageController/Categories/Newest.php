@@ -8,11 +8,12 @@ class Newest extends \PageController\PageController
 
     public function handle($request, $response, $args)
     {
+        $lang = $request->getAttribute('lang');
+
         $query_params = $request->getQueryParams();
-
-        $this->lang = $args['lang'];
-
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
+
+        $this->lang = $lang;
 
         $categories_count = (new \Query\Categories($this->lang))->categoriesLastID();
 

@@ -9,7 +9,9 @@ class QuestionsIDSubscribe extends \APIController\APIController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+
+        $this->lang = $lang;
 
         try {
             $output = [

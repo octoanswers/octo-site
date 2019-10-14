@@ -10,10 +10,12 @@ class SearchCategories extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
 
             $query_params = $request->getQueryParams();
             $this->query = urldecode((string) $query_params['query']);
+
+            $this->lang = $lang;
 
             $output = [];
 

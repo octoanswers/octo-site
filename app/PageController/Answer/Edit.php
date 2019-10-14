@@ -7,14 +7,12 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Edit extends \PageController\PageController
 {
-    protected $question;
-    protected $answer;
-
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+        $answer_ID = $request->getAttribute('id');
 
-        $answer_ID = $args['id'];
+        $this->lang = $lang;
 
         try {
             $this->question = (new \Query\Question($this->lang))->questionWithID($answer_ID);

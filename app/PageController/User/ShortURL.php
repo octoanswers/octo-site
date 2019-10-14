@@ -6,8 +6,10 @@ class ShortURL extends \PageController\PageController
 {
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
-        $this->user_ID = (int) $args['id'];
+        $lang = $request->getAttribute('lang');
+        $this->user_ID = (int) $request->getAttribute('id');
+
+        $this->lang = $lang;
 
         try {
             $user = (new \Query\User())->userWithID($this->user_ID);

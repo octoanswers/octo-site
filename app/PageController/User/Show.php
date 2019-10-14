@@ -6,8 +6,10 @@ class Show extends \PageController\PageController
 {
     public function handle($request, $response, $args)
     {
-        $this->lang = $args['lang'];
-        $this->username = $args['username'];
+        $lang = $request->getAttribute('lang');
+        $this->username = $request->getAttribute('username');
+
+        $this->lang = $lang;
 
         $this->user = (new \Query\User())->userWithUsername($this->username);
         if (!$this->user) {

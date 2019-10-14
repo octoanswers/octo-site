@@ -9,7 +9,9 @@ class Random extends \PageController\PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+
+        $this->lang = $lang;
 
         $questions_count = (new \Query\QuestionsCount($this->lang))->questionsLastID();
 

@@ -10,18 +10,19 @@ class Categories extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
+            $lang = $request->getAttribute('lang');
+
             $query_params = $request->getQueryParams();
-
-            $this->lang = $args['lang'];
-
             $api_key = (string) $query_params['api_key'];
-            $question_id = (int) $args['id'];
+            $question_id = (int) $request->getAttribute('id');
 
             $new_categories_string = urldecode((string) @$query_params['new_categories']);
 
             if (strlen($new_categories_string) == 0) {
                 throw new \Exception('Categories param not set', 0);
             }
+
+            $this->lang = $lang;
 
             //
             // Validate params

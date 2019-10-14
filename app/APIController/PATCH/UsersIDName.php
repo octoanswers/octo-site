@@ -10,12 +10,14 @@ class UsersIDName extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
+            $userID = (int) $request->getAttribute('id');
 
             $query_params = $request->getQueryParams();
             $api_key = (string) $query_params['api_key'];
-            $user_ID = (int) $args['id'];
             $name = @$query_params['name'];
+
+            $this->lang = $lang;
 
             // Validate params
 
@@ -26,7 +28,7 @@ class UsersIDName extends \APIController\APIController
             $user = (new \Query\User())->userWithAPIKey($api_key);
             $old_name = $user->name;
 
-            if ($user->id != $user_ID) {
+            if ($user->id != $userID) {
                 throw new \Exception('Incorrect user id or API-key', 0);
             }
 

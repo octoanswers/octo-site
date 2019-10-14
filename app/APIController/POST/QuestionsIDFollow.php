@@ -10,11 +10,13 @@ class QuestionsIDFollow extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
-            $question_id = (int) $args['id'];
+            $lang = $request->getAttribute('lang');
+            $question_id = (int) $request->getAttribute('id');
 
             $post_params = $request->getParsedBody();
             $api_key = (string) $post_params['api_key'];
+
+            $this->lang = $lang;
 
             //
             // Validate params

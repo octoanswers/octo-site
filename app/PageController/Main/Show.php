@@ -7,15 +7,11 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Show extends \PageController\PageController
 {
-    protected $parsedown;
-    protected $contributors;
-    protected $activities;
-
-    protected $categories;
-
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+
+        $this->lang = $lang;
 
         $this->top_questions = $this->_get_top_questions();
 

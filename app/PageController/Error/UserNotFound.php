@@ -11,7 +11,7 @@ class UserNotFound extends \PageController\PageController
     {
         $this->lang = $lang;
 
-        $this->username = $args['username'];
+        $this->username = $request->getAttribute('username');
 
         $this->template = 'error/user_not_found';
         $this->showFooter = false;

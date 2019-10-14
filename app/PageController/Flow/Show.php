@@ -14,7 +14,9 @@ class Show extends \PageController\PageController
 
     public function handle(Request $request, Response $response, $args): Response
     {
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+
+        $this->lang = $lang;
 
         $this->activities = (new \Query\Flow($this->lang))->findFlow();
 

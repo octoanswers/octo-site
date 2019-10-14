@@ -10,12 +10,14 @@ class QuestionsIDSubscribe extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
-            $question_id = (int) $args['id'];
+            $lang = $request->getAttribute('lang');
+            $question_id = (int) $request->getAttribute('id');
 
             $post_params = $request->getParsedBody();
             $email = (string) $post_params['email'];
             $is_sendEmail = $post_params['no_email'] ? false : true;
+
+            $this->lang = $lang;
 
             //
             // Validate params

@@ -10,12 +10,14 @@ class CategoriesIDRename extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
-            $category_ID = (int) $args['id'];
+            $lang = $request->getAttribute('lang');
+            $categoryID = (int) $request->getAttribute('id');
 
             $query_params = $request->getQueryParams();
             $api_key = (string) $query_params['api_key'];
             $category_new_title = (string) @$query_params['new_title'];
+
+            $this->lang = $lang;
 
             // Validate params
 
@@ -23,7 +25,7 @@ class CategoriesIDRename extends \APIController\APIController
 
             // Change category title
 
-            $category = (new \Query\Category($this->lang))->categoryWithID($category_ID);
+            $category = (new \Query\Category($this->lang))->categoryWithID($categoryID);
             $old_title = $category->title;
             $category->title = $category_new_title;
             $category = (new \Mapper\Category($this->lang))->update($category);

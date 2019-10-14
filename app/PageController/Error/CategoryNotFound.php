@@ -11,7 +11,7 @@ class CategoryNotFound extends \PageController\PageController
     {
         $this->lang = $lang;
 
-        $category_URI = $args['category_uri'];
+        $category_URI = $request->getAttribute('category_uri');
 
         $this->categoryTitle = $this->_category_title_from_URI($category_URI);
 

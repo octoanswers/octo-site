@@ -18,13 +18,14 @@ class Show extends \PageController\PageController
 
     public function handle(Request $request, Response $response, $args)
     {
+        $lang = $request->getAttribute('lang');
+
         $query_params = $request->getQueryParams();
-
-        $this->lang = $args['lang'];
-
         $this->query = (string) @$query_params['q'];
         $this->list = (string) @$query_params['list'];
         $this->list = $this->_normalize_list($this->list);
+
+        $this->lang = $lang;
 
         $this->_get_search_results();
 

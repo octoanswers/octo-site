@@ -24,18 +24,20 @@ class Image extends \APIController\APIController
                 throw new \Exception('No file was selected for upload', 1);
             }
 
+            $lang = $request->getAttribute('lang');
+            $question_id = (int) $request->getAttribute('id');
+
             $post_params = $request->getParsedBody();
+            $API_key = $post_params['api_key'];
 
-            $this->lang = $args['lang'];
+            $this->lang = $lang;
 
-            $question_id = (int) $args['id'];
             $this->question = (new \Query\Question($this->lang))->questionWithID($question_id);
 
             if (!$this->question) {
                 throw new \Exception('No QUESTION', 0);
             }
 
-            $API_key = $post_params['api_key'];
             $this->user = (new \Query\User())->userWithAPIKey($API_key);
 
             if (!$this->user) {

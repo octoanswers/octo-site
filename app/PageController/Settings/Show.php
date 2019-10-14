@@ -15,7 +15,9 @@ class Show extends \PageController\PageController
             return $response->withJson($data, 404);
         }
 
-        $this->lang = $args['lang'];
+        $lang = $request->getAttribute('lang');
+
+        $this->lang = $lang;
 
         $this->template = 'settings';
         $this->pageTitle = __('page_settings') . ' – ' . __('common.answeropedia');

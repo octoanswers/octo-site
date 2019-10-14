@@ -10,12 +10,13 @@ class Login extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $this->lang = $args['lang'];
+            $lang = $request->getAttribute('lang');
 
             $post_params = $request->getParsedBody();
-
             $user_email = (string) $post_params['email'];
             $user_password = (string) $post_params['password'];
+
+            $this->lang = $lang;
 
             \Validator\User::validateEmail($user_email);
             \Validator\User::validatePassword($user_password);
