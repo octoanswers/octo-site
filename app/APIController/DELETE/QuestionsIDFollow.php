@@ -16,17 +16,15 @@ class QuestionsIDFollow extends \APIController\APIController
             $query_params = $request->getQueryParams();
             $api_key = (string) $query_params['api_key'];
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
 
             $user = (new \Query\User())->userWithAPIKey($api_key);
 
-            $question = (new \Query\Question($this->lang))->questionWithID($question_ID);
+            $question = (new \Query\Question($lang))->questionWithID($question_ID);
 
-            $relation = (new \Query\Relations\UsersFollowQuestions($this->lang))->relationWithUserIDAndQuestionID($user->id, $question_ID);
+            $relation = (new \Query\Relations\UsersFollowQuestions($lang))->relationWithUserIDAndQuestionID($user->id, $question_ID);
             if (!$relation) {
                 throw new \Exception('User with ID "' . $user->id . '" not followed question with ID "' . $question_ID . '"', 0);
             }
@@ -35,7 +33,7 @@ class QuestionsIDFollow extends \APIController\APIController
             // Delete follow record
             //
 
-            (new \Mapper\Relation\UserFollowQuestion($this->lang))->delete_relation($relation);
+            (new \Mapper\Relation\UserFollowQuestion($lang))->delete_relation($relation);
 
             $output = [
                 'user_id'                 => $user->id,

@@ -30,9 +30,7 @@ class Image extends \APIController\APIController
             $post_params = $request->getParsedBody();
             $API_key = $post_params['api_key'];
 
-            $this->lang = $lang;
-
-            $this->question = (new \Query\Question($this->lang))->questionWithID($question_id);
+            $this->question = (new \Query\Question($lang))->questionWithID($question_id);
 
             if (!$this->question) {
                 throw new \Exception('No QUESTION', 0);
@@ -50,8 +48,8 @@ class Image extends \APIController\APIController
             if ($this->verot_upload->uploaded) {
                 $image_base_name = $this->_get_image_base_name();
 
-                $this->_makeUserAvatarWithSize($image_base_name . '_lg', self::WIDTH_LG);
-                $this->_makeUserAvatarWithSize($image_base_name . '_md', self::WIDTH_MD);
+                $this->_makeUserAvatarWithSize($lang, $image_base_name . '_lg', self::WIDTH_LG);
+                $this->_makeUserAvatarWithSize($lang, $image_base_name . '_md', self::WIDTH_MD);
 
                 // delete the original uploaded file
                 $this->verot_upload->clean();
@@ -61,14 +59,14 @@ class Image extends \APIController\APIController
 
             // Update question image base name
             $this->question->imageBaseName = $image_base_name;
-            $this->question = (new \Mapper\Question($this->lang))->update($this->question);
+            $this->question = (new \Mapper\Question($lang))->update($this->question);
 
             $output = [
-                'lang'         => $this->lang,
+                'lang'         => $lang,
                 'question_id'  => $this->question->id,
                 'user_id'      => $this->user->id,
-                'image_url_lg' => $this->question->getImageURLLarge($this->lang),
-                'image_url_md' => $this->question->getImageURLMedium($this->lang),
+                'image_url_lg' => $this->question->getImageURLLarge($lang),
+                'image_url_md' => $this->question->getImageURLMedium($lang),
             ];
         } catch (\Throwable $e) {
             $output = [
@@ -82,9 +80,9 @@ class Image extends \APIController\APIController
         return $response->withHeader('Content-Type', 'application/json')->write($json);
     }
 
-    protected function _makeUserAvatarWithSize($image_filename, $image_width)
+    protected function _makeUserAvatarWithSize($lang, $image_filename, $image_width)
     {
-        $uploadFolder = self::UPLOAD_FOLDER . '/' . $this->lang . '/' . $this->question->id . '/';
+        $uploadFolder = self::UPLOAD_FOLDER . '/' . $lang . '/' . $this->question->id . '/';
 
         $this->verot_upload->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
         $this->verot_upload->image_convert = 'jpg';

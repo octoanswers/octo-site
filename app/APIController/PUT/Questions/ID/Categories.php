@@ -22,17 +22,15 @@ class Categories extends \APIController\APIController
                 throw new \Exception('Categories param not set', 0);
             }
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
 
             $user = (new \Query\User())->userWithAPIKey($api_key);
 
-            $question = (new \Query\Question($this->lang))->questionWithID($question_id);
+            $question = (new \Query\Question($lang))->questionWithID($question_id);
 
-            $old_categories_array = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question->id);
+            $old_categories_array = (new \Query\Categories($lang))->categoriesForQuestionWithID($question->id);
 
             $oldCategoriesTitles = [];
             foreach ($old_categories_array as $category) {
@@ -49,29 +47,29 @@ class Categories extends \APIController\APIController
 
             $newCategories = [];
             foreach ($newCategoriesTitles as $category_title) {
-                $category = (new \Query\Category($this->lang))->findWithTitle($category_title);
+                $category = (new \Query\Category($lang))->findWithTitle($category_title);
                 if ($category === null) {
                     $category = new \Model\Category();
                     $category->title = $category_title;
 
-                    $category = (new \Mapper\Category($this->lang))->create($category);
+                    $category = (new \Mapper\Category($lang))->create($category);
                 }
 
                 $newCategories[] = $category;
 
-                $er = (new \Query\Relations\CategoriesToQuestions($this->lang))->findByCategoryIDAndQuestionID($category->id, $question->id);
+                $er = (new \Query\Relations\CategoriesToQuestions($lang))->findByCategoryIDAndQuestionID($category->id, $question->id);
                 if ($er === null) {
                     $er = new \Model\Relation\CategoriesToQuestions();
                     $er->categoryID = $category->id;
                     $er->questionID = $question->id;
-                    $er = (new \Mapper\Relation\CategoryToQuestion($this->lang))->create($er);
+                    $er = (new \Mapper\Relation\CategoryToQuestion($lang))->create($er);
 
                     // create activity
                     $activity = new \Model\Activity();
                     $activity->type = \Model\Activity::CATEGORY_ADDED_QUESTION;
                     $activity->subject = $category;
                     $activity->data = $question;
-                    $activity = (new \Mapper\Activity\CAddedQ($this->lang))->create($activity);
+                    $activity = (new \Mapper\Activity\CAddedQ($lang))->create($activity);
                 }
             }
 
@@ -80,7 +78,7 @@ class Categories extends \APIController\APIController
             //
 
             $question->categoriesCount = count($newCategories);
-            $question = (new \Mapper\Question($this->lang))->updateCategoriesCount($question);
+            $question = (new \Mapper\Question($lang))->updateCategoriesCount($question);
 
             // Save activity
 
@@ -88,20 +86,20 @@ class Categories extends \APIController\APIController
             // $activity->type = \Model\Activity::F_U_UPDATE_A;
             // $activity->subject = $user;
             // $activity->data = ['question' => $question, 'revision' => $revision];
-            // $activity = (new \Mapper\Activity\UUpdateA($this->lang))->create($activity);
+            // $activity = (new \Mapper\Activity\UUpdateA($lang))->create($activity);
             //
             // $activity = new \Model\Activity();
             // $activity->type = \Model\Activity::F_Q_UPDATE_A;
             // $activity->subject = $question;
             // $activity->data = ['user' => $user, 'revision' => $revision];
-            // $activity = (new \Mapper\Activity\QUpdateA($this->lang))->create($activity);
+            // $activity = (new \Mapper\Activity\QUpdateA($lang))->create($activity);
 
             $output = [
-                'lang'     => $this->lang,
+                'lang'     => $lang,
                 'question' => [
                     'id'    => $question->id,
                     'title' => $question->title,
-                    'url'   => $question->getURL($this->lang),
+                    'url'   => $question->getURL($lang),
                 ],
                 'user_id'        => $user->id,
                 'user_name'      => $user->name,

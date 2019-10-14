@@ -16,8 +16,6 @@ class UsersIDFollow extends \APIController\APIController
             $query_params = $request->getQueryParams();
             $api_key = (string) $query_params['api_key'];
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
@@ -27,7 +25,7 @@ class UsersIDFollow extends \APIController\APIController
 
             $followed_user = (new \Query\User())->userWithID($followed_user_ID);
 
-            $relation = (new \Query\Relations\UsersFollowUsers($this->lang))->relationWithUserIDAndFollowedUserID($user_ID, $followed_user_ID);
+            $relation = (new \Query\Relations\UsersFollowUsers($lang))->relationWithUserIDAndFollowedUserID($user_ID, $followed_user_ID);
             if (!$relation) {
                 throw new \Exception('User with ID "' . $followed_user_ID . '" not followed by user with ID "' . $user_ID . '"', 0);
             }
@@ -36,7 +34,7 @@ class UsersIDFollow extends \APIController\APIController
             // Delete follow record
             //
 
-            (new \Mapper\Relation\UserFollowUser($this->lang))->delete_relation($relation);
+            (new \Mapper\Relation\UserFollowUser($lang))->delete_relation($relation);
 
             $output = [
                 'user_id'            => $user->id,

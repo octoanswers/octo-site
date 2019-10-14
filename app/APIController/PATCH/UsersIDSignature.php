@@ -17,8 +17,6 @@ class UsersIDSignature extends \APIController\APIController
             $api_key = (string) $query_params['api_key'];
             $signature = @$query_params['signature'];
 
-            $this->lang = $lang;
-
             // Validate params
 
             if (!$signature) {
@@ -43,7 +41,7 @@ class UsersIDSignature extends \APIController\APIController
             $activity->type = \Model\Activity::U_UPDATE_SIGNATURE;
             $activity->subject = $user;
             $activity->data = ['signature' => $signature];
-            $activity = (new \Mapper\Activity\UUpdateSignature($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UUpdateSignature($lang))->create($activity);
 
             $output = [
                 'user' => [

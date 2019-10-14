@@ -17,18 +17,16 @@ class CategoriesIDRename extends \APIController\APIController
             $api_key = (string) $query_params['api_key'];
             $category_new_title = (string) @$query_params['new_title'];
 
-            $this->lang = $lang;
-
             // Validate params
 
             $user = (new \Query\User())->userWithAPIKey($api_key);
 
             // Change category title
 
-            $category = (new \Query\Category($this->lang))->categoryWithID($categoryID);
+            $category = (new \Query\Category($lang))->categoryWithID($categoryID);
             $old_title = $category->title;
             $category->title = $category_new_title;
-            $category = (new \Mapper\Category($this->lang))->update($category);
+            $category = (new \Mapper\Category($lang))->update($category);
 
             $is_save_redirect = (bool) @$query_params['save_redirect'];
             if ($is_save_redirect) {
@@ -37,13 +35,13 @@ class CategoriesIDRename extends \APIController\APIController
                     $old_category = new \Model\Category();
                     $old_category->title = $old_title;
                     $old_category->isRedirect = true;
-                    $old_category = (new \Mapper\Category($this->lang))->create($old_category);
+                    $old_category = (new \Mapper\Category($lang))->create($old_category);
 
                     // create redirect record
                     $this->redirect = new \Model\Redirect\Category();
                     $this->redirect->from_ID = $old_category->id;
                     $this->redirect->to_title = $category->title;
-                    $this->redirect = (new \Mapper\Redirect\Category($this->lang))->create($this->redirect);
+                    $this->redirect = (new \Mapper\Redirect\Category($lang))->create($this->redirect);
                 }
             }
 
@@ -55,20 +53,20 @@ class CategoriesIDRename extends \APIController\APIController
             $activity->type = \Model\Activity::USER_RENAME_CATEGORY;
             $activity->subject = $user;
             $activity->data = ['category' => $category, 'old_title' => $old_title];
-            $activity = (new \Mapper\Activity\UserRenameCategory($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UserRenameCategory($lang))->create($activity);
 
             $activity2 = new \Model\Activity();
             $activity2->type = \Model\Activity::CATEGORY_RENAMED_BY_USER;
             $activity2->subject = $category;
             $activity2->data = ['user' => $user, 'old_title' => $old_title];
-            $activity2 = (new \Mapper\Activity\CategoryRenamedByUser($this->lang))->create($activity2);
+            $activity2 = (new \Mapper\Activity\CategoryRenamedByUser($lang))->create($activity2);
 
             $output = [
                 'category' => [
                     'id'        => $category->id,
                     'old_title' => $old_title,
                     'new_title' => $category->title,
-                    'url'       => $category->getURL($this->lang),
+                    'url'       => $category->getURL($lang),
                 ],
                 'user' => [
                     'id'   => $user->id,

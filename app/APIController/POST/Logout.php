@@ -15,8 +15,6 @@ class Logout extends \APIController\APIController
             $post_params = $request->getParsedBody();
             $api_key = (string) $post_params['api_key'];
 
-            $this->lang = $lang;
-
             \Validator\User::validateAPIKey($api_key);
 
             $user = (new \Query\User())->userWithAPIKey($api_key);
@@ -26,7 +24,7 @@ class Logout extends \APIController\APIController
 
             $output = [
                 'message'         => 'User unlogged',
-                'destination_url' => \Helper\URL\Page::getMainURL($this->lang),
+                'destination_url' => \Helper\URL\Page::getMainURL($lang),
             ];
         } catch (\Throwable $e) {
             $output = [

@@ -16,8 +16,6 @@ class CategoriesIDFollow extends \APIController\APIController
             $post_params = $request->getParsedBody();
             $api_key = (string) $post_params['api_key'];
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
@@ -25,9 +23,9 @@ class CategoriesIDFollow extends \APIController\APIController
             $user = (new \Query\User())->userWithAPIKey($api_key);
             $user_ID = $user->id;
 
-            $category = (new \Query\Category($this->lang))->categoryWithID($category_ID);
+            $category = (new \Query\Category($lang))->categoryWithID($category_ID);
 
-            $relation = (new \Query\Relations\UsersFollowCategories($this->lang))->relationWithUserIDAndCategoryID($user_ID, $category_ID);
+            $relation = (new \Query\Relations\UsersFollowCategories($lang))->relationWithUserIDAndCategoryID($user_ID, $category_ID);
             if ($relation) {
                 throw new \Exception('User with ID "' . $user_ID . '" already followed category with ID "' . $category_ID . '"', 0);
             }
@@ -40,7 +38,7 @@ class CategoriesIDFollow extends \APIController\APIController
             $relation->userID = $user_ID;
             $relation->categoryID = $category_ID;
 
-            $relation = (new \Mapper\Relation\UserFollowCategory($this->lang))->create($relation);
+            $relation = (new \Mapper\Relation\UserFollowCategory($lang))->create($relation);
 
             // Create activity
 
@@ -48,9 +46,9 @@ class CategoriesIDFollow extends \APIController\APIController
             $activity->type = \Model\Activity::USER_FOLLOW_CATEGORY;
             $activity->subject = $user;
             $activity->data = $category;
-            $activity = (new \Mapper\Activity\UFollowC($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UFollowC($lang))->create($activity);
             $output = [
-                'lang'                    => $this->lang,
+                'lang'                    => $lang,
                 'relation_id'             => $relation->id,
                 'user_id'                 => $user->id,
                 'user_name'               => $user->name,

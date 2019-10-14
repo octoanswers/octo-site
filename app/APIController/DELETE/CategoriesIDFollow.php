@@ -16,17 +16,15 @@ class CategoriesIDFollow extends \APIController\APIController
             $query_params = $request->getQueryParams();
             $api_key = (string) $query_params['api_key'];
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
 
             $user = (new \Query\User())->userWithAPIKey($api_key);
 
-            $category = (new \Query\Category($this->lang))->categoryWithID($category_ID);
+            $category = (new \Query\Category($lang))->categoryWithID($category_ID);
 
-            $relation = (new \Query\Relations\UsersFollowCategories($this->lang))->relationWithUserIDAndCategoryID($user->id, $category_ID);
+            $relation = (new \Query\Relations\UsersFollowCategories($lang))->relationWithUserIDAndCategoryID($user->id, $category_ID);
             if (!$relation) {
                 throw new \Exception('User with ID "' . $user->id . '" not followed category with ID "' . $category_ID . '"', 0);
             }
@@ -35,7 +33,7 @@ class CategoriesIDFollow extends \APIController\APIController
             // Delete follow record
             //
 
-            (new \Mapper\Relation\UserFollowCategory($this->lang))->delete_relation($relation);
+            (new \Mapper\Relation\UserFollowCategory($lang))->delete_relation($relation);
 
             $output = [
                 'user_id'             => $user->id,

@@ -16,17 +16,15 @@ class QuestionsIDFollow extends \APIController\APIController
             $post_params = $request->getParsedBody();
             $api_key = (string) $post_params['api_key'];
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
 
             $user = (new \Query\User())->userWithAPIKey($api_key);
 
-            $question = (new \Query\Question($this->lang))->questionWithID($question_id);
+            $question = (new \Query\Question($lang))->questionWithID($question_id);
 
-            $relation = (new \Query\Relations\UsersFollowQuestions($this->lang))->relationWithUserIDAndQuestionID($user->id, $question->id);
+            $relation = (new \Query\Relations\UsersFollowQuestions($lang))->relationWithUserIDAndQuestionID($user->id, $question->id);
             if ($relation) {
                 throw new \Exception('User with ID "' . $user->id . '" already followed question with ID "' . $question->id . '"', 0);
             }
@@ -39,7 +37,7 @@ class QuestionsIDFollow extends \APIController\APIController
             $relation->userID = $user->id;
             $relation->questionID = $question->id;
 
-            $relation = (new \Mapper\Relation\UserFollowQuestion($this->lang))->create($relation);
+            $relation = (new \Mapper\Relation\UserFollowQuestion($lang))->create($relation);
 
             //
             // Create activity
@@ -50,10 +48,10 @@ class QuestionsIDFollow extends \APIController\APIController
             $activity->subject = $user;
             $activity->data = $question;
 
-            $activity = (new \Mapper\Activity\UFollowQ($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UFollowQ($lang))->create($activity);
 
             $output = [
-                'lang'                    => $this->lang,
+                'lang'                    => $lang,
                 'relation_id'             => $relation->id,
                 'user_id'                 => $user->id,
                 'user_name'               => $user->name,

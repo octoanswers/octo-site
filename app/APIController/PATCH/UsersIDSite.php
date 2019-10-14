@@ -17,8 +17,6 @@ class UsersIDSite extends \APIController\APIController
             $api_key = (string) $query_params['api_key'];
             $new_site = @$query_params['site'];
 
-            $this->lang = $lang;
-
             // Validate params
 
             if (!$new_site) {

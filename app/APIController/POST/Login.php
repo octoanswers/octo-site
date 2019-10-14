@@ -16,8 +16,6 @@ class Login extends \APIController\APIController
             $user_email = (string) $post_params['email'];
             $user_password = (string) $post_params['password'];
 
-            $this->lang = $lang;
-
             \Validator\User::validateEmail($user_email);
             \Validator\User::validatePassword($user_password);
 
@@ -36,14 +34,14 @@ class Login extends \APIController\APIController
             $cookieStorage->saveUser($user);
 
             $output = [
-                'lang'            => $this->lang,
+                'lang'            => $lang,
                 'id'              => $user->id,
                 'email'           => $user->email,
                 'name'            => $user->name,
                 'api_key'         => $user->apiKey,
                 'created_at'      => $user->createdAt,
-                'url'             => $user->getURL($this->lang),
-                'destination_url' => \Helper\URL\Page::getMainURL($this->lang),
+                'url'             => $user->getURL($lang),
+                'destination_url' => \Helper\URL\Page::getMainURL($lang),
             ];
         } catch (\Throwable $e) {
             $output = [

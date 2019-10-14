@@ -16,8 +16,6 @@ class UsersIDFollow extends \APIController\APIController
             $api_key = (string) $post_params['api_key'];
             $followed_user_ID = (int) $request->getAttribute('id');
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
@@ -26,7 +24,7 @@ class UsersIDFollow extends \APIController\APIController
 
             $followed_user = (new \Query\User())->userWithID($followed_user_ID);
 
-            $relation = (new \Query\Relations\UsersFollowUsers($this->lang))->relationWithUserIDAndFollowedUserID($user->id, $followed_user_ID);
+            $relation = (new \Query\Relations\UsersFollowUsers($lang))->relationWithUserIDAndFollowedUserID($user->id, $followed_user_ID);
             if ($relation) {
                 throw new \Exception('User with ID "' . $followed_user_ID . '" already followed by user with ID "' . $user->id . '"', 0);
             }
@@ -39,7 +37,7 @@ class UsersIDFollow extends \APIController\APIController
             $relation->userID = $user->id;
             $relation->followedUserID = $followed_user_ID;
 
-            $relation = (new \Mapper\Relation\UserFollowUser($this->lang))->create($relation);
+            $relation = (new \Mapper\Relation\UserFollowUser($lang))->create($relation);
 
             // Create activity
 
@@ -48,7 +46,7 @@ class UsersIDFollow extends \APIController\APIController
             $activity->subject = $user;
             $activity->data = $followed_user;
 
-            $activity = (new \Mapper\Activity\UFollowU($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UFollowU($lang))->create($activity);
 
             $output = [
                 'relation_id'        => $relation->id,

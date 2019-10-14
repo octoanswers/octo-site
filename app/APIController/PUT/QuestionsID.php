@@ -16,8 +16,6 @@ class QuestionsID extends \APIController\APIController
             $query_params = $request->getQueryParams();
             $question_title = (string) $query_params['question_title'];
 
-            $this->lang = $lang;
-
             \Validator\Question::validateID($question_ID);
 
             // check API-key
@@ -30,15 +28,15 @@ class QuestionsID extends \APIController\APIController
             //     // $user['id'] ==
             // }
 
-            $question = (new \Query\Question($this->lang))->questionWithID($question_ID);
+            $question = (new \Query\Question($lang))->questionWithID($question_ID);
             $question->title = $question_title;
 
-            $question = (new \Mapper\Question($this->lang))->update($question);
+            $question = (new \Mapper\Question($lang))->update($question);
 
             $output = [
                 'id'          => $question->id,
                 'title'       => $question->title,
-                'url'         => $question->getURL($this->lang),
+                'url'         => $question->getURL($lang),
                 'is_redirect' => $question->isRedirect,
             ];
         } catch (\Throwable $e) {

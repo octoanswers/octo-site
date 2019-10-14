@@ -15,12 +15,10 @@ class SearchCategories extends \APIController\APIController
             $query_params = $request->getQueryParams();
             $this->query = urldecode((string) $query_params['query']);
 
-            $this->lang = $lang;
-
             $output = [];
 
             if ($this->query && strlen($this->query)) {
-                $categories = (new \Query\Search($this->lang))->searchCategories($this->query);
+                $categories = (new \Query\Search($lang))->searchCategories($this->query);
 
                 foreach ($categories as $category) {
                     $output[] = [

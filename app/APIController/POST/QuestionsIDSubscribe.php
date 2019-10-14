@@ -17,20 +17,18 @@ class QuestionsIDSubscribe extends \APIController\APIController
             $email = (string) $post_params['email'];
             $is_sendEmail = $post_params['no_email'] ? false : true;
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
 
-            $question = (new \Query\Question($this->lang))->questionWithID($question_id);
+            $question = (new \Query\Question($lang))->questionWithID($question_id);
             \Validator\User::validateEmail($email); // @TODO Need?
 
             //
             // Check already subscribed
             //
 
-            $s = (new \Query\Subscriptions($this->lang))->findWithQuestionIDAndEmail($question_id, $email);
+            $s = (new \Query\Subscriptions($lang))->findWithQuestionIDAndEmail($question_id, $email);
             if ($s != null) {
                 throw new \Exception('Email "' . $email . '" already subscribed to question with ID ' . $question_id, 0);
             }
@@ -42,7 +40,7 @@ class QuestionsIDSubscribe extends \APIController\APIController
             $subscription = new \Model\Subscription();
             $subscription->questionID = $question_id;
             $subscription->email = $email;
-            $subscription = (new \Mapper\Subscription($this->lang))->create($subscription);
+            $subscription = (new \Mapper\Subscription($lang))->create($subscription);
 
             //
             // Send email
@@ -54,10 +52,10 @@ class QuestionsIDSubscribe extends \APIController\APIController
             }
 
             $output = [
-                'lang'               => $this->lang,
+                'lang'               => $lang,
                 'question_id'        => $question->id,
                 'question_title'     => $question->title,
-                'question_url'       => $question->getURL($this->lang),
+                'question_url'       => $question->getURL($lang),
                 'subscription_id'    => $subscription->id,
                 'subscription_email' => $subscription->email,
             ];

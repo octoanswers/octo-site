@@ -17,8 +17,6 @@ class Signup extends \APIController\APIController
             $user_email = $post_params['email'];
             $user_password = $post_params['password'];
 
-            $this->lang = $lang;
-
             \Validator\User::validateUsername($username);
             \Validator\User::validateEmail($user_email);
             \Validator\User::validatePassword($user_password);
@@ -62,8 +60,8 @@ class Signup extends \APIController\APIController
                 'password_hash'   => $user->passwordHash,
                 'api_key'         => $user->apiKey,
                 'created_at'      => date('Y-m-d H:i:s'),
-                'url'             => $user->getURL($this->lang),
-                'destination_url' => \Helper\URL\Page::getMainURL($this->lang),
+                'url'             => $user->getURL($lang),
+                'destination_url' => \Helper\URL\Page::getMainURL($lang),
             ];
 
             $this->_copyDefaultAvatar($user->id);

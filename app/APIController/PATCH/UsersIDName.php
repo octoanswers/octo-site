@@ -17,8 +17,6 @@ class UsersIDName extends \APIController\APIController
             $api_key = (string) $query_params['api_key'];
             $name = @$query_params['name'];
 
-            $this->lang = $lang;
-
             // Validate params
 
             if (!$name) {

@@ -20,8 +20,6 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             $user_api_key = (string) $query_params['user_api_key'];
 
-            $this->lang = $lang;
-
             // Check user
 
             $user = (new \Query\User())->userWithAPIKey($user_api_key);
@@ -29,7 +27,7 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             // Check answer
 
-            $answer = (new \Query\Answers($this->lang))->answerWithID($answer_id);
+            $answer = (new \Query\Answers($lang))->answerWithID($answer_id);
 
             $old_answer_text = $answer->text;
 
@@ -46,7 +44,7 @@ class QuestionsIDAnswer extends \APIController\APIController
             $answer->text = $new_answer_text;
             $answer->updatedAt = $answerUpdatedAt;
 
-            $answer = (new \Mapper\Answer($this->lang))->update($answer);
+            $answer = (new \Mapper\Answer($lang))->update($answer);
 
             // Create revision
 
@@ -61,15 +59,15 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             \Validator\Revision::validateComment($revision_comment);
 
-            $parentRevision = (new \Query\Revisions($this->lang))->lastRevisionForAnswerWithID($answer_id);
+            $parentRevision = (new \Query\Revisions($lang))->lastRevisionForAnswerWithID($answer_id);
             if ($parentRevision) {
                 $revision->parentID = $parentRevision->id;
             }
 
-            $revision = (new \Mapper\Revision($this->lang))->save($revision);
+            $revision = (new \Mapper\Revision($lang))->save($revision);
 
             // Read updated question
-            $question = (new \Query\Question($this->lang))->questionWithID($answer_id);
+            $question = (new \Query\Question($lang))->questionWithID($answer_id);
 
             // Save activity
 
@@ -77,18 +75,18 @@ class QuestionsIDAnswer extends \APIController\APIController
             $activity->type = \Model\Activity::F_U_UPDATE_A;
             $activity->subject = $user;
             $activity->data = ['question' => $question, 'revision' => $revision];
-            $activity = (new \Mapper\Activity\UUpdateA($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\UUpdateA($lang))->create($activity);
 
             $activity = new \Model\Activity();
             $activity->type = \Model\Activity::F_Q_UPDATE_A;
             $activity->subject = $question;
             $activity->data = ['user' => $user, 'revision' => $revision];
-            $activity = (new \Mapper\Activity\QUpdateA($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\QUpdateA($lang))->create($activity);
 
             $output = [
                 'question_id'        => $answer_id,
                 'question_title'     => $question->title,
-                'question_url'       => $question->getURL($this->lang),
+                'question_url'       => $question->getURL($lang),
                 'answer_text'        => $new_answer_text,
                 'revision_id'        => $revision->id,
                 'revision_opcodes'   => $revision->opcodes,

@@ -11,8 +11,6 @@ class QuestionsIDSubscribe extends \APIController\APIController
     {
         $lang = $request->getAttribute('lang');
 
-        $this->lang = $lang;
-
         try {
             $output = [
                 'error_code'    => 0,

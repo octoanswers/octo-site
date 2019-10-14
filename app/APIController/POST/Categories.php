@@ -20,8 +20,6 @@ class Categories extends \APIController\APIController
                 throw new \Exception('Categories param not set', 0);
             }
 
-            $this->lang = $lang;
-
             //
             // Validate params
             //
@@ -39,11 +37,11 @@ class Categories extends \APIController\APIController
 
             foreach ($category_titles as $category_title) {
                 $category_title = trim($category_title);
-                $category = (new \Query\Category($this->lang))->findWithTitle($category_title);
+                $category = (new \Query\Category($lang))->findWithTitle($category_title);
                 if ($category === null) {
                     $category = new \Model\Category();
                     $category->title = $category_title;
-                    $category = (new \Mapper\Category($this->lang))->create($category);
+                    $category = (new \Mapper\Category($lang))->create($category);
 
                     $created_categories[] = $category_title;
                 } else {
@@ -52,7 +50,7 @@ class Categories extends \APIController\APIController
             }
 
             $output = [
-                'lang' => $this->lang,
+                'lang' => $lang,
                 'user' => [
                     'id'   => $user->id,
                     'name' => $user->name,

@@ -17,18 +17,16 @@ class QuestionsIDRename extends \APIController\APIController
             $api_key = (string) $query_params['api_key'];
             $question_new_title = (string) @$query_params['new_title'];
 
-            $this->lang = $lang;
-
             // Validate params
 
             $user = (new \Query\User())->userWithAPIKey($api_key);
 
             // change question title
 
-            $question = (new \Query\Question($this->lang))->questionWithID($questionID);
+            $question = (new \Query\Question($lang))->questionWithID($questionID);
             $old_title = $question->title;
             $question->title = $question_new_title;
-            $question = (new \Mapper\Question($this->lang))->update($question);
+            $question = (new \Mapper\Question($lang))->update($question);
 
             $is_save_redirect = (bool) @$query_params['save_redirect'];
             if ($is_save_redirect) {
@@ -37,13 +35,13 @@ class QuestionsIDRename extends \APIController\APIController
                     $old_question = new \Model\Question();
                     $old_question->title = $old_title;
                     $old_question->isRedirect = true;
-                    $old_question = (new \Mapper\Question($this->lang))->create($old_question);
+                    $old_question = (new \Mapper\Question($lang))->create($old_question);
 
                     // create redirect record
                     $this->redirect = new \Model\Redirect\Question();
                     $this->redirect->fromID = $old_question->id;
                     $this->redirect->toTitle = $question->title;
-                    $this->redirect = (new \Mapper\Redirect\Question($this->lang))->create($this->redirect);
+                    $this->redirect = (new \Mapper\Redirect\Question($lang))->create($this->redirect);
                 }
             }
 
@@ -55,20 +53,20 @@ class QuestionsIDRename extends \APIController\APIController
             $activity->type = \Model\Activity::U_RENAME_Q;
             $activity->subject = $user;
             $activity->data = ['question' => $question, 'old_title' => $old_title];
-            $activity = (new \Mapper\Activity\URenameQ($this->lang))->create($activity);
+            $activity = (new \Mapper\Activity\URenameQ($lang))->create($activity);
 
             $activity2 = new \Model\Activity();
             $activity2->type = \Model\Activity::Q_RENAMED_BY_U;
             $activity2->subject = $question;
             $activity2->data = ['user' => $user, 'old_title' => $old_title];
-            $activity2 = (new \Mapper\Activity\QRenamedByU($this->lang))->create($activity2);
+            $activity2 = (new \Mapper\Activity\QRenamedByU($lang))->create($activity2);
 
             $output = [
                 'question' => [
                     'id'        => $question->id,
                     'old_title' => $old_title,
                     'new_title' => $question->title,
-                    'url'       => $question->getURL($this->lang),
+                    'url'       => $question->getURL($lang),
                 ],
                 'user' => [
                     'id'   => $user->id,
