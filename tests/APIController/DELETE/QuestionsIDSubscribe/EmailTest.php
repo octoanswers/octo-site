@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\DELETE\QuestionsIDSubscribe;
 
-class email__Test extends \Test\TestCase\Frontend
+class EmailTest extends \Test\TestCase\Frontend
 {
     public function test__Incorrect_email()
     {

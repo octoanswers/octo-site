@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\POST\Login;
 
-class password__Test extends \Test\TestCase\Frontend
+class PasswordTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 

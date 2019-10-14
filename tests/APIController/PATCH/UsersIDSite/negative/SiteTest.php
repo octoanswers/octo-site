@@ -1,14 +1,14 @@
 <?php
 
-namespace Tests\APIController\PATCH\UsersIDName;
+namespace Tests\APIController\PATCH\UsersIDSite;
 
-class name__Test extends \Test\TestCase\Frontend
+class SiteTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 
-    public function test_SignatureNotSet()
+    public function test_IncorrectURL()
     {
-        $uri = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'foo_name=' . urlencode('Sasha');
+        $uri = '/api/v1/ru/users/3/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'site=' . urlencode('xxx');
 
         $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
@@ -16,16 +16,16 @@ class name__Test extends \Test\TestCase\Frontend
 
         $expected_response = [
             'error_code'    => 0,
-            'error_message' => 'User "name" property null must be a string',
+            'error_message' => 'User "site" property "xxx" must be a URL',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
         $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
-    public function test_SignatureTooShort()
+    public function test_SiteNotSet()
     {
-        $uri = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Fo');
+        $uri = '/api/v1/ru/users/3/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'foo_site=' . urlencode('https://answeropedia.org');
 
         $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
@@ -33,7 +33,7 @@ class name__Test extends \Test\TestCase\Frontend
 
         $expected_response = [
             'error_code'    => 0,
-            'error_message' => 'User "name" property "Fo" must have a length between 2 and 255',
+            'error_message' => 'User "site" property null must be a string',
         ];
 
         $this->assertSame(200, $response->getStatusCode());

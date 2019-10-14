@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\DELETE\QuestionsIDSubscribe;
 
-class question_id__Test extends \Test\TestCase\Frontend
+class QuestionIDTest extends \Test\TestCase\Frontend
 {
     public function test__Question_ID_equal_zero()
     {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Tests\APIController\PATCH\UsersIDSite;
+namespace Tests\APIController\PATCH\UsersIDName;
 
-class id__Test extends \Test\TestCase\Frontend
+class IDTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 
     public function test_UserIDEqualZero_Error()
     {
-        $uri = '/api/v1/ru/users/0/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('https://answeropedia.org');
+        $uri = '/api/v1/ru/users/0/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Mike');
 
         $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
@@ -25,7 +25,7 @@ class id__Test extends \Test\TestCase\Frontend
 
     public function test_UserIDBelowZero_Error()
     {
-        $uri = '/api/v1/ru/users/-1/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('https://answeropedia.org');
+        $uri = '/api/v1/ru/users/-1/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Joe');
 
         $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);

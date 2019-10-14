@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\POST\QuestionsIDSubscribe;
 
-class question_id__Test extends \Test\TestCase\Frontend
+class QuestionIDTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'questions_subscriptions']];
 

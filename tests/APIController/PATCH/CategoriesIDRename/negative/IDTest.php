@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\PATCH\CategoriesIDRename;
 
-class ID__Test extends \Test\TestCase\Frontend
+class IDTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['categories', 'activities', 'redirects_categories'], 'users' => ['users']];
 

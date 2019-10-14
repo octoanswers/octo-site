@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\PATCH\UsersIDSignature;
 
-class signature__Test extends \Test\TestCase\Frontend
+class SignatureTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 

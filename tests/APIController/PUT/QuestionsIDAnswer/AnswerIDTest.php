@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\PUT\QuestionsIDAnswer;
 
-class answerID_Test extends \Test\TestCase\Frontend
+class AnswerIDTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 

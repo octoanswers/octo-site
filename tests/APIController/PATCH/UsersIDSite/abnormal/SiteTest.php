@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\PATCH\UsersIDSite\Abnormal;
 
-class site__Test extends \Test\TestCase\Frontend
+class SiteTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 

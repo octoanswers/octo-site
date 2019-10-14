@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\POST\Login;
 
-class email__Test extends \Test\TestCase\Frontend
+class EmailTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 

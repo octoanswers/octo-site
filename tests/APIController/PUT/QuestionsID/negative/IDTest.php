@@ -2,7 +2,7 @@
 
 namespace Tests\APIController\PUT\QuestionsID;
 
-class id__Test extends \Test\TestCase\Frontend
+class IDTest extends \Test\TestCase\Frontend
 {
   public function testQuestionIDEqualZero()
   {
