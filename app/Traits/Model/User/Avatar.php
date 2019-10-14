@@ -4,17 +4,17 @@ namespace Traits\Model\User;
 
 trait Avatar
 {
-    public function get_URL(string $lang): string
+    public function getURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/@' . $this->username;
     }
 
-    public function get_short_URL(string $lang): string
+    public function getShortURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/user/' . $this->id;
     }
 
-    public function get_avatar_URL_small(): string
+    public function getAvatarURLSmall(): string
     {
         if ($this->is_avatar_uploaded) {
             return SITE_URL . '/uploads/avatar/' . $this->id . '_100.jpg';
@@ -23,7 +23,7 @@ trait Avatar
         return 'https://avatars.answeropedia.org/avatars/user.png?size=100&name=' . urlencode($this->name);
     }
 
-    public function get_avatar_URL_medium(): string
+    public function getAvatarURLMedium(): string
     {
         if ($this->is_avatar_uploaded) {
             return SITE_URL . '/uploads/avatar/' . $this->id . '_200.jpg';
@@ -32,7 +32,7 @@ trait Avatar
         return 'https://avatars.answeropedia.org/avatars/user.png?size=200&name=' . urlencode($this->name);
     }
 
-    public function get_avatar_URL_large(): string
+    public function getAvatarURLLarge(): string
     {
         if ($this->is_avatar_uploaded) {
             return SITE_URL . '/uploads/avatar/' . $this->id . '_400.jpg';

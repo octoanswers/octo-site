@@ -23,11 +23,11 @@ class CAddedQ extends \Mapper\Mapper
         $data = json_encode([
             'category' => [
                 'title' => $category->title,
-                'url'   => $category->get_URL($this->lang),
+                'url'   => $category->getURL($this->lang),
             ],
             'question' => [
                 'title' => $question->title,
-                'url'   => $question->get_URL($this->lang),
+                'url'   => $question->getURL($this->lang),
             ],
         ], JSON_UNESCAPED_UNICODE);
 

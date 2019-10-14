@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Revisions\revisions_for_answer_with_ID;
+namespace Test\Query\Revisions\revisionsForAnswerWithID;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Question_have_some_revisions()
     {
-        $revisions = (new \Query\Revisions('ru'))->revisions_for_answer_with_ID(4);
+        $revisions = (new \Query\Revisions('ru'))->revisionsForAnswerWithID(4);
 
         $this->assertEquals(4, $revisions[0]->id);
         $this->assertEquals(4, $revisions[0]->answerID);
@@ -28,7 +28,7 @@ class Test extends \Test\TestCase\DB
 
     public function test_Question_dont_have_revisions()
     {
-        $actualResponse = (new \Query\Revisions('ru'))->revisions_for_answer_with_ID(7);
+        $actualResponse = (new \Query\Revisions('ru'))->revisionsForAnswerWithID(7);
 
         $this->assertEquals([], $actualResponse);
     }

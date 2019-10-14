@@ -12,29 +12,29 @@
             <?php if (count($categories)) : ?>
                 <div class="mb-2">
                     <?php foreach ($categories as $category) : ?>
-                        <a class="small text-black-50 text-decoration-none" href="<?= $category->get_URL($this->lang) ?>">
+                        <a class="small text-black-50 text-decoration-none" href="<?= $category->getURL($this->lang) ?>">
                             <?= $category->title ?>
                         </a>
                         <span class="semi-small text-black-50">
                             &middot;
                         </span>
                     <?php endforeach; ?>
-                    <a class="small text-black-50 text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+                    <a class="small text-black-50 text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
                         <?= __('page_main.item__top_question.more') ?>
                     </a>
                 </div>
             <?php endif; ?>
 
             <div class="mb-3">
-                <a class="font-size-140 line-height-13 text-dark font-weight-bold text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+                <a class="font-size-140 line-height-13 text-dark font-weight-bold text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
                     <?= $question->title ?>
                 </a>
             </div>
 
             <!-- question image -->
             <?php if ($question->imageBaseName) : ?>
-                <a class="d-block my-3" href="<?= $question->get_URL($this->lang) ?>">
-                    <img class="img-fluid" src="<?= $question->get_image_URL_medium($this->lang) ?>" alt="<?= $question->title ?>">
+                <a class="d-block my-3" href="<?= $question->getURL($this->lang) ?>">
+                    <img class="img-fluid" src="<?= $question->getImageURLMedium($this->lang) ?>" alt="<?= $question->title ?>">
                 </a>
             <?php endif; ?>
             <!-- / question image -->
@@ -44,7 +44,7 @@
                 <div class="my-3">
                     <?= mb_substr($question->answer->text, 0, 150) ?><?= (mb_strlen($question->answer->text) > 150) ? '&hellip;' : '' ?>
                     <?php if (mb_strlen($question->answer->text) > 150) : ?>
-                        <a class="text-secondary semi-small my-3" href="<?= $question->get_URL($this->lang) ?>">
+                        <a class="text-secondary semi-small my-3" href="<?= $question->getURL($this->lang) ?>">
                             (<?= __('page_main.item__top_question.read_more') ?>)
                         </a>
                     <?php endif; ?>
@@ -57,7 +57,7 @@
                 <?php if (count($contributors)) : ?>
                     <span class="mr-3">
                         <?php foreach ($contributors as $contributor) : ?>
-                            <a class="wh-24px rounded-circle" href="<?= $contributor->get_URL($this->lang) ?>"><img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-28px rounded-circle" alt="<?= $contributor->name ?>" title="<?= $contributor->name ?>"></a>
+                            <a class="wh-24px rounded-circle" href="<?= $contributor->getURL($this->lang) ?>"><img src="<?= $contributor->getAvatarURLMedium() ?>" class="wh-28px rounded-circle" alt="<?= $contributor->name ?>" title="<?= $contributor->name ?>"></a>
                         <?php endforeach; ?>
                         <!-- <a class="semi-small text-black-50" href="#">
                         +2
@@ -69,7 +69,7 @@
                 <?php if (strlen($question->answer->text)) : ?>
                     <span class="semi-small text-black-50">
                         <i class="material-icons md-14">subject</i>
-                        <?= $question->get_minutes_to_read() ?>&nbsp;<?= trans_choice('common.minutes_choice', $question->get_minutes_to_read()); ?>
+                        <?= $question->getMinutesToRead() ?>&nbsp;<?= trans_choice('common.minutes_choice', $question->getMinutesToRead()); ?>
                     </span>
                 <?php endif; ?>
                 <!-- / time to read -->
@@ -78,7 +78,7 @@
 
                 <span class="semi-small text-black-50">
                     <i class="material-icons md-14">edit</i>
-                    <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+                    <?= \Humanizer\DateTime::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
                 </span>
 
             </div>

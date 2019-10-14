@@ -25,12 +25,12 @@ class UFollowC extends \Mapper\Mapper
             'user' => [
                 'id'            => $user->id,
                 'name'          => $user->name,
-                'profile_url'   => $user->get_URL($this->lang),
-                'avatar_xs_url' => $user->get_avatar_URL_small(),
+                'profile_url'   => $user->getURL($this->lang),
+                'avatar_xs_url' => $user->getAvatarURLSmall(),
             ],
             'category' => [
                 'title' => $category->title,
-                'url'   => $category->get_URL($this->lang),
+                'url'   => $category->getURL($this->lang),
             ],
         ], JSON_UNESCAPED_UNICODE);
 

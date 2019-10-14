@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = \Model\Relation\CategoriesToQuestions::init_with_DB_state([
+        $rel = \Model\Relation\CategoriesToQuestions::initWithDBState([
             'er_id'          => 13,
             'er_category_id' => 3,
             'er_question_id' => 9,
@@ -21,7 +21,7 @@ class Test extends \PHPUnit\Framework\TestCase
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = \Model\Relation\CategoriesToQuestions::init_with_DB_state([
+        $rel = \Model\Relation\CategoriesToQuestions::initWithDBState([
             'er_id'          => 13,
             'er_category_id' => 3,
             'er_question_id' => 9,

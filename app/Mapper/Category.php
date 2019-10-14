@@ -6,7 +6,7 @@ class Category extends \Mapper\Mapper
 {
     public function create(\Model\Category $category): \Model\Category
     {
-        \Validator\Category::validate_new($category);
+        \Validator\Category::validateNew($category);
 
         $sql = 'INSERT INTO categories (c_title, cat_is_redirect) VALUES (:c_title, :cat_is_redirect)';
         $stmt = $this->pdo->prepare($sql);
@@ -29,7 +29,7 @@ class Category extends \Mapper\Mapper
 
     public function update(\Model\Category $category): \Model\Category
     {
-        \Validator\Category::validate_exists($category);
+        \Validator\Category::validateExists($category);
 
         $sql = 'UPDATE categories SET c_title=:c_title, cat_is_redirect=:cat_is_redirect WHERE c_id=:c_id';
         $stmt = $this->pdo->prepare($sql);

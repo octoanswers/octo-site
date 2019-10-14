@@ -4,7 +4,7 @@
         <p class="font-weight-bold"><?= __('page_search.no_questions_found') ?></p>
         <p><?= str_replace('%query%', $this->query, __('page_search.no_questions_found_msg')); ?></p>
 
-        <a class="btn btn-primary mb-2" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>" role="button">
+        <a class="btn btn-primary mb-2" href="<?= \Helper\URL\Questions::getNewestURL($this->lang) ?>" role="button">
             <?= __('page_search.view_all_questions') ?>
         </a>
     </div>

@@ -4,22 +4,22 @@ namespace Helper\URL;
 
 class Page
 {
-    public static function get_main_URL(string $lang): string
+    public static function getMainURL(string $lang): string
     {
         return SITE_URL . '/' . $lang;
     }
 
-    public static function get_feed_URL(string $lang): string
+    public static function getFeedURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/feed';
     }
 
-    public static function get_flow_URL(string $lang): string
+    public static function getFlowURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/flow';
     }
 
-    public static function get_ask_URL(string $lang): string
+    public static function getAskURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/ask';
     }

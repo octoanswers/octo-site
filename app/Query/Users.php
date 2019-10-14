@@ -16,7 +16,7 @@ class Users
 
     public function __construct()
     {
-        $this->pdo = \Helper\PDOFactory::get_connection_to_users_DB();
+        $this->pdo = \Helper\PDOFactory::getConnectionToUsersDB();
     }
 
     public function __destruct()
@@ -24,7 +24,7 @@ class Users
         $this->pdo = null;
     }
 
-    public function users_newest(int $page = 0, int $perPage = 10)
+    public function usersNewest(int $page = 0, int $perPage = 10)
     {
         try {
             v::optional(v::intType()->between(self::MIN_PAGE, self::MAX_PAGE, true))->assert($page);
@@ -52,13 +52,13 @@ class Users
 
         $users = [];
         foreach ($rows as $row) {
-            $users[] = \Model\User::init_with_DB_state($row);
+            $users[] = \Model\User::initWithDBState($row);
         }
 
         return $users;
     }
 
-    public function users_last_ID(): int
+    public function usersLastID(): int
     {
         $stmt = $this->pdo->prepare('SELECT MAX(u_id) FROM users');
         if (!$stmt->execute()) {

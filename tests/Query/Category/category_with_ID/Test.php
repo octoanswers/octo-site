@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Category\category_with_ID;
+namespace Test\Query\Category\categoryWithID;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Correct_category_ID()
     {
-        $category = (new \Query\Category('ru'))->category_with_ID(6);
+        $category = (new \Query\Category('ru'))->categoryWithID(6);
 
         $this->assertEquals(6, $category->id);
         $this->assertEquals('Автоспорт', $category->title);

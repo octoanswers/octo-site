@@ -8,7 +8,7 @@ class Test extends TestCase
 {
     protected function setUp(): void
     {
-        $user = \Model\User::init_with_DB_state([
+        $user = \Model\User::initWithDBState([
             'u_id'         => 13,
             'u_name'       => 'Joe Milk',
             'u_email'      => 'joe@answeropedia.org',
@@ -16,7 +16,7 @@ class Test extends TestCase
         ]);
 
         $this->storage = new \Helper\CookieStorage();
-        $this->storage->save_user($user);
+        $this->storage->saveUser($user);
     }
 
     public function tearDown(): void
@@ -32,7 +32,7 @@ class Test extends TestCase
 
     public function testConstValues()
     {
-        $user = $this->storage->get_auth_user();
+        $user = $this->storage->getAuthUser();
 
         $this->assertEquals('Joe Milk', $user->name);
         $this->assertEquals('joe@answeropedia.org', $user->email);

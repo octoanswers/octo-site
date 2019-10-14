@@ -13,10 +13,10 @@ class RecentlyUpdated extends \PageController\PageController
         $this->lang = $args['lang'];
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
 
-        $this->questions = (new \Query\Questions($this->lang))->find_recently_updated($this->page - 1);
+        $this->questions = (new \Query\Questions($this->lang))->findRecentlyUpdated($this->page - 1);
 
         // foreach ($this->questions as $question) {
-        //     $contributors_array = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
+        //     $contributors_array = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
         //     foreach ($contributors_array as $contributor) {
         //         $this->contributors[$question->id][] = $contributor;
         //     }
@@ -28,7 +28,7 @@ class RecentlyUpdated extends \PageController\PageController
         $this->list = 'recently_updated';
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
-            $this->nextPageURL = \Helper\URL\Questions::get_recently_updated_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Questions::getRecentlyUpdatedURL($this->lang, ($this->page + 1));
         }
 
         $output = $this->render_page();

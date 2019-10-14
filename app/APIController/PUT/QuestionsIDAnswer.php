@@ -24,12 +24,12 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             // Check user
 
-            $user = (new \Query\User())->user_with_API_key($user_api_key);
+            $user = (new \Query\User())->userWithAPIKey($user_api_key);
             // @TODO Check rigths to edit
 
             // Check answer
 
-            $answer = (new \Query\Answers($this->lang))->answer_with_ID($answer_id);
+            $answer = (new \Query\Answers($this->lang))->answerWithID($answer_id);
 
             $old_answer_text = $answer->text;
 
@@ -61,7 +61,7 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             \Validator\Revision::validateComment($revision_comment);
 
-            $parentRevision = (new \Query\Revisions($this->lang))->last_revision_for_answer_with_ID($answer_id);
+            $parentRevision = (new \Query\Revisions($this->lang))->lastRevisionForAnswerWithID($answer_id);
             if ($parentRevision) {
                 $revision->parentID = $parentRevision->id;
             }
@@ -69,7 +69,7 @@ class QuestionsIDAnswer extends \APIController\APIController
             $revision = (new \Mapper\Revision($this->lang))->save($revision);
 
             // Read updated question
-            $question = (new \Query\Question($this->lang))->question_with_ID($answer_id);
+            $question = (new \Query\Question($this->lang))->questionWithID($answer_id);
 
             // Save activity
 
@@ -88,7 +88,7 @@ class QuestionsIDAnswer extends \APIController\APIController
             $output = [
                 'question_id'        => $answer_id,
                 'question_title'     => $question->title,
-                'question_url'       => $question->get_URL($this->lang),
+                'question_url'       => $question->getURL($this->lang),
                 'answer_text'        => $new_answer_text,
                 'revision_id'        => $revision->id,
                 'revision_opcodes'   => $revision->opcodes,

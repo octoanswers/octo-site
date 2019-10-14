@@ -10,7 +10,7 @@ abstract class Mapper
     public function __construct(string $lang)
     {
         $this->lang = $lang;
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($lang);
     }
 
     public function __destruct()

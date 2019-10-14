@@ -2,7 +2,7 @@
     <?php for ($i = 0; $i < count($this->revisions); $i++) : ?>
         <div class="border rounded bg-white p-2 my-4">
             <div class="mb-3 p-2">
-                <a class="h5 text-dark text-decoration-none" href="<?= ($this->questions[$i])->get_URL($this->lang) ?>">
+                <a class="h5 text-dark text-decoration-none" href="<?= ($this->questions[$i])->getURL($this->lang) ?>">
                     <?= $this->questions[$i]->title ?>
                 </a>
                 <div class="small text-black-50">
@@ -18,7 +18,7 @@
 
                     <span class="mx-1 text-dark font-weight-bold">&middot;</span>
 
-                    <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
+                    <?= \Humanizer\DateTime::humanizeTimestamp($this->lang, $this->revisions[$i]->createdAt) ?>
                 </div>
             </div>
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Subscriptions\find_with_question_ID_and_email;
+namespace Test\Query\Subscriptions\findWithQuestionIDAndEmail;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Basic_params()
     {
-        $s = (new \Query\Subscriptions('ru'))->find_with_question_ID_and_email(236, 'data@test.ru');
+        $s = (new \Query\Subscriptions('ru'))->findWithQuestionIDAndEmail(236, 'data@test.ru');
 
         $this->assertEquals(2, $s->id);
         $this->assertEquals(236, $s->questionID);
@@ -18,7 +18,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Subscription_not_found()
     {
-        $s = (new \Query\Subscriptions('ru'))->find_with_question_ID_and_email(665, 'test@mail.ru');
+        $s = (new \Query\Subscriptions('ru'))->findWithQuestionIDAndEmail(665, 'test@mail.ru');
 
         $this->assertEquals(null, $s);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Questions\find_questions_with_image;
+namespace Test\Query\Questions\findQuestionsWithImage;
 
 class RuTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__Find_without_params()
     {
-        $questions = (new \Query\Questions('ru'))->find_questions_with_image(32);
+        $questions = (new \Query\Questions('ru'))->findQuestionsWithImage(32);
 
         $this->assertEquals(3, count($questions));
 
@@ -27,7 +27,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__First_page()
     {
-        $questions = (new \Query\Questions('ru'))->find_questions_with_image(27);
+        $questions = (new \Query\Questions('ru'))->findQuestionsWithImage(27);
 
         $this->assertEquals(3, count($questions));
 
@@ -46,7 +46,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__Second_page()
     {
-        $questions = (new \Query\Questions('ru'))->find_questions_with_image(2);
+        $questions = (new \Query\Questions('ru'))->findQuestionsWithImage(2);
 
         $this->assertEquals(0, count($questions));
     }

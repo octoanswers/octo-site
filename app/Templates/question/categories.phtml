@@ -7,12 +7,12 @@
 	<?php if (count($this->categories)) : ?>
 
 		<?php foreach ($this->categories as $category) : ?>
-			<a class="d-inline-block link-dashed text-secondary line-height-12 text-decoration-none mb-2 mr-2" href="<?= $category->get_URL($this->lang) ?>"><?= $category->title ?></a>
+			<a class="d-inline-block link-dashed text-secondary line-height-12 text-decoration-none mb-2 mr-2" href="<?= $category->getURL($this->lang) ?>"><?= $category->title ?></a>
 		<?php endforeach; ?>
 
 		<?php if ($this->authUser) : ?>
 			<div class="mt-2">
-				<a class="btn btn-sm btn-outline-gray" href="<?= $this->question->get_update_categories_URL($this->lang) ?>" rel="nofollow">
+				<a class="btn btn-sm btn-outline-gray" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>" rel="nofollow">
 					<i class="material-icons md-14">edit</i>&nbsp;<?= __('page_question.block__categories.categories_change') ?>
 				</a>
 			</div>
@@ -23,7 +23,7 @@
 		<p><?= __('page_question.block__categories.no_categories') ?></p>
 
 		<?php if ($this->authUser) : ?>
-			<a class="btn btn-sm btn-outline-gray" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
+			<a class="btn btn-sm btn-outline-gray" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>">
 				<i class="material-icons md-14">add</i>
 				<?= __('page_question.block__categories.categories_add') ?>
 			</a>

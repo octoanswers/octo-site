@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Question\validate_exists;
+namespace Test\Validator\Question\validateExists;
 
 class TitleTest extends \PHPUnit\Framework\TestCase
 {
@@ -11,7 +11,7 @@ class TitleTest extends \PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param null must be a string');
-        $this->assertEquals(true, \Validator\Question::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validateExists($question));
     }
 
     public function test__Title_is_empty()
@@ -22,7 +22,7 @@ class TitleTest extends \PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "" must have a length between 3 and 255');
-        $this->assertEquals(true, \Validator\Question::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validateExists($question));
     }
 
     public function test__Comment_too_short()
@@ -33,7 +33,7 @@ class TitleTest extends \PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "x" must have a length between 3 and 255');
-        $this->assertEquals(true, \Validator\Question::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validateExists($question));
     }
 
     public function test__Comment_too_long()
@@ -44,6 +44,6 @@ class TitleTest extends \PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question title param "Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42. Title42." must have a length between 3 and 255');
-        $this->assertEquals(true, \Validator\Question::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validateExists($question));
     }
 }

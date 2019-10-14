@@ -11,15 +11,15 @@ class UserFollowQuestion
     // Model validator
     //
 
-    public static function validate_exists(\Model\Relation\UserFollowQuestion $rel)
+    public static function validateExists(\Model\Relation\UserFollowQuestion $rel)
     {
         self::validateID($rel->id);
-        self::validate_new($rel);
+        self::validateNew($rel);
 
         return true;
     }
 
-    public static function validate_new(\Model\Relation\UserFollowQuestion $rel)
+    public static function validateNew(\Model\Relation\UserFollowQuestion $rel)
     {
         self::validateUserID($rel->userID);
         self::validateQuestionID($rel->questionID);

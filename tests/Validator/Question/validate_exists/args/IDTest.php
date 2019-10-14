@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Question\validate_exists;
+namespace Test\Validator\Question\validateExists;
 
 class IDTest extends \PHPUnit\Framework\TestCase
 {
@@ -12,7 +12,7 @@ class IDTest extends \PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param 0 must be greater than or equal to 1');
-        \Validator\Question::validate_exists($question);
+        \Validator\Question::validateExists($question);
     }
 
     public function test__ID_below_zero()
@@ -23,6 +23,6 @@ class IDTest extends \PHPUnit\Framework\TestCase
         $question->isRedirect = true;
 
         $this->expectExceptionMessage('Question id param -1 must be greater than or equal to 1');
-        \Validator\Question::validate_exists($question);
+        \Validator\Question::validateExists($question);
     }
 }

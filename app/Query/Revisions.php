@@ -4,7 +4,7 @@ namespace Query;
 
 class Revisions extends \Query\Query
 {
-    public function last_revision_for_answer_with_ID(int $answerID)
+    public function lastRevisionForAnswerWithID(int $answerID)
     {
         $stmt = $this->pdo->prepare('SELECT * FROM revisions WHERE rev_answer_id=:rev_answer_id  ORDER BY rev_id DESC LIMIT 1');
         $stmt->bindParam(':rev_answer_id', $answerID, \PDO::PARAM_INT);
@@ -19,10 +19,10 @@ class Revisions extends \Query\Query
             return;
         }
 
-        return \Model\Revision::init_with_DB_state($row);
+        return \Model\Revision::initWithDBState($row);
     }
 
-    public function revisions_for_answer_with_ID(int $questionID): array
+    public function revisionsForAnswerWithID(int $questionID): array
     {
         \Validator\Question::validateID($questionID);
         $page = 1; //\Validator\QuestionsList::validatePage($page);
@@ -30,7 +30,7 @@ class Revisions extends \Query\Query
 
         $offset = $perPage * ($page - 1);
 
-        $question = (new \Query\Question($this->lang))->question_with_ID($questionID);
+        $question = (new \Query\Question($this->lang))->questionWithID($questionID);
 
         $sql = 'SELECT * FROM revisions WHERE rev_answer_id = :question_id ORDER BY rev_id DESC LIMIT :id_offset, :per_page';
         $stmt = $this->pdo->prepare($sql);
@@ -46,13 +46,13 @@ class Revisions extends \Query\Query
 
         $revisions = [];
         foreach ($rows as $row) {
-            $revisions[] = \Model\Revision::init_with_DB_state($row);
+            $revisions[] = \Model\Revision::initWithDBState($row);
         }
 
         return $revisions;
     }
 
-    public function find_revisions_for_user_with_ID(int $userID): array
+    public function findRevisionsForUserWithID(int $userID): array
     {
         \Validator\User::validateID($userID);
         $page = 1; //\Validator\QuestionsList::validatePage($page);
@@ -60,7 +60,7 @@ class Revisions extends \Query\Query
 
         $offset = $perPage * ($page - 1);
 
-        $user = (new \Query\User())->user_with_ID($userID);
+        $user = (new \Query\User())->userWithID($userID);
 
         $sql = 'SELECT * FROM revisions WHERE rev_user_id = :rev_user_id ORDER BY rev_id DESC LIMIT :id_offset, :per_page';
         $stmt = $this->pdo->prepare($sql);
@@ -76,7 +76,7 @@ class Revisions extends \Query\Query
 
         $revisions = [];
         foreach ($rows as $row) {
-            $revisions[] = \Model\Revision::init_with_DB_state($row);
+            $revisions[] = \Model\Revision::initWithDBState($row);
         }
 
         return $revisions;

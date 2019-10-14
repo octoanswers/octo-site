@@ -2,12 +2,12 @@
 <div class="border rounded bg-white p-3 my-4">
 
     <div class="mb-1">
-        <a class="font-size-140 line-height-13 text-dark mb-2 font-weight-bold text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+        <a class="font-size-140 line-height-13 text-dark mb-2 font-weight-bold text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
             <?= $question->title ?>
         </a>
     </div>
     <div class="small text-black-50">
-        <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+        <?= \Humanizer\DateTime::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
     </div>
 
     <!-- actions -->
@@ -15,7 +15,7 @@
 
         <!-- edit answer -->
         <?php if (strlen($question->answer->text) == 0) : ?>
-            <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
+            <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
                 <i class="material-icons md-14">edit</i>
                 <?= __('page_sandbox.btn_write_first_answer') ?>
             </a>
@@ -24,7 +24,7 @@
 
         <!-- add categories -->
         <?php if ($question->categoriesCount == 0) : ?>
-            <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="<?= $question->get_update_categories_URL($this->lang) ?>">
+            <a class="btn btn-sm btn-outline-gray mt-2 mr-2" rel="nofollow" href="<?= $question->getUpdateCategoriesURL($this->lang) ?>">
                 <i class="material-icons md-14">bubble_chart</i>
                 <?= __('page_sandbox.btn_add_categories') ?>
             </a>

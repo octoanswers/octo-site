@@ -12,7 +12,7 @@ class Test extends \Test\TestCase\DB
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $question = \Model\Question::init_with_DB_state([
+        $question = \Model\Question::initWithDBState([
             'q_id'             => 13,
             'q_title'          => 'This is question?',
             'q_is_redirect'    => 1,
@@ -22,7 +22,7 @@ class Test extends \Test\TestCase\DB
             'count_categories' => 0,
         ]);
 
-        $revision = \Model\Revision::init_with_DB_state([
+        $revision = \Model\Revision::initWithDBState([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',

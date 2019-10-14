@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\User\validate_exists;
+namespace Test\Validator\User\validateExists;
 
 class IDTest extends \PHPUnit\Framework\TestCase
 {
@@ -13,7 +13,7 @@ class IDTest extends \PHPUnit\Framework\TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
         $this->expectExceptionMessage('User id param null must be of the type integer');
-        $this->assertEquals(true, \Validator\User::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validateExists($user));
     }
 
     public function test__ID_equal_zero()
@@ -26,7 +26,7 @@ class IDTest extends \PHPUnit\Framework\TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
         $this->expectExceptionMessage('User id param 0 must be greater than or equal to 1');
-        $this->assertEquals(true, \Validator\User::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validateExists($user));
     }
 
     public function test__ID_below_zero()
@@ -39,6 +39,6 @@ class IDTest extends \PHPUnit\Framework\TestCase
         $user->apiKey = '4447243e3e1766375d23b06bf6dd1271';
 
         $this->expectExceptionMessage('User id param -1 must be greater than or equal to 1');
-        $this->assertEquals(true, \Validator\User::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validateExists($user));
     }
 }

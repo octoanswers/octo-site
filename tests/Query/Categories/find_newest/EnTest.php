@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Categories\find_newest;
+namespace Test\Query\Categories\findNewest;
 
 class EnTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class EnTest extends \Test\TestCase\DB
 
     public function test__Find_without_params()
     {
-        $categories = (new \Query\Categories('en'))->find_newest();
+        $categories = (new \Query\Categories('en'))->findNewest();
 
         $this->assertEquals(10, count($categories));
 

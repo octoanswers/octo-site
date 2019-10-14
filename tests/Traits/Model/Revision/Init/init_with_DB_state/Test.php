@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function testFullParams()
     {
-        $revision = \Model\Revision::init_with_DB_state([
+        $revision = \Model\Revision::initWithDBState([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',
@@ -29,7 +29,7 @@ class Test extends \PHPUnit\Framework\TestCase
 
     public function testMinParams()
     {
-        $revision = \Model\Revision::init_with_DB_state([
+        $revision = \Model\Revision::initWithDBState([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',

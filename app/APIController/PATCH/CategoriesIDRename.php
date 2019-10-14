@@ -19,11 +19,11 @@ class CategoriesIDRename extends \APIController\APIController
 
             // Validate params
 
-            $user = (new \Query\User())->user_with_API_key($api_key);
+            $user = (new \Query\User())->userWithAPIKey($api_key);
 
             // Change category title
 
-            $category = (new \Query\Category($this->lang))->category_with_ID($category_ID);
+            $category = (new \Query\Category($this->lang))->categoryWithID($category_ID);
             $old_title = $category->title;
             $category->title = $category_new_title;
             $category = (new \Mapper\Category($this->lang))->update($category);
@@ -66,7 +66,7 @@ class CategoriesIDRename extends \APIController\APIController
                     'id'        => $category->id,
                     'old_title' => $old_title,
                     'new_title' => $category->title,
-                    'url'       => $category->get_URL($this->lang),
+                    'url'       => $category->getURL($this->lang),
                 ],
                 'user' => [
                     'id'   => $user->id,

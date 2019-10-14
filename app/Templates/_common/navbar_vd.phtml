@@ -3,17 +3,17 @@
 <header class="navbar sticky-top navbar-expand-lg navbar-light">
 	<div class="container">
 		<?php if ($view_data->auth_user) : ?>
-			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::get_feed_URL($view_data->lang) ?>">
+			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::getFeedURL($view_data->lang) ?>">
 				<?= __('common.answeropedia') ?>
 			</a>
 		<?php else : ?>
-			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::get_main_URL($view_data->lang) ?>">
+			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::getMainURL($view_data->lang) ?>">
 				<?= __('common.answeropedia') ?>
 			</a>
 		<?php endif; ?>
 
 		<sup class="d-none d-lg-block text-uppercase mr-0 mr-md-4">
-			<a class="small text-black-50 text-decoration-none" href="<?= \Helper\URL\Page::get_main_URL($view_data->lang) ?>">
+			<a class="small text-black-50 text-decoration-none" href="<?= \Helper\URL\Page::getMainURL($view_data->lang) ?>">
 				<?= $view_data->lang ?>
 			</a>
 		</sup>
@@ -28,13 +28,13 @@
 				<!-- Mobile links -->
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link text-dark" href="<?= \Helper\URL\Page::get_flow_URL($view_data->lang) ?>">
+					<a class="nav-link text-dark" href="<?= \Helper\URL\Page::getFlowURL($view_data->lang) ?>">
 						<?= __('navbar.recent_changes') ?>
 					</a>
 				</li>
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link text-dark" href="<?= \Helper\URL\Categories::get_newest_URL($view_data->lang) ?>">
+					<a class="nav-link text-dark" href="<?= \Helper\URL\Categories::getNewestURL($view_data->lang) ?>">
 						<?= __('navbar.categories') ?>
 					</a>
 				</li>
@@ -74,8 +74,8 @@
 
 				<?php if ($view_data->auth_user) : ?>
 					<li class="nav-item">
-						<a class="user-avatar wh-36px rounded d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $view_data->auth_user->get_URL($view_data->lang) ?>">
-							<img class="wh-36px rounded" src="<?= $view_data->auth_user->get_avatar_URL_small() ?>" alt="<?= $view_data->auth_user->name ?>">
+						<a class="user-avatar wh-36px rounded d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $view_data->auth_user->getURL($view_data->lang) ?>">
+							<img class="wh-36px rounded" src="<?= $view_data->auth_user->getAvatarURLSmall() ?>" alt="<?= $view_data->auth_user->name ?>">
 						</a>
 					</li>
 				<?php endif; ?>

@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Full_params()
     {
-        $answer = \Model\Answer::init_with_DB_state([
+        $answer = \Model\Answer::initWithDBState([
             'q_id'         => 13,
             'a_text'       => 'Answer written at 20:54',
             'a_updated_at' => '2016-03-19 06:47:41',

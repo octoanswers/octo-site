@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Category\find_with_title;
+namespace Test\Query\Category\findWithTitle;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Category_exists()
     {
-        $category = (new \Query\Category('ru'))->find_with_title('парфюмерия');
+        $category = (new \Query\Category('ru'))->findWithTitle('парфюмерия');
 
         $this->assertEquals(8, $category->id);
         $this->assertEquals('Парфюмерия', $category->title);
@@ -16,7 +16,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Category_not_exists()
     {
-        $category = (new \Query\Category('ru'))->find_with_title('notexists');
+        $category = (new \Query\Category('ru'))->findWithTitle('notexists');
 
         $this->assertEquals(null, $category);
     }

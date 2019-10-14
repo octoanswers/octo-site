@@ -28,7 +28,7 @@ class QuestionsID extends \APIController\APIController
             //     // $user['id'] ==
             // }
 
-            $question = (new \Query\Question($this->lang))->question_with_ID($question_ID);
+            $question = (new \Query\Question($this->lang))->questionWithID($question_ID);
             $question->title = $question_title;
 
             $question = (new \Mapper\Question($this->lang))->update($question);
@@ -36,7 +36,7 @@ class QuestionsID extends \APIController\APIController
             $output = [
                 'id'          => $question->id,
                 'title'       => $question->title,
-                'url'         => $question->get_URL($this->lang),
+                'url'         => $question->getURL($this->lang),
                 'is_redirect' => $question->isRedirect,
             ];
         } catch (\Throwable $e) {

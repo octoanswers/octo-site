@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Questions\find_newest;
+namespace Test\Query\Questions\findNewest;
 
 class EnTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class EnTest extends \Test\TestCase\DB
 
     public function test__Find_without_params()
     {
-        $questions = (new \Query\Questions('en'))->find_newest();
+        $questions = (new \Query\Questions('en'))->findNewest();
 
         $this->assertEquals(10, count($questions));
 

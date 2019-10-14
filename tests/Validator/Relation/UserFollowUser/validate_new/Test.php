@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Relation\UserFollowUser\validate_new;
+namespace Test\Validator\Relation\UserFollowUser\validateNew;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -11,7 +11,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $relation->followedUserID = 9;
         $relation->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, \Validator\Relation\UserFollowUser::validate_new($relation));
+        $this->assertEquals(true, \Validator\Relation\UserFollowUser::validateNew($relation));
     }
 
     public function test__Min_params()
@@ -20,6 +20,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $relation->userID = 3;
         $relation->followedUserID = 9;
 
-        $this->assertEquals(true, \Validator\Relation\UserFollowUser::validate_new($relation));
+        $this->assertEquals(true, \Validator\Relation\UserFollowUser::validateNew($relation));
     }
 }

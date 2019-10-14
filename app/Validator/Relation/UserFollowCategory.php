@@ -11,15 +11,15 @@ class UserFollowCategory
     // Model validator
     //
 
-    public static function validate_exists(\Model\Relation\UserFollowCategory $relation)
+    public static function validateExists(\Model\Relation\UserFollowCategory $relation)
     {
         self::validateID($relation->id);
-        self::validate_new($relation);
+        self::validateNew($relation);
 
         return true;
     }
 
-    public static function validate_new(\Model\Relation\UserFollowCategory $relation)
+    public static function validateNew(\Model\Relation\UserFollowCategory $relation)
     {
         self::validateUserID($relation->userID);
         self::validateCategoryID($relation->categoryID);

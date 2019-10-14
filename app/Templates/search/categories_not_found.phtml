@@ -6,7 +6,7 @@
             <?= str_replace('%query%', $this->query, __('page_search.no_category_found_for_query')); ?>
         </p>
 
-        <a class="btn btn-primary mb-2" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>" role="button">
+        <a class="btn btn-primary mb-2" href="<?= \Helper\URL\Categories::getNewestURL($this->lang) ?>" role="button">
             <?= __('page_search.view_all_categories') ?>
         </a>
     </div>

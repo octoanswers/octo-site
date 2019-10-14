@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Search\search_questions;
+namespace Test\Query\Search\searchQuestions;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Basic_search()
     {
-        $questions = (new \Query\Search('ru'))->search_questions('птицы');
+        $questions = (new \Query\Search('ru'))->searchQuestions('птицы');
 
         $this->assertEquals(5, count($questions));
 

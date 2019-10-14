@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\User\user_with_API_key;
+namespace Test\Query\User\userWithAPIKey;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function testCorrectLogin()
     {
-        $user = (new \Query\User())->user_with_API_key('7d21ebdbec3d4e396043c96b6ab44a6e');
+        $user = (new \Query\User())->userWithAPIKey('7d21ebdbec3d4e396043c96b6ab44a6e');
 
         $this->assertEquals(3, $user->id);
         $this->assertEquals('ivan', $user->username);

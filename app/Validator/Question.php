@@ -16,19 +16,19 @@ class Question
     // Model validator
     //
 
-    public static function validate_exists(\Model\Question $question)
+    public static function validateExists(\Model\Question $question)
     {
         self::validateID($question->id);
-        self::validate_new($question);
+        self::validateNew($question);
 
         return true;
     }
 
-    public static function validate_new(\Model\Question $question)
+    public static function validateNew(\Model\Question $question)
     {
-        self::validate_title($question->title);
+        self::validateTitle($question->title);
         self::validateRedirect($question->isRedirect);
-        self::validate_image_base_name($question->imageBaseName);
+        self::validateImageBaseName($question->imageBaseName);
 
         return true;
     }
@@ -46,7 +46,7 @@ class Question
         }
     }
 
-    public static function validate_title($title)
+    public static function validateTitle($title)
     {
         try {
             v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, null)->assert($title);
@@ -80,7 +80,7 @@ class Question
         }
     }
 
-    public static function validate_image_base_name($imageBaseName)
+    public static function validateImageBaseName($imageBaseName)
     {
         try {
             v::optional(v::stringType()->length(self::IMAGE_BASENAME_MIN_LENGHT, self::IMAGE_BASENAME_MAX_LENGHT, null))->assert($imageBaseName);

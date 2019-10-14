@@ -4,7 +4,7 @@
         <p class="font-weight-bold"><?= __('page_search.no_users_found.title') ?></p>
         <p><?= str_replace('%query%', $this->query, __('page_search.no_users_found.msg')); ?></p>
 
-        <a class="btn btn-primary mb-2" href="<?= \Helper\URL\Users::get_newest_URL($this->lang) ?>" role="button">
+        <a class="btn btn-primary mb-2" href="<?= \Helper\URL\Users::getNewestURL($this->lang) ?>" role="button">
             <?= __('page_search.no_users_found.view_all_users') ?>
         </a>
     </div>

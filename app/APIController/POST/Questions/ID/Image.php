@@ -29,14 +29,14 @@ class Image extends \APIController\APIController
             $this->lang = $args['lang'];
 
             $question_id = (int) $args['id'];
-            $this->question = (new \Query\Question($this->lang))->question_with_ID($question_id);
+            $this->question = (new \Query\Question($this->lang))->questionWithID($question_id);
 
             if (!$this->question) {
                 throw new \Exception('No QUESTION', 0);
             }
 
             $API_key = $post_params['api_key'];
-            $this->user = (new \Query\User())->user_with_API_key($API_key);
+            $this->user = (new \Query\User())->userWithAPIKey($API_key);
 
             if (!$this->user) {
                 throw new \Exception('No user', 0);
@@ -48,8 +48,8 @@ class Image extends \APIController\APIController
             if ($this->verot_upload->uploaded) {
                 $image_base_name = $this->_get_image_base_name();
 
-                $this->_make_user_avatar_with_size($image_base_name . '_lg', self::WIDTH_LG);
-                $this->_make_user_avatar_with_size($image_base_name . '_md', self::WIDTH_MD);
+                $this->_makeUserAvatarWithSize($image_base_name . '_lg', self::WIDTH_LG);
+                $this->_makeUserAvatarWithSize($image_base_name . '_md', self::WIDTH_MD);
 
                 // delete the original uploaded file
                 $this->verot_upload->clean();
@@ -65,8 +65,8 @@ class Image extends \APIController\APIController
                 'lang'         => $this->lang,
                 'question_id'  => $this->question->id,
                 'user_id'      => $this->user->id,
-                'image_url_lg' => $this->question->get_image_URL_large($this->lang),
-                'image_url_md' => $this->question->get_image_URL_medium($this->lang),
+                'image_url_lg' => $this->question->getImageURLLarge($this->lang),
+                'image_url_md' => $this->question->getImageURLMedium($this->lang),
             ];
         } catch (\Throwable $e) {
             $output = [
@@ -80,7 +80,7 @@ class Image extends \APIController\APIController
         return $response->withHeader('Content-Type', 'application/json')->write($json);
     }
 
-    protected function _make_user_avatar_with_size($image_filename, $image_width)
+    protected function _makeUserAvatarWithSize($image_filename, $image_width)
     {
         $uploadFolder = self::UPLOAD_FOLDER . '/' . $this->lang . '/' . $this->question->id . '/';
 

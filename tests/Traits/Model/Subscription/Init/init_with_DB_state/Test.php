@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__FullParams()
     {
-        $s = \Model\Subscription::init_with_DB_state([
+        $s = \Model\Subscription::initWithDBState([
             's_id'          => 13,
             's_question_id' => 9,
             's_email'       => 'wer@sio.ru',

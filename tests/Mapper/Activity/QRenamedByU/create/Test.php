@@ -12,7 +12,7 @@ class Test extends \Test\TestCase\DB
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $question = (new \Query\Question('ru'))->question_with_ID(6);
+        $question = (new \Query\Question('ru'))->questionWithID(6);
 
         $activity = new \Model\Activity();
         $activity->type = \Model\Activity::Q_RENAMED_BY_U;

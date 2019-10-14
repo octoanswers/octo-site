@@ -29,7 +29,7 @@
                          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
                         var disqus_config = function() {
-                            this.page.url = '<?= $this->question->get_URL($this->lang) ?>';
+                            this.page.url = '<?= $this->question->getURL($this->lang) ?>';
                             this.page.identifier = '<?= $this->lang . '_' . $this->question->id ?>';
                         };
 

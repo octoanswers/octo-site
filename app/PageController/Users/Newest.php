@@ -15,8 +15,8 @@ class Newest extends \PageController\Basic
         $view_data->list = $list;
         $view_data->page = $page;
 
-        $view_data->users_count = (new \Query\Users())->users_last_ID();
-        $view_data->users = (new \Query\Users())->users_newest();
+        $view_data->users_count = (new \Query\Users())->usersLastID();
+        $view_data->users = (new \Query\Users())->usersNewest();
 
         $view_data->page_title = $this->_get_page_title($page);
         $view_data->next_page_URL = $this->_next_page_URL($this->lang, $list, $page, count($view_data->users));

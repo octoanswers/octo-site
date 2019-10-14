@@ -16,7 +16,7 @@ class Show extends \PageController\PageController
     {
         $this->lang = $args['lang'];
 
-        $this->activities = (new \Query\Flow($this->lang))->find_flow();
+        $this->activities = (new \Query\Flow($this->lang))->findFlow();
 
         $human_date_timezone = new \DateTimeZone('UTC');
         $date_humanizer = new \Humanizer\HumanDate\HumanDate($human_date_timezone, $this->lang);
@@ -33,7 +33,7 @@ class Show extends \PageController\PageController
         $this->template = 'flow';
         $this->pageTitle = __('page_flow.page_title') . ' – ' . __('common.answeropedia');
         $this->pageDescription = __('page_flow.note');
-        $this->canonicalURL = \Helper\URL\Page::get_flow_URL($this->lang);
+        $this->canonicalURL = \Helper\URL\Page::getFlowURL($this->lang);
 
         $output = $this->render_page();
         $response->getBody()->write($output);

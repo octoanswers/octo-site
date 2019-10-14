@@ -4,7 +4,7 @@ namespace Query;
 
 class Categories extends \Query\Query
 {
-    public function categories_last_ID(): int
+    public function categoriesLastID(): int
     {
         $stmt = $this->pdo->prepare('SELECT MAX(c_id) FROM categories');
         if (!$stmt->execute()) {
@@ -21,14 +21,14 @@ class Categories extends \Query\Query
         return (int) $result['MAX(c_id)'];
     }
 
-    public function find_newest($page = 1, $perPage = 10): array
+    public function findNewest($page = 1, $perPage = 10): array
     {
         \Validator\SearchList::validatePage($page);
         \Validator\SearchList::validatePerPage($perPage);
 
-        $categories_last_ID = (new self($this->lang))->categories_last_ID();
+        $categoriesLastID = (new self($this->lang))->categoriesLastID();
 
-        $offset = $categories_last_ID - ($perPage * $page);
+        $offset = $categoriesLastID - ($perPage * $page);
 
         $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_id >= :id_offset AND cat_is_redirect = 0 LIMIT :per_page');
         $stmt->bindParam(':id_offset', $offset, \PDO::PARAM_INT);
@@ -43,13 +43,13 @@ class Categories extends \Query\Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = \Model\Category::init_with_DB_state($row);
+            $categories[] = \Model\Category::initWithDBState($row);
         }
 
         return array_reverse($categories);
     }
 
-    public function categories_for_question_with_ID(int $questionID): array
+    public function categoriesForQuestionWithID(int $questionID): array
     {
         \Validator\Question::validateID($questionID);
 
@@ -65,7 +65,7 @@ class Categories extends \Query\Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = (new \Query\Category($this->lang))->category_with_ID($row['er_category_id']);
+            $categories[] = (new \Query\Category($this->lang))->categoryWithID($row['er_category_id']);
         }
 
         return $categories;

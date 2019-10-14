@@ -10,11 +10,11 @@ class ShortURL extends \PageController\PageController
         $this->user_ID = (int) $args['id'];
 
         try {
-            $user = (new \Query\User())->user_with_ID($this->user_ID);
+            $user = (new \Query\User())->userWithID($this->user_ID);
         } catch (\Throwable $e) {
             return (new \PageController\Error\PageNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        return $response->withRedirect($user->get_URL($this->lang), 301);
+        return $response->withRedirect($user->getURL($this->lang), 301);
     }
 }

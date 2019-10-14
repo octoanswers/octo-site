@@ -18,7 +18,7 @@ class SearchCategories extends \APIController\APIController
             $output = [];
 
             if ($this->query && strlen($this->query)) {
-                $categories = (new \Query\Search($this->lang))->search_categories($this->query);
+                $categories = (new \Query\Search($this->lang))->searchCategories($this->query);
 
                 foreach ($categories as $category) {
                     $output[] = [

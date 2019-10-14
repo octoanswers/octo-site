@@ -24,7 +24,7 @@ class Categories extends \APIController\APIController
             // Validate params
             //
 
-            $user = (new \Query\User())->user_with_API_key($api_key);
+            $user = (new \Query\User())->userWithAPIKey($api_key);
 
             //
             // Check & creat new categories, if needed
@@ -37,7 +37,7 @@ class Categories extends \APIController\APIController
 
             foreach ($category_titles as $category_title) {
                 $category_title = trim($category_title);
-                $category = (new \Query\Category($this->lang))->find_with_title($category_title);
+                $category = (new \Query\Category($this->lang))->findWithTitle($category_title);
                 if ($category === null) {
                     $category = new \Model\Category();
                     $category->title = $category_title;

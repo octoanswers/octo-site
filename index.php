@@ -16,7 +16,7 @@ session_start(); // @TODO deprecate?
 require_once __DIR__ . '/app/functions.php';
 
 // Get lang code from URL
-// $GLOBALS['lang_code'] = \Helper\Lang::get_lang_code_from_URI();
+// $GLOBALS['lang_code'] = \Helper\Lang::getLangCodeFromURI();
 
 // // Prepare the FileLoader
 // $file_system = new \Illuminate\Filesystem\Filesystem();

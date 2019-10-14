@@ -13,17 +13,17 @@
 
                     <ul class="list-inline font-weight-bold semi-small mb-3">
                         <li class="list-inline-item">
-                            <a href="<?= \Helper\URL\Page::get_main_URL($this->lang) ?>" class="text-black-50 text-decoration-none">
+                            <a href="<?= \Helper\URL\Page::getMainURL($this->lang) ?>" class="text-black-50 text-decoration-none">
                                 <?= __('footer.nav.main_page') ?>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-black-50 text-decoration-none" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
+                            <a class="text-black-50 text-decoration-none" href="<?= \Helper\URL\Questions::getNewestURL($this->lang) ?>">
                                 <?= __('footer.nav.questions') ?>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-black-50 text-decoration-none" href="<?= \Helper\URL\Users::get_newest_URL($this->lang) ?>">
+                            <a class="text-black-50 text-decoration-none" href="<?= \Helper\URL\Users::getNewestURL($this->lang) ?>">
                                 <?= __('footer.nav.users') ?>
                             </a>
                         </li>

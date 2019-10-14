@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Questions\find_recently_updated;
+namespace Test\Query\Questions\findRecentlyUpdated;
 
 class EnTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class EnTest extends \Test\TestCase\DB
 
     public function test__Find_without_params()
     {
-        $questions = (new \Query\Questions('en'))->find_recently_updated();
+        $questions = (new \Query\Questions('en'))->findRecentlyUpdated();
 
         $this->assertEquals(9, count($questions));
 

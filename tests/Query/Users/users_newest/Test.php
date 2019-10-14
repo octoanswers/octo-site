@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Query_with_no_params()
     {
-        $users = (new \Query\Users())->users_newest();
+        $users = (new \Query\Users())->usersNewest();
 
         $this->assertEquals(10, count($users));
 

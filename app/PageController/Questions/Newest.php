@@ -15,8 +15,8 @@ class Newest extends \PageController\PageController
 
         $this->questions = $this->_get_questions();
 
-        $this->count_questions_with_answers = (new \Query\QuestionsCount($this->lang))->count_questions_with_answers();
-        $this->count_questions_without_answers = (new \Query\QuestionsCount($this->lang))->count_questions_without_answers();
+        $this->countQuestionsWithAnswers = (new \Query\QuestionsCount($this->lang))->countQuestionsWithAnswers();
+        $this->countQuestionsWithoutAnswers = (new \Query\QuestionsCount($this->lang))->countQuestionsWithoutAnswers();
 
         $this->template = 'questions';
         $this->pageTitle = $this->_get_page_title();
@@ -24,7 +24,7 @@ class Newest extends \PageController\PageController
         $this->list = 'with-answers';
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
-            $this->nextPageURL = \Helper\URL\Questions::get_newest_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Questions::getNewestURL($this->lang, ($this->page + 1));
         }
 
         $output = $this->render_page();
@@ -53,12 +53,12 @@ class Newest extends \PageController\PageController
     {
         $top_questions = [];
 
-        $questions = (new \Query\Questions($this->lang))->find_newest_with_answer($this->page);
+        $questions = (new \Query\Questions($this->lang))->findNewestWithAnswer($this->page);
 
         foreach ($questions as $question) {
-            $contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
+            $contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
 
-            $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
+            $categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question->id);
             if (count($categories) > 2) {
                 $categories = array_slice($categories, 0, 2);
             }

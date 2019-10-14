@@ -3,7 +3,7 @@
 
     <!-- edit answer -->
     <?php if ($this->authUser) : ?>
-        <a class="btn btn-sm btn-outline-gray my-2 mr-2" href="<?= $this->question->get_edit_URL($this->lang) ?>">
+        <a class="btn btn-sm btn-outline-gray my-2 mr-2" href="<?= $this->question->getEditURL($this->lang) ?>">
             <i class="material-icons md-18">edit</i>
             <?= __('page_question.actions_top.edit_answer') ?>
         </a>
@@ -31,7 +31,7 @@
 
     <?php if (mb_strlen($this->question->answer->text) > 0) : ?>
         <!-- btn history -->
-        <a class="d-inline-block semi-small text-black-50 my-2 ml-2" href="<?= $this->question->get_history_URL($this->lang) ?>">
+        <a class="d-inline-block semi-small text-black-50 my-2 ml-2" href="<?= $this->question->getHistoryURL($this->lang) ?>">
             <?= __('page_question.actions_top.history') ?>
         </a>
         <!-- btn history -->
@@ -62,11 +62,11 @@
 
             <div class="dropdown-divider"></div>
 
-            <a class="dropdown-item" target="_blank" href="<?= $this->question->get_discussion_URL($this->lang) ?>">
+            <a class="dropdown-item" target="_blank" href="<?= $this->question->getDiscussionURL($this->lang) ?>">
                 <?= __('page_question.actions_top.discuss_a_question') ?>
             </a>
 
-            <a rel="nofollow" class="dropdown-item" target="_blank" href="<?= \Helper\URL\DDG::get_search_URL($this->question->title) ?>">
+            <a rel="nofollow" class="dropdown-item" target="_blank" href="<?= \Helper\URL\DDG::getSearchURL($this->question->title) ?>">
                 <?= __('page_question.search_in_ddg') ?>
             </a>
 

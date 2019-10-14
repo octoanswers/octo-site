@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Full_params()
     {
-        $question = \Model\Question::init_with_title('This is question?');
+        $question = \Model\Question::initWithTitle('This is question?');
 
         $this->assertEquals('This is question?', $question->title);
         $this->assertEquals(null, $question->id);
@@ -15,7 +15,7 @@ class Test extends \PHPUnit\Framework\TestCase
 
     public function test__RU_title()
     {
-        $question = \Model\Question::init_with_title('Когда закончится дождь?');
+        $question = \Model\Question::initWithTitle('Когда закончится дождь?');
 
         $this->assertEquals('Когда закончится дождь?', $question->title);
         $this->assertEquals(null, $question->id);

@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Base_params()
     {
-        $redirect = \Model\Redirect\Category::init_with_DB_state([
+        $redirect = \Model\Redirect\Category::initWithDBState([
             'rd_from'  => 13,
             'rd_title' => 'Some category',
         ]);

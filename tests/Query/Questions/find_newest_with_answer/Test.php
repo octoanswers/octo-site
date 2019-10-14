@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Questions\find_newest_with_answer;
+namespace Test\Query\Questions\findNewestWithAnswer;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Find_without_params()
     {
-        $questions = (new \Query\Questions('ru'))->find_newest_with_answer();
+        $questions = (new \Query\Questions('ru'))->findNewestWithAnswer();
 
         $this->assertEquals(10, count($questions));
 
@@ -23,7 +23,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__First_page()
     {
-        $questions = (new \Query\Questions('ru'))->find_newest_with_answer(1);
+        $questions = (new \Query\Questions('ru'))->findNewestWithAnswer(1);
 
         $this->assertEquals(10, count($questions));
 
@@ -38,7 +38,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Second_page()
     {
-        $questions = (new \Query\Questions('ru'))->find_newest_with_answer(2);
+        $questions = (new \Query\Questions('ru'))->findNewestWithAnswer(2);
 
         $this->assertEquals(1, count($questions));
     }

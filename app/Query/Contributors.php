@@ -4,21 +4,21 @@ namespace Query;
 
 class Contributors extends \Query\Query
 {
-    public function find_answer_contributors(int $answerID): array
+    public function findAnswerContributors(int $answerID): array
     {
-        $revisions = (new \Query\Revisions($this->lang))->revisions_for_answer_with_ID($answerID);
+        $revisions = (new \Query\Revisions($this->lang))->revisionsForAnswerWithID($answerID);
         $contributions = [];
 
         foreach ($revisions as $revision) {
             $revUserID = $revision->userID;
             if (isset($contributions[$revUserID])) {
-                $contributions[$revUserID]['total'] += $revision->get_user_contribution();
-                $contributions[$revUserID]['plus'] += $revision->get_user_insertions();
-                $contributions[$revUserID]['minus'] += $revision->get_user_deletions();
+                $contributions[$revUserID]['total'] += $revision->getUserContribution();
+                $contributions[$revUserID]['plus'] += $revision->getUserInsertions();
+                $contributions[$revUserID]['minus'] += $revision->getUserDeletions();
             } else {
-                $contributions[$revUserID]['total'] = $revision->get_user_contribution();
-                $contributions[$revUserID]['plus'] = $revision->get_user_insertions();
-                $contributions[$revUserID]['minus'] = $revision->get_user_deletions();
+                $contributions[$revUserID]['total'] = $revision->getUserContribution();
+                $contributions[$revUserID]['plus'] = $revision->getUserInsertions();
+                $contributions[$revUserID]['minus'] = $revision->getUserDeletions();
             }
         }
 
@@ -41,7 +41,7 @@ class Contributors extends \Query\Query
             $insertionsCount = $contributorData['plus'];
             $deletionsCount = $contributorData['minus'];
 
-            $user = (new \Query\User())->user_with_ID($userID);
+            $user = (new \Query\User())->userWithID($userID);
 
             $contributor = new \Model\User\Contributor();
             $contributor->id = $user->id;

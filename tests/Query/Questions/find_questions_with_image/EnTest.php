@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Questions\find_questions_with_image;
+namespace Test\Query\Questions\findQuestionsWithImage;
 
 class EnTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class EnTest extends \Test\TestCase\DB
 
     public function test__Find_without_params()
     {
-        $questions = (new \Query\Questions('en'))->find_questions_with_image(29);
+        $questions = (new \Query\Questions('en'))->findQuestionsWithImage(29);
 
         $this->assertEquals(1, count($questions));
 

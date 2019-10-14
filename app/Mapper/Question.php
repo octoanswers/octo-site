@@ -6,7 +6,7 @@ class Question extends \Mapper\Mapper
 {
     public function create(\Model\Question $question): \Model\Question
     {
-        \Validator\Question::validate_new($question);
+        \Validator\Question::validateNew($question);
 
         $sql = 'INSERT INTO questions (q_title, q_is_redirect, q_image_base_name) VALUES (:q_title, :q_is_redirect, :q_image_base_name)';
         $stmt = $this->pdo->prepare($sql);
@@ -29,7 +29,7 @@ class Question extends \Mapper\Mapper
 
     public function update(\Model\Question $question): \Model\Question
     {
-        \Validator\Question::validate_exists($question);
+        \Validator\Question::validateExists($question);
 
         $sql = 'UPDATE questions SET q_title=:q_title, q_is_redirect=:q_is_redirect, q_image_base_name=:q_image_base_name WHERE q_id=:q_id';
         $stmt = $this->pdo->prepare($sql);

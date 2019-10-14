@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Categories\categories_for_question_with_ID;
+namespace Test\Query\Categories\categoriesForQuestionWithID;
 
 class EnTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class EnTest extends \Test\TestCase\DB
 
     public function test__Question_have_one_category()
     {
-        $categories = (new \Query\Categories('en'))->categories_for_question_with_ID(22);
+        $categories = (new \Query\Categories('en'))->categoriesForQuestionWithID(22);
 
         $this->assertEquals(1, count($categories));
 
@@ -18,7 +18,7 @@ class EnTest extends \Test\TestCase\DB
 
     public function test__Question_dont_havecategories()
     {
-        $categories = (new \Query\Categories('en'))->categories_for_question_with_ID(5);
+        $categories = (new \Query\Categories('en'))->categoriesForQuestionWithID(5);
 
         $this->assertEquals(0, count($categories));
     }

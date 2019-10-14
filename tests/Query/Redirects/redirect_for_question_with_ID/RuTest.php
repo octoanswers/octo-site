@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Redirects\Question\redirect_for_question_with_ID;
+namespace Test\Query\Redirects\Question\redirectForQuestionWithID;
 
 class RuTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__Redirect_exists()
     {
-        $redirect = (new \Query\Redirects\Question('ru'))->redirect_for_question_with_ID(30);
+        $redirect = (new \Query\Redirects\Question('ru'))->redirectForQuestionWithID(30);
 
         $this->assertEquals(30, $redirect->fromID);
         $this->assertEquals('Был ли мальчик?', $redirect->toTitle);
@@ -17,6 +17,6 @@ class RuTest extends \Test\TestCase\DB
     public function test__Redirect_not_exists()
     {
         $this->expectExceptionMessage('Redirect for question with ID "145" not exists');
-        $redirect = (new \Query\Redirects\Question('ru'))->redirect_for_question_with_ID(145);
+        $redirect = (new \Query\Redirects\Question('ru'))->redirectForQuestionWithID(145);
     }
 }

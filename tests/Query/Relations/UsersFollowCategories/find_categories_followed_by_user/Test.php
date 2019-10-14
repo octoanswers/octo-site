@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Relations\UsersFollowCategories\find_categories_followed_by_user;
+namespace Test\Query\Relations\UsersFollowCategories\findCategoriesFollowedByUser;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Relation_exists()
     {
-        $followed = (new \Query\Relations\UsersFollowCategories('ru'))->find_categories_followed_by_user(7);
+        $followed = (new \Query\Relations\UsersFollowCategories('ru'))->findCategoriesFollowedByUser(7);
 
         $this->assertEquals(22, $followed[0]);
         $this->assertEquals(15, $followed[1]);
@@ -18,7 +18,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Relation_not_exists()
     {
-        $followed = (new \Query\Relations\UsersFollowCategories('ru'))->find_categories_followed_by_user(12);
+        $followed = (new \Query\Relations\UsersFollowCategories('ru'))->findCategoriesFollowedByUser(12);
 
         $this->assertEquals(0, count($followed));
     }

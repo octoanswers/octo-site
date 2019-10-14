@@ -10,7 +10,7 @@ abstract class DB extends \PHPUnit\Framework\TestCase
     {
         if (count($this->setUpDB)) {
             foreach ($this->setUpDB as $database => $databaseTables) {
-                $pdo = \Helper\PDOFactory::get_connection($database);
+                $pdo = \Helper\PDOFactory::getConnection($database);
                 foreach ($databaseTables as $table) {
                     require "tests/_DB/schema/$table.php";
                     require "tests/_DB/data/$database/$table.php";
@@ -24,7 +24,7 @@ abstract class DB extends \PHPUnit\Framework\TestCase
     {
         if (count($this->setUpDB)) {
             foreach ($this->setUpDB as $database => $databaseTables) {
-                $pdo = \Helper\PDOFactory::get_connection($database);
+                $pdo = \Helper\PDOFactory::getConnection($database);
                 foreach ($databaseTables as $table) {
                     $pdo->exec("DROP TABLE IF EXISTS `$table`;");
                 }

@@ -4,13 +4,13 @@ namespace Query;
 
 class Feeds extends \Query\Query
 {
-    public function find_feeds_for_user_with_ID(int $userID): array
+    public function findFeedsForUserWithID(int $userID): array
     {
-        $user = (new \Query\User())->user_with_ID($userID);
+        $user = (new \Query\User())->userWithID($userID);
 
-        $follows_users = (new \Query\Relations\UsersFollowUsers($this->lang))->find_users_followed_by_user($userID);
-        $follows_categories = (new \Query\Relations\UsersFollowCategories($this->lang))->find_categories_followed_by_user($userID);
-        $follows_questions = (new \Query\Relations\UsersFollowQuestions($this->lang))->find_questions_followed_by_user($userID);
+        $follows_users = (new \Query\Relations\UsersFollowUsers($this->lang))->findUsersFollowedByUser($userID);
+        $follows_categories = (new \Query\Relations\UsersFollowCategories($this->lang))->findCategoriesFollowedByUser($userID);
+        $follows_questions = (new \Query\Relations\UsersFollowQuestions($this->lang))->findQuestionsFollowedByUser($userID);
 
         $where = [];
         if (count($follows_users)) {

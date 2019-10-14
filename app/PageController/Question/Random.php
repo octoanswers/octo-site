@@ -11,16 +11,16 @@ class Random extends \PageController\PageController
     {
         $this->lang = $args['lang'];
 
-        $questions_count = (new \Query\QuestionsCount($this->lang))->questions_last_ID();
+        $questions_count = (new \Query\QuestionsCount($this->lang))->questionsLastID();
 
         $random_question_ID = mt_rand(1, $questions_count);
 
         try {
-            $question = (new \Query\Question($this->lang))->question_with_ID($random_question_ID);
+            $question = (new \Query\Question($this->lang))->questionWithID($random_question_ID);
         } catch (\Throwable $e) {
             return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        return $response->withRedirect($question->get_URL($this->lang), 303);
+        return $response->withRedirect($question->getURL($this->lang), 303);
     }
 }

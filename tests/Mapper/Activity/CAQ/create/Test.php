@@ -8,9 +8,9 @@ class Test extends \Test\TestCase\DB
 
     public function test__Create_with_full_args()
     {
-        $category = \Model\Category::init_with_title('tag1102');
+        $category = \Model\Category::initWithTitle('tag1102');
 
-        $question = \Model\Question::init_with_title('Когда закончится дождь?');
+        $question = \Model\Question::initWithTitle('Когда закончится дождь?');
 
         $activity = new \Model\Activity();
         $activity->type = \Model\Activity::CATEGORY_ADDED_QUESTION;

@@ -9,7 +9,7 @@
         </div>
         <div class="pt-4 pb-0">
             <?php foreach ($this->related_categories as $category) : ?>
-                <a class="badge badge-secondary mr-2 mb-3" href="<?= $category->get_URL($this->lang) ?>">
+                <a class="badge badge-secondary mr-2 mb-3" href="<?= $category->getURL($this->lang) ?>">
                     <?= $category->title ?>
                 </a>
             <?php endforeach; ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\User\user_with_username;
+namespace Test\Query\User\userWithUsername;
 
 class IDTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class IDTest extends \Test\TestCase\DB
 
     public function test__ID_not_exists()
     {
-        $user = (new \Query\User())->user_with_username('notexist667');
+        $user = (new \Query\User())->userWithUsername('notexist667');
         $this->assertEquals(null, $user);
     }
 }

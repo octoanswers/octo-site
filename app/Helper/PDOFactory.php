@@ -14,14 +14,14 @@ class PDOFactory
      */
     protected static $connection;
 
-    public static function get_connection_to_lang_DB(string $lang)
+    public static function getConnectionToLangDB(string $lang)
     {
-        return self::get_connection($lang);
+        return self::getConnection($lang);
     }
 
-    public static function get_connection_to_users_DB()
+    public static function getConnectionToUsersDB()
     {
-        return self::get_connection('users');
+        return self::getConnection('users');
     }
 
     /**
@@ -33,7 +33,7 @@ class PDOFactory
      *
      * @return Database
      */
-    public static function get_connection(string $database)
+    public static function getConnection(string $database)
     {
         if (!isset(self::$connection[$database])) {
             $DB_DSN = 'mysql:host=localhost;dbname=ap_' . $database . ';charset=utf8';

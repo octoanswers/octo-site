@@ -9,8 +9,8 @@ class Show extends \PageController\PageController
 {
     public function handle(Request $request, Response $response, $args): Response
     {
-        $supported_languages = \Helper\Lang::get_supported_langs();
-        $default_language = \Helper\Lang::get_default_lang();
+        $supported_languages = \Helper\Lang::getSupportedLangs();
+        $default_language = \Helper\Lang::getDefaultLang();
 
         $this->lang = $default_language;
 

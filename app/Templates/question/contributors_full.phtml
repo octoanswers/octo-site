@@ -6,8 +6,8 @@
 		</div>
 
 		<?php foreach ($this->contributors as $contributor) : ?>
-			<a class="d-inline-block wh-48px mr-2 mb-2" href="<?= $contributor->get_URL($this->lang) ?>">
-				<img class="wh-48px rounded-circle" src="<?= $contributor->get_avatar_URL_medium() ?>" alt="<?= $contributor->name ?>">
+			<a class="d-inline-block wh-48px mr-2 mb-2" href="<?= $contributor->getURL($this->lang) ?>">
+				<img class="wh-48px rounded-circle" src="<?= $contributor->getAvatarURLMedium() ?>" alt="<?= $contributor->name ?>">
 			</a>
 		<?php endforeach; ?>
 
@@ -21,12 +21,12 @@
 			</div>
 			<ul class="list-inline semi-small mt-2 mb-0">
 				<li class="list-inline-item">
-					<a class="text-dark" href="<?= $this->question->get_edit_URL($this->lang) ?>">
+					<a class="text-dark" href="<?= $this->question->getEditURL($this->lang) ?>">
 						<?= __('page_question.block__contributors.link__edit_answer') ?>
 					</a>
 				</li>
 				<li class="list-inline-item">
-					<a class="text-dark" href="<?= $this->question->get_update_categories_URL($this->lang) ?>">
+					<a class="text-dark" href="<?= $this->question->getUpdateCategoriesURL($this->lang) ?>">
 						<?= __('page_question.block__contributors.link__change_categories') ?>
 					</a>
 				</li>

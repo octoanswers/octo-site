@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Questions\find_recently_updated;
+namespace Test\Query\Questions\findRecentlyUpdated;
 
 class RuTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__Find_without_params()
     {
-        $questions = (new \Query\Questions('ru'))->find_recently_updated();
+        $questions = (new \Query\Questions('ru'))->findRecentlyUpdated();
 
         $this->assertEquals(10, count($questions));
 
@@ -23,7 +23,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__First_page()
     {
-        $questions = (new \Query\Questions('ru'))->find_recently_updated();
+        $questions = (new \Query\Questions('ru'))->findRecentlyUpdated();
 
         $this->assertEquals(10, count($questions));
 
@@ -38,7 +38,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__Second_page()
     {
-        $questions = (new \Query\Questions('ru'))->find_recently_updated(1);
+        $questions = (new \Query\Questions('ru'))->findRecentlyUpdated(1);
 
         $this->assertEquals(1, count($questions));
 

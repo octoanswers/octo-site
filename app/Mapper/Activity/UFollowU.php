@@ -25,15 +25,15 @@ class UFollowU extends \Mapper\Mapper
             'user' => [
                 'id'            => $user->id,
                 'name'          => $user->name,
-                'profile_url'   => $user->get_URL($this->lang),
-                'avatar_xs_url' => $user->get_avatar_URL_small(),
+                'profile_url'   => $user->getURL($this->lang),
+                'avatar_xs_url' => $user->getAvatarURLSmall(),
             ],
             'followed_user' => [
                 'id'            => $followed_user->id,
                 'name'          => $followed_user->name,
                 'signature'     => (string) $followed_user->signature,
-                'profile_url'   => $followed_user->get_URL($this->lang),
-                'avatar_xs_url' => $followed_user->get_avatar_URL_small(),
+                'profile_url'   => $followed_user->getURL($this->lang),
+                'avatar_xs_url' => $followed_user->getAvatarURLSmall(),
             ],
         ], JSON_UNESCAPED_UNICODE);
 

@@ -4,7 +4,7 @@ namespace Traits\Model\Question;
 
 trait URL
 {
-    public function get_URL(string $lang): string
+    public function getURL(string $lang): string
     {
         $uri = rtrim($this->title, '?');
         $uri = str_replace('_', '__', $uri);
@@ -13,29 +13,29 @@ trait URL
         return SITE_URL . '/' . $lang . '/' . urlencode($uri);
     }
 
-    public function get_short_URL(string $lang): string
+    public function getShortURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/' . $this->id;
     }
 
     // Some actions
 
-    public function get_update_categories_URL(string $lang): string
+    public function getUpdateCategoriesURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/question/' . $this->id . '/categories';
     }
 
-    public function get_history_URL(string $lang): string
+    public function getHistoryURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/answer/' . $this->id . '/history';
     }
 
-    public function get_edit_URL(string $lang): string
+    public function getEditURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/answer/' . $this->id . '/edit';
     }
 
-    public function get_discussion_URL(string $lang): string
+    public function getDiscussionURL(string $lang): string
     {
         return SITE_URL . '/' . $lang . '/question/' . $this->id . '/discussion';
     }

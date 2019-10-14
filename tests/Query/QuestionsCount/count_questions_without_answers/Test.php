@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\QuestionsCount\count_questions_without_answers;
+namespace Test\Query\QuestionsCount\countQuestionsWithoutAnswers;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Count_without_params()
     {
-        $count = (new \Query\QuestionsCount('ru'))->count_questions_without_answers();
+        $count = (new \Query\QuestionsCount('ru'))->countQuestionsWithoutAnswers();
         $this->assertEquals(19, $count);
     }
 }

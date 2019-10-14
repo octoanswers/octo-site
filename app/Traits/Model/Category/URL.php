@@ -4,7 +4,7 @@ namespace Traits\Model\Category;
 
 trait URL
 {
-    public function get_URL(string $lang): string
+    public function getURL(string $lang): string
     {
         $uri = $this->title;
 

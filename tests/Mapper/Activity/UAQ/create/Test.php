@@ -12,7 +12,7 @@ class Test extends \Test\TestCase\DB
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $question = \Model\Question::init_with_title('Когда закончится дождь?');
+        $question = \Model\Question::initWithTitle('Когда закончится дождь?');
 
         $activity = new \Model\Activity();
         $activity->type = \Model\Activity::F_U_ASKED_Q;

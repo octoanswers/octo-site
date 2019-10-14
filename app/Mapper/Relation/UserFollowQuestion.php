@@ -6,7 +6,7 @@ class UserFollowQuestion extends \Mapper\Mapper
 {
     public function create(\Model\Relation\UserFollowQuestion $relation): \Model\Relation\UserFollowQuestion
     {
-        \Validator\Relation\UserFollowQuestion::validate_new($relation);
+        \Validator\Relation\UserFollowQuestion::validateNew($relation);
 
         $sql = 'INSERT INTO er_users_follow_questions (user_id, question_id) VALUES (:user_id, :question_id)';
         $stmt = $this->pdo->prepare($sql);
@@ -33,7 +33,7 @@ class UserFollowQuestion extends \Mapper\Mapper
 
     public function delete_relation(\Model\Relation\UserFollowQuestion $relation): bool
     {
-        \Validator\Relation\UserFollowQuestion::validate_exists($relation);
+        \Validator\Relation\UserFollowQuestion::validateExists($relation);
 
         $sql = 'DELETE FROM er_users_follow_questions WHERE question_id=:question_id AND user_id=:user_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);

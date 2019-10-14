@@ -9,7 +9,7 @@ class Search extends \Query\Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
 
-    public function search_questions(string $query, int $questionsPage = 1, int $questionsPerPage = 10): array
+    public function searchQuestions(string $query, int $questionsPage = 1, int $questionsPerPage = 10): array
     {
         try {
             v::stringType()->length(2, 32, true)->assert($query);
@@ -36,13 +36,13 @@ class Search extends \Query\Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = \Model\Question::init_with_DB_state($row);
+            $questions[] = \Model\Question::initWithDBState($row);
         }
 
         return $questions;
     }
 
-    public function search_categories(string $query, int $page = 1, int $perPage = 10): array
+    public function searchCategories(string $query, int $page = 1, int $perPage = 10): array
     {
         try {
             v::stringType()->length(1, 32, true)->assert($query);
@@ -69,13 +69,13 @@ class Search extends \Query\Query
 
         $categories = [];
         foreach ($rows as $row) {
-            $categories[] = \Model\Category::init_with_DB_state($row);
+            $categories[] = \Model\Category::initWithDBState($row);
         }
 
         return $categories;
     }
 
-    public function search_users(string $query, int $page = 1, int $perPage = 10): array
+    public function searchUsers(string $query, int $page = 1, int $perPage = 10): array
     {
         try {
             v::stringType()->length(2, 32, true)->assert($query);
@@ -90,7 +90,7 @@ class Search extends \Query\Query
 
         $sql = "SELECT * FROM users WHERE (u_name LIKE '%" . $query . "%') LIMIT :id_offset, :per_page";
 
-        $this->pdo = \Helper\PDOFactory::get_connection_to_users_DB();
+        $this->pdo = \Helper\PDOFactory::getConnectionToUsersDB();
         $stmt = $this->pdo->prepare($sql);
 
         $stmt->bindParam(':id_offset', $id_offset, \PDO::PARAM_INT);
@@ -104,7 +104,7 @@ class Search extends \Query\Query
 
         $users = [];
         foreach ($rows as $row) {
-            $users[] = \Model\User::init_with_DB_state($row);
+            $users[] = \Model\User::initWithDBState($row);
         }
 
         return $users;

@@ -14,12 +14,12 @@ class Category
     // Model validator
     //
 
-    public static function validate_new(\Model\Category $category)
+    public static function validateNew(\Model\Category $category)
     {
         return self::validate($category, false);
     }
 
-    public static function validate_exists(\Model\Category $category)
+    public static function validateExists(\Model\Category $category)
     {
         return self::validate($category, true);
     }
@@ -29,7 +29,7 @@ class Category
         if ($isExists) {
             self::validateID($category->id);
         }
-        self::validate_title($category->title);
+        self::validateTitle($category->title);
 
         return true;
     }
@@ -47,7 +47,7 @@ class Category
         }
     }
 
-    public static function validate_title($title)
+    public static function validateTitle($title)
     {
         try {
             v::stringType()->length(self::TITLE_MIN_LENGHT, self::TITLE_MAX_LENGHT, true)->assert($title);

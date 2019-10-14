@@ -21,12 +21,12 @@ class Signup extends \APIController\APIController
             \Validator\User::validateEmail($user_email);
             \Validator\User::validatePassword($user_password);
 
-            $user = (new \Query\User())->user_with_email($user_email);
+            $user = (new \Query\User())->userWithEmail($user_email);
             if ($user) {
                 throw new \Exception('User with specific email is already registered', 1);
             }
 
-            $user = (new \Query\User())->user_with_username($username);
+            $user = (new \Query\User())->userWithUsername($username);
             if ($user) {
                 throw new \Exception('User with username "' . $username . '" is already registered', 0);
             }
@@ -34,7 +34,7 @@ class Signup extends \APIController\APIController
             // Generating password hash
             $password_hash = new \Helper\PassHash();
             $user_password_hash = $password_hash->hash($user_password);
-            $apiKey = $password_hash->generate_API_key();
+            $apiKey = $password_hash->generateAPIKey();
 
             // @TODO check API-key by doubles
             //$user = $api->get('users_api_key', ['api_key' => $api_key]);
@@ -51,7 +51,7 @@ class Signup extends \APIController\APIController
             $user = (new \Mapper\User())->create($user);
 
             $cookieStorage = new \Helper\CookieStorage();
-            $cookieStorage->save_user($user);
+            $cookieStorage->saveUser($user);
 
             $this->output = [
                 'id'              => $user->id,
@@ -60,8 +60,8 @@ class Signup extends \APIController\APIController
                 'password_hash'   => $user->passwordHash,
                 'api_key'         => $user->apiKey,
                 'created_at'      => date('Y-m-d H:i:s'),
-                'url'             => $user->get_URL($this->lang),
-                'destination_url' => \Helper\URL\Page::get_main_URL($this->lang),
+                'url'             => $user->getURL($this->lang),
+                'destination_url' => \Helper\URL\Page::getMainURL($this->lang),
             ];
 
             $this->_copyDefaultAvatar($user->id);

@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__EnFullParams_ReturnObject()
     {
-        $rel = \Model\Relation\UserFollowUser::init_with_DB_state([
+        $rel = \Model\Relation\UserFollowUser::initWithDBState([
             'id'               => 13,
             'user_id'          => 3,
             'followed_user_id' => 9,
@@ -21,7 +21,7 @@ class Test extends \PHPUnit\Framework\TestCase
 
     public function test_RuFullParams_ReturnObject()
     {
-        $rel = \Model\Relation\UserFollowUser::init_with_DB_state([
+        $rel = \Model\Relation\UserFollowUser::initWithDBState([
             'id'               => 13,
             'user_id'          => 3,
             'followed_user_id' => 9,

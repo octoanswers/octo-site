@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Search\search_users;
+namespace Test\Query\Search\searchUsers;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Search_with_two_results()
     {
-        $users = (new \Query\Search('users'))->search_users('сява');
+        $users = (new \Query\Search('users'))->searchUsers('сява');
 
         $this->assertEquals(1, count($users));
 

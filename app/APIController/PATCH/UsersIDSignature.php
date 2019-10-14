@@ -23,7 +23,7 @@ class UsersIDSignature extends \APIController\APIController
                 throw new \Exception('User "signature" property null must be a string', 0);
             }
 
-            $user = (new \Query\User())->user_with_API_key($api_key);
+            $user = (new \Query\User())->userWithAPIKey($api_key);
             $old_signature = $user->signature;
 
             if ($user->id != $user_ID) {

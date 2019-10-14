@@ -9,16 +9,16 @@ class Show extends \PageController\PageController
         $this->lang = $args['lang'];
         $this->username = $args['username'];
 
-        $this->user = (new \Query\User())->user_with_username($this->username);
+        $this->user = (new \Query\User())->userWithUsername($this->username);
         if (!$this->user) {
             return (new \PageController\Error\UserNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->revisions = (new \Query\Revisions($this->lang))->find_revisions_for_user_with_ID($this->user->id);
+        $this->revisions = (new \Query\Revisions($this->lang))->findRevisionsForUserWithID($this->user->id);
 
         $this->questions = [];
         foreach ($this->revisions as &$revision) {
-            $this->questions[] = (new \Query\Question($this->lang))->question_with_ID($revision->answerID);
+            $this->questions[] = (new \Query\Question($this->lang))->questionWithID($revision->answerID);
         }
 
         $this->_prepare_follow_button();
@@ -26,13 +26,13 @@ class Show extends \PageController\PageController
         $this->template = 'user';
         $this->pageTitle = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
         $this->pageDescription = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
-        $this->canonicalURL = $this->user->get_URL($this->lang);
+        $this->canonicalURL = $this->user->getURL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 
         $this->share_link['title'] = $this->user->name;
         $this->share_link['description'] = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
-        $this->share_link['url'] = $this->user->get_URL($this->lang);
+        $this->share_link['url'] = $this->user->getURL($this->lang);
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
         // prepare 'logout' button
@@ -55,7 +55,7 @@ class Show extends \PageController\PageController
             $authUserID = $this->authUser->id;
             $followedUserID = $this->user->id;
 
-            $relation = (new \Query\Relations\UsersFollowUsers($this->lang))->relation_with_user_ID_and_followed_user_ID($authUserID, $followedUserID);
+            $relation = (new \Query\Relations\UsersFollowUsers($this->lang))->relationWithUserIDAndFollowedUserID($authUserID, $followedUserID);
 
             $this->followed = $relation ? true : false;
             $this->includeJS[] = 'user/follow';
@@ -65,7 +65,7 @@ class Show extends \PageController\PageController
     protected function _get_open_graph()
     {
         $og = [
-            'url'         => $this->user->get_URL($this->lang),
+            'url'         => $this->user->getURL($this->lang),
             'type'        => 'website',
             'title'       => $this->user->name,
             'description' => $this->user->name . ' ' . __('page_user.answers_on_answeropedia'),

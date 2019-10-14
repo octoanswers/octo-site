@@ -7,15 +7,15 @@
 
 		<?php foreach ($this->related_questions as $question) : ?>
 			<div class="my-2">
-				<a class="semi-small text-decoration-none" href="<?= $question->get_URL($this->lang) ?>">
+				<a class="semi-small text-decoration-none" href="<?= $question->getURL($this->lang) ?>">
 					<?= $question->title ?>
 				</a>
 				<!-- <div class="small text-secondary">
-					<?= __('page_question.answer_updated') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+					<?= __('page_question.answer_updated') ?> <?= \Humanizer\DateTime::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
 
 					<?php if (strlen($question->answer->text) == 0) : ?>
 						<span class="mx-1 text-dark font-weight-bold">&middot;</span>
-						<a rel="nofollow" href="<?= $question->get_edit_URL($this->lang) ?>">
+						<a rel="nofollow" href="<?= $question->getEditURL($this->lang) ?>">
 							<?= __('Write first answer') ?>
 						</a>
 					<?php endif; ?>

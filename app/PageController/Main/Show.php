@@ -26,7 +26,7 @@ class Show extends \PageController\PageController
         $this->template = 'main';
         $this->pageTitle = __('common.answeropedia') . ' – ' . __('page_main.slogan');
         $this->pageDescription = __('page_main.description');
-        $this->canonicalURL = \Helper\URL\Page::get_main_URL($this->lang);
+        $this->canonicalURL = \Helper\URL\Page::getMainURL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 
@@ -47,13 +47,13 @@ class Show extends \PageController\PageController
     {
         $top_questions = [];
 
-        $questions = (new \Query\Questions($this->lang))->find_newest_with_answer(1, 5);
+        $questions = (new \Query\Questions($this->lang))->findNewestWithAnswer(1, 5);
 
         foreach ($questions as $question) {
-            $contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
-            $last_contributor = (new \Query\Contributor($this->lang))->find_answer_last_editor($question->id);
+            $contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
+            $last_contributor = (new \Query\Contributor($this->lang))->findAnswerLastEditor($question->id);
 
-            $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
+            $categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question->id);
             if (count($categories) > 2) {
                 $categories = array_slice($categories, 0, 2);
             }
@@ -87,7 +87,7 @@ class Show extends \PageController\PageController
     {
         try {
             $about_answeropedia_question_ID = (int) __('service_id.about_answeropedia');
-            $about_answeropedia_question = (new \Query\Question($this->lang))->question_with_ID($about_answeropedia_question_ID);
+            $about_answeropedia_question = (new \Query\Question($this->lang))->questionWithID($about_answeropedia_question_ID);
         } catch (\Throwable $e) {
             $about_answeropedia_question = null;
         }

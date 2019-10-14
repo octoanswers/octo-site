@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Contributors\find_answer_contributors;
+namespace Test\Query\Contributors\findAnswerContributors;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Contributors_exists()
     {
-        $contributors = (new \Query\Contributors('ru'))->find_answer_contributors(4);
+        $contributors = (new \Query\Contributors('ru'))->findAnswerContributors(4);
 
         $this->assertEquals(4, $contributors[0]->id);
         $this->assertEquals('Известный писатель', $contributors[0]->signature);
@@ -27,7 +27,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Contributors_not_exists()
     {
-        $contributors = (new \Query\Contributors('ru'))->find_answer_contributors(28);
+        $contributors = (new \Query\Contributors('ru'))->findAnswerContributors(28);
 
         $this->assertEquals(0, count($contributors));
     }

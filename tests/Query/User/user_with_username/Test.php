@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\User\user_with_username;
+namespace Test\Query\User\userWithUsername;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Base()
     {
-        $user = (new \Query\User())->user_with_username('sasha');
+        $user = (new \Query\User())->userWithUsername('sasha');
 
         $this->assertEquals(4, $user->id);
         $this->assertEquals('sasha', $user->username);

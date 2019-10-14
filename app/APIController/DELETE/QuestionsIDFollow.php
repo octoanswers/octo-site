@@ -20,11 +20,11 @@ class QuestionsIDFollow extends \APIController\APIController
             // Validate params
             //
 
-            $user = (new \Query\User())->user_with_API_key($api_key);
+            $user = (new \Query\User())->userWithAPIKey($api_key);
 
-            $question = (new \Query\Question($this->lang))->question_with_ID($question_ID);
+            $question = (new \Query\Question($this->lang))->questionWithID($question_ID);
 
-            $relation = (new \Query\Relations\UsersFollowQuestions($this->lang))->relation_with_user_ID_and_question_ID($user->id, $question_ID);
+            $relation = (new \Query\Relations\UsersFollowQuestions($this->lang))->relationWithUserIDAndQuestionID($user->id, $question_ID);
             if (!$relation) {
                 throw new \Exception('User with ID "' . $user->id . '" not followed question with ID "' . $question_ID . '"', 0);
             }

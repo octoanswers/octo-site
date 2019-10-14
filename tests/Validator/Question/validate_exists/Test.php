@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Question\validate_exists;
+namespace Test\Validator\Question\validateExists;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -11,7 +11,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $question->title = 'How iPhone 8 are charged?';
         $question->isRedirect = true;
 
-        $this->assertEquals(true, \Validator\Question::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validateExists($question));
     }
 
     public function test__Exists_question_with_min_params()
@@ -20,6 +20,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $question->id = 13;
         $question->title = 'How iPhone 8 are charged?';
 
-        $this->assertEquals(true, \Validator\Question::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validateExists($question));
     }
 }

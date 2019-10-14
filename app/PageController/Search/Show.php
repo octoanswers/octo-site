@@ -43,11 +43,11 @@ class Show extends \PageController\PageController
     private function _get_search_results(): void
     {
         if ($this->list == self::LIST_CATEGORIES) {
-            $this->categories = $this->query ? (new \Query\Search($this->lang))->search_categories($this->query) : [];
+            $this->categories = $this->query ? (new \Query\Search($this->lang))->searchCategories($this->query) : [];
         } elseif ($this->list == self::LIST_USERS) {
-            $this->users = $this->query ? (new \Query\Search($this->lang))->search_users($this->query) : [];
+            $this->users = $this->query ? (new \Query\Search($this->lang))->searchUsers($this->query) : [];
         } else {
-            $this->questions = $this->query ? (new \Query\Search($this->lang))->search_questions($this->query) : [];
+            $this->questions = $this->query ? (new \Query\Search($this->lang))->searchQuestions($this->query) : [];
         }
     }
 

@@ -6,12 +6,12 @@ class Sandbox extends \Query\Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
 
-    public function find_newest_without_answer($page = 1, $perPage = 10): array
+    public function findNewestWithoutAnswer($page = 1, $perPage = 10): array
     {
         \Validator\QuestionsList::validatePage($page);
         \Validator\QuestionsList::validatePerPage($perPage);
 
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
 
         $offset = $perPage * ($page - 1);
 
@@ -28,18 +28,18 @@ class Sandbox extends \Query\Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = \Model\Question::init_with_DB_state($row);
+            $questions[] = \Model\Question::initWithDBState($row);
         }
 
         return $questions;
     }
 
-    public function questions_without_categories($page = 1, $perPage = 10): array
+    public function questionsWithoutCategories($page = 1, $perPage = 10): array
     {
         \Validator\QuestionsList::validatePage($page);
         \Validator\QuestionsList::validatePerPage($perPage);
 
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
 
         $offset = $perPage * ($page - 1);
 
@@ -58,7 +58,7 @@ class Sandbox extends \Query\Query
 
         $questions = [];
         foreach ($rows as $row) {
-            $questions[] = \Model\Question::init_with_DB_state($row);
+            $questions[] = \Model\Question::initWithDBState($row);
         }
 
         return $questions;

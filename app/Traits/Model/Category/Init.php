@@ -4,7 +4,7 @@ namespace Traits\Model\Category;
 
 trait Init
 {
-    public static function init_with_title(string $title): self
+    public static function initWithTitle(string $title): self
     {
         $category = new self();
         $category->title = $title;
@@ -12,7 +12,7 @@ trait Init
         return $category;
     }
 
-    public static function init_with_DB_state(array $state): self
+    public static function initWithDBState(array $state): self
     {
         if (!isset($state['c_id']) || !isset($state['c_title'])) {
             throw new \Exception('Category init with empty state', 1);

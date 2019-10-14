@@ -15,20 +15,20 @@ class QuestionsIDSubscribe extends \APIController\APIController
 
             $post_params = $request->getParsedBody();
             $email = (string) $post_params['email'];
-            $is_send_email = $post_params['no_email'] ? false : true;
+            $is_sendEmail = $post_params['no_email'] ? false : true;
 
             //
             // Validate params
             //
 
-            $question = (new \Query\Question($this->lang))->question_with_ID($question_id);
+            $question = (new \Query\Question($this->lang))->questionWithID($question_id);
             \Validator\User::validateEmail($email); // @TODO Need?
 
             //
             // Check already subscribed
             //
 
-            $s = (new \Query\Subscriptions($this->lang))->find_with_question_ID_and_email($question_id, $email);
+            $s = (new \Query\Subscriptions($this->lang))->findWithQuestionIDAndEmail($question_id, $email);
             if ($s != null) {
                 throw new \Exception('Email "' . $email . '" already subscribed to question with ID ' . $question_id, 0);
             }
@@ -46,7 +46,7 @@ class QuestionsIDSubscribe extends \APIController\APIController
             // Send email
             //
 
-            if ($is_send_email) {
+            if ($is_sendEmail) {
                 $mailer = new \Helper\Mailer\Subscription();
                 $mailer->sendEmail($email, $question);
             }
@@ -55,7 +55,7 @@ class QuestionsIDSubscribe extends \APIController\APIController
                 'lang'               => $this->lang,
                 'question_id'        => $question->id,
                 'question_title'     => $question->title,
-                'question_url'       => $question->get_URL($this->lang),
+                'question_url'       => $question->getURL($this->lang),
                 'subscription_id'    => $subscription->id,
                 'subscription_email' => $subscription->email,
             ];

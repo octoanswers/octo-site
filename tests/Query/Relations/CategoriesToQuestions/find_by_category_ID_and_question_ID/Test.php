@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Relations\CategoriesToQuestions\find_by_category_ID_and_question_ID;
+namespace Test\Query\Relations\CategoriesToQuestions\findByCategoryIDAndQuestionID;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Relation_exists()
     {
-        $er = (new \Query\Relations\CategoriesToQuestions('ru'))->find_by_category_ID_and_question_ID(58, 19);
+        $er = (new \Query\Relations\CategoriesToQuestions('ru'))->findByCategoryIDAndQuestionID(58, 19);
 
         $this->assertEquals(14, $er->id);
         $this->assertEquals(58, $er->categoryID);
@@ -17,7 +17,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Relation_not_exists()
     {
-        $er = (new \Query\Relations\CategoriesToQuestions('ru'))->find_by_category_ID_and_question_ID(3, 33);
+        $er = (new \Query\Relations\CategoriesToQuestions('ru'))->findByCategoryIDAndQuestionID(3, 33);
 
         $this->assertEquals(null, $er);
     }

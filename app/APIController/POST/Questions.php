@@ -15,13 +15,13 @@ class Questions extends \APIController\APIController
             $post_params = $request->getParsedBody();
             $title = htmlspecialchars((string) $post_params['title']);
 
-            $question = \Model\Question::init_with_title($title);
+            $question = \Model\Question::initWithTitle($title);
 
             try {
                 $question = (new \Mapper\Question($this->lang))->create($question);
             } catch (\Exception $e) {
                 if ($e->getCode() == 23000) {
-                    $question = (new \Query\Question($this->lang))->question_with_title($title);
+                    $question = (new \Query\Question($this->lang))->questionWithTitle($title);
                 }
             }
 
@@ -38,7 +38,7 @@ class Questions extends \APIController\APIController
                 'lang'  => $this->lang,
                 'id'    => $question->id,
                 'title' => $question->title,
-                'url'   => $question->get_URL($this->lang),
+                'url'   => $question->getURL($this->lang),
             ];
         } catch (\Throwable $e) {
             $output = [

@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Create_with_full_params()
     {
-        $question = \Model\Question::init_with_title('Когда закончится дождь?');
+        $question = \Model\Question::initWithTitle('Когда закончится дождь?');
 
         $answer = new \Model\Answer();
         $answer->text = 'Melody of my life.';
@@ -18,7 +18,7 @@ class Test extends \Test\TestCase\DB
         $user->name = 'Boris Bro';
         $user->email = 'steve@aw.org';
 
-        $revision = \Model\Revision::init_with_DB_state([
+        $revision = \Model\Revision::initWithDBState([
             'rev_id'         => 13,
             'rev_answer_id'  => 11,
             'rev_opcodes'    => 'opCodes',

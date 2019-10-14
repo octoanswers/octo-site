@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Relation\UserFollowCategory\validate_exists;
+namespace Test\Validator\Relation\UserFollowCategory\validateExists;
 
 class IDTest extends \PHPUnit\Framework\TestCase
 {
@@ -12,7 +12,7 @@ class IDTest extends \PHPUnit\Framework\TestCase
         $relation->categoryID = 9;
 
         $this->expectExceptionMessage('UserFollowCategory relation "id" property 0 must be greater than or equal to 1');
-        \Validator\Relation\UserFollowCategory::validate_exists($relation);
+        \Validator\Relation\UserFollowCategory::validateExists($relation);
     }
 
     public function test__ID_below_zero()
@@ -23,6 +23,6 @@ class IDTest extends \PHPUnit\Framework\TestCase
         $relation->categoryID = 9;
 
         $this->expectExceptionMessage('UserFollowCategory relation "id" property -1 must be greater than or equal to 1');
-        \Validator\Relation\UserFollowCategory::validate_exists($relation);
+        \Validator\Relation\UserFollowCategory::validateExists($relation);
     }
 }

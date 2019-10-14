@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Answers\answer_with_ID;
+namespace Test\Query\Answers\answerWithID;
 
 class RuTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__Question_with_answer()
     {
-        $answer = (new \Query\Answers('ru'))->answer_with_ID(6);
+        $answer = (new \Query\Answers('ru'))->answerWithID(6);
 
         $this->assertEquals(6, $answer->id);
         $this->assertEquals('Птицы не помечают свою территорию.', $answer->text);

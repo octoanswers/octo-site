@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Contributor\find_answer_last_editor;
+namespace Test\Query\Contributor\findAnswerLastEditor;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,14 +8,14 @@ class Test extends \Test\TestCase\DB
 
     public function test__Base()
     {
-        $user = (new \Query\Contributor('ru'))->find_answer_last_editor(4);
+        $user = (new \Query\Contributor('ru'))->findAnswerLastEditor(4);
 
         $this->assertEquals(4, $user->id);
     }
 
     public function test__Contributor_not_exists()
     {
-        $user = (new \Query\Contributor('ru'))->find_answer_last_editor(7);
+        $user = (new \Query\Contributor('ru'))->findAnswerLastEditor(7);
 
         $this->assertEquals(null, $user);
     }

@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function test_FullParams()
     {
-        $user = \Model\User::init_with_DB_state([
+        $user = \Model\User::initWithDBState([
             'u_id'            => 13,
             'u_username'      => 'steve',
             'u_name'          => 'Steve Bo',
@@ -31,7 +31,7 @@ class Test extends \PHPUnit\Framework\TestCase
 
     public function test_MinParams()
     {
-        $user = \Model\User::init_with_DB_state([
+        $user = \Model\User::initWithDBState([
             'u_id'         => 13,
             'u_username'   => 'steve',
             'u_name'       => 'Steve Bo',

@@ -6,9 +6,9 @@ class QuestionsCount extends \Query\Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
 
-    public function questions_last_ID(): int
+    public function questionsLastID(): int
     {
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT MAX(q_id) FROM questions');
         if (!$stmt->execute()) {
@@ -25,9 +25,9 @@ class QuestionsCount extends \Query\Query
         return (int) $result['MAX(q_id)'];
     }
 
-    public function count_questions_without_answers(): int
+    public function countQuestionsWithoutAnswers(): int
     {
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT COUNT(*) AS questionsCount FROM questions WHERE a_text IS NULL AND q_is_redirect = 0');
         if (!$stmt->execute()) {
@@ -44,9 +44,9 @@ class QuestionsCount extends \Query\Query
         return (int) $result['questionsCount'];
     }
 
-    public function count_questions_with_answers(): int
+    public function countQuestionsWithAnswers(): int
     {
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT COUNT(*) AS questionsCount FROM questions WHERE a_len > 0 AND q_is_redirect = 0');
         if (!$stmt->execute()) {

@@ -19,11 +19,11 @@ class QuestionsIDRename extends \APIController\APIController
 
             // Validate params
 
-            $user = (new \Query\User())->user_with_API_key($api_key);
+            $user = (new \Query\User())->userWithAPIKey($api_key);
 
             // change question title
 
-            $question = (new \Query\Question($this->lang))->question_with_ID($question_ID);
+            $question = (new \Query\Question($this->lang))->questionWithID($question_ID);
             $old_title = $question->title;
             $question->title = $question_new_title;
             $question = (new \Mapper\Question($this->lang))->update($question);
@@ -66,7 +66,7 @@ class QuestionsIDRename extends \APIController\APIController
                     'id'        => $question->id,
                     'old_title' => $old_title,
                     'new_title' => $question->title,
-                    'url'       => $question->get_URL($this->lang),
+                    'url'       => $question->getURL($this->lang),
                 ],
                 'user' => [
                     'id'   => $user->id,

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Traits\Model\User\URL\get_avatar_URL_large;
+namespace Test\Traits\Model\User\URL\getAvatarURLLarge;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -10,7 +10,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $user->id = 13;
         $user->name = 'Sasha';
 
-        $this->assertEquals('https://avatars.answeropedia.org/avatars/user.png?size=400&name=Sasha', $user->get_avatar_URL_large());
+        $this->assertEquals('https://avatars.answeropedia.org/avatars/user.png?size=400&name=Sasha', $user->getAvatarURLLarge());
     }
 
     public function test__Avatar_uploaded()
@@ -20,6 +20,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $user->name = 'Sasha';
         $user->is_avatar_uploaded = true;
 
-        $this->assertEquals('https://answeropedia.org/uploads/avatar/13_400.jpg', $user->get_avatar_URL_large());
+        $this->assertEquals('https://answeropedia.org/uploads/avatar/13_400.jpg', $user->getAvatarURLLarge());
     }
 }

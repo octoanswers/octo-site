@@ -2,7 +2,7 @@
 <?php if ($this->authUser && ($this->authUser->id == $this->user->id) && ($this->user->name == $this->user->username)) : ?>
     <div class="alert alert-warning mb-3" role="alert">
         <p class="mb-2 semi-small"><?= __('page_user.alert__name.msg') ?></p>
-        <a class="btn btn-sm btn-warning" href="<?= \Helper\URL\Settings::get_settings_URL($this->lang) ?>" role="button">
+        <a class="btn btn-sm btn-warning" href="<?= \Helper\URL\Settings::getSettingsURL($this->lang) ?>" role="button">
             <?= __('page_user.alert__name.action') ?>
         </a>
     </div>
@@ -13,7 +13,7 @@
 <?php if ($this->authUser && ($this->authUser->id == $this->user->id) && !$this->user->signature) : ?>
     <div class="alert alert-warning mb-3" role="alert">
         <p class="mb-2 small"><?= __('page_user.alert__signature.msg') ?></p>
-        <a class="btn btn-sm btn-block btn-warning" href="<?= \Helper\URL\Settings::get_settings_URL($this->lang) ?>" role="button">
+        <a class="btn btn-sm btn-block btn-warning" href="<?= \Helper\URL\Settings::getSettingsURL($this->lang) ?>" role="button">
             <?= __('page_user.alert__signature.action') ?>
         </a>
     </div>

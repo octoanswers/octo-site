@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Subscription\validate_new;
+namespace Test\Validator\Subscription\validateNew;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -11,7 +11,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $s->email = 'loz@ba.com';
         $s->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, \Validator\Subscription::validate_new($s));
+        $this->assertEquals(true, \Validator\Subscription::validateNew($s));
     }
 
     public function test__Min_params()
@@ -20,6 +20,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $s->questionID = 9;
         $s->email = 'loz@ba.com';
 
-        $this->assertEquals(true, \Validator\Subscription::validate_new($s));
+        $this->assertEquals(true, \Validator\Subscription::validateNew($s));
     }
 }

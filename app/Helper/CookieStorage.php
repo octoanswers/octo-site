@@ -6,7 +6,7 @@ class CookieStorage
 {
     protected static $authUser = null;
 
-    public function get_auth_user()
+    public function getAuthUser()
     {
         if (static::$authUser) {
             return static::$authUser;
@@ -14,7 +14,7 @@ class CookieStorage
 
         if (isset($_COOKIE['u_id'])) {
             try {
-                static::$authUser = \Model\User::init_with_DB_state([
+                static::$authUser = \Model\User::initWithDBState([
                     'u_id'                  => $_COOKIE['u_id'],
                     'u_username'            => $_COOKIE['u_username'],
                     'u_name'                => $_COOKIE['u_name'],
@@ -40,9 +40,9 @@ class CookieStorage
         }
     }
 
-    public function save_user(\Model\User $user)
+    public function saveUser(\Model\User $user)
     {
-        $expire_time = $this->_get_expire_time();
+        $expire_time = $this->_getExpireTime();
 
         @setcookie('u_id', $user->id, $expire_time, '/');
         @setcookie('u_username', $user->username, $expire_time, '/');
@@ -62,14 +62,14 @@ class CookieStorage
         static::$authUser = $user;
     }
 
-    public function set_lang(string $lang)
+    public function setLang(string $lang)
     {
-        @setcookie('lang', $lang, $this->_get_expire_time(), '/');
+        @setcookie('lang', $lang, $this->_getExpireTime(), '/');
     }
 
     public function clear()
     {
-        $time_in_past = $this->_get_time_in_past();
+        $time_in_past = $this->_getTimeInPast();
 
         @setcookie('u_id', '', $time_in_past, '/');
         @setcookie('u_username', '', $time_in_past, '/');
@@ -94,12 +94,12 @@ class CookieStorage
         static::$authUser = null;
     }
 
-    private function _get_expire_time(): int
+    private function _getExpireTime(): int
     {
         return time() + (86400 * 30); // 86400 = 1 day
     }
 
-    private function _get_time_in_past(): int
+    private function _getTimeInPast(): int
     {
         return time() - 60;
     }

@@ -4,7 +4,7 @@ namespace Query\Relations;
 
 class UsersFollowCategories extends \Query\Query
 {
-    public function relation_with_user_ID_and_category_ID(int $userID, int $followedCategoryID)
+    public function relationWithUserIDAndCategoryID(int $userID, int $followedCategoryID)
     {
         $sql = 'SELECT * FROM er_users_follow_categories WHERE user_id=:user_id AND category_id=:category_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);
@@ -20,13 +20,13 @@ class UsersFollowCategories extends \Query\Query
             return;
         }
 
-        return \Model\Relation\UserFollowCategory::init_with_DB_state($row);
+        return \Model\Relation\UserFollowCategory::initWithDBState($row);
     }
 
     /**
      * List of categories that this specific user is following.
      */
-    public function find_categories_followed_by_user(int $userID)
+    public function findCategoriesFollowedByUser(int $userID)
     {
         $sql = 'SELECT category_id FROM er_users_follow_categories WHERE (user_id=:user_id)';
         $stmt = $this->pdo->prepare($sql);

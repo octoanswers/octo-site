@@ -16,12 +16,12 @@ class UpdateCategories extends \PageController\PageController
         $question_ID = $args['id'];
 
         try {
-            $this->question = (new \Query\Question($this->lang))->question_with_ID($question_ID);
+            $this->question = (new \Query\Question($this->lang))->questionWithID($question_ID);
         } catch (\Throwable $e) {
             return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question_ID);
+        $this->categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question_ID);
 
         $this->category_names = [];
         foreach ($this->categories as $category) {

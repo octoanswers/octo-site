@@ -4,7 +4,7 @@ namespace Query;
 
 class Flow extends \Query\Query
 {
-    public function find_flow(): array
+    public function findFlow(): array
     {
         $sql = 'SELECT * FROM activities ORDER BY id DESC LIMIT 10';
 

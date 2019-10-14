@@ -14,27 +14,27 @@ namespace Helper;
  */
 class Lang
 {
-    public static function get_supported_langs(): array
+    public static function getSupportedLangs(): array
     {
         return ['en', 'ru'];
     }
 
-    public static function get_default_lang(): string
+    public static function getDefaultLang(): string
     {
         return 'en';
     }
 
-    public static function get_lang_code_from_URI()
+    public static function getLangCodeFromURI()
     {
         $url = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
 
         $url_parts = explode('/', $url);
         $lang_code = $url_parts[1];
 
-        $supported_languages = self::get_supported_langs();
+        $supported_languages = self::getSupportedLangs();
 
         if (!in_array($lang_code, $supported_languages)) {
-            $lang_code = self::get_default_lang();
+            $lang_code = self::getDefaultLang();
         }
 
         return $lang_code;
@@ -58,7 +58,7 @@ class Lang
             }
 
             $cookieStorage = new \Helper\CookieStorage();
-            $cookieStorage->set_lang($lang);
+            $cookieStorage->setLang($lang);
 
             return $lang;
         }
@@ -81,7 +81,7 @@ class Lang
             }
 
             $cookieStorage = new \Helper\CookieStorage();
-            $cookieStorage->set_lang($lang);
+            $cookieStorage->setLang($lang);
 
             return $lang;
         }

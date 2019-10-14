@@ -4,7 +4,7 @@ namespace Query\Redirects;
 
 class Question extends \Query\Query
 {
-    public function redirect_for_question_with_ID(int $questionID): \Model\Redirect\Question
+    public function redirectForQuestionWithID(int $questionID): \Model\Redirect\Question
     {
         \Validator\Question::validateID($questionID);
 
@@ -21,6 +21,6 @@ class Question extends \Query\Query
             throw new \Exception('Redirect for question with ID "' . $questionID . '" not exists', 1);
         }
 
-        return \Model\Redirect\Question::init_with_DB_state($row);
+        return \Model\Redirect\Question::initWithDBState($row);
     }
 }

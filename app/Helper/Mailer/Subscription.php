@@ -11,6 +11,6 @@ class Subscription extends \Helper\Mailer\Mailer
         $message = '<p>Вы подписались на вопрос <a href="#">' . $question->title . '</a>.</p>';
         $message .= '<p>Социальная сеть вопросов и ответов, <a href="https://answeropedia.org">Answeropedia</a>:</p>';
 
-        $this->send_email($to_email, $subject, $message);
+        $this->sendTextEmail($to_email, $subject, $message);
     }
 }

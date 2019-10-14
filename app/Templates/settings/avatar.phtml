@@ -5,7 +5,7 @@
         <?= __('page_settings.avatar__title') ?>
     </div>
 
-    <img class="border rounded wh-80px mb-3" id="settings_pg__user_avatar" src="<?= $this->authUser->get_avatar_URL_medium() ?>" />
+    <img class="border rounded wh-80px mb-3" id="settings_pg__user_avatar" src="<?= $this->authUser->getAvatarURLMedium() ?>" />
 
     <form action="/api/v1/avatar.json" id="form__upload_avatar" method="POST" enctype="multipart/form-data">
         <div class="form-group mb-2">

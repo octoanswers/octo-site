@@ -4,7 +4,7 @@ namespace Traits\Model\Relation;
 
 trait UserFollowUser
 {
-    public static function init_with_user_ID_and_followed_user_ID(int $userID, int $followedUserID): self
+    public static function initWithUserIDAndFollowedUserID(int $userID, int $followedUserID): self
     {
         $er = new self();
         $er->userID = $userID;
@@ -13,7 +13,7 @@ trait UserFollowUser
         return $er;
     }
 
-    public static function init_with_DB_state(array $state): self
+    public static function initWithDBState(array $state): self
     {
         $er = new self();
 

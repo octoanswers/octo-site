@@ -17,10 +17,10 @@ class WithoutAnswers extends \PageController\PageController
         $this->lang = $args['lang'];
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
 
-        $this->questionsCount = (new \Query\QuestionsCount($this->lang))->count_questions_without_answers();
+        $this->questionsCount = (new \Query\QuestionsCount($this->lang))->countQuestionsWithoutAnswers();
 
         try {
-            $this->questions = (new \Query\Sandbox($this->lang))->find_newest_without_answer($this->page);
+            $this->questions = (new \Query\Sandbox($this->lang))->findNewestWithoutAnswer($this->page);
         } catch (\Exception $e) {
             return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -30,7 +30,7 @@ class WithoutAnswers extends \PageController\PageController
         $this->pageDescription = $this->_get_page_description();
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
-            $this->nextPageURL = \Helper\URL\Sandbox::get_without_answers_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Sandbox::getWithoutAnswersURL($this->lang, ($this->page + 1));
         }
 
         $this->list = 'without-answers';

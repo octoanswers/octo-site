@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Redirects\Question\redirect_for_question_with_ID;
+namespace Test\Query\Redirects\Question\redirectForQuestionWithID;
 
 class EnTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class EnTest extends \Test\TestCase\DB
 
     public function test__Redirect_exists()
     {
-        $redirect = (new \Query\Redirects\Question('en'))->redirect_for_question_with_ID(7);
+        $redirect = (new \Query\Redirects\Question('en'))->redirectForQuestionWithID(7);
 
         $this->assertEquals(7, $redirect->fromID);
         $this->assertEquals('How many showflakes in showrain?', $redirect->toTitle);
@@ -17,6 +17,6 @@ class EnTest extends \Test\TestCase\DB
     public function test__Redirect_not_exists()
     {
         $this->expectExceptionMessage('Redirect for question with ID "457" not exists');
-        $redirect = (new \Query\Redirects\Question('en'))->redirect_for_question_with_ID(457);
+        $redirect = (new \Query\Redirects\Question('en'))->redirectForQuestionWithID(457);
     }
 }

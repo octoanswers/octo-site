@@ -4,7 +4,7 @@ namespace Traits\Model\User;
 
 trait Signature
 {
-    public function get_short_signature(): string
+    public function getShortSignature(): string
     {
         $max_signature_len = 70;
 

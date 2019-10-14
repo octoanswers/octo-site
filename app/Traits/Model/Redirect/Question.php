@@ -4,7 +4,7 @@ namespace Traits\Model\Redirect;
 
 trait Question
 {
-    public static function init_with_DB_state(array $state): self
+    public static function initWithDBState(array $state): self
     {
         $redirect = new self();
         $redirect->fromID = (int) $state['rd_from'];

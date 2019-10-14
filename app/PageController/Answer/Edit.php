@@ -17,12 +17,12 @@ class Edit extends \PageController\PageController
         $answer_ID = $args['id'];
 
         try {
-            $this->question = (new \Query\Question($this->lang))->question_with_ID($answer_ID);
+            $this->question = (new \Query\Question($this->lang))->questionWithID($answer_ID);
         } catch (\Throwable $e) {
             return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->answer = (new \Query\Answers($this->lang))->answer_with_ID($this->question->id);
+        $this->answer = (new \Query\Answers($this->lang))->answerWithID($this->question->id);
 
         if ($this->answer == null) {
             $answer = new \Model\Answer();
@@ -52,7 +52,7 @@ class Edit extends \PageController\PageController
     {
         try {
             $how_to_edit_question_ID = (int) __('service_id.how_to_edit');
-            $how_to_edit_question = (new \Query\Question($this->lang))->question_with_ID($how_to_edit_question_ID);
+            $how_to_edit_question = (new \Query\Question($this->lang))->questionWithID($how_to_edit_question_ID);
         } catch (\Throwable $e) {
             $how_to_edit_question = null;
         }

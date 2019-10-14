@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Category\validate_new;
+namespace Test\Validator\Category\validateNew;
 
 class TitleTest extends \PHPUnit\Framework\TestCase
 {
@@ -9,7 +9,7 @@ class TitleTest extends \PHPUnit\Framework\TestCase
         $category = new \Model\Category();
 
         $this->expectExceptionMessage('Category title param null must be a string');
-        $this->assertEquals(true, \Validator\Category::validate_new($category));
+        $this->assertEquals(true, \Validator\Category::validateNew($category));
     }
 
     public function test__Exception_when_title_is_empty()
@@ -18,7 +18,7 @@ class TitleTest extends \PHPUnit\Framework\TestCase
         $category->title = '';
 
         $this->expectExceptionMessage('Category title param "" must have a length between 2 and 127');
-        $this->assertEquals(true, \Validator\Category::validate_new($category));
+        $this->assertEquals(true, \Validator\Category::validateNew($category));
     }
 
     public function test__Exception_when_title_too_long()
@@ -28,6 +28,6 @@ class TitleTest extends \PHPUnit\Framework\TestCase
         $category->title = 'title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title';
 
         $this->expectExceptionMessage('Category title param "title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title_42_title" must have a length between 2 and 127');
-        $this->assertEquals(true, \Validator\Category::validate_exists($category));
+        $this->assertEquals(true, \Validator\Category::validateExists($category));
     }
 }

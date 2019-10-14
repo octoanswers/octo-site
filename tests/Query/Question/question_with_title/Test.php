@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Question\question_with_title;
+namespace Test\Query\Question\questionWithTitle;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Question_with_answer()
     {
-        $question = (new \Query\Question('ru'))->question_with_title('Как птицы помечают свою территорию?');
+        $question = (new \Query\Question('ru'))->questionWithTitle('Как птицы помечают свою территорию?');
 
         $this->assertEquals(6, $question->id);
         $this->assertEquals('Как птицы помечают свою территорию?', $question->title);
@@ -17,7 +17,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Question_without_answer()
     {
-        $question = (new \Query\Question('ru'))->question_with_title('В чем драматизм человека?');
+        $question = (new \Query\Question('ru'))->questionWithTitle('В чем драматизм человека?');
 
         $this->assertEquals(5, $question->id);
         $this->assertEquals('В чем драматизм человека?', $question->title);

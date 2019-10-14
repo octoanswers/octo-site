@@ -6,7 +6,7 @@ class CategoriesToQuestions extends \Query\Query
 {
     const QUESTIONS_PER_PAGE = 10; // @TODO double
 
-    public function find_newest_for_category_with_ID(int $categoryID, int $page = 1, int $per_page = 10): array
+    public function findNewestForCategoryWithID(int $categoryID, int $page = 1, int $per_page = 10): array
     {
         \Validator\Relation\CategoryToQuestion::validateCategoryID($categoryID);
         \Validator\QuestionsList::validatePage($page);
@@ -28,13 +28,13 @@ class CategoriesToQuestions extends \Query\Query
 
         $ERs = [];
         foreach ($rows as $row) {
-            $ERs[] = \Model\Relation\CategoriesToQuestions::init_with_DB_state($row);
+            $ERs[] = \Model\Relation\CategoriesToQuestions::initWithDBState($row);
         }
 
         return $ERs;
     }
 
-    public function find_by_category_ID_and_question_ID(int $categoryID, int $question_id)
+    public function findByCategoryIDAndQuestionID(int $categoryID, int $question_id)
     {
         \Validator\Relation\CategoryToQuestion::validateCategoryID($categoryID);
         \Validator\Relation\CategoryToQuestion::validateQuestionID($question_id);
@@ -53,19 +53,19 @@ class CategoriesToQuestions extends \Query\Query
             return;
         }
 
-        return \Model\Relation\CategoriesToQuestions::init_with_DB_state($row);
+        return \Model\Relation\CategoriesToQuestions::initWithDBState($row);
     }
 
-    public function find_by_category_title_and_question_ID(string $category_title, int $question_id)
+    public function findByCategoryTitleAndQuestionID(string $category_title, int $question_id)
     {
-        \Validator\Category::validate_title($category_title);
+        \Validator\Category::validateTitle($category_title);
         \Validator\Relation\CategoryToQuestion::validateQuestionID($question_id);
 
-        $category = (new \Query\Category($this->lang))->find_with_title($category_title);
+        $category = (new \Query\Category($this->lang))->findWithTitle($category_title);
         if ($category === null) {
             return;
         }
 
-        return (new self($this->lang))->find_by_category_ID_and_question_ID($category->id, $question_id);
+        return (new self($this->lang))->findByCategoryIDAndQuestionID($category->id, $question_id);
     }
 }

@@ -4,7 +4,7 @@ namespace Traits\Model\Subscription;
 
 trait Init
 {
-    public static function init_with_DB_state(array $state): self
+    public static function initWithDBState(array $state): self
     {
         $s = new self();
         $s->id = $state['s_id'];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Revisions\last_revision_for_answer_with_ID;
+namespace Test\Query\Revisions\lastRevisionForAnswerWithID;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Revision_exists()
     {
-        $revision = (new \Query\Revisions('ru'))->last_revision_for_answer_with_ID(4);
+        $revision = (new \Query\Revisions('ru'))->lastRevisionForAnswerWithID(4);
 
         $this->assertEquals(4, $revision->id);
         $this->assertEquals(4, $revision->answerID);
@@ -20,7 +20,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Revision_not_exists()
     {
-        $revision = (new \Query\Revisions('ru'))->last_revision_for_answer_with_ID(17);
+        $revision = (new \Query\Revisions('ru'))->lastRevisionForAnswerWithID(17);
 
         $this->assertEquals(null, $revision);
     }

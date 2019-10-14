@@ -18,13 +18,13 @@ class All extends \PageController\PageController
         $this->list = 'newest';
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
 
-        $questionsCount = (new \Query\QuestionsCount($this->lang))->questions_last_ID();
+        $questionsCount = (new \Query\QuestionsCount($this->lang))->questionsLastID();
 
-        $this->questions = (new \Query\Questions($this->lang))->find_newest($this->page);
+        $this->questions = (new \Query\Questions($this->lang))->findNewest($this->page);
 
         foreach ($this->questions as $question) {
             if ($question->isRedirect) {
-                $redirect = (new \Query\Redirects\Question($this->lang))->redirect_for_question_with_ID($question->id);
+                $redirect = (new \Query\Redirects\Question($this->lang))->redirectForQuestionWithID($question->id);
                 $this->redirects[$question->id] = $redirect;
             }
         }
@@ -34,7 +34,7 @@ class All extends \PageController\PageController
         $this->pageDescription = $this->_get_page_description();
 
         if ($this->questions[9]->id > 1) {
-            $this->nextPageURL = \Helper\URL\Sandbox::get_all_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Sandbox::getAllURL($this->lang, ($this->page + 1));
         }
 
         $output = $this->render_page();

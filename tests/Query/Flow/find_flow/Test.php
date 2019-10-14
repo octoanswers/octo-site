@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Flow\find_flow;
+namespace Test\Query\Flow\findFlow;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__First_page()
     {
-        $activities = (new \Query\Flow('ru'))->find_flow();
+        $activities = (new \Query\Flow('ru'))->findFlow();
 
         $this->assertEquals(10, count($activities));
 

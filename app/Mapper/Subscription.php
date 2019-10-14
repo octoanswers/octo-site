@@ -6,7 +6,7 @@ class Subscription extends \Mapper\Mapper
 {
     public function create(\Model\Subscription $s): \Model\Subscription
     {
-        \Validator\Subscription::validate_new($s);
+        \Validator\Subscription::validateNew($s);
 
         $sql = 'INSERT INTO questions_subscriptions (s_email, s_question_id) VALUES (:s_email, :s_question_id)';
         $stmt = $this->pdo->prepare($sql);

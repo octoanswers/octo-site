@@ -4,7 +4,7 @@ namespace Traits\Model\Relation;
 
 trait UserFollowQuestion
 {
-    public static function init_with_user_ID_and_question_ID(int $userID, int $questionID): self
+    public static function initWithUserIDAndQuestionID(int $userID, int $questionID): self
     {
         $er = new self();
         $er->userID = $userID;
@@ -13,7 +13,7 @@ trait UserFollowQuestion
         return $er;
     }
 
-    public static function init_with_DB_state(array $state): self
+    public static function initWithDBState(array $state): self
     {
         $er = new self();
 

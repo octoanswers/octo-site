@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Relations\UsersFollowUsers\find_users_followed_by_user;
+namespace Test\Query\Relations\UsersFollowUsers\findUsersFollowedByUser;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Relation_exists()
     {
-        $followed = (new \Query\Relations\UsersFollowUsers('ru'))->find_users_followed_by_user(4);
+        $followed = (new \Query\Relations\UsersFollowUsers('ru'))->findUsersFollowedByUser(4);
 
         $this->assertEquals(1, $followed[0]);
         $this->assertEquals(5, $followed[1]);
@@ -19,7 +19,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Relation_not_exists()
     {
-        $followed = (new \Query\Relations\UsersFollowUsers('ru'))->find_users_followed_by_user(12);
+        $followed = (new \Query\Relations\UsersFollowUsers('ru'))->findUsersFollowedByUser(12);
 
         $this->assertEquals(0, count($followed));
     }

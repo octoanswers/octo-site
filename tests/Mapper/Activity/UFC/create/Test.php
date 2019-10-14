@@ -12,7 +12,7 @@ class Test extends \Test\TestCase\DB
         $user->id = 46;
         $user->name = 'Steve Bo';
 
-        $category = \Model\Category::init_with_title('tag10');
+        $category = \Model\Category::initWithTitle('tag10');
 
         $activity = new \Model\Activity();
         $activity->type = \Model\Activity::USER_FOLLOW_CATEGORY;

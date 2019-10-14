@@ -40,7 +40,7 @@ class Test extends \Test\TestCase\Frontend
 
         // Check real data changes
 
-        $question = (new \Query\Question('ru'))->question_with_ID(22);
+        $question = (new \Query\Question('ru'))->questionWithID(22);
 
         $this->assertEquals(22, $question->id);
         $this->assertEquals(2, $question->categoriesCount);

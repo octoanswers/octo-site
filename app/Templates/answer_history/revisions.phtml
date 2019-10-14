@@ -5,11 +5,11 @@
         <div class="border rounded bg-white p-2 my-4">
 
             <div class="media p-2 mb-3">
-                <a class="d-block wh-3 mr-3" href="<?= ($this->users[$i])->get_URL($this->lang) ?>">
-                    <img class="wh-3 mr-3 rounded" src="<?= ($this->users[$i])->get_avatar_URL_small() ?>">
+                <a class="d-block wh-3 mr-3" href="<?= ($this->users[$i])->getURL($this->lang) ?>">
+                    <img class="wh-3 mr-3 rounded" src="<?= ($this->users[$i])->getAvatarURLSmall() ?>">
                 </a>
                 <div class="media-body">
-                    <a class="h5 text-dark text-decoration-none" href="<?= ($this->users[$i])->get_URL($this->lang) ?>">
+                    <a class="h5 text-dark text-decoration-none" href="<?= ($this->users[$i])->getURL($this->lang) ?>">
                         <?= $this->users[$i]->name ?>
                     </a>
                     <div class="small text-black-50">
@@ -21,7 +21,7 @@
                             <?= __('page_answer_history.no_description_of_changes') ?>
                         <?php endif; ?>
                         <span class="text-dark font_weight_800">&middot;</span>
-                        <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $this->revisions[$i]->createdAt) ?>
+                        <?= \Humanizer\DateTime::humanizeTimestamp($this->lang, $this->revisions[$i]->createdAt) ?>
                     </div>
 
                 </div>

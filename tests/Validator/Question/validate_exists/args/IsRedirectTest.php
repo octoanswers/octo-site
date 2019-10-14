@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Question\validate_exists;
+namespace Test\Validator\Question\validateExists;
 
 class IsRedirectTest extends \PHPUnit\Framework\TestCase
 {
@@ -11,6 +11,6 @@ class IsRedirectTest extends \PHPUnit\Framework\TestCase
         $question->title = 'How iPhone 8 are charged?';
 
         $this->assertEquals(false, $question->isRedirect);
-        $this->assertEquals(true, \Validator\Question::validate_exists($question));
+        $this->assertEquals(true, \Validator\Question::validateExists($question));
     }
 }

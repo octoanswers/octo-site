@@ -6,7 +6,7 @@ class User extends \Mapper\Mapper
 {
     public function __construct()
     {
-        $this->pdo = \Helper\PDOFactory::get_connection_to_users_DB();
+        $this->pdo = \Helper\PDOFactory::getConnectionToUsersDB();
     }
 
     public function __destruct()
@@ -16,7 +16,7 @@ class User extends \Mapper\Mapper
 
     public function create(\Model\User $user): \Model\User
     {
-        \Validator\User::validate_new($user);
+        \Validator\User::validateNew($user);
 
         $sql = 'INSERT INTO users (u_username, u_name, u_email, u_signature, u_site, u_password_hash, u_api_key) VALUES (:u_username, :u_name, :u_email, :u_signature, :u_site, :u_password_hash, :u_api_key)';
         $stmt = $this->pdo->prepare($sql);
@@ -48,10 +48,10 @@ class User extends \Mapper\Mapper
 
     public function update(\Model\User $user): \Model\User
     {
-        \Validator\User::validate_exists($user);
+        \Validator\User::validateExists($user);
 
         // Throw exception, if user not exists
-        (new \Query\User())->user_with_ID($user->id);
+        (new \Query\User())->userWithID($user->id);
 
         $sql = 'UPDATE users SET u_username=:u_username, u_name=:u_name, u_email=:u_email, u_signature=:u_signature, u_site=:u_site, u_password_hash=:u_password_hash, u_api_key=:u_api_key, is_avatar_uploaded=:is_avatar_uploaded WHERE u_id=:u_id';
         $stmt = $this->pdo->prepare($sql);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Traits\Model\Question\URL\get_history_URL;
+namespace Test\Traits\Model\Question\URL\getHistoryURL;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -9,7 +9,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $question = new \Model\Question();
         $question->id = 12;
 
-        $this->assertEquals('https://answeropedia.org/en/answer/12/history', $question->get_history_URL('en'));
+        $this->assertEquals('https://answeropedia.org/en/answer/12/history', $question->getHistoryURL('en'));
     }
 
     public function test__RU_history_URL()
@@ -17,6 +17,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $question = new \Model\Question();
         $question->id = 7;
 
-        $this->assertEquals('https://answeropedia.org/ru/answer/7/history', $question->get_history_URL('ru'));
+        $this->assertEquals('https://answeropedia.org/ru/answer/7/history', $question->getHistoryURL('ru'));
     }
 }

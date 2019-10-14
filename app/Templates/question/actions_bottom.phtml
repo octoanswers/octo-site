@@ -3,7 +3,7 @@
 
     <!-- edit answer -->
     <?php if ($this->authUser) : ?>
-        <a class="btn btn-sm btn-outline-gray mt-2 mr-2" href="<?= $this->question->get_edit_URL($this->lang) ?>">
+        <a class="btn btn-sm btn-outline-gray mt-2 mr-2" href="<?= $this->question->getEditURL($this->lang) ?>">
             <i class="material-icons md-14">edit</i>
             <?= __('page_question.actions_top.edit_answer') ?>
         </a>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\User\validate_exists;
+namespace Test\Validator\User\validateExists;
 
 class EmailTest extends \PHPUnit\Framework\TestCase
 {
@@ -12,7 +12,7 @@ class EmailTest extends \PHPUnit\Framework\TestCase
         $user->name = 'Boris Bro';
 
         $this->expectExceptionMessage('User "email" property null must be a string');
-        $this->assertEquals(true, \Validator\User::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validateExists($user));
     }
 
     public function test__Incorrect_email()
@@ -24,6 +24,6 @@ class EmailTest extends \PHPUnit\Framework\TestCase
         $user->email = 'steve_answeropedia.org';
 
         $this->expectExceptionMessage('User "email" property "steve_answeropedia.org" must be valid email');
-        $this->assertEquals(true, \Validator\User::validate_exists($user));
+        $this->assertEquals(true, \Validator\User::validateExists($user));
     }
 }

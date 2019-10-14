@@ -11,15 +11,15 @@ class CategoryToQuestion
     // Model validator
     //
 
-    public static function validate_exists(\Model\Relation\CategoriesToQuestions $rel)
+    public static function validateExists(\Model\Relation\CategoriesToQuestions $rel)
     {
         self::validateID($rel->id);
-        self::validate_new($rel);
+        self::validateNew($rel);
 
         return true;
     }
 
-    public static function validate_new(\Model\Relation\CategoriesToQuestions $rel)
+    public static function validateNew(\Model\Relation\CategoriesToQuestions $rel)
     {
         self::validateCategoryID($rel->categoryID);
         self::validateQuestionID($rel->questionID);

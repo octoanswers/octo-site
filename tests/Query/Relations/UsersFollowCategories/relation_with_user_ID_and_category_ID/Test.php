@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Relations\UsersFollowCategories\relation_with_user_ID_and_category_ID;
+namespace Test\Query\Relations\UsersFollowCategories\relationWithUserIDAndCategoryID;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Relation_exists()
     {
-        $relation = (new \Query\Relations\UsersFollowCategories('ru'))->relation_with_user_ID_and_category_ID(2, 16);
+        $relation = (new \Query\Relations\UsersFollowCategories('ru'))->relationWithUserIDAndCategoryID(2, 16);
 
         $this->assertEquals(6, $relation->id);
         $this->assertEquals(2, $relation->userID);
@@ -18,7 +18,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Relation_not_exists()
     {
-        $relation = (new \Query\Relations\UsersFollowCategories('ru'))->relation_with_user_ID_and_category_ID(3, 99);
+        $relation = (new \Query\Relations\UsersFollowCategories('ru'))->relationWithUserIDAndCategoryID(3, 99);
 
         $this->assertEquals(null, $relation);
     }

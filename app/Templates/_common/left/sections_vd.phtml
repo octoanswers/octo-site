@@ -5,26 +5,26 @@
 <ul class="list-unstyled semi-small mb-0">
 
     <li class="my-2">
-        <a href="<?= \Helper\URL\Questions::get_newest_URL($view_data->lang) ?>" class="text-dark text-decoration-none">
+        <a href="<?= \Helper\URL\Questions::getNewestURL($view_data->lang) ?>" class="text-dark text-decoration-none">
             <?= __('common.sections.questions') ?>
         </a>
     </li>
 
     <li class="my-2">
-        <a href="<?= \Helper\URL\Categories::get_newest_URL($view_data->lang) ?>" class="text-dark text-decoration-none">
+        <a href="<?= \Helper\URL\Categories::getNewestURL($view_data->lang) ?>" class="text-dark text-decoration-none">
             <?= __('common.sections.popular_categories') ?>
         </a>
     </li>
 
     <li class="my-2">
-        <a href="<?= \Helper\URL\Sandbox::get_without_answers_URL($view_data->lang) ?>" class="text-dark text-decoration-none">
+        <a href="<?= \Helper\URL\Sandbox::getWithoutAnswersURL($view_data->lang) ?>" class="text-dark text-decoration-none">
             <?= __('common.sections.sandbox') ?>
             <!-- <i class="material-icons md-18">outlined_flag</i> -->
         </a>
     </li>
 
     <li class="my-2">
-        <a href="<?= \Helper\URL\Page::get_flow_URL($view_data->lang) ?>" class="text-dark text-decoration-none">
+        <a href="<?= \Helper\URL\Page::getFlowURL($view_data->lang) ?>" class="text-dark text-decoration-none">
             <?= __('common.sections.recent_changes') ?>
         </a>
     </li>

@@ -11,7 +11,7 @@ class Lang extends \PageController\PageController
     {
         $this->lang = $args['lang'];
 
-        $questions = (new \Query\Questions($this->lang))->find_newest(self::PAGE, self::QUESTIONS_PER_PAGE);
+        $questions = (new \Query\Questions($this->lang))->findNewest(self::PAGE, self::QUESTIONS_PER_PAGE);
 
         $output = '';
         $output .= '<?xml version="1.0" encoding="UTF-8"?>';
@@ -19,7 +19,7 @@ class Lang extends \PageController\PageController
 
         foreach ($questions as $question) {
             $output .= '<url>';
-            $output .= '<loc>' . $question->get_URL($this->lang) . '</loc>';
+            $output .= '<loc>' . $question->getURL($this->lang) . '</loc>';
             $output .= '</url>';
         }
 

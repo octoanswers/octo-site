@@ -4,7 +4,7 @@ namespace Query;
 
 class Subscriptions extends \Query\Query
 {
-    public function find_with_question_ID_and_email(int $question_id, string $email)
+    public function findWithQuestionIDAndEmail(int $question_id, string $email)
     {
         \Validator\Question::validateID($question_id);
         \Validator\User::validateEmail($email);
@@ -23,6 +23,6 @@ class Subscriptions extends \Query\Query
             return;
         }
 
-        return \Model\Subscription::init_with_DB_state($row);
+        return \Model\Subscription::initWithDBState($row);
     }
 }

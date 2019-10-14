@@ -6,7 +6,7 @@ class CategoryToQuestion extends \Mapper\Mapper
 {
     public function create(\Model\Relation\CategoriesToQuestions $er): \Model\Relation\CategoriesToQuestions
     {
-        \Validator\Relation\CategoryToQuestion::validate_new($er);
+        \Validator\Relation\CategoryToQuestion::validateNew($er);
 
         $sql = 'INSERT INTO er_categories_questions (er_category_id, er_question_id) VALUES (:er_category_id, :er_question_id)';
         $stmt = $this->pdo->prepare($sql);

@@ -1,12 +1,12 @@
 <?php
 
-namespace Test\Traits\Model\Relation\CategoriesToQuestions\init_with_category_ID_and_question_ID;
+namespace Test\Traits\Model\Relation\CategoriesToQuestions\initWithCategoryIDAndQuestionID;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__BaseParams()
     {
-        $rel = \Model\Relation\CategoriesToQuestions::init_with_category_ID_and_question_ID(3, 9);
+        $rel = \Model\Relation\CategoriesToQuestions::initWithCategoryIDAndQuestionID(3, 9);
 
         $this->assertEquals(null, $rel->id);
         $this->assertEquals(3, $rel->categoryID);

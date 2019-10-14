@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Search\search_categories;
+namespace Test\Query\Search\searchCategories;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Search_with_two_results()
     {
-        $categories = (new \Query\Search('ru'))->search_categories('фото');
+        $categories = (new \Query\Search('ru'))->searchCategories('фото');
 
         $this->assertEquals(2, count($categories));
 
@@ -21,7 +21,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__One_letter_search()
     {
-        $categories = (new \Query\Search('ru'))->search_categories('а');
+        $categories = (new \Query\Search('ru'))->searchCategories('а');
 
         $this->assertEquals(10, count($categories));
 

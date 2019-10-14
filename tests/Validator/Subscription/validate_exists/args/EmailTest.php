@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Subscription\validate_exists;
+namespace Test\Validator\Subscription\validateExists;
 
 class EmailTest extends \PHPUnit\Framework\TestCase
 {
@@ -11,7 +11,7 @@ class EmailTest extends \PHPUnit\Framework\TestCase
         $s->questionID = 22;
 
         $this->expectExceptionMessage('Subscription "email" property null must be a string');
-        \Validator\Subscription::validate_exists($s);
+        \Validator\Subscription::validateExists($s);
     }
 
     public function test__Incorrect_email()
@@ -22,6 +22,6 @@ class EmailTest extends \PHPUnit\Framework\TestCase
         $s->email = 'loz_ba.com';
 
         $this->expectExceptionMessage('Subscription "email" property "loz_ba.com" must be valid email');
-        \Validator\Subscription::validate_exists($s);
+        \Validator\Subscription::validateExists($s);
     }
 }

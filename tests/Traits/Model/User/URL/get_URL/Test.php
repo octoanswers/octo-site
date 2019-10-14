@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Traits\Model\User\URL\get_URL;
+namespace Test\Traits\Model\User\URL\getURL;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -9,7 +9,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $user = new \Model\User();
         $user->username = 'vladimir';
 
-        $this->assertEquals('https://answeropedia.org/en/@vladimir', $user->get_URL('en'));
+        $this->assertEquals('https://answeropedia.org/en/@vladimir', $user->getURL('en'));
     }
 
     public function test__RU_URL()
@@ -17,6 +17,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $user = new \Model\User();
         $user->username = 'foxy';
 
-        $this->assertEquals('https://answeropedia.org/ru/@foxy', $user->get_URL('ru'));
+        $this->assertEquals('https://answeropedia.org/ru/@foxy', $user->getURL('ru'));
     }
 }

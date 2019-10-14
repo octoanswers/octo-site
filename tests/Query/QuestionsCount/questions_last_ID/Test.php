@@ -1,14 +1,14 @@
 <?php
 
-namespace Test\Query\QuestionsCount\questions_last_ID;
+namespace Test\Query\QuestionsCount\questionsLastID;
 
 class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 
-    public function test__Get_questions_last_ID()
+    public function test__Get_questionsLastID()
     {
-        $actualResponse = (new \Query\QuestionsCount('ru'))->questions_last_ID();
+        $actualResponse = (new \Query\QuestionsCount('ru'))->questionsLastID();
         $this->assertEquals(33, $actualResponse);
     }
 }

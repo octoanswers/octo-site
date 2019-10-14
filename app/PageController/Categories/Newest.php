@@ -14,9 +14,9 @@ class Newest extends \PageController\PageController
 
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
 
-        $categories_count = (new \Query\Categories($this->lang))->categories_last_ID();
+        $categories_count = (new \Query\Categories($this->lang))->categoriesLastID();
 
-        $this->categories = (new \Query\Categories($this->lang))->find_newest($this->page);
+        $this->categories = (new \Query\Categories($this->lang))->findNewest($this->page);
 
         $this->template = 'categories';
         $this->pageTitle = $this->_get_page_title();
@@ -24,7 +24,7 @@ class Newest extends \PageController\PageController
         $this->activeFilter = 'newest';
 
         if ((isset($this->categories[9])) && ($this->categories[9]->id > 1)) {
-            $this->nextPageURL = \Helper\URL\Categories::get_newest_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Categories::getNewestURL($this->lang, ($this->page + 1));
         }
 
         $output = $this->render_page();

@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Base()
     {
-        $user = (new \Query\User())->user_with_ID(4);
+        $user = (new \Query\User())->userWithID(4);
 
         $this->assertEquals(4, $user->id);
         $this->assertEquals('sasha', $user->username);

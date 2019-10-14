@@ -26,7 +26,7 @@ class PassHash
      *
      * @return string
      */
-    public function unique_salt()
+    public function uniqueSalt()
     {
         return substr(sha1(mt_rand()), 0, 22);
     }
@@ -40,7 +40,7 @@ class PassHash
     {
         return crypt($password, self::$algo .
             self::$cost .
-            '$' . $this->unique_salt());
+            '$' . $this->uniqueSalt());
     }
 
     /**
@@ -48,7 +48,7 @@ class PassHash
      *
      * @return bool
      */
-    public function check_password($hash, $password)
+    public function checkPassword($hash, $password)
     {
         $full_salt = substr($hash, 0, 29);
         $new_hash = crypt($password, $full_salt);
@@ -61,7 +61,7 @@ class PassHash
      *
      * @return string
      */
-    public function generate_API_key()
+    public function generateAPIKey()
     {
         return md5(uniqid(rand(), true));
     }

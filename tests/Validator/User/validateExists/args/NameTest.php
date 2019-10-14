@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\User\validate_exists;
+namespace Test\Validator\User\validateExists;
 
 class NameTest extends \PHPUnit\Framework\TestCase
 {
@@ -27,7 +27,7 @@ class NameTest extends \PHPUnit\Framework\TestCase
         $this->user->name = null;
 
         $this->expectExceptionMessage('User "name" property null must be a string');
-        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validateExists($this->user));
     }
 
     public function test__Name_is_empty()
@@ -35,7 +35,7 @@ class NameTest extends \PHPUnit\Framework\TestCase
         $this->user->name = '';
 
         $this->expectExceptionMessage('User "name" property "" must have a length between 2 and 255');
-        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validateExists($this->user));
     }
 
     public function test__Name_too_short()
@@ -43,7 +43,7 @@ class NameTest extends \PHPUnit\Framework\TestCase
         $this->user->name = 'B';
 
         $this->expectExceptionMessage('User "name" property "B" must have a length between 2 and 255');
-        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validateExists($this->user));
     }
 
     public function test__Name_too_long()
@@ -51,6 +51,6 @@ class NameTest extends \PHPUnit\Framework\TestCase
         $this->user->name = 'My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name.';
 
         $this->expectExceptionMessage('User "name" property "My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name. My Name." must have a length between 2 and 255');
-        $this->assertEquals(true, \Validator\User::validate_exists($this->user));
+        $this->assertEquals(true, \Validator\User::validateExists($this->user));
     }
 }

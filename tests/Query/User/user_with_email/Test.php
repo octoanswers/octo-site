@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\User\user_with_email;
+namespace Test\Query\User\userWithEmail;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test_Basic()
     {
-        $user = (new \Query\User())->user_with_email('pushka@answeropedia.org');
+        $user = (new \Query\User())->userWithEmail('pushka@answeropedia.org');
 
         $this->assertEquals(4, $user->id);
         $this->assertEquals('sasha', $user->username);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Question\validate_new;
+namespace Test\Validator\Question\validateNew;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -10,7 +10,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $question->title = 'How iPhone 8 are charged?';
         $question->isRedirect = true;
 
-        $this->assertEquals(true, \Validator\Question::validate_new($question));
+        $this->assertEquals(true, \Validator\Question::validateNew($question));
     }
 
     public function test__New_question_with_min_params()
@@ -18,6 +18,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $question = new \Model\Question();
         $question->title = 'How iPhone 8 are charged?';
 
-        $this->assertEquals(true, \Validator\Question::validate_new($question));
+        $this->assertEquals(true, \Validator\Question::validateNew($question));
     }
 }

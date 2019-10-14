@@ -18,16 +18,16 @@ class History extends \PageController\PageController
         $answer_ID = $args['id'];
 
         try {
-            $this->question = (new \Query\Question($this->lang))->question_with_ID($answer_ID);
+            $this->question = (new \Query\Question($this->lang))->questionWithID($answer_ID);
         } catch (\Throwable $e) {
             return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        $this->revisions = (new \Query\Revisions($this->lang))->revisions_for_answer_with_ID($answer_ID);
+        $this->revisions = (new \Query\Revisions($this->lang))->revisionsForAnswerWithID($answer_ID);
 
         $this->users = [];
         foreach ($this->revisions as &$revision) {
-            $this->users[] = (new \Query\User())->user_with_ID($revision->userID);
+            $this->users[] = (new \Query\User())->userWithID($revision->userID);
         }
 
         $this->template = 'answer_history';

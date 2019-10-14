@@ -17,14 +17,14 @@ class Logout extends \APIController\APIController
 
             \Validator\User::validateAPIKey($api_key);
 
-            $user = (new \Query\User())->user_with_API_key($api_key);
+            $user = (new \Query\User())->userWithAPIKey($api_key);
 
             $cookieStorage = new \Helper\CookieStorage();
             $cookieStorage->clear();
 
             $output = [
                 'message'         => 'User unlogged',
-                'destination_url' => \Helper\URL\Page::get_main_URL($this->lang),
+                'destination_url' => \Helper\URL\Page::getMainURL($this->lang),
             ];
         } catch (\Throwable $e) {
             $output = [

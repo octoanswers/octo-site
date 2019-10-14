@@ -3,7 +3,7 @@
  * Mailer for Answeropedia
  */
 
-class Mailer
+class OldMailer
 {
     private $moderatorEmail = 'alexander.gomzyakov@gmail.com';
 
@@ -69,7 +69,7 @@ class Mailer
         $this->sendEmail($subject, $message);
     }
 
-    private function send_email($subject, $message)
+    private function sendEmail($subject, $message)
     {
         $header = 'From: Answeropedia <no_reply@answeropedia.org>' . "\r\n";
         $header .= "MIME-Version: 1.0\r\n";

@@ -30,7 +30,7 @@ abstract class PageController
         //  $this->container = $container;
 
         // Get lang code from URL
-        $GLOBALS['lang_code'] = \Helper\Lang::get_lang_code_from_URI();
+        $GLOBALS['lang_code'] = \Helper\Lang::getLangCodeFromURI();
 
         // Prepare the FileLoader
         $file_system = new \Illuminate\Filesystem\Filesystem();
@@ -40,7 +40,7 @@ abstract class PageController
         $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
 
         $cookieStorage = new \Helper\CookieStorage(); // @TODO Вынести бы
-        $this->authUser = $cookieStorage->get_auth_user();
+        $this->authUser = $cookieStorage->getAuthUser();
 
         $this->_init_common_modals();
         $this->_init_common_JS();

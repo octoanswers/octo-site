@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Contributor\find_answer_first_editor;
+namespace Test\Query\Contributor\findAnswerFirstEditor;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,14 +8,14 @@ class Test extends \Test\TestCase\DB
 
     public function test__Base()
     {
-        $user = (new \Query\Contributor('ru'))->find_answer_first_editor(4);
+        $user = (new \Query\Contributor('ru'))->findAnswerFirstEditor(4);
 
         $this->assertEquals(7, $user->id);
     }
 
     public function test__Contributor_not_exists()
     {
-        $user = (new \Query\Contributor('ru'))->find_answer_first_editor(77);
+        $user = (new \Query\Contributor('ru'))->findAnswerFirstEditor(77);
 
         $this->assertEquals(null, $user);
     }

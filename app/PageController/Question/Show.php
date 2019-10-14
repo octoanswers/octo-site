@@ -14,12 +14,12 @@ class Show extends \PageController\PageController
         $questionID = $args['id'];
 
         try {
-            $question = (new \Query\Question($this->lang))->question_with_ID($questionID);
+            $question = (new \Query\Question($this->lang))->questionWithID($questionID);
         } catch (\Throwable $e) {
             return (new \PageController\Error\PageNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
-        return $response->withRedirect($question->get_URL($this->lang), 301);
+        return $response->withRedirect($question->getURL($this->lang), 301);
     }
 
     public function handle($request, $response, $args)
@@ -30,20 +30,20 @@ class Show extends \PageController\PageController
         $question_URI = $args['question_uri'];
 
         try {
-            $question_title = \Helper\Title::title_from_question_URI($question_URI);
-            $this->question = (new \Query\Question($this->lang))->question_with_title($question_title);
+            $question_title = \Helper\Title::titleFromQuestionURI($question_URI);
+            $this->question = (new \Query\Question($this->lang))->questionWithTitle($question_title);
         } catch (\Throwable $e) {
             return (new \PageController\Error\QuestionNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
 
         if ($this->question->isRedirect) {
-            $redirect = (new \Query\Redirects\Question($this->lang))->redirect_for_question_with_ID($this->question->id);
-            $this->questionRedirect = \Model\Question::init_with_title($redirect->toTitle);
+            $redirect = (new \Query\Redirects\Question($this->lang))->redirectForQuestionWithID($this->question->id);
+            $this->questionRedirect = \Model\Question::initWithTitle($redirect->toTitle);
 
             $need_stop_redirect = $this->query_params['no_redirect'];
             if (!$need_stop_redirect) {
                 $redirectTitle = $this->questionRedirect->title;
-                $redirectURL = \Helper\URL\Redirect::get_redirect_URL_for_title($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
+                $redirectURL = \Helper\URL\Redirect::getRedirectURLForTitle($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
 
                 return $response->withRedirect($redirectURL, 301);
             }
@@ -59,7 +59,7 @@ class Show extends \PageController\PageController
 
         $redirected_question_ID = isset($this->query_params['redirect_from_id']) ? (int) $this->query_params['redirect_from_id'] : null;
         if ($redirected_question_ID) {
-            $this->redirectedQuestion = (new \Query\Question($this->lang))->question_with_ID($redirected_question_ID);
+            $this->redirectedQuestion = (new \Query\Question($this->lang))->questionWithID($redirected_question_ID);
         }
 
         if (isset($this->question->answer) && strlen($this->question->answer->text)) {
@@ -69,7 +69,7 @@ class Show extends \PageController\PageController
 
         $this->_prepare_follow_button();
 
-        $this->contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($this->question->id);
+        $this->contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($this->question->id);
 
         if (count($this->contributors) > 3) {
             $this->contributors_top = array_slice($this->contributors, 0, 3);
@@ -77,7 +77,7 @@ class Show extends \PageController\PageController
             $this->contributors_top = $this->contributors;
         }
 
-        $this->categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($this->question->id);
+        $this->categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($this->question->id);
 
         if (count($this->categories)) {
             if (count($this->categories) > 2) {
@@ -92,7 +92,7 @@ class Show extends \PageController\PageController
         $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
         $this->pageTitle = $this->question->title . ' – ' . __('common.answeropedia');
         $this->pageDescription = $this->_get_page_description();
-        $this->canonicalURL = $this->question->get_URL($this->lang);
+        $this->canonicalURL = $this->question->getURL($this->lang);
 
         $this->related_questions = $this->_related_questions();
 
@@ -100,7 +100,7 @@ class Show extends \PageController\PageController
 
         $this->share_link['title'] = $this->question->title;
         $this->share_link['description'] = __('page_question.share_link__description');
-        $this->share_link['url'] = $this->question->get_URL($this->lang);
+        $this->share_link['url'] = $this->question->getURL($this->lang);
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
         $this->_prepare_additional_JS();
@@ -135,7 +135,7 @@ class Show extends \PageController\PageController
             $authUserID = $this->authUser->id;
             $question_id = $this->question->id;
 
-            $relation = (new \Query\Relations\UsersFollowQuestions($this->lang))->relation_with_user_ID_and_question_ID($authUserID, $question_id);
+            $relation = (new \Query\Relations\UsersFollowQuestions($this->lang))->relationWithUserIDAndQuestionID($authUserID, $question_id);
 
             $this->followed = $relation ? true : false;
         }
@@ -158,7 +158,7 @@ class Show extends \PageController\PageController
 
         foreach ($keys as $key) {
             try {
-                $question = (new \Query\Question($this->lang))->question_with_ID((int) $key);
+                $question = (new \Query\Question($this->lang))->questionWithID((int) $key);
                 $related_questions[] = $question;
             } catch (\Exception $e) {
                 // do nothing
@@ -178,7 +178,7 @@ class Show extends \PageController\PageController
     protected function _get_open_graph()
     {
         $og = [
-            'url'         => $this->question->get_URL($this->lang),
+            'url'         => $this->question->getURL($this->lang),
             'type'        => 'website',
             'title'       => $this->question->title,
             'description' => $this->_get_page_description(),

@@ -23,13 +23,13 @@ class Avatar extends \APIController\APIController
             $post_params = $request->getParsedBody();
 
             $API_key = $post_params['api_key'];
-            $user = (new \Query\User())->user_with_API_key($API_key);
+            $user = (new \Query\User())->userWithAPIKey($API_key);
 
             $this->handle = new \Verot\Upload\Upload($_FILES['new_avatar_file']);
             if ($this->handle->uploaded) {
-                $medium_avatar_file = $this->_make_user_avatar_with_size($user->id, 400);
-                $small_avatar_file = $this->_make_user_avatar_with_size($user->id, 200);
-                $extra_small_avatar_file = $this->_make_user_avatar_with_size($user->id, 100);
+                $medium_avatar_file = $this->_makeUserAvatarWithSize($user->id, 400);
+                $small_avatar_file = $this->_makeUserAvatarWithSize($user->id, 200);
+                $extra_small_avatar_file = $this->_makeUserAvatarWithSize($user->id, 100);
 
                 // Save flag is_avatar_uploaded
                 $user->is_avatar_uploaded = true;
@@ -40,7 +40,7 @@ class Avatar extends \APIController\APIController
 
                 // Update avatar URL in cookies
                 $cookie_storage = new \Helper\CookieStorage();
-                $cookie_storage->save_user($user);
+                $cookie_storage->saveUser($user);
 
                 // delete the original uploaded file
                 $this->handle->clean();
@@ -50,9 +50,9 @@ class Avatar extends \APIController\APIController
 
             $output = [
                 'user_id'                 => true,
-                'avatar_url_medium'       => $user->get_avatar_URL_large(),
-                'avatar_url_small'        => $user->get_avatar_URL_medium(),
-                'avatar_url_extra_small'  => $user->get_avatar_URL_small(),
+                'avatar_url_medium'       => $user->getAvatarURLLarge(),
+                'avatar_url_small'        => $user->getAvatarURLMedium(),
+                'avatar_url_extra_small'  => $user->getAvatarURLSmall(),
                 'avatar_file_medium'      => $medium_avatar_file,
                 'avatar_file_small'       => $small_avatar_file,
                 'avatar_file_extra_small' => $extra_small_avatar_file,
@@ -69,7 +69,7 @@ class Avatar extends \APIController\APIController
         return $response->withHeader('Content-Type', 'application/json')->write($json);
     }
 
-    protected function _make_user_avatar_with_size($user_ID, $avatar_size)
+    protected function _makeUserAvatarWithSize($user_ID, $avatar_size)
     {
         $avatarFilename = $user_ID . '_' . $avatar_size;
 

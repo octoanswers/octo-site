@@ -3,7 +3,7 @@
 	<div class="mb-2">
 
 		<?php foreach ($this->first_two_categories as $category) : ?>
-			<a class="badge badge-light text-black-50 font-weight-normal text-decoration-none mr-1" href="<?= $category->get_URL($this->lang) ?>">
+			<a class="badge badge-light text-black-50 font-weight-normal text-decoration-none mr-1" href="<?= $category->getURL($this->lang) ?>">
 				<?= $category->title ?>
 			</a>
 		<?php endforeach; ?>

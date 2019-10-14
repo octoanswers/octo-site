@@ -3,17 +3,17 @@
 <header class="navbar sticky-top navbar-expand-lg navbar-light">
 	<div class="container">
 		<?php if ($this->authUser) : ?>
-			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::get_feed_URL($this->lang) ?>">
+			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::getFeedURL($this->lang) ?>">
 				<?= __('common.answeropedia') ?>
 			</a>
 		<?php else : ?>
-			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::get_main_URL($this->lang) ?>">
+			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::getMainURL($this->lang) ?>">
 				<?= __('common.answeropedia') ?>
 			</a>
 		<?php endif; ?>
 
 		<sup class="d-none d-lg-block text-uppercase mr-0 mr-md-4">
-			<a class="small text-black-50 text-decoration-none" href="<?= \Helper\URL\Page::get_main_URL($this->lang) ?>">
+			<a class="small text-black-50 text-decoration-none" href="<?= \Helper\URL\Page::getMainURL($this->lang) ?>">
 				<?= $this->lang ?>
 			</a>
 		</sup>
@@ -28,13 +28,13 @@
 				<!-- Mobile links -->
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link text-dark" href="<?= \Helper\URL\Page::get_flow_URL($this->lang) ?>">
+					<a class="nav-link text-dark" href="<?= \Helper\URL\Page::getFlowURL($this->lang) ?>">
 						<?= __('navbar.recent_changes') ?>
 					</a>
 				</li>
 
 				<li class="nav-item d-lg-none">
-					<a class="nav-link text-dark" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>">
+					<a class="nav-link text-dark" href="<?= \Helper\URL\Categories::getNewestURL($this->lang) ?>">
 						<?= __('navbar.categories') ?>
 					</a>
 				</li>
@@ -74,8 +74,8 @@
 
 				<?php if ($this->authUser) : ?>
 					<li class="nav-item">
-						<a class="user-avatar wh-36px rounded d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->get_URL($this->lang) ?>">
-							<img class="wh-36px rounded" src="<?= $this->authUser->get_avatar_URL_small() ?>" alt="<?= $this->authUser->name ?>">
+						<a class="user-avatar wh-36px rounded d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="<?= $this->authUser->getURL($this->lang) ?>">
+							<img class="wh-36px rounded" src="<?= $this->authUser->getAvatarURLSmall() ?>" alt="<?= $this->authUser->name ?>">
 						</a>
 					</li>
 				<?php endif; ?>

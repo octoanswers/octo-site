@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Relation\UserFollowQuestion\validate_exists;
+namespace Test\Validator\Relation\UserFollowQuestion\validateExists;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -12,7 +12,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $rel->questionID = 9;
         $rel->createdAt = '2015-11-29 09:28:34';
 
-        $this->assertEquals(true, \Validator\Relation\UserFollowQuestion::validate_exists($rel));
+        $this->assertEquals(true, \Validator\Relation\UserFollowQuestion::validateExists($rel));
     }
 
     public function test__Min_params()
@@ -22,6 +22,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $rel->userID = 3;
         $rel->questionID = 9;
 
-        $this->assertEquals(true, \Validator\Relation\UserFollowQuestion::validate_exists($rel));
+        $this->assertEquals(true, \Validator\Relation\UserFollowQuestion::validateExists($rel));
     }
 }

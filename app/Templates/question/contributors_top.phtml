@@ -11,16 +11,16 @@
 
         <?php foreach ($this->contributors_top as $contributor) : ?>
             <div class="media position-relative mb-4">
-                <a class="wh-40px mt-1 mr-3 rounded" href="<?= $contributor->get_URL($this->lang) ?>">
-                    <img src="<?= $contributor->get_avatar_URL_medium() ?>" class="wh-40px rounded-circle" alt="<?= $contributor->name ?>">
+                <a class="wh-40px mt-1 mr-3 rounded" href="<?= $contributor->getURL($this->lang) ?>">
+                    <img src="<?= $contributor->getAvatarURLMedium() ?>" class="wh-40px rounded-circle" alt="<?= $contributor->name ?>">
                 </a>
                 <div class="media-body">
-                    <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->get_URL($this->lang) ?>">
+                    <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
                         <?= $contributor->name ?>
                     </a>
 
                     <p class="small text-black-50 mb-0">
-                        <?= $contributor->signature ? $contributor->get_short_signature() : $contributor->username ?>
+                        <?= $contributor->signature ? $contributor->getShortSignature() : $contributor->username ?>
                         <?php if ($contributor->site) : ?>
                             <a href="<?= $contributor->site ?>">
                                 <?= parse_url($contributor->site, PHP_URL_HOST) ?>

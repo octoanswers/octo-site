@@ -4,7 +4,7 @@ namespace Traits\Model\Category;
 
 trait Avatar
 {
-    public function get_avatar_URL_small(): string
+    public function getAvatarURLSmall(): string
     {
         // if ($this->is_avatar_uploaded) {
         //     return SITE_URL . '/uploads/avatar/' . $this->id . '_100.jpg';

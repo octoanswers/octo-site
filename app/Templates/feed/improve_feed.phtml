@@ -17,7 +17,7 @@
         <li class="my-3">
             <?php if ($this->authUser->username == $this->authUser->name) : ?>
                 <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
-                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Settings::get_real_name_URL($this->lang) ?>">
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Settings::getRealNameURL($this->lang) ?>">
                     <?= __('page_feed.improve_your_feed.set_real_name') ?>
                 </a>
             <?php else : ?>
@@ -31,7 +31,7 @@
         <li class="my-3">
             <?php if (strlen($this->authUser->signature) == 0) : ?>
                 <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
-                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Settings::get_signature_URL($this->lang) ?>">
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Settings::getSignatureURL($this->lang) ?>">
                     <?= __('page_feed.improve_your_feed.set_signature') ?>
                 </a>
             <?php else : ?>
@@ -45,7 +45,7 @@
         <li class="my-3">
             <?php if ($this->isShowCategoriesFollowLure) : ?>
                 <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
-                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Categories::get_newest_URL($this->lang) ?>">
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Categories::getNewestURL($this->lang) ?>">
                     <?= __('page_feed.improve_your_feed.follow_3_more_categories') ?>
                 </a>
             <?php else : ?>
@@ -59,7 +59,7 @@
         <li class="my-3">
             <?php if ($this->isShowQuestionsFollowLure) : ?>
                 <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
-                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Questions::get_newest_URL($this->lang) ?>">
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Questions::getNewestURL($this->lang) ?>">
                     <?= __('page_feed.improve_your_feed.follow_your_first_question') ?>
                 </a>
             <?php else : ?>
@@ -73,7 +73,7 @@
         <li class="my-3">
             <?php if ($this->isShowUsersFollowLure) : ?>
                 <i class="material-icons md-18 mr-1 text-warning">play_arrow</i>
-                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Users::get_newest_URL($this->lang) ?>">
+                <a class="text-secondary text-decoration-none" href="<?= \Helper\URL\Users::getNewestURL($this->lang) ?>">
                     <?= __('page_feed.improve_your_feed.find_your_friends') ?>
                 </a>
             <?php else : ?>

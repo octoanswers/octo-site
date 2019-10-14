@@ -13,7 +13,7 @@ class QuestionNotFound extends \PageController\PageController
 
         $question_URI = $args['question_uri'];
 
-        $this->questionTitle = \Helper\Title::title_from_question_URI($question_URI);
+        $this->questionTitle = \Helper\Title::titleFromQuestionURI($question_URI);
 
         $question = new \Model\Question();
         $question->title = $this->questionTitle;

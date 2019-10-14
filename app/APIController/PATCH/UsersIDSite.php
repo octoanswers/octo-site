@@ -23,7 +23,7 @@ class UsersIDSite extends \APIController\APIController
                 throw new \Exception('User "site" property null must be a string', 0);
             }
 
-            $user = (new \Query\User())->user_with_API_key($api_key);
+            $user = (new \Query\User())->userWithAPIKey($api_key);
             $old_site = $user->site;
 
             if ($user->id != $user_ID) {

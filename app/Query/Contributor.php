@@ -4,7 +4,7 @@ namespace Query;
 
 class Contributor extends \Query\Query
 {
-    public function find_answer_last_editor(int $answerID): ?\Model\User
+    public function findAnswerLastEditor(int $answerID): ?\Model\User
     {
         \Validator\Answer::validateID($answerID);
 
@@ -23,7 +23,7 @@ class Contributor extends \Query\Query
         }
 
         $userID = $row['rev_user_id'];
-        $user = (new \Query\User())->user_with_ID($userID);
+        $user = (new \Query\User())->userWithID($userID);
 
         return $user;
     }
@@ -31,7 +31,7 @@ class Contributor extends \Query\Query
     /**
      * @return User_Model|null
      */
-    public function find_answer_first_editor(int $answerID)
+    public function findAnswerFirstEditor(int $answerID)
     {
         \Validator\Answer::validateID($answerID);
 
@@ -50,7 +50,7 @@ class Contributor extends \Query\Query
         }
 
         $userID = $row['rev_user_id'];
-        $user = (new \Query\User())->user_with_ID($userID);
+        $user = (new \Query\User())->userWithID($userID);
 
         return $user;
     }

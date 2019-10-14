@@ -4,7 +4,7 @@ namespace Traits\Model\Relation;
 
 trait CategoriesToQuestions
 {
-    public static function init_with_category_ID_and_question_ID(int $categoryID, int $questionID): self
+    public static function initWithCategoryIDAndQuestionID(int $categoryID, int $questionID): self
     {
         $relation = new self();
 
@@ -14,7 +14,7 @@ trait CategoriesToQuestions
         return $relation;
     }
 
-    public static function init_with_DB_state(array $state): self
+    public static function initWithDBState(array $state): self
     {
         $relation = new self();
 

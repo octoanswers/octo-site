@@ -11,15 +11,15 @@ class UserFollowUser
     // Model validator
     //
 
-    public static function validate_exists(\Model\Relation\UserFollowUser $relation)
+    public static function validateExists(\Model\Relation\UserFollowUser $relation)
     {
         self::validateID($relation->id);
-        self::validate_new($relation);
+        self::validateNew($relation);
 
         return true;
     }
 
-    public static function validate_new(\Model\Relation\UserFollowUser $relation)
+    public static function validateNew(\Model\Relation\UserFollowUser $relation)
     {
         self::validateUserID($relation->userID);
         self::validateFollowedUserID($relation->followedUserID);

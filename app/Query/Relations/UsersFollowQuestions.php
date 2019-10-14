@@ -4,7 +4,7 @@ namespace Query\Relations;
 
 class UsersFollowQuestions extends \Query\Query
 {
-    public function relation_with_user_ID_and_question_ID(int $userID, int $followedQuestionID)
+    public function relationWithUserIDAndQuestionID(int $userID, int $followedQuestionID)
     {
         $sql = 'SELECT * FROM er_users_follow_questions WHERE user_id=:user_id AND question_id=:question_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);
@@ -20,13 +20,13 @@ class UsersFollowQuestions extends \Query\Query
             return;
         }
 
-        return \Model\Relation\UserFollowQuestion::init_with_DB_state($row);
+        return \Model\Relation\UserFollowQuestion::initWithDBState($row);
     }
 
     /**
      * List of questions that this specific user is following.
      */
-    public function find_questions_followed_by_user(int $userID)
+    public function findQuestionsFollowedByUser(int $userID)
     {
         $sql = 'SELECT question_id FROM er_users_follow_questions WHERE (user_id=:user_id)';
         $stmt = $this->pdo->prepare($sql);

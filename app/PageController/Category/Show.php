@@ -15,7 +15,7 @@ class Show extends \PageController\PageController
 
         try {
             $category_title = $this->_category_title_from_URI($category_URI);
-            $this->category = (new \Query\Category($this->lang))->category_with_title($category_title);
+            $this->category = (new \Query\Category($this->lang))->categoryWithTitle($category_title);
         } catch (\Exception $e) {
             return (new \PageController\Error\CategoryNotFound($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -46,7 +46,7 @@ class Show extends \PageController\PageController
 
         $this->share_link['title'] = $this->_get_page_title();
         $this->share_link['description'] = $this->_get_page_description();
-        $this->share_link['url'] = $this->category->get_URL($this->lang);
+        $this->share_link['url'] = $this->category->getURL($this->lang);
         $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
 
         $output = $this->render_page();
@@ -66,7 +66,7 @@ class Show extends \PageController\PageController
             $authUserID = $this->authUser->id;
             $categoryID = $this->category->id;
 
-            $relation = (new \Query\Relations\UsersFollowCategories($this->lang))->relation_with_user_ID_and_category_ID($authUserID, $categoryID);
+            $relation = (new \Query\Relations\UsersFollowCategories($this->lang))->relationWithUserIDAndCategoryID($authUserID, $categoryID);
 
             $this->followed = $relation ? true : false;
         }
@@ -75,7 +75,7 @@ class Show extends \PageController\PageController
     protected function _get_open_graph()
     {
         $og = [
-            'url'         => $this->category->get_URL($this->lang),
+            'url'         => $this->category->getURL($this->lang),
             'type'        => 'website',
             'title'       => $this->_get_page_title(),
             'description' => $this->_get_page_description(),
@@ -103,14 +103,14 @@ class Show extends \PageController\PageController
     {
         $top_questions = [];
 
-        $category_question_relations = (new \Query\Relations\CategoriesToQuestions($this->lang))->find_newest_for_category_with_ID($this->category->id, $this->page);
+        $category_question_relations = (new \Query\Relations\CategoriesToQuestions($this->lang))->findNewestForCategoryWithID($this->category->id, $this->page);
 
         foreach ($category_question_relations as $category_question_er) {
-            $question = (new \Query\Question($this->lang))->question_with_ID($category_question_er->questionID);
+            $question = (new \Query\Question($this->lang))->questionWithID($category_question_er->questionID);
 
-            $contributors = (new \Query\Contributors($this->lang))->find_answer_contributors($question->id);
+            $contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
 
-            $categories = (new \Query\Categories($this->lang))->categories_for_question_with_ID($question->id);
+            $categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question->id);
             if (count($categories) > 2) {
                 $categories = array_slice($categories, 0, 2);
             }
@@ -170,7 +170,7 @@ class Show extends \PageController\PageController
         $related_categories = [];
         if (count($related_titles)) {
             foreach ($related_titles as $title) {
-                $category = \Model\Category::init_with_title($title);
+                $category = \Model\Category::initWithTitle($title);
                 $related_categories[] = $category;
             }
         } else {

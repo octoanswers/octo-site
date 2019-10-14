@@ -6,7 +6,7 @@ class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__EnFullParams()
     {
-        $question = \Model\Question::init_with_DB_state([
+        $question = \Model\Question::initWithDBState([
             'q_id'              => 13,
             'q_title'           => 'This is question?',
             'q_is_redirect'     => 1,
@@ -27,7 +27,7 @@ class Test extends \PHPUnit\Framework\TestCase
 
     public function test__RuFullParams()
     {
-        $question = \Model\Question::init_with_DB_state([
+        $question = \Model\Question::initWithDBState([
             'q_id'             => 13,
             'q_title'          => 'Это вопрос?',
             'q_is_redirect'    => 1,

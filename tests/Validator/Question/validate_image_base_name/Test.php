@@ -1,24 +1,24 @@
 <?php
 
-namespace Test\Validator\Question\validate_image_base_name;
+namespace Test\Validator\Question\validateImageBaseName;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
     public function test__Image_base_name_not_set()
     {
-        $this->assertEquals(null, \Validator\Question::validate_image_base_name(null));
+        $this->assertEquals(null, \Validator\Question::validateImageBaseName(null));
     }
 
     public function test__Image_base_name_is_empty()
     {
         $this->expectExceptionMessage('Question "imageBaseName" property "" must have a length between 4 and 64');
-        \Validator\Question::validate_image_base_name('');
+        \Validator\Question::validateImageBaseName('');
     }
 
     public function test__Image_base_name_too_short()
     {
         $this->expectExceptionMessage('Question "imageBaseName" property "foo" must have a length between 4 and 64');
-        \Validator\Question::validate_image_base_name('foo');
+        \Validator\Question::validateImageBaseName('foo');
     }
 
     public function test__Image_base_name_too_long()
@@ -26,6 +26,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $mageBaseName = 'abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd';
 
         $this->expectExceptionMessage('Question "imageBaseName" property "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd" must have a length between 4 and 64');
-        \Validator\Question::validate_image_base_name($mageBaseName);
+        \Validator\Question::validateImageBaseName($mageBaseName);
     }
 }

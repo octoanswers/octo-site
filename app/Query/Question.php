@@ -4,11 +4,11 @@ namespace Query;
 
 class Question extends \Query\Query
 {
-    public function question_with_title(string $title): \Model\Question
+    public function questionWithTitle(string $title): \Model\Question
     {
-        \Validator\Question::validate_title($title);
+        \Validator\Question::validateTitle($title);
 
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE q_title=:q_title LIMIT 1');
         $stmt->bindParam(':q_title', $title, \PDO::PARAM_STR);
@@ -23,14 +23,14 @@ class Question extends \Query\Query
             throw new \Exception('Question with lang "' . $this->lang . '" and title "' . $title . '" not exists', 1);
         }
 
-        return \Model\Question::init_with_DB_state($row);
+        return \Model\Question::initWithDBState($row);
     }
 
-    public function question_with_ID(int $questionID): \Model\Question
+    public function questionWithID(int $questionID): \Model\Question
     {
         \Validator\Question::validateID($questionID);
 
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE q_id=:q_id LIMIT 1');
         $stmt->bindParam(':q_id', $questionID, \PDO::PARAM_INT);
@@ -45,6 +45,6 @@ class Question extends \Query\Query
             throw new \Exception('Question with ID "' . $questionID . '" not exists', 1);
         }
 
-        return \Model\Question::init_with_DB_state($row);
+        return \Model\Question::initWithDBState($row);
     }
 }

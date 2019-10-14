@@ -4,15 +4,15 @@ namespace Traits\Model\Revision;
 
 trait Contribution
 {
-    public function get_user_contribution(): int
+    public function getUserContribution(): int
     {
-        $insertions = $this->get_user_insertions();
-        $deletions = $this->get_user_deletions();
+        $insertions = $this->getUserInsertions();
+        $deletions = $this->getUserDeletions();
 
         return $insertions + $deletions;
     }
 
-    public function get_user_insertions(): int
+    public function getUserInsertions(): int
     {
         $opcodes_string = $this->opcodes;
 
@@ -27,7 +27,7 @@ trait Contribution
         return $insertions;
     }
 
-    public function get_user_deletions(): int
+    public function getUserDeletions(): int
     {
         $opcodes_string = $this->opcodes;
 

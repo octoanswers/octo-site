@@ -18,7 +18,7 @@ class WithoutCategories extends \PageController\PageController
         $this->page = @$query_params['page'] ? (int) $query_params['page'] : 1;
 
         try {
-            $this->questions = (new \Query\Sandbox($this->lang))->questions_without_categories($this->page);
+            $this->questions = (new \Query\Sandbox($this->lang))->questionsWithoutCategories($this->page);
         } catch (\Exception $e) {
             return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
         }
@@ -28,7 +28,7 @@ class WithoutCategories extends \PageController\PageController
         $this->pageDescription = $this->_get_page_description();
 
         if (count($this->questions) == self::QUESTIONS_PER_PAGE) {
-            $this->nextPageURL = \Helper\URL\Sandbox::get_without_answers_URL($this->lang, ($this->page + 1));
+            $this->nextPageURL = \Helper\URL\Sandbox::getWithoutAnswersURL($this->lang, ($this->page + 1));
         }
 
         $this->list = 'without_categories';

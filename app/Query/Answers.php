@@ -4,11 +4,11 @@ namespace Query;
 
 class Answers extends \Query\Query
 {
-    public function answer_with_ID(int $answerID)
+    public function answerWithID(int $answerID)
     {
         \Validator\Answer::validateID($answerID);
 
-        $this->pdo = \Helper\PDOFactory::get_connection_to_lang_DB($this->lang);
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
 
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE q_id=:q_id LIMIT 1');
         $stmt->bindParam(':q_id', $answerID, \PDO::PARAM_INT);
@@ -21,6 +21,6 @@ class Answers extends \Query\Query
             return;
         }
 
-        return \Model\Answer::init_with_DB_state($row);
+        return \Model\Answer::initWithDBState($row);
     }
 }

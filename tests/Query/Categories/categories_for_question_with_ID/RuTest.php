@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Categories\categories_for_question_with_ID;
+namespace Test\Query\Categories\categoriesForQuestionWithID;
 
 class RuTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__Question_have_two_categories()
     {
-        $categories = (new \Query\Categories('ru'))->categories_for_question_with_ID(22);
+        $categories = (new \Query\Categories('ru'))->categoriesForQuestionWithID(22);
 
         $this->assertEquals(2, count($categories));
 
@@ -21,7 +21,7 @@ class RuTest extends \Test\TestCase\DB
 
     public function test__Question_dont_havecategories()
     {
-        $categories = (new \Query\Categories('ru'))->categories_for_question_with_ID(5);
+        $categories = (new \Query\Categories('ru'))->categoriesForQuestionWithID(5);
 
         $this->assertEquals(0, count($categories));
     }

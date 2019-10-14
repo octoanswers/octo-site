@@ -4,7 +4,7 @@ namespace Traits\Model\Question;
 
 trait Humanize
 {
-    public function get_minutes_to_read(): int
+    public function getMinutesToRead(): int
     {
         $answer_len = mb_strlen($this->answer->text);
 

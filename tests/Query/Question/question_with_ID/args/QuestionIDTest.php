@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Question\question_with_ID;
+namespace Test\Query\Question\questionWithID;
 
 class QuestionIDTest extends \Test\TestCase\DB
 {
@@ -9,7 +9,7 @@ class QuestionIDTest extends \Test\TestCase\DB
         $questionID = 0;
 
         $this->expectExceptionMessage('Question id param 0 must be greater than or equal to 1');
-        $question = (new \Query\Question('ru'))->question_with_ID($questionID);
+        $question = (new \Query\Question('ru'))->questionWithID($questionID);
     }
 
     public function test__Negative_question_ID()
@@ -17,6 +17,6 @@ class QuestionIDTest extends \Test\TestCase\DB
         $questionID = -1;
 
         $this->expectExceptionMessage('Question id param -1 must be greater than or equal to 1');
-        $question = (new \Query\Question('ru'))->question_with_ID($questionID);
+        $question = (new \Query\Question('ru'))->questionWithID($questionID);
     }
 }

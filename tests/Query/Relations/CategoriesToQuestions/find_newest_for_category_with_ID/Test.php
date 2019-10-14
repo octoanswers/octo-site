@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Relations\CategoriesToQuestions\find_newest_for_category_with_ID;
+namespace Test\Query\Relations\CategoriesToQuestions\findNewestForCategoryWithID;
 
 class Test extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Find_without_params()
     {
-        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->find_newest_for_category_with_ID(58);
+        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->findNewestForCategoryWithID(58);
 
         $this->assertEquals(10, count($relations));
 
@@ -23,7 +23,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__First_page()
     {
-        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->find_newest_for_category_with_ID(58, 1);
+        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->findNewestForCategoryWithID(58, 1);
 
         $this->assertEquals(10, count($relations));
 
@@ -38,7 +38,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Second_page()
     {
-        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->find_newest_for_category_with_ID(58, 2);
+        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->findNewestForCategoryWithID(58, 2);
 
         $this->assertEquals(4, count($relations));
 
@@ -53,7 +53,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Third_page()
     {
-        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->find_newest_for_category_with_ID(58, 3);
+        $relations = (new \Query\Relations\CategoriesToQuestions('ru'))->findNewestForCategoryWithID(58, 3);
 
         $this->assertEquals(0, count($relations));
     }

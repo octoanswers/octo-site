@@ -4,7 +4,7 @@ namespace Traits\Model\Question;
 
 trait Init
 {
-    public static function init_with_title(string $title): self
+    public static function initWithTitle(string $title): self
     {
         $question = new self();
         $question->title = $title;
@@ -14,7 +14,7 @@ trait Init
         return $question;
     }
 
-    public static function init_with_DB_state(array $state): self
+    public static function initWithDBState(array $state): self
     {
         $question = new self();
         $question->id = (int) $state['q_id'];
@@ -23,7 +23,7 @@ trait Init
         $question->imageBaseName = isset($state['q_image_base_name']) ? $state['q_image_base_name'] : null;
         $question->categoriesCount = (int) $state['count_categories'];
 
-        $question->answer = \Model\Answer::init_with_DB_state($state);
+        $question->answer = \Model\Answer::initWithDBState($state);
 
         return $question;
     }

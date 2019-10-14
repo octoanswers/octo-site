@@ -6,7 +6,7 @@ class UserFollowCategory extends \Mapper\Mapper
 {
     public function create(\Model\Relation\UserFollowCategory $relation): \Model\Relation\UserFollowCategory
     {
-        \Validator\Relation\UserFollowCategory::validate_new($relation);
+        \Validator\Relation\UserFollowCategory::validateNew($relation);
 
         $sql = 'INSERT INTO er_users_follow_categories (user_id, category_id) VALUES (:user_id, :category_id)';
         $stmt = $this->pdo->prepare($sql);
@@ -33,7 +33,7 @@ class UserFollowCategory extends \Mapper\Mapper
 
     public function delete_relation(\Model\Relation\UserFollowCategory $relation): bool
     {
-        \Validator\Relation\UserFollowCategory::validate_exists($relation);
+        \Validator\Relation\UserFollowCategory::validateExists($relation);
 
         $sql = 'DELETE FROM er_users_follow_categories WHERE category_id=:category_id AND user_id=:user_id LIMIT 1';
         $stmt = $this->pdo->prepare($sql);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Questions\find_newest;
+namespace Test\Query\Questions\findNewest;
 
 class PerPageTest extends \Test\TestCase\DB
 {
@@ -8,7 +8,7 @@ class PerPageTest extends \Test\TestCase\DB
 
     public function test__Find_first_13_questions()
     {
-        $questions = (new \Query\Questions('ru'))->find_newest(1, 13);
+        $questions = (new \Query\Questions('ru'))->findNewest(1, 13);
 
         $this->assertEquals(13, count($questions));
 
@@ -24,24 +24,24 @@ class PerPageTest extends \Test\TestCase\DB
     public function test__PerPage_param_equal_zero()
     {
         $this->expectExceptionMessage('Questions list perPage param 0 must be greater than or equal to 5');
-        $questions = (new \Query\Questions('ru'))->find_newest(1, 0);
+        $questions = (new \Query\Questions('ru'))->findNewest(1, 0);
     }
 
     public function test__PerPage_param_below_zero()
     {
         $this->expectExceptionMessage('Questions list perPage param -1 must be greater than or equal to 5');
-        $questions = (new \Query\Questions('ru'))->find_newest(1, -1);
+        $questions = (new \Query\Questions('ru'))->findNewest(1, -1);
     }
 
     public function test__PerPage_param_below_min_value()
     {
         $this->expectExceptionMessage('Questions list perPage param 4 must be greater than or equal to 5');
-        $questions = (new \Query\Questions('ru'))->find_newest(1, 4);
+        $questions = (new \Query\Questions('ru'))->findNewest(1, 4);
     }
 
     public function test__PerPage_param_greater_than_100()
     {
         $this->expectExceptionMessage('Questions list perPage param 101 must be less than or equal to 100');
-        $questions = (new \Query\Questions('ru'))->find_newest(1, 101);
+        $questions = (new \Query\Questions('ru'))->findNewest(1, 101);
     }
 }

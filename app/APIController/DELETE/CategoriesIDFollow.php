@@ -20,11 +20,11 @@ class CategoriesIDFollow extends \APIController\APIController
             // Validate params
             //
 
-            $user = (new \Query\User())->user_with_API_key($api_key);
+            $user = (new \Query\User())->userWithAPIKey($api_key);
 
-            $category = (new \Query\Category($this->lang))->category_with_ID($category_ID);
+            $category = (new \Query\Category($this->lang))->categoryWithID($category_ID);
 
-            $relation = (new \Query\Relations\UsersFollowCategories($this->lang))->relation_with_user_ID_and_category_ID($user->id, $category_ID);
+            $relation = (new \Query\Relations\UsersFollowCategories($this->lang))->relationWithUserIDAndCategoryID($user->id, $category_ID);
             if (!$relation) {
                 throw new \Exception('User with ID "' . $user->id . '" not followed category with ID "' . $category_ID . '"', 0);
             }

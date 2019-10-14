@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Validator\Category\validate_new;
+namespace Test\Validator\Category\validateNew;
 
 class Test extends \PHPUnit\Framework\TestCase
 {
@@ -9,7 +9,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $category = new \Model\Category();
         $category->title = 'Apple';
 
-        $this->assertEquals(true, \Validator\Category::validate_new($category));
+        $this->assertEquals(true, \Validator\Category::validateNew($category));
     }
 
     public function test__Two_word_category()
@@ -17,7 +17,7 @@ class Test extends \PHPUnit\Framework\TestCase
         $category = new \Model\Category();
         $category->title = 'iPhone 8';
 
-        $this->assertEquals(true, \Validator\Category::validate_new($category));
+        $this->assertEquals(true, \Validator\Category::validateNew($category));
     }
 
     public function test__Category_with_underscore()
@@ -25,6 +25,6 @@ class Test extends \PHPUnit\Framework\TestCase
         $category = new \Model\Category();
         $category->title = 'my_category';
 
-        $this->assertEquals(true, \Validator\Category::validate_new($category));
+        $this->assertEquals(true, \Validator\Category::validateNew($category));
     }
 }

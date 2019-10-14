@@ -35,13 +35,13 @@ class QUpdateA extends \Mapper\Mapper
         $data = json_encode([
             'question' => [
                 'title' => $question->title,
-                'url'   => $question->get_URL($this->lang),
+                'url'   => $question->getURL($this->lang),
             ],
             'user' => [
                 'id'            => $user->id,
                 'name'          => $user->name,
-                'profile_url'   => $user->get_URL($this->lang),
-                'avatar_xs_url' => $user->get_avatar_URL_small(),
+                'profile_url'   => $user->getURL($this->lang),
+                'avatar_xs_url' => $user->getAvatarURLSmall(),
             ],
             'revision' => [
                 'diff_text' => $fineDiffRender->process($revision->baseText, $revision->opcodes),

@@ -20,19 +20,19 @@ class Login extends \APIController\APIController
             \Validator\User::validateEmail($user_email);
             \Validator\User::validatePassword($user_password);
 
-            $user = (new \Query\User())->user_with_email($user_email);
+            $user = (new \Query\User())->userWithEmail($user_email);
             if (!$user) {
                 throw new \Exception('User with specific email not found', 1);
             }
 
             // check user password
             $password_hash = new \Helper\PassHash();
-            if (!$password_hash->check_password($user->passwordHash, $user_password)) {
+            if (!$password_hash->checkPassword($user->passwordHash, $user_password)) {
                 throw new \Exception('WRONG_PASSWORD', 1);
             }
 
             $cookieStorage = new \Helper\CookieStorage();
-            $cookieStorage->save_user($user);
+            $cookieStorage->saveUser($user);
 
             $output = [
                 'lang'            => $this->lang,
@@ -41,8 +41,8 @@ class Login extends \APIController\APIController
                 'name'            => $user->name,
                 'api_key'         => $user->apiKey,
                 'created_at'      => $user->createdAt,
-                'url'             => $user->get_URL($this->lang),
-                'destination_url' => \Helper\URL\Page::get_main_URL($this->lang),
+                'url'             => $user->getURL($this->lang),
+                'destination_url' => \Helper\URL\Page::getMainURL($this->lang),
             ];
         } catch (\Throwable $e) {
             $output = [

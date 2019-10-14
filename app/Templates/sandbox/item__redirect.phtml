@@ -1,7 +1,7 @@
 <?php $redirect = $this->redirects[$question->id]; ?>
 
 <div class="my-4">
-    <a class="lead text-dark text-decoration-none" href="<?= \Helper\URL\Redirect::get_URL($this->lang, $redirect) ?>">
+    <a class="lead text-dark text-decoration-none" href="<?= \Helper\URL\Redirect::getURL($this->lang, $redirect) ?>">
         <span class="badge badge-warning mr-1">Redirect</span>
         <?= $redirect->toTitle ?>
     </a>
@@ -9,17 +9,17 @@
 
         <?= __('Before:') ?>
 
-        <a rel="nofollow" class="text-secondary" href="<?= $question->get_URL($this->lang) ?>">
+        <a rel="nofollow" class="text-secondary" href="<?= $question->getURL($this->lang) ?>">
             <?= $question->title ?>
         </a>
 
         <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-        <a rel="nofollow" class="text-secondary" href="<?= $question->get_URL($this->lang) ?>?no_redirect=1">
+        <a rel="nofollow" class="text-secondary" href="<?= $question->getURL($this->lang) ?>?no_redirect=1">
             <?= __('Redirect page') ?>
         </a>
 
         <span class="mx-1 text-dark font-weight-bold">&middot;</span>
-        <?= __('Updated:') ?> <?= \Humanizer\DateTime::humanize_timestamp($this->lang, $question->answer->updatedAt) ?>
+        <?= __('Updated:') ?> <?= \Humanizer\DateTime::humanizeTimestamp($this->lang, $question->answer->updatedAt) ?>
 
     </div>
 </div>
