@@ -6,7 +6,7 @@ class IDTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 
-    public function test_UpdateWithNotExistsID_ThrowException()
+    public function test__Update_with_not_exists_ID()
     {
         $question = new \Model\Question();
         $question->id = 2215;
@@ -17,7 +17,7 @@ class IDTest extends \Test\TestCase\DB
         $question = (new \Mapper\Question('ru'))->update($question);
     }
 
-    public function test_UpdateWithIDEqualZero_ThrowException()
+    public function test__Update_with_ID_equal_zero()
     {
         $question = new \Model\Question();
         $question->id = 0;
@@ -28,7 +28,7 @@ class IDTest extends \Test\TestCase\DB
         $question = (new \Mapper\Question('ru'))->update($question);
     }
 
-    public function test_UpdateWithIDBelowZero_ThrowException()
+    public function test__Update_with_ID_below_zero()
     {
         $question = new \Model\Question();
         $question->id = -1;

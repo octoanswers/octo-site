@@ -4,9 +4,12 @@ namespace Tests\APIController\PATCH\UsersIDName;
 
 class Test extends \Test\TestCase\Frontend
 {
-    protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['activities'],
+        'users' => ['users']
+    ];
 
-    public function test_RenameWithSaveRedirect_Ok()
+    public function test__Rename_with_save_redirect()
     {
         $uri = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Вова Малышов');
 

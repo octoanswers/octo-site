@@ -6,7 +6,7 @@ class IsRedirectTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 
-    public function test_CreateWithIsRedirectParam_Ok()
+    public function test__Create_with_IsRedirect_param()
     {
         $question = new \Model\Question();
         $question->title = 'This is question?';

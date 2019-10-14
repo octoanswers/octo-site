@@ -4,9 +4,12 @@ namespace Tests\APIController\PATCH\UsersIDSite;
 
 class IDTest extends \Test\TestCase\Frontend
 {
-    protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['activities'],
+        'users' => ['users']
+    ];
 
-    public function test_UserIDEqualZero_Error()
+    public function test__User_ID_equal_zero()
     {
         $uri = '/api/v1/ru/users/0/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('https://answeropedia.org');
 
@@ -23,7 +26,7 @@ class IDTest extends \Test\TestCase\Frontend
         $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
-    public function test_UserIDBelowZero_Error()
+    public function test__User_ID_below_zero()
     {
         $uri = '/api/v1/ru/users/-1/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('https://answeropedia.org');
 

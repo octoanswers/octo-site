@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['redirects_questions']];
 
-    public function test_CreateWithFullParams_Ok()
+    public function test__Create_with_full_args()
     {
         $redirect = new \Model\Redirect\Question();
         $redirect->fromID = 12;

@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['activities']];
 
-    public function test_CreateWithFullParams_Ok()
+    public function test__Create_with_full_args()
     {
         $category = \Model\Category::init_with_title('tag1102');
 

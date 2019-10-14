@@ -4,9 +4,12 @@ namespace Tests\APIController\PATCH\QuestionsIDRename;
 
 class IDTest extends \Test\TestCase\Frontend
 {
-    protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['questions', 'activities', 'redirects_questions'],
+        'users' => ['users']
+    ];
 
-    public function test_QuestionIDEqualZero_Error()
+    public function test__Question_ID_equal_zero()
     {
         $uri = '/api/v1/ru/questions/0/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
 
@@ -23,7 +26,7 @@ class IDTest extends \Test\TestCase\Frontend
         $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
-    public function test_QuestionIDBelowZero_Error()
+    public function test__Question_ID_below_zero()
     {
         $uri = '/api/v1/ru/questions/-1/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
 

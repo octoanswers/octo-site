@@ -6,7 +6,7 @@ class IDTest extends \Test\TestCase\DB
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function test_Update_user_with_not_exists_ID()
+    public function test__Update_user_with_not_exists_ID()
     {
         $user = new \Model\User();
         $user->id = 1352;
@@ -21,7 +21,7 @@ class IDTest extends \Test\TestCase\DB
         $user = (new \Mapper\User())->update($user);
     }
 
-    public function test_Updateuser_with_IDEqualZero_ThrowException()
+    public function test__Update_user_with_ID_equal_zero()
     {
         $user = new \Model\User();
         $user->id = 0;
@@ -37,7 +37,7 @@ class IDTest extends \Test\TestCase\DB
         $user = (new \Mapper\User())->update($user);
     }
 
-    public function test_Updateuser_with_IDBelowZero_ThrowException()
+    public function test__Update_user_with_ID_below_zero()
     {
         $user = new \Model\User();
         $user->id = -1;

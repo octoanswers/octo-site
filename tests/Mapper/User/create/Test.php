@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function test_CreateUserWithFullParams_Ok()
+    public function test__Create_user_with_full_params()
     {
         $user = new \Model\User();
         $user->username = 'steve';

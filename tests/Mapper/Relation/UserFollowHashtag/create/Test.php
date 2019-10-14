@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_categories']];
 
-    public function test__FullParams__OK()
+    public function test__Create_with_full_args()
     {
         $relation = new \Model\Relation\UserFollowCategory();
         $relation->userID = 3;

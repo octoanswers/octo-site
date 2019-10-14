@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 
-    public function test_CreateWithFullParams_Ok()
+    public function test__Create_with_full_params()
     {
         $question = new \Model\Question();
         $question->title = 'This is question?';
@@ -21,7 +21,7 @@ class Test extends \Test\TestCase\DB
         $this->assertEquals('4_2013_05_09_123', $question->imageBaseName);
     }
 
-    public function test_CreateWithMinParams_Ok()
+    public function test__Create_with_min_params()
     {
         $question = new \Model\Question();
         $question->title = 'Ready to work?';

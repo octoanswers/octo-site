@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions']];
 
-    public function test_UpdateWithFullParams_Ok()
+    public function test__Update_with_full_params()
     {
         $question = new \Model\Question();
         $question->id = 2;
@@ -22,7 +22,7 @@ class Test extends \Test\TestCase\DB
         $this->assertEquals('4_2013_05_09_123', $question->imageBaseName);
     }
 
-    public function test_UpdateWithMinParams_Ok()
+    public function test__Update_with_min_params()
     {
         $question = new \Model\Question();
         $question->id = 4;

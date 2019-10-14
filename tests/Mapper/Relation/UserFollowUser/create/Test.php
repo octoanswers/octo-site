@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_users']];
 
-    public function test__FullParams__OK()
+    public function test__Full_params()
     {
         $relation = new \Model\Relation\UserFollowUser();
         $relation->userID = 3;

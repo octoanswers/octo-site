@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class TextTest extends TestCase
 {
-    public function test_TextNotSet_Ok()
+    public function test__Text_not_set()
     {
         $answer = new \Model\Answer();
         $answer->id = 18;
@@ -16,7 +16,7 @@ class TextTest extends TestCase
         $answer = (new \Mapper\Answer('ru'))->update($answer);
     }
 
-    public function test_TextIsEmpty_Ok()
+    public function test__Text_is_empty()
     {
         $answer = new \Model\Answer();
         $answer->id = 18;

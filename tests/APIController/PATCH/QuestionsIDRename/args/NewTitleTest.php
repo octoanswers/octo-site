@@ -4,9 +4,12 @@ namespace Tests\APIController\PATCH\QuestionsIDRename;
 
 class NewTitleTest extends \Test\TestCase\Frontend
 {
-    protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['questions', 'activities', 'redirects_questions'],
+        'users' => ['users']
+    ];
 
-    public function test_NewTitleNotSet_Error()
+    public function test__New_title_not_set()
     {
         $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&not_new_title=' . urlencode('ab?');
 
@@ -23,7 +26,7 @@ class NewTitleTest extends \Test\TestCase\Frontend
         $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
-    public function test_NewTitleTooShort_Error()
+    public function test__New_title_too_short()
     {
         $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('M?');
 

@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['er_users_follow_categories']];
 
-    public function test__FullParams__OK()
+    public function test__Full_args()
     {
         // Relation must be in DB
         $relation = new \Model\Relation\UserFollowCategory();
@@ -20,7 +20,7 @@ class Test extends \Test\TestCase\DB
         $this->assertEquals(true, $deleted);
     }
 
-    public function test__RelationNotExists()
+    public function test__Relation_not_exists()
     {
         // Not exists relation
         $relation = new \Model\Relation\UserFollowCategory();

@@ -4,7 +4,7 @@ namespace Test\Mapper\Question\create;
 
 class TitleTest extends \Test\TestCase\DB
 {
-    public function test_CreateWithEmptyTitle_throwException()
+    public function test__Create_with_empty_title()
     {
         $question = new \Model\Question();
         $question->title = '';
@@ -14,7 +14,7 @@ class TitleTest extends \Test\TestCase\DB
         $question = (new \Mapper\Question('ru'))->create($question);
     }
 
-    public function test_CreateWithTooShortTitle_throwException()
+    public function test__Create_with_too_short_title()
     {
         $question = new \Model\Question();
         $question->title = 'F';
@@ -24,7 +24,7 @@ class TitleTest extends \Test\TestCase\DB
         $question = (new \Mapper\Question('ru'))->create($question);
     }
 
-    public function test_CreateWithTooLongTitle_throwException()
+    public function test__Create_with_too_long_title()
     {
         $question = new \Model\Question();
         $question->title = 'Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... Long title... ';

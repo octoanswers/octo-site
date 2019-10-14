@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['activities', 'questions']];
 
-    public function test_CreateWithFullParams_Ok()
+    public function test__Create_with_full_params()
     {
         $user = new \Model\User();
         $user->id = 46;

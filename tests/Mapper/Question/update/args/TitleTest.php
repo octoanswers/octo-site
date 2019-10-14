@@ -4,7 +4,7 @@ namespace Test\Mapper\Question\update;
 
 class TitleTest extends \Test\TestCase\DB
 {
-    public function test_UpdateWithEmptyTitle_throwException()
+    public function test__Update_with_empty_title()
     {
         $question = new \Model\Question();
         $question->id = 2;
@@ -15,7 +15,7 @@ class TitleTest extends \Test\TestCase\DB
         $question = (new \Mapper\Question('ru'))->update($question);
     }
 
-    public function test_UpdateWithTooShortTitle_throwException()
+    public function test__Update_with_too_short_title()
     {
         $question = new \Model\Question();
         $question->id = 2;
@@ -26,7 +26,7 @@ class TitleTest extends \Test\TestCase\DB
         $question = (new \Mapper\Question('ru'))->update($question);
     }
 
-    public function test_UpdateWithTooLongTitle_throwException()
+    public function test__Update_with_too_long_title()
     {
         $question = new \Model\Question();
         $question->id = 2;

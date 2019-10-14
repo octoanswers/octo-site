@@ -4,9 +4,12 @@ namespace Tests\APIController\PATCH\QuestionsIDRename;
 
 class Test extends \Test\TestCase\Frontend
 {
-    protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['questions', 'activities', 'redirects_questions'],
+        'users' => ['users']
+    ];
 
-    public function test_RenameWithSaveRedirect_Ok()
+    public function test__Rename_with_save_redirect()
     {
         $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?') . '&save_redirect=true';
 
@@ -45,7 +48,7 @@ class Test extends \Test\TestCase\Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test_RenameWithoutSaveRedirect_Ok()
+    public function test_Rename_without_save_redirect()
     {
         $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?');
 
@@ -80,7 +83,7 @@ class Test extends \Test\TestCase\Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__ChangeCharCase__WithoutRedirect()
+    public function test__Change_char_case_without_redirect()
     {
         $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?');
 
@@ -115,7 +118,7 @@ class Test extends \Test\TestCase\Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__ChangeCharCase__WithRedirect()
+    public function test__Change_char_case_with_redirect()
     {
         $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?') . '&save_redirect=true';
 

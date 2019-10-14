@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['activities']];
 
-    public function test_CreateWithFullParams_Ok()
+    public function test__Create_with_full_params()
     {
         $question = \Model\Question::init_with_title('Когда закончится дождь?');
 

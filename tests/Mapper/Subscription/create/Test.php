@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = ['ru' => ['questions_subscriptions']];
 
-    public function test__FullParams__OK()
+    public function test__Full_params()
     {
         $s = new \Model\Subscription();
         $s->questionID = 9;
