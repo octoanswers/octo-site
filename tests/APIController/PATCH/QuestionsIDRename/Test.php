@@ -1,18 +1,20 @@
 <?php
 
-class QuestionsIDRename_PATCH_APIController__ru__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\PATCH\QuestionsIDRename;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'activities', 'redirects_questions'], 'users' => ['users']];
 
     public function test_RenameWithSaveRedirect_Ok()
     {
-        $query_string = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?') . '&save_redirect=true';
+        $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?') . '&save_redirect=true';
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'question' => [
                 'id'        => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
@@ -39,19 +41,19 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends \Test\TestCase\Fro
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test_RenameWithoutSaveRedirect_Ok()
     {
-        $query_string = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?');
+        $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?');
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'question' => [
                 'id'        => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
@@ -74,19 +76,19 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends \Test\TestCase\Fro
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test__ChangeCharCase__WithoutRedirect()
     {
-        $query_string = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?');
+        $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?');
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'question' => [
                 'id'        => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
@@ -109,19 +111,19 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends \Test\TestCase\Fro
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test__ChangeCharCase__WithRedirect()
     {
-        $query_string = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?') . '&save_redirect=true';
+        $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?') . '&save_redirect=true';
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'question' => [
                 'id'        => 12,
                 'old_title' => 'Огонь уничтожает кровь?',
@@ -144,7 +146,7 @@ class QuestionsIDRename_PATCH_APIController__ru__Test extends \Test\TestCase\Fro
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

@@ -1,6 +1,8 @@
 <?php
 
-class Logout_POST_APIController__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\Logout;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 
@@ -13,14 +15,14 @@ class Logout_POST_APIController__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $form_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'message'         => 'User unlogged',
             'destination_url' => 'https://answeropedia.org/ru',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 }

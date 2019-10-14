@@ -1,18 +1,20 @@
 <?php
 
-class Categories_ID_Questions_PUT_APIController__ru__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\PUT\Questions\ID\Categories;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'categories', 'activities', 'er_categories_questions'], 'users' => ['users']];
 
     public function test_Add_one_category()
     {
-        $query_string = '/api/v1/ru/questions/22/categories.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_categories=' . urlencode('Медицина,Гинекология');
+        $uri = '/api/v1/ru/questions/22/categories.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_categories=' . urlencode('Медицина,Гинекология');
 
-        $request = $this->createRequest('PUT', $query_string);
+        $request = $this->createRequest('PUT', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'lang'      => 'ru',
             'user_id'   => 3,
             'user_name' => 'Иван Коршунов',
@@ -33,7 +35,7 @@ class Categories_ID_Questions_PUT_APIController__ru__Test extends \Test\TestCase
 
         // Check API-response
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
 
         // Check real data changes
@@ -46,18 +48,18 @@ class Categories_ID_Questions_PUT_APIController__ru__Test extends \Test\TestCase
 
     public function test__Categories_param_not_set()
     {
-        $query_string = '/api/v1/ru/questions/7/categories.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
+        $uri = '/api/v1/ru/questions/7/categories.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
 
-        $request = $this->createRequest('PUT', $query_string);
+        $request = $this->createRequest('PUT', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'Categories param not set',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

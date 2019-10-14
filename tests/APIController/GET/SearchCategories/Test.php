@@ -1,6 +1,8 @@
 <?php
 
-class APIController_GET_SearchCategories__ru__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\GET\SearchCategories;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['categories']];
 
@@ -10,17 +12,17 @@ class APIController_GET_SearchCategories__ru__Test extends \Test\TestCase\Fronte
 
         $request = $this->createRequest('GET', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponseZeroItem = [
+        $expected_responseZeroItem = [
             'id'             => 1,
             'display_string' => 'Русская литература – 1',
             'title'          => 'Русская литература',
         ];
 
-        $actualResponse = json_decode($responseBody, true);
+        $actualResponse = json_decode($response_body, true);
 
-        $this->assertEquals($expectedResponseZeroItem, $actualResponse[0]);
+        $this->assertEquals($expected_responseZeroItem, $actualResponse[0]);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -30,9 +32,9 @@ class APIController_GET_SearchCategories__ru__Test extends \Test\TestCase\Fronte
 
         $request = $this->createRequest('GET', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             [
                 'id'             => 4,
                 'display_string' => 'Автомобили – 4',
@@ -45,7 +47,7 @@ class APIController_GET_SearchCategories__ru__Test extends \Test\TestCase\Fronte
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -55,11 +57,11 @@ class APIController_GET_SearchCategories__ru__Test extends \Test\TestCase\Fronte
 
         $request = $this->createRequest('GET', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [];
+        $expected_response = [];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

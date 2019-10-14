@@ -1,6 +1,8 @@
 <?php
 
-class APIController_POST_Categories__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\Categories;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'ru'    => ['questions', 'categories', 'activities', 'er_categories_questions'],
@@ -16,7 +18,7 @@ class APIController_POST_Categories__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
         $expected_response = [
             'lang' => 'ru',
@@ -35,7 +37,7 @@ class APIController_POST_Categories__Test extends \Test\TestCase\Frontend
 
         // Check API-response
 
-        $this->assertEquals($expected_response, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -48,7 +50,7 @@ class APIController_POST_Categories__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
         $expected_response = [
             'lang' => 'ru',
@@ -69,7 +71,7 @@ class APIController_POST_Categories__Test extends \Test\TestCase\Frontend
 
         // Check API-response
 
-        $this->assertEquals($expected_response, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -82,14 +84,14 @@ class APIController_POST_Categories__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
         $expected_response = [
             'error_code'    => 0,
             'error_message' => 'Categories param not set',
         ];
 
-        $this->assertEquals($expected_response, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -102,14 +104,14 @@ class APIController_POST_Categories__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
         $expected_response = [
             'error_code'    => 1,
             'error_message' => 'Incorrect API-key',
         ];
 
-        $this->assertEquals($expected_response, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

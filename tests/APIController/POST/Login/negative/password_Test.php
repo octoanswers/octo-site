@@ -1,6 +1,8 @@
 <?php
 
-class Login_POST_APIController__negative__password__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\Login;
+
+class password__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 
@@ -13,15 +15,15 @@ class Login_POST_APIController__negative__password__Test extends \Test\TestCase\
         $request = $this->withFormData($request, $form_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'User "password" property "foo" must have a length between 6 and 32',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
     public function test__Password_is_incorrect()
@@ -33,14 +35,14 @@ class Login_POST_APIController__negative__password__Test extends \Test\TestCase\
         $request = $this->withFormData($request, $form_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 1,
             'error_message' => 'WRONG_PASSWORD',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 }

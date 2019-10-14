@@ -1,6 +1,8 @@
 <?php
 
-class Signup_POST_APIController__ru__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\Signup;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 
@@ -13,9 +15,9 @@ class Signup_POST_APIController__ru__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'id'              => 16,
             'username'        => 'jasonborn',
             'email'           => 'new@answeropedia.org',
@@ -26,12 +28,12 @@ class Signup_POST_APIController__ru__Test extends \Test\TestCase\Frontend
             'avatar_400'      => 'Avatar file "16_400.png" copied',
         ];
 
-        $responseArray = json_decode($responseBody, true);
+        $responseArray = json_decode($response_body, true);
         unset($responseArray['created_at']);
         unset($responseArray['password_hash']);
         unset($responseArray['api_key']);
 
-        $this->assertEquals($expectedResponse, $responseArray);
+        $this->assertEquals($expected_response, $responseArray);
         $this->assertSame(200, $response->getStatusCode());
     }
 }

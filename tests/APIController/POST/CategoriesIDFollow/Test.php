@@ -1,6 +1,8 @@
 <?php
 
-class CategoriesIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\CategoriesIDFollow;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
         'ru'    => ['activities', 'categories', 'er_users_follow_categories'],
@@ -16,9 +18,9 @@ class CategoriesIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Fro
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'lang'                    => 'ru',
             'relation_id'             => 12,
             'user_id'                 => 3,
@@ -27,7 +29,7 @@ class CategoriesIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Fro
             'followed_category_title' => 'Автомобили',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -40,14 +42,14 @@ class CategoriesIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Fro
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'User with ID "3" already followed category with ID "7"',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

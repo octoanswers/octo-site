@@ -1,18 +1,20 @@
 <?php
 
-class CategoriesIDRename_PATCH_APIController__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\PATCH\CategoriesIDRename;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['categories', 'activities', 'redirects_categories'], 'users' => ['users']];
 
     public function test_Rename_category_with_save_redirect()
     {
-        $query_string = '/api/v1/ru/categories/9/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Исследование почвы') . '&save_redirect=true';
+        $uri = '/api/v1/ru/categories/9/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Исследование почвы') . '&save_redirect=true';
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'category' => [
                 'id'        => 9,
                 'old_title' => 'Почвоведение',
@@ -39,19 +41,19 @@ class CategoriesIDRename_PATCH_APIController__Test extends \Test\TestCase\Fronte
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test_Rename_category_without_saving_redirect()
     {
-        $query_string = '/api/v1/ru/categories/9/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Наука о почвах');
+        $uri = '/api/v1/ru/categories/9/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Наука о почвах');
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'category' => [
                 'id'        => 9,
                 'old_title' => 'Почвоведение',
@@ -74,19 +76,19 @@ class CategoriesIDRename_PATCH_APIController__Test extends \Test\TestCase\Fronte
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test_Change_category_char_case_without_add_redirect()
     {
-        $query_string = '/api/v1/ru/categories/9/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('ПочвоВедение');
+        $uri = '/api/v1/ru/categories/9/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('ПочвоВедение');
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'category' => [
                 'id'        => 9,
                 'old_title' => 'Почвоведение',
@@ -109,19 +111,19 @@ class CategoriesIDRename_PATCH_APIController__Test extends \Test\TestCase\Fronte
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test_Change_category_char_case_with_add_redirect()
     {
-        $query_string = '/api/v1/ru/categories/9/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('ПочвоВедение') . '&save_redirect=true';
+        $uri = '/api/v1/ru/categories/9/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('ПочвоВедение') . '&save_redirect=true';
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'category' => [
                 'id'        => 9,
                 'old_title' => 'Почвоведение',
@@ -144,7 +146,7 @@ class CategoriesIDRename_PATCH_APIController__Test extends \Test\TestCase\Fronte
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

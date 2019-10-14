@@ -1,18 +1,20 @@
 <?php
 
-class UsersIDName_PATCH_APIController__ru__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\PATCH\UsersIDName;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 
     public function test_RenameWithSaveRedirect_Ok()
     {
-        $query_string = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Вова Малышов');
+        $uri = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Вова Малышов');
 
-        $request = $this->createRequest('PATCH', $query_string);
+        $request = $this->createRequest('PATCH', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'user' => [
                 'id'       => 3,
                 'name'     => 'Вова Малышов',
@@ -21,7 +23,7 @@ class UsersIDName_PATCH_APIController__ru__Test extends \Test\TestCase\Frontend
             'message' => 'Name saved!',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

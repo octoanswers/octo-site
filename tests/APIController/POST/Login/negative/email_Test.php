@@ -1,6 +1,8 @@
 <?php
 
-class Login_POST_APIController__negative__email__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\Login;
+
+class email__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 
@@ -13,15 +15,15 @@ class Login_POST_APIController__negative__email__Test extends \Test\TestCase\Fro
         $request = $this->withFormData($request, $form_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'User "email" property "admin_answeropedia.org" must be valid email',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
     public function test__Email_not_exists()
@@ -33,14 +35,14 @@ class Login_POST_APIController__negative__email__Test extends \Test\TestCase\Fro
         $request = $this->withFormData($request, $form_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 1,
             'error_message' => 'User with specific email not found',
         ];
 
         $this->assertSame(200, $response->getStatusCode());
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 }

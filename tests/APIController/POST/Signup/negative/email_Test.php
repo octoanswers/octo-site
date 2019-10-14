@@ -1,6 +1,8 @@
 <?php
 
-class Signup_POST_APIController__negative__email__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\Signup;
+
+class email__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 
@@ -13,14 +15,14 @@ class Signup_POST_APIController__negative__email__Test extends \Test\TestCase\Fr
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'User "email" property "foo_answeropedia.org" must be valid email',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -33,14 +35,14 @@ class Signup_POST_APIController__negative__email__Test extends \Test\TestCase\Fr
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 1,
             'error_message' => 'User with specific email is already registered',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

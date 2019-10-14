@@ -1,6 +1,8 @@
 <?php
 
-class Login_POST_APIController__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\Login;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 
@@ -13,9 +15,9 @@ class Login_POST_APIController__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $form_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'lang'            => 'ru',
             'id'              => 3,
             'email'           => 'admin@answeropedia.org',
@@ -27,6 +29,6 @@ class Login_POST_APIController__Test extends \Test\TestCase\Frontend
         ];
 
         $this->assertSame(200, $response->getStatusCode());
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 }

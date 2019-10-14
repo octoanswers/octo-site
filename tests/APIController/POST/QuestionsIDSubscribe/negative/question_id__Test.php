@@ -1,6 +1,8 @@
 <?php
 
-class QuestionsIDSubscribe_POST_APIController__negative__question_id__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\QuestionsIDSubscribe;
+
+class question_id__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'questions_subscriptions']];
 
@@ -13,14 +15,14 @@ class QuestionsIDSubscribe_POST_APIController__negative__question_id__Test exten
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 1,
             'error_message' => 'Question with ID "236" not exists',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -33,14 +35,14 @@ class QuestionsIDSubscribe_POST_APIController__negative__question_id__Test exten
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'Question id param 0 must be greater than or equal to 1',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -53,14 +55,14 @@ class QuestionsIDSubscribe_POST_APIController__negative__question_id__Test exten
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'Question id param -1 must be greater than or equal to 1',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

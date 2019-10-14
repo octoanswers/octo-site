@@ -2,11 +2,11 @@
 
 namespace Tests\APIController\DELETE\QuestionsIDSubscribe;
 
-class email__Test extends \Test\TestCase\Frontend
+class Test extends \Test\TestCase\Frontend
 {
-    public function test__Incorrect_email()
+    public function test__Base_subscription()
     {
-        $uri = '/api/v1/ru/questions/12/subscribe.json?email=' . urlencode('test_mail.ru') . '&no_email=1';
+        $uri = '/api/v1/ru/questions/12/subscribe.json?email=' . urlencode('test@mail.ru') . '&no_email=1';
 
         $request = $this->createRequest('DELETE', $uri);
         $response = $this->request($request);

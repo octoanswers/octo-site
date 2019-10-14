@@ -1,6 +1,8 @@
 <?php
 
-class Render_Answers_POST_APIController__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\Answers\Render;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['categories']];
 
@@ -15,22 +17,22 @@ class Render_Answers_POST_APIController__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
         $textHTML = "<p>Any #birds may #fly.</p>\n";
         $textHTML .= "<h2>Header</h2>\n";
         $textHTML .= "<p>Text</p>\n";
         $textHTML .= '<p>I eat <a href="https://answeropedia.org/ru/What_is_crisp">crisp</a> every day.</p>';
 
-        $expectedResponse = [
+        $expected_response = [
             'lang'      => 'ru',
             'text_md'   => $textMD,
             'text_html' => $textHTML,
         ];
 
-        $actualResponse = json_decode($responseBody, true);
+        $actualResponse = json_decode($response_body, true);
 
-        $this->assertEquals($expectedResponse, $actualResponse);
+        $this->assertEquals($expected_response, $actualResponse);
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -43,15 +45,15 @@ class Render_Answers_POST_APIController__Test extends \Test\TestCase\Frontend
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'lang'      => 'ru',
             'text_md'   => '',
             'text_html' => '',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

@@ -11,13 +11,13 @@ class ru_Test extends \Test\TestCase\Frontend
 
     public function test__Base_unfollow()
     {
-        $query_string = '/api/v1/ru/categories/7/follow.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
+        $uri = '/api/v1/ru/categories/7/follow.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
 
-        $request = $this->createRequest('DELETE', $query_string);
+        $request = $this->createRequest('DELETE', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'user_id'             => 3,
             'user_name'           => 'Иван Коршунов',
             'unfollowed_category' => [
@@ -26,24 +26,24 @@ class ru_Test extends \Test\TestCase\Frontend
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
     public function test__Not_followed()
     {
-        $query_string = '/api/v1/ru/categories/4/follow.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
+        $uri = '/api/v1/ru/categories/4/follow.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
 
-        $request = $this->createRequest('DELETE', $query_string);
+        $request = $this->createRequest('DELETE', $uri);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'User with ID "3" not followed category with ID "4"',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

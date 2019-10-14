@@ -1,6 +1,8 @@
 <?php
 
-class QuestionsIDSubscribe_POST_APIController__negative__email__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\QuestionsIDSubscribe;
+
+class email__Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'questions_subscriptions']];
 
@@ -13,14 +15,14 @@ class QuestionsIDSubscribe_POST_APIController__negative__email__Test extends \Te
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'User "email" property "test_mail.ru" must be valid email',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

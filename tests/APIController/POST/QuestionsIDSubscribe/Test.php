@@ -1,6 +1,8 @@
 <?php
 
-class QuestionsIDSubscribe_POST_APIController__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\QuestionsIDSubscribe;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'questions_subscriptions']];
 
@@ -13,9 +15,9 @@ class QuestionsIDSubscribe_POST_APIController__Test extends \Test\TestCase\Front
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'lang'               => 'ru',
             'question_id'        => 17,
             'question_title'     => 'Кто владеет компаний Apple после смерти Стива Джобса?',
@@ -24,7 +26,7 @@ class QuestionsIDSubscribe_POST_APIController__Test extends \Test\TestCase\Front
             'subscription_email' => 'data@test.ru',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -37,14 +39,14 @@ class QuestionsIDSubscribe_POST_APIController__Test extends \Test\TestCase\Front
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'Email "data@test.ru" already subscribed to question with ID 7',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

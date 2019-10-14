@@ -1,6 +1,8 @@
 <?php
 
-class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\PUT\QuestionsIDAnswer;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'revisions', 'activities'], 'users' => ['users']];
 
@@ -12,7 +14,7 @@ class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Test\TestCase\Front
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'question_id'        => 15,
             'question_title'     => 'Где я родился?',
             'question_url'       => 'https://answeropedia.org/ru/%D0%93%D0%B4%D0%B5_%D1%8F_%D1%80%D0%BE%D0%B4%D0%B8%D0%BB%D1%81%D1%8F',
@@ -27,7 +29,7 @@ class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Test\TestCase\Front
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($response_body, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -37,9 +39,9 @@ class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Test\TestCase\Front
 
         $request = $this->createRequest('PUT', $queryString);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'question_id'        => 21,
             'question_title'     => 'Как птицы делают видеоигры?',
             'question_url'       => 'https://answeropedia.org/ru/%D0%9A%D0%B0%D0%BA_%D0%BF%D1%82%D0%B8%D1%86%D1%8B_%D0%B4%D0%B5%D0%BB%D0%B0%D1%8E%D1%82_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D0%B8%D0%B3%D1%80%D1%8B',
@@ -54,7 +56,7 @@ class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Test\TestCase\Front
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -64,9 +66,9 @@ class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Test\TestCase\Front
 
         $request = $this->createRequest('PUT', $queryString);
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'question_id'        => 15,
             'question_title'     => 'Где я родился?',
             'question_url'       => 'https://answeropedia.org/ru/%D0%93%D0%B4%D0%B5_%D1%8F_%D1%80%D0%BE%D0%B4%D0%B8%D0%BB%D1%81%D1%8F',
@@ -81,7 +83,7 @@ class QuestionsIDAnswer_PUT_APIController__ru__Test extends \Test\TestCase\Front
             ],
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }

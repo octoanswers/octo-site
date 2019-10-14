@@ -1,6 +1,8 @@
 <?php
 
-class QuestionsIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Frontend
+namespace Tests\APIController\POST\QuestionsIDFollow;
+
+class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['questions', 'activities', 'er_users_follow_questions'], 'users' => ['users']];
 
@@ -13,9 +15,9 @@ class QuestionsIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Fron
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'lang'                    => 'ru',
             'relation_id'             => 9,
             'user_id'                 => 3,
@@ -24,7 +26,7 @@ class QuestionsIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Fron
             'followed_question_title' => 'Чем занимается гинеколог?',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 
@@ -37,14 +39,14 @@ class QuestionsIDFollow_POST_APIController__ru__Test extends \Test\TestCase\Fron
         $request = $this->withFormData($request, $post_data);
 
         $response = $this->request($request);
-        $responseBody = (string) $response->getBody();
+        $response_body = (string) $response->getBody();
 
-        $expectedResponse = [
+        $expected_response = [
             'error_code'    => 0,
             'error_message' => 'User with ID "3" already followed question with ID "7"',
         ];
 
-        $this->assertEquals($expectedResponse, json_decode($responseBody, true));
+        $this->assertEquals($expected_response, json_decode($response_body, true));
         $this->assertSame(200, $response->getStatusCode());
     }
 }
