@@ -5,8 +5,8 @@ namespace Tests\APIController\PATCH\QuestionsIDRename;
 class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'activities', 'redirects_questions'],
-        'users' => ['users']
+        'ru'    => ['questions', 'activities', 'redirects_questions'],
+        'users' => ['users'],
     ];
 
     public function test__Rename_with_save_redirect()
