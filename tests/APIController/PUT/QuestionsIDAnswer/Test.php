@@ -5,8 +5,8 @@ namespace Tests\APIController\PUT\QuestionsIDAnswer;
 class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'revisions', 'activities'],
-        'users' => ['users']
+        'ru'    => ['questions', 'revisions', 'activities'],
+        'users' => ['users'],
     ];
 
     public function test__New_answer_with_full_params()
