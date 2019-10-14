@@ -18,6 +18,6 @@ abstract class Basic
         $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
 
         $cookieStorage = new \Helper\CookieStorage(); // @TODO Вынести бы
-        $this->authUser = $cookieStorage->get_auth_user();
+        $this->auth_user = $cookieStorage->get_auth_user();
     }
 }

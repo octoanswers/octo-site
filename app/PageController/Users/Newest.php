@@ -11,6 +11,7 @@ class Newest extends \PageController\Basic
         $view_data = new \DTO\ViewData\Users\Newest();
 
         $view_data->lang = $this->lang;
+        $view_data->auth_user = $this->auth_user;
         $view_data->list = $list;
         $view_data->page = $page;
 
