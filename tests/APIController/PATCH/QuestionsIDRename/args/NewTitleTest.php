@@ -5,8 +5,8 @@ namespace Tests\APIController\PATCH\QuestionsIDRename;
 class NewTitleTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'activities', 'redirects_questions'],
-        'users' => ['users']
+        'ru'    => ['questions', 'activities', 'redirects_questions'],
+        'users' => ['users'],
     ];
 
     public function test__New_title_not_set()

@@ -5,8 +5,8 @@ namespace Tests\APIController\PATCH\UsersIDSignature;
 class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['activities'],
-        'users' => ['users']
+        'ru'    => ['activities'],
+        'users' => ['users'],
     ];
 
     public function test__Rename_with_save_redirect()

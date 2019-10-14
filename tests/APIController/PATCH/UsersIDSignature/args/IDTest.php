@@ -5,8 +5,8 @@ namespace Tests\APIController\PATCH\UsersIDSignature;
 class IDTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['activities'],
-        'users' => ['users']
+        'ru'    => ['activities'],
+        'users' => ['users'],
     ];
 
     public function test__User_ID_equal_zero()

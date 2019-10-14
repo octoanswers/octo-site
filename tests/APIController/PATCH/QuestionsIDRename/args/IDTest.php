@@ -5,8 +5,8 @@ namespace Tests\APIController\PATCH\QuestionsIDRename;
 class IDTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'activities', 'redirects_questions'],
-        'users' => ['users']
+        'ru'    => ['questions', 'activities', 'redirects_questions'],
+        'users' => ['users'],
     ];
 
     public function test__Question_ID_equal_zero()
