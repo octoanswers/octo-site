@@ -1,17 +1,17 @@
 <?php
 
-class SlimApp__Test extends PHPUnit\Framework\TestCase
+class AnsweropediaApp__Test extends PHPUnit\Framework\TestCase
 {
     public function test__Basic_size()
     {
-        $app = new SlimApp();
+        $app = new AnsweropediaApp();
 
-        $this->assertInstanceOf(SlimApp::class, $app);
+        $this->assertInstanceOf(AnsweropediaApp::class, $app);
     }
 
     public function test__Get_app_method()
     {
-        $app = (new SlimApp())->get_app();
+        $app = (new AnsweropediaApp())->get_app();
 
         $this->assertInstanceOf(Slim\App::class, $app);
     }

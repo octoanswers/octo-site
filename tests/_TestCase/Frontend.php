@@ -19,7 +19,7 @@ abstract class Frontend extends \Test\TestCase\DB
     {
         parent::setUp();
 
-        $this->app = (new \SlimApp())->get_app();
+        $this->app = (new \AnsweropediaApp())->get_app();
     }
 
     protected function tearDown(): void

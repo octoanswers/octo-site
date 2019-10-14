@@ -25,6 +25,6 @@ require_once __DIR__ . '/app/functions.php';
 // // Register the Translator
 // $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
 
-$app = (new SlimApp())->get_app();
+$app = (new AnsweropediaApp())->get_app();
 
 $app->run();
