@@ -29,8 +29,19 @@ abstract class PageController
         //$this->lang = $lang;
         //  $this->container = $container;
 
-        // Get lang code from URL
-        $GLOBALS['lang_code'] = \Helper\Lang::getLangCodeFromURI();
+        $this->lang = \Helper\Lang::getLangCodeFromURI();
+        $this->__reinitTranslator($this->lang);
+
+        $cookieStorage = new \Helper\CookieStorage(); // @TODO Вынести бы
+        $this->authUser = $cookieStorage->getAuthUser();
+
+        $this->_init_common_modals();
+        $this->_init_common_JS();
+    }
+
+    protected function __reinitTranslator(string $lang)
+    {
+        $GLOBALS['lang_code'] = $lang;
 
         // Prepare the FileLoader
         $file_system = new \Illuminate\Filesystem\Filesystem();
@@ -38,12 +49,6 @@ abstract class PageController
 
         // Register the Translator
         $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
-
-        $cookieStorage = new \Helper\CookieStorage(); // @TODO Вынести бы
-        $this->authUser = $cookieStorage->getAuthUser();
-
-        $this->_init_common_modals();
-        $this->_init_common_JS();
     }
 
     protected function render_page()
