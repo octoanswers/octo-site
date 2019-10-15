@@ -11,7 +11,7 @@
   ],
   "require": {
     "slim/slim": "^4.2",
-    "slim/psr7": "^0.4",
+    "slim/psr7": "^0.6",
     "slim/http": "^0.8",
     "erusev/parsedown": "^1.6",
     "respect/validation": "^1.1",
