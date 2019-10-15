@@ -7,11 +7,12 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class QuestionNotFound extends \PageController\PageController
 {
-    public function handle(string $lang, Request $request, Response $response, $args): Response
+    public function handle(Request $request, Response $response): Response
     {
-        $this->lang = $lang;
-
+        $lang = $request->getAttribute('lang');
         $question_URI = $request->getAttribute('question_uri');
+
+        $this->lang = $lang;
 
         $this->questionTitle = \Helper\Title::titleFromQuestionURI($question_URI);
 

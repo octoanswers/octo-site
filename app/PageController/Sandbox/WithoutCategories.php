@@ -22,7 +22,7 @@ class WithoutCategories extends \PageController\PageController
         try {
             $this->questions = (new \Query\Sandbox($this->lang))->questionsWithoutCategories($this->page);
         } catch (\Exception $e) {
-            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError())->handle($request, $response);
         }
 
         $this->template = 'sandbox';

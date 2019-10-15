@@ -7,9 +7,9 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class PageNotFound extends \PageController\PageController
 {
-    public function handle(string $lang, Request $request, Response $response, $args): Response
+    public function handle(Request $request, Response $response): Response
     {
-        $this->lang = $lang;
+        $this->lang = 'en';
 
         $this->template = 'error/404';
         $this->pageTitle = __('page_error.404.page_title') . ' – ' . __('common.answeropedia');

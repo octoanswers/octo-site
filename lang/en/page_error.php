@@ -8,8 +8,9 @@ return [
         'title'       => 'Page not found',
     ],
     'category_not_found' => [
-        'page_title' => 'Category not found: ',
-        'title'      => 'Category not found',
+        'page_title'  => 'Category not found: ',
+        'title'       => 'Category not found',
+        'btn_go_back' => 'Go back',
     ],
     'internal_server_error' => [
         'page_title' => 'Error 500',

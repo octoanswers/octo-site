@@ -17,7 +17,7 @@ class History extends \PageController\PageController
         try {
             $this->question = (new \Query\Question($this->lang))->questionWithID($answer_ID);
         } catch (\Throwable $e) {
-            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError())->handle($request, $response);
         }
 
         $this->revisions = (new \Query\Revisions($this->lang))->revisionsForAnswerWithID($answer_ID);

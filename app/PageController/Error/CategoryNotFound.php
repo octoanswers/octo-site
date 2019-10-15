@@ -7,11 +7,12 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class CategoryNotFound extends \PageController\PageController
 {
-    public function handle(string $lang, Request $request, Response $response, $args): Response
+    public function handle(Request $request, Response $response): Response
     {
-        $this->lang = $lang;
-
+        $lang = $request->getAttribute('lang');
         $category_URI = $request->getAttribute('category_uri');
+
+        $this->lang = $lang;
 
         $this->categoryTitle = $this->_category_title_from_URI($category_URI);
 

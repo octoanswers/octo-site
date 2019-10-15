@@ -8,8 +8,9 @@ return [
         'title'       => 'Страница не найдена',
     ],
     'category_not_found' => [
-        'page_title' => 'Категория не найдена: ',
-        'title'      => 'Категория не найдена',
+        'page_title'  => 'Категория не найдена: ',
+        'title'       => 'Категория не найдена',
+        'btn_go_back' => 'Вернуться назад',
     ],
     'internal_server_error' => [
         'page_title' => 'Ошибка 500',

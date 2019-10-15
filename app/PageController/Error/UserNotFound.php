@@ -7,11 +7,12 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UserNotFound extends \PageController\PageController
 {
-    public function handle(string $lang, Request $request, Response $response, $args): Response
+    public function handle(Request $request, Response $response): Response
     {
-        $this->lang = $lang;
-
+        $lang = $request->getAttribute('lang');
         $this->username = $request->getAttribute('username');
+
+        $this->lang = $lang;
 
         $this->template = 'error/user_not_found';
         $this->showFooter = false;

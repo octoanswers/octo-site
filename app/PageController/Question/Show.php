@@ -16,7 +16,7 @@ class Show extends \PageController\PageController
         try {
             $question = (new \Query\Question($this->lang))->questionWithID($questionID);
         } catch (\Throwable $e) {
-            return (new \PageController\Error\PageNotFound($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\PageNotFound($this->container))->handle($request, $response);
         }
 
         return $response->withRedirect($question->getURL($this->lang), 301);
@@ -34,7 +34,7 @@ class Show extends \PageController\PageController
             $question_title = \Helper\Title::titleFromQuestionURI($questionURI);
             $this->question = (new \Query\Question($this->lang))->questionWithTitle($question_title);
         } catch (\Throwable $e) {
-            return (new \PageController\Error\QuestionNotFound($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\QuestionNotFound($this->container))->handle($request, $response);
         }
 
         if ($this->question->isRedirect) {

@@ -20,7 +20,7 @@ class Random extends \PageController\PageController
         try {
             $question = (new \Query\Question($this->lang))->questionWithID($random_question_ID);
         } catch (\Throwable $e) {
-            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError())->handle($request, $response);
         }
 
         return $response->withRedirect($question->getURL($this->lang), 303);

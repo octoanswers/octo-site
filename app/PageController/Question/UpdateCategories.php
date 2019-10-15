@@ -17,7 +17,7 @@ class UpdateCategories extends \PageController\PageController
         try {
             $this->question = (new \Query\Question($this->lang))->questionWithID($question_ID);
         } catch (\Throwable $e) {
-            return (new \PageController\Error\InternalServerError($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\InternalServerError())->handle($request, $response);
         }
 
         $this->categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question_ID);

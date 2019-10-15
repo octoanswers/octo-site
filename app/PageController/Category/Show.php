@@ -19,7 +19,7 @@ class Show extends \PageController\PageController
             $category_title = $this->_category_title_from_URI($category_URI);
             $this->category = (new \Query\Category($this->lang))->categoryWithTitle($category_title);
         } catch (\Exception $e) {
-            return (new \PageController\Error\CategoryNotFound($this->container))->handle($this->lang, $request, $response, $args);
+            return (new \PageController\Error\CategoryNotFound($this->container))->handle($request, $response);
         }
 
         $this->questions = $this->_get_questions();

@@ -7,8 +7,10 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class InternalServerError extends \PageController\PageController
 {
-    public function handle(string $lang, Request $request, Response $response, $args): Response
+    public function handle(Request $request, Response $response): Response
     {
+        $lang = $request->getAttribute('lang');
+
         $this->lang = $lang;
 
         $this->template = 'error/500';
