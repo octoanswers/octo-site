@@ -26,6 +26,7 @@ class AnsweropediaApp
         // Define Custom Error Handler
         $default_error_handler = function (Request $request, \Throwable $exception, bool $displayErrorDetails, bool $logErrors, bool $logErrorDetails) use ($app) {
             $response = $app->getResponseFactory()->createResponse();
+
             return (new \PageController\Error\PageNotFound())->handle($request, $response);
         };
 
