@@ -6,5 +6,5 @@ return [
     ],
     'jumbotron' => [
         'text' => 'It\'s like wikipedia, only for questions and answers.',
-    ]
+    ],
 ];
