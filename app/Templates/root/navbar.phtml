@@ -12,19 +12,21 @@
 
         <div class="collapse navbar-collapse" id="navbar-supported-content">
             <ul class="navbar-nav pt-3 pt-lg-0">
-                <li class="nav-item d-none d-lg-block navbar-text text-muted">
-                    <?= __('page_root.navbar.note') ?>
-                </li>
+                <?php if (isset($this->questionAboutAnsweropedia)) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link text-black-50" href="<?= $this->questionAboutAnsweropedia->getURL($this->lang) ?>">
+                            <?= __('page_root.navbar.about') ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
             </ul>
 
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-
                 <li class="nav-item">
-                    <a class="nav-link text-primary" href="<?= $this->questionAboutAnsweropedia->getURL($this->lang) ?>">
-                        <?= __('About Answeropedia') ?>
+                    <a class="nav-link text-primary" href="#foo" data-toggle="modal" data-target="#modal-root-support">
+                        <i class="material-icons">contact_support</i>&nbsp;<?= __('page_root.navbar.support') ?>
                     </a>
                 </li>
-
             </ul>
         </div>
     </div>

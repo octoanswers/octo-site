@@ -1,0 +1,29 @@
+<div class="jumbotron bg-white border-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-10 ml-auto mr-auto text-center">
+
+                <!-- / H1 for mobile -->
+                <h1 class="jumbotron-title d-lg-none mb-4">
+                    <?= __('page_main.jumbotron.header_1') ?> <span class="font-weight-light"><?= __('page_main.jumbotron.header_2') ?></span>
+                </h1>
+                <!-- / H1 for mobile -->
+
+                <!-- H1 for desktop -->
+                <h1 class="jumbotron-title d-none d-lg-block text-center my-4">
+                    <?= __('page_main.jumbotron.header_1') ?><br />
+                    <span class="font-weight-light"><?= __('page_main.jumbotron.header_2') ?></span>
+                </h1>
+                <!-- / H1 for desktop -->
+
+                <div class="lead d-none d-md-block text-md-center text-black-50 mt-5 mb-3 py-md-2">
+                    <?= __('page_main.jumbotron.text') ?>
+                </div>
+
+                <a class="nav-button btn btn-primary btn-lg pl-5 pr-5" href="<?= SITE_URL . '/' . $this->lang ?>" role="button">
+                    <?= __('page_root.jumbotron.switch_to_language') ?>: <span class="font-weight-bold text-uppercase"><?= $this->lang ?></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

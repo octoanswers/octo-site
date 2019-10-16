@@ -28,6 +28,11 @@ return [
         'recent_changes'     => 'Recent changes',
         'sandbox'            => 'Sandbox',
     ],
+    'social_networks' => [
+        'facebook' => 'Facebook',
+        'vk' => 'VK',
+        'email' => 'Email',
+    ],
     'about_answeropedia' => [
         'btn_action' => 'Join the community',
         'text'       => 'Answeropedia is like Wikipedia, only for questions and answers. You ask a question and get one complete, comprehensive and competent answer from the community.',

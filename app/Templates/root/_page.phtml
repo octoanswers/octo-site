@@ -15,37 +15,17 @@
 
 <body>
     <?php require __DIR__ . '/navbar.phtml'; ?>
-
-    <div class="jumbotron bg-white border-bottom mb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-10 col-lg-10 ml-auto mr-auto text-center">
-                    <h1 class="display-4 text-dark font-weight-bolder">
-                        <?= __('common.answeropedia') ?>
-                    </h1>
-                    <h2 class="mt-4">Ask a question and get <span class="underline_blue_bold">one</span> complete and competent answer</h1>
-                        <a class="nav-button btn btn-warning btn-lg mt-4 pl-5 pr-5" href="<?= SITE_URL . '/' . $this->lang ?>" role="button">
-                            Switch to language: <?= $this->lang ?>
-                        </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php require __DIR__ . '/jumbotron.phtml'; ?>
 
     <div class="container">
         <div class="row">
-
             <div class="col-12 col-lg-10 mx-auto">
-                <h3 class="my-5 text-secondary text-center">
-                    Answeropedia in your language
-                </h3>
-                <div class="block pl-md-4 pr-md-4 pb-4">
-                    <?php require_once __DIR__ . '/langlist.phtml'; ?>
-                </div>
+                <?php require_once __DIR__ . '/langlist.phtml'; ?>
             </div>
-
         </div>
     </div>
+
+    <?php require_once __DIR__ . '/modal_support.phtml'; ?>
 
     <?php require TEMPLATE_PATH . '/_common/js.phtml'; ?>
 </body>
