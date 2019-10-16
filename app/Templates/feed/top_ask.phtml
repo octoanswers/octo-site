@@ -5,11 +5,11 @@
         </a>
 
         <a class="text-black-50 line-height-10" href="<?= \Helper\URL\Page::getAskURL($this->lang) ?>">
-            <?= __('page_feed.what_is_your_question') . ', ' . $this->authUser->name . '?' ?>
+            <?= __('page_questions.what_is_your_question') . ', ' . $this->authUser->name . '?' ?>
         </a>
     <?php else : ?>
         <a class="text-black-50 line-height-10" href="<?= \Helper\URL\Page::getAskURL($this->lang) ?>">
-            <?= __('page_feed.what_is_your_question') . '?' ?>
+            <?= __('page_questions.what_is_your_question') . '?' ?>
         </a>
     <?php endif; ?>
 </div>

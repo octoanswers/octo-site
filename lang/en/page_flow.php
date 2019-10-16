@@ -8,4 +8,7 @@ return [
     'new_questions'   => 'Новые вопросы',
     'note'            => 'Questions and answers flow on Answeropedia.',
     'page_title'      => 'Flow',
+    'filters' => [
+        'title' => 'Filters',
+    ],
 ];
