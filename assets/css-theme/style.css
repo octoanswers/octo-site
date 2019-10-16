@@ -662,14 +662,6 @@ body {
   border-radius: 3px !important;
 }
 
-.main-page-jumbotron {
-  background-color: #ffffff;
-  background: url(https://answeropedia.org/assets/img/bg-jumbotron.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .form-control-outline-secondary {
   border-color: #4488cc;
 }

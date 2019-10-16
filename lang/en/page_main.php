@@ -28,7 +28,8 @@ return [
     ],
     'slogan'      => 'Ask a question and get one complete answer',
     'top_content' => [
-        'title'    => 'Top content on Answeropedia',
-        'view_all' => 'View all',
+        'title'        => 'Top content on Answeropedia',
+        'title_mobile' => 'Top content',
+        'view_all'     => 'View all',
     ],
 ];

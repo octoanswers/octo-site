@@ -1,12 +1,20 @@
 <?php if (isset($this->top_questions) && count($this->top_questions)) : ?>
 
-    <div class="border rounded p-3 bg-white">
+    <!-- Title for mobile -->
+    <div class="d-block d-md-none semi-small font-weight-bold text-uppercase text-black-50 pl-2 mt-4">
+        <?= __('page_main.top_content.title_mobile') ?>
+    </div>
+    <!-- / Title for mobile -->
+
+    <!-- Title for desktop -->
+    <div class="d-none d-md-block  border rounded p-3 bg-white">
         <?= __('page_main.top_content.title') ?>
 
         <a class="float-right text-black-50 text-decoration-none" href="#">
             <?= __('page_main.top_content.view_all') ?>
         </a>
     </div>
+    <!-- / Title for desktop -->
 
     <?php foreach ($this->top_questions as $topQuestion) : ?>
 

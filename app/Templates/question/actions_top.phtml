@@ -31,14 +31,14 @@
 
     <?php if (mb_strlen($this->question->answer->text) > 0) : ?>
         <!-- btn history -->
-        <a class="d-inline-block semi-small text-black-50 my-2 ml-2" href="<?= $this->question->getHistoryURL($this->lang) ?>">
+        <a class="d-none d-md-inline-block semi-small text-black-50 my-2 ml-2" href="<?= $this->question->getHistoryURL($this->lang) ?>">
             <?= __('page_question.actions_top.history') ?>
         </a>
         <!-- btn history -->
     <?php endif; ?>
 
     <!-- more dropdown -->
-    <div class="dropdown d-inline">
+    <div class="dropdown d-none d-md-inline">
         <a href="#" class="text-black-50 my-2 ml-3 float-lg-right" id="dropdown-menu-more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons md-18">more_horiz</i>
         </a>

@@ -2,7 +2,7 @@
 <div class="container my-4">
     <div class="row">
         <div class="col-12">
-            <div class="bg-white main-page-jumbotron border rounded pl-3 py-3 py-lg-5 pr-lg-5">
+            <div class="bg-white border rounded p-3 py-lg-5 pr-lg-5">
 
                 <!-- / H1 for mobile -->
                 <h1 class="jumbotron-title d-lg-none mb-4">
@@ -17,16 +17,27 @@
                 </h1>
                 <!-- / H1 for desktop -->
 
-                <div class="lead d-none d-md-block text-md-center text-black mt-5 mb-3 py-md-2">
+                <div class="lead d-none d-md-block text-md-center text-black-50 mt-5 mb-3 py-md-2">
                     <?= __('page_main.jumbotron.text') ?>
                 </div>
 
-                <div class="text-md-center mr-5">
-                    <a class="btn btn-lg btn-primary mr-3 mr-lg-4" href="#" data-toggle="modal" data-target="#modal_signup">
+                <div class="text-md-center mr-lg-5">
+
+
+                    <!-- Button "get started" for mobile -->
+                    <a class="btn btn-lg btn-block btn-primary d-inline-block d-md-none" href="#" data-toggle="modal" data-target="#modal_signup">
                         <?= __('page_main.jumbotron.btn_get_started') ?>
                     </a>
+                    <!-- / Button "get started" for mobile -->
+
+                    <!-- Button "get started" for desktop -->
+                    <a class="btn btn-lg btn-lg-block btn-primary d-none d-md-inline-block mr-3 mr-lg-4" href="#" data-toggle="modal" data-target="#modal_signup">
+                        <?= __('page_main.jumbotron.btn_get_started') ?>
+                    </a>
+                    <!-- / Button "get started" for desktop -->
+
                     <?php if ($this->question_about_answeropedia) : ?>
-                        <a class="text-dark" href="<?= $this->question_about_answeropedia->getURL($this->lang) ?>">
+                        <a class="d-none d-md-inline text-dark" href="<?= $this->question_about_answeropedia->getURL($this->lang) ?>">
                             <?= __('page_main.jumbotron.btn_learn_more') ?>
                         </a>
                     <?php endif; ?>
