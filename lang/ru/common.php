@@ -30,8 +30,8 @@ return [
     ],
     'social_networks' => [
         'facebook' => 'Facebook',
-        'vk' => 'ВКонтакте',
-        'email' => 'Электронная почта',
+        'vk'       => 'ВКонтакте',
+        'email'    => 'Электронная почта',
     ],
     'about_answeropedia' => [
         'btn_action' => 'Присоединиться',
