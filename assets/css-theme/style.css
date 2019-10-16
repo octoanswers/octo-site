@@ -440,6 +440,10 @@ table:not([class]) td {
   padding: 0.5rem 1rem;
 }
 
+.font-ubuntu {
+  font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 a {
   color: #4488cc;
 }

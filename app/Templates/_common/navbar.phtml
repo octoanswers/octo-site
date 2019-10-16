@@ -2,11 +2,11 @@
 <header class="navbar sticky-top navbar-expand-lg navbar-light">
 	<div class="container">
 		<?php if ($this->authUser) : ?>
-			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::getFeedURL($this->lang) ?>">
+			<a class="navbar-brand font-ubuntu mr-2" href="<?= \Helper\URL\Page::getFeedURL($this->lang) ?>">
 				<?= __('common.answeropedia') ?>
 			</a>
 		<?php else : ?>
-			<a class="navbar-brand mr-2" href="<?= \Helper\URL\Page::getMainURL($this->lang) ?>">
+			<a class="navbar-brand font-ubuntu mr-2" href="<?= \Helper\URL\Page::getMainURL($this->lang) ?>">
 				<?= __('common.answeropedia') ?>
 			</a>
 		<?php endif; ?>
