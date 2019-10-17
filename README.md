@@ -38,4 +38,4 @@ Open Source is best when supported by a [community](https://github.com/answerope
 
 ## License
 
-The project released under [GPL-3.0 license](https://github.com/answeropedia/answeropedia/blob/master/LICENSE).
+The project released under [MIT license](https://github.com/answeropedia/answeropedia/blob/master/LICENSE).
