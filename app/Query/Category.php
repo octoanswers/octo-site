@@ -4,12 +4,12 @@ namespace Query;
 
 class Category extends \Query\Query
 {
-    public function categoryWithTitle(string $categoryTitle): \Model\Category
+    public function categoryWithTitle(string $category_title): ?\Model\Category
     {
-        \Validator\Category::validateTitle($categoryTitle);
+        \Validator\Category::validateTitle($category_title);
 
         $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_title=:c_title LIMIT 1');
-        $stmt->bindParam(':c_title', $categoryTitle, \PDO::PARAM_STR);
+        $stmt->bindParam(':c_title', $category_title, \PDO::PARAM_STR);
         if (!$stmt->execute()) {
             $error = $stmt->errorInfo();
 
@@ -18,7 +18,7 @@ class Category extends \Query\Query
 
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new \Exception('Category with lang "' . $this->lang . '" and title "' . $categoryTitle . '" not exists', 1);
+            return null;
         }
 
         return \Model\Category::initWithDBState($row);
@@ -39,26 +39,6 @@ class Category extends \Query\Query
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
             throw new \Exception('Category with ID "' . $categoryID . '" not exists', 1);
-        }
-
-        return \Model\Category::initWithDBState($row);
-    }
-
-    public function findWithTitle(string $title)
-    {
-        \Validator\Category::validateTitle($title);
-
-        $stmt = $this->pdo->prepare('SELECT * FROM categories WHERE c_title=:c_title LIMIT 1');
-        $stmt->bindParam(':c_title', $title, \PDO::PARAM_STR);
-        if (!$stmt->execute()) {
-            $error = $stmt->errorInfo();
-
-            throw new \Exception($error[2], $error[1]);
-        }
-
-        $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-        if (!$row) {
-            return;
         }
 
         return \Model\Category::initWithDBState($row);

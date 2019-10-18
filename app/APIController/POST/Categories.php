@@ -37,7 +37,7 @@ class Categories extends \APIController\APIController
 
             foreach ($category_titles as $category_title) {
                 $category_title = trim($category_title);
-                $category = (new \Query\Category($lang))->findWithTitle($category_title);
+                $category = (new \Query\Category($lang))->categoryWithTitle($category_title);
                 if ($category === null) {
                     $category = new \Model\Category();
                     $category->title = $category_title;

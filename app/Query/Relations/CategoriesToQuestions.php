@@ -61,7 +61,7 @@ class CategoriesToQuestions extends \Query\Query
         \Validator\Category::validateTitle($category_title);
         \Validator\Relation\CategoryToQuestion::validateQuestionID($question_id);
 
-        $category = (new \Query\Category($this->lang))->findWithTitle($category_title);
+        $category = (new \Query\Category($this->lang))->categoryWithTitle($category_title);
         if ($category === null) {
             return;
         }
