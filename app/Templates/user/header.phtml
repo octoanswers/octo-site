@@ -21,7 +21,7 @@
     <?php if ($this->user->site) : ?>
         <div class="mt-2">
             <i class="material-icons md-18 text-secondary">link</i>
-            <a href="<?= $this->user->site ?>">
+            <a target="_blank" rel="nofollow" href="<?= $this->user->site ?>">
                 <?= parse_url($this->user->site, PHP_URL_HOST) ?>
             </a>
         </div>

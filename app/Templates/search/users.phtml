@@ -21,7 +21,7 @@
 
                         <?php if ($user->site) : ?>
                             <span class="font-weight-bold mx-1 text-dark">&middot;</span>
-                            <a href="<?= $user->site ?>">
+                            <a target="_blank" rel="nofollow" href="<?= $user->site ?>">
                                 <?= parse_url($user->site, PHP_URL_HOST) ?>
                             </a>
                         <?php endif; ?>
