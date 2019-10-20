@@ -5,8 +5,8 @@ namespace Tests\APIController\PUT\Questions\ID\Categories;
 class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'categories', 'activities', 'er_categories_questions'],
-        'users' => ['users']
+        'ru'    => ['questions', 'categories', 'activities', 'er_categories_questions'],
+        'users' => ['users'],
     ];
 
     public function test__Add_one_category()
@@ -14,7 +14,7 @@ class Test extends \Test\TestCase\Frontend
         $uri = '/api/v1/ru/questions/22/categories.json';
         $form_data = [
             'new_categories' => 'Медицина,Гинекология',
-            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'api_key'        => '7d21ebdbec3d4e396043c96b6ab44a6e',
         ];
 
         $request = $this->createRequest('PUT', $uri);

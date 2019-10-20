@@ -13,9 +13,9 @@ class Test extends \Test\TestCase\Frontend
     {
         $uri = '/api/v1/ru/questions/15/answer.json';
         $form_data = [
-            'answer_text' => 'В Екатеринбурге.',
+            'answer_text'     => 'В Екатеринбурге.',
             'changes_comment' => 'Правка сделана в 09-28',
-            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+            'user_api_key'    => '34b88c8f1ed16fdcc18d93667c886fcc',
         ];
 
         $request = $this->createRequest('PUT', $uri);
@@ -47,9 +47,9 @@ class Test extends \Test\TestCase\Frontend
     {
         $uri = '/api/v1/ru/questions/21/answer.json';
         $form_data = [
-            'answer_text' => 'Нет, птицы не делают игры.',
+            'answer_text'     => 'Нет, птицы не делают игры.',
             'changes_comment' => 'Some fixes for Q15',
-            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+            'user_api_key'    => '34b88c8f1ed16fdcc18d93667c886fcc',
         ];
 
         $request = $this->createRequest('PUT', $uri);
@@ -81,7 +81,7 @@ class Test extends \Test\TestCase\Frontend
     {
         $uri = '/api/v1/ru/questions/15/answer.json';
         $form_data = [
-            'answer_text' => 'В Краснодаре.',
+            'answer_text'  => 'В Краснодаре.',
             'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
         ];
 
