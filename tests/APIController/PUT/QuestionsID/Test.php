@@ -5,8 +5,8 @@ namespace Tests\APIController\PUT\QuestionsID;
 class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['questions', 'revisions', 'activities'],
-        'users' => ['users']
+        'ru'    => ['questions', 'revisions', 'activities'],
+        'users' => ['users'],
     ];
 
     public function testFullParams()
