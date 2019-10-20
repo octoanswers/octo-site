@@ -4,13 +4,22 @@ namespace Tests\APIController\PUT\Questions\ID\Categories;
 
 class Test extends \Test\TestCase\Frontend
 {
-    protected $setUpDB = ['ru' => ['questions', 'categories', 'activities', 'er_categories_questions'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['questions', 'categories', 'activities', 'er_categories_questions'],
+        'users' => ['users']
+    ];
 
-    public function test_Add_one_category()
+    public function test__Add_one_category()
     {
-        $uri = '/api/v1/ru/questions/22/categories.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_categories=' . urlencode('Медицина,Гинекология');
+        $uri = '/api/v1/ru/questions/22/categories.json';
+        $form_data = [
+            'new_categories' => 'Медицина,Гинекология',
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+        ];
 
         $request = $this->createRequest('PUT', $uri);
+        $request = $this->withFormData($request, $form_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -48,9 +57,14 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Categories_param_not_set()
     {
-        $uri = '/api/v1/ru/questions/7/categories.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e';
+        $uri = '/api/v1/ru/questions/22/categories.json';
+        $form_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+        ];
 
         $request = $this->createRequest('PUT', $uri);
+        $request = $this->withFormData($request, $form_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

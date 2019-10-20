@@ -12,9 +12,9 @@ $('#form__update_answer').submit(function (e) {
     var api_key = $.cookie('u_api_key');
     var url = '/api/v1/' + lang + '/questions/' + answer_id + '/answer.json';
 
-    // console.log("answer_id: " + answer_id + "\n");
-    // console.log("answer_text: " + answer_text + "\n");
-    // console.log("changes_comment: " + changes_comment + "\n");
+    console.log("answer_id: " + answer_id + "\n");
+    console.log("answer_text: " + answer_text + "\n");
+    console.log("changes_comment: " + changes_comment + "\n");
     console.log("api_key: " + api_key + "\n");
     console.log("PUT url: " + url + "\n");
 

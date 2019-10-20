@@ -4,13 +4,21 @@ namespace Tests\APIController\PUT\QuestionsID;
 
 class Test extends \Test\TestCase\Frontend
 {
-    protected $setUpDB = ['ru' => ['questions', 'revisions', 'activities'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['questions', 'revisions', 'activities'],
+        'users' => ['users']
+    ];
 
     public function testFullParams()
     {
-        $queryString = '/api/v1/ru/questions/12.json?question_title=' . urlencode('Где мой новый ответ?');
+        $uri = '/api/v1/ru/questions/12.json';
+        $form_data = [
+            'question_title' => 'Где мой новый ответ?',
+        ];
 
-        $request = $this->createRequest('PUT', $queryString);
+        $request = $this->createRequest('PUT', $uri);
+        $request = $this->withFormData($request, $form_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

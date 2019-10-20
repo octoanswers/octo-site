@@ -12,11 +12,11 @@ class Categories extends \APIController\APIController
         try {
             $lang = $request->getAttribute('lang');
 
-            $query_params = $request->getQueryParams();
-            $api_key = (string) $query_params['api_key'];
+            $post_params = $request->getParsedBody();
+            $api_key = (string) $post_params['api_key'];
             $question_id = (int) $request->getAttribute('id');
 
-            $new_categories_string = urldecode((string) @$query_params['new_categories']);
+            $new_categories_string = urldecode((string) @$post_params['new_categories']);
 
             if (strlen($new_categories_string) == 0) {
                 throw new \Exception('Categories param not set', 0);

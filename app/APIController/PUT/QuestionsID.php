@@ -13,8 +13,8 @@ class QuestionsID extends \APIController\APIController
             $lang = $request->getAttribute('lang');
             $question_ID = (int) $request->getAttribute('id');
 
-            $query_params = $request->getQueryParams();
-            $question_title = (string) $query_params['question_title'];
+            $post_params = $request->getParsedBody();
+            $question_title = (string) $post_params['question_title'];
 
             \Validator\Question::validateID($question_ID);
 

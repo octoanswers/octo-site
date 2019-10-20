@@ -13,12 +13,12 @@ class QuestionsIDAnswer extends \APIController\APIController
             $lang = $request->getAttribute('lang');
             $answer_id = (int) $request->getAttribute('id');
 
-            $query_params = $request->getQueryParams();
-            $new_answer_text = (string) $query_params['answer_text'];
-            $revision_comment = (string) @$query_params['changes_comment'];
-            $revision_comment = strlen($revision_comment) ? $revision_comment : null;
+            $post_params = $request->getParsedBody();
+            $new_answer_text = (string) $post_params['answer_text']; //
+            $revision_comment = (string) @$post_params['changes_comment'];
+            $user_api_key = (string) $post_params['user_api_key'];
 
-            $user_api_key = (string) $query_params['user_api_key'];
+            $revision_comment = strlen($revision_comment) ? $revision_comment : null;
 
             // Check user
 

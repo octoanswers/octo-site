@@ -8,9 +8,16 @@ class AnswerIDTest extends \Test\TestCase\Frontend
 
     public function testQuestionIDEqualZero()
     {
-        $queryString = '/api/v1/ru/questions/0/answer.json?answer_text=' . urlencode('In Ekaterinburg.') . 'revision_comment=' . urlencode('Some fixes for Q15') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
+        $uri = '/api/v1/ru/questions/0/answer.json';
+        $form_data = [
+            'answer_text' => urlencode('In Ekaterinburg.'),
+            'changes_comment' => urlencode('Some fixes for Q15'),
+            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+        ];
 
-        $request = $this->createRequest('PUT', $queryString);
+        $request = $this->createRequest('PUT', $uri);
+        $request = $this->withFormData($request, $form_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -25,9 +32,16 @@ class AnswerIDTest extends \Test\TestCase\Frontend
 
     public function test_questionIDBelowZero()
     {
-        $queryString = '/api/v1/ru/questions/-1/answer.json?answer_text=' . urlencode('In Ekaterinburg.') . 'revision_comment=' . urlencode('Some fixes for Q15') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
+        $uri = '/api/v1/ru/questions/-1/answer.json';
+        $form_data = [
+            'answer_text' => urlencode('In Ekaterinburg.'),
+            'changes_comment' => urlencode('Some fixes for Q15'),
+            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+        ];
 
-        $request = $this->createRequest('PUT', $queryString);
+        $request = $this->createRequest('PUT', $uri);
+        $request = $this->withFormData($request, $form_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

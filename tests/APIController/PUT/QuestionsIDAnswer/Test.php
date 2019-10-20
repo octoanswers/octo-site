@@ -11,9 +11,16 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__New_answer_with_full_params()
     {
-        $query_URI = '/api/v1/ru/questions/15/answer.json?answer_text=' . urlencode('В Екатеринбурге.') . '&changes_comment=' . urlencode('Правка сделана в 09-28') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
+        $uri = '/api/v1/ru/questions/15/answer.json';
+        $form_data = [
+            'answer_text' => 'В Екатеринбурге.',
+            'changes_comment' => 'Правка сделана в 09-28',
+            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+        ];
 
-        $request = $this->createRequest('PUT', $query_URI);
+        $request = $this->createRequest('PUT', $uri);
+        $request = $this->withFormData($request, $form_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -38,9 +45,16 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Replace_answer_with_full_params()
     {
-        $queryString = '/api/v1/ru/questions/21/answer.json?answer_text=' . urlencode('Нет, птицы не делают игры.') . '&changes_comment=' . urlencode('Some fixes for Q15') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
+        $uri = '/api/v1/ru/questions/21/answer.json';
+        $form_data = [
+            'answer_text' => 'Нет, птицы не делают игры.',
+            'changes_comment' => 'Some fixes for Q15',
+            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+        ];
 
-        $request = $this->createRequest('PUT', $queryString);
+        $request = $this->createRequest('PUT', $uri);
+        $request = $this->withFormData($request, $form_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -65,9 +79,15 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__New_answer_without_revision_comment()
     {
-        $queryString = '/api/v1/ru/questions/15/answer.json?answer_text=' . urlencode('В Краснодаре.') . '&user_api_key=34b88c8f1ed16fdcc18d93667c886fcc';
+        $uri = '/api/v1/ru/questions/15/answer.json';
+        $form_data = [
+            'answer_text' => 'В Краснодаре.',
+            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+        ];
 
-        $request = $this->createRequest('PUT', $queryString);
+        $request = $this->createRequest('PUT', $uri);
+        $request = $this->withFormData($request, $form_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
