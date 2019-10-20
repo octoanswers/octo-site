@@ -10,9 +10,9 @@ class AnswerIDTest extends \Test\TestCase\Frontend
     {
         $uri = '/api/v1/ru/questions/0/answer.json';
         $form_data = [
-            'answer_text' => urlencode('In Ekaterinburg.'),
+            'answer_text'     => urlencode('In Ekaterinburg.'),
             'changes_comment' => urlencode('Some fixes for Q15'),
-            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+            'user_api_key'    => '34b88c8f1ed16fdcc18d93667c886fcc',
         ];
 
         $request = $this->createRequest('PUT', $uri);
@@ -34,9 +34,9 @@ class AnswerIDTest extends \Test\TestCase\Frontend
     {
         $uri = '/api/v1/ru/questions/-1/answer.json';
         $form_data = [
-            'answer_text' => urlencode('In Ekaterinburg.'),
+            'answer_text'     => urlencode('In Ekaterinburg.'),
             'changes_comment' => urlencode('Some fixes for Q15'),
-            'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
+            'user_api_key'    => '34b88c8f1ed16fdcc18d93667c886fcc',
         ];
 
         $request = $this->createRequest('PUT', $uri);
