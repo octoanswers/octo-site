@@ -47,4 +47,24 @@ class Question extends \Query\Query
 
         return \Model\Question::initWithDBState($row);
     }
+
+    public function randomQuestion(): \Model\Question
+    {
+        $pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
+
+        $stmt = $pdo->prepare('SELECT * FROM questions ORDER BY RAND() LIMIT 1');
+
+        if (!$stmt->execute()) {
+            $error = $stmt->errorInfo();
+
+            throw new \Exception($error[2], $error[1]);
+        }
+
+        $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+        if (!$row) {
+            throw new \Exception('Random question not selected', 1);
+        }
+
+        return \Model\Question::initWithDBState($row);
+    }
 }

@@ -13,12 +13,8 @@ class Random extends \PageController\PageController
 
         $this->lang = $lang;
 
-        $questions_count = (new \Query\QuestionsCount($this->lang))->questionsLastID();
-
-        $random_question_ID = mt_rand(1, $questions_count);
-
         try {
-            $question = (new \Query\Question($this->lang))->questionWithID($random_question_ID);
+            $question = (new \Query\Question($this->lang))->randomQuestion();
         } catch (\Throwable $e) {
             return (new \PageController\Error\InternalServerError())->handle($request, $response);
         }
