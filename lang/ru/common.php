@@ -9,11 +9,11 @@ return [
         'save'     => 'Сохранить',
         'unfollow' => 'Отписаться',
     ],
-    'answeropedia'    => 'Ансверопедия',
-    'choice_minutes'  => 'минута|минуты|минут',
+    'answeropedia'         => 'Ансверопедия',
+    'choice_minutes'       => 'минута|минуты|минут',
     'choice_contributors'  => 'автор|автора|авторов',
-    'page'            => 'Страница',
-    'other_languages' => [
+    'page'                 => 'Страница',
+    'other_languages'      => [
         'all_languages' => 'Все языки',
         'english'       => 'Английский',
         'russian'       => 'Русский',

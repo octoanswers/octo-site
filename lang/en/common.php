@@ -9,11 +9,11 @@ return [
         'save'     => 'Save',
         'unfollow' => 'Unfollow',
     ],
-    'answeropedia'    => 'Answeropedia',
-    'choice_minutes'  => 'minute|minutes',
+    'answeropedia'         => 'Answeropedia',
+    'choice_minutes'       => 'minute|minutes',
     'choice_contributors'  => 'contributor|contributors',
-    'page'            => 'Page',
-    'other_languages' => [
+    'page'                 => 'Page',
+    'other_languages'      => [
         'all_languages' => 'All languages',
         'english'       => 'English',
         'russian'       => 'Russian',
