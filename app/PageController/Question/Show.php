@@ -71,8 +71,6 @@ class Show extends \PageController\PageController
         }
 
         $this->template = 'question';
-        $this->htmlAttr = 'itemscope itemtype="http://schema.org/QAPage"';
-        $this->bodyAttr = 'itemscope itemtype="http://schema.org/Question"';
         $this->pageTitle = $this->question->title . ' – ' . __('common.answeropedia');
         $this->pageDescription = $this->_get_page_description();
         $this->canonicalURL = $this->question->getURL($this->lang);

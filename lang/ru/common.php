@@ -10,7 +10,8 @@ return [
         'unfollow' => 'Отписаться',
     ],
     'answeropedia'    => 'Ансверопедия',
-    'minutes_choice'  => 'минута|минуты|минут',
+    'choice_minutes'  => 'минута|минуты|минут',
+    'choice_contributors'  => 'автор|автора|авторов',
     'page'            => 'Страница',
     'other_languages' => [
         'all_languages' => 'Все языки',

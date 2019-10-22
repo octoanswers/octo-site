@@ -13,7 +13,7 @@ return [
     'add_picture'           => 'Добавить картинку',
     'answer_contributors'   => 'Авторы ответа',
     'block__about_question' => [
-        'answer_updated' => 'Ответ обновлен',
+        'answer_updated' => 'Обновлен',
         'title'          => 'О вопросе',
     ],
     'block__categories' => [

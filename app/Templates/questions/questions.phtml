@@ -69,7 +69,7 @@
                 <?php if (strlen($question->answer->text)) : ?>
                     <span class="semi-small text-black-50">
                         <i class="material-icons md-14">subject</i>
-                        <?= $question->getMinutesToRead() ?>&nbsp;<?= trans_choice('common.minutes_choice', $question->getMinutesToRead()); ?>
+                        <?= $question->getMinutesToRead() ?>&nbsp;<?= trans_choice('common.choice_minutes', $question->getMinutesToRead()); ?>
                     </span>
                 <?php endif; ?>
                 <!-- / time to read -->

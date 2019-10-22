@@ -5,3 +5,15 @@
     </h1>
 </div>
 <!-- / header title -->
+
+<!-- Microdata: question text -->
+<div hidden itemprop="text">
+    <?= $this->question->title ?>
+</div>
+<!-- / Microdata: question text -->
+
+<!-- @TODO Microdata: question author -->
+<div hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span itemprop="name">Answeropedia</span>
+</div>
+<!-- / Microdata: question author -->

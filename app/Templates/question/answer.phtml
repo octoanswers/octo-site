@@ -1,5 +1,32 @@
 <?php if (isset($this->question->answer) && $this->question->answer->text) : ?>
-    <div class="mt-4">
-        <?= $this->formattedAnswerText ?>
+    <div class="mt-4" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+
+        <div itemprop="text">
+            <?= $this->formattedAnswerText ?>
+        </div>
+
+        <!-- Microdata: answer autor -->
+        <?php if (count($this->contributors_top)) : ?>
+            <div hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name"><?= $this->contributors_top[0]->name ?></span>
+            </div>
+        <?php endif; ?>
+        <!-- / Microdata: answer autor -->
+
+        <!-- Microdata: answer dateCreated -->
+        <time hidden itemprop="dateCreated" datetime="<?= $this->question->answer->updatedAt ?>"><?= $this->question->answer->updatedAt ?></time>
+        <!-- / Microdata: answer dateCreated -->
+
+        <!-- Microdata: answer url -->
+        <?php if (isset($this->canonicalURL)) : ?>
+            <a hidden itemprop="url" href="<?= $this->canonicalURL ?>#acceptedAnswer">Answer Link</a>
+        <?php endif; ?>
+        <!-- / Microdata: answer url -->
+
+        <!-- @TODO Replace to correct value -->
+        <!-- Microdata: answer upvoteCount -->
+        <div hidden><span itemprop="upvoteCount"><?= count($this->contributors) * $this->question->getMinutesToRead() ?></span> votes</div>
+        <!-- / Microdata: answer upvoteCount -->
+
     </div>
 <?php endif; ?>

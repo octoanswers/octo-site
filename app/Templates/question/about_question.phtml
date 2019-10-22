@@ -5,13 +5,31 @@
         <?= __('page_question.block__about_question.title') ?>
     </div>
 
-    <!-- updated_at -->
-    <?php if (strlen($this->question->answer->text)) : ?>
-        <div class="small text-black-50">
-            <?= __('page_question.block__about_question.answer_updated') . ': ' . \Humanizer\DateTime::humanizeTimestamp($this->lang, $this->question->answer->updatedAt) ?>
-        </div>
-    <?php endif; ?>
-    <!-- / updated_at -->
+    <ul class="list-unstyled semi-small text-black-50 mb-0">
+
+        <li class="my-2">
+            <span itemprop="answerCount"><?= count($this->contributors) ?></span> <?= trans_choice('common.choice_contributors', $this->contributors); ?>
+        </li>
+
+        <!-- updated_at -->
+        <?php if (strlen($this->question->answer->text)) : ?>
+            <li class="my-2">
+                <?= __('page_question.block__about_question.answer_updated') . ' ' . \Humanizer\DateTime::humanizeTimestamp($this->lang, $this->question->answer->updatedAt) ?>
+            </li>
+        <?php endif; ?>
+        <!-- / updated_at -->
+
+        <!-- @TODO Replace to correct value -->
+        <!-- Microdata: question dateCreated -->
+        <time hidden itemprop="dateCreated" datetime="<?= $this->question->answer->updatedAt ?>"><?= $this->question->answer->updatedAt ?></time>
+        <!-- / Microdata: question dateCreated -->
+
+        <!-- @TODO Replace to correct value -->
+        <!-- Microdata: question upvoteCount -->
+        <div hidden><span itemprop="upvoteCount"><?= count($this->contributors) * $this->question->getMinutesToRead() ?></span> votes</div>
+        <!-- / Microdata: question upvoteCount -->
+
+    </ul>
 
 </div>
 <!-- / block__about_question -->

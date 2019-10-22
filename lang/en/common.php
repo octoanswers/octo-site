@@ -10,7 +10,8 @@ return [
         'unfollow' => 'Unfollow',
     ],
     'answeropedia'    => 'Answeropedia',
-    'minutes_choice'  => 'minute|minutes',
+    'choice_minutes'  => 'minute|minutes',
+    'choice_contributors'  => 'contributor|contributors',
     'page'            => 'Page',
     'other_languages' => [
         'all_languages' => 'All languages',

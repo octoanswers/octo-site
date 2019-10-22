@@ -46,7 +46,7 @@
 <?php
 if (isset($this->open_graph) && count($this->open_graph)) {
     foreach ($this->open_graph as $key => $value) {
-        echo '<meta property="og:' . $key . '" content="' . $value . '"' . "\n";
+        echo '<meta property="og:' . $key . '" content="' . $value . '">' . "\n";
     }
 } ?>
 

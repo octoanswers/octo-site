@@ -13,7 +13,7 @@ return [
     'add_picture'           => 'Add picture',
     'answer_contributors'   => 'Answer contributors',
     'block__about_question' => [
-        'answer_updated' => 'Answer updated',
+        'answer_updated' => 'Updated',
         'title'          => 'About question',
     ],
     'block__categories' => [

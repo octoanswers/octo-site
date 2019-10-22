@@ -1,49 +1,53 @@
 <!DOCTYPE html>
-<html lang="<?= $this->lang ?>" <?= isset($this->htmlAttr) ? $this->htmlAttr : '' ?>>
+<html lang="<?= $this->lang ?>">
 
 <head>
     <?php require TEMPLATE_PATH . '/_common/head.phtml'; ?>
 </head>
 
-<body <?= isset($this->bodyAttr) ? ' ' . $this->bodyAttr : '' ?>>
+<body itemscope itemtype="https://schema.org/QAPage">
 
     <?php require_once TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
 
-    <div class="container mt-4">
-        <div class="row">
+    <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
 
-            <div class="d-none d-lg-block col-12 col-lg-2">
-                <?php require_once TEMPLATE_PATH . '/_common/left/sections.phtml'; ?>
-            </div>
+        <div class="container mt-4">
+            <div class="row">
 
-            <!-- main_column -->
-            <div class="col-12 col-lg-7">
-                <?php require_once __DIR__ . '/redirected.phtml'; ?>
-
-                <div class="border rounded bg-white p-3">
-                    <?php require_once __DIR__ . '/categories_top.phtml'; ?>
-                    <?php require_once __DIR__ . '/title.phtml'; ?>
-                    <?php require_once __DIR__ . '/actions_top.phtml' ?>
-                    <?php require_once __DIR__ . '/image.phtml' ?>
-                    <?php require_once __DIR__ . '/lure_be_first_contributor.phtml' ?>
-                    <?php require_once __DIR__ . '/answer.phtml' ?>
-                    <?php require_once __DIR__ . '/actions_bottom.phtml' ?>
+                <div class="d-none d-lg-block col-12 col-lg-2">
+                    <?php require_once TEMPLATE_PATH . '/_common/left/sections.phtml'; ?>
                 </div>
 
-                <?php require_once __DIR__ . '/categories.phtml' ?>
-                <?php require_once __DIR__ . '/subscribe.phtml'; ?>
-                <?php require_once __DIR__ . '/related_questions.phtml'; ?>
-                <?php require_once __DIR__ . '/contributors_full.phtml'; ?>
-            </div>
-            <!-- / main_column -->
+                <!-- main_column -->
+                <div class="col-12 col-lg-7">
+                    <?php require_once __DIR__ . '/redirected.phtml'; ?>
 
-            <div class="d-none d-md-block col-lg-3">
-                <?php require_once __DIR__ . '/contributors_top.phtml'; ?>
-                <?php require_once __DIR__ . '/about_question.phtml'; ?>
-                <?php require_once __DIR__ . '/about_answeropedia.phtml'; ?>
-            </div>
+                    <div class="border rounded bg-white p-3">
+                        <?php require_once __DIR__ . '/categories_top.phtml'; ?>
+                        <?php require_once __DIR__ . '/title.phtml'; ?>
+                        <?php require_once __DIR__ . '/actions_top.phtml' ?>
+                        <?php require_once __DIR__ . '/image.phtml' ?>
+                        <?php require_once __DIR__ . '/lure_be_first_contributor.phtml' ?>
+                        <?php require_once __DIR__ . '/answer.phtml' ?>
+                        <?php require_once __DIR__ . '/actions_bottom.phtml' ?>
+                    </div>
 
+                    <?php require_once __DIR__ . '/categories.phtml' ?>
+                    <?php require_once __DIR__ . '/subscribe.phtml'; ?>
+                    <?php require_once __DIR__ . '/related_questions.phtml'; ?>
+                    <?php require_once __DIR__ . '/contributors_full.phtml'; ?>
+                </div>
+                <!-- / main_column -->
+
+                <div class="d-none d-md-block col-lg-3">
+                    <?php require_once __DIR__ . '/contributors_top.phtml'; ?>
+                    <?php require_once __DIR__ . '/about_question.phtml'; ?>
+                    <?php require_once __DIR__ . '/about_answeropedia.phtml'; ?>
+                </div>
+
+            </div>
         </div>
+
     </div>
 
     <?php require TEMPLATE_PATH . '/_common/footer.phtml'; ?>
