@@ -22,7 +22,7 @@
                     <p class="small text-black-50 mb-0">
                         <?= $contributor->signature ? $contributor->getShortSignature() : $contributor->username ?>
                         <?php if ($contributor->site) : ?>
-                            <a href="<?= $contributor->site ?>">
+                            <a target="_blank" rel="nofollow" href="<?= $contributor->site ?>">
                                 <?= parse_url($contributor->site, PHP_URL_HOST) ?>
                             </a>
                         <?php endif; ?>
