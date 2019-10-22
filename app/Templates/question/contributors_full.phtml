@@ -6,8 +6,8 @@
 		</div>
 
 		<?php foreach ($this->contributors as $contributor) : ?>
-			<a class="d-inline-block wh-48px mr-2 mb-2" href="<?= $contributor->getURL($this->lang) ?>">
-				<img class="wh-48px rounded-circle" src="<?= $contributor->getAvatarURLMedium() ?>" alt="<?= $contributor->name ?>">
+			<a class="d-inline-block wh-40px mr-2 mb-2" href="<?= $contributor->getURL($this->lang) ?>">
+				<img class="wh-40px rounded" src="<?= $contributor->getAvatarURLMedium() ?>" alt="<?= $contributor->name ?>">
 			</a>
 		<?php endforeach; ?>
 

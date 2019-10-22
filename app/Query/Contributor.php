@@ -28,10 +28,7 @@ class Contributor extends \Query\Query
         return $user;
     }
 
-    /**
-     * @return User_Model|null
-     */
-    public function findAnswerFirstEditor(int $answerID)
+    public function findAnswerFirstEditor(int $answerID): ?\Model\User
     {
         \Validator\Answer::validateID($answerID);
 
@@ -46,7 +43,7 @@ class Contributor extends \Query\Query
 
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
-            return;
+            return null;
         }
 
         $userID = $row['rev_user_id'];

@@ -48,16 +48,18 @@ class Contributors extends \Query\Query
             $contributor->username = $user->username;
             $contributor->name = $user->name;
             $contributor->email = $user->email;
+            $contributor->is_avatar_uploaded = $user->is_avatar_uploaded;
             $contributor->createdAt = $user->createdAt;
-            $contributor->contribution = $contribution;
-            $contributor->insertionsCount = $insertionsCount;
-            $contributor->deletionsCount = $deletionsCount;
             if ($user->signature) {
                 $contributor->signature = $user->signature;
             }
             if ($user->site) {
                 $contributor->site = $user->site;
             }
+
+            $contributor->contribution = $contribution;
+            $contributor->insertionsCount = $insertionsCount;
+            $contributor->deletionsCount = $deletionsCount;
 
             $contributors[] = $contributor;
         }

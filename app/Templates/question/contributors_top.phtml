@@ -10,11 +10,11 @@
         </div>
 
         <?php foreach ($this->contributors_top as $contributor) : ?>
-            <div class="media position-relative mb-4">
-                <a class="wh-40px mt-1 mr-3 rounded" href="<?= $contributor->getURL($this->lang) ?>">
-                    <img src="<?= $contributor->getAvatarURLMedium() ?>" class="wh-40px rounded-circle" alt="<?= $contributor->name ?>">
+            <div class="media position-relative mb-3">
+                <a class="wh-40px mt-1 mr-2 rounded" href="<?= $contributor->getURL($this->lang) ?>">
+                    <img src="<?= $contributor->getAvatarURLSmall() ?>" class="wh-40px rounded" alt="<?= $contributor->name ?>">
                 </a>
-                <div class="media-body">
+                <div class="media-body pl-1">
                     <a class="mt-0 mr-2 font-weight-bold text-dark text-decoration-none" href="<?= $contributor->getURL($this->lang) ?>">
                         <?= $contributor->name ?>
                     </a>
