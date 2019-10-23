@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Contributor\findFirstEditor;
+namespace Test\Query\Answer\findFirstEditor;
 
 class Test extends \Test\TestCase\DB
 {

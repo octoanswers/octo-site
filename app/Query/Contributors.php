@@ -7,8 +7,8 @@ class Contributors extends \Query\Query
     public function findAnswerContributors(int $answerID): array
     {
         $revisions = (new \Query\Revisions($this->lang))->revisionsForAnswerWithID($answerID);
-        $contributions = [];
 
+        $contributions = [];
         foreach ($revisions as $revision) {
             $revUserID = $revision->userID;
             if (isset($contributions[$revUserID])) {
@@ -23,47 +23,30 @@ class Contributors extends \Query\Query
         }
 
         $contributorsData = [];
-        foreach ($contributions as $key => $value) {
-            $contributorsData[] = [
-                'user_id'      => $key,
-                'contribution' => $value['total'],
-                'plus'         => $value['plus'],
-                'minus'        => $value['minus'],
-            ];
+        foreach ($contributions as $userID => $value) {
+
+            $contribution = new \Model\ContributionToAnswer();
+            $contribution->userID = $userID;
+            $contribution->answerID = $answerID;
+            $contribution->contribution = $value['total'];
+            $contribution->insertionsCount = $value['plus'];
+            $contribution->deletionsCount = $value['minus'];
+
+            $contributorsData[] = $contribution;
         }
 
-        $sortedContributorsData = \Helper\Sort\Contributors::sortByContributions($contributorsData);
+        $sorted_contributions = \Helper\Sort\Contributions::sortByContributions($contributorsData);
 
-        $contributors = [];
-        foreach ($sortedContributorsData as $contributorData) {
-            $userID = $contributorData['user_id'];
-            $contribution = $contributorData['contribution'];
-            $insertionsCount = $contributorData['plus'];
-            $deletionsCount = $contributorData['minus'];
+        $sorted_contributors = [];
+        foreach ($sorted_contributions as $user_contribution) {
+            $userID = $user_contribution->userID;
 
             $user = (new \Query\User())->userWithID($userID);
+            $user->contributionToAnswer = $user_contribution;
 
-            $contributor = new \Model\User\Contributor();
-            $contributor->id = $user->id;
-            $contributor->username = $user->username;
-            $contributor->name = $user->name;
-            $contributor->email = $user->email;
-            $contributor->is_avatar_uploaded = $user->is_avatar_uploaded;
-            $contributor->createdAt = $user->createdAt;
-            if ($user->signature) {
-                $contributor->signature = $user->signature;
-            }
-            if ($user->site) {
-                $contributor->site = $user->site;
-            }
-
-            $contributor->contribution = $contribution;
-            $contributor->insertionsCount = $insertionsCount;
-            $contributor->deletionsCount = $deletionsCount;
-
-            $contributors[] = $contributor;
+            $sorted_contributors[] = $user;
         }
 
-        return $contributors;
+        return $sorted_contributors;
     }
 }

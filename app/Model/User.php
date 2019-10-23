@@ -18,4 +18,9 @@ class User extends Model
     public $apiKey; // string
     public $is_avatar_uploaded = false; // bool
     public $createdAt;
+
+    /**
+     * Property used only on related to answer context.
+     */
+    public $contributionToAnswer = null; // \Model\ContributionToAnswer
 }

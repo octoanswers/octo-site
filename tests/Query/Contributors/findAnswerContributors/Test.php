@@ -4,23 +4,32 @@ namespace Test\Query\Contributors\findAnswerContributors;
 
 class Test extends \Test\TestCase\DB
 {
-    protected $setUpDB = ['ru' => ['revisions', 'questions'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['revisions', 'questions'],
+        'users' => ['users']
+    ];
 
     public function test__Contributors_exists()
     {
         $contributors = (new \Query\Contributors('ru'))->findAnswerContributors(4);
 
-        $this->assertEquals(4, $contributors[0]->id);
-        $this->assertEquals('Известный писатель', $contributors[0]->signature);
-        $this->assertEquals(138, $contributors[0]->contribution);
-        $this->assertEquals(136, $contributors[0]->insertionsCount);
-        $this->assertEquals(2, $contributors[0]->deletionsCount);
+        $first_contributor = $contributors[0];
 
-        $this->assertEquals(6, $contributors[1]->id);
-        $this->assertEquals(null, $contributors[1]->signature);
-        $this->assertEquals(103, $contributors[1]->contribution);
-        $this->assertEquals(68, $contributors[1]->insertionsCount);
-        $this->assertEquals(35, $contributors[1]->deletionsCount);
+        $this->assertEquals(4, $first_contributor->id);
+        $this->assertEquals('Известный писатель', $first_contributor->signature);
+
+        $this->assertEquals(138, $first_contributor->contributionToAnswer->contribution);
+        $this->assertEquals(136, $first_contributor->contributionToAnswer->insertionsCount);
+        $this->assertEquals(2, $first_contributor->contributionToAnswer->deletionsCount);
+
+        $second_contributor = $contributors[1];
+
+        $this->assertEquals(6, $second_contributor->id);
+        $this->assertEquals(null, $second_contributor->signature);
+
+        $this->assertEquals(103, $second_contributor->contributionToAnswer->contribution);
+        $this->assertEquals(68, $second_contributor->contributionToAnswer->insertionsCount);
+        $this->assertEquals(35, $second_contributor->contributionToAnswer->deletionsCount);
 
         $this->assertEquals(3, count($contributors));
     }
