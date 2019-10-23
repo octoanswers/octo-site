@@ -47,7 +47,7 @@ class Show extends \PageController\PageController
 
         foreach ($questions as $question) {
             $contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
-            $last_contributor = (new \Query\Contributor($this->lang))->findAnswerLastEditor($question->id);
+            $last_contributor = (new \Query\Answer($this->lang))->findLastEditor($question->id);
 
             $categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question->id);
             if (count($categories) > 2) {

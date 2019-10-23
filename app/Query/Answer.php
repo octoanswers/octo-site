@@ -2,13 +2,13 @@
 
 namespace Query;
 
-class Contributor extends \Query\Query
+class Answer extends \Query\Query
 {
-    public function findAnswerLastEditor(int $answerID): ?\Model\User
+    public function findFirstEditor(int $answerID): ?\Model\User
     {
         \Validator\Answer::validateID($answerID);
 
-        $sql = 'SELECT * FROM revisions WHERE rev_answer_id = :answer_id ORDER BY rev_created_at DESC LIMIT 1';
+        $sql = 'SELECT * FROM revisions WHERE rev_answer_id = :answer_id ORDER BY rev_created_at ASC LIMIT 1';
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':answer_id', $answerID, \PDO::PARAM_INT);
         if (!$stmt->execute()) {
@@ -28,11 +28,12 @@ class Contributor extends \Query\Query
         return $user;
     }
 
-    public function findAnswerFirstEditor(int $answerID): ?\Model\User
+    public function findLastEditor(int $answerID): ?\Model\User
     {
         \Validator\Answer::validateID($answerID);
 
-        $sql = 'SELECT * FROM revisions WHERE rev_answer_id = :answer_id ORDER BY rev_created_at ASC LIMIT 1';
+        $sql = 'SELECT * FROM revisions WHERE rev_answer_id = :answer_id ORDER BY rev_created_at DESC LIMIT 1';
+
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':answer_id', $answerID, \PDO::PARAM_INT);
         if (!$stmt->execute()) {
