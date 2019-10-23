@@ -18,7 +18,7 @@ class RecentlyUpdated extends \PageController\PageController
         $this->questions = (new \Query\Questions($this->lang))->findRecentlyUpdated($this->page - 1);
 
         // foreach ($this->questions as $question) {
-        //     $contributors_array = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
+        //     $contributors_array = (new \Query\Answer($this->lang))->findContributors($question->id);
         //     foreach ($contributors_array as $contributor) {
         //         $this->contributors[$question->id][] = $contributor;
         //     }

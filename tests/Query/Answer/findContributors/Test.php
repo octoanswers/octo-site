@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Query\Contributors\findAnswerContributors;
+namespace Test\Query\Answer\findContributors;
 
 class Test extends \Test\TestCase\DB
 {
@@ -11,7 +11,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Contributors_exists()
     {
-        $contributors = (new \Query\Contributors('ru'))->findAnswerContributors(4);
+        $contributors = (new \Query\Answer('ru'))->findContributors(4);
 
         $first_contributor = $contributors[0];
 
@@ -36,7 +36,7 @@ class Test extends \Test\TestCase\DB
 
     public function test__Contributors_not_exists()
     {
-        $contributors = (new \Query\Contributors('ru'))->findAnswerContributors(28);
+        $contributors = (new \Query\Answer('ru'))->findContributors(28);
 
         $this->assertEquals(0, count($contributors));
     }

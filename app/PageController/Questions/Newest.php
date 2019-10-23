@@ -58,7 +58,7 @@ class Newest extends \PageController\PageController
         $questions = (new \Query\Questions($this->lang))->findNewestWithAnswer($this->page);
 
         foreach ($questions as $question) {
-            $contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
+            $contributors = (new \Query\Answer($this->lang))->findContributors($question->id);
 
             $categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question->id);
             if (count($categories) > 2) {

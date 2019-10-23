@@ -110,7 +110,7 @@ class Show extends \PageController\PageController
         foreach ($category_question_relations as $category_question_er) {
             $question = (new \Query\Question($this->lang))->questionWithID($category_question_er->questionID);
 
-            $contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
+            $contributors = (new \Query\Answer($this->lang))->findContributors($question->id);
 
             $categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question->id);
             if (count($categories) > 2) {

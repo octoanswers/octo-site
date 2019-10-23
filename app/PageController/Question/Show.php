@@ -52,7 +52,7 @@ class Show extends \PageController\PageController
 
         $this->_prepare_follow_button();
 
-        $this->contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($this->question->id);
+        $this->contributors = (new \Query\Answer($this->lang))->findContributors($this->question->id);
 
         if (count($this->contributors) > 3) {
             $this->contributors_top = array_slice($this->contributors, 0, 3);

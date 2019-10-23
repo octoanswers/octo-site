@@ -46,7 +46,7 @@ class Show extends \PageController\PageController
         $questions = (new \Query\Questions($this->lang))->findNewestWithAnswer(1, 5);
 
         foreach ($questions as $question) {
-            $contributors = (new \Query\Contributors($this->lang))->findAnswerContributors($question->id);
+            $contributors = (new \Query\Answer($this->lang))->findContributors($question->id);
             $last_contributor = (new \Query\Answer($this->lang))->findLastEditor($question->id);
 
             $categories = (new \Query\Categories($this->lang))->categoriesForQuestionWithID($question->id);
