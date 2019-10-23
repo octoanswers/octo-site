@@ -40,6 +40,24 @@ class Lang
         return $lang_code;
     }
 
+    public static function getLangCodeFromBrowser()
+    {
+        $supported_languages = self::getSupportedLangs();
+        $default_language = self::getDefaultLang();
+
+        // If $_SERVER['HTTP_ACCEPT_LANGUAGE'] is set, use it;
+        if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+            $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+            if (!in_array($lang, $supported_languages)) {
+                $lang = $default_language;
+            }
+
+            return $lang;
+        }
+
+        return $default_language;
+    }
+
     public static function get()
     {
         return self::detect($_GET, $_COOKIE, $_SERVER);

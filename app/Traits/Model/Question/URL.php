@@ -15,7 +15,7 @@ trait URL
 
     public function getShortURL(string $lang): string
     {
-        return SITE_URL . '/' . $lang . '/' . $this->id;
+        return SITE_URL . '/' . $lang . '/question/' . $this->id;
     }
 
     // Some actions

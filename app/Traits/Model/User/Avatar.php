@@ -6,12 +6,12 @@ trait Avatar
 {
     public function getURL(string $lang): string
     {
-        return SITE_URL . '/' . $lang . '/@' . $this->username;
+        return SITE_URL . '/' . $lang . '/' . $this->username;
     }
 
-    public function getShortURL(string $lang): string
+    public function getURLWithoutLang(): string
     {
-        return SITE_URL . '/' . $lang . '/user/' . $this->id;
+        return SITE_URL . '/' . $this->username;
     }
 
     public function getAvatarURLSmall(): string

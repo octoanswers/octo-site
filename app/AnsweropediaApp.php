@@ -110,6 +110,7 @@ class AnsweropediaApp
             $group->get('/categories/newest', \PageController\Categories\Newest::class . ':handle');
             $group->get('/question/{id}/categories', \PageController\Question\UpdateCategories::class . ':handle');
             $group->get('/question/{id}/discussion', \PageController\Question\Discussion::class . ':handle');
+            $group->get('/question/{id:[0-9]+}', \PageController\Question\ShortURL::class . ':handle');
             $group->get('/questions/newest', \PageController\Questions\Newest::class . ':handle');
             $group->get('/questions/recently-updated', \PageController\Questions\RecentlyUpdated::class . ':handle');
             $group->get('/random-question', \PageController\Question\Random::class . ':handle');
@@ -119,16 +120,15 @@ class AnsweropediaApp
             $group->get('/search', \PageController\Search\Show::class . ':handle');
             $group->get('/settings', \PageController\Settings\Show::class . ':handle');
             $group->get('/sitemap.xml', \PageController\SitemapXML\Lang::class . ':handle');
-            $group->get('/user/{id}', \PageController\User\ShortURL::class . ':handle');
             $group->get('/users/newest', \Front\Page\Users\Newest::class . ':handle');
-            $group->get('/@{username}', \PageController\User\Show::class . ':handle');
-            $group->get('/{id:[0-9]+}', \PageController\Question\ShortURL::class . ':handle');
+            $group->get('/{username:[A-Za-z0-9.]+}', \PageController\User\Show::class . ':handle');
             $group->get('/{question_uri}', \PageController\Question\Show::class . ':handle');
         });
 
         // Language-agnostic URLs
 
         $app->get('/sitemap.xml', \PageController\SitemapXML\Index::class . ':handle');
+        $app->get('/{username:[A-Za-z0-9.]+}', \PageController\User\Show::class . ':handleURLWithoutLang');
         $app->get('/', \PageController\Root\Show::class . ':handle');
 
         $this->app = $app;

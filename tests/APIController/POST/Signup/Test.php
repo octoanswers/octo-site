@@ -6,7 +6,7 @@ class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['users' => ['users']];
 
-    public function testCorrectSignup()
+    public function test__Correct_signup()
     {
         $uri = '/api/v1/ru/signup.json';
         $post_data = ['username' => 'jasonborn', 'email' => 'new@answeropedia.org', 'password' => 'jd754fJGFD99'];
@@ -21,7 +21,7 @@ class Test extends \Test\TestCase\Frontend
             'id'              => 16,
             'username'        => 'jasonborn',
             'email'           => 'new@answeropedia.org',
-            'url'             => 'https://answeropedia.org/ru/@jasonborn',
+            'url'             => 'https://answeropedia.org/ru/jasonborn',
             'destination_url' => 'https://answeropedia.org/ru',
             'avatar_100'      => 'Avatar file "16_100.png" copied',
             'avatar_200'      => 'Avatar file "16_200.png" copied',
@@ -36,4 +36,7 @@ class Test extends \Test\TestCase\Frontend
         $this->assertEquals($expected_response, $responseArray);
         $this->assertSame(200, $response->getStatusCode());
     }
+
+    // @TODO
+    // Username_with_uppercase
 }

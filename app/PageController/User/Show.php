@@ -4,6 +4,18 @@ namespace PageController\User;
 
 class Show extends \PageController\PageController
 {
+    public function handleURLWithoutLang($request, $response, $args)
+    {
+        $lang = \Helper\Lang::getLangCodeFromBrowser();
+        $username = $request->getAttribute('username');
+
+        $user = new \Model\User();
+        $user->username = $username;
+
+        // @TODO Когда разделим PC & Controller, необходимо не редиректить, а просто показывать страницу.
+        return $response->withRedirect($user->getURL($lang), 303);
+    }
+
     public function handle($request, $response, $args)
     {
         $lang = $request->getAttribute('lang');

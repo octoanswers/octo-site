@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Get_EN_page()
     {
-        $request = $this->createRequest('GET', '/en/13');
+        $request = $this->createRequest('GET', '/en/question/13');
         $response = $this->request($request);
 
         $this->assertSame(301, $response->getStatusCode());

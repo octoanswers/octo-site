@@ -10,7 +10,7 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Unexists_username()
     {
-        $request = $this->createRequest('GET', '/en/@unexistsusername');
+        $request = $this->createRequest('GET', '/en/unexistsusername');
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

@@ -10,9 +10,9 @@ class Test extends \Test\TestCase\Frontend
         'users' => ['users'],
     ];
 
-    public function test__Show_EN_page()
+    public function test__Lang_from_URI()
     {
-        $request = $this->createRequest('GET', '/en/@kozel');
+        $request = $this->createRequest('GET', '/en/kozel');
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -24,11 +24,11 @@ class Test extends \Test\TestCase\Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__Check_RU_page()
+    public function test__Lang_from_browser()
     {
-        $request = $this->createRequest('GET', '/ru/@kozel');
+        $request = $this->createRequest('GET', '/kozel');
         $response = $this->request($request);
 
-        $this->assertSame(200, $response->getStatusCode());
+        $this->assertSame(303, $response->getStatusCode());
     }
 }
