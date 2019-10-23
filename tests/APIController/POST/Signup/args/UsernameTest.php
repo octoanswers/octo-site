@@ -52,7 +52,7 @@ class UsernameTest extends \Test\TestCase\Frontend
         $post_data = [
             'username' => 'foobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobar',
             'email'    => 'new@answeropedia.org',
-            'password' => 'jd754fJGFD99'
+            'password' => 'jd754fJGFD99',
         ];
 
         $request = $this->createRequest('POST', $uri);
