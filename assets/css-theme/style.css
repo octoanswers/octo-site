@@ -560,7 +560,8 @@ ul {
 
 pre {
   padding: 1rem;
-  background-color: #eaeaea;
+  background-color: #f5f5f5;
+  border: 1px solid #eaeaea;
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;
@@ -575,13 +576,19 @@ pre {
 
 blockquote,
 .blockquote {
-  background-color: #ffffff;
-  border-left: 4px solid #4488cc;
-  padding-left: 1rem;
-  color: #4488cc;
-  margin-bottom: 0 !important;
+  background-color: #f5f5f5;
+  border: 1px solid #eaeaea;
+  border-top: 4px solid #cecece;
+  padding: 0 0 0 1rem;
+  color: #363636;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
   white-space: pre-wrap;
   word-wrap: break-word;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 blockquote p:last-child,

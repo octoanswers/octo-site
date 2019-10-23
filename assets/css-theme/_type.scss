@@ -87,7 +87,8 @@ ul {
 
 pre {
   padding: 1rem;
-  background-color: $color-gray-1;
+  background-color: $color-body-background;
+  border: 1px solid $color-gray-1;
   white-space: pre-wrap;
   /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;
@@ -102,13 +103,17 @@ pre {
 
 blockquote,
 .blockquote {
-  background-color: $color-white;
-  border-left: 4px solid $color-secondary;
-  padding-left: 1rem;
-  color: $color-secondary;
-  margin-bottom: 0 !important;
+  background-color: $color-body-background;
+  border: 1px solid $color-gray-1;
+  border-top: 4px solid $color-gray-2;
+  padding: 0 0 0 1rem;
+  color: $color-gray-8;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
   white-space: pre-wrap;
   word-wrap: break-word;
+  margin-block-start: 0;
+  margin-block-end: 0;
 
   p:last-child {
     margin-bottom: 0;
