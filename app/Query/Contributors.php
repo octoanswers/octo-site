@@ -8,34 +8,29 @@ class Contributors extends \Query\Query
     {
         $revisions = (new \Query\Revisions($this->lang))->revisionsForAnswerWithID($answerID);
 
-        $contributions = [];
+        $unsorted_contributions = [];
+
         foreach ($revisions as $revision) {
             $revUserID = $revision->userID;
-            if (isset($contributions[$revUserID])) {
-                $contributions[$revUserID]['total'] += $revision->getUserContribution();
-                $contributions[$revUserID]['plus'] += $revision->getUserInsertions();
-                $contributions[$revUserID]['minus'] += $revision->getUserDeletions();
+
+            if (isset($unsorted_contributions[$revUserID])) {
+                $unsorted_contributions[$revUserID]->contribution += $revision->getUserContribution();
+                $unsorted_contributions[$revUserID]->insertionsCount += $revision->getUserInsertions();
+                $unsorted_contributions[$revUserID]->deletionsCount += $revision->getUserDeletions();
             } else {
-                $contributions[$revUserID]['total'] = $revision->getUserContribution();
-                $contributions[$revUserID]['plus'] = $revision->getUserInsertions();
-                $contributions[$revUserID]['minus'] = $revision->getUserDeletions();
+                $contribution = new \Model\ContributionToAnswer();
+
+                $contribution->userID = $revUserID;
+                $contribution->answerID = $answerID;
+                $contribution->contribution = $revision->getUserContribution();
+                $contribution->insertionsCount = $revision->getUserInsertions();
+                $contribution->deletionsCount = $revision->getUserDeletions();
+
+                $unsorted_contributions[$revUserID] = $contribution;
             }
         }
 
-        $contributorsData = [];
-        foreach ($contributions as $userID => $value) {
-
-            $contribution = new \Model\ContributionToAnswer();
-            $contribution->userID = $userID;
-            $contribution->answerID = $answerID;
-            $contribution->contribution = $value['total'];
-            $contribution->insertionsCount = $value['plus'];
-            $contribution->deletionsCount = $value['minus'];
-
-            $contributorsData[] = $contribution;
-        }
-
-        $sorted_contributions = \Helper\Sort\Contributions::sortByContributions($contributorsData);
+        $sorted_contributions = \Helper\Sort\Contributions::sortByContributions($unsorted_contributions);
 
         $sorted_contributors = [];
         foreach ($sorted_contributions as $user_contribution) {
