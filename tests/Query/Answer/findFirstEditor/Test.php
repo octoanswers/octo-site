@@ -5,8 +5,8 @@ namespace Test\Query\Answer\findFirstEditor;
 class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = [
-        'ru' => ['revisions', 'questions'],
-        'users' => ['users']
+        'ru'    => ['revisions', 'questions'],
+        'users' => ['users'],
     ];
 
     public function test__Base()

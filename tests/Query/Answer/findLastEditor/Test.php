@@ -2,11 +2,11 @@
 
 namespace Test\Query\User\findLastEditor;
 
-class Answer extends \Test\TestCase\DB
+class Test extends \Test\TestCase\DB
 {
     protected $setUpDB = [
-        'ru' => ['revisions', 'questions'],
-        'users' => ['users']
+        'ru'    => ['revisions', 'questions'],
+        'users' => ['users'],
     ];
 
     public function test__Base()
