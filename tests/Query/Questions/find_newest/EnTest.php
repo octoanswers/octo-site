@@ -18,6 +18,6 @@ class EnTest extends \Test\TestCase\DB
 
         $this->assertEquals(20, $questions[9]->id);
         $this->assertEquals('How developers made interesting games?', $questions[9]->title);
-        $this->assertEquals('#Games', $questions[9]->answer->text);
+        $this->assertEquals('Games', $questions[9]->answer->text);
     }
 }

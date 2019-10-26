@@ -160,4 +160,34 @@ class Questions extends \Query\Query
 
         return $questions;
     }
+
+    public function findCommunityChoice(int $page = 1, int $perPage = 10): array
+    {
+        \Validator\QuestionsList::validatePage($page);
+        \Validator\QuestionsList::validatePerPage($perPage);
+
+        $this->pdo = \Helper\PDOFactory::getConnectionToLangDB($this->lang);
+
+        $offset = $perPage * ($page - 1);
+
+        $stmt = $this->pdo->prepare('SELECT * FROM `questions_community_choice` ORDER BY id DESC LIMIT :id_offset, :per_page');
+        $stmt->bindParam(':id_offset', $offset, \PDO::PARAM_INT);
+        $stmt->bindParam(':per_page', $perPage, \PDO::PARAM_INT);
+        if (!$stmt->execute()) {
+            $error = $stmt->errorInfo();
+
+            throw new \Exception($error[2], $error[1]);
+        }
+
+        $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+        $questions = [];
+        foreach ($rows as $row) {
+            $questionID = $row['q_id'];
+            $question = (new \Query\Question($this->lang))->questionWithID($questionID);
+            $questions[] = $question;
+        }
+
+        return $questions;
+    }
 }
