@@ -13,7 +13,7 @@ class Show extends \PageController\PageController
 
         $this->lang = $lang;
 
-        $this->top_questions = $this->_get_top_questions();
+        $this->top_questions = $this->_get_community_choice_questions();
 
         $this->parsedown = new \Helper\ExtendedParsedown($this->lang);
 
@@ -39,11 +39,15 @@ class Show extends \PageController\PageController
         return $response;
     }
 
-    protected function _get_top_questions(): array
+    protected function _get_community_choice_questions(): array
     {
         $top_questions = [];
 
-        $questions = (new \Query\Questions($this->lang))->findNewestWithAnswer(1, 5);
+        try {
+            $questions = (new \Query\Questions($this->lang))->findCommunityChoice();
+        } catch (\Throwable $th) {
+            $questions = [];
+        }
 
         foreach ($questions as $question) {
             $contributors = (new \Query\Answer($this->lang))->findContributors($question->id);
