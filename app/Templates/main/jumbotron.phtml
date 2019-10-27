@@ -4,36 +4,30 @@
         <div class="col-12">
             <div class="bg-white border rounded p-3 py-lg-5 pr-lg-5">
 
-                <!-- / H1 for mobile -->
-                <h1 class="jumbotron-title d-lg-none mb-4">
-                    <?= __('page_main.jumbotron.header_1') ?> <span class="font-weight-light"><?= __('page_main.jumbotron.header_2') ?></span>
-                </h1>
-                <!-- / H1 for mobile -->
-
                 <!-- H1 for desktop -->
-                <h1 class="jumbotron-title d-none d-lg-block text-center my-4">
-                    <?= __('page_main.jumbotron.header_1') ?><br />
-                    <span class="font-weight-light"><?= __('page_main.jumbotron.header_2') ?></span>
+                <h1 class="font-ubuntu text-primary jumbotron-title text-md-center">
+                    <?= __('common.answeropedia') ?><br />
                 </h1>
                 <!-- / H1 for desktop -->
 
-                <div class="lead d-none d-md-block text-md-center text-black-50 mt-5 mb-3 py-md-2">
+                <div class="lead text-md-center text-black-50 mt-1 mb-4">
                     <?= __('page_main.jumbotron.text') ?>
                 </div>
 
                 <div class="text-md-center mr-lg-5">
 
-
                     <!-- Button "get started" for mobile -->
-                    <a class="btn btn-lg btn-block btn-primary d-inline-block d-md-none" href="#" data-toggle="modal" data-target="#modal_signup">
-                        <?= __('page_main.jumbotron.btn_get_started') ?>
-                    </a>
+                    <button class="btn btn-lg btn-block btn-primary d-inline-block d-md-none" role="button" data-toggle="modal" data-target="#modal_ask">
+                        <i class="material-icons md-18 font-weight-bold">add</i>
+                        <?= __('page_main.jumbotron.btn_ask') ?>
+                    </button>
                     <!-- / Button "get started" for mobile -->
 
                     <!-- Button "get started" for desktop -->
-                    <a class="btn btn-lg btn-lg-block btn-primary d-none d-md-inline-block mr-3 mr-lg-4" href="#" data-toggle="modal" data-target="#modal_signup">
-                        <?= __('page_main.jumbotron.btn_get_started') ?>
-                    </a>
+                    <button class="btn btn-lg btn-lg-block btn-primary d-none d-md-inline-block mr-3 mr-lg-4" role="button" data-toggle="modal" data-target="#modal_ask">
+                        <i class="material-icons md-18 font-weight-bold">add</i>
+                        <?= __('page_main.jumbotron.btn_ask') ?>
+                    </button>
                     <!-- / Button "get started" for desktop -->
 
                     <?php if ($this->question_about_answeropedia) : ?>

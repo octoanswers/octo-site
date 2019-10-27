@@ -7,14 +7,24 @@
     <!-- / Title for mobile -->
 
     <!-- Title for desktop -->
-    <div class="d-none d-md-block  border rounded p-3 bg-white">
+    <!-- <div class="d-none d-md-block  border rounded p-3 bg-white">
         <?= __('page_main.top_content.title') ?>
 
         <a class="float-right text-black-50 text-decoration-none" href="#">
             <?= __('page_main.top_content.view_all') ?>
         </a>
-    </div>
+    </div> -->
     <!-- / Title for desktop -->
+
+    <div class=" mt-2">
+        <span class="semi-small font-weight-bold text-uppercase text-dark">
+            <?= __('page_main.top_content.title') ?>
+        </span>
+
+        <a class="float-right text-black-50 text-decoration-none" href="#">
+            <?= __('page_main.top_content.view_all') ?>
+        </a>
+    </div>
 
     <?php foreach ($this->top_questions as $topQuestion) : ?>
 

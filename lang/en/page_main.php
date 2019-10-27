@@ -18,9 +18,8 @@ return [
     'jumbotron' => [
         'btn_get_started' => 'Get Started!',
         'btn_learn_more'  => 'Learn More',
-        'header_1'        => 'One complete &amp; competent answer',
-        'header_2'        => 'to any question.',
-        'text'            => 'Answeropedia is like Wikipedia, only for questions and answers.',
+        'btn_ask'         => 'Ask Question',
+        'text'            => 'It\'s like Wikipedia, only for questions and answers.',
     ],
     'share_link' => [
         'note'  => 'You can help the Answeropedia project by simply sharing your link with your friends.',
@@ -28,8 +27,7 @@ return [
     ],
     'slogan'      => 'Ask a question and get one complete answer',
     'top_content' => [
-        'title'        => 'Top content on Answeropedia',
-        'title_mobile' => 'Top content',
-        'view_all'     => 'View all',
+        'title'    => 'Top Questions',
+        'view_all' => 'View all',
     ],
 ];
