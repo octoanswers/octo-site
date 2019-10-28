@@ -5,6 +5,12 @@
   margin-top: -2px;
 }
 
+@for $i from 8 through 14 {
+  .material-icons.md-#{$i * 2 + px} {
+    font-size: $i * 2 + px;
+  }
+}
+
 .material-icons.md-12 {
   font-size: 12px;
 }

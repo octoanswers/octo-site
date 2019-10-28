@@ -46,6 +46,7 @@
 
             <?php if ($this->authUser) : ?>
                 <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_upload_image">
+                    <i class="material-icons md-18px">camera_alt</i>&nbsp;
                     <?= ($this->question->imageBaseName) ? __('page_question.update_picture') : __('page_question.add_picture') ?>
                 </a>
             <?php endif; ?>
