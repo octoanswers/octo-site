@@ -102,6 +102,7 @@ class AnsweropediaApp
 
         $app->group(URL_PART_LANG, function (\Slim\Routing\RouteCollectorProxy $group) {
             $group->get('', \PageController\Main\Show::class . ':handle');
+            $group->get('/ask', \Front\Page\Question\Ask::class . ':handle');
             $group->get('/answer/{id}/edit', \PageController\Answer\Edit::class . ':handle');
             $group->get('/answer/{id}/history', \PageController\Answer\History::class . ':handle');
             $group->get('/feed', \PageController\Feed\Show::class . ':handle');

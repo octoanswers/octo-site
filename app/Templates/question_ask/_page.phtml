@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="<?= $view_data->lang ?>">
+
+<head>
+    <?php require TEMPLATE_PATH . '/_common/head_vd.phtml'; ?>
+</head>
+
+<body>
+
+    <?php require_once TEMPLATE_PATH . '/_common/navbar_vd.phtml'; ?>
+
+    <div class="container mt-4">
+        <div class="row">
+
+            <div class="d-none d-lg-block col-12 col-lg-2">
+                <?php require_once TEMPLATE_PATH . '/_common/left/sections_vd.phtml'; ?>
+            </div>
+
+            <!-- main_column -->
+            <div class="col-12 col-lg-7">
+                <div class="mb-4 mt-1">
+                    <h1 class="mt-0">
+                        <?= __('page_ask.title') ?>
+                    </h1>
+                    <div class="semi-small text-muted mb-3">
+                        <?= __('page_ask.note') ?>.
+                    </div>
+                </div>
+
+                <?php require_once __DIR__ . '/ask_form.phtml'; ?>
+            </div>
+            <!-- / main_column -->
+
+        </div>
+    </div>
+
+    <?php require TEMPLATE_PATH . '/_common/modals_vd.phtml'; ?>
+    <?php require TEMPLATE_PATH . '/_common/js_vd.phtml'; ?>
+
+</body>
+
+</html>

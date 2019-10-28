@@ -17,17 +17,17 @@
                 <div class="text-md-center mr-lg-5">
 
                     <!-- Button "get started" for mobile -->
-                    <button class="btn btn-lg btn-block btn-primary d-inline-block d-md-none" role="button" data-toggle="modal" data-target="#modal_ask">
+                    <button class="btn btn-lg btn-block btn-primary d-inline-block d-md-none" role="button" href="<?= \Helper\URL\Page::getAskURL($this->lang) ?>">
                         <i class="material-icons md-18 font-weight-bold">add</i>
                         <?= __('page_main.jumbotron.btn_ask') ?>
                     </button>
                     <!-- / Button "get started" for mobile -->
 
                     <!-- Button "get started" for desktop -->
-                    <button class="btn btn-lg btn-lg-block btn-primary d-none d-md-inline-block mr-3 mr-lg-4" role="button" data-toggle="modal" data-target="#modal_ask">
+                    <a class="btn btn-lg btn-lg-block btn-primary d-none d-md-inline-block mr-3 mr-lg-4" role="button" href="<?= \Helper\URL\Page::getAskURL($this->lang) ?>">
                         <i class="material-icons md-18 font-weight-bold">add</i>
                         <?= __('page_main.jumbotron.btn_ask') ?>
-                    </button>
+                    </a>
                     <!-- / Button "get started" for desktop -->
 
                     <?php if ($this->question_about_answeropedia) : ?>
