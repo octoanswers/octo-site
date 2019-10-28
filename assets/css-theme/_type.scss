@@ -103,17 +103,22 @@ pre {
 
 blockquote,
 .blockquote {
+  display: block;
   background-color: $color-body-background;
-  border: 1px solid $color-gray-1;
-  border-top: 4px solid $color-gray-2;
-  padding: 0 0 0 1rem;
-  color: $color-gray-8;
+  color: $color-gray-6;
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
   white-space: pre-wrap;
   word-wrap: break-word;
   margin-block-start: 0;
   margin-block-end: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-right: 0.5rem !important;
+  padding-left: 1.5rem !important;
+  position: relative;
+  font-size: 14px;
+  border-left: 0.5rem solid $color-gray-2;
 
   p:last-child {
     margin-bottom: 0;
