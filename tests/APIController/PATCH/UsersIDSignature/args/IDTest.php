@@ -13,7 +13,7 @@ class IDTest extends \Test\TestCase\Frontend
     {
         $uri = '/api/v1/ru/users/0/signature.json';
         $post_data = [
-            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'api_key'   => '7d21ebdbec3d4e396043c96b6ab44a6e',
             'signature' => 'Enterpreneur, writer.',
         ];
 
@@ -36,7 +36,7 @@ class IDTest extends \Test\TestCase\Frontend
     {
         $uri = '/api/v1/ru/users/-1/signature.json';
         $post_data = [
-            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'api_key'   => '7d21ebdbec3d4e396043c96b6ab44a6e',
             'signature' => 'Enterpreneur, writer.',
         ];
 

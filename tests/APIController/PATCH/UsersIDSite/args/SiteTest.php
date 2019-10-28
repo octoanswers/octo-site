@@ -11,7 +11,7 @@ class SiteTest extends \Test\TestCase\Frontend
         $uri = '/api/v1/ru/users/3/site.json';
         $post_data = [
             'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
-            'site' => 'xxx',
+            'site'    => 'xxx',
         ];
 
         $request = $this->createRequest('PATCH', $uri);
@@ -33,13 +33,12 @@ class SiteTest extends \Test\TestCase\Frontend
     {
         $uri = '/api/v1/ru/users/3/site.json';
         $post_data = [
-            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'api_key'  => '7d21ebdbec3d4e396043c96b6ab44a6e',
             'foo_site' => 'https://answeropedia.org',
         ];
 
         $request = $this->createRequest('PATCH', $uri);
         $request = $this->withFormData($request, $post_data);
-
 
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
@@ -58,7 +57,7 @@ class SiteTest extends \Test\TestCase\Frontend
         $uri = '/api/v1/ru/users/3/site.json';
         $post_data = [
             'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
-            'site' => 'example37.com',
+            'site'    => 'example37.com',
         ];
 
         $request = $this->createRequest('PATCH', $uri);
@@ -81,7 +80,7 @@ class SiteTest extends \Test\TestCase\Frontend
         $uri = '/api/v1/ru/users/3/site.json';
         $post_data = [
             'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
-            'site' => 'www.example32.com',
+            'site'    => 'www.example32.com',
         ];
 
         $request = $this->createRequest('PATCH', $uri);
