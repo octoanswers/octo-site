@@ -11,9 +11,16 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Rename_with_save_redirect()
     {
-        $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?') . '&save_redirect=true';
+        $uri = '/api/v1/ru/questions/12/rename.json';
+        $post_data = [
+            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'new_title'     => 'Как ты, мистер Гек?',
+            'save_redirect' => 'true',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -48,11 +55,19 @@ class Test extends \Test\TestCase\Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test_Rename_without_save_redirect()
+    public function test__Rename_without_save_redirect()
     {
         $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Гек?');
 
+        $uri = '/api/v1/ru/questions/12/rename.json';
+        $post_data = [
+            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'new_title'     => 'Как ты, мистер Гек?',
+        ];
+
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -85,9 +100,15 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Change_char_case_without_redirect()
     {
-        $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?');
+        $uri = '/api/v1/ru/questions/12/rename.json';
+        $post_data = [
+            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'new_title'     => 'Огонь уничтожает КРОВЬ?',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -120,9 +141,16 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Change_char_case_with_redirect()
     {
-        $uri = '/api/v1/ru/questions/12/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Огонь уничтожает КРОВЬ?') . '&save_redirect=true';
+        $uri = '/api/v1/ru/questions/12/rename.json';
+        $post_data = [
+            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'new_title'     => 'Огонь уничтожает КРОВЬ?',
+            'save_redirect' => 'true',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

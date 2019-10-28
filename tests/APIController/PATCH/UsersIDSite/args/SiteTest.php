@@ -6,11 +6,17 @@ class SiteTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 
-    public function test_IncorrectURL()
+    public function test__Incorrect_URL()
     {
-        $uri = '/api/v1/ru/users/3/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'site=' . urlencode('xxx');
+        $uri = '/api/v1/ru/users/3/site.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'site' => 'xxx',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -23,11 +29,18 @@ class SiteTest extends \Test\TestCase\Frontend
         $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
-    public function test_SiteNotSet()
+    public function test__Site_not_set()
     {
-        $uri = '/api/v1/ru/users/3/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'foo_site=' . urlencode('https://answeropedia.org');
+        $uri = '/api/v1/ru/users/3/site.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'foo_site' => 'https://answeropedia.org',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -40,11 +53,17 @@ class SiteTest extends \Test\TestCase\Frontend
         $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
-    public function test__URLWithoutProtocol()
+    public function test__URL_without_protocol()
     {
-        $uri = '/api/v1/ru/users/3/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('example37.com');
+        $uri = '/api/v1/ru/users/3/site.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'site' => 'example37.com',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -57,11 +76,17 @@ class SiteTest extends \Test\TestCase\Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__URLWithWWW()
+    public function test__URL_with_WWW()
     {
-        $uri = '/api/v1/ru/users/3/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('www.example32.com');
+        $uri = '/api/v1/ru/users/3/site.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'site' => 'www.example32.com',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

@@ -13,9 +13,9 @@ class UsersIDName extends \APIController\APIController
             $lang = $request->getAttribute('lang');
             $userID = (int) $request->getAttribute('id');
 
-            $query_params = $request->getQueryParams();
-            $api_key = (string) $query_params['api_key'];
-            $name = @$query_params['name'];
+            $request_body_params = $request->getParsedBody();
+            $api_key = (string) $request_body_params['api_key'];
+            $name = @$request_body_params['name'];
 
             // Validate params
 

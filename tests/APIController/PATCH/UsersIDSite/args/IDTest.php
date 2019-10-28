@@ -11,9 +11,15 @@ class IDTest extends \Test\TestCase\Frontend
 
     public function test__User_ID_equal_zero()
     {
-        $uri = '/api/v1/ru/users/0/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('https://answeropedia.org');
+        $uri = '/api/v1/ru/users/0/site.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'site' => 'https://answeropedia.org',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -28,9 +34,15 @@ class IDTest extends \Test\TestCase\Frontend
 
     public function test__User_ID_below_zero()
     {
-        $uri = '/api/v1/ru/users/-1/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('https://answeropedia.org');
+        $uri = '/api/v1/ru/users/-1/site.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'site' => 'https://answeropedia.org',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

@@ -6,11 +6,17 @@ class NameTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = ['ru' => ['activities'], 'users' => ['users']];
 
-    public function test_SignatureNotSet()
+    public function test__Name_not_set()
     {
-        $uri = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e' . '&' . 'foo_name=' . urlencode('Sasha');
+        $uri = '/api/v1/ru/users/3/name.json';
+        $post_data = [
+            'api_key'  => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'foo_name' => 'Sasha',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -23,11 +29,17 @@ class NameTest extends \Test\TestCase\Frontend
         $this->assertEquals($expected_response, json_decode($response_body, true));
     }
 
-    public function test_SignatureTooShort()
+    public function test__Name_too_short()
     {
-        $uri = '/api/v1/ru/users/3/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Fo');
+        $uri = '/api/v1/ru/users/3/name.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'name'    => 'Fo',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

@@ -11,9 +11,15 @@ class IDTest extends \Test\TestCase\Frontend
 
     public function test__User_ID_equal_zero()
     {
-        $uri = '/api/v1/ru/users/0/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Mike');
+        $uri = '/api/v1/ru/users/0/name.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'name'    => 'Mike',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -28,9 +34,15 @@ class IDTest extends \Test\TestCase\Frontend
 
     public function test__User_ID_below_zero()
     {
-        $uri = '/api/v1/ru/users/-1/name.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&name=' . urlencode('Joe');
+        $uri = '/api/v1/ru/users/-1/name.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'name'    => 'Joe',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

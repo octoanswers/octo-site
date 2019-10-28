@@ -4,13 +4,23 @@ namespace Tests\APIController\PATCH\CategoriesIDRename;
 
 class IDTest extends \Test\TestCase\Frontend
 {
-    protected $setUpDB = ['ru' => ['categories', 'activities', 'redirects_categories'], 'users' => ['users']];
+    protected $setUpDB = [
+        'ru' => ['categories', 'activities', 'redirects_categories'],
+        'users' => ['users']
+    ];
 
-    public function test_Error_when_category_ID_equal_zero()
+    public function test__Error_when_category_ID_equal_zero()
     {
-        $uri = '/api/v1/ru/categories/0/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
+        $uri = '/api/v1/ru/categories/0/rename.json';
+        $post_data = [
+            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'not_new_title'     => 'Work',
+            'save_redirect' => 1,
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -25,9 +35,15 @@ class IDTest extends \Test\TestCase\Frontend
 
     public function test_Error_when_category_ID_below_zero()
     {
-        $uri = '/api/v1/ru/categories/-1/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
+        $uri = '/api/v1/ru/categories/-1/rename.json';
+        $post_data = [
+            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'not_new_title'     => 'Work',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

@@ -11,9 +11,15 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Rename_with_save_redirect()
     {
-        $uri = '/api/v1/ru/users/3/signature.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&signature=' . urlencode('Enterpreneur, writer.');
+        $uri = '/api/v1/ru/users/3/signature.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'signature' => 'Enterpreneur, writer.',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

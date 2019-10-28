@@ -11,9 +11,15 @@ class IDTest extends \Test\TestCase\Frontend
 
     public function test__Question_ID_equal_zero()
     {
-        $uri = '/api/v1/ru/questions/0/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
+        $uri = '/api/v1/ru/questions/0/rename.json';
+        $post_data = [
+            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'new_title'     => 'Как ты, мистер Хайдегер?',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
@@ -28,9 +34,15 @@ class IDTest extends \Test\TestCase\Frontend
 
     public function test__Question_ID_below_zero()
     {
-        $uri = '/api/v1/ru/questions/-1/rename.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&new_title=' . urlencode('Как ты, мистер Хайдегер?');
+        $uri = '/api/v1/ru/questions/-1/rename.json';
+        $post_data = [
+            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'new_title'     => 'Как ты, мистер Хайдегер?',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 

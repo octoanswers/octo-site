@@ -11,9 +11,15 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Rename_with_save_redirect()
     {
-        $uri = '/api/v1/ru/users/3/site.json?api_key=7d21ebdbec3d4e396043c96b6ab44a6e&site=' . urlencode('https://answeropedia.org');
+        $uri = '/api/v1/ru/users/3/site.json';
+        $post_data = [
+            'api_key' => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'site' => 'https://answeropedia.org',
+        ];
 
         $request = $this->createRequest('PATCH', $uri);
+        $request = $this->withFormData($request, $post_data);
+
         $response = $this->request($request);
         $response_body = (string) $response->getBody();
 
