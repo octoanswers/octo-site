@@ -5,17 +5,17 @@ namespace Tests\APIController\PATCH\CategoriesIDRename;
 class NewTitleTest extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
-        'ru' => ['categories', 'activities', 'redirects_categories'],
-        'users' => ['users']
+        'ru'    => ['categories', 'activities', 'redirects_categories'],
+        'users' => ['users'],
     ];
 
     public function test_Error_when_category_new_title_not_set()
     {
         $uri = '/api/v1/ru/categories/12/rename.json';
         $post_data = [
-            'api_key'       => '7d21ebdbec3d4e396043c96b6ab44a6e',
+            'api_key'           => '7d21ebdbec3d4e396043c96b6ab44a6e',
             'not_new_title'     => 'abc',
-            'save_redirect' => 1,
+            'save_redirect'     => 1,
         ];
 
         $request = $this->createRequest('PATCH', $uri);
