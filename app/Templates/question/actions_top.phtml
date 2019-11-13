@@ -1,21 +1,6 @@
 <!-- actions_top -->
 <div class="mt-2 mb-3">
 
-    <!-- edit answer -->
-    <?php if ($this->authUser) : ?>
-        <a class="btn btn-sm btn-outline-gray my-2 mr-2" href="<?= $this->question->getEditURL($this->lang) ?>">
-            <i class="material-icons md-18">edit</i>
-            <?= __('page_question.actions_top.edit_answer') ?>
-        </a>
-    <?php else : ?>
-        <a class="btn btn-sm btn-outline-gray my-2 mr-2" href="#" data-toggle="modal" data-target="#modal_lure__edit_answer">
-            <i class="material-icons md-18">edit</i>
-            <?= __('page_question.actions_top.edit_answer') ?>
-        </a>
-        <?php require_once TEMPLATE_PATH . '/_modal/question/_lure/edit_answer.phtml' ?>
-    <?php endif; ?>
-    <!-- / edit answer -->
-
     <!-- follow_btn -->
     <?php if ($this->authUser) : ?>
         <button class="btn btn-sm follow_question_button my-2 mr-2 <?= $this->followed ? 'followed btn-success' : 'btn-outline-gray'; ?>" data-question-id="<?= $this->question->id ?>" data-follow-title="<?= __('common.btn.follow') ?>" data-followed-title="<?= __('common.btn.followed') ?>" data-unfollow-title="<?= __('common.btn.unfollow') ?>" type="button">
@@ -29,9 +14,15 @@
     <?php endif; ?>
     <!-- / follow_btn -->
 
+    <!-- edit answer -->
+    <a class="d-none d-md-inline-block semi-small text-black-50 my-2 ml-2" href="<?= $this->question->getEditURL($this->lang) ?>">
+        <?= __('page_question.actions_top.edit_answer') ?>
+    </a>
+    <!-- / edit answer -->
+
     <?php if (mb_strlen($this->question->answer->text) > 0) : ?>
         <!-- btn history -->
-        <a class="d-none d-md-inline-block semi-small text-black-50 my-2 ml-2" href="<?= $this->question->getHistoryURL($this->lang) ?>">
+        <a class="d-none d-md-inline-block semi-small text-black-50 my-2 ml-3" href="<?= $this->question->getHistoryURL($this->lang) ?>">
             <?= __('page_question.actions_top.history') ?>
         </a>
         <!-- btn history -->

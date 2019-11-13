@@ -5,7 +5,7 @@
     <?php require TEMPLATE_PATH . '/_common/head.phtml'; ?>
 </head>
 
-<body itemscope itemtype="https://schema.org/QAPage">
+<body class="question-page" itemscope itemtype="https://schema.org/QAPage">
 
     <?php require_once TEMPLATE_PATH . '/_common/navbar.phtml'; ?>
 
@@ -22,15 +22,13 @@
                 <div class="col-12 col-lg-7">
                     <?php require_once __DIR__ . '/redirected.phtml'; ?>
 
-                    <div class="border rounded bg-white p-3">
-                        <?php require_once __DIR__ . '/categories_top.phtml'; ?>
-                        <?php require_once __DIR__ . '/title.phtml'; ?>
-                        <?php require_once __DIR__ . '/actions_top.phtml' ?>
-                        <?php require_once __DIR__ . '/image.phtml' ?>
-                        <?php require_once __DIR__ . '/lure_be_first_contributor.phtml' ?>
-                        <?php require_once __DIR__ . '/answer.phtml' ?>
-                        <?php require_once __DIR__ . '/actions_bottom.phtml' ?>
-                    </div>
+                    <?php require_once __DIR__ . '/categories_top.phtml'; ?>
+                    <?php require_once __DIR__ . '/title.phtml'; ?>
+                    <?php require_once __DIR__ . '/actions_top.phtml' ?>
+                    <?php require_once __DIR__ . '/image.phtml' ?>
+                    <?php require_once __DIR__ . '/lure_be_first_contributor.phtml' ?>
+                    <?php require_once __DIR__ . '/answer.phtml' ?>
+                    <?php require_once __DIR__ . '/actions_bottom.phtml' ?>
 
                     <?php require_once __DIR__ . '/categories.phtml' ?>
                     <?php require_once __DIR__ . '/subscribe.phtml'; ?>
