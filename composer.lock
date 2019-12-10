@@ -1479,16 +1479,16 @@
         },
         {
             "name": "verot/class.upload.php",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verot/class.upload.php.git",
-                "reference": "f8fa694b2284f3a19db7b4346c474d34e0beccbd"
+                "reference": "f34e876c0c3e462013cddd4be715435d42ab982c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verot/class.upload.php/zipball/f8fa694b2284f3a19db7b4346c474d34e0beccbd",
-                "reference": "f8fa694b2284f3a19db7b4346c474d34e0beccbd",
+                "url": "https://api.github.com/repos/verot/class.upload.php/zipball/f34e876c0c3e462013cddd4be715435d42ab982c",
+                "reference": "f34e876c0c3e462013cddd4be715435d42ab982c",
                 "shasum": ""
             },
             "require": {
@@ -1516,7 +1516,7 @@
                 "gd",
                 "upload"
             ],
-            "time": "2019-12-07T19:02:46+00:00"
+            "time": "2019-12-09T13:17:43+00:00"
         }
     ],
     "packages-dev": [],
