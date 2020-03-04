@@ -429,16 +429,16 @@
         },
         {
             "name": "jblond/php-diff",
-            "version": "v1.15",
+            "version": "v1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBlond/php-diff.git",
-                "reference": "1ef1948507eee26bbc6f250a6180eab4d6ebcf47"
+                "reference": "c662c0213a41677fca24f90fcc810dc429d74caf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/1ef1948507eee26bbc6f250a6180eab4d6ebcf47",
-                "reference": "1ef1948507eee26bbc6f250a6180eab4d6ebcf47",
+                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/c662c0213a41677fca24f90fcc810dc429d74caf",
+                "reference": "c662c0213a41677fca24f90fcc810dc429d74caf",
                 "shasum": ""
             },
             "require": {
@@ -446,6 +446,7 @@
                 "php": ">=7.2"
             },
             "require-dev": {
+                "phpmd/phpmd": "2.*",
                 "phpunit/phpunit": "8.*",
                 "squizlabs/php_codesniffer": "*"
             },
@@ -465,6 +466,10 @@
                     "email": "leet31337@web.de"
                 },
                 {
+                    "name": "Ferry Cools",
+                    "email": "info@digilive.nl"
+                },
+                {
                     "name": "Chris Boulton",
                     "email": "chris.boulton@interspire.com"
                 }
@@ -474,7 +479,7 @@
                 "diff",
                 "php"
             ],
-            "time": "2020-01-24T07:36:37+00:00"
+            "time": "2020-03-02T08:34:17+00:00"
         },
         {
             "name": "nesbot/carbon",
