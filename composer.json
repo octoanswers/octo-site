@@ -18,7 +18,7 @@
     "jblond/php-diff": "^1.12",
     "verot/class.upload.php": "^2.0",
     "cogpowered/finediff": "^0.3.1",
-    "illuminate/translation": "^6.2"
+    "illuminate/translation": "^7.0"
   },
   "autoload": {
     "psr-4": {
