@@ -224,7 +224,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v7.0.2",
+            "version": "v7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -268,7 +268,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v7.0.2",
+            "version": "v7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -321,16 +321,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v7.0.2",
+            "version": "v7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "8cd2b6071e6e9d796ce0aa7c341f0c3cd41ba648"
+                "reference": "a76c2791e26e4f6ca4ce3325ba550816307d10d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/8cd2b6071e6e9d796ce0aa7c341f0c3cd41ba648",
-                "reference": "8cd2b6071e6e9d796ce0aa7c341f0c3cd41ba648",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/a76c2791e26e4f6ca4ce3325ba550816307d10d0",
+                "reference": "a76c2791e26e4f6ca4ce3325ba550816307d10d0",
                 "shasum": ""
             },
             "require": {
@@ -379,11 +379,11 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2020-03-03T19:28:55+00:00"
+            "time": "2020-03-04T04:22:42+00:00"
         },
         {
             "name": "illuminate/translation",
-            "version": "v7.0.2",
+            "version": "v7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
