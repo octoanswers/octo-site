@@ -16,3 +16,9 @@ vendor/
 
 # Code coverage file
 build/logs/clover.xml
+
+# PhpStorm Settings
+/.idea
+
+# VS Code Settings
+/.vscode
