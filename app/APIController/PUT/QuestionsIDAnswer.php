@@ -16,13 +16,15 @@ class QuestionsIDAnswer extends \APIController\APIController
             $post_params = $request->getParsedBody();
             $new_answer_text = (string) $post_params['answer_text']; //
             $revision_comment = (string) @$post_params['changes_comment'];
-            $user_api_key = (string) $post_params['user_api_key'];
+            // temp $user_api_key = (string) $post_params['user_api_key'];
 
             $revision_comment = strlen($revision_comment) ? $revision_comment : null;
 
             // Check user
 
-            $user = (new \Query\User())->userWithAPIKey($user_api_key);
+            //$user = (new \Query\User())->userWithAPIKey($user_api_key);
+            // @todo temp
+            $user = (new \Query\User())->userWithID(26);
             // @TODO Check rigths to edit
 
             // Check answer

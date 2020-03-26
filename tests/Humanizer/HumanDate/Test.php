@@ -2,61 +2,45 @@
 
 namespace Test\Humanizer\HumanDate;
 
-class Test extends \PHPUnit\Framework\TestCase
+use DateTime;
+use DateTimeZone;
+use Exception;
+use Humanizer\HumanDate\HumanDate;
+use PHPUnit\Framework\TestCase;
+
+/**
+ * Class HumanizeTimestampTest
+ *
+ * @group humanizer
+ */
+class Test extends TestCase
 {
-    private $timezone;
-    private $lang;
     private $humanDate;
 
     public function setUp(): void
     {
-        $this->timezone = new \DateTimeZone('UTC');
-        $this->lang = 'en';
+        $timezone = new DateTimeZone('UTC');
 
-        $this->humanDate = new \Humanizer\HumanDate\HumanDate($this->timezone, $this->lang);
-    }
-
-    /**
-     * Test for DateTime, timestamps and strings.
-     *
-     * @param string $date
-     * @param string $now
-     * @param string $expectedDate
-     */
-    public function assertDateToFormat($date, $now, $expectedDate)
-    {
-        $dateObject = new \DateTime($date, $this->timezone);
-        $nowObject = new \DateTime($now, $this->timezone);
-
-        $dateTimestamp = $dateObject->getTimestamp();
-        $nowTimestamp = $nowObject->getTimestamp();
-
-        $formattedDateFromObjects = $this->humanDate->format($dateObject, $nowObject);
-        $formattedDateFromTimestamps = $this->humanDate->format($dateTimestamp, $nowTimestamp);
-        $formattedDateFromStrings = $this->humanDate->format($date, $now);
-
-        $this->assertEquals($expectedDate, $formattedDateFromObjects);
-        $this->assertEquals($expectedDate, $formattedDateFromTimestamps);
-        $this->assertEquals($expectedDate, $formattedDateFromStrings);
+        $this->humanDate = new HumanDate($timezone, 'en');
     }
 
     public function testWithoutSetNow()
     {
-        $date = new \DateTime('-6 seconds');
+        $date = new DateTime('-6 seconds');
 
         $formattedDate = $this->humanDate->format($date);
-        $expectedDate = '6 seconds ago';
+        $expectedDate  = '6 seconds ago';
 
         $this->assertEquals($expectedDate, $formattedDate);
     }
 
     public function testWithoutTimezoneAndLanguage()
     {
-        $date = new \DateTime('-6 seconds');
-        $humanDate = new \Humanizer\HumanDate\HumanDate();
+        $date      = new DateTime('-6 seconds');
+        $humanDate = new HumanDate;
 
         $formattedDate = $humanDate->format($date);
-        $expectedDate = '6 seconds ago';
+        $expectedDate  = '6 seconds ago';
 
         $this->assertEquals($expectedDate, $formattedDate);
     }
@@ -69,8 +53,10 @@ class Test extends \PHPUnit\Framework\TestCase
      * @param string $now
      * @param string $date
      * @param string $expected
+     *
+     * @throws Exception
      */
-    public function testPastTime($date, $now, $expected)
+    public function test_Past_time($date, $now, $expected)
     {
         $this->assertDateToFormat($date, $now, $expected);
     }
@@ -105,8 +91,10 @@ class Test extends \PHPUnit\Framework\TestCase
      * @param string $date
      * @param string $now
      * @param string $expected
+     *
+     * @throws Exception
      */
-    public function testFutureTime($date, $now, $expected)
+    public function test_Future_time($date, $now, $expected)
     {
         $this->assertDateToFormat($date, $now, $expected);
     }
@@ -131,5 +119,33 @@ class Test extends \PHPUnit\Framework\TestCase
             ['2015-01-16 04:45:46', '2015-01-15 00:00:00', 'tomorrow at 4:45 am'],
             ['2015-01-17 04:45:46', '2015-01-15 00:00:00', '17 Jun at 4:45 am'],
         ];
+    }
+
+    /**
+     * Test for DateTime, timestamps and strings.
+     *
+     * @param string $date
+     * @param string $now
+     * @param string $expectedDate
+     *
+     * @throws Exception
+     */
+    private function assertDateToFormat($date, $now, $expectedDate)
+    {
+        $timezone = new DateTimeZone('UTC');
+
+        $dateObject = new DateTime($date, $timezone);
+        $nowObject  = new DateTime($now, $timezone);
+
+        $dateTimestamp = $dateObject->getTimestamp();
+        $nowTimestamp  = $nowObject->getTimestamp();
+
+        $formattedDateFromObjects    = $this->humanDate->format($dateObject, $nowObject);
+        $formattedDateFromTimestamps = $this->humanDate->format($dateTimestamp, $nowTimestamp);
+        $formattedDateFromStrings    = $this->humanDate->format($date, $now);
+
+        $this->assertEquals($expectedDate, $formattedDateFromObjects);
+        $this->assertEquals($expectedDate, $formattedDateFromTimestamps);
+        $this->assertEquals($expectedDate, $formattedDateFromStrings);
     }
 }

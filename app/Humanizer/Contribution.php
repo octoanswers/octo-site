@@ -2,22 +2,28 @@
 
 namespace Humanizer;
 
+use Exception;
+
 /**
  * I need to show a page views value in the format of 1K of equal to one thousand, or 1.1K, 1.2K, 1.9K etc,.
  */
 class Contribution
 {
+    /**
+     * @param int $count
+     *
+     * @return string
+     * @throws Exception
+     */
     public static function humanizeCount(int $count): string
     {
         if ($count < 0) {
-            throw new \Exception('Count param ' . $count . ' must be greater than or equal to 0', 1);
+            throw new Exception('Count param ' . $count . ' must be greater than or equal to 0', 1);
         }
 
         if ($count === 0) {
             return '0';
         }
-
-        $formatted = '';
 
         if ($count >= 1000 && $count < 1000000) {
             if ($count % 1000 === 0) {

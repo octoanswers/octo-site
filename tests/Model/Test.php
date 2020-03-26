@@ -44,7 +44,6 @@ class Test extends TestCase
     public function test_Get_doesnt_exists_param()
     {
         $this->expectExceptionMessage('Property "foo_bar" doesn\'t exists and cannot be get.');
-
         $this->anonymous_class_from_abstract->foo_bar;
     }
 
