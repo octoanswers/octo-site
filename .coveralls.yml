@@ -1,2 +1,0 @@
-# Ignore interface files from coveralls stats
-exclude_no_stmt: true

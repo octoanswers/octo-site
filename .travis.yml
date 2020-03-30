@@ -19,17 +19,10 @@ before_script:
 before-install:
   - composer self-update
 
-# Install composer dependencies,
-# Create database, schema and fixtures
 install:
+  # Install composer dependencies,
   - composer install --no-dev
-  
-# Install composer dependencies,
-# Create database, schema and fixtures
-install:
+  # Create database, schema and fixtures
   - mysql -e "CREATE DATABASE IF NOT EXISTS ap_en CHARACTER SET utf8 COLLATE utf8_general_ci;"
   - mysql -e "CREATE DATABASE IF NOT EXISTS ap_ru CHARACTER SET utf8 COLLATE utf8_general_ci;"
   - mysql -e "CREATE DATABASE IF NOT EXISTS ap_users CHARACTER SET utf8 COLLATE utf8_general_ci;"
-
-after_success:
-  - travis_retry php php-coveralls.phar
