@@ -6,7 +6,7 @@ class QuestionIDTest extends \Test\TestCase\Frontend
 {
     public function test__Question_ID_equal_zero()
     {
-        $uri = '/api/v1/ru/questions/0/subscribe.json?email=' . urlencode('test@mail.ru') . '&no_email=1';
+        $uri = '/api/v1/ru/questions/0/subscribe.json?email='.urlencode('test@mail.ru').'&no_email=1';
 
         $request = $this->createRequest('DELETE', $uri);
         $response = $this->request($request);
@@ -23,7 +23,7 @@ class QuestionIDTest extends \Test\TestCase\Frontend
 
     public function test__Question_ID_below_zero()
     {
-        $uri = '/api/v1/ru/questions/-1/subscribe.json?email=' . urlencode('test@mail.ru') . '&no_email=1';
+        $uri = '/api/v1/ru/questions/-1/subscribe.json?email='.urlencode('test@mail.ru').'&no_email=1';
 
         $request = $this->createRequest('DELETE', $uri);
         $response = $this->request($request);

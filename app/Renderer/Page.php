@@ -14,13 +14,13 @@ class Page
             throw new \Exception('Lang not set in VieData', 1);
         }
 
-        $full_page = TEMPLATE_PATH . '/' . $template . '/_page.phtml';
+        $full_page = TEMPLATE_PATH.'/'.$template.'/_page.phtml';
 
         ob_start();
         if (file_exists($full_page)) {
             include $full_page;
         } else {
-            include TEMPLATE_PATH . '/wrapper.phtml';
+            include TEMPLATE_PATH.'/wrapper.phtml';
         }
         $output = ob_get_clean();
 

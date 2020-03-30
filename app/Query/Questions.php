@@ -133,7 +133,7 @@ class Questions extends \Query\Query
         try {
             v::stringType()->length(2, 32, true)->assert($query);
         } catch (NestedValidationException $e) {
-            throw new \Exception('Search query param ' . $e->getMessages()[0], 0);
+            throw new \Exception('Search query param '.$e->getMessages()[0], 0);
         }
 
         \Validator\QuestionsList::validatePage($questionsPage);
@@ -141,7 +141,7 @@ class Questions extends \Query\Query
 
         $id_offset = 0;
 
-        $sql = "SELECT * FROM questions WHERE (q_title LIKE '%" . $query . "%') LIMIT :id_offset, :per_page";
+        $sql = "SELECT * FROM questions WHERE (q_title LIKE '%".$query."%') LIMIT :id_offset, :per_page";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id_offset', $id_offset, \PDO::PARAM_INT);

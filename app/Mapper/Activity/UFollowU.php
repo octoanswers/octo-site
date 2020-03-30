@@ -10,13 +10,13 @@ class UFollowU extends \Mapper\Mapper
         $followed_user = $activity->data;
 
         if ($activity->type != \Model\Activity::F_U_FOLLOW_U) {
-            throw new \Exception('Incorrect activity type: ' . $activity->type, 0);
+            throw new \Exception('Incorrect activity type: '.$activity->type, 0);
         }
         if (!is_a($user, \Model\User::class)) {
-            throw new \Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
+            throw new \Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
         if (!is_a($followed_user, \Model\User::class)) {
-            throw new \Exception('Incorrect activity "data" class type: ' . get_class($followed_user), 0);
+            throw new \Exception('Incorrect activity "data" class type: '.get_class($followed_user), 0);
         }
 
         $userID = $user->id;

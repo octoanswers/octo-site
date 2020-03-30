@@ -36,7 +36,7 @@ class PDOFactory
     public static function getConnection(string $database)
     {
         if (!isset(self::$connection[$database])) {
-            $DB_DSN = 'mysql:host=localhost;dbname=ap_' . $database . ';charset=utf8';
+            $DB_DSN = 'mysql:host=localhost;dbname=ap_'.$database.';charset=utf8';
 
             $pdo = new \PDO($DB_DSN, DB_USERNAME, DB_PASSWORD);
             $pdo->exec('SET CHARACTER SET utf8');

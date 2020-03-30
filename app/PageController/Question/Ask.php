@@ -22,6 +22,6 @@ class Ask extends \PageController\Basic
 
     protected function _get_page_title()
     {
-        return __('page_ask.page_title') . ' – ' . __('common.answeropedia');
+        return __('page_ask.page_title').' – '.__('common.answeropedia');
     }
 }

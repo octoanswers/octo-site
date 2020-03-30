@@ -10,7 +10,7 @@ class Redirect
         $uri = str_replace('_', '__', $uri);
         $uri = str_replace(' ', '_', $uri);
 
-        return SITE_URL . '/' . $lang . '/' . urlencode($uri);
+        return SITE_URL.'/'.$lang.'/'.urlencode($uri);
     }
 
     public static function getRedirectURLForTitle(string $lang, string $title): string
@@ -19,6 +19,6 @@ class Redirect
         $uri = str_replace('_', '__', $uri);
         $uri = str_replace(' ', '_', $uri);
 
-        return SITE_URL . '/' . $lang . '/' . urlencode($uri);
+        return SITE_URL.'/'.$lang.'/'.urlencode($uri);
     }
 }

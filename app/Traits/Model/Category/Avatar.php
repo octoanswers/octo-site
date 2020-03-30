@@ -10,6 +10,6 @@ trait Avatar
         //     return SITE_URL . '/uploads/avatar/' . $this->id . '_100.jpg';
         // }
 
-        return 'https://avatars.answeropedia.org/avatars/user.png?size=100&name=' . urlencode($this->title);
+        return 'https://avatars.answeropedia.org/avatars/user.png?size=100&name='.urlencode($this->title);
     }
 }

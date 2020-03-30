@@ -42,7 +42,7 @@ class Question
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Question id param ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Question id param '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -63,7 +63,7 @@ class Question
                 throw new NestedValidationException('can not begin with a plus sign', 0);
             }
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Question title param ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Question title param '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -76,7 +76,7 @@ class Question
                 throw new NestedValidationException('not boolean', 0);
             }
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Question isRedirect param ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Question isRedirect param '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -86,10 +86,10 @@ class Question
             v::optional(v::stringType()->length(self::IMAGE_BASENAME_MIN_LENGHT, self::IMAGE_BASENAME_MAX_LENGHT, null))->assert($imageBaseName);
 
             if ($imageBaseName === '') {
-                throw new NestedValidationException('"" must have a length between ' . self::IMAGE_BASENAME_MIN_LENGHT . ' and ' . self::IMAGE_BASENAME_MAX_LENGHT, 0);
+                throw new NestedValidationException('"" must have a length between '.self::IMAGE_BASENAME_MIN_LENGHT.' and '.self::IMAGE_BASENAME_MAX_LENGHT, 0);
             }
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Question "imageBaseName" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Question "imageBaseName" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -98,7 +98,7 @@ class Question
         try {
             v::intType()->min(0, true)->assert($categoriesCount);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Question property "categoriesCount" ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Question property "categoriesCount" '.$exception->getMessages()[0], 0);
         }
     }
 }

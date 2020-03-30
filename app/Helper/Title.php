@@ -10,7 +10,7 @@ class Title
         $question_URI = str_replace('_', ' ', $question_URI);
         $question_URI = str_replace('DOUBLEUNDERLINE', '_', $question_URI);
 
-        $question_title = $question_URI . '?';
+        $question_title = $question_URI.'?';
 
         return $question_title;
     }

@@ -21,7 +21,7 @@ class Lang extends \PageController\PageController
 
         foreach ($questions as $question) {
             $output .= '<url>';
-            $output .= '<loc>' . $question->getURL($this->lang) . '</loc>';
+            $output .= '<loc>'.$question->getURL($this->lang).'</loc>';
             $output .= '</url>';
         }
 

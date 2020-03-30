@@ -20,13 +20,13 @@ class UUpdateA extends \Mapper\Mapper
             throw new \Exception("Incorrect activity type \"$activity_type\"", 0);
         }
         if (!is_a($user, \Model\User::class)) {
-            throw new \Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
+            throw new \Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
         if (!is_a($question, \Model\Question::class)) {
-            throw new \Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
+            throw new \Exception('Incorrect activity "data" class type: '.get_class($question), 0);
         }
         if (!is_a($revision, \Model\Revision::class)) {
-            throw new \Exception('Incorrect activity "data" class type: ' . get_class($revision), 0);
+            throw new \Exception('Incorrect activity "data" class type: '.get_class($revision), 0);
         }
 
         $fineDiffRender = new \cogpowered\FineDiff\Render\Html();

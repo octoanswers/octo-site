@@ -20,16 +20,16 @@ class Show extends \PageController\PageController
         $this->question_about_answeropedia = $this->_get_about_answeropedia_question();
 
         $this->template = 'main';
-        $this->pageTitle = __('common.answeropedia') . ' – ' . __('page_main.slogan');
+        $this->pageTitle = __('common.answeropedia').' – '.__('page_main.slogan');
         $this->pageDescription = __('page_main.description');
         $this->canonicalURL = \Helper\URL\Page::getMainURL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 
-        $this->share_link['title'] = __('page_main.slogan') . ' – ' . __('common.answeropedia');
+        $this->share_link['title'] = __('page_main.slogan').' – '.__('common.answeropedia');
         $this->share_link['description'] = __('page_main.description');
         $this->share_link['url'] = SITE_URL;
-        $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
+        $this->share_link['image'] = SITE_URL.'/assets/img/og-image.png';
 
         $this->includeJS[] = 'question/create';
 
@@ -74,10 +74,10 @@ class Show extends \PageController\PageController
         $og = [
             'url'         => SITE_URL,
             'type'        => 'website',
-            'title'       => __('common.answeropedia') . ' – ' . __('page_main.slogan'),
+            'title'       => __('common.answeropedia').' – '.__('page_main.slogan'),
             'description' => __('page_main.description'),
             'locale'      => $this->lang,
-            'image'       => IMAGE_URL . '/og-image.png',
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
 
         return $og;

@@ -19,7 +19,7 @@ class UUpdateSignature extends \Mapper\Mapper
             throw new \Exception("Incorrect activity type \"$activity_type\"", 0);
         }
         if (!is_a($user, \Model\User::class)) {
-            throw new \Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
+            throw new \Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
         // if (!is_a($signature, \Model\Revision::class)) {
         //     throw new \Exception('Incorrect activity "data" class type: '.get_class($revision), 0);

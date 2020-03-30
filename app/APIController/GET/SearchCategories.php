@@ -23,7 +23,7 @@ class SearchCategories extends \APIController\APIController
                 foreach ($categories as $category) {
                     $output[] = [
                         'id'             => $category->id,
-                        'display_string' => $category->title . ' – ' . $category->id,
+                        'display_string' => $category->title.' – '.$category->id,
                         'title'          => $category->title,
                     ];
                 }

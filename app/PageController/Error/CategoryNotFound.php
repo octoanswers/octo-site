@@ -21,8 +21,8 @@ class CategoryNotFound extends \PageController\PageController
 
         $this->template = 'error/category_not_found';
         $this->showFooter = false;
-        $this->pageTitle = __('page_error.category_not_found.page_title') . $this->categoryTitle . ' – ' . __('common.answeropedia');
-        $this->pageDescription = __('page_error.category_not_found.page_title') . $this->categoryTitle;
+        $this->pageTitle = __('page_error.category_not_found.page_title').$this->categoryTitle.' – '.__('common.answeropedia');
+        $this->pageDescription = __('page_error.category_not_found.page_title').$this->categoryTitle;
 
         $this->categoryURI = $category_URI;
 

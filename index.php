@@ -13,7 +13,7 @@ require_once 'vendor/autoload.php';
 
 session_start(); // @TODO deprecate?
 
-require_once __DIR__ . '/app/functions.php';
+require_once __DIR__.'/app/functions.php';
 
 // Get lang code from URL
 // $GLOBALS['lang_code'] = \Helper\Lang::getLangCodeFromURI();

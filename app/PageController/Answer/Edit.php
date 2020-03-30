@@ -34,7 +34,7 @@ class Edit extends \PageController\PageController
 
         $this->template = 'answer_edit';
         $this->showFooter = false;
-        $this->pageTitle = $this->question->title . ' – ' . __('page_answer_edit.page_title') . ' – ' . __('common.answeropedia');
+        $this->pageTitle = $this->question->title.' – '.__('page_answer_edit.page_title').' – '.__('common.answeropedia');
         $this->pageDescription = __('page_answer_edit.page_title');
 
         $this->includeJS[] = 'answer/update.js?v=1';

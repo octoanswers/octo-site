@@ -28,7 +28,7 @@ class Signup extends \APIController\APIController
 
             $user = (new \Query\User())->userWithUsername($username);
             if ($user) {
-                throw new \Exception('User with username "' . $username . '" is already registered', 0);
+                throw new \Exception('User with username "'.$username.'" is already registered', 0);
             }
 
             // Generating password hash
@@ -79,18 +79,18 @@ class Signup extends \APIController\APIController
 
     public function _copyDefaultAvatar(int $userID)
     {
-        $uploadFolder = ROOT_PATH . '/uploads/avatar';
+        $uploadFolder = ROOT_PATH.'/uploads/avatar';
         $avatarSizes = [100, 200, 400];
 
         foreach ($avatarSizes as $size) {
-            $fromFile = $uploadFolder . '/0_' . $size . '.jpg';
-            $toFile = $uploadFolder . '/' . $userID . '_' . $size . '.jpg';
+            $fromFile = $uploadFolder.'/0_'.$size.'.jpg';
+            $toFile = $uploadFolder.'/'.$userID.'_'.$size.'.jpg';
 
             if (!@copy($fromFile, $toFile)) {
                 $errors = error_get_last();
-                $this->output['avatar_' . $size] = 'Avatar file "' . $userID . '_' . $size . '.png" not copied: ' . $errors['type'] . ' ' . $errors['message'];
+                $this->output['avatar_'.$size] = 'Avatar file "'.$userID.'_'.$size.'.png" not copied: '.$errors['type'].' '.$errors['message'];
             } else {
-                $this->output['avatar_' . $size] = 'Avatar file "' . $userID . '_' . $size . '.png" copied';
+                $this->output['avatar_'.$size] = 'Avatar file "'.$userID.'_'.$size.'.png" copied';
             }
         }
     }

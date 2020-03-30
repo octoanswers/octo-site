@@ -44,7 +44,7 @@ class Question extends \Mapper\Mapper
         }
         $count = $stmt->rowCount();
         if ($count == 0) {
-            throw new \Exception('Question with ID ' . $question->id . ' not exists', 0);
+            throw new \Exception('Question with ID '.$question->id.' not exists', 0);
         }
 
         return $question;

@@ -38,9 +38,9 @@ class PassHash
      */
     public function hash($password)
     {
-        return crypt($password, self::$algo .
-            self::$cost .
-            '$' . $this->uniqueSalt());
+        return crypt($password, self::$algo.
+            self::$cost.
+            '$'.$this->uniqueSalt());
     }
 
     /**

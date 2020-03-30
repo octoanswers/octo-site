@@ -20,7 +20,7 @@ class Question extends \Query\Query
 
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new \Exception('Question with lang "' . $this->lang . '" and title "' . $title . '" not exists', 1);
+            throw new \Exception('Question with lang "'.$this->lang.'" and title "'.$title.'" not exists', 1);
         }
 
         return \Model\Question::initWithDBState($row);
@@ -42,7 +42,7 @@ class Question extends \Query\Query
 
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new \Exception('Question with ID "' . $questionID . '" not exists', 1);
+            throw new \Exception('Question with ID "'.$questionID.'" not exists', 1);
         }
 
         return \Model\Question::initWithDBState($row);

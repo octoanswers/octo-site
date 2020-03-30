@@ -45,7 +45,7 @@ abstract class PageController
 
         // Prepare the FileLoader
         $file_system = new \Illuminate\Filesystem\Filesystem();
-        $loader = new \Illuminate\Translation\FileLoader($file_system, ROOT_PATH . '/lang');
+        $loader = new \Illuminate\Translation\FileLoader($file_system, ROOT_PATH.'/lang');
 
         // Register the Translator
         $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());
@@ -57,13 +57,13 @@ abstract class PageController
             throw new \Exception('Page template not set!', 1);
         }
 
-        $fullPage = TEMPLATE_PATH . '/' . $this->template . '/_page.phtml';
+        $fullPage = TEMPLATE_PATH.'/'.$this->template.'/_page.phtml';
 
         ob_start();
         if (file_exists($fullPage)) {
             include $fullPage;
         } else {
-            include TEMPLATE_PATH . '/wrapper.phtml';
+            include TEMPLATE_PATH.'/wrapper.phtml';
         }
         $output = ob_get_clean();
 

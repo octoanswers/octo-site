@@ -10,7 +10,7 @@ trait Signature
 
         $short_signature = $this->signature;
         if (mb_strlen($this->signature) > $max_signature_len) {
-            $short_signature = mb_substr($this->signature, 0, $max_signature_len) . '&hellip;';
+            $short_signature = mb_substr($this->signature, 0, $max_signature_len).'&hellip;';
         }
 
         return $short_signature;

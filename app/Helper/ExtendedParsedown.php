@@ -47,7 +47,7 @@ class ExtendedParsedown extends \Parsedown
 
             $Block = [
                 'element' => [
-                    'name'    => 'h' . $hDigit,
+                    'name'    => 'h'.$hDigit,
                     'text'    => $text,
                     'handler' => 'line',
                 ],
@@ -78,7 +78,7 @@ class ExtendedParsedown extends \Parsedown
                 if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
                     $category = \Model\Category::initWithTitle($reference_part);
 
-                    return '[' . $matches[1] . '](' . $category->getURL($this->lang) . ')';
+                    return '['.$matches[1].']('.$category->getURL($this->lang).')';
                 }
 
                 return $matches[0];
@@ -100,7 +100,7 @@ class ExtendedParsedown extends \Parsedown
                 if (!filter_var($reference_part, FILTER_VALIDATE_URL)) {
                     $question = \Model\Question::initWithTitle($reference_part);
 
-                    return '[' . $matches[1] . '](' . $question->getURL($this->lang) . ')';
+                    return '['.$matches[1].']('.$question->getURL($this->lang).')';
                 }
 
                 return $matches[0];
@@ -114,11 +114,11 @@ class ExtendedParsedown extends \Parsedown
     protected function _postProcessing(string $text_HTML): string
     {
         // Fix external URL`s (like a href="https://answeropedia.org/ru/http://site.com/page")
-        $incorrect_URL_pattern = "/href\=\"https\:\/\/answeropedia\.org\/" . $this->lang . "\/(https?.+(?!answeropedia\.org).+)\"/iuU";
+        $incorrect_URL_pattern = "/href\=\"https\:\/\/answeropedia\.org\/".$this->lang."\/(https?.+(?!answeropedia\.org).+)\"/iuU";
         $text_HTML = preg_replace_callback(
             $incorrect_URL_pattern,
             function ($matches) {
-                return 'href="' . urldecode($matches[1]) . '"';
+                return 'href="'.urldecode($matches[1]).'"';
             },
             $text_HTML
         );
@@ -127,7 +127,7 @@ class ExtendedParsedown extends \Parsedown
         $text_HTML = preg_replace_callback(
             "/href\=\"(https?\:\/\/(?!answeropedia\.org).+)\"/iuU",
             function ($matches) {
-                return 'href="' . $matches[1] . '" class="link-external" target="_blank" rel="nofollow"';
+                return 'href="'.$matches[1].'" class="link-external" target="_blank" rel="nofollow"';
             },
             $text_HTML
         );

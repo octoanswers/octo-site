@@ -27,7 +27,7 @@ class UsersIDFollow extends \APIController\APIController
 
             $relation = (new \Query\Relations\UsersFollowUsers($lang))->relationWithUserIDAndFollowedUserID($user_ID, $followed_user_ID);
             if (!$relation) {
-                throw new \Exception('User with ID "' . $followed_user_ID . '" not followed by user with ID "' . $user_ID . '"', 0);
+                throw new \Exception('User with ID "'.$followed_user_ID.'" not followed by user with ID "'.$user_ID.'"', 0);
             }
 
             //

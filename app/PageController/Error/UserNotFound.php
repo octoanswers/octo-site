@@ -16,7 +16,7 @@ class UserNotFound extends \PageController\PageController
 
         $this->template = 'error/user_not_found';
         $this->showFooter = false;
-        $this->pageTitle = __('page_error.user_not_found.page_title') . ' – ' . $this->username . ' – ' . __('common.answeropedia');
+        $this->pageTitle = __('page_error.user_not_found.page_title').' – '.$this->username.' – '.__('common.answeropedia');
         $this->pageDescription = __('page_error.user_not_found.page_title');
 
         $output = $this->render_page();

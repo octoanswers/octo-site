@@ -30,7 +30,7 @@ class QuestionsIDSubscribe extends \APIController\APIController
 
             $s = (new \Query\Subscriptions($lang))->findWithQuestionIDAndEmail($question_id, $email);
             if ($s != null) {
-                throw new \Exception('Email "' . $email . '" already subscribed to question with ID ' . $question_id, 0);
+                throw new \Exception('Email "'.$email.'" already subscribed to question with ID '.$question_id, 0);
             }
 
             //

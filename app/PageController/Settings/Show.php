@@ -20,7 +20,7 @@ class Show extends \PageController\PageController
         $this->lang = $lang;
 
         $this->template = 'settings';
-        $this->pageTitle = __('page_settings.title') . ' – ' . __('common.answeropedia');
+        $this->pageTitle = __('page_settings.title').' – '.__('common.answeropedia');
 
         $this->includeJS[] = 'user/upload_avatar';
         $this->includeJS[] = 'user/update_name';

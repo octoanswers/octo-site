@@ -27,7 +27,7 @@ class CategoriesIDFollow extends \APIController\APIController
 
             $relation = (new \Query\Relations\UsersFollowCategories($lang))->relationWithUserIDAndCategoryID($user_ID, $category_ID);
             if ($relation) {
-                throw new \Exception('User with ID "' . $user_ID . '" already followed category with ID "' . $category_ID . '"', 0);
+                throw new \Exception('User with ID "'.$user_ID.'" already followed category with ID "'.$category_ID.'"', 0);
             }
 
             //

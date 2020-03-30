@@ -8,6 +8,6 @@ class Basic implements \Slim\Interfaces\ErrorRendererInterface
     {
         $path = $exception->getRequest()->getUri()->getPath();
 
-        return 'The requested path ' . $path . ' could not be found. Please verify the URI and try again.';
+        return 'The requested path '.$path.' could not be found. Please verify the URI and try again.';
     }
 }

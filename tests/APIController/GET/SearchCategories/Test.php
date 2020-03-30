@@ -8,7 +8,7 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__One_char_query()
     {
-        $uri = '/api/v1/ru/search/categories.json?query=' . urlencode('а');
+        $uri = '/api/v1/ru/search/categories.json?query='.urlencode('а');
 
         $request = $this->createRequest('GET', $uri);
         $response = $this->request($request);
@@ -28,7 +28,7 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Two_char_query()
     {
-        $uri = '/api/v1/ru/search/categories.json?query=' . urlencode('авто');
+        $uri = '/api/v1/ru/search/categories.json?query='.urlencode('авто');
 
         $request = $this->createRequest('GET', $uri);
         $response = $this->request($request);
@@ -53,7 +53,7 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Search_empty_query()
     {
-        $uri = '/api/v1/ru/search/categories.json?query=' . urlencode('');
+        $uri = '/api/v1/ru/search/categories.json?query='.urlencode('');
 
         $request = $this->createRequest('GET', $uri);
         $response = $this->request($request);

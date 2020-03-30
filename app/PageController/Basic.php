@@ -12,7 +12,7 @@ abstract class Basic
 
         // Prepare the FileLoader
         $file_system = new \Illuminate\Filesystem\Filesystem();
-        $loader = new \Illuminate\Translation\FileLoader($file_system, ROOT_PATH . '/lang');
+        $loader = new \Illuminate\Translation\FileLoader($file_system, ROOT_PATH.'/lang');
 
         // Register the Translator
         $GLOBALS['illuminate_translation'] = new \Illuminate\Translation\Translator($loader, lang());

@@ -14,10 +14,10 @@ class UFollowQ extends \Mapper\Mapper
             throw new \Exception("Incorrect activity type \"$activity_type\"", 0);
         }
         if (!is_a($user, \Model\User::class)) {
-            throw new \Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
+            throw new \Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
         if (!is_a($question, \Model\Question::class)) {
-            throw new \Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
+            throw new \Exception('Incorrect activity "data" class type: '.get_class($question), 0);
         }
 
         $userID = $user->id;

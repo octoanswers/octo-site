@@ -37,7 +37,7 @@ class Subscription
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Subscription "id" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Subscription "id" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -46,7 +46,7 @@ class Subscription
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Subscription "questionID" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Subscription "questionID" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -55,7 +55,7 @@ class Subscription
         try {
             v::stringType()->email()->assert($email);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Subscription "email" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Subscription "email" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -64,7 +64,7 @@ class Subscription
         try {
             v::optional(v::stringType())->assert($createdAt);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('Subscription "createdAt" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('Subscription "createdAt" property '.$exception->getMessages()[0], 0);
         }
     }
 }

@@ -23,7 +23,7 @@ class Answer extends Mapper
         }
         $count = $stmt->rowCount();
         if ($count == 0) {
-            throw new \Exception('Answer with ID ' . $answer->id . ' not updated', 0);
+            throw new \Exception('Answer with ID '.$answer->id.' not updated', 0);
         }
 
         return $answer;

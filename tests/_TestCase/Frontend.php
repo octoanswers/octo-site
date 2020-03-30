@@ -6,8 +6,8 @@ use AnsweropediaApp;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\UriInterface;
-use Slim\Psr7\Factory\ServerRequestFactory;
 use Slim\App;
+use Slim\Psr7\Factory\ServerRequestFactory;
 
 /**
  * Inspired by https://github.com/odan/slim4-skeleton/blob/master/tests/TestCase/HttpTestTrait.php.
@@ -20,7 +20,7 @@ abstract class Frontend extends DB
     {
         parent::setUp();
 
-        $this->app = (new AnsweropediaApp)->get_app();
+        $this->app = (new AnsweropediaApp())->get_app();
     }
 
     protected function tearDown(): void
@@ -42,14 +42,14 @@ abstract class Frontend extends DB
     protected function createRequest(string $method, $uri, array $serverParams = []): ServerRequestInterface
     {
         // A phpunit fix #3026
-        if (! isset($_SERVER['REQUEST_URI'])) {
+        if (!isset($_SERVER['REQUEST_URI'])) {
             $_SERVER = [
                 'SCRIPT_NAME'        => '/public/index.php',
                 'REQUEST_TIME_FLOAT' => microtime(true),
                 'REQUEST_TIME'       => (int) microtime(true),
             ];
         }
-        $factory = new ServerRequestFactory;
+        $factory = new ServerRequestFactory();
 
         return $factory->createServerRequest($method, $uri, $serverParams);
     }
@@ -64,7 +64,7 @@ abstract class Frontend extends DB
      */
     protected function withFormData(ServerRequestInterface $request, array $data): ServerRequestInterface
     {
-        if (! empty($data)) {
+        if (!empty($data)) {
             $request = $request->withParsedBody($data);
         }
 

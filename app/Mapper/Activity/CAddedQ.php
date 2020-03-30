@@ -13,10 +13,10 @@ class CAddedQ extends \Mapper\Mapper
             throw new \Exception("Incorrect activity type \"$activity->type\"", 0);
         }
         if (!is_a($category, \Model\Category::class)) {
-            throw new \Exception('Incorrect activity "subject" class type: ' . get_class($category), 0);
+            throw new \Exception('Incorrect activity "subject" class type: '.get_class($category), 0);
         }
         if (!is_a($question, \Model\Question::class)) {
-            throw new \Exception('Incorrect activity "data" class type: ' . get_class($question), 0);
+            throw new \Exception('Incorrect activity "data" class type: '.get_class($question), 0);
         }
 
         $categoryID = $category->id;

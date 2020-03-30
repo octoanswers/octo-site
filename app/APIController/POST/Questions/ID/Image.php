@@ -10,7 +10,7 @@ class Image extends \APIController\APIController
     const JPEG_QUALITY = 90;
     const WIDTH_LG = 1140;  // col-12 width
     const WIDTH_MD = 760;  // col-8 width
-    const UPLOAD_FOLDER = ROOT_PATH . '/uploads/img';
+    const UPLOAD_FOLDER = ROOT_PATH.'/uploads/img';
 
     private $verot_upload = null;
 
@@ -48,8 +48,8 @@ class Image extends \APIController\APIController
             if ($this->verot_upload->uploaded) {
                 $image_base_name = $this->_get_image_base_name();
 
-                $this->_makeUserAvatarWithSize($lang, $image_base_name . '_lg', self::WIDTH_LG);
-                $this->_makeUserAvatarWithSize($lang, $image_base_name . '_md', self::WIDTH_MD);
+                $this->_makeUserAvatarWithSize($lang, $image_base_name.'_lg', self::WIDTH_LG);
+                $this->_makeUserAvatarWithSize($lang, $image_base_name.'_md', self::WIDTH_MD);
 
                 // delete the original uploaded file
                 $this->verot_upload->clean();
@@ -82,7 +82,7 @@ class Image extends \APIController\APIController
 
     protected function _makeUserAvatarWithSize($lang, $image_filename, $image_width)
     {
-        $uploadFolder = self::UPLOAD_FOLDER . '/' . $lang . '/' . $this->question->id . '/';
+        $uploadFolder = self::UPLOAD_FOLDER.'/'.$lang.'/'.$this->question->id.'/';
 
         $this->verot_upload->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
         $this->verot_upload->image_convert = 'jpg';
@@ -106,6 +106,6 @@ class Image extends \APIController\APIController
         $dateChunk = date('Ymj');
         $rand = mt_rand(1, 999);
 
-        return $this->user->id . '_' . $dateChunk . '_' . $rand;
+        return $this->user->id.'_'.$dateChunk.'_'.$rand;
     }
 }

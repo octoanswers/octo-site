@@ -49,7 +49,7 @@ class Show extends \PageController\PageController
         $this->share_link['title'] = $this->_get_page_title();
         $this->share_link['description'] = $this->_get_page_description();
         $this->share_link['url'] = $this->category->getURL($this->lang);
-        $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
+        $this->share_link['image'] = SITE_URL.'/assets/img/og-image.png';
 
         $output = $this->render_page();
         $response->getBody()->write($output);
@@ -59,7 +59,7 @@ class Show extends \PageController\PageController
 
     protected function _get_page_title()
     {
-        return __('page_category.page_title') . $this->category->title . ' – ' . __('common.answeropedia');
+        return __('page_category.page_title').$this->category->title.' – '.__('common.answeropedia');
     }
 
     protected function _prepare_follow_button()
@@ -81,7 +81,7 @@ class Show extends \PageController\PageController
             'type'        => 'website',
             'title'       => $this->_get_page_title(),
             'description' => $this->_get_page_description(),
-            'image'       => IMAGE_URL . '/og-image.png',
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
 
         return $og;
@@ -89,7 +89,7 @@ class Show extends \PageController\PageController
 
     protected function _get_page_description()
     {
-        return __('page_category.questions_with_category') . ' ' . $this->category->title . ' – ' . __('common.answeropedia');
+        return __('page_category.questions_with_category').' '.$this->category->title.' – '.__('common.answeropedia');
     }
 
     private function _category_title_from_URI(string $uri): string

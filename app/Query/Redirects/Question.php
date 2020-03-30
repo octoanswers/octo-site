@@ -18,7 +18,7 @@ class Question extends \Query\Query
 
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new \Exception('Redirect for question with ID "' . $questionID . '" not exists', 1);
+            throw new \Exception('Redirect for question with ID "'.$questionID.'" not exists', 1);
         }
 
         return \Model\Redirect\Question::initWithDBState($row);

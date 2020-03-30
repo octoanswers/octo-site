@@ -12,7 +12,7 @@ class PageNotFound extends \PageController\PageController
         $this->lang = 'en';
 
         $this->template = 'error/404';
-        $this->pageTitle = __('page_error.404.page_title') . ' – ' . __('common.answeropedia');
+        $this->pageTitle = __('page_error.404.page_title').' – '.__('common.answeropedia');
         $this->pageDescription = __('page_error.404.page_title');
         $this->includeJS[] = 'goal/page_not_found';
 

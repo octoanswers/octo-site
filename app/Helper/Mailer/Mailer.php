@@ -8,7 +8,7 @@ abstract class Mailer
 
     public static function sendTextEmail($to_email, $subject, $message)
     {
-        $header = 'From: Answeropedia <no_reply@answeropedia.org>' . "\r\n";
+        $header = 'From: Answeropedia <no_reply@answeropedia.org>'."\r\n";
         $header .= "MIME-Version: 1.0\r\n";
         $header .= "Content-type: text/html; charset=UTF-8\r\n";
 

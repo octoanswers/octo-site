@@ -9,7 +9,7 @@ class Avatar extends \APIController\APIController
 {
     const JPEG_QUALITY = 90;
 
-    private $uploadFolder = ROOT_PATH . '/uploads/avatar/';
+    private $uploadFolder = ROOT_PATH.'/uploads/avatar/';
 
     private $handle = null;
 
@@ -71,7 +71,7 @@ class Avatar extends \APIController\APIController
 
     protected function _makeUserAvatarWithSize($user_ID, $avatar_size)
     {
-        $avatarFilename = $user_ID . '_' . $avatar_size;
+        $avatarFilename = $user_ID.'_'.$avatar_size;
 
         $this->handle->allowed = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
         $this->handle->image_convert = 'jpg';

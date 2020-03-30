@@ -28,7 +28,7 @@ class Newest extends \PageController\Basic
 
     protected function _get_page_title(int $page)
     {
-        return __('page_users.new_users_msg') . ' – ' . __('common.page') . ' ' . $page . ' – ' . __('common.answeropedia');
+        return __('page_users.new_users_msg').' – '.__('common.page').' '.$page.' – '.__('common.answeropedia');
     }
 
     protected function _next_page_URL($lang, $list, $current_page, int $users_count)
@@ -36,8 +36,8 @@ class Newest extends \PageController\Basic
         $nextPageURL = null;
 
         if ($users_count == self::USERS_PER_PAGE) {
-            $postfix = '?page=' . ($current_page + 1);
-            $nextPageURL = SITE_URL . '/' . $lang . '/users/' . $list . $postfix;
+            $postfix = '?page='.($current_page + 1);
+            $nextPageURL = SITE_URL.'/'.$lang.'/users/'.$list.$postfix;
         }
 
         return $nextPageURL;

@@ -12,13 +12,14 @@ class Contribution
     /**
      * @param int $count
      *
-     * @return string
      * @throws Exception
+     *
+     * @return string
      */
     public static function humanizeCount(int $count): string
     {
         if ($count < 0) {
-            throw new Exception('Count param ' . $count . ' must be greater than or equal to 0', 1);
+            throw new Exception('Count param '.$count.' must be greater than or equal to 0', 1);
         }
 
         if ($count === 0) {
@@ -29,7 +30,7 @@ class Contribution
             if ($count % 1000 === 0) {
                 $formatted = ($count / 1000);
             } else {
-                $formatted = substr($count, 0, -3) . '.' . substr($count, -3, -2);
+                $formatted = substr($count, 0, -3).'.'.substr($count, -3, -2);
 
                 if (substr($formatted, -1, 1) === '0') {
                     $formatted = substr($formatted, 0, -2);

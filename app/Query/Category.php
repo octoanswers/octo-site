@@ -38,7 +38,7 @@ class Category extends \Query\Query
 
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if (!$row) {
-            throw new \Exception('Category with ID "' . $categoryID . '" not exists', 1);
+            throw new \Exception('Category with ID "'.$categoryID.'" not exists', 1);
         }
 
         return \Model\Category::initWithDBState($row);

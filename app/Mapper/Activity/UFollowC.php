@@ -13,10 +13,10 @@ class UFollowC extends \Mapper\Mapper
             throw new \Exception('Incorrect activity type', 0);
         }
         if (!is_a($user, \Model\User::class)) {
-            throw new \Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
+            throw new \Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
         if (!is_a($category, \Model\Category::class)) {
-            throw new \Exception('Incorrect activity "data" class type: ' . get_class($category), 0);
+            throw new \Exception('Incorrect activity "data" class type: '.get_class($category), 0);
         }
 
         $userID = $user->id;

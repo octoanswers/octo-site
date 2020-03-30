@@ -13,7 +13,7 @@ class CategoryRenamedByUser extends \Mapper\Mapper
 
         $category = $activity->subject;
         if (!is_a($category, \Model\Category::class)) {
-            throw new \Exception('Incorrect activity "data" class type: ' . get_class($category), 0);
+            throw new \Exception('Incorrect activity "data" class type: '.get_class($category), 0);
         }
 
         if (!isset($activity->data['user']) || !isset($activity->data['old_title'])) {
@@ -21,7 +21,7 @@ class CategoryRenamedByUser extends \Mapper\Mapper
         }
         $user = $activity->data['user'];
         if (!is_a($user, \Model\User::class)) {
-            throw new \Exception('Incorrect activity "subject" class type: ' . get_class($user), 0);
+            throw new \Exception('Incorrect activity "subject" class type: '.get_class($user), 0);
         }
         $old_title = $activity->data['old_title'];
         if (!is_string($old_title)) {

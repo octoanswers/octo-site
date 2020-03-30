@@ -27,7 +27,7 @@ class HumanDate
      */
     public function __construct($timezone = 'UTC', $lang = 'en')
     {
-        if (! ($timezone instanceof DateTimeZone)) {
+        if (!($timezone instanceof DateTimeZone)) {
             $this->timezone = new DateTimeZone($timezone);
         } else {
             $this->timezone = $timezone;
@@ -35,7 +35,7 @@ class HumanDate
 
         $this->lang = $lang;
 
-        if (! file_exists($this->lang_file())) {
+        if (!file_exists($this->lang_file())) {
             $this->lang = 'en';
         }
 
@@ -52,7 +52,7 @@ class HumanDate
      */
     public function format($date, $now = 'now')
     {
-        $date      = $this->create_date($date);
+        $date = $this->create_date($date);
         $this->now = $this->create_date($now);
 
         if ($this->distance($date) > 4 * $this->hour() + 45 * $this->minute() + 45) {
@@ -89,20 +89,20 @@ class HumanDate
             $month = $date->format('m');
 
             if ($shortMonths) {
-                $beauty .= ' ' . $this->translation('shortMonths', $month - 1);
+                $beauty .= ' '.$this->translation('shortMonths', $month - 1);
             } else {
-                $beauty .= ' ' . $this->translation('months', $month - 1);
+                $beauty .= ' '.$this->translation('months', $month - 1);
             }
 
             // Year
             if ($this->distance($date) > $this->year()) {
-                $beauty .= ' ' . $date->format('y');
+                $beauty .= ' '.$date->format('y');
             }
         }
 
         // Time
-        $beauty .= ' ' . $this->translation('delimiter');
-        $beauty .= ' ' . $date->format($this->translation('time'));
+        $beauty .= ' '.$this->translation('delimiter');
+        $beauty .= ' '.$date->format($this->translation('time'));
 
         return $beauty;
     }
@@ -141,7 +141,7 @@ class HumanDate
                 $words = $this->translation('fourMinutes');
             } elseif ($distance < 45 * $this->minute() + 45) {
                 $minutes = round($distance / $this->minute());
-                $words   = $this->declension('minutes', $minutes);
+                $words = $this->declension('minutes', $minutes);
             } elseif ($distance < 1 * $this->hour() + 45 * $this->minute() + 45) {
                 $words = $this->translation('oneHour');
             } elseif ($distance < 2 * $this->hour() + 45 * $this->minute() + 45) {
@@ -153,9 +153,9 @@ class HumanDate
             }
 
             if ($this->is_past($date)) {
-                $words .= ' ' . $this->translation('ago');
+                $words .= ' '.$this->translation('ago');
             } else {
-                $words = $this->translation('after') . ' ' . $words;
+                $words = $this->translation('after').' '.$words;
             }
         }
 
@@ -223,9 +223,9 @@ class HumanDate
      */
     protected function create_date($date)
     {
-        if (! ($date instanceof \DateTime)) {
+        if (!($date instanceof \DateTime)) {
             if (is_numeric($date)) {
-                $now  = new \DateTime('now', $this->timezone);
+                $now = new \DateTime('now', $this->timezone);
                 $date = $now->setTimestamp($date);
             } else {
                 $date = new \DateTime($date, $this->timezone);
@@ -301,7 +301,7 @@ class HumanDate
      */
     protected function translation($label, $index = 0)
     {
-        if (! array_key_exists($label, $this->translations)) {
+        if (!array_key_exists($label, $this->translations)) {
             return '';
         }
 
@@ -330,7 +330,7 @@ class HumanDate
             $index = 0;
         }
 
-        return $number . ' ' . $this->translation($label, $index);
+        return $number.' '.$this->translation($label, $index);
     }
 
     /**
@@ -340,7 +340,7 @@ class HumanDate
      */
     protected function lang_file()
     {
-        return __DIR__ . '/lang/' . $this->lang . '.php';
+        return __DIR__.'/lang/'.$this->lang.'.php';
     }
 
     /**

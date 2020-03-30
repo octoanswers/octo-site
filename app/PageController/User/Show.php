@@ -38,16 +38,16 @@ class Show extends \PageController\PageController
         $this->_prepare_follow_button();
 
         $this->template = 'user';
-        $this->pageTitle = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
-        $this->pageDescription = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
+        $this->pageTitle = $this->user->name.' '.__('page_user.answers_on_answeropedia');
+        $this->pageDescription = $this->user->name.' '.__('page_user.answers_on_answeropedia');
         $this->canonicalURL = $this->user->getURL($this->lang);
 
         $this->open_graph = $this->_get_open_graph();
 
         $this->share_link['title'] = $this->user->name;
-        $this->share_link['description'] = $this->user->name . ' ' . __('page_user.answers_on_answeropedia');
+        $this->share_link['description'] = $this->user->name.' '.__('page_user.answers_on_answeropedia');
         $this->share_link['url'] = $this->user->getURL($this->lang);
-        $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
+        $this->share_link['image'] = SITE_URL.'/assets/img/og-image.png';
 
         // prepare 'logout' button
         if (($this->authUser != null) && ($this->authUser->id == $this->user->id)) {
@@ -82,9 +82,9 @@ class Show extends \PageController\PageController
             'url'         => $this->user->getURL($this->lang),
             'type'        => 'website',
             'title'       => $this->user->name,
-            'description' => $this->user->name . ' ' . __('page_user.answers_on_answeropedia'),
+            'description' => $this->user->name.' '.__('page_user.answers_on_answeropedia'),
             'locale'      => $this->lang,
-            'image'       => IMAGE_URL . '/og-image.png',
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
 
         return $og;

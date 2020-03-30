@@ -44,7 +44,7 @@ class Category extends \Mapper\Mapper
         }
 
         if ($stmt->rowCount() == 0) {
-            throw new \Exception('Category with ID ' . $category->id . ' not exists', 0);
+            throw new \Exception('Category with ID '.$category->id.' not exists', 0);
         }
 
         return $category;

@@ -26,13 +26,13 @@ class Show extends \PageController\PageController
             $need_stop_redirect = $query_params['no_redirect'];
             if (!$need_stop_redirect) {
                 $redirectTitle = $this->questionRedirect->title;
-                $redirectURL = \Helper\URL\Redirect::getRedirectURLForTitle($this->lang, $redirectTitle) . '?redirect_from_id=' . $this->question->id;
+                $redirectURL = \Helper\URL\Redirect::getRedirectURLForTitle($this->lang, $redirectTitle).'?redirect_from_id='.$this->question->id;
 
                 return $response->withRedirect($redirectURL, 301);
             }
 
             $this->template = 'question_redirect';
-            $this->pageTitle = 'Redirect page: ' . $this->question->title . ' – ' . __('common.answeropedia');
+            $this->pageTitle = 'Redirect page: '.$this->question->title.' – '.__('common.answeropedia');
 
             $output = $this->render_page();
             $response->getBody()->write($output);
@@ -71,7 +71,7 @@ class Show extends \PageController\PageController
         }
 
         $this->template = 'question';
-        $this->pageTitle = $this->question->title . ' – ' . __('common.answeropedia');
+        $this->pageTitle = $this->question->title.' – '.__('common.answeropedia');
         $this->pageDescription = $this->_get_page_description();
         $this->canonicalURL = $this->question->getURL($this->lang);
 
@@ -82,7 +82,7 @@ class Show extends \PageController\PageController
         $this->share_link['title'] = $this->question->title;
         $this->share_link['description'] = __('page_question.share_link__description');
         $this->share_link['url'] = $this->question->getURL($this->lang);
-        $this->share_link['image'] = SITE_URL . '/assets/img/og-image.png';
+        $this->share_link['image'] = SITE_URL.'/assets/img/og-image.png';
 
         $this->_prepare_additional_JS();
         $this->_prepare_modals();
@@ -164,7 +164,7 @@ class Show extends \PageController\PageController
             'title'       => $this->question->title,
             'description' => $this->_get_page_description(),
             'locale'      => $this->lang,
-            'image'       => IMAGE_URL . '/og-image.png',
+            'image'       => IMAGE_URL.'/og-image.png',
         ];
 
         return $og;

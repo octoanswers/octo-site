@@ -37,7 +37,7 @@ class UserFollowCategory
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('UserFollowCategory relation "id" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('UserFollowCategory relation "id" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -46,7 +46,7 @@ class UserFollowCategory
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('UserFollowCategory relation "userID" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('UserFollowCategory relation "userID" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -55,7 +55,7 @@ class UserFollowCategory
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('UserFollowCategory relation "questionID" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('UserFollowCategory relation "questionID" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -64,7 +64,7 @@ class UserFollowCategory
         try {
             v::optional(v::stringType())->assert($createdAt);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('UserFollowCategory relation "createdAt" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('UserFollowCategory relation "createdAt" property '.$exception->getMessages()[0], 0);
         }
     }
 }

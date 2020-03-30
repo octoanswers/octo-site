@@ -29,13 +29,13 @@ class UpdateCategories extends \PageController\PageController
         $this->categories_string = count($this->category_names) ? implode(',', $this->category_names) : '';
 
         $this->template = 'question_update_categories';
-        $this->pageTitle = __('page_question_update_categories.page.title') . ': ' . $this->question->title . ' - ' . __('common.answeropedia');
-        $this->pageDescription = __('page_question_update_categories.page.title') . ': ' . $this->question->title . ' - ' . __('common.answeropedia');
+        $this->pageTitle = __('page_question_update_categories.page.title').': '.$this->question->title.' - '.__('common.answeropedia');
+        $this->pageDescription = __('page_question_update_categories.page.title').': '.$this->question->title.' - '.__('common.answeropedia');
         $this->showFooter = false;
 
-        $this->includeJS[] = SITE_URL . '/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.js';
-        $this->includeJS[] = SITE_URL . '/assets/_vendor/twitter/typeahead.js/bloodhound.js';
-        $this->includeJS[] = SITE_URL . '/assets/_vendor/twitter/typeahead.js/typeahead.bundle.min.js';
+        $this->includeJS[] = SITE_URL.'/assets/_vendor/Nodws/bootstrap4-tagsinput/tagsinput.js';
+        $this->includeJS[] = SITE_URL.'/assets/_vendor/twitter/typeahead.js/bloodhound.js';
+        $this->includeJS[] = SITE_URL.'/assets/_vendor/twitter/typeahead.js/typeahead.bundle.min.js';
         $this->includeJS[] = 'question/tagsinput';
         $this->includeJS[] = 'question/update_topics';
 

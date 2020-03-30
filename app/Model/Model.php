@@ -5,16 +5,14 @@ namespace Model;
 use Exception;
 
 /**
- * Class Model
+ * Class Model.
  *
  * @property void foo_bar() <- for tests use
- *
- * @package Model
  */
 abstract class Model
 {
     /**
-     * Force PHP to throw an error on undefined Models property
+     * Force PHP to throw an error on undefined Models property.
      *
      * @param $var
      * @param $val

@@ -64,7 +64,7 @@ class User
         try {
             v::intType()->min(1, true)->assert($id);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User id param ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User id param '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -73,7 +73,7 @@ class User
         try {
             v::stringType()->length(self::USERNAME_MIN_LENGHT, self::USERNAME_MAX_LENGHT, null)->alnum()->noWhitespace()->assert($username);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "username" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "username" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -82,7 +82,7 @@ class User
         try {
             v::stringType()->length(self::NAME_MIN_LENGHT, self::NAME_MAX_LENGHT, null)->assert($title);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "name" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "name" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -91,7 +91,7 @@ class User
         try {
             v::stringType()->email()->assert($email);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "email" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "email" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -100,7 +100,7 @@ class User
         try {
             v::optional(v::stringType()->length(self::SIGNATURE_MIN_LENGHT, self::SIGNATURE_MAX_LENGHT, null))->assert($signature);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "signature" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "signature" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -109,7 +109,7 @@ class User
         try {
             v::optional(v::url())->assert($site);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "site" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "site" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -118,7 +118,7 @@ class User
         try {
             v::stringType()->length(self::PASSWORD_MIN_LENGHT, self::PASSWORD_MAX_LENGHT, true)->assert($password);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "password" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "password" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -127,7 +127,7 @@ class User
         try {
             v::stringType()->length(55, 65, true)->assert($passwordHash);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "passwordHash" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "passwordHash" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -136,7 +136,7 @@ class User
         try {
             v::stringType()->length(25, 45, true)->assert($APIKey);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "apiKey" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "apiKey" property '.$exception->getMessages()[0], 0);
         }
     }
 
@@ -146,7 +146,7 @@ class User
         try {
             v::optional(v::stringType())->assert($createdAt);
         } catch (NestedValidationException $exception) {
-            throw new \Exception('User "timestamp" property ' . $exception->getMessages()[0], 0);
+            throw new \Exception('User "timestamp" property '.$exception->getMessages()[0], 0);
         }
     }
 }

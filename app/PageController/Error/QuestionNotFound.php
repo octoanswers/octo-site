@@ -21,7 +21,7 @@ class QuestionNotFound extends \PageController\PageController
 
         $this->template = 'error/question_not_found';
         $this->showFooter = false;
-        $this->pageTitle = __('page_error.question_not_found.page_title') . ' – ' . $this->questionTitle . ' – ' . __('common.answeropedia');
+        $this->pageTitle = __('page_error.question_not_found.page_title').' – '.$this->questionTitle.' – '.__('common.answeropedia');
         $this->pageDescription = __('page_error.question_not_found.page_title');
 
         $this->questionURI = $question_URI;
