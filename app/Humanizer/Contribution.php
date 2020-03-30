@@ -12,8 +12,9 @@ class Contribution
     /**
      * @param int $count
      *
-     * @return string
      * @throws Exception
+     *
+     * @return string
      */
     public static function humanizeCount(int $count): string
     {

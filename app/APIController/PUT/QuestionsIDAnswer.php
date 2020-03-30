@@ -10,11 +10,11 @@ class QuestionsIDAnswer extends \APIController\APIController
     public function handle(Request $request, Response $response, $args): Response
     {
         try {
-            $lang      = $request->getAttribute('lang');
+            $lang = $request->getAttribute('lang');
             $answer_id = (int) $request->getAttribute('id');
 
-            $post_params      = $request->getParsedBody();
-            $new_answer_text  = (string) $post_params['answer_text']; //
+            $post_params = $request->getParsedBody();
+            $new_answer_text = (string) $post_params['answer_text']; //
             $revision_comment = (string) @$post_params['changes_comment'];
 
             $user_api_key = (string) $post_params['user_api_key'];
@@ -24,15 +24,15 @@ class QuestionsIDAnswer extends \APIController\APIController
                 : null;
 
             // Check user
-            $user = (new \Query\User)->userWithAPIKey($user_api_key);
+            $user = (new \Query\User())->userWithAPIKey($user_api_key);
 
             // Check answer
             $answer = (new \Query\Answers($lang))->answerWithID($answer_id);
 
             $old_answer_text = $answer->text;
 
-            $granularity = new \cogpowered\FineDiff\Granularity\Word;
-            $fineDiff    = new \cogpowered\FineDiff\Diff($granularity);
+            $granularity = new \cogpowered\FineDiff\Granularity\Word();
+            $fineDiff = new \cogpowered\FineDiff\Diff($granularity);
 
             $opcodes = (string) $fineDiff->getOpcodes($old_answer_text, $new_answer_text);
 
@@ -40,22 +40,22 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             $answerUpdatedAt = (new \DateTime('NOW'))->format('Y-m-d H:i:s');
 
-            $answer->id        = $answer_id;
-            $answer->text      = $new_answer_text;
+            $answer->id = $answer_id;
+            $answer->text = $new_answer_text;
             $answer->updatedAt = $answerUpdatedAt;
 
             $answer = (new \Mapper\Answer($lang))->update($answer);
 
             // Create revision
 
-            $revision           = new \Model\Revision;
+            $revision = new \Model\Revision();
             $revision->answerID = $answer_id;
-            $revision->opcodes  = $opcodes;
+            $revision->opcodes = $opcodes;
             if ($old_answer_text) {
                 $revision->baseText = $old_answer_text;
             }
             $revision->comment = $revision_comment;
-            $revision->userID  = $user->id;
+            $revision->userID = $user->id;
 
             \Validator\Revision::validateComment($revision_comment);
 
@@ -71,17 +71,17 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             // Save activity
 
-            $activity          = new \Model\Activity;
-            $activity->type    = \Model\Activity::F_U_UPDATE_A;
+            $activity = new \Model\Activity();
+            $activity->type = \Model\Activity::F_U_UPDATE_A;
             $activity->subject = $user;
-            $activity->data    = ['question' => $question, 'revision' => $revision];
-            $activity          = (new \Mapper\Activity\UUpdateA($lang))->create($activity);
+            $activity->data = ['question' => $question, 'revision' => $revision];
+            $activity = (new \Mapper\Activity\UUpdateA($lang))->create($activity);
 
-            $activity          = new \Model\Activity;
-            $activity->type    = \Model\Activity::F_Q_UPDATE_A;
+            $activity = new \Model\Activity();
+            $activity->type = \Model\Activity::F_Q_UPDATE_A;
             $activity->subject = $question;
-            $activity->data    = ['user' => $user, 'revision' => $revision];
-            $activity          = (new \Mapper\Activity\QUpdateA($lang))->create($activity);
+            $activity->data = ['user' => $user, 'revision' => $revision];
+            $activity = (new \Mapper\Activity\QUpdateA($lang))->create($activity);
 
             $output = [
                 'question_id'        => $answer_id,

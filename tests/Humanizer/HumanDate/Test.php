@@ -9,7 +9,7 @@ use Humanizer\HumanDate\HumanDate;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class HumanizeTimestampTest
+ * Class HumanizeTimestampTest.
  *
  * @group humanizer
  */
@@ -29,18 +29,18 @@ class Test extends TestCase
         $date = new DateTime('-6 seconds');
 
         $formattedDate = $this->humanDate->format($date);
-        $expectedDate  = '6 seconds ago';
+        $expectedDate = '6 seconds ago';
 
         $this->assertEquals($expectedDate, $formattedDate);
     }
 
     public function testWithoutTimezoneAndLanguage()
     {
-        $date      = new DateTime('-6 seconds');
-        $humanDate = new HumanDate;
+        $date = new DateTime('-6 seconds');
+        $humanDate = new HumanDate();
 
         $formattedDate = $humanDate->format($date);
-        $expectedDate  = '6 seconds ago';
+        $expectedDate = '6 seconds ago';
 
         $this->assertEquals($expectedDate, $formattedDate);
     }
@@ -135,14 +135,14 @@ class Test extends TestCase
         $timezone = new DateTimeZone('UTC');
 
         $dateObject = new DateTime($date, $timezone);
-        $nowObject  = new DateTime($now, $timezone);
+        $nowObject = new DateTime($now, $timezone);
 
         $dateTimestamp = $dateObject->getTimestamp();
-        $nowTimestamp  = $nowObject->getTimestamp();
+        $nowTimestamp = $nowObject->getTimestamp();
 
-        $formattedDateFromObjects    = $this->humanDate->format($dateObject, $nowObject);
+        $formattedDateFromObjects = $this->humanDate->format($dateObject, $nowObject);
         $formattedDateFromTimestamps = $this->humanDate->format($dateTimestamp, $nowTimestamp);
-        $formattedDateFromStrings    = $this->humanDate->format($date, $now);
+        $formattedDateFromStrings = $this->humanDate->format($date, $now);
 
         $this->assertEquals($expectedDate, $formattedDateFromObjects);
         $this->assertEquals($expectedDate, $formattedDateFromTimestamps);
