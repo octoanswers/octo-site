@@ -2,16 +2,17 @@
 
 namespace Test\TestCase;
 
-use Exception;
+use AnsweropediaApp;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\UriInterface;
 use Slim\Psr7\Factory\ServerRequestFactory;
+use Slim\App;
 
 /**
  * Inspired by https://github.com/odan/slim4-skeleton/blob/master/tests/TestCase/HttpTestTrait.php.
  */
-abstract class Frontend extends \Test\TestCase\DB
+abstract class Frontend extends DB
 {
     protected $app;
 
@@ -19,7 +20,7 @@ abstract class Frontend extends \Test\TestCase\DB
     {
         parent::setUp();
 
-        $this->app = (new \AnsweropediaApp)->get_app();
+        $this->app = (new AnsweropediaApp)->get_app();
     }
 
     protected function tearDown(): void
@@ -89,15 +90,13 @@ abstract class Frontend extends \Test\TestCase\DB
     /**
      * Make request.
      *
-     * @param ServerRequestInterface $request The request
+     * @param ServerRequestInterface $request
      *
      * @return ResponseInterface
-     * @throws Exception
-     *
      */
     protected function request(ServerRequestInterface $request): ResponseInterface
     {
-        /** @var \AnsweropediaApp $app */
+        /** @var App $app */
         $app = $this->app;
 
         return $app->handle($request);
