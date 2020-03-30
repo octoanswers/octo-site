@@ -19,7 +19,7 @@ abstract class Frontend extends \Test\TestCase\DB
     {
         parent::setUp();
 
-        $this->app = (new \AnsweropediaApp())->get_app();
+        $this->app = (new \AnsweropediaApp)->get_app();
     }
 
     protected function tearDown(): void
@@ -41,14 +41,14 @@ abstract class Frontend extends \Test\TestCase\DB
     protected function createRequest(string $method, $uri, array $serverParams = []): ServerRequestInterface
     {
         // A phpunit fix #3026
-        if (!isset($_SERVER['REQUEST_URI'])) {
+        if (! isset($_SERVER['REQUEST_URI'])) {
             $_SERVER = [
                 'SCRIPT_NAME'        => '/public/index.php',
                 'REQUEST_TIME_FLOAT' => microtime(true),
                 'REQUEST_TIME'       => (int) microtime(true),
             ];
         }
-        $factory = new ServerRequestFactory();
+        $factory = new ServerRequestFactory;
 
         return $factory->createServerRequest($method, $uri, $serverParams);
     }
@@ -63,7 +63,7 @@ abstract class Frontend extends \Test\TestCase\DB
      */
     protected function withFormData(ServerRequestInterface $request, array $data): ServerRequestInterface
     {
-        if (!empty($data)) {
+        if (! empty($data)) {
             $request = $request->withParsedBody($data);
         }
 
@@ -91,12 +91,15 @@ abstract class Frontend extends \Test\TestCase\DB
      *
      * @param ServerRequestInterface $request The request
      *
+     * @return ResponseInterface
      * @throws Exception
      *
-     * @return ResponseInterface
      */
     protected function request(ServerRequestInterface $request): ResponseInterface
     {
-        return $this->app->handle($request);
+        /** @var \AnsweropediaApp $app */
+        $app = $this->app;
+
+        return $app->handle($request);
     }
 }

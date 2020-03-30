@@ -2,6 +2,7 @@
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
+use Slim\App;
 
 class AnsweropediaApp
 {
@@ -14,8 +15,7 @@ class AnsweropediaApp
 
     public function __construct()
     {
-        // Instantiate App
-
+        /** @var App $app */
         $app = Slim\Factory\AppFactory::create();
 
         // The routing middleware should be added earlier than the ErrorMiddleware
@@ -24,10 +24,14 @@ class AnsweropediaApp
         $app->addRoutingMiddleware();
 
         // Define Custom Error Handler
-        $default_error_handler = function (Request $request, \Throwable $exception, bool $displayErrorDetails, bool $logErrors, bool $logErrorDetails) use ($app) {
+        $default_error_handler = function (Request $request,
+                                           \Throwable $exception,
+                                           bool $displayErrorDetails,
+                                           bool $logErrors,
+                                           bool $logErrorDetails) use ($app) {
             $response = $app->getResponseFactory()->createResponse();
 
-            return (new \PageController\Error\PageNotFound())->handle($request, $response);
+            return (new \PageController\Error\PageNotFound)->handle($request, $response);
         };
 
         // Add Error Middleware
@@ -48,14 +52,15 @@ class AnsweropediaApp
             // @todo Origin be https://avatars.answeropedia.org
             return $response
                 ->withHeader('Access-Control-Allow-Origin', 'https://wikitransfer.answeropedia.org')
-                ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+                ->withHeader('Access-Control-Allow-Headers',
+                    'X-Requested-With, Content-Type, Accept, Origin, Authorization')
                 ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
         };
         $app->add($beforeMiddleware);
 
         // Set supported array on languages
 
-        if (!defined('URL_PART_LANG')) {
+        if (! defined('URL_PART_LANG')) {
             define('URL_PART_LANG', '/{lang:[en|ru]+}');
         }
 
@@ -69,7 +74,8 @@ class AnsweropediaApp
             // DELETE
             $group->delete('/categories/{id}/follow.json', \APIController\DELETE\CategoriesIDFollow::class . ':handle');
             $group->delete('/questions/{id}/follow.json', \APIController\DELETE\QuestionsIDFollow::class . ':handle');
-            $group->delete('/questions/{id}/subscribe.json', \APIController\DELETE\QuestionsIDSubscribe::class . ':handle');
+            $group->delete('/questions/{id}/subscribe.json',
+                \APIController\DELETE\QuestionsIDSubscribe::class . ':handle');
             $group->delete('/users/{id}/follow.json', \APIController\DELETE\UsersIDFollow::class . ':handle');
 
             // PATCH
@@ -96,7 +102,8 @@ class AnsweropediaApp
             // PUT
             $group->put('/questions/{id}.json', \APIController\PUT\QuestionsID::class . ':handle');
             $group->put('/questions/{id}/answer.json', \APIController\PUT\QuestionsIDAnswer::class . ':handle');
-            $group->put('/questions/{id}/categories.json', \APIController\PUT\Questions\ID\Categories::class . ':handle');
+            $group->put('/questions/{id}/categories.json',
+                \APIController\PUT\Questions\ID\Categories::class . ':handle');
         });
 
         // Publuc URI`s
