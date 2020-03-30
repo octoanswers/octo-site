@@ -2,6 +2,13 @@
 
 namespace Tests\APIController\PUT\QuestionsIDAnswer;
 
+/**
+ * Class Test
+ *
+ * @group   api-put
+ *
+ * @package Tests\APIController\PUT\QuestionsIDAnswer
+ */
 class Test extends \Test\TestCase\Frontend
 {
     protected $setUpDB = [
@@ -11,7 +18,7 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__New_answer_with_full_params()
     {
-        $uri = '/api/v1/ru/questions/15/answer.json';
+        $uri       = '/api/v1/ru/questions/15/answer.json';
         $form_data = [
             'answer_text'     => 'В Екатеринбурге.',
             'changes_comment' => 'Правка сделана в 09-28',
@@ -21,7 +28,7 @@ class Test extends \Test\TestCase\Frontend
         $request = $this->createRequest('PUT', $uri);
         $request = $this->withFormData($request, $form_data);
 
-        $response = $this->request($request);
+        $response      = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $expected_response = [
@@ -45,7 +52,7 @@ class Test extends \Test\TestCase\Frontend
 
     public function test__Replace_answer_with_full_params()
     {
-        $uri = '/api/v1/ru/questions/21/answer.json';
+        $uri       = '/api/v1/ru/questions/21/answer.json';
         $form_data = [
             'answer_text'     => 'Нет, птицы не делают игры.',
             'changes_comment' => 'Some fixes for Q15',
@@ -55,7 +62,7 @@ class Test extends \Test\TestCase\Frontend
         $request = $this->createRequest('PUT', $uri);
         $request = $this->withFormData($request, $form_data);
 
-        $response = $this->request($request);
+        $response      = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $expected_response = [
@@ -77,9 +84,9 @@ class Test extends \Test\TestCase\Frontend
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    public function test__New_answer_without_revision_comment()
+    public function test_New_answer_without_revision_comment()
     {
-        $uri = '/api/v1/ru/questions/15/answer.json';
+        $uri       = '/api/v1/ru/questions/15/answer.json';
         $form_data = [
             'answer_text'  => 'В Краснодаре.',
             'user_api_key' => '34b88c8f1ed16fdcc18d93667c886fcc',
@@ -88,7 +95,7 @@ class Test extends \Test\TestCase\Frontend
         $request = $this->createRequest('PUT', $uri);
         $request = $this->withFormData($request, $form_data);
 
-        $response = $this->request($request);
+        $response      = $this->request($request);
         $response_body = (string) $response->getBody();
 
         $expected_response = [
