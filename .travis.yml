@@ -3,7 +3,7 @@ language: php
 
 # Choosing PHP versions to test
 php:
-  - '7.2'
+  - '7.3'
 
 # Start mysql service
 services:
