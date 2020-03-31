@@ -4,15 +4,20 @@ namespace Model;
 
 class Question extends Model
 {
-    use \Traits\Model\Question\Init;
-    use \Traits\Model\Question\Humanize;
-    use \Traits\Model\Question\URL;
-    use \Traits\Model\Question\Image;
+    use \Model\Traits\Question\Init;
+    use \Model\Traits\Question\Humanize;
+    use \Model\Traits\Question\URL;
+    use \Model\Traits\Question\Image;
 
     public $id; // int
+
     public $title; // string
+
     public $isRedirect = false; // bool
+
     public $answer; // Answer_Model
+
     public $imageBaseName;
+
     public $categoriesCount; // int
 }

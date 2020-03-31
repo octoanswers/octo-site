@@ -4,9 +4,11 @@ namespace Model;
 
 class Answer extends Model
 {
-    use \Traits\Model\Answer\Init;
+    use \Model\Traits\Answer\Init;
 
     public $id; // int
+
     public $text; // string
+
     public $updatedAt; // string
 }

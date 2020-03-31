@@ -1,6 +1,6 @@
 <?php
 
-namespace Traits\Model\Category;
+namespace Model\Traits\Category;
 
 trait Avatar
 {

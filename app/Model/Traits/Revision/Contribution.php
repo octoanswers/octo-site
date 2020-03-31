@@ -1,13 +1,13 @@
 <?php
 
-namespace Traits\Model\Revision;
+namespace Model\Traits\Revision;
 
 trait Contribution
 {
     public function getUserContribution(): int
     {
         $insertions = $this->getUserInsertions();
-        $deletions = $this->getUserDeletions();
+        $deletions  = $this->getUserDeletions();
 
         return $insertions + $deletions;
     }

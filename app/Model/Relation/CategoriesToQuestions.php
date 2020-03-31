@@ -4,10 +4,13 @@ namespace Model\Relation;
 
 class CategoriesToQuestions extends \Model\Model
 {
-    use \Traits\Model\Relation\CategoriesToQuestions;
+    use \Model\Traits\Relation\CategoriesToQuestions;
 
     public $id;
+
     public $categoryID;
+
     public $questionID;
+
     public $createdAt;
 }

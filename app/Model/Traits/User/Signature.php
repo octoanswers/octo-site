@@ -1,6 +1,6 @@
 <?php
 
-namespace Traits\Model\User;
+namespace Model\Traits\User;
 
 trait Signature
 {

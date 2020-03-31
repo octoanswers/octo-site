@@ -1,13 +1,13 @@
 <?php
 
-namespace Traits\Model\Relation;
+namespace Model\Traits\Relation;
 
 trait UserFollowUser
 {
     public static function initWithUserIDAndFollowedUserID(int $userID, int $followedUserID): self
     {
-        $er = new self();
-        $er->userID = $userID;
+        $er                 = new self;
+        $er->userID         = $userID;
         $er->followedUserID = $followedUserID;
 
         return $er;
@@ -15,12 +15,12 @@ trait UserFollowUser
 
     public static function initWithDBState(array $state): self
     {
-        $er = new self();
+        $er = new self;
 
-        $er->id = (int) $state['id'];
-        $er->userID = (int) $state['user_id'];
+        $er->id             = (int) $state['id'];
+        $er->userID         = (int) $state['user_id'];
         $er->followedUserID = (int) $state['followed_user_id'];
-        $er->createdAt = $state['created_at'];
+        $er->createdAt      = $state['created_at'];
 
         return $er;
     }

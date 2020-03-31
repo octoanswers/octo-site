@@ -3,7 +3,9 @@
 namespace APIController\PUT;
 
 use Psr\Http\Message\ResponseInterface as Response;
+use Model\Revision;
 use Psr\Http\Message\ServerRequestInterface as Request;
+use Query\Revisions as RevisionsQuery;
 
 class QuestionsIDAnswer extends \APIController\APIController
 {
@@ -44,11 +46,12 @@ class QuestionsIDAnswer extends \APIController\APIController
             $answer->text      = $new_answer_text;
             $answer->updatedAt = $answerUpdatedAt;
 
-            $answer = (new \Mapper\Answer($lang))->update($answer);
+            $answer_mapper = new \Mapper\Answer($lang);
+            $answer_mapper->update($answer);
 
             // Create revision
 
-            $revision           = new \Model\Revision;
+            $revision           = new Revision;
             $revision->answerID = $answer_id;
             $revision->opcodes  = $opcodes;
             if ($old_answer_text) {
@@ -59,7 +62,7 @@ class QuestionsIDAnswer extends \APIController\APIController
 
             \Validator\Revision::validateComment($revision_comment);
 
-            $parentRevision = (new \Query\Revisions($lang))->lastRevisionForAnswerWithID($answer_id);
+            $parentRevision = (new RevisionsQuery($lang))->lastRevisionForAnswerWithID($answer_id);
             if ($parentRevision) {
                 $revision->parentID = $parentRevision->id;
             }

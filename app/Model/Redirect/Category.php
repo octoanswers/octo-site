@@ -4,8 +4,9 @@ namespace Model\Redirect;
 
 class Category extends \Model\Model
 {
-    use \Traits\Model\Redirect\Category;
+    use \Model\Traits\Redirect\Category;
 
     public $from_ID; // int
+
     public $to_title; // string
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Traits\Model\Question;
+namespace Model\Traits\Question;
 
 trait Image
 {

@@ -2,6 +2,8 @@
 
 namespace Tests\APIController\PUT\QuestionsIDAnswer;
 
+use Test\TestCase\Frontend;
+
 /**
  * Class Test
  *
@@ -9,7 +11,7 @@ namespace Tests\APIController\PUT\QuestionsIDAnswer;
  *
  * @package Tests\APIController\PUT\QuestionsIDAnswer
  */
-class Test extends \Test\TestCase\Frontend
+class Test extends Frontend
 {
     protected $setUpDB = [
         'ru'    => ['questions', 'revisions', 'activities'],
