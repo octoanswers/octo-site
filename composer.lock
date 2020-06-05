@@ -234,7 +234,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v7.14.0",
+            "version": "v7.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -278,16 +278,16 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v7.14.0",
+            "version": "v7.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "090c0c57982fe8d120617c8386b9ab6df3ec6c47"
+                "reference": "651d25f115103613f6e613ed710a910e9f0b079e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/090c0c57982fe8d120617c8386b9ab6df3ec6c47",
-                "reference": "090c0c57982fe8d120617c8386b9ab6df3ec6c47",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/651d25f115103613f6e613ed710a910e9f0b079e",
+                "reference": "651d25f115103613f6e613ed710a910e9f0b079e",
                 "shasum": ""
             },
             "require": {
@@ -297,12 +297,13 @@
                 "symfony/finder": "^5.0"
             },
             "suggest": {
-                "illuminate/http": "Required for handling uploaded files (^7.0)",
+                "illuminate/http": "Required for handling uploaded files (^7.0).",
                 "league/flysystem": "Required to use the Flysystem local and FTP drivers (^1.0.34).",
                 "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (^1.0).",
                 "league/flysystem-cached-adapter": "Required to use the Flysystem cache (^1.0).",
                 "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (^1.0).",
-                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0)"
+                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
+                "symfony/mime": "Required to enable support for guessing extensions (^5.0)."
             },
             "type": "library",
             "extra": {
@@ -327,20 +328,20 @@
             ],
             "description": "The Illuminate Filesystem package.",
             "homepage": "https://laravel.com",
-            "time": "2020-06-02T14:00:04+00:00"
+            "time": "2020-06-02T22:33:52+00:00"
         },
         {
             "name": "illuminate/support",
-            "version": "v7.14.0",
+            "version": "v7.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "e9b477da9df559c55e70c3382e7aebc6800cb8f2"
+                "reference": "778698d5f2cc43fc0bceff796c71fb375bfa3351"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/e9b477da9df559c55e70c3382e7aebc6800cb8f2",
-                "reference": "e9b477da9df559c55e70c3382e7aebc6800cb8f2",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/778698d5f2cc43fc0bceff796c71fb375bfa3351",
+                "reference": "778698d5f2cc43fc0bceff796c71fb375bfa3351",
                 "shasum": ""
             },
             "require": {
@@ -389,11 +390,11 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2020-06-01T14:54:02+00:00"
+            "time": "2020-06-02T18:00:46+00:00"
         },
         {
             "name": "illuminate/translation",
-            "version": "v7.14.0",
+            "version": "v7.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
