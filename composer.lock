@@ -440,16 +440,16 @@
         },
         {
             "name": "jblond/php-diff",
-            "version": "v1.16",
+            "version": "v1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBlond/php-diff.git",
-                "reference": "c662c0213a41677fca24f90fcc810dc429d74caf"
+                "reference": "31675690f0ba4f3e2ab1608cf8c673b78c0740ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/c662c0213a41677fca24f90fcc810dc429d74caf",
-                "reference": "c662c0213a41677fca24f90fcc810dc429d74caf",
+                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/31675690f0ba4f3e2ab1608cf8c673b78c0740ea",
+                "reference": "31675690f0ba4f3e2ab1608cf8c673b78c0740ea",
                 "shasum": ""
             },
             "require": {
@@ -490,7 +490,7 @@
                 "diff",
                 "php"
             ],
-            "time": "2020-03-02T08:34:17+00:00"
+            "time": "2020-06-08T05:18:09+00:00"
         },
         {
             "name": "nesbot/carbon",
