@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02d6063991f3c385aa1b2ced3e7dfa22",
+    "content-hash": "a42b772c701c742091b4d95037e89719",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -454,21 +454,62 @@
             "time": "2020-04-15T20:57:47+00:00"
         },
         {
-            "name": "jblond/php-diff",
-            "version": "v1.18",
+            "name": "jblond/php-cli",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/JBlond/php-diff.git",
-                "reference": "bbe48f44fa2d362a11c79774b02cbe5be7df2d7f"
+                "url": "https://github.com/JBlond/php-cli.git",
+                "reference": "3ee320a1568bdaee7f978a16b1dcaed832bb4586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/bbe48f44fa2d362a11c79774b02cbe5be7df2d7f",
-                "reference": "bbe48f44fa2d362a11c79774b02cbe5be7df2d7f",
+                "url": "https://api.github.com/repos/JBlond/php-cli/zipball/3ee320a1568bdaee7f978a16b1dcaed832bb4586",
+                "reference": "3ee320a1568bdaee7f978a16b1dcaed832bb4586",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "jblond\\": "src/jblond"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mario",
+                    "email": "leet31337@web.de"
+                }
+            ],
+            "description": "php command line / cli scritping classes",
+            "keywords": [
+                "diff",
+                "php"
+            ],
+            "time": "2020-07-03T09:15:41+00:00"
+        },
+        {
+            "name": "jblond/php-diff",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JBlond/php-diff.git",
+                "reference": "f44ee814834aeaadfc459a6c4c2ec8f14aa75668"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/f44ee814834aeaadfc459a6c4c2ec8f14aa75668",
+                "reference": "f44ee814834aeaadfc459a6c4c2ec8f14aa75668",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
+                "jblond/php-cli": "^1.0",
                 "php": ">=7.2"
             },
             "require-dev": {
@@ -503,9 +544,11 @@
             "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
             "keywords": [
                 "diff",
-                "php"
+                "php",
+                "side-by-sidediff",
+                "unified"
             ],
-            "time": "2020-07-01T10:18:09+00:00"
+            "time": "2020-07-09T10:16:35+00:00"
         },
         {
             "name": "nesbot/carbon",
