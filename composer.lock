@@ -455,16 +455,16 @@
         },
         {
             "name": "jblond/php-cli",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBlond/php-cli.git",
-                "reference": "3ee320a1568bdaee7f978a16b1dcaed832bb4586"
+                "reference": "2e3f93d3d0fa7a85ce57fb0f4bce914bef9f0455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-cli/zipball/3ee320a1568bdaee7f978a16b1dcaed832bb4586",
-                "reference": "3ee320a1568bdaee7f978a16b1dcaed832bb4586",
+                "url": "https://api.github.com/repos/JBlond/php-cli/zipball/2e3f93d3d0fa7a85ce57fb0f4bce914bef9f0455",
+                "reference": "2e3f93d3d0fa7a85ce57fb0f4bce914bef9f0455",
                 "shasum": ""
             },
             "require": {
@@ -491,20 +491,20 @@
                 "diff",
                 "php"
             ],
-            "time": "2020-07-03T09:15:41+00:00"
+            "time": "2020-07-16T06:37:41+00:00"
         },
         {
             "name": "jblond/php-diff",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBlond/php-diff.git",
-                "reference": "ec897ddf466f4549083d85ea6c1c61effc754771"
+                "reference": "eda111b59cf6dab66ab9d6c875d29235ac1fc353"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/ec897ddf466f4549083d85ea6c1c61effc754771",
-                "reference": "ec897ddf466f4549083d85ea6c1c61effc754771",
+                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/eda111b59cf6dab66ab9d6c875d29235ac1fc353",
+                "reference": "eda111b59cf6dab66ab9d6c875d29235ac1fc353",
                 "shasum": ""
             },
             "require": {
@@ -548,7 +548,7 @@
                 "side-by-sidediff",
                 "unified"
             ],
-            "time": "2020-07-13T09:33:24+00:00"
+            "time": "2020-07-17T07:25:28+00:00"
         },
         {
             "name": "nesbot/carbon",
