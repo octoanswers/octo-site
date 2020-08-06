@@ -454,68 +454,32 @@
             "time": "2020-04-15T20:57:47+00:00"
         },
         {
-            "name": "jblond/php-cli",
-            "version": "v1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JBlond/php-cli.git",
-                "reference": "3ee320a1568bdaee7f978a16b1dcaed832bb4586"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-cli/zipball/3ee320a1568bdaee7f978a16b1dcaed832bb4586",
-                "reference": "3ee320a1568bdaee7f978a16b1dcaed832bb4586",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "jblond\\": "src/jblond"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mario",
-                    "email": "leet31337@web.de"
-                }
-            ],
-            "description": "php command line / cli scritping classes",
-            "keywords": [
-                "diff",
-                "php"
-            ],
-            "time": "2020-07-03T09:15:41+00:00"
-        },
-        {
             "name": "jblond/php-diff",
-            "version": "v2.1.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBlond/php-diff.git",
-                "reference": "ec897ddf466f4549083d85ea6c1c61effc754771"
+                "reference": "e6812d018163a60261136621c4cb05499ab995c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/ec897ddf466f4549083d85ea6c1c61effc754771",
-                "reference": "ec897ddf466f4549083d85ea6c1c61effc754771",
+                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/e6812d018163a60261136621c4cb05499ab995c9",
+                "reference": "e6812d018163a60261136621c4cb05499ab995c9",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "jblond/php-cli": "^1.0",
+                "ext-pcre": "*",
                 "php": ">=7.2"
             },
             "require-dev": {
+                "jblond/php-cli": "^1.0",
                 "phpmd/phpmd": "2.*",
                 "phpunit/phpunit": "8.*",
                 "squizlabs/php_codesniffer": "*"
+            },
+            "suggest": {
+                "jblond/php-cli": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -548,7 +512,7 @@
                 "side-by-sidediff",
                 "unified"
             ],
-            "time": "2020-07-13T09:33:24+00:00"
+            "time": "2020-08-06T12:27:35+00:00"
         },
         {
             "name": "nesbot/carbon",
