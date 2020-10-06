@@ -14,7 +14,7 @@
         "slim/psr7": "^1.0",
         "slim/http": "^1.0",
         "erusev/parsedown": "^1.6",
-        "respect/validation": "^1.1",
+        "respect/validation": "^2.1",
         "jblond/php-diff": "^2.1",
         "verot/class.upload.php": "^2.0",
         "cogpowered/finediff": "^0.3.1",
