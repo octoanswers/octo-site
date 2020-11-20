@@ -455,16 +455,16 @@
         },
         {
             "name": "jblond/php-diff",
-            "version": "v2.2.1",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBlond/php-diff.git",
-                "reference": "e6812d018163a60261136621c4cb05499ab995c9"
+                "reference": "c64c0ccb572f725b6ab126c7ea58e4aee997b971"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/e6812d018163a60261136621c4cb05499ab995c9",
-                "reference": "e6812d018163a60261136621c4cb05499ab995c9",
+                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/c64c0ccb572f725b6ab126c7ea58e4aee997b971",
+                "reference": "c64c0ccb572f725b6ab126c7ea58e4aee997b971",
                 "shasum": ""
             },
             "require": {
@@ -484,7 +484,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "jblond\\": "lib/jblond"
+                    "jblond\\": "lib/jblond",
+                    "Tests\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -512,7 +513,7 @@
                 "side-by-sidediff",
                 "unified"
             ],
-            "time": "2020-08-06T12:27:35+00:00"
+            "time": "2020-11-19T13:09:35+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1975,6 +1976,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2019-12-12T13:22:17+00:00"
         },
         {
