@@ -18,7 +18,7 @@
         "jblond/php-diff": "^2.1",
         "verot/class.upload.php": "^2.0",
         "cogpowered/finediff": "^0.3.1",
-        "illuminate/translation": "^7.0"
+        "illuminate/translation": "^8.20"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",
