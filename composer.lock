@@ -455,27 +455,28 @@
         },
         {
             "name": "jblond/php-diff",
-            "version": "v2.2.1",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBlond/php-diff.git",
-                "reference": "e6812d018163a60261136621c4cb05499ab995c9"
+                "reference": "9830fe059c020d4d72936ef171d983df3d379d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/e6812d018163a60261136621c4cb05499ab995c9",
-                "reference": "e6812d018163a60261136621c4cb05499ab995c9",
+                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/9830fe059c020d4d72936ef171d983df3d379d7e",
+                "reference": "9830fe059c020d4d72936ef171d983df3d379d7e",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "ext-pcre": "*",
-                "php": ">=7.2"
+                "php": ">=7.3"
             },
             "require-dev": {
+                "digilive/git-changelog": "^1",
                 "jblond/php-cli": "^1.0",
                 "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "8.*",
+                "phpunit/phpunit": "^8 || ^9",
                 "squizlabs/php_codesniffer": "*"
             },
             "suggest": {
@@ -484,7 +485,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "jblond\\": "lib/jblond"
+                    "jblond\\": "lib/jblond",
+                    "Tests\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -510,9 +512,12 @@
                 "diff",
                 "php",
                 "side-by-sidediff",
-                "unified"
+                "udiff",
+                "unidiff",
+                "unified",
+                "unified diff"
             ],
-            "time": "2020-08-06T12:27:35+00:00"
+            "time": "2021-02-03T12:07:43+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1975,6 +1980,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2019-12-12T13:22:17+00:00"
         },
         {
@@ -3881,12 +3887,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
