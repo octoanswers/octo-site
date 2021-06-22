@@ -554,27 +554,28 @@
         },
         {
             "name": "jblond/php-diff",
-            "version": "v2.2.1",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBlond/php-diff.git",
-                "reference": "e6812d018163a60261136621c4cb05499ab995c9"
+                "reference": "c09edb214a4db9d3fc24d855216163e8a2831331"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/e6812d018163a60261136621c4cb05499ab995c9",
-                "reference": "e6812d018163a60261136621c4cb05499ab995c9",
+                "url": "https://api.github.com/repos/JBlond/php-diff/zipball/c09edb214a4db9d3fc24d855216163e8a2831331",
+                "reference": "c09edb214a4db9d3fc24d855216163e8a2831331",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "ext-pcre": "*",
-                "php": ">=7.2"
+                "php": ">=7.3"
             },
             "require-dev": {
+                "digilive/git-changelog": "^1",
                 "jblond/php-cli": "^1.0",
                 "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "8.*",
+                "phpunit/phpunit": "^8 || ^9",
                 "squizlabs/php_codesniffer": "*"
             },
             "suggest": {
@@ -583,7 +584,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "jblond\\": "lib/jblond"
+                    "jblond\\": "lib/jblond",
+                    "Tests\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -609,9 +611,12 @@
                 "diff",
                 "php",
                 "side-by-sidediff",
-                "unified"
+                "udiff",
+                "unidiff",
+                "unified",
+                "unified diff"
             ],
-            "time": "2020-08-06T12:27:35+00:00"
+            "time": "2021-03-27T13:44:34+00:00"
         },
         {
             "name": "nesbot/carbon",
