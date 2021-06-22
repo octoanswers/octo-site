@@ -1958,16 +1958,16 @@
         },
         {
             "name": "verot/class.upload.php",
-            "version": "2.0.9",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verot/class.upload.php.git",
-                "reference": "bec90d3c3a1e60f9bf066c0595c90a3dc9c143e0"
+                "reference": "4d9aae875245948d21e42ade332fb45f897f28bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verot/class.upload.php/zipball/bec90d3c3a1e60f9bf066c0595c90a3dc9c143e0",
-                "reference": "bec90d3c3a1e60f9bf066c0595c90a3dc9c143e0",
+                "url": "https://api.github.com/repos/verot/class.upload.php/zipball/4d9aae875245948d21e42ade332fb45f897f28bb",
+                "reference": "4d9aae875245948d21e42ade332fb45f897f28bb",
                 "shasum": ""
             },
             "require": {
@@ -1995,7 +1995,7 @@
                 "gd",
                 "upload"
             ],
-            "time": "2020-01-12T21:16:22+00:00"
+            "time": "2020-12-13T22:26:17+00:00"
         },
         {
             "name": "voku/portable-ascii",
